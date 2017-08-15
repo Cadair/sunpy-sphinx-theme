@@ -1,0 +1,19 @@
+Time
+====
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Time
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Time.collides
+      ~Time.pad
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: collides
+   .. automethod:: pad

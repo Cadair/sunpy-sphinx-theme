@@ -1,0 +1,6 @@
+ValidationFunctionError
+=======================
+
+.. currentmodule:: sunpy.util.datatype_factory_base
+
+.. autoexception:: ValidationFunctionError

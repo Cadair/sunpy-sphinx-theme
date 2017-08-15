@@ -1,0 +1,6 @@
+write_file
+==========
+
+.. currentmodule:: sunpy.io
+
+.. autofunction:: write_file

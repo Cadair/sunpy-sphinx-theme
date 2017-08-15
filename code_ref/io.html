@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy io &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="read_file" href="../api/sunpy.io.read_file.html" />
+    <link rel="prev" title="backprojection" href="../api/sunpy.instr.rhessi.backprojection.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy io | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/code_ref/io.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instr.html">SunPy instr</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SunPy io</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.read_file.html">read_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.read_file_header.html">read_file_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.write_file.html">write_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.header.FileHeader.html">FileHeader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.fits.read.html">read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.fits.get_header.html">get_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.fits.write.html">write</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.fits.extract_waveunit.html">extract_waveunit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.jp2.read.html">read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.jp2.get_header.html">get_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.jp2.write.html">write</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.ana.read.html">read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.ana.get_header.html">get_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.ana.write.html">write</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.io.special.genx.read_genx.html">read_genx</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-io">
+<h1>SunPy io<a class="headerlink" href="#sunpy-io" title="Permalink to this headline">¶</a></h1>
+<p>This submodule contains two types of routines, the first reads (data, header)
+pairs from files in a way similar to FITS files. The other is special readers
+for files that are commonly used in solar physics.</p>
+<div class="section" id="module-sunpy.io">
+<span id="sunpy-io-package"></span><h2>sunpy.io Package<a class="headerlink" href="#module-sunpy.io" title="Permalink to this headline">¶</a></h2>
+<p>File input and output functions</p>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.read_file.html#sunpy.io.read_file" title="sunpy.io.read_file"><code class="xref py py-obj docutils literal"><span class="pre">read_file</span></code></a>(filepath[,&nbsp;filetype])</td>
+<td>Automatically determine the filetype and read the file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.io.read_file_header.html#sunpy.io.read_file_header" title="sunpy.io.read_file_header"><code class="xref py py-obj docutils literal"><span class="pre">read_file_header</span></code></a>(filepath[,&nbsp;filetype])</td>
+<td>Reads the header from a given file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.write_file.html#sunpy.io.write_file" title="sunpy.io.write_file"><code class="xref py py-obj docutils literal"><span class="pre">write_file</span></code></a>(fname,&nbsp;data,&nbsp;header[,&nbsp;filetype])</td>
+<td>Write a file from a data &amp; header pair using one of the defined file types.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.io.header">
+<span id="sunpy-io-header-module"></span><h2>sunpy.io.header Module<a class="headerlink" href="#module-sunpy.io.header" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.header.FileHeader.html#sunpy.io.header.FileHeader" title="sunpy.io.header.FileHeader"><code class="xref py py-obj docutils literal"><span class="pre">FileHeader</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>FileHeader is designed to provide a consistent interface to all other sunpy classes that expect a generic file.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-9315ae6894e442034f7e64a03f0204c75b6205d7.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.io.header.FileHeader</p></object>
+</div>
+</div>
+<div class="section" id="unified-file-readers">
+<h2>Unified File Readers<a class="headerlink" href="#unified-file-readers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-sunpy.io.fits">
+<span id="sunpy-io-fits-module"></span><span id="iofits"></span><h3>sunpy.io.fits Module<a class="headerlink" href="#module-sunpy.io.fits" title="Permalink to this headline">¶</a></h3>
+<p>FITS File Reader</p>
+<p class="rubric">Notes</p>
+<dl class="docutils">
+<dt>FITS</dt>
+<dd>[1] FITS files allow comments to be attached to every value in the header.
+This is implemented in this module as a KEYCOMMENTS dictionary in the
+sunpy header. To add a comment to the file on write, add a comment to this
+dictionary with the same name as a key in the header (upcased).</dd>
+<dt>PyFITS</dt>
+<dd><p class="first">[1] Due to the way PyFITS works with images the header dictionary may
+differ depending on whether is accessed before or after the fits[0].data
+is requested. If the header is read before the data then the original
+header will be returned. If the header is read after the data has been
+accessed then the data will have been scaled and a modified header
+reflecting these changes will be returned: BITPIX may differ and
+BSCALE and B_ZERO may be dropped in the modified version.</p>
+<p class="last">[2] The verify(&#8216;fix&#8217;) call attempts to handle violations of the FITS
+standard. For example, nan values will be converted to &#8220;nan&#8221; strings.
+Attempting to cast a pyfits header to a dictionary while it contains
+invalid header tags will result in an error so verifying it early on
+makes the header easier to work with later.</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://stackoverflow.com/questions/456672/class-factory-in-python">http://stackoverflow.com/questions/456672/class-factory-in-python</a></div>
+<div class="line"><a class="reference external" href="http://stsdas.stsci.edu/download/wikidocs/The_PyFITS_Handbook.pdf">http://stsdas.stsci.edu/download/wikidocs/The_PyFITS_Handbook.pdf</a></div>
+</div>
+<div class="section" id="id1">
+<h4>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.fits.read.html#sunpy.io.fits.read" title="sunpy.io.fits.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(filepath[,&nbsp;hdus,&nbsp;memmap])</td>
+<td>Read a fits file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.io.fits.get_header.html#sunpy.io.fits.get_header" title="sunpy.io.fits.get_header"><code class="xref py py-obj docutils literal"><span class="pre">get_header</span></code></a>(afile)</td>
+<td>Read a fits file and return just the headers for all HDU&#8217;s.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.fits.write.html#sunpy.io.fits.write" title="sunpy.io.fits.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(fname,&nbsp;data,&nbsp;header,&nbsp;**kwargs)</td>
+<td>Take a data header pair and write a FITS file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.io.fits.extract_waveunit.html#sunpy.io.fits.extract_waveunit" title="sunpy.io.fits.extract_waveunit"><code class="xref py py-obj docutils literal"><span class="pre">extract_waveunit</span></code></a>(header)</td>
+<td>Attempt to read the wavelength unit from a given FITS header.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.io.jp2">
+<span id="sunpy-io-jp2-module"></span><span id="iojp2"></span><h3>sunpy.io.jp2 Module<a class="headerlink" href="#module-sunpy.io.jp2" title="Permalink to this headline">¶</a></h3>
+<p>JPEG 2000 File Reader</p>
+<div class="section" id="id2">
+<h4>Functions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.jp2.read.html#sunpy.io.jp2.read" title="sunpy.io.jp2.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(filepath,&nbsp;**kwargs)</td>
+<td>Reads a JPEG2000 file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.io.jp2.get_header.html#sunpy.io.jp2.get_header" title="sunpy.io.jp2.get_header"><code class="xref py py-obj docutils literal"><span class="pre">get_header</span></code></a>(filepath)</td>
+<td>Reads the header from the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.jp2.write.html#sunpy.io.jp2.write" title="sunpy.io.jp2.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(fname,&nbsp;data,&nbsp;header)</td>
+<td>Place holder for required file writer</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.io.ana">
+<span id="sunpy-io-ana-module"></span><span id="ioana"></span><h3>sunpy.io.ana Module<a class="headerlink" href="#module-sunpy.io.ana" title="Permalink to this headline">¶</a></h3>
+<p>ANA File Reader</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The reading and writing of ana file is not supported under Windows.
+The C extensions are not built on Windows.</p>
+</div>
+<p class="rubric">Notes</p>
+<p>ANA is a script that allows people to access compressed ana files.
+It accesses a C library, based on Michiel van Noort&#8217;s
+IDL DLM library &#8216;f0&#8217; which contains a cleaned up version of the original
+anarw routines.</p>
+<p>Created by Tim van Werkhoven (<a class="reference external" href="mailto:t&#46;i&#46;m&#46;vanwerkhoven&#37;&#52;&#48;gmail&#46;com">t<span>&#46;</span>i<span>&#46;</span>m<span>&#46;</span>vanwerkhoven<span>&#64;</span>gmail<span>&#46;</span>com</a>) on 2009-02-11.
+Copyright (c) 2009&#8211;2011 Tim van Werkhoven.</p>
+<div class="section" id="id3">
+<h4>Functions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.ana.read.html#sunpy.io.ana.read" title="sunpy.io.ana.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(filename[,&nbsp;debug])</td>
+<td>Loads an ANA file and returns the data and a header in a list of (data, header) tuples.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.io.ana.get_header.html#sunpy.io.ana.get_header" title="sunpy.io.ana.get_header"><code class="xref py py-obj docutils literal"><span class="pre">get_header</span></code></a>(filename[,&nbsp;debug])</td>
+<td>Loads an ANA file and only return the header consisting of the dimensions, size (defined as the product of all dimensions times the size of the datatype, this not relying on actual filesize) and comments.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.ana.write.html#sunpy.io.ana.write" title="sunpy.io.ana.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(filename,&nbsp;data[,&nbsp;comments,&nbsp;compress,&nbsp;...])</td>
+<td>Saves a 2D numpy array as an ANA file and returns the bytes written or NULL</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="special-file-readers">
+<h2>Special File Readers<a class="headerlink" href="#special-file-readers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-sunpy.io.special.genx">
+<span id="sunpy-io-special-genx-module"></span><span id="iospecialgenx"></span><h3>sunpy.io.special.genx Module<a class="headerlink" href="#module-sunpy.io.special.genx" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h4>Functions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.io.special.genx.read_genx.html#sunpy.io.special.genx.read_genx" title="sunpy.io.special.genx.read_genx"><code class="xref py py-obj docutils literal"><span class="pre">read_genx</span></code></a>(filename)</td>
+<td>solarsoft genx file reader</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

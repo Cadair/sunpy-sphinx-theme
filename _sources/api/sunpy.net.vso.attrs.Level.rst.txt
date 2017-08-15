@@ -1,0 +1,7 @@
+Level
+=====
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Level
+   :show-inheritance:

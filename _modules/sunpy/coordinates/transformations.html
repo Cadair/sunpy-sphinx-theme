@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.coordinates.transformations &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.coordinates.transformations | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/coordinates/transformations.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.coordinates.transformations</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Coordinate Transformation Functions</span>
+
+<span class="sd">This module contains the functions for converting one</span>
+<span class="sd">`sunpy.coordinates.frames` object to another.</span>
+
+<span class="sd">.. warning::</span>
+
+<span class="sd">  The functions in this submodule should never be called directly, transforming</span>
+<span class="sd">  between coordinate frames should be done using the ``.transform_to`` methods</span>
+<span class="sd">  on `~astropy.coordinates.BaseCoordinateFrame` or</span>
+<span class="sd">  `~astropy.coordinates.SkyCoord` instances.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates.representation</span> <span class="k">import</span> <span class="p">(</span><span class="n">CartesianRepresentation</span><span class="p">,</span>
+                                                <span class="n">UnitSphericalRepresentation</span><span class="p">,</span>
+                                                <span class="n">SphericalRepresentation</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates.baseframe</span> <span class="k">import</span> <span class="n">frame_transform_graph</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates.builtin_frames</span> <span class="k">import</span> <span class="n">_make_transform_graph_docs</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates.transformations</span> <span class="k">import</span> <span class="n">FunctionTransform</span><span class="p">,</span> <span class="n">DynamicMatrixTransform</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates.matrix_utilities</span> <span class="k">import</span> <span class="n">rotation_matrix</span><span class="p">,</span> <span class="n">matrix_product</span><span class="p">,</span> <span class="n">matrix_transpose</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="n">HCRS</span><span class="p">,</span> <span class="n">get_body_barycentric</span><span class="p">,</span> <span class="n">BaseCoordinateFrame</span><span class="p">,</span> <span class="n">ConvertError</span>
+
+<span class="kn">from</span> <span class="nn">sunpy</span> <span class="k">import</span> <span class="n">sun</span>
+
+<span class="kn">from</span> <span class="nn">.representation</span> <span class="k">import</span> <span class="p">(</span><span class="n">SphericalWrap180Representation</span><span class="p">,</span>
+                             <span class="n">UnitSphericalWrap180Representation</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.frames</span> <span class="k">import</span> <span class="p">(</span><span class="n">HeliographicStonyhurst</span><span class="p">,</span> <span class="n">HeliographicCarrington</span><span class="p">,</span>
+                     <span class="n">Heliocentric</span><span class="p">,</span> <span class="n">Helioprojective</span><span class="p">)</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hgs_to_hgc&#39;</span><span class="p">,</span> <span class="s1">&#39;hgc_to_hgs&#39;</span><span class="p">,</span> <span class="s1">&#39;hcc_to_hpc&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;hpc_to_hcc&#39;</span><span class="p">,</span> <span class="s1">&#39;hcc_to_hgs&#39;</span><span class="p">,</span> <span class="s1">&#39;hgs_to_hcc&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;hpc_to_hpc&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;hcrs_to_hgs&#39;</span><span class="p">,</span> <span class="s1">&#39;hgs_to_hcrs&#39;</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">_carrington_offset</span><span class="p">(</span><span class="n">obstime</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the HG Longitude offest based on a time</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">obstime</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;To perform this transformation the coordinate&quot;</span>
+                         <span class="s2">&quot; Frame needs a obstime Attribute&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Import here to avoid a circular import</span>
+    <span class="kn">from</span> <span class="nn">.ephemeris</span> <span class="k">import</span> <span class="n">get_sun_L0</span>
+    <span class="k">return</span> <span class="n">get_sun_L0</span><span class="p">(</span><span class="n">obstime</span><span class="p">)</span>
+
+<span class="c1"># =============================================================================</span>
+<span class="c1"># ------------------------- Transformation Framework --------------------------</span>
+<span class="c1"># =============================================================================</span>
+
+
+<span class="nd">@frame_transform_graph</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">FunctionTransform</span><span class="p">,</span> <span class="n">HeliographicStonyhurst</span><span class="p">,</span>
+                                 <span class="n">HeliographicCarrington</span><span class="p">)</span>
+<div class="viewcode-block" id="hgs_to_hgc"><a class="viewcode-back" href="../../../api/sunpy.coordinates.transformations.hgs_to_hgc.html#sunpy.coordinates.transformations.hgs_to_hgc">[docs]</a><span class="k">def</span> <span class="nf">hgs_to_hgc</span><span class="p">(</span><span class="n">hgscoord</span><span class="p">,</span> <span class="n">hgcframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Transform from Heliographic Stonyhurst to Heliograpic Carrington.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">c_lon</span> <span class="o">=</span> <span class="n">hgscoord</span><span class="o">.</span><span class="n">spherical</span><span class="o">.</span><span class="n">lon</span> <span class="o">+</span> <span class="n">_carrington_offset</span><span class="p">(</span><span class="n">hgscoord</span><span class="o">.</span><span class="n">obstime</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span>
+        <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+    <span class="n">representation</span> <span class="o">=</span> <span class="n">SphericalRepresentation</span><span class="p">(</span><span class="n">c_lon</span><span class="p">,</span> <span class="n">hgscoord</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span>
+                                                    <span class="n">hgscoord</span><span class="o">.</span><span class="n">radius</span><span class="p">)</span>
+    <span class="n">hgcframe</span> <span class="o">=</span> <span class="n">hgcframe</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">obstime</span><span class="o">=</span><span class="n">hgscoord</span><span class="o">.</span><span class="n">obstime</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">hgcframe</span><span class="o">.</span><span class="n">realize_frame</span><span class="p">(</span><span class="n">representation</span><span class="p">)</span></div>
+
+
+<span class="nd">@frame_transform_graph</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">FunctionTransform</span><span class="p">,</span> <span class="n">HeliographicCarrington</span><span class="p">,</span>
+                                 <span class="n">HeliographicStonyhurst</span><span class="p">)</span>
+<div class="viewcode-block" id="hgc_to_hgs"><a class="viewcode-back" href="../../../api/sunpy.coordinates.transformations.hgc_to_hgs.html#sunpy.coordinates.transformations.hgc_to_hgs">[docs]</a><span class="k">def</span> <span class="nf">hgc_to_hgs</span><span class="p">(</span><span class="n">hgccoord</span><span class="p">,</span> <span class="n">hgsframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Heliograpic Carrington to Heliographic Stonyhurst.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">hgccoord</span><span class="o">.</span><span class="n">obstime</span><span class="p">:</span>
+        <span class="n">obstime</span> <span class="o">=</span> <span class="n">hgccoord</span><span class="o">.</span><span class="n">obstime</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">obstime</span> <span class="o">=</span> <span class="n">hgsframe</span><span class="o">.</span><span class="n">obstime</span>
+    <span class="n">s_lon</span> <span class="o">=</span> <span class="n">hgccoord</span><span class="o">.</span><span class="n">spherical</span><span class="o">.</span><span class="n">lon</span> <span class="o">-</span> <span class="n">_carrington_offset</span><span class="p">(</span><span class="n">obstime</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span>
+        <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+    <span class="n">representation</span> <span class="o">=</span> <span class="n">SphericalWrap180Representation</span><span class="p">(</span><span class="n">s_lon</span><span class="p">,</span> <span class="n">hgccoord</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span>
+                                                    <span class="n">hgccoord</span><span class="o">.</span><span class="n">radius</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">hgsframe</span><span class="o">.</span><span class="n">realize_frame</span><span class="p">(</span><span class="n">representation</span><span class="p">)</span></div>
+
+
+<span class="nd">@frame_transform_graph</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">FunctionTransform</span><span class="p">,</span> <span class="n">Heliocentric</span><span class="p">,</span>
+                                 <span class="n">Helioprojective</span><span class="p">)</span>
+<div class="viewcode-block" id="hcc_to_hpc"><a class="viewcode-back" href="../../../api/sunpy.coordinates.transformations.hcc_to_hpc.html#sunpy.coordinates.transformations.hcc_to_hpc">[docs]</a><span class="k">def</span> <span class="nf">hcc_to_hpc</span><span class="p">(</span><span class="n">helioccoord</span><span class="p">,</span> <span class="n">heliopframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Heliocentic Cartesian to Helioprojective Cartesian.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Propagate obstime explicitly.</span>
+    <span class="k">if</span> <span class="n">heliopframe</span><span class="o">.</span><span class="n">obstime</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">heliopframe</span><span class="o">.</span><span class="n">_obstime</span> <span class="o">=</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">_obstime</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="c1"># d is calculated as the distance between the points</span>
+    <span class="c1"># (x,y,z) and (0,0,D0).</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">helioccoord</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">radius</span> <span class="o">-</span> <span class="n">z</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">hpcx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">radius</span> <span class="o">-</span> <span class="n">z</span><span class="p">))</span>
+    <span class="n">hpcy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">distance</span><span class="p">))</span>
+
+    <span class="n">representation</span> <span class="o">=</span> <span class="n">SphericalWrap180Representation</span><span class="p">(</span><span class="n">hpcx</span><span class="p">,</span> <span class="n">hpcy</span><span class="p">,</span>
+                                                    <span class="n">distance</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">heliopframe</span><span class="o">.</span><span class="n">realize_frame</span><span class="p">(</span><span class="n">representation</span><span class="p">)</span></div>
+
+
+<span class="nd">@frame_transform_graph</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">FunctionTransform</span><span class="p">,</span> <span class="n">Helioprojective</span><span class="p">,</span>
+                                 <span class="n">Heliocentric</span><span class="p">)</span>
+<div class="viewcode-block" id="hpc_to_hcc"><a class="viewcode-back" href="../../../api/sunpy.coordinates.transformations.hpc_to_hcc.html#sunpy.coordinates.transformations.hpc_to_hcc">[docs]</a><span class="k">def</span> <span class="nf">hpc_to_hcc</span><span class="p">(</span><span class="n">heliopcoord</span><span class="p">,</span> <span class="n">heliocframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Helioprojective Cartesian to Heliocentric Cartesian.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">observer</span><span class="p">,</span> <span class="n">BaseCoordinateFrame</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConvertError</span><span class="p">(</span><span class="s2">&quot;Cannot transform helioprojective coordinates to &quot;</span>
+                           <span class="s2">&quot;heliocentric coordinates for observer &#39;</span><span class="si">{}</span><span class="s2">&#39; &quot;</span>
+                           <span class="s2">&quot;without `obstime` being specified.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">observer</span><span class="p">))</span>
+
+    <span class="n">heliopcoord</span> <span class="o">=</span> <span class="n">heliopcoord</span><span class="o">.</span><span class="n">calculate_distance</span><span class="p">()</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">Tx</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">Ty</span><span class="p">)</span>
+
+    <span class="n">cosx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">sinx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">cosy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">siny</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="n">rx</span> <span class="o">=</span> <span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">))</span> <span class="o">*</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">sinx</span>
+    <span class="n">ry</span> <span class="o">=</span> <span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">))</span> <span class="o">*</span> <span class="n">siny</span>
+    <span class="n">rz</span> <span class="o">=</span> <span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">radius</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span>
+        <span class="n">heliopcoord</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">))</span> <span class="o">*</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">cosx</span>
+
+    <span class="n">representation</span> <span class="o">=</span> <span class="n">CartesianRepresentation</span><span class="p">(</span>
+        <span class="n">rx</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">),</span> <span class="n">ry</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">),</span> <span class="n">rz</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">heliocframe</span><span class="o">.</span><span class="n">realize_frame</span><span class="p">(</span><span class="n">representation</span><span class="p">)</span></div>
+
+
+<span class="nd">@frame_transform_graph</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">FunctionTransform</span><span class="p">,</span> <span class="n">Heliocentric</span><span class="p">,</span>
+                                 <span class="n">HeliographicStonyhurst</span><span class="p">)</span>
+<div class="viewcode-block" id="hcc_to_hgs"><a class="viewcode-back" href="../../../api/sunpy.coordinates.transformations.hcc_to_hgs.html#sunpy.coordinates.transformations.hcc_to_hgs">[docs]</a><span class="k">def</span> <span class="nf">hcc_to_hgs</span><span class="p">(</span><span class="n">helioccoord</span><span class="p">,</span> <span class="n">heliogframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Heliocentric Cartesian to Heliographic Stonyhurst.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">helioccoord</span><span class="o">.</span><span class="n">observer</span><span class="p">,</span> <span class="n">BaseCoordinateFrame</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConvertError</span><span class="p">(</span><span class="s2">&quot;Cannot transform heliocentric coordinates to &quot;</span>
+                           <span class="s2">&quot;heliographic coordinates for observer &#39;</span><span class="si">{}</span><span class="s2">&#39; &quot;</span>
+                           <span class="s2">&quot;without `obstime` being specified.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">helioccoord</span><span class="o">.</span><span class="n">observer</span><span class="p">))</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="n">l0_rad</span> <span class="o">=</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">lon</span>
+    <span class="n">b0_deg</span> <span class="o">=</span> <span class="n">helioccoord</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">lat</span>
+
+    <span class="n">cosb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">b0_deg</span><span class="p">))</span>
+    <span class="n">sinb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">b0_deg</span><span class="p">))</span>
+
+    <span class="n">hecr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">hgln</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="o">*</span> <span class="n">cosb</span> <span class="o">-</span> <span class="n">y</span> <span class="o">*</span> <span class="n">sinb</span><span class="p">)</span> <span class="o">+</span> <span class="n">l0_rad</span>
+    <span class="n">hglt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">((</span><span class="n">y</span> <span class="o">*</span> <span class="n">cosb</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">sinb</span><span class="p">)</span> <span class="o">/</span> <span class="n">hecr</span><span class="p">)</span>
+
+    <span class="n">representation</span> <span class="o">=</span> <span class="n">SphericalWrap180Representation</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">hgln</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">hglt</span><span class="p">),</span> <span class="n">hecr</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">heliogframe</span><span class="o">.</span><span class="n">realize_frame</span><span class="p">(</span><span class="n">representation</span><span class="p">)</span></div>
+
+
+<span class="nd">@frame_transform_graph</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">FunctionTransform</span><span class="p">,</span> <span class="n">HeliographicStonyhurst</span><span class="p">,</span>
+                                 <span class="n">Heliocentric</span><span class="p">)</span>
+<div class="viewcode-block" id="hgs_to_hcc"><a class="viewcode-back" href="../../../api/sunpy.coordinates.transformations.hgs_to_hcc.html#sunpy.coordinates.transformations.hgs_to_hcc">[docs]</a><span class="k">def</span> <span class="nf">hgs_to_hcc</span><span class="p">(</span><span class="n">heliogcoord</span><span class="p">,</span> <span class="n">heliocframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Heliographic Stonyhurst to Heliograpic Carrington.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">hglon</span> <span class="o">=</span> <span class="n">heliogcoord</span><span class="o">.</span><span class="n">lon</span>
+    <span class="n">hglat</span> <span class="o">=</span> <span class="n">heliogcoord</span><span class="o">.</span><span class="n">lat</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">heliogcoord</span><span class="o">.</span><span class="n">radius</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">heliocframe</span><span class="o">.</span><span class="n">obstime</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">heliocframe</span><span class="o">.</span><span class="n">_obstime</span> <span class="o">=</span> <span class="n">heliogcoord</span><span class="o">.</span><span class="n">obstime</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">heliocframe</span><span class="o">.</span><span class="n">observer</span><span class="p">,</span> <span class="n">BaseCoordinateFrame</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConvertError</span><span class="p">(</span><span class="s2">&quot;Cannot transform heliographic coordinates to &quot;</span>
+                           <span class="s2">&quot;heliocentric coordinates for observer &#39;</span><span class="si">{}</span><span class="s2">&#39; &quot;</span>
+                           <span class="s2">&quot;without `obstime` being specified.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">heliocframe</span><span class="o">.</span><span class="n">observer</span><span class="p">))</span>
+
+    <span class="n">l0_rad</span> <span class="o">=</span> <span class="n">heliocframe</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+    <span class="n">b0_deg</span> <span class="o">=</span> <span class="n">heliocframe</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">lat</span>
+
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">hglon</span><span class="p">)</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">hglat</span><span class="p">)</span>
+
+    <span class="n">cosb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">b0_deg</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">))</span>
+    <span class="n">sinb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">b0_deg</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">))</span>
+
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">lon</span> <span class="o">-</span> <span class="n">l0_rad</span>
+
+    <span class="n">cosx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lon</span><span class="p">)</span>
+    <span class="n">sinx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">lon</span><span class="p">)</span>
+    <span class="n">cosy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
+    <span class="n">siny</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">sinx</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="p">(</span><span class="n">siny</span> <span class="o">*</span> <span class="n">cosb</span> <span class="o">-</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">cosx</span> <span class="o">*</span> <span class="n">sinb</span><span class="p">)</span>
+    <span class="n">zz</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="p">(</span><span class="n">siny</span> <span class="o">*</span> <span class="n">sinb</span> <span class="o">+</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">cosx</span> <span class="o">*</span> <span class="n">cosb</span><span class="p">)</span>
+
+    <span class="n">representation</span> <span class="o">=</span> <span class="n">CartesianRepresentation</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">),</span> <span class="n">y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">),</span> <span class="n">zz</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">heliocframe</span><span class="o">.</span><span class="n">realize_frame</span><span class="p">(</span><span class="n">representation</span><span class="p">)</span></div>
+
+
+<span class="nd">@frame_transform_graph</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">FunctionTransform</span><span class="p">,</span> <span class="n">Helioprojective</span><span class="p">,</span>
+                                 <span class="n">Helioprojective</span><span class="p">)</span>
+<div class="viewcode-block" id="hpc_to_hpc"><a class="viewcode-back" href="../../../api/sunpy.coordinates.transformations.hpc_to_hpc.html#sunpy.coordinates.transformations.hpc_to_hpc">[docs]</a><span class="k">def</span> <span class="nf">hpc_to_hpc</span><span class="p">(</span><span class="n">heliopcoord</span><span class="p">,</span> <span class="n">heliopframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This converts from HPC to HPC, with different observer location parameters.</span>
+<span class="sd">    It does this by transforming through HGS.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">observer</span> <span class="o">==</span> <span class="n">heliopframe</span><span class="o">.</span><span class="n">observer</span> <span class="ow">or</span>
+        <span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">lat</span> <span class="o">==</span> <span class="n">heliopframe</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">lat</span> <span class="ow">and</span>
+         <span class="n">heliopcoord</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">lon</span> <span class="o">==</span> <span class="n">heliopframe</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">lon</span> <span class="ow">and</span>
+         <span class="n">heliopcoord</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="n">heliopframe</span><span class="o">.</span><span class="n">observer</span><span class="o">.</span><span class="n">radius</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="n">heliopframe</span><span class="o">.</span><span class="n">realize_frame</span><span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">heliopframe</span><span class="o">.</span><span class="n">observer</span><span class="p">,</span> <span class="n">BaseCoordinateFrame</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConvertError</span><span class="p">(</span><span class="s2">&quot;Cannot transform between helioprojective frames &quot;</span>
+                           <span class="s2">&quot;without `obstime` being specified for observer </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">heliopframe</span><span class="o">.</span><span class="n">observer</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">observer</span><span class="p">,</span> <span class="n">BaseCoordinateFrame</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConvertError</span><span class="p">(</span><span class="s2">&quot;Cannot transform between helioprojective frames &quot;</span>
+                           <span class="s2">&quot;without `obstime` being specified for observer </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">heliopcoord</span><span class="o">.</span><span class="n">observer</span><span class="p">))</span>
+
+    <span class="n">hgs</span> <span class="o">=</span> <span class="n">heliopcoord</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">HeliographicStonyhurst</span><span class="p">)</span>
+    <span class="n">hgs</span><span class="o">.</span><span class="n">observer</span> <span class="o">=</span> <span class="n">heliopframe</span><span class="o">.</span><span class="n">observer</span>
+    <span class="n">hpc</span> <span class="o">=</span> <span class="n">hgs</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">heliopframe</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">hpc</span></div>
+
+
+<span class="k">def</span> <span class="nf">_make_rotation_matrix_from_reprs</span><span class="p">(</span><span class="n">start_representation</span><span class="p">,</span> <span class="n">end_representation</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the matrix for the direct rotation from one representation to a second representation.</span>
+<span class="sd">    The representations need not be normalized first.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">start_representation</span><span class="o">.</span><span class="n">to_cartesian</span><span class="p">()</span>
+    <span class="n">B</span> <span class="o">=</span> <span class="n">end_representation</span><span class="o">.</span><span class="n">to_cartesian</span><span class="p">()</span>
+    <span class="n">rotation_axis</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+    <span class="n">rotation_angle</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span> <span class="o">*</span> <span class="n">B</span><span class="o">.</span><span class="n">norm</span><span class="p">()))</span>  <span class="c1"># negation is required</span>
+
+    <span class="c1"># This line works around some input/output quirks of Astropy&#39;s rotation_matrix()</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rotation_matrix</span><span class="p">(</span><span class="n">rotation_angle</span><span class="p">,</span> <span class="n">rotation_axis</span><span class="o">.</span><span class="n">xyz</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">tolist</span><span class="p">()))</span>
+    <span class="k">return</span> <span class="n">matrix</span>
+
+
+<span class="c1"># The Sun&#39;s north pole is oriented RA=286.13 deg, dec=63.87 deg in ICRS, and thus HCRS as well</span>
+<span class="c1"># (See Archinal et al. 2011,</span>
+<span class="c1">#   &quot;Report of the IAU Working Group on Cartographic Coordinates and Rotational Elements: 2009&quot;)</span>
+<span class="c1"># The orientation of the north pole in ICRS/HCRS is assumed to be constant in time</span>
+<span class="n">_SOLAR_NORTH_POLE_HCRS</span> <span class="o">=</span> <span class="n">UnitSphericalRepresentation</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="mf">286.13</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="mf">63.87</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+
+
+<span class="c1"># Calculate the rotation matrix to de-tilt the Sun&#39;s rotation axis to be parallel to the Z axis</span>
+<span class="n">_SUN_DETILT_MATRIX</span> <span class="o">=</span> <span class="n">_make_rotation_matrix_from_reprs</span><span class="p">(</span><span class="n">_SOLAR_NORTH_POLE_HCRS</span><span class="p">,</span>
+                                           <span class="n">CartesianRepresentation</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+
+<span class="nd">@frame_transform_graph</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">DynamicMatrixTransform</span><span class="p">,</span> <span class="n">HCRS</span><span class="p">,</span> <span class="n">HeliographicStonyhurst</span><span class="p">)</span>
+<div class="viewcode-block" id="hcrs_to_hgs"><a class="viewcode-back" href="../../../api/sunpy.coordinates.transformations.hcrs_to_hgs.html#sunpy.coordinates.transformations.hcrs_to_hgs">[docs]</a><span class="k">def</span> <span class="nf">hcrs_to_hgs</span><span class="p">(</span><span class="n">hcrscoord</span><span class="p">,</span> <span class="n">hgsframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from HCRS to Heliographic Stonyhurst (HGS).</span>
+
+<span class="sd">    HGS shares the same origin (the Sun) as HCRS, but has its Z axis aligned with the Sun&#39;s</span>
+<span class="sd">    rotation axis and its X axis aligned with the projection of the Sun-Earth vector onto the Sun&#39;s</span>
+<span class="sd">    equatorial plane (i.e., the component of the Sun-Earth vector perpendicular to the Z axis).</span>
+<span class="sd">    Thus, the transformation matrix is the product of the matrix to align the Z axis (by de-tilting</span>
+<span class="sd">    the Sun&#39;s rotation axis) and the matrix to align the X axis.  The first matrix is independent</span>
+<span class="sd">    of time and is pre-computed, while the second matrix depends on the time-varying Sun-Earth</span>
+<span class="sd">    vector.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">hgsframe</span><span class="o">.</span><span class="n">obstime</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;To perform this transformation the coordinate&quot;</span>
+                         <span class="s2">&quot; Frame needs an obstime Attribute&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Determine the Sun-Earth vector in ICRS</span>
+    <span class="c1"># Since HCRS is ICRS with an origin shift, this is also the Sun-Earth vector in HCRS</span>
+    <span class="n">sun_pos_icrs</span> <span class="o">=</span> <span class="n">get_body_barycentric</span><span class="p">(</span><span class="s1">&#39;sun&#39;</span><span class="p">,</span> <span class="n">hgsframe</span><span class="o">.</span><span class="n">obstime</span><span class="p">)</span>
+    <span class="n">earth_pos_icrs</span> <span class="o">=</span> <span class="n">get_body_barycentric</span><span class="p">(</span><span class="s1">&#39;earth&#39;</span><span class="p">,</span> <span class="n">hgsframe</span><span class="o">.</span><span class="n">obstime</span><span class="p">)</span>
+    <span class="n">sun_earth</span> <span class="o">=</span> <span class="n">earth_pos_icrs</span> <span class="o">-</span> <span class="n">sun_pos_icrs</span>
+
+    <span class="c1"># De-tilt the Sun-Earth vector to the frame with the Sun&#39;s rotation axis parallel to the Z axis</span>
+    <span class="n">sun_earth_detilt</span> <span class="o">=</span> <span class="n">sun_earth</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">_SUN_DETILT_MATRIX</span><span class="p">)</span>
+
+    <span class="c1"># Remove the component of the Sun-Earth vector that is parallel to the Sun&#39;s north pole</span>
+    <span class="n">hgs_x_axis_detilt</span> <span class="o">=</span> <span class="n">CartesianRepresentation</span><span class="p">(</span><span class="n">sun_earth_detilt</span><span class="o">.</span><span class="n">xyz</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+    <span class="c1"># The above vector, which is in the Sun&#39;s equatorial plane, is also the X axis of HGS</span>
+    <span class="n">x_axis</span> <span class="o">=</span> <span class="n">CartesianRepresentation</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">rot_matrix</span> <span class="o">=</span> <span class="n">_make_rotation_matrix_from_reprs</span><span class="p">(</span><span class="n">hgs_x_axis_detilt</span><span class="p">,</span> <span class="n">x_axis</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">matrix_product</span><span class="p">(</span><span class="n">rot_matrix</span><span class="p">,</span> <span class="n">_SUN_DETILT_MATRIX</span><span class="p">)</span></div>
+
+
+<span class="nd">@frame_transform_graph</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">DynamicMatrixTransform</span><span class="p">,</span> <span class="n">HeliographicStonyhurst</span><span class="p">,</span> <span class="n">HCRS</span><span class="p">)</span>
+<div class="viewcode-block" id="hgs_to_hcrs"><a class="viewcode-back" href="../../../api/sunpy.coordinates.transformations.hgs_to_hcrs.html#sunpy.coordinates.transformations.hgs_to_hcrs">[docs]</a><span class="k">def</span> <span class="nf">hgs_to_hcrs</span><span class="p">(</span><span class="n">hgscoord</span><span class="p">,</span> <span class="n">hcrsframe</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Heliographic Stonyhurst to HCRS.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">matrix_transpose</span><span class="p">(</span><span class="n">hcrs_to_hgs</span><span class="p">(</span><span class="n">hcrsframe</span><span class="p">,</span> <span class="n">hgscoord</span><span class="p">))</span></div>
+
+
+<span class="vm">__doc__</span> <span class="o">+=</span> <span class="n">_make_transform_graph_docs</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

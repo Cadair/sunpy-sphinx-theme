@@ -1,0 +1,6 @@
+read_file_header
+================
+
+.. currentmodule:: sunpy.io
+
+.. autofunction:: read_file_header

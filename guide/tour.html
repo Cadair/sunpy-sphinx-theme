@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>A brief tour of SunPy &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Acquiring Data with SunPy" href="acquiring_data/index.html" />
+    <link rel="prev" title="Mac OS X" href="installation/mac.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="A brief tour of SunPy | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/guide/tour.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">SunPy User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">A brief tour of SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acquiring_data/index.html">Acquiring Data with SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_types/index.html">Data Types in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html">Plotting in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="units-coordinates.html">Units and Coordinates in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">Time in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">Region of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customization.html">Customizing SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="a-brief-tour-of-sunpy">
+<h1>A brief tour of SunPy<a class="headerlink" href="#a-brief-tour-of-sunpy" title="Permalink to this headline">¶</a></h1>
+<p>This brief tutorial will walk you through some
+of the functionality offered by SunPy. Start by reading this tutorial
+and trying out some of the examples demonstrated. Once you&#8217;ve completed the
+tutorial check out the rest of the <a class="reference internal" href="index.html"><span class="doc">User Guide</span></a> for a more
+thorough look at the functionality available.</p>
+<div class="section" id="sample-data">
+<h2>Sample Data<a class="headerlink" href="#sample-data" title="Permalink to this headline">¶</a></h2>
+<p>This tour makes use of a number of sample data files which you will need to
+download. This will happen when the sample data is imported for the first time.</p>
+</div>
+<div class="section" id="maps">
+<h2>Maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h2>
+<p>Maps are the primary data type in SunPy. They are spatially aware data arrays.
+There are maps for a 2D image, a time series of 2D images or temporally aligned
+2D images.</p>
+<p><strong>Creating a Map</strong></p>
+<p>SunPy supports many different data products from various sources &#8216;out of the
+box&#8217;. We shall use SDO&#8217;s AIA instrument as an example in this tutorial. The
+general way to create a Map from one of the supported data products is with the
+<code class="xref py py-obj docutils literal"><span class="pre">Map()</span></code> function from the <a class="reference internal" href="../code_ref/map.html#module-sunpy.map" title="sunpy.map"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.map</span></code></a> submodule. <code class="xref py py-obj docutils literal"><span class="pre">Map()</span></code>
+takes either a filename, a list of filenames or a data array and header. We can
+test <code class="docutils literal"><span class="pre">Map()</span></code> with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">import</span> <span class="nn">sunpy.map</span>
+
+<span class="n">aia</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="n">aia</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../guide/tour-1.py">Source code</a>, <a class="reference external" href="../guide/tour-1.png">png</a>, <a class="reference external" href="../guide/tour-1.hires.png">hires.png</a>, <a class="reference external" href="../guide/tour-1.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../_images/tour-1.png" src="../_images/tour-1.png" />
+</div>
+<p>This returns a map named <code class="xref py py-obj docutils literal"><span class="pre">aia</span></code> which can be manipulated with standard SunPy map commands.
+For more information about maps checkout the <a class="reference internal" href="data_types/maps.html"><span class="doc">map guide</span></a>
+and the <a class="reference internal" href="../code_ref/map.html#map"><span class="std std-ref">SunPy map</span></a>.</p>
+</div>
+<div class="section" id="timeseries">
+<h2>TimeSeries<a class="headerlink" href="#timeseries" title="Permalink to this headline">¶</a></h2>
+<p>SunPy handles time series data, fundamental to the study of any real world
+phenomenon, by creating a TimeSeries object. A timeseries consists of two parts;
+times and measurements taken at those times. The data can either be in your
+current Python session, alternatively within a local or remote file. Let&#8217;s
+create some fake data and pass it into a timeseries object.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">import</span> <span class="nn">sunpy.timeseries</span> <span class="kn">as</span> <span class="nn">ts</span>
+
+<span class="n">my_timeseries</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">GOES_XRS_TIMESERIES</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;XRS&#39;</span><span class="p">)</span>
+<span class="n">my_timeseries</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../guide/tour-2.py">Source code</a>, <a class="reference external" href="../guide/tour-2.png">png</a>, <a class="reference external" href="../guide/tour-2.hires.png">hires.png</a>, <a class="reference external" href="../guide/tour-2.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../_images/tour-2.png" src="../_images/tour-2.png" />
+</div>
+<p>We&#8217;ve created this timeseries object by passing TimeSeries a string which represent the name of a GOES lightcurve file.
+The <code class="docutils literal"><span class="pre">.peek()</span></code> method plots the timeseries data and displays the plot with some default settings.
+You can also use <code class="docutils literal"><span class="pre">my_timeseries.plot()</span></code> if you want more control over the style of the output plot.</p>
+<p>For more information about TimeSeries, check out the
+<a class="reference internal" href="data_types/timeseries.html"><span class="doc">timeseries guide</span></a> and the
+and the <a class="reference internal" href="../code_ref/timeseries.html#timeseries-code-ref"><span class="std std-ref">SunPy timeseries</span></a>.</p>
+</div>
+<div class="section" id="spectra">
+<h2>Spectra<a class="headerlink" href="#spectra" title="Permalink to this headline">¶</a></h2>
+<p>SunPy has spectral support for instruments which have such a capacity. CALLISTO,
+an international network of Solar Radio Spectrometers, is a specific example.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">from</span> <span class="nn">sunpy.spectra.sources.callisto</span> <span class="kn">import</span> <span class="n">CallistoSpectrogram</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">CallistoSpectrogram</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">CALLISTO_SPECTRUM</span><span class="p">)</span>
+<span class="n">image</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../guide/tour-3.py">Source code</a>, <a class="reference external" href="../guide/tour-3.png">png</a>, <a class="reference external" href="../guide/tour-3.hires.png">hires.png</a>, <a class="reference external" href="../guide/tour-3.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../_images/tour-3.png" src="../_images/tour-3.png" />
+</div>
+<p>For more information about spectra, check out the <a class="reference internal" href="data_types/spectra.html"><span class="doc">spectra guide</span></a>
+and the <a class="reference internal" href="../code_ref/spectra.html#spectra-code-ref"><span class="std std-ref">SunPy spectra</span></a>.</p>
+</div>
+<div class="section" id="plotting">
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<p>SunPy uses a matplotlib-like interface to its plotting so more complex plots can
+be built by combining SunPy with matplotlib. If you&#8217;re not familiar with
+plotting in matplotlib, you should <a class="reference external" href="http://matplotlib.org/users/tutorials.html">learn the basics</a>
+before continuing with this guide.</p>
+<p>Let&#8217;s begin by creating a simple plot of an AIA image. To make things easy,
+SunPy includes several example files which are used throughout the docs. These
+files have names like <code class="xref py py-obj docutils literal"><span class="pre">sunpy.data.sample.AIA_171_IMAGE</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">sunpy.data.sample.RHESSI_IMAGE</span></code>.</p>
+<p>Try typing the below example into your interactive Python shell.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+
+<span class="n">aia</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="n">aia</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../guide/tour-4.py">Source code</a>, <a class="reference external" href="../guide/tour-4.png">png</a>, <a class="reference external" href="../guide/tour-4.hires.png">hires.png</a>, <a class="reference external" href="../guide/tour-4.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../_images/tour-4.png" src="../_images/tour-4.png" />
+</div>
+<p>If everything has been configured properly you should see an AIA image with
+the default AIA 17.1 colormap, a colorbar on the right-hand side and a title and some
+labels.</p>
+<p>There is lot going on here, but we will walk you through the example. Briefly,
+the first line is importing SunPy, and the second importing the sample data
+files. On the third line we create a SunPy Map object which is a spatially-aware
+image. On the last line we then plot the <code class="docutils literal"><span class="pre">Map</span></code> object, using the built in &#8216;quick
+plot&#8217; function <a class="reference internal" href="../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.peek" title="sunpy.map.GenericMap.peek"><code class="xref py py-obj docutils literal"><span class="pre">peek</span></code></a>.</p>
+<p>SunPy uses a matplotlib-like interface to it&#8217;s plotting so more complex
+plots can be built by combining SunPy with matplotlib.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+
+<span class="n">aia</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">aia</span><span class="p">)</span>
+
+<span class="n">aia</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">aia</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">()</span>
+<span class="n">aia</span><span class="o">.</span><span class="n">draw_grid</span><span class="p">()</span>
+<span class="n">aia</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../guide/tour-5.py">Source code</a>, <a class="reference external" href="../guide/tour-5.png">png</a>, <a class="reference external" href="../guide/tour-5.hires.png">hires.png</a>, <a class="reference external" href="../guide/tour-5.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../_images/tour-5.png" src="../_images/tour-5.png" />
+</div>
+<p>For more information check out <a class="reference internal" href="plotting.html#plotting"><span class="std std-ref">Plotting in SunPy</span></a>.</p>
+</div>
+<div class="section" id="solar-physical-constants">
+<h2>Solar Physical Constants<a class="headerlink" href="#solar-physical-constants" title="Permalink to this headline">¶</a></h2>
+<p>SunPy contains a convenient list of solar-related physical constants. Here is
+a short bit of code to get you started:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.sun</span> <span class="k">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">con</span>
+
+<span class="go"># one astronomical unit (the average distance between the Sun and Earth)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">con</span><span class="o">.</span><span class="n">au</span>
+<span class="go">  Name   = Astronomical Unit</span>
+<span class="go">  Value  = 1.495978707e+11</span>
+<span class="go">  Error  = 0.0</span>
+<span class="go">  Units  = m</span>
+<span class="go">  Reference = IAU 2012 Resolution B2</span>
+
+<span class="go"># the solar radius</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">con</span><span class="o">.</span><span class="n">radius</span>
+<span class="go">  Name   = Solar radius</span>
+<span class="go">  Value  = 695508000.0</span>
+<span class="go">  Error  = 26000.0</span>
+<span class="go">  Units  = m</span>
+<span class="go">  Reference = Allen&#39;s Astrophysical Quantities 4th Ed.</span>
+</pre></div>
+</div>
+<p>Not all constants have a shortcut assigned to them (as above). The rest of the constants
+are stored in a dictionary. The following code grabs the dictionary and gets all of the
+keys.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">solar_constants</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">constants</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solar_constants</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>   
+<span class="go">[&#39;solar flux unit&#39;, &#39;surface area&#39;, &#39;average density&#39;, &#39;radius&#39;, &#39;surface</span>
+<span class="go">gravity&#39;, &#39;ellipticity&#39;, &#39;visual magnitude&#39;, &#39;center density&#39;, &#39;average</span>
+<span class="go">angular size&#39;, &#39;absolute magnitude&#39;, &#39;sunspot cycle&#39;, &#39;effective</span>
+<span class="go">temperature&#39;, &#39;aphelion distance&#39;, &#39;mean energy production&#39;, &#39;mass</span>
+<span class="go">conversion rate&#39;, &#39;average intensity&#39;, &#39;volume&#39;, &#39;metallicity&#39;, &#39;moment of</span>
+<span class="go">inertia&#39;, &#39;escape velocity&#39;, &#39;perihelion distance&#39;, &#39;GM&#39;, &#39;oblateness&#39;,</span>
+<span class="go">&#39;mean distance&#39;, &#39;age&#39;, &#39;mass&#39;, &#39;luminosity&#39;, &#39;center temperature&#39;]</span>
+</pre></div>
+</div>
+<p>You can also use the function <code class="xref py py-obj docutils literal"><span class="pre">sunpy.constants.print_all()</span></code> to print out a table of all of the values
+available. These constants are provided as a convenience so that everyone is using the same
+(accepted) values. For more information check out <a class="reference internal" href="../code_ref/sun.html#sun-code-ref"><span class="std std-ref">SunPy sun</span></a>.</p>
+</div>
+<div class="section" id="quantities-and-units">
+<h2>Quantities and Units<a class="headerlink" href="#quantities-and-units" title="Permalink to this headline">¶</a></h2>
+<p>Many capabilities in SunPy make use of physical quantities that are specified
+with units. SunPy uses <a class="reference external" href="http://docs.astropy.org/en/stable/units/index.html#module-astropy.units" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">units</span></code></a> to implement this functionality.
+Quantities and units are powerful tools for keeping track of variables with
+physical meaning and make it straightforward to convert the same physical
+quantity into different units. To learn more about the capabilities of
+quantities and units, consult <a class="reference internal" href="units-coordinates.html#units-coordinates-sunpy"><span class="std std-ref">Units and Coordinates in SunPy</span></a> or
+<a class="reference external" href="http://www.astropy.org/astropy-tutorials/Quantities.html">the astropy tutorial</a>.</p>
+<p>To demonstrate this, let&#8217;s look at the solar radius constant. This is a physical quantity
+that can be expressed in length units</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.sun</span> <span class="k">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">con</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">radius</span>
+<span class="go">&lt;Constant name=u&#39;Solar radius&#39; value=695508000.0 error=26000.0 units=&#39;m&#39; reference=u&quot;Allen&#39;s Astrophysical Quantities 4th Ed.&quot;&gt;</span>
+</pre></div>
+</div>
+<p>shows the solar radius in units of meters.  The same physical quantity can be expressed in different units instead using the <code class="xref py py-obj docutils literal"><span class="pre">to()</span></code> method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">radius</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;km&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">&lt;</span><span class="n">Quantity</span> <span class="mf">695508.0</span> <span class="n">km</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>or equivalently:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">con</span><span class="o">.</span><span class="n">radius</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">&lt;</span><span class="n">Quantity</span> <span class="mf">695508.0</span> <span class="n">km</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If, as is sometimes the case, you need just the raw value or the unit from a quantity, you can access these individually
+with the <code class="xref py py-obj docutils literal"><span class="pre">value</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">unit</span></code> attributes, respectively:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">radius</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">value</span>
+<span class="go">695508.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">unit</span>
+<span class="go">Unit(&quot;km&quot;)</span>
+</pre></div>
+</div>
+<p>This is useful, but the real power of units is in using them in calculations.
+Suppose you have the radius of a circle and would like to calculate its area.
+The following code implements this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>The first line imports numpy, and the second line imports astropy&#8217;s units
+module. The function then calculates the area based on a given radius. When
+it does this, it tracks the units of the input and propagates them through
+the calculation. Therefore, if we define the radius in meters, the area will
+be in meters squared:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">circle_area</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+<span class="go">&lt;Quantity 50.26548245743669 m2&gt;</span>
+</pre></div>
+</div>
+<p>This also works with different units, for example</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">circle_area</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">imperial</span><span class="o">.</span><span class="n">foot</span><span class="p">)</span>
+<span class="go">&lt;Quantity 50.26548245743669 ft2&gt;</span>
+</pre></div>
+</div>
+<p>As demonstrated above, we can convert between different systems of measurement.
+For example, if you want the area of a circle in square feet, but were given
+the radius in meters, then you can convert it before passing it into the function:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">circle_area</span><span class="p">((</span><span class="mi">4</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">imperial</span><span class="o">.</span><span class="n">foot</span><span class="p">))</span>
+<span class="go">&lt;Quantity 541.0531502245425 ft2&gt;</span>
+</pre></div>
+</div>
+<p>or you can convert the output:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">circle_area</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">imperial</span><span class="o">.</span><span class="n">foot</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">&lt;Quantity 541.0531502245426 ft2&gt;</span>
+</pre></div>
+</div>
+<p>This is an extremely brief summary of the powerful capbilities of Astropy units.  To find out more, see
+the <a class="reference external" href="http://www.astropy.org/astropy-tutorials/Quantities.html">the astropy tutorial</a> and
+<a class="reference external" href="http://docs.astropy.org/en/stable/units/index.html">documentation</a></p>
+</div>
+<div class="section" id="working-with-times">
+<h2>Working with Times<a class="headerlink" href="#working-with-times" title="Permalink to this headline">¶</a></h2>
+<p>SunPy also contains a number of convenience functions for working with dates
+and times. Here is a short example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.time</span>
+
+<span class="go"># parsing a standard time strings</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sunpy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;2004/02/05 12:00&#39;</span><span class="p">)</span>
+<span class="go">datetime.datetime(2004, 2, 5, 12, 0)</span>
+
+<span class="go"># This returns a datetime object. All SunPy functions which require</span>
+<span class="go"># time as an input sanitize the input using parse_time.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sunpy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">day_of_year</span><span class="p">(</span><span class="s1">&#39;2004-Jul-05 12:00:02&#39;</span><span class="p">)</span>
+<span class="go">187.50002314814816</span>
+
+<span class="go"># the julian day</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sunpy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">julian_day</span><span class="p">((</span><span class="mi">2010</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">30</span><span class="p">))</span>
+<span class="go">2455316.5</span>
+
+<span class="go"># TimeRange objects are useful for representing ranges of time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_range</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2010/03/04 00:10&#39;</span><span class="p">,</span> <span class="s1">&#39;2010/03/04 00:20&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_range</span><span class="o">.</span><span class="n">center</span>
+<span class="go">datetime.datetime(2010, 3, 4, 0, 15)</span>
+</pre></div>
+</div>
+<p>For more information about working with time in SunPy checkout the <a class="reference internal" href="time.html"><span class="doc">time guide</span></a>.</p>
+</div>
+<div class="section" id="obtaining-data">
+<h2>Obtaining Data<a class="headerlink" href="#obtaining-data" title="Permalink to this headline">¶</a></h2>
+<p>SunPy supports searching for and fetching data from a variety of sources,
+including the <a class="reference external" href="http://virtualsolar.org/">VSO</a> and the
+<a class="reference external" href="http://jsoc.stanford.edu/">JSOC</a>. The majority of SunPy&#8217;s clients can be
+queried using the <code class="docutils literal"><span class="pre">Fido</span></code> interface. An example of searching the VSO using this
+is below:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">Fido</span><span class="p">,</span> <span class="n">attrs</span> <span class="k">as</span> <span class="n">a</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">Fido</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s2">&quot;2011-09-20T01:00:00&quot;</span><span class="p">,</span> <span class="s2">&quot;2011-09-20T02:00:00&quot;</span><span class="p">),</span>
+<span class="go">                          a.Instrument(&#39;EIT&#39;))   </span>
+
+<span class="go">&lt;sunpy.net.fido_factory.UnifiedResponse object at 0x7fe70e6c6160&gt;</span>
+<span class="go">Results from 1 Provider:</span>
+
+<span class="go">4 Results from the VSOClient:</span>
+<span class="go">  Start Time [1]       End Time [1]    Source Instrument   Type   Wavelength [2]</span>
+<span class="go">                                                                      Angstrom</span>
+<span class="go">      str19               str19         str4     str3      str8      float64</span>
+<span class="go">------------------- ------------------- ------ ---------- -------- --------------</span>
+<span class="go">2011-09-20 01:00:15 2011-09-20 01:00:27   SOHO        EIT FULLDISK 171.0 .. 171.0</span>
+<span class="go">2011-09-20 01:06:13 2011-09-20 01:08:15   SOHO        EIT FULLDISK 284.0 .. 284.0</span>
+<span class="go">2011-09-20 01:13:53 2011-09-20 01:14:05   SOHO        EIT FULLDISK 195.0 .. 195.0</span>
+<span class="go">2011-09-20 01:19:47 2011-09-20 01:20:19   SOHO        EIT FULLDISK 304.0 .. 304.0</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Fido</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;./directory/&quot;</span><span class="p">)</span>
+<span class="go">[&#39;./directory/efz20110920.010015&#39;,</span>
+<span class="go"> &#39;./directory/efz20110920.010613&#39;,</span>
+<span class="go"> &#39;./directory/efz20110920.011353&#39;,</span>
+<span class="go"> &#39;./directory/efz20110920.011947&#39;]</span>
+</pre></div>
+</div>
+<p>For more information and examples of downloading data with SunPy see <a class="reference internal" href="acquiring_data/index.html#acquiring-data"><span class="std std-ref">Acquiring Data with SunPy</span></a>.</p>
+</div>
+<div class="section" id="database-package">
+<h2>Database Package<a class="headerlink" href="#database-package" title="Permalink to this headline">¶</a></h2>
+<p>The database package can be used to keep a local record of all files downloaded
+from the VSO, this means that two searches of the VSO which overlap will not
+re-download data.</p>
+<p>A simple example of this is shown below:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">Fido</span><span class="p">,</span> <span class="n">attrs</span> <span class="k">as</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.database</span> <span class="k">import</span> <span class="n">Database</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span> <span class="o">=</span> <span class="n">Database</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s2">&quot;2011-09-20T01:00:00&quot;</span><span class="p">,</span> <span class="s2">&quot;2011-09-20T02:00:00&quot;</span><span class="p">),</span>
+<span class="go">             a.Instrument(&#39;AIA&#39;), a.vso.Sample(15*u.min))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span>
+
+<span class="go">&lt;Table length=10&gt;</span>
+<span class="go">id  observation_time_start observation_time_end instrument source provider  physobs  wavemin wavemax                                      path                                              fileid          tags starred    download_time      size</span>
+<span class="go">str2         str19                 str19            str3     str3    str4      str9     str4    str4                                      str77                                              str24           str3   str2         str19          str7</span>
+<span class="go">---- ---------------------- -------------------- ---------- ------ -------- --------- ------- ------- ----------------------------------------------------------------------------- ------------------------ ---- ------- ------------------- -------</span>
+<span class="go">  1    2011-09-20 01:00:00  2011-09-20 01:00:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_00_00_34z_image_lev1.fits aia__lev1:171:1095555635  N/A      No 2017-08-03 19:41:00 66200.0</span>
+<span class="go">  2    2011-09-20 01:00:00  2011-09-20 01:00:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_00_00_34z_image_lev1.fits aia__lev1:171:1095555635  N/A      No 2017-08-03 19:41:00 66200.0</span>
+<span class="go">  3    2011-09-20 01:15:00  2011-09-20 01:15:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_15_00_34z_image_lev1.fits aia__lev1:171:1095556535  N/A      No 2017-08-03 19:41:00 66200.0</span>
+<span class="go">  4    2011-09-20 01:15:00  2011-09-20 01:15:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_15_00_34z_image_lev1.fits aia__lev1:171:1095556535  N/A      No 2017-08-03 19:41:00 66200.0</span>
+<span class="go">  5    2011-09-20 01:30:00  2011-09-20 01:30:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_30_00_34z_image_lev1.fits aia__lev1:171:1095557435  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go">  6    2011-09-20 01:30:00  2011-09-20 01:30:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_30_00_34z_image_lev1.fits aia__lev1:171:1095557435  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go">  7    2011-09-20 01:45:00  2011-09-20 01:45:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_45_00_34z_image_lev1.fits aia__lev1:171:1095558335  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go">  8    2011-09-20 01:45:00  2011-09-20 01:45:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_45_00_34z_image_lev1.fits aia__lev1:171:1095558335  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go">  9    2011-09-20 02:00:00  2011-09-20 02:00:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t02_00_00_34z_image_lev1.fits aia__lev1:171:1095559235  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go"> 10    2011-09-20 02:00:00  2011-09-20 02:00:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t02_00_00_34z_image_lev1.fits aia__lev1:171:1095559235  N/A      No 2017-08-03 19:41:01 66200.0</span>
+</pre></div>
+</div>
+<p>If you then do a second query:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s2">&quot;2011-09-20T01:00:00&quot;</span><span class="p">,</span> <span class="s2">&quot;2011-09-20T02:15:00&quot;</span><span class="p">),</span>
+<span class="go">             a.Instrument(&#39;AIA&#39;), a.vso.Sample(15*u.min))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span>
+<span class="go">&lt;Table length=12&gt;</span>
+<span class="go">id  observation_time_start observation_time_end instrument source provider  physobs  wavemin wavemax                                      path                                              fileid          tags starred    download_time      size</span>
+<span class="go">str2         str19                 str19            str3     str3    str4      str9     str4    str4                                      str77                                              str24           str3   str2         str19          str7</span>
+<span class="go">---- ---------------------- -------------------- ---------- ------ -------- --------- ------- ------- ----------------------------------------------------------------------------- ------------------------ ---- ------- ------------------- -------</span>
+<span class="go">  1    2011-09-20 01:00:00  2011-09-20 01:00:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_00_00_34z_image_lev1.fits aia__lev1:171:1095555635  N/A      No 2017-08-03 19:41:00 66200.0</span>
+<span class="go">  2    2011-09-20 01:00:00  2011-09-20 01:00:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_00_00_34z_image_lev1.fits aia__lev1:171:1095555635  N/A      No 2017-08-03 19:41:00 66200.0</span>
+<span class="go">  3    2011-09-20 01:15:00  2011-09-20 01:15:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_15_00_34z_image_lev1.fits aia__lev1:171:1095556535  N/A      No 2017-08-03 19:41:00 66200.0</span>
+<span class="go">  4    2011-09-20 01:15:00  2011-09-20 01:15:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_15_00_34z_image_lev1.fits aia__lev1:171:1095556535  N/A      No 2017-08-03 19:41:00 66200.0</span>
+<span class="go">  5    2011-09-20 01:30:00  2011-09-20 01:30:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_30_00_34z_image_lev1.fits aia__lev1:171:1095557435  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go">  6    2011-09-20 01:30:00  2011-09-20 01:30:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_30_00_34z_image_lev1.fits aia__lev1:171:1095557435  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go">  7    2011-09-20 01:45:00  2011-09-20 01:45:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_45_00_34z_image_lev1.fits aia__lev1:171:1095558335  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go">  8    2011-09-20 01:45:00  2011-09-20 01:45:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t01_45_00_34z_image_lev1.fits aia__lev1:171:1095558335  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go">  9    2011-09-20 02:00:00  2011-09-20 02:00:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t02_00_00_34z_image_lev1.fits aia__lev1:171:1095559235  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go"> 10    2011-09-20 02:00:00  2011-09-20 02:00:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t02_00_00_34z_image_lev1.fits aia__lev1:171:1095559235  N/A      No 2017-08-03 19:41:01 66200.0</span>
+<span class="go"> 11    2011-09-20 02:15:00  2011-09-20 02:15:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t02_15_00_34z_image_lev1.fits aia__lev1:171:1095560135  N/A      No 2017-08-03 19:42:19 66200.0</span>
+<span class="go"> 12    2011-09-20 02:15:00  2011-09-20 02:15:01        AIA    SDO     JSOC intensity    17.1    17.1 /home/stuart/sunpy/data/aia_lev1_171a_2011_09_20t02_15_00_34z_image_lev1.fits aia__lev1:171:1095560135  N/A      No 2017-08-03 19:42:19 66200.0</span>
+</pre></div>
+</div>
+<p>A query can then be performed against the database to get the records.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">entries</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s2">&quot;2011-09-20T01:45:00&quot;</span><span class="p">,</span> <span class="s2">&quot;2011-09-20T02:15:00&quot;</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;AIA&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>You can see that only two extra records were added to the database. For more
+information check out the <a class="reference internal" href="acquiring_data/database.html#database-guide"><span class="std std-ref">Using the database package</span></a>.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

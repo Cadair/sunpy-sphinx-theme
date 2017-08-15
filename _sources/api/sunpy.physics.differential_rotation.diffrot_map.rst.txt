@@ -1,0 +1,6 @@
+diffrot_map
+===========
+
+.. currentmodule:: sunpy.physics.differential_rotation
+
+.. autofunction:: diffrot_map

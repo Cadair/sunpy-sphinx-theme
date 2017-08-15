@@ -1,0 +1,6 @@
+WaveunitNotFoundError
+=====================
+
+.. currentmodule:: sunpy.database.tables
+
+.. autoexception:: WaveunitNotFoundError

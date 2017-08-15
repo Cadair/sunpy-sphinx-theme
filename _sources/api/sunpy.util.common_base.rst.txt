@@ -1,0 +1,6 @@
+common_base
+===========
+
+.. currentmodule:: sunpy.util
+
+.. autofunction:: common_base

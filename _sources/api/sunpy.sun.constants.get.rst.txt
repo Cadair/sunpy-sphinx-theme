@@ -1,0 +1,6 @@
+get
+===
+
+.. currentmodule:: sunpy.sun.constants
+
+.. autofunction:: get

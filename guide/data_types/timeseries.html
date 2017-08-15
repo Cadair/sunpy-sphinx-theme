@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>TimeSeries &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Spectra" href="spectra.html" />
+    <link rel="prev" title="Maps" href="maps.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="TimeSeries | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/guide/data_types/timeseries.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">SunPy User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tour.html">A brief tour of SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../acquiring_data/index.html">Acquiring Data with SunPy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Data Types in SunPy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spectra.html">Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plotting.html">Plotting in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../units-coordinates.html">Units and Coordinates in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time.html">Time in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roi.html">Region of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customization.html">Customizing SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="timeseries">
+<h1>TimeSeries<a class="headerlink" href="#timeseries" title="Permalink to this headline">¶</a></h1>
+<p>Time series data are a fundamental part of many data analysis projects
+in heliophysics as well as other areas. SunPy therefore provides a TimeSeries
+object to handle this type of data. This new object supersedes the now
+deprecated Lightcurve datatype. Once you&#8217;ve read through this guide check out
+the <a class="reference internal" href="../../code_ref/timeseries.html"><span class="doc">SunPy timeseries</span></a> for a more thorough look at SunPy TimeSeries
+and to see what data sources it currently supports.</p>
+<p>Sections 1 and 2 below describe how to create TimeSeries objects.  Section 3
+describes how to inspect the TimeSeries object to examine the data itself and
+the metadata.  Section 4 describes how to plot a TimeSeries object, Section 5
+describes how a TimeSeries object can be manipulated, and Section 6 describes
+in detail the TimeSeries metadata.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The TimeSeries supersedes the previous LightCurve object but does not
+implement data download methods. To download TimeSeries data files use
+<code class="xref py py-obj docutils literal"><span class="pre">sunpy.net</span></code>.</p>
+</div>
+<div class="section" id="creating-a-timeseries-from-an-observational-data-source">
+<h2>1. Creating a TimeSeries from an observational data source<a class="headerlink" href="#creating-a-timeseries-from-an-observational-data-source" title="Permalink to this headline">¶</a></h2>
+<p>A TimeSeries object can be created from local files.  For convenience, SunPy can
+download several example timeseries of observational data. These files have names like
+<code class="xref py py-obj docutils literal"><span class="pre">EVE_TIMESERIES</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">GOES_XRS_TIMESERIES</span></code>.
+To create the sample <a class="reference internal" href="../../api/sunpy.timeseries.XRSTimeSeries.html#sunpy.timeseries.XRSTimeSeries" title="sunpy.timeseries.sources.goes.XRSTimeSeries"><code class="docutils literal"><span class="pre">sunpy.timeseries.XRSTimeSeries</span></code></a> type the
+following into your interactive Python shell:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.timeseries</span> <span class="k">as</span> <span class="nn">ts</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">GOES_XRS_TIMESERIES</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;XRS&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is calling the <code class="xref py py-obj docutils literal"><span class="pre">TimeSeries</span></code> factory to create a time
+series from a GOES XRS FITS file. The TimeSeries factory uses <a class="reference internal" href="../../code_ref/io.html#module-sunpy.io.fits" title="sunpy.io.fits"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.io.fits</span></code></a> to
+read the FITS file. Note that if you have not downloaded the data already you
+should get an error and some instruction on how to download the sample data.</p>
+<p>The variable <code class="docutils literal"><span class="pre">my_timeseries</span></code> is a <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/timeseries.html#timeseries" title="(in pandas v0.20.3)"><span>Time Series / Date functionality</span></a> object. To create one from
+a local GOES/XRS FITS file try the following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="s1">&#39;/mydirectory/myts.fits&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;XRS&#39;</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>SunPy will attempt to detect automatically the instrument source for most FITS
+files. However timeseries data are stored in a variety of file types (FITS, txt,
+csv) and formats, and so it is not always possible to detect the source. For
+this reason, it is good practice to explicitly state the source for the file.
+SunPy ships with a number of known instrumental sources.  If you would like
+SunPy to include another instrumental source please follow the <code class="xref py py-obj docutils literal"><span class="pre">SunPy</span>
+<span class="pre">contribution</span> <span class="pre">guide</span></code>.</p>
+<p>The <code class="xref py py-obj docutils literal"><span class="pre">TimeSeries</span></code> factory has the ability to make a list of
+TimeSeries objects using a list of filepaths, a folder or a glob, for example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_ts_list</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="s1">&#39;filepath1&#39;</span><span class="p">,</span> <span class="s1">&#39;filepath2&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;XRS&#39;</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_ts_list</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="s1">&#39;/goesdirectory/&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;XRS&#39;</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_ts_list</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">glob</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;XRS&#39;</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>Note that this functionality will only work with files from the same single
+source, generating a source specific child of the <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">GenericTimeSeries</span></code></a>
+class such as the <a class="reference internal" href="../../api/sunpy.timeseries.XRSTimeSeries.html#sunpy.timeseries.XRSTimeSeries" title="sunpy.timeseries.sources.goes.XRSTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">XRSTimeSeries</span></code></a> above. For this
+reason, all the files should be from that same source for the <code class="xref py py-obj docutils literal"><span class="pre">TimeSeries</span></code>
+factory to work as intended.</p>
+</div>
+<div class="section" id="creating-a-single-timeseries-from-multiple-files">
+<h2>1.1 Creating a Single TimeSeries from Multiple Files<a class="headerlink" href="#creating-a-single-timeseries-from-multiple-files" title="Permalink to this headline">¶</a></h2>
+<p>You can create a single time series from multiple files for a given source using
+the keyword argument <code class="docutils literal"><span class="pre">concatenate=True</span></code>, such as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="s1">&#39;/mydirectory/myts1.fits&#39;</span><span class="p">,</span> <span class="s1">&#39;/mydirectory/myts2.fits&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;XRS&#39;</span><span class="p">,</span> <span class="n">concatenate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>Note these must all be from the same source if using
+<code class="xref py py-obj docutils literal"><span class="pre">concatenate</span></code> from within the TimeSeries
+factory. However, if time series <code class="xref py py-obj docutils literal"><span class="pre">concatenate</span></code> method
+can be used to make a single time series from multiple TimeSeries from different
+sources once they are already in the form of TimeSeries objects.</p>
+</div>
+<div class="section" id="creating-custom-timeseries">
+<h2>2. Creating Custom TimeSeries<a class="headerlink" href="#creating-custom-timeseries" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you will have data that you want to create into a TimeSeries. You can
+use the factory to create a <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">GenericTimeSeries</span></code></a>
+from a variety of data sources currently including <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v0.20.3)"><code class="xref py py-obj docutils literal"><span class="pre">pandas.DataFrame</span></code></a> and
+<code class="xref py py-obj docutils literal"><span class="pre">astropy.table.table.Table</span></code>.</p>
+</div>
+<div class="section" id="creating-a-timeseries-from-a-pandas-dataframe">
+<h2>2.1 Creating a TimeSeries from a Pandas DataFrame<a class="headerlink" href="#creating-a-timeseries-from-a-pandas-dataframe" title="Permalink to this headline">¶</a></h2>
+<p>A TimeSeries object must be supplied with some data when it is
+created.  The data can either be in your current Python session, in a
+local file, or in a remote file.  Let&#8217;s create some data and pass
+it into a TimeSeries object:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">intensity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="p">((</span><span class="mi">12</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="p">))))</span>
+</pre></div>
+</div>
+<p>The first line imports the numpy module used to create and store the data.
+The second line creates a basic numpy array of values representing a sine wave.
+We can use this array along with a suitable time storing object (such as AstroPy
+<a class="reference external" href="http://docs.astropy.org/en/stable/time/index.html#module-astropy.time" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">time</span></code></a> or a list of <a class="reference external" href="https://docs.python.org/3/library/datetime.html#module-datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> objects) to make a Pandas
+<code class="xref py py-obj docutils literal"><span class="pre">DataFrame</span></code>.  A suitable list of times must contain the same
+number of values as the data, this can be created using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">base</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">times</span> <span class="o">=</span> <span class="p">[</span><span class="n">base</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>The Pandas <code class="xref py py-obj docutils literal"><span class="pre">DataFrame</span></code> will use the dates list as the index:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">DataFrame</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">intensity</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">times</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;intensity&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This <code class="xref py py-obj docutils literal"><span class="pre">DataFrame</span></code> can then be used to construct a TimeSeries:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.timeseries</span> <span class="k">as</span> <span class="nn">ts</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts_custom</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Furthermore we could specify the metadata/header and units of this time series
+by sending them as arguments to the factory:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">meta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">units</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="s1">&#39;intensity&#39;</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts_custom</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">meta</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-custom-timeseries-from-an-astropy-table">
+<h2>2.2 Creating Custom TimeSeries from an AstroPy Table<a class="headerlink" href="#creating-custom-timeseries-from-an-astropy-table" title="Permalink to this headline">¶</a></h2>
+<p>A Pandas <code class="xref py py-obj docutils literal"><span class="pre">DataFrame</span></code> is the underlying object used to store
+the data within a TimeSeries, so the above example is the most lightweight to
+create a custom TimeSeries, but being scientific data it will often be more
+convenient to use an AstroPy <code class="xref py py-obj docutils literal"><span class="pre">Table</span></code> and let the factory
+convert this.  An advantage of this method is it allows you to include metadata
+and AstroPy <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a> values, which are both supported
+in tables, without additional arguments.  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">astropy.time</span> <span class="k">import</span> <span class="n">Time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">astropy.table</span> <span class="k">import</span> <span class="n">Table</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">base</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">times</span> <span class="o">=</span> <span class="p">[</span><span class="n">base</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">intensity</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="p">((</span><span class="mi">12</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="p">)))),</span> <span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tbl_meta</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;t_key&#39;</span><span class="p">:</span><span class="s1">&#39;t_value&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">([</span><span class="n">times</span><span class="p">,</span> <span class="n">intensity</span><span class="p">],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;intensity&#39;</span><span class="p">],</span> <span class="n">meta</span><span class="o">=</span><span class="n">tbl_meta</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span><span class="o">.</span><span class="n">add_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts_table</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that due to the properties of the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Time</span></code></a> object, this will be
+a mixin column which since it is a single object, limits the versatility of
+the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Table</span></code></a> a little. For more on mixin columns see the <a class="reference external" href="http://docs.astropy.org/en/stable/table/mixin_columns.html">AstroPy
+docs</a>.  The units
+will be taken from the table quantities for each column, the metadata will
+simply be the table.meta dictionary.  You can also explicitly add metadata and
+units, these will be added to the relevant dictionaries using the dictionary
+update method, with the explicit user-given values taking precedence.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.util.metadata</span> <span class="k">import</span> <span class="n">MetaDict</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">meta</span> <span class="o">=</span> <span class="n">MetaDict</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">units</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="s1">&#39;intensity&#39;</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts_table</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">meta</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="inspecting-timeseries-getting-at-the-data">
+<h2>3. Inspecting TimeSeries &amp; Getting at the Data<a class="headerlink" href="#inspecting-timeseries-getting-at-the-data" title="Permalink to this headline">¶</a></h2>
+<p>A time series holds both data as well as meta data and units data. The meta data
+for the time series is accessed by:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">header</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">meta</span>
+</pre></div>
+</div>
+<p>This references the <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a> object with
+the header information as read from the source files. A word of caution: many
+data sources provide little to no meta data so this variable might be empty.
+The meta data is described in more detail later in this guide. Similarly there
+are properties for getting <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.columns" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">columns</span></code></a>
+as a list of strings, <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.index" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>
+values and <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.time_range" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">time_range</span></code></a> of
+the data.  The actual data in a SunPy TimeSeries object is accessible through
+the <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.data" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">data</span></code></a> attribute.  The
+data is implemented as a Pandas <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v0.20.3)"><code class="xref py py-obj docutils literal"><span class="pre">DataFrame</span></code></a>, so to get a look at what
+data you have available use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+<p>You can also get a quick overview of that data using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Time series are columnar data so to get at a particular datum you need to
+first index the column, then the element you want. To get the names of the
+available columns:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+<p>You can access the 0th element in the column <code class="xref py py-obj docutils literal"><span class="pre">xrsa</span></code> with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;xrsa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You can also grab all of the data at a particular time:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;xrsa&#39;</span><span class="p">][</span><span class="s1">&#39;2012-06-01 00:00&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This will return a list of entries with times that match the accuracy of the time
+you provide. You can consider the data as x or y values:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+<p>You can read more about indexing at the <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/">pandas documentation website</a>.</p>
+<p>A TimeSeries can also return an AstroPy <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a> for a
+given column using the <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.quantity" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">quantity</span></code></a>
+method, this uses the values stored in the data and units stored in the units
+dictionary to determine the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">quantity</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">quantity</span><span class="p">(</span><span class="s1">&#39;xrsa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plotting">
+<h2>4. Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<p>The SunPy TimeSeries object has its own built-in plot methods so that
+it is easy to quickly view your time series. To create a plot just
+type:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.timeseries</span> <span class="kn">as</span> <span class="nn">ts</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="n">ts_plot</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">GOES_XRS_TIMESERIES</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;XRS&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ts_plot</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/timeseries-1.py">Source code</a>, <a class="reference external" href="../../guide/data_types/timeseries-1.png">png</a>, <a class="reference external" href="../../guide/data_types/timeseries-1.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/timeseries-1.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/timeseries-1.png" src="../../_images/timeseries-1.png" />
+</div>
+<p>This will open a matplotlib plot on your screen. The <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.peek" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">peek</span></code></a>
+method provides a view on data customised for each source while <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.plot" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">plot</span></code></a>
+provides a more general plot.  Note that <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.peek" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">peek</span></code></a>
+returns a <a class="reference external" href="http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.figure.Figure</span></code></a> object, if you want to save this to a PNG
+file you can use the <code class="xref py py-obj docutils literal"><span class="pre">savefig</span></code> method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;figure.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In addition, to enable users to modify the plot it is possible to grab the
+matplotlib axes object by using the <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.plot" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">plot</span></code></a>
+command.  This makes it possible to use the SunPy plot as the foundation for a
+more complicated figure. For a more information about this and some examples see
+<a class="reference internal" href="../plotting.html#plotting"><span class="std std-ref">Plotting in SunPy</span></a>.</p>
+</div>
+<div class="section" id="manipulating-timeseries">
+<h2>5 Manipulating TimeSeries<a class="headerlink" href="#manipulating-timeseries" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="modifying-the-data">
+<h2>5.1 Modifying the Data<a class="headerlink" href="#modifying-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Since the timeseries data is stored as a Pandas <code class="xref py py-obj docutils literal"><span class="pre">DataFrame</span></code>
+you can easily modify the data directly using all of the usual Pandas methods:
+for example, you can modify a single cells value using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;xrsa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.1</span>
+</pre></div>
+</div>
+<p>Or similarly using a datetime values (as string or datetime object):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;xrsa&#39;</span><span class="p">][</span><span class="s1">&#39;2012-06-01 23:59:45.061999&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>You can even change all the values for a given time:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;xrsa&#39;</span><span class="p">][</span><span class="s1">&#39;2012-06-01 00:00&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Note, you will need to be careful to consider units when modifying the
+TimeSeries data directly. For further details about editing Pandas DataFames you
+can read the <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/">pandas documentation website</a>.</p>
+<p>Additionally the TimeSeries provides the <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.add_column" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">add_column</span></code></a>
+method which will either add a new column or update a current column if the
+colname is already present. This can take numpy array or preferably an AstroPy
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a> value.  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;xrsa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="s1">&#39;xrsa&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">1000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="s1">&#39;new col&#39;</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that the values will be converted into the column units if an AstroPy
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a> is given. Caution should be taken when adding
+a new column because this column won&#8217;t have any associated MetaData entry,
+similarly if you use an array of values it won&#8217;t add an entry into the units
+<a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.OrderedDict" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">OrderedDict</span></code></a>.</p>
+</div>
+<div class="section" id="truncating-a-timeseries">
+<h2>5.2 Truncating a TimeSeries<a class="headerlink" href="#truncating-a-timeseries" title="Permalink to this headline">¶</a></h2>
+<p>It is often useful to truncate an existing TimeSeries object to retain a
+specific time range.  This is easily achieved by using the <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.truncate" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">truncate</span></code></a>
+method. For example, to trim our GOES data into a period of interest use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">TimeRange</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tr</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2012-06-01 05:00&#39;</span><span class="p">,</span><span class="s1">&#39;2012-06-01 06:30&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries_trunc</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">truncate</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This takes a number of different arguments, such as the start and end dates (as
+datetime or string objects) or a <a class="reference internal" href="../../api/sunpy.time.TimeRange.html#sunpy.time.TimeRange" title="sunpy.time.TimeRange"><code class="xref py py-obj docutils literal"><span class="pre">TimeRange</span></code></a> as used above. Note
+that the truncated TimeSeries will have a truncated <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>
+object, which may include dropping metadata entries for data totally cut out
+from the TimeSeries.  If you want to truncate using slice-like values you can,
+for example taking every 2nd value from 0 to 10000 can be done using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries_trunc</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">truncate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100000</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Caution should be used when removing values from the data manually, the
+TimeSeries can&#8217;t guarantee AstroPy units are correctly preserved when you
+interact with the data directly.</p>
+</div>
+<div class="section" id="down-and-up-sampling-a-timeseries-using-pandas">
+<h2>5.3 Down and Up Sampling a TimeSeries Using Pandas<a class="headerlink" href="#down-and-up-sampling-a-timeseries-using-pandas" title="Permalink to this headline">¶</a></h2>
+<p>Because the data is stored in a Pandas <code class="xref py py-obj docutils literal"><span class="pre">DataFrame</span></code> object you
+can manipulate it using normal Pandas methods, such as the <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.resample.html#pandas.DataFrame.resample" title="(in pandas v0.20.3)"><code class="xref py py-obj docutils literal"><span class="pre">resample</span></code></a>
+method.  To downsample you can use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">downsampled_dataframe</span> <span class="o">=</span> <span class="n">my_timeseries_trunc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;10T&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">downsampled_timeseries</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">timeseries</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">downsampled_dataframe</span><span class="p">,</span> <span class="n">my_timeseries_trunc</span><span class="o">.</span><span class="n">meta</span><span class="p">,</span> <span class="n">my_timeseries_trunc</span><span class="o">.</span><span class="n">units</span><span class="p">)</span> <span class="c1"># ToDo: Fix this!</span>
+</pre></div>
+</div>
+<p>Note, here <code class="docutils literal"><span class="pre">10T</span></code> means sample every 10 minutes and &#8216;mean&#8217; is the method used
+to combine the data. Alternatively the sum method is often used.
+You can also upsample, such as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upsampled_data</span> <span class="o">=</span> <span class="n">my_timeseries_trunc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;30S&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">ffill</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note, here we upsample to 30 second intervals using <code class="docutils literal"><span class="pre">30S</span></code> and use the pandas
+fill-forward method. Alternatively the back-fill method could be used.  Caution
+should be used when resampling the data, the TimeSeries can&#8217;t guarantee AstroPy
+Units are correctly preserved when you interact with the data directly.</p>
+</div>
+<div class="section" id="concatenating-timeseries">
+<h2>5.4 Concatenating TimeSeries<a class="headerlink" href="#concatenating-timeseries" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s common to want to combine a number of TimeSeries together into a single
+TimeSeries.  In the simplest scenario this is to combine data from a single
+source over several time ranges, for example if you wanted to combine the daily
+GOES data to get a week or more of constant data in one TimeSeries.  This can be
+performed using the TimeSeries factory with the <code class="docutils literal"><span class="pre">concatenate=True</span></code>
+keyword argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">concatenated_timeseries</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">timeseries</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span><span class="n">filepath1</span><span class="p">,</span> <span class="n">filepath2</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;XRS&#39;</span><span class="p">,</span> <span class="n">concatenate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note, you can list any number of files, or a folder or use a glob to select the
+input files to be concatenated.  It is possible to concatenate two TimeSeries
+after creating them with the factory using the <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.concatenate" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">concatenate</span></code></a>
+method.  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">concatenated_timeseries</span> <span class="o">=</span> <span class="n">goes_timeseries_1</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">goes_timeseries_2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will result in a TimeSeries identical to if you used the factory to create
+it in one step.  A limitation of the TimeSeries class is that often it is not
+easy to determine the source observatory/instrument of a file, generally
+because the file formats used vary depending on the scientific working groups,
+thus some sources need to be explicitly stated (as a keyword argument) and so it
+is not possible to concatenate files from multiple sources with the factory.
+To do this you can still use the <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.concatenate" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">concatenate</span></code></a>
+method, which will create a new TimeSeries with all the rows and columns of the
+source and concatenated TimeSeries in one:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">concatenated_timeseries</span> <span class="o">=</span> <span class="n">goes_timeseries</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">eve_timeseries</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that the more complex <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>
+object now has 2 entries and shows details on both:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">concatenated_timeseries</span><span class="o">.</span><span class="n">meta</span>
+</pre></div>
+</div>
+<p>The metadata object is described in more detail in the next section.</p>
+</div>
+<div class="section" id="creating-an-astropy-table-from-a-timeseries">
+<h2>5.5 Creating an AstroPy Table from a TimeSeries<a class="headerlink" href="#creating-an-astropy-table-from-a-timeseries" title="Permalink to this headline">¶</a></h2>
+<p>If you want to take the data from your TimeSeries and use it as a <code class="xref py py-obj docutils literal"><span class="pre">Table</span></code>
+this can be done using the <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.to_table" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">to_table</span></code></a>
+method.  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note that this <code class="xref py py-obj docutils literal"><span class="pre">Table</span></code> will contain a mixin column for
+containing the AstroPy <code class="xref py py-obj docutils literal"><span class="pre">Time</span></code> object representing the index,
+it will also add the relevant units to the columns. One of the most useful
+reasons for doing this is that AstroPy <a class="reference internal" href="../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.to_table" title="sunpy.timeseries.timeseriesbase.GenericTimeSeries"><code class="xref py py-obj docutils literal"><span class="pre">to_table</span></code></a>
+objects have some very nice options for viewing the data, including the basic
+console view:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">table</span>
+</pre></div>
+</div>
+<p>and the more sophisticated browser view using the <code class="xref py py-obj docutils literal"><span class="pre">show_in_browser</span></code>
+method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">table</span><span class="o">.</span><span class="n">show_in_browser</span><span class="p">(</span><span class="n">jsviewer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For further details about editing AstroPy tables you can read the <a class="reference external" href="http://docs.astropy.org/en/stable/table/">astropy
+documentation website</a>.</p>
+</div>
+<div class="section" id="a-detailed-look-at-the-metadata">
+<h2>6. A Detailed Look at the Metadata<a class="headerlink" href="#a-detailed-look-at-the-metadata" title="Permalink to this headline">¶</a></h2>
+<p>TimeSeries store metadata in a <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>
+object, this object is designed to be able to store multiple basic <a class="reference internal" href="../../api/sunpy.util.MetaDict.html#sunpy.util.MetaDict" title="sunpy.util.metadata.MetaDict"><code class="xref py py-obj docutils literal"><span class="pre">MetaDict</span></code></a>
+(case-insensitive ordered dictionary) objects and able to identify the relevant
+metadata for a given cell in the data. This enables a single TimeSeries to be
+created by combining/concatenating multiple TimeSeries source files together
+into one and to keep a reliable track of all the metadata relevant to each cell,
+column or row.  The metadata can be accessed by:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">meta</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">meta</span>
+</pre></div>
+</div>
+<p>You can easily get an overview of the metadata, this will show you a basic
+representation of the metadata entries that are relevant to this TimeSeries.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">meta</span>
+</pre></div>
+</div>
+<p>The data within a <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a> object is
+stored as a list of tuples, each tuple representing the metadata from a source
+file or timeseries. The tuple will contain a <a class="reference internal" href="../../api/sunpy.time.TimeRange.html#sunpy.time.TimeRange" title="sunpy.time.TimeRange"><code class="xref py py-obj docutils literal"><span class="pre">TimeRange</span></code></a> telling us
+which rows the metadata applies to, a list of column name strings for which the
+metadata applies to and finally a <a class="reference internal" href="../../api/sunpy.util.MetaDict.html#sunpy.util.MetaDict" title="sunpy.util.metadata.MetaDict"><code class="xref py py-obj docutils literal"><span class="pre">MetaDict</span></code></a> object for
+storing the key/value pairs of the metadata itself.  Each time a TimeSeries is
+concatenated to the original a new set of rows and/or columns will be added to
+the <code class="xref py py-obj docutils literal"><span class="pre">DataFrame</span></code> and a new entry will be added into the
+metadata.  Note that entries are ordered chronologically based on
+<a class="reference internal" href="../../api/sunpy.time.TimeRange.html#sunpy.time.TimeRange.start" title="sunpy.time.timerange.TimeRange"><code class="xref py py-obj docutils literal"><span class="pre">start</span></code></a> and generally it&#8217;s expected that no two
+TimeSeries will overlap on both columns and time range.  For example it is not
+good practice for alternate row values in a single column to be relevant to
+different metadata entries as this would make it impossible to uniquely identify
+the metadata relevant to each cell.</p>
+<p>If you want the string that&#8217;s printed then you can use the
+<a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.to_string" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">to_string</span></code></a> method.  This has the
+advantage of having optional keyword arguments that allows you to set the depth
+(number of rows for each entry) and width (total number of characters wide)
+to better fit your output.  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">meta_str</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">depth</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">99</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Similar to the TimeSeries, the metadata has some properties for convenient
+access to the global metadata details, including
+<a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.columns" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">columns</span></code></a> as a list of
+strings, <code class="xref py py-obj docutils literal"><span class="pre">index</span></code> values
+and <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.time_range" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">time_range</span></code></a> of the data.
+Beyond this, there are properties to get lists of details for all the entries in
+the <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a> object, including
+<a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.timeranges" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">timeranges</span></code></a>,
+<a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.columns" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">columns</span></code></a> (as a list of string
+column names) and <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.metas" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">metas</span></code></a>.
+Similar to TimeSeries objects you can <code class="xref py py-obj docutils literal"><span class="pre">truncate</span></code>
+and <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.concatenate" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">concatenate</span></code></a> <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>
+objects, but generally you won&#8217;t need to do this as it is done automatically
+when actioned on the TimeSeries.
+Note that when truncating a <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>
+object you will remove any entries outside of the given <a class="reference internal" href="../../api/sunpy.time.TimeRange.html#sunpy.time.TimeRange" title="sunpy.time.TimeRange"><code class="xref py py-obj docutils literal"><span class="pre">TimeRange</span></code></a>.
+You can also <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.append" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a> a new entry
+(as a tuple or list), which will add the entry in the correct chronological
+position.  It is frequently necessary to locate the metadata for a given column,
+row or cell which can be uniquely identified by both, to do this you can use the
+<a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.find" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">find</span></code></a> method, by adding colname
+and/or time/row keyword arguments you get a <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>
+object returned which contains only the relevant entries. You can then use the
+<a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.metas" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">metas</span></code></a> property to get a list of
+just the relevant <a class="reference internal" href="../../api/sunpy.util.MetaDict.html#sunpy.util.MetaDict" title="sunpy.util.metadata.MetaDict"><code class="xref py py-obj docutils literal"><span class="pre">MetaDict</span></code></a> objects.  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tsmd_return</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">colname</span><span class="o">=</span><span class="s1">&#39;xrsa&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s1">&#39;2012-06-01 00:00:33.904999&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tsmd_return</span><span class="o">.</span><span class="n">metas</span>
+</pre></div>
+</div>
+<p>Note, the colname and time filters are optional, but omitting both filters just
+returns an identical <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a> object to
+the TimeSeries original.  A common use case for the metadata is to find out the
+instrument/s that gathered the data and in this case you can use the
+<a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.get" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a> method.  This method takes a
+single key string or list of key strings with the optional filters and will
+search for any matching values. This method returns another <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>
+object, but removes all unwanted key/value pairs.  The result can be converted
+into a simple list of strings using the <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.values" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a>
+method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tsmd_return</span> <span class="o">=</span> <span class="n">my_timeseries</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;telescop&#39;</span><span class="p">,</span> <span class="n">colname</span><span class="o">=</span><span class="s1">&#39;xrsa&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tsmd_return</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.values" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a> removes duplicate
+strings and sorts the returned list.  You can update the values for these
+entries efficiently using the <a class="reference internal" href="../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.update" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>
+method which takes a dictionary argument and updates the values to each of the
+dictionaries that match the given colname and time filters, for example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_timeseries</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">upate</span><span class="p">({</span><span class="s1">&#39;telescop&#39;</span><span class="p">:</span> <span class="s1">&#39;G15&#39;</span><span class="p">},</span> <span class="n">colname</span><span class="o">=</span><span class="s1">&#39;xrsa&#39;</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here we have to specify the overwrite=False keyword parameter to allow us to
+overwrite values for keys already present in the <a class="reference internal" href="../../api/sunpy.util.MetaDict.html#sunpy.util.MetaDict" title="sunpy.util.metadata.MetaDict"><code class="xref py py-obj docutils literal"><span class="pre">MetaDict</span></code></a>
+objects, this helps protect the integrity of the original metadata and without
+this set (or with it set to False) you can still add new key/value pairs.
+Note that the <a class="reference internal" href="../../api/sunpy.util.MetaDict.html#sunpy.util.MetaDict" title="sunpy.util.metadata.MetaDict"><code class="xref py py-obj docutils literal"><span class="pre">MetaDict</span></code></a> objects are both case-insensitive
+for key strings and have ordered entries, where possible the order is preserved
+when updating values.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

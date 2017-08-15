@@ -1,0 +1,6 @@
+calculate_shift
+===============
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: calculate_shift

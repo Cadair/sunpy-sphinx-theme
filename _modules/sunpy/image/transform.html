@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.image.transform &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.image.transform | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/image/transform.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.image.transform</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Functions for geometrical image transformation and warping.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.ndimage.interpolation</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">skimage.transform</span>
+    <span class="n">scikit_image_not_found</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;scikit-image could not be imported. Image rotation will use scipy&quot;</span><span class="p">,</span>
+                  <span class="ne">ImportWarning</span><span class="p">)</span>
+    <span class="n">scikit_image_not_found</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># pragma: no cover</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;affine_transform&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="affine_transform"><a class="viewcode-back" href="../../../api/sunpy.image.transform.affine_transform.html#sunpy.image.transform.affine_transform">[docs]</a><span class="k">def</span> <span class="nf">affine_transform</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">rmatrix</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">image_center</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                     <span class="n">recenter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">use_scipy</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Rotates, shifts and scales an image using :func:`skimage.transform.warp`,</span>
+<span class="sd">    or :func:`scipy.ndimage.interpolation.affine_transform` if specified. Falls</span>
+<span class="sd">    back to the scipy function if scikit-image can&#39;t be imported.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : `numpy.ndarray`</span>
+<span class="sd">        2D Image to be rotated.</span>
+<span class="sd">    rmatrix : 2x2</span>
+<span class="sd">        Linear transformation rotation matrix.</span>
+<span class="sd">    order : int 0-5</span>
+<span class="sd">        Interpolation order to be used. When using scikit-image this parameter</span>
+<span class="sd">        is passed into :func:`skimage.transform.warp` (e.g., 3 corresponds to</span>
+<span class="sd">        bi-cubic interpolation).</span>
+<span class="sd">        When using scipy it is passed into</span>
+<span class="sd">        :func:`scipy.ndimage.interpolation.affine_transform` where it controls</span>
+<span class="sd">        the order of the spline.</span>
+<span class="sd">        Default: 3</span>
+<span class="sd">    scale : float</span>
+<span class="sd">        A scale factor for the image. Default is no scaling.</span>
+<span class="sd">    image_center : tuple</span>
+<span class="sd">        The point in the image to rotate around (axis of rotation).</span>
+<span class="sd">        Default: center of the array.</span>
+<span class="sd">    recenter : bool or array-like</span>
+<span class="sd">        Move the axis of rotation to the center of the array or recenter coords.</span>
+<span class="sd">        Default: True, recenter to the center of the array.</span>
+<span class="sd">    missing : float</span>
+<span class="sd">        The value to replace any missing data after the transformation.</span>
+<span class="sd">    use_scipy : bool</span>
+<span class="sd">        Force use of :func:`scipy.ndimage.interpolation.affine_transform`.</span>
+<span class="sd">        Will set all NaNs in image to zero before doing the transform.</span>
+<span class="sd">        Default: False, unless scikit-image can&#39;t be imported</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : New rotated, scaled and translated image.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This algorithm uses an affine transformation as opposed to a polynomial</span>
+<span class="sd">    geometrical transformation, which by default is :func:`skimage.transform.warp`.</span>
+<span class="sd">    One can specify using :func:`scipy.ndimage.interpolation.affine_transform` as</span>
+<span class="sd">    an alternative affine transformation.  The two transformations use different</span>
+<span class="sd">    algorithms and thus do not give identical output.</span>
+
+<span class="sd">    When using for :func:`skimage.transform.warp` with order &gt;= 4 or using</span>
+<span class="sd">    :func:`scipy.ndimage.interpolation.affine_transform` at all, NaN values will</span>
+<span class="sd">    replaced with zero prior to rotation.  No attempt is made to retain the NaN</span>
+<span class="sd">    values.</span>
+
+<span class="sd">    Input arrays with integer data are cast to float64 and can be re-cast using</span>
+<span class="sd">    :func:`numpy.ndarray.astype` if desired.</span>
+
+<span class="sd">    Although this function is analogous to the IDL&#39;s rot() function, it does not</span>
+<span class="sd">    use the same algorithm as the IDL rot() function.</span>
+<span class="sd">    IDL&#39;s rot() calls the `POLY_2D &lt;http://www.exelisvis.com/docs/poly_2d.html&gt;`_</span>
+<span class="sd">    method to calculate the inverse mapping of original to target pixel</span>
+<span class="sd">    coordinates. This is a polynomial geometrical transformation.</span>
+<span class="sd">    Then optionally it uses a bicubic convolution interpolation</span>
+<span class="sd">    algorithm to map the original to target pixel values.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">rmatrix</span> <span class="o">=</span> <span class="n">rmatrix</span> <span class="o">/</span> <span class="n">scale</span>
+    <span class="n">array_center</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span>
+
+    <span class="c1"># Make sure the image center is an array and is where it&#39;s supposed to be</span>
+    <span class="k">if</span> <span class="n">image_center</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">image_center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">image_center</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">image_center</span> <span class="o">=</span> <span class="n">array_center</span>
+
+    <span class="c1"># Determine center of rotation based on use (or not) of the recenter keyword</span>
+    <span class="k">if</span> <span class="n">recenter</span><span class="p">:</span>
+        <span class="n">rot_center</span> <span class="o">=</span> <span class="n">array_center</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rot_center</span> <span class="o">=</span> <span class="n">image_center</span>
+
+    <span class="n">displacement</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">rmatrix</span><span class="p">,</span> <span class="n">rot_center</span><span class="p">)</span>
+    <span class="n">shift</span> <span class="o">=</span> <span class="n">image_center</span> <span class="o">-</span> <span class="n">displacement</span>
+
+    <span class="k">if</span> <span class="n">use_scipy</span> <span class="ow">or</span> <span class="n">scikit_image_not_found</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">image</span><span class="p">)):</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Setting NaNs to 0 for SciPy rotation&quot;</span><span class="p">,</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
+        <span class="c1"># Transform the image using the scipy affine transform</span>
+        <span class="n">rotated_image</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">ndimage</span><span class="o">.</span><span class="n">interpolation</span><span class="o">.</span><span class="n">affine_transform</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">image</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">rmatrix</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">shift</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">,</span>
+                <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">cval</span><span class="o">=</span><span class="n">missing</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Make the rotation matrix 3x3 to include translation of the image</span>
+        <span class="n">skmatrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">skmatrix</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">rmatrix</span>
+        <span class="n">skmatrix</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="n">skmatrix</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">shift</span>
+        <span class="n">tform</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">AffineTransform</span><span class="p">(</span><span class="n">skmatrix</span><span class="p">)</span>
+
+        <span class="c1"># Transform the image using the skimage function</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">):</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Input data has been cast to float64&quot;</span><span class="p">,</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
+            <span class="n">adjusted_image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">adjusted_image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">adjusted_image</span><span class="p">))</span> <span class="ow">and</span> <span class="n">order</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Setting NaNs to 0 for higher-order scikit-image rotation&quot;</span><span class="p">,</span>
+                          <span class="ne">RuntimeWarning</span><span class="p">)</span>
+            <span class="n">adjusted_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">adjusted_image</span><span class="p">)</span>
+
+        <span class="n">rotated_image</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">warp</span><span class="p">(</span><span class="n">adjusted_image</span><span class="p">,</span> <span class="n">tform</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">,</span>
+                                               <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">cval</span><span class="o">=</span><span class="n">missing</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">rotated_image</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+EUVIMap
+=======
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: EUVIMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~EUVIMap.rsun_arcseconds
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~EUVIMap.is_datasource_for
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: rsun_arcseconds
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

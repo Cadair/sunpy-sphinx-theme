@@ -1,0 +1,6 @@
+get_cmap
+========
+
+.. currentmodule:: sunpy.cm
+
+.. autofunction:: get_cmap

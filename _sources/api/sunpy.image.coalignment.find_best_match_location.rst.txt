@@ -1,0 +1,6 @@
+find_best_match_location
+========================
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: find_best_match_location

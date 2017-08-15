@@ -1,0 +1,142 @@
+
+
+.. _sphx_glr_generated_gallery_submaps_and_cropping.py:
+
+
+=========================================
+Submaps and Cropping
+=========================================
+
+In this example we demonstrate how to get a submap of a map.
+
+
+Start by importing the necessary modules.
+
+
+
+.. code-block:: python
+
+
+    from __future__ import print_function, division
+
+    import astropy.units as u
+    from astropy.coordinates import SkyCoord
+
+    import sunpy.map
+    import sunpy.data.sample
+    import matplotlib.pyplot as plt
+
+
+
+
+
+
+
+Sunpy sample data contains a number of suitable maps, where the
+sunpy.data.sample.NAME returns the location of the given FITS file.
+
+
+
+.. code-block:: python
+
+
+    swap_map = sunpy.map.Map(sunpy.data.sample.SWAP_LEVEL1_IMAGE)
+
+
+
+
+
+
+
+This has resolution and ranges of:
+
+
+
+.. code-block:: python
+
+
+    print(swap_map.dimensions)
+    print(swap_map.data)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    PixelPair(x=<Quantity 1024.0 pix>, y=<Quantity 1024.0 pix>)
+    [[ 0.  0.  0. ...,  0.  0.  0.]
+     [ 0.  0.  0. ...,  0.  0.  0.]
+     [ 0.  0.  0. ...,  0.  0.  0.]
+     ..., 
+     [ 0.  0.  0. ...,  0.  0.  0.]
+     [ 0.  0.  0. ...,  0.  0.  0.]
+     [ 0.  0.  0. ...,  0.  0.  0.]]
+
+
+To find out more specifics about this map and the instrument used, check it's
+metatdata:
+
+
+
+.. code-block:: python
+
+
+    print(swap_map.meta)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    MetaDict([('simple', True), ('bitpix', 16), ('naxis', 2), ('naxis1', 1024), ('naxis2', 1024), ('comment', '------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------$Id: swap_fits_template 3732 2010-09-28 20:42:23Z bogdan $------------------------------------------------------------------------------------------------------------------------------------------------This is a level-1 SWAP FITS file produced by p2sw_prep v1.3 at the Royal  Observatory of Belgium. If you have difficulty with this file or wish  to make suggestions for improvements, please contact the SWAP  Instrument Team via email at swap_lyra@oma.be.------------------------------------------------------------------------'), ('filename', 'swap_lv1_20110607_063329.fits'), ('file_tmr', 'swap_00823959642982_2d12fa4a.fits'), ('file_raw', 'BINSWAP201106070633430000335466PROCESSED'), ('file_tar', 'BINSWAP_4818_SVA1_2011.06.07T09.40.44.tar'), ('date', '2011-11-22T19:48:23'), ('date-obs', '2011-06-07T06:33:29.759'), ('level', 1), ('creator', 'P2SW_PREP.PRO v1.3'), ('origin', 'ROB'), ('telescop', 'PROBA2'), ('instrume', 'SWAP'), ('object', 'Sun EUV'), ('filter', 'Al'), ('detector', 'SWAP'), ('wavelnth', 174), ('obs_mode', 'Variable off-pointing'), ('cap_mode', 'CDS'), ('exptime', 10.0), ('bscale', 0.00625), ('bzero', 204.8), ('bunit', 'DN/s/pixel'), ('datamin', 0.0), ('datamax', 368.088), ('swavint', 13.4808), ('firstrow', 1), ('last_row', 1024), ('firstcol', 1), ('last_col', 1024), ('rebin', 'off'), ('wcsname', 'Helioprojective-cartesian'), ('ctype1', 'HPLN-TAN'), ('ctype2', 'HPLT-TAN'), ('cunit1', 'arcsec'), ('cunit2', 'arcsec'), ('cd1_1', 3.16227), ('cd1_2', 0.0), ('cd2_1', 0.0), ('cd2_2', 3.16227), ('cdelt1', 3.16226783969), ('cdelt2', 3.16226783969), ('crval1', 0.0), ('crval2', 0.0), ('crpix1', 512.5), ('crpix2', 512.5), ('lonpole', 180.0), ('crota1', 0.0), ('crota2', 0.0), ('swxcen', 478.45), ('swycen', 534.28), ('dtplar1', 365.0), ('dtplar2', 2000.0), ('p2_x0', 0.0124005594716), ('p2_y0', 0.0253841016749), ('p2_roll', 179.998572874), ('solar_ep', 7.25187694733), ('hglt_obs', 0.0340964722021), ('hgln_obs', -0.000849540811517), ('rsun_arc', 945.587958879), ('dsun_obs', 151820143333.0), ('heex_obs', 151820143176.0), ('heey_obs', -3056074.7792), ('heez_obs', -6183475.65411), ('gsex_obs', -1667474.1514), ('gsey_obs', 3056074.77919), ('gsez_obs', -6183475.6541), ('los_alt', 531927.560994), ('trapprot', 0.0), ('trapelec', 2.45), ('geod_alt', 733468.040583), ('geod_lat', -58.3028506576), ('geod_lon', 160.297951898), ('temp1det', 2.629999), ('temp2det', 2.629999), ('ttemp1', '2011-06-07T06:33:06.000'), ('ttemp2', '2011-06-07T06:33:36.000'), ('tempdark', 2.629999), ('is_proc', 1), ('trantime', 823959642982.0), ('sacqtime', 823959415264.0), ('eacqtime', 823959642982.0), ('lang_rot', 1.0), ('pav_rot0', 0.0), ('pav_rot1', 0.0), ('hasstdby', 0), ('readrdiv', 0), ('pga_offs', 59), ('pga_gain', 1), ('led_pow', 'off'), ('led_sel', 'a'), ('hasblack', 4), ('hasoffst', 11), ('artefx', 'on'), ('recoding', 'fixed'), ('recnum', 3600), ('recbias', 10), ('compress', 'jpeg'), ('lzwdecor', 'off'), ('pn', 131), ('sizcompi', 664256), ('nprescr', 0), ('npreslzw', 0), ('checksum', 'J9lTK7lRJ7lRJ7lR'), ('datasum', '3949782845'), ('history', 'SWTMR 10448SWEDG 10994FITSHEAD2STRUCT run at: Tue Nov 22 19:48:16 2011p2sw_hdrchk v1.3  Computed detector temp.: 2.6299990 Celsiusp2sw_pmcdiv v1.3  Reverted wrt swap_pmc_20100308_164500.fitsp2sw_pixrep v1.3  Replaced wrt swap_satcds_20100113_152800.fitsp2sw_drksub v1.3  Subtracted modeled dark with coefficients inp2sw_drksub v1.3   swap_dark_coefs_20110101_000000.save usingp2sw_drksub v1.3   T=275.78 K, dt=10.0000 sp2sw_pmcrep v1.3  Reverted wrt swap_pmc_20100308_164500.fitsp2sw_ffcorr v1.3  Flat-field: swap_flatcds_20100308_164500.fitsp2sw_despike v1.3  Despiked at the 6.0-sigma level (7061 pix)p2sw_imgcor v1.3  Image centred on solar disk centrep2sw_imgcor v1.3  Image scaled to square pixelsp2sw_imgcor v1.3  Image rotated to solar North upp2sw_expnorm v1.3  Exposure time normalized data (DN/s/pixel)'), ('keycomments', {'SIMPLE': 'Written by IDL:  Tue Nov 22 19:48:23 2011', 'BITPIX': 'number of bits per data pixel', 'NAXIS': 'number of data axes', 'NAXIS1': 'length of data axis 1', 'NAXIS2': 'length of data axis 2', 'FILENAME': 'FITS filename', 'FILE_TMR': 'SWTMR filename', 'FILE_RAW': 'raw telemetry filename', 'FILE_TAR': 'raw telemetry package', 'DATE': 'UTC time of FITS file creation', 'DATE-OBS': 'UTC time of observation', 'LEVEL': 'data processing level', 'CREATOR': 'FITS creation software', 'ORIGIN': 'Royal Observatory of Belgium', 'TELESCOP': 'satellite name', 'INSTRUME': 'instrument name', 'OBJECT': 'object observed', 'FILTER': 'Aluminum filter', 'DETECTOR': 'HAS CMOS detector 1024x1024 pixels', 'WAVELNTH': '[Angstrom] bandpass peak response', 'OBS_MODE': 'sun_cen, fix_off, var_off, cme_track', 'CAP_MODE': '(DS,CDS) capture mode', 'EXPTIME': '[s] commanded exposure time', 'BSCALE': 'ratio of physical to array value at 0 offset', 'BZERO': 'physical value for the array value 0', 'BUNIT': 'unit of physical value', 'DATAMIN': 'minimum valid physical value', 'DATAMAX': 'maximum valid physical value', 'SWAVINT': '[DN/s] average intensity in calibrated image', 'FIRSTROW': 'first read-out detector row', 'LAST_ROW': 'last  read-out detector row', 'FIRSTCOL': 'first read-out detector column', 'LAST_COL': 'last  read-out detector column', 'REBIN': 'on-board rebin (2x2 pixel average)', 'WCSNAME': 'aligned with solar North', 'CTYPE1': 'WCS axis X', 'CTYPE2': 'WCS axis Y', 'CUNIT1': 'WCS axis X units', 'CUNIT2': 'WCS axis Y units', 'CD1_1': 'WCS coordinate description matrix', 'CD1_2': 'WCS coordinate description matrix', 'CD2_1': 'WCS coordinate description matrix', 'CD2_2': 'WCS coordinate description matrix', 'CDELT1': '[arcsec] average pixel scale along axis 1', 'CDELT2': '[arcsec] average pixel scale along axis 2', 'CRVAL1': '[arcsec] reference point WCS axis X', 'CRVAL2': '[arcsec] reference point WCS axis Y', 'CRPIX1': '[pixel] reference point axis 1', 'CRPIX2': '[pixel] reference point axis 2', 'LONPOLE': '[deg] native longitude of the celestial pole', 'CROTA1': '[deg] axis 1 to WCS rotation angle', 'CROTA2': '[deg] axis 2 to WCS rotation angle', 'SWXCEN': '[pixel] axis 1 location of solar center in lv0', 'SWYCEN': '[pixel] axis 2 location of solar center in lv0', 'DTPLAR1': '[s] predicted time to prev large angle rotation', 'DTPLAR2': '[s] predicted time to next large angle rotation', 'P2_X0': '[deg] s/c yaw', 'P2_Y0': '[deg] s/c pitch', 'P2_ROLL': '[deg] s/c roll', 'SOLAR_EP': '[deg] s/c ecliptic North to solar North angle', 'HGLT_OBS': '[deg] s/c heliographic latitude', 'HGLN_OBS': '[deg] s/c heliographic longitude', 'RSUN_ARC': '[arcsec] photospheric solar radius', 'DSUN_OBS': '[m]   s/c distance from Sun', 'HEEX_OBS': '[m]   s/c Heliocentric Earth Ecliptic X', 'HEEY_OBS': '[m]   s/c Heliocentric Earth Ecliptic Y', 'HEEZ_OBS': '[m]   s/c Heliocentric Earth Ecliptic Z', 'GSEX_OBS': '[m]   s/c Geocentric   Solar Ecliptic X', 'GSEY_OBS': '[m]   s/c Geocentric   Solar Ecliptic Y', 'GSEZ_OBS': '[m]   s/c Geocentric   Solar Ecliptic Z', 'LOS_ALT': '[m]   s/c LOS altitude (1000000=no atmosphere)', 'TRAPPROT': '[ct/cm^2/s] AP-8 MAX > 10MeV @ 725km model', 'TRAPELEC': '[ct/cm^2/s] AE-8 MAX >  1MeV @ 725km model', 'GEOD_ALT': '[m]   s/c WGS84 altitude', 'GEOD_LAT': '[deg] s/c sub-point geodetic latitude', 'GEOD_LON': '[deg] s/c sub-point longitude', 'TEMP1DET': '[Celsius] detector temperature (SW HK T CF)', 'TEMP2DET': '[Celsius] detector temperature (SW HK T CF)', 'TTEMP1': 'UTC time of detector temp 1st sample', 'TTEMP2': 'UTC time of detector temp 2nd sample', 'TEMPDARK': '[Celsius] temperature used in dark subtraction', 'IS_PROC': 'on-board image processing', 'TRANTIME': '[OBET] transferring time', 'SACQTIME': '[OBET] start acquisition time', 'EACQTIME': '[OBET] end   acquisition time', 'LANG_ROT': 'commanded large angle rotation component', 'PAV_ROT0': 'commanded paving rotation component 0', 'PAV_ROT1': 'commanded paving rotation component 1', 'HASSTDBY': 'HAS detector standby mode', 'READRDIV': 'read-out rate divider', 'PGA_OFFS': 'PGA offset', 'PGA_GAIN': 'PGA gain', 'LED_POW': 'calibration LED power', 'LED_SEL': 'calibration LED selection', 'HASBLACK': 'HAS detector black  level', 'HASOFFST': 'HAS detector offset level', 'ARTEFX': '(off,on,cosmic rays) on-board artefact removal', 'RECODING': '(off,fixed,adaptive) on-board recoding', 'RECNUM': 'recoding upper limit', 'RECBIAS': 'recoding lower limit', 'COMPRESS': '(off,lzw,jpeg) on-board compression algorithm', 'LZWDECOR': 'LZW decorrelation', 'PN': 'on-board priority number', 'SIZCOMPI': 'size of on-board compressed image', 'NPRESCR': '# preserved pixels - cosmic rays', 'NPRESLZW': '# preserved pixels - LZW decorrelation', 'CHECKSUM': 'HDU checksum updated 2011-11-22T19:48:23', 'DATASUM': 'data unit checksum updated 2011-11-22T19:48:23'}), ('waveunit', 'Angstrom'), ('obsrvtry', 'PROBA2')])
+
+
+To crop the data you create a submap, specifying the top right and bottom
+left as SkyCoord objects.
+
+
+
+.. code-block:: python
+
+
+    top_right = SkyCoord(0*u.arcsec, -200 * u.arcsec, frame=swap_map.coordinate_frame)
+    bottom_left = SkyCoord(-900 * u.arcsec, -900 * u.arcsec, frame=swap_map.coordinate_frame)
+    swap_submap = swap_map.submap(bottom_left, top_right)
+    swap_submap.peek(draw_limb=True, draw_grid=True)
+
+    plt.show()
+
+
+
+.. image:: /generated/gallery/images/sphx_glr_submaps_and_cropping_001.png
+    :align: center
+
+
+
+
+**Total running time of the script:** ( 0 minutes  0.699 seconds)
+
+
+
+.. container:: sphx-glr-footer
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Python source code: submaps_and_cropping.py <submaps_and_cropping.py>`
+
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Jupyter notebook: submaps_and_cropping.ipynb <submaps_and_cropping.ipynb>`
+
+.. rst-class:: sphx-glr-signature
+
+    `Generated by Sphinx-Gallery <https://sphinx-gallery.readthedocs.io>`_

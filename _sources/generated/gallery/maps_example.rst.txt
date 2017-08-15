@@ -1,0 +1,393 @@
+
+
+.. _sphx_glr_generated_gallery_maps_example.py:
+
+
+=========================================
+Interacting with Data Using SunPy Maps
+=========================================
+
+In this example you will be learning how to create and modify SunPy Map objects.
+
+
+Start by importing the necessary modules.
+
+
+
+.. code-block:: python
+
+
+    from __future__ import print_function, division
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    import astropy.units as u
+    from astropy.coordinates import SkyCoord
+
+    import sunpy.map
+    import sunpy.data.sample
+
+
+
+
+
+
+
+SunPy Maps store 2D data in a numpy array and additional data in a metadata
+dictionary giving information relating to the data and instrument.
+You can create a Map in a number of ways, including loading a FITS file or URL:
+``mymap = sunpy.map.Map('file1.fits')``
+``mymap = sunpy.map.Map(url_str)``
+Or using creating manually by using tuple with the data/header within:
+
+
+
+.. code-block:: python
+
+
+    data = np.random.rand(20, 15)
+    header = {}
+    manual_map = sunpy.map.Map((data, header))
+
+
+
+
+
+
+
+The data numpy array and metadata dictionary can easily be accessed:
+
+
+
+.. code-block:: python
+
+
+    print(manual_map.data)
+    print(manual_map.meta)
+
+    # In this case notice that the metadata has been populated by default with the
+    # naxis details that correspond to the array used for the data.
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    [[ 0.02664459  0.584744    0.82813478  0.21548709  0.72724131  0.34345017
+       0.00259281  0.3079749   0.08011387  0.91848069  0.16050237  0.59343602
+       0.81166741  0.42631276  0.6063404 ]
+     [ 0.80850669  0.11087268  0.2854306   0.13145126  0.24805476  0.05860608
+       0.49817633  0.32943144  0.67981116  0.66481627  0.69832016  0.36922007
+       0.54150763  0.20597621  0.31231531]
+     [ 0.84732262  0.59865366  0.69956443  0.65199307  0.21501021  0.39655452
+       0.19551974  0.24323411  0.31761417  0.50704334  0.01891777  0.09757355
+       0.81152155  0.85511213  0.16053949]
+     [ 0.65416108  0.69949201  0.20425761  0.36648389  0.17481296  0.1435897
+       0.97557108  0.05674273  0.47365816  0.17512478  0.02247849  0.1910107
+       0.55894732  0.34064191  0.40921852]
+     [ 0.63816168  0.81270664  0.15299262  0.59192645  0.23991971  0.94140868
+       0.29938843  0.0605473   0.12819721  0.3589384   0.1277692   0.68550077
+       0.2503346   0.69027995  0.68732234]
+     [ 0.41547911  0.15733724  0.53742555  0.43127511  0.413843    0.80187788
+       0.1800011   0.28954788  0.80587062  0.18119237  0.99294925  0.51701928
+       0.43395119  0.72828086  0.3550432 ]
+     [ 0.00648124  0.36861436  0.79179017  0.98402751  0.54113562  0.5733221
+       0.01164569  0.20917526  0.12543953  0.93421046  0.26923215  0.77760871
+       0.10130378  0.06624661  0.81881152]
+     [ 0.32014469  0.21818665  0.66538159  0.31124867  0.20068961  0.72043214
+       0.42026154  0.54091945  0.5766338   0.2535712   0.56578624  0.55038829
+       0.18285907  0.11188128  0.03069541]
+     [ 0.17935754  0.08859862  0.09306607  0.02141804  0.35252784  0.4413793
+       0.44939809  0.84937074  0.82673281  0.8713918   0.52502129  0.84836268
+       0.18795553  0.02385647  0.6293863 ]
+     [ 0.87552068  0.43018119  0.96232745  0.58856041  0.01999454  0.25455161
+       0.72595861  0.75248915  0.24874562  0.72402648  0.21682087  0.18672799
+       0.32013655  0.30166502  0.11326362]
+     [ 0.4712422   0.06172408  0.53232001  0.17438153  0.45724574  0.31073121
+       0.10991702  0.94099895  0.96612535  0.44279645  0.55910002  0.96471517
+       0.74726171  0.91621747  0.12440868]
+     [ 0.19555349  0.66297072  0.87612191  0.53027846  0.65126364  0.10804282
+       0.30423902  0.44582052  0.75096516  0.33110714  0.27185653  0.33646792
+       0.50356013  0.97191526  0.14606504]
+     [ 0.2625327   0.11198879  0.52635438  0.66202712  0.32283189  0.43079618
+       0.62241031  0.13933798  0.56504066  0.2115962   0.69807445  0.20148995
+       0.44647142  0.46546927  0.91809528]
+     [ 0.7237101   0.69903788  0.63942278  0.8896992   0.10970813  0.57120633
+       0.26069813  0.35982033  0.28525834  0.71990195  0.39262615  0.85547334
+       0.95440488  0.422537    0.93817605]
+     [ 0.90054103  0.77746402  0.92157797  0.34160933  0.87592687  0.88114191
+       0.63310972  0.9382727   0.8614177   0.30243378  0.8918849   0.38434816
+       0.3656197   0.24736319  0.86633282]
+     [ 0.53947248  0.76014207  0.85983813  0.86756383  0.97727466  0.26447981
+       0.9450331   0.97535398  0.8073551   0.58077752  0.97898576  0.43865239
+       0.91965822  0.97379412  0.57884448]
+     [ 0.521559    0.13118466  0.43996939  0.17066701  0.13508622  0.6892099
+       0.79004639  0.17253639  0.75771845  0.00923607  0.81962104  0.21327132
+       0.87145721  0.20435125  0.89478412]
+     [ 0.24468355  0.17841218  0.79154547  0.76339097  0.75102228  0.91652863
+       0.37483303  0.77988483  0.59116824  0.44608654  0.07017035  0.96917845
+       0.52718382  0.72295254  0.09035726]
+     [ 0.01967877  0.1662537   0.61480406  0.8925803   0.07070978  0.04718686
+       0.44642412  0.6381021   0.82776397  0.21663681  0.02563138  0.42904253
+       0.14850035  0.49146602  0.20998498]
+     [ 0.60042594  0.85729343  0.73861253  0.85758249  0.19740884  0.21416197
+       0.74110386  0.14945853  0.04812329  0.77366225  0.99467283  0.34864678
+       0.42081099  0.74071757  0.71109868]]
+    MetaDict([('naxis1', 15), ('naxis2', 20), ('naxis', 2)])
+
+
+You can quickly plot a map using the peek method:
+
+
+
+.. code-block:: python
+
+
+    manual_map.peek()
+
+
+
+
+.. image:: /generated/gallery/images/sphx_glr_maps_example_001.png
+    :align: center
+
+
+
+
+SunPy Maps have a number of attributes that can be accessed easily, such as
+the x and y ranges:
+
+
+
+.. code-block:: python
+
+
+    print(manual_map.xrange)
+    print(manual_map.yrange)
+
+    # These return astropy Quantity objects.
+    # In general the attributes are populated using details in the metadata and in
+    # this case there is no centre pixel or pixel size information given so SunPy
+    # is defaulting to assuming each pixel is 1 arcsec.
+    # This is in Helioprojective tangent projection in both longitude and latitude:
+    print(manual_map.coordinate_system)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    [ 0.49791667  0.50208333] deg
+    [ 0.49722222  0.50277778] deg
+    SpatialPair(axis1='HPLN-   ', axis2='HPLT-   ')
+
+
+A real map example is given in the sample data, where the sunpy.data.sample.NAME
+returns the location of the given FITS file.
+
+
+
+.. code-block:: python
+
+
+    aia_map = sunpy.map.Map(sunpy.data.sample.AIA_171_IMAGE)
+    aia_map.peek(draw_limb=True)
+
+
+
+
+.. image:: /generated/gallery/images/sphx_glr_maps_example_002.png
+    :align: center
+
+
+
+
+This has comprehensive metadata:
+
+
+
+.. code-block:: python
+
+
+    print(aia_map.meta)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    MetaDict([('simple', True), ('bitpix', -32), ('naxis', 2), ('naxis1', 1024), ('naxis2', 1024), ('bld_vers', 'V5R12X'), ('lvl_num', 1.5), ('t_rec', '2011-06-07T06:33:03Z'), ('trecstep', 1.0), ('trecepoc', '1977.01.01_00:00:00_TAI'), ('trecroun', 1), ('origin', 'SDO'), ('date', '2012-10-16T19:45:34'), ('telescop', 'SDO'), ('instrume', 'AIA_3'), ('date-obs', '2011-06-07T06:33:02.77'), ('t_obs', '2011-06-07T06:33:02.88Z'), ('camera', 3), ('img_type', 'LIGHT'), ('exptime', 0.234256), ('expsdev', 0.000135), ('int_time', 0.507812), ('wavelnth', 171), ('waveunit', 'angstrom'), ('wave_str', '171_THIN'), ('fsn', 27194331), ('fid', 0), ('quallev0', 0), ('quality', 0), ('totvals', 16777216), ('datavals', 16777216), ('missvals', 0), ('percentd', 100.0), ('datamin', -8), ('datamax', 17722), ('datamedn', 18), ('datamean', 26.6888), ('datarms', 9429260.0), ('dataskew', 81.433), ('datakurt', 17076.7421875), ('datacent', 30.76), ('datap01', -1.0), ('datap10', 1.0), ('datap25', 3.0), ('datap75', 39.0), ('datap90', 64.0), ('datap95', 87.0), ('datap98', 127.0), ('datap99', 168.0), ('nsatpix', 29), ('oscnmean', 'nan'), ('oscnrms', 'nan'), ('flat_rec', 'aia.flatfield[:#30]'), ('nspikes', 977), ('ctype1', 'HPLN-TAN'), ('cunit1', 'arcsec'), ('crval1', 3.223099507700556), ('cdelt1', 2.402792), ('crpix1', 512.5), ('ctype2', 'HPLT-TAN'), ('cunit2', 'arcsec'), ('crval2', 1.385781353025793), ('cdelt2', 2.402792), ('crpix2', 512.5), ('crota2', -0.138829), ('r_sun', 1573.89688496), ('mpo_rec', 'sdo.master_pointing[:#394]'), ('inst_rot', 0.019327), ('imscl_mp', 0.599489), ('x0_mp', 2049.459961), ('y0_mp', 2049.030029), ('asd_rec', 'sdo.lev0_asd_0004[:#10672125]'), ('sat_y0', -4.519384), ('sat_z0', 13.793308), ('sat_rot', -3.4e-05), ('acs_mode', 'SCIENCE'), ('acs_eclp', 'NO'), ('acs_sunp', 'YES'), ('acs_safe', 'NO'), ('acs_cgt', 'GT3'), ('orb_rec', 'sdo.fds_orbit_vectors[2011.06.07_06:33:00_UTC]'), ('dsun_ref', 149597870691.0), ('dsun_obs', 151846026489.0), ('rsun_ref', 696000000.0), ('rsun_obs', 945.436711), ('gaex_obs', -13315441.72), ('gaey_obs', -25080995.82), ('gaez_obs', 31173320.91), ('haex_obs', -36634444009.2), ('haey_obs', -147360551017.0), ('haez_obs', 35731768.47), ('obs_vr', 86.972467), ('obs_vw', 31968.269521), ('obs_vn', 4842.822869), ('crln_obs', 340.698273), ('crlt_obs', 0.048591), ('car_rot', 2111), ('hgln_obs', 0.0), ('hglt_obs', 0.048591), ('roi_nwin', -2147483648), ('roi_sum', -2147483648), ('roi_nax1', -2147483648), ('roi_nay1', -2147483648), ('roi_llx1', -2147483648), ('roi_lly1', -2147483648), ('roi_nax2', -2147483648), ('roi_nay2', -2147483648), ('roi_llx2', -2147483648), ('roi_lly2', -2147483648), ('pixlunit', 'DN'), ('dn_gain', 17.7), ('eff_area', 2.419), ('eff_ar_v', 3.0), ('tempccd', -71.0), ('tempgt', 14.327), ('tempsmir', 34.029), ('tempfpad', 16.29), ('ispsname', 'aia.lev0_isp_0011'), ('isppktim', '2011-06-07T06:32:57.50Z'), ('isppktvn', '001.197'), ('aivnmst', 453), ('aimgots', 1686119616), ('asqhdr', 2174677979), ('asqtnum', 2), ('asqfsn', 27194331), ('aiahfsn', 27194323), ('aecdelay', 1537), ('aiaecti', 0), ('aiasen', 0), ('aifdbid', 241), ('aimgotss', 55109), ('aifcps', 10), ('aiftswth', 0), ('aifrmlid', 3057), ('aiftsid', 41729), ('aihismxb', 7), ('aihis192', 8377773), ('aihis348', 8384772), ('aihis604', 8386035), ('aihis860', 8386516), ('aifwen', 204), ('aimgshce', 237), ('aectype', 2), ('aecmode', 'ON'), ('aistate', 'CLOSED'), ('aiaecenf', 1), ('aifiltyp', 0), ('aimshobc', 41.104), ('aimshobe', 26.068001), ('aimshotc', 55.327999), ('aimshote', 69.344002), ('aimshcbc', 275.432007), ('aimshcbe', 260.484009), ('aimshctc', 289.556), ('aimshcte', 303.395996), ('aicfgdl1', 0), ('aicfgdl2', 107), ('aicfgdl3', 171), ('aicfgdl4', 236), ('aifoenfl', 1), ('aimgfsn', 5), ('aimgtyp', 0), ('aiawvlen', 7), ('aiagp1', 0), ('aiagp2', 0), ('aiagp3', 0), ('aiagp4', 0), ('aiagp5', 0), ('aiagp6', 0), ('aiagp7', 0), ('aiagp8', 619), ('aiagp9', 683), ('aiagp10', 748), ('agt1svy', 2), ('agt1svz', -6), ('agt2svy', 0), ('agt2svz', -1), ('agt3svy', -2), ('agt3svz', 3), ('agt4svy', -5), ('agt4svz', 5), ('aimgshen', 4), ('keywddoc', 'https:'), ('recnum', 76618218), ('blank', -32768), ('date_obs', '2011-06-07T06:33:02.77'), ('xcen', 2.91938326953), ('ycen', 1.09323792231), ('detector', 'AIA'), ('comment', "FITS (Flexible Image Transport System) format is defined in 'Astronomyand Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359HFITSHEAD2STRUCT"), ('history', 'FITSHEAD2STRUCT run at: Fri May 26 11:33:15 2017mreadfits_shm VERSION:1.20read_sdo VERSION:  2.10aia2wcsmin.pro VERSION:  5.10aia2wcsminaia2wcsmin  MPO_date: 2012-09-04T00:00:00Zaia2wcsmin  MPO_t_start: 2011-06-05T00:00:00Zaia2wcsmin  MPO_t_stop: 2011-06-12T00:00:00Zaia2wcsmin  MPO_version: 5ssw_reg.pro VERSION:  1.30ssw_regssw_reg  ROT called with cubic interpolation: cubic = -0.500000ssw_reg  Image registered to SDO image with FSN = 27194330ssw_reg  Image registered to SDO image with T_OBS = 2011-06-07T06:33:01.aia_fix_header.pro VERSION:  1.00aia_prep.pro VERSION: 5.10aia_reg.pro VERSION:  1.20'), ('keycomments', {'SIMPLE': 'conforms to FITS standard', 'BITPIX': 'array data type', 'NAXIS': 'number of array dimensions'})])
+
+
+And find out information about the observation device and date:
+
+
+
+.. code-block:: python
+
+
+    print(aia_map.date)
+    print(aia_map.observatory)
+    print(aia_map.detector)
+    print(aia_map.exposure_time)
+    print(aia_map.coordinate_system)
+    print(aia_map.measurement)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    2011-06-07 06:33:02.770000
+    SDO
+    AIA
+    0.234256 s
+    SpatialPair(axis1='HPLN-TAN', axis2='HPLT-TAN')
+    171.0 Angstrom
+
+
+Maps also hold coordinate objects for the coordinate system they are in.
+
+
+
+.. code-block:: python
+
+
+    print(aia_map.coordinate_frame)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    <Helioprojective Frame (obstime=2011-06-07 06:33:02.770000, rsun=696000000.0 m, observer=<HeliographicStonyhurst Coordinate (obstime=2011-06-07 06:33:02.770000): (lon, lat, radius) in (deg, deg, m)
+        ( 0.,  0.048591,   1.51846026e+11)>)>
+
+
+To see only a part of the image you create a submap, by specifying the top
+left and bottom right corners of the rectangle as either `SkyCoord` or
+`Quantity` objects.
+
+
+
+.. code-block:: python
+
+
+    bottom_left = aia_map.bottom_left_coord
+    top_right = SkyCoord(0 * u.arcsec, 0 * u.arcsec, frame=aia_map.coordinate_frame)
+    aia_submap = aia_map.submap(bottom_left, top_right)
+    aia_submap.peek(draw_limb=True)
+
+
+
+
+.. image:: /generated/gallery/images/sphx_glr_maps_example_003.png
+    :align: center
+
+
+
+
+Similarly, if you want to reduce the angular resolution of the map you can use
+the `~sunpy.map.GenericMap.resample` method, specifying the dimensions as an
+Astropy Quantity in pixels:
+
+
+
+.. code-block:: python
+
+
+    dimensions = u.Quantity([50, 50], u.pixel)
+    aia_resampled_map = aia_map.resample(dimensions)
+    aia_resampled_map.peek(draw_limb=True, draw_grid=True)
+
+
+
+
+.. image:: /generated/gallery/images/sphx_glr_maps_example_004.png
+    :align: center
+
+
+
+
+Similar to resampling you can use the `~sunpy.map.GenericMap.superpixel`
+method, this will reduce the resolution of the image by combining the number
+of pixels (in each dimension) in the dimensions argument into one single
+pixel. This can be used to increase the signal to noise ratio. For this the
+new dimensions must divide original image size exactly.
+
+
+
+.. code-block:: python
+
+
+    dimensions = u.Quantity(aia_map.dimensions) / 16
+    aia_superpixel_map = aia_map.superpixel(dimensions)
+    aia_superpixel_map.peek(draw_limb=True)
+
+
+
+
+.. image:: /generated/gallery/images/sphx_glr_maps_example_005.png
+    :align: center
+
+
+
+
+Maps can also be rotated using the `~sunpy.map.GenericMap.rotate` method:
+
+
+
+.. code-block:: python
+
+
+    aia_rotated_submap = aia_submap.rotate(angle=10 * u.deg)
+    aia_rotated_submap.peek(draw_limb=True, draw_grid=True)
+
+    # Note: the data array is expanded so that none of the original data is lost
+    # through clipping.
+    plt.show()
+
+
+
+.. image:: /generated/gallery/images/sphx_glr_maps_example_006.png
+    :align: center
+
+
+
+
+**Total running time of the script:** ( 0 minutes  4.133 seconds)
+
+
+
+.. container:: sphx-glr-footer
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Python source code: maps_example.py <maps_example.py>`
+
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Jupyter notebook: maps_example.ipynb <maps_example.ipynb>`
+
+.. rst-class:: sphx-glr-signature
+
+    `Generated by Sphinx-Gallery <https://sphinx-gallery.readthedocs.io>`_

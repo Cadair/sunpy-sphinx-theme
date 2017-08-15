@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.physics.differential_rotation &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.physics.differential_rotation | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/physics/differential_rotation.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.physics.differential_rotation</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">division</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="k">import</span> <span class="n">deepcopy</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">product</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="k">import</span> <span class="n">transform</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="n">SkyCoord</span><span class="p">,</span> <span class="n">Longitude</span>
+
+<span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span>
+<span class="kn">from</span> <span class="nn">sunpy.coordinates</span> <span class="k">import</span> <span class="n">frames</span><span class="p">,</span> <span class="n">HeliographicStonyhurst</span>
+<span class="kn">from</span> <span class="nn">sunpy.image.util</span> <span class="k">import</span> <span class="n">to_norm</span><span class="p">,</span> <span class="n">un_norm</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;diff_rot&#39;</span><span class="p">,</span> <span class="s1">&#39;solar_rotate_coordinate&#39;</span><span class="p">,</span> <span class="s1">&#39;diffrot_map&#39;</span><span class="p">]</span>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">duration</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">latitude</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
+<div class="viewcode-block" id="diff_rot"><a class="viewcode-back" href="../../../api/sunpy.physics.differential_rotation.diff_rot.html#sunpy.physics.differential_rotation.diff_rot">[docs]</a><span class="k">def</span> <span class="nf">diff_rot</span><span class="p">(</span><span class="n">duration</span><span class="p">,</span> <span class="n">latitude</span><span class="p">,</span> <span class="n">rot_type</span><span class="o">=</span><span class="s1">&#39;howard&#39;</span><span class="p">,</span> <span class="n">frame_time</span><span class="o">=</span><span class="s1">&#39;sidereal&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function computes the change in longitude over days in degrees.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    duration : `~astropy.units.Quantity`</span>
+<span class="sd">        Number of seconds to rotate over.</span>
+<span class="sd">    latitude : `~astropy.units.Quantity`</span>
+<span class="sd">        heliographic coordinate latitude in Degrees.</span>
+<span class="sd">    rot_type : `str`</span>
+<span class="sd">        The differential rotation model to use.</span>
+
+<span class="sd">        One of:</span>
+
+<span class="sd">        | ``howard`` : Use values for small magnetic features from Howard et al.</span>
+<span class="sd">        | ``snodgrass`` : Use Values from Snodgrass et. al</span>
+<span class="sd">        | ``allen`` : Use values from Allen&#39;s Astrophysical Quantities, and simpler equation.</span>
+
+<span class="sd">    frame_time : `str`</span>
+<span class="sd">        One of : ``&#39;sidereal&#39;`` or  ``&#39;synodic&#39;``. Choose &#39;type of day&#39; time reference frame.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    longitude_delta : `~astropy.units.Quantity`</span>
+<span class="sd">        The change in longitude over days (units=degrees)</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    * `IDL code equivalent &lt;http://hesperia.gsfc.nasa.gov/ssw/gen/idl/solar/diff_rot.pro&gt;`__</span>
+<span class="sd">    * `Howard rotation &lt;http://adsabs.harvard.edu/abs/1990SoPh..130..295H&gt;`__</span>
+<span class="sd">    * `A review of rotation parameters (including Snodgrass values) &lt;http://link.springer.com/article/10.1023%2FA%3A1005226402796&gt;`__</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    Default rotation calculation over two days at 30 degrees latitude:</span>
+
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; import astropy.units as u</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.physics.differential_rotation import diff_rot</span>
+<span class="sd">    &gt;&gt;&gt; rotation = diff_rot(2 * u.day, 30 * u.deg)</span>
+
+<span class="sd">    Default rotation over two days for a number of latitudes:</span>
+
+<span class="sd">    &gt;&gt;&gt; rotation = diff_rot(2 * u.day, np.linspace(-70, 70, 20) * u.deg)</span>
+
+<span class="sd">    With rotation type &#39;allen&#39;:</span>
+
+<span class="sd">    &gt;&gt;&gt; rotation = diff_rot(2 * u.day, np.linspace(-70, 70, 20) * u.deg, &#39;allen&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">latitude</span> <span class="o">=</span> <span class="n">latitude</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+
+    <span class="n">sin2l</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">latitude</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">sin4l</span> <span class="o">=</span> <span class="n">sin2l</span><span class="o">**</span><span class="mi">2</span>
+
+    <span class="n">rot_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;howard&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">2.894</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.428</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.370</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">urad</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">second</span><span class="p">,</span>
+                  <span class="s1">&#39;snodgrass&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">2.851</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.343</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.474</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">urad</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">second</span><span class="p">,</span>
+                  <span class="s1">&#39;allen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.44</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">day</span>
+                  <span class="p">}</span>
+
+    <span class="k">if</span> <span class="n">rot_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;howard&#39;</span><span class="p">,</span> <span class="s1">&#39;allen&#39;</span><span class="p">,</span> <span class="s1">&#39;snodgrass&#39;</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">((</span><span class="s2">&quot;rot_type must equal one of &quot;</span>
+                          <span class="s2">&quot;{{ </span><span class="si">{}</span><span class="s2"> }}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot; | &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rot_params</span><span class="o">.</span><span class="n">keys</span><span class="p">()))))</span>
+
+    <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">rot_params</span><span class="p">[</span><span class="n">rot_type</span><span class="p">]</span>
+
+    <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span> <span class="o">+</span> <span class="n">B</span> <span class="o">*</span> <span class="n">sin2l</span> <span class="o">+</span> <span class="n">C</span> <span class="o">*</span> <span class="n">sin4l</span><span class="p">)</span> <span class="o">*</span> <span class="n">duration</span>
+
+    <span class="k">if</span> <span class="n">frame_time</span> <span class="o">==</span> <span class="s1">&#39;synodic&#39;</span><span class="p">:</span>
+        <span class="n">rotation</span> <span class="o">-=</span> <span class="mf">0.9856</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">day</span> <span class="o">*</span> <span class="n">duration</span>
+
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">rotation</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="solar_rotate_coordinate"><a class="viewcode-back" href="../../../api/sunpy.physics.differential_rotation.solar_rotate_coordinate.html#sunpy.physics.differential_rotation.solar_rotate_coordinate">[docs]</a><span class="k">def</span> <span class="nf">solar_rotate_coordinate</span><span class="p">(</span><span class="n">coordinate</span><span class="p">,</span>
+                            <span class="n">new_observer_time</span><span class="p">,</span>
+                            <span class="n">new_observer_location</span><span class="o">=</span><span class="s2">&quot;earth&quot;</span><span class="p">,</span>
+                            <span class="o">**</span><span class="n">diff_rot_kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given a coordinate on the Sun, calculate where that coordinate maps to</span>
+<span class="sd">    at some later or earlier time, given the solar rotation profile.</span>
+
+<span class="sd">    Note that if the new observer location is defined using a</span>
+<span class="sd">    BaseCoordinateFrame or SkyCoord, then it is assumed that the new observer</span>
+<span class="sd">    location is correct for the new observer time that was also passed in.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    coordinate : `~astropy.coordinates.SkyCoord`</span>
+<span class="sd">        Any valid coordinate which is transformable to Heliographic Stonyhurst.</span>
+
+<span class="sd">    new_observer_time : sunpy-compatible time</span>
+<span class="sd">        date/time at which the input co-ordinate will be rotated to.</span>
+
+<span class="sd">    new_observer_location : `str`, `~astropy.coordinates.BaseCoordinateFrame`, `~astropy.coordinates.SkyCoord`</span>
+<span class="sd">        The solar-system body for which to calculate observer locations.  Note</span>
+<span class="sd">        that spacecraft are not explicitly supported as yet.  Instruments in</span>
+<span class="sd">        Earth orbit can be approximated by using the default setting.  If a</span>
+<span class="sd">        BaseCoordinateFrame or SkyCoord are passed in, it is assumed that</span>
+<span class="sd">        this observer location is correct for the observer time that was also</span>
+<span class="sd">        passed in.</span>
+
+<span class="sd">    **diff_rot_kwargs : keyword arguments</span>
+<span class="sd">        Keyword arguments are passed on as keyword arguments to `~sunpy.physics.differential_rotation.diff_rot`.</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    coordinate : `~astropy.coordinates.SkyCoord``</span>
+<span class="sd">        The locations of the input coordinates after the application of</span>
+<span class="sd">        solar rotation in the input coordinate frame.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import astropy.units as u</span>
+<span class="sd">    &gt;&gt;&gt; from astropy.coordinates import SkyCoord</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.coordinates import frames</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.physics.differential_rotation import solar_rotate_coordinate</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.coordinates.ephemeris import get_earth</span>
+<span class="sd">    &gt;&gt;&gt; obstime = &#39;2010-09-10 12:34:56&#39;</span>
+<span class="sd">    &gt;&gt;&gt; c = SkyCoord(-570*u.arcsec, 120*u.arcsec, obstime=obstime, observer=get_earth(obstime), frame=frames.Helioprojective)</span>
+<span class="sd">    &gt;&gt;&gt; solar_rotate_coordinate(c, &#39;2010-09-10 13:34:56&#39;)</span>
+<span class="sd">    &lt;SkyCoord (Helioprojective: obstime=2010-09-10 13:34:56, rsun=695508.0 km, observer=&lt;HeliographicStonyhurst Coordinate (obstime=2010-09-10 13:34:56): (lon, lat, radius) in (deg, deg, AU)</span>
+<span class="sd">    ( 0.,  7.24822784,  1.00695436)&gt;): (Tx, Ty, distance) in (arcsec, arcsec, km)</span>
+<span class="sd">    (-562.37689548,  119.26840368,   1.50083152e+08)&gt;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Calculate the interval between the start and end time</span>
+    <span class="n">interval</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">parse_time</span><span class="p">(</span><span class="n">new_observer_time</span><span class="p">)</span> <span class="o">-</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">coordinate</span><span class="o">.</span><span class="n">obstime</span><span class="p">))</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
+
+    <span class="c1"># Compute Stonyhurst Heliographic co-ordinates - returns (longitude,</span>
+    <span class="c1"># latitude). Points off the limb are returned as nan.</span>
+    <span class="n">heliographic_coordinate</span> <span class="o">=</span> <span class="n">coordinate</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="s1">&#39;heliographic_stonyhurst&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Compute the differential rotation</span>
+    <span class="n">drot</span> <span class="o">=</span> <span class="n">diff_rot</span><span class="p">(</span><span class="n">interval</span><span class="p">,</span> <span class="n">heliographic_coordinate</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">),</span> <span class="o">**</span><span class="n">diff_rot_kwargs</span><span class="p">)</span>
+
+    <span class="c1"># Rotate the input co-ordinate and update the observer</span>
+    <span class="n">heliographic_rotated</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span>
+        <span class="n">heliographic_coordinate</span><span class="o">.</span><span class="n">lon</span> <span class="o">+</span> <span class="n">drot</span><span class="p">,</span>
+        <span class="n">heliographic_coordinate</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span>
+        <span class="n">obstime</span><span class="o">=</span><span class="n">new_observer_time</span><span class="p">,</span>
+        <span class="n">observer</span><span class="o">=</span><span class="n">new_observer_location</span><span class="p">,</span>
+        <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">HeliographicStonyhurst</span><span class="p">)</span>
+
+    <span class="c1"># Return the rotated coordinates to the input coordinate frame</span>
+    <span class="k">return</span> <span class="n">heliographic_rotated</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">coordinate</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">dt</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_warp_sun_coordinates</span><span class="p">(</span><span class="n">xy</span><span class="p">,</span> <span class="n">smap</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function that returns a new list of coordinates for each input coord.</span>
+<span class="sd">    This is an inverse function needed by the scikit-image `transform.warp`</span>
+<span class="sd">    function.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    xy : `numpy.ndarray`</span>
+<span class="sd">        Array from `transform.warp`</span>
+<span class="sd">    smap : `~sunpy.map`</span>
+<span class="sd">        Original map that we want to transform</span>
+<span class="sd">    dt : `~astropy.units.Quantity`</span>
+<span class="sd">        Desired interval to rotate the input map by solar differential rotation.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    xy2 : `~numpy.ndarray`</span>
+<span class="sd">        Array with the inverse transformation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># NOTE: The time is being subtracted - this is because this function</span>
+    <span class="c1"># calculates the inverse of the transformation.</span>
+    <span class="n">rotated_time</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">date</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="c1"># Calculate the hpc coords</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">smap</span><span class="o">.</span><span class="n">dimensions</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">smap</span><span class="o">.</span><span class="n">dimensions</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="c1"># the xy input array would have the following shape</span>
+    <span class="c1"># xy = np.dstack([xx.T.flat, yy.T.flat])[0]</span>
+
+    <span class="c1"># We start by converting the pixel to world</span>
+    <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+        <span class="n">hpc_coords</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">pixel_to_world</span><span class="p">(</span><span class="n">xx</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">,</span> <span class="n">yy</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">)</span>
+
+        <span class="c1"># then diff-rotate the hpc coordinates to the desired time</span>
+        <span class="n">rotated_coord</span> <span class="o">=</span> <span class="n">solar_rotate_coordinate</span><span class="p">(</span><span class="n">hpc_coords</span><span class="p">,</span> <span class="n">rotated_time</span><span class="p">)</span>
+
+        <span class="c1"># To find the values that are behind the sun we need to convert them</span>
+        <span class="c1"># to HeliographicStonyhurst</span>
+        <span class="n">findOccult</span> <span class="o">=</span> <span class="n">rotated_coord</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">HeliographicStonyhurst</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">invalid</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">):</span>
+            <span class="c1"># and find which ones are outside the [-90, 90] range.</span>
+            <span class="n">occult</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">less</span><span class="p">(</span><span class="n">findOccult</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+                                   <span class="n">np</span><span class="o">.</span><span class="n">greater</span><span class="p">(</span><span class="n">findOccult</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="mi">90</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span>
+
+        <span class="c1"># NaN-ing values that move to the other side of the sun</span>
+        <span class="n">rotated_coord</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">lon</span><span class="p">[</span><span class="n">occult</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+        <span class="n">rotated_coord</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">lat</span><span class="p">[</span><span class="n">occult</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+        <span class="n">rotated_coord</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="c1"># Go back to pixel co-ordinates</span>
+        <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">world_to_pixel</span><span class="p">(</span><span class="n">rotated_coord</span><span class="p">)</span>
+
+    <span class="c1"># Re-stack the data to make it correct output form</span>
+    <span class="n">xy2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">([</span><span class="n">x2</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">y2</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">flat</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># Returned a masked array with the non-finite entries masked.</span>
+    <span class="n">xy2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">xy2</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">xy2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">xy2</span>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">dt</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<div class="viewcode-block" id="diffrot_map"><a class="viewcode-back" href="../../../api/sunpy.physics.differential_rotation.diffrot_map.html#sunpy.physics.differential_rotation.diffrot_map">[docs]</a><span class="k">def</span> <span class="nf">diffrot_map</span><span class="p">(</span><span class="n">smap</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function to apply solar differential rotation to a sunpy map.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    smap : `~sunpy.map`</span>
+<span class="sd">        Original map that we want to transform.</span>
+<span class="sd">    dt : `~astropy.units.Quantity`</span>
+<span class="sd">        Desired interval between the input map and returned map.</span>
+<span class="sd">    pad : `bool`</span>
+<span class="sd">        Whether to create a padded map for submaps to don&#39;t loose data</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    diffrot_map : `~sunpy.map`</span>
+<span class="sd">        A map with the result of applying solar differential rotation to the</span>
+<span class="sd">        input map.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">new_time</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">date</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="c1"># Check for masked maps</span>
+    <span class="k">if</span> <span class="n">smap</span><span class="o">.</span><span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">smap_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">smap</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">smap</span><span class="o">.</span><span class="n">mask</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">smap_data</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">data</span>
+
+    <span class="n">submap</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="c1"># Check whether the input is a submap</span>
+    <span class="k">if</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">smap</span><span class="o">.</span><span class="n">rsun_obs</span> <span class="o">&gt;</span> <span class="n">smap</span><span class="o">.</span><span class="n">top_right_coord</span><span class="o">.</span><span class="n">Tx</span> <span class="o">-</span> <span class="n">smap</span><span class="o">.</span><span class="n">bottom_left_coord</span><span class="o">.</span><span class="n">Tx</span><span class="p">)</span> <span class="ow">or</span>
+        <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">smap</span><span class="o">.</span><span class="n">rsun_obs</span> <span class="o">&gt;</span> <span class="n">smap</span><span class="o">.</span><span class="n">top_right_coord</span><span class="o">.</span><span class="n">Ty</span> <span class="o">-</span> <span class="n">smap</span><span class="o">.</span><span class="n">bottom_left_coord</span><span class="o">.</span><span class="n">Ty</span><span class="p">)):</span>
+
+        <span class="n">submap</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">pad</span><span class="p">:</span>
+            <span class="c1"># Calculating the largest distance between the corners and their rotation values</span>
+            <span class="n">deltax</span> <span class="o">=</span> <span class="n">deltay</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">corner</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">product</span><span class="p">([</span><span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">],</span> <span class="n">smap</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)):</span>
+                <span class="n">corner_world</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">pixel_to_world</span><span class="p">(</span><span class="o">*</span><span class="n">corner</span><span class="p">)</span>
+                <span class="n">corner_world_rotated</span> <span class="o">=</span> <span class="n">solar_rotate_coordinate</span><span class="p">(</span><span class="n">corner_world</span><span class="p">,</span> <span class="n">new_time</span><span class="p">)</span>
+                <span class="n">corner_px_rotated</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">world_to_pixel</span><span class="p">(</span><span class="n">corner_world_rotated</span><span class="p">)</span>
+                <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">corner_px_rotated</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">corner</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="n">dy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">corner_px_rotated</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">corner</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">deltax</span> <span class="o">=</span> <span class="n">dx</span> <span class="k">if</span> <span class="n">dx</span> <span class="o">&gt;</span> <span class="n">deltax</span> <span class="k">else</span> <span class="n">deltax</span>
+                <span class="n">deltay</span> <span class="o">=</span> <span class="n">dy</span> <span class="k">if</span> <span class="n">dy</span> <span class="o">&gt;</span> <span class="n">deltay</span> <span class="k">else</span> <span class="n">deltay</span>
+
+            <span class="n">deltax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">deltax</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+            <span class="n">deltay</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">deltay</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+            <span class="c1"># Create a new `smap` with the padding around it</span>
+            <span class="n">smap_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">smap</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="p">((</span><span class="n">deltay</span><span class="p">,</span> <span class="n">deltay</span><span class="p">),</span> <span class="p">(</span><span class="n">deltax</span><span class="p">,</span> <span class="n">deltax</span><span class="p">)),</span>
+                               <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">smap_meta</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">smap</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span>
+            <span class="n">smap_meta</span><span class="p">[</span><span class="s1">&#39;naxis2&#39;</span><span class="p">],</span> <span class="n">smap_meta</span><span class="p">[</span><span class="s1">&#39;naxis1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">smap_data</span><span class="o">.</span><span class="n">shape</span>
+            <span class="n">smap_meta</span><span class="p">[</span><span class="s1">&#39;crpix1&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">deltax</span>
+            <span class="n">smap_meta</span><span class="p">[</span><span class="s1">&#39;crpix2&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">deltay</span>
+            <span class="n">smap</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">smap_data</span><span class="p">,</span> <span class="n">smap_meta</span><span class="p">)</span>
+
+    <span class="c1"># Apply solar differential rotation as a scikit-image warp</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">warp</span><span class="p">(</span><span class="n">to_norm</span><span class="p">(</span><span class="n">smap_data</span><span class="p">),</span> <span class="n">inverse_map</span><span class="o">=</span><span class="n">_warp_sun_coordinates</span><span class="p">,</span>
+                         <span class="n">map_args</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;smap&quot;</span><span class="p">:</span> <span class="n">smap</span><span class="p">,</span> <span class="s2">&quot;dt&quot;</span><span class="p">:</span> <span class="n">dt</span><span class="p">})</span>
+
+    <span class="c1"># Recover the original intensity range.</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">un_norm</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">smap</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="c1"># Update the meta information with the new date and time, and reference pixel.</span>
+    <span class="n">out_meta</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">smap</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">out_meta</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;date_obs&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="k">del</span> <span class="n">out_meta</span><span class="p">[</span><span class="s1">&#39;date_obs&#39;</span><span class="p">]</span>
+    <span class="n">out_meta</span><span class="p">[</span><span class="s1">&#39;date-obs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;{:%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_time</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">submap</span><span class="p">:</span>
+        <span class="n">crval_rotated</span> <span class="o">=</span> <span class="n">solar_rotate_coordinate</span><span class="p">(</span><span class="n">smap</span><span class="o">.</span><span class="n">reference_coordinate</span><span class="p">,</span> <span class="n">new_time</span><span class="p">)</span>
+        <span class="n">out_meta</span><span class="p">[</span><span class="s1">&#39;crval1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">crval_rotated</span><span class="o">.</span><span class="n">Tx</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">out_meta</span><span class="p">[</span><span class="s1">&#39;crval2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">crval_rotated</span><span class="o">.</span><span class="n">Ty</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="k">return</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">((</span><span class="n">out</span><span class="p">,</span> <span class="n">out_meta</span><span class="p">))</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

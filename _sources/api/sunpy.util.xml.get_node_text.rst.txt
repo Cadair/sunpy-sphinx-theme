@@ -1,0 +1,6 @@
+get_node_text
+=============
+
+.. currentmodule:: sunpy.util.xml
+
+.. autofunction:: get_node_text

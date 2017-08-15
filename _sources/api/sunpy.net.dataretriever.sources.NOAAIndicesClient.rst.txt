@@ -1,0 +1,7 @@
+NOAAIndicesClient
+=================
+
+.. currentmodule:: sunpy.net.dataretriever.sources
+
+.. autoclass:: NOAAIndicesClient
+   :show-inheritance:

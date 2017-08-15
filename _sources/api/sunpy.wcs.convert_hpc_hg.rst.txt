@@ -1,0 +1,6 @@
+convert_hpc_hg
+==============
+
+.. currentmodule:: sunpy.wcs
+
+.. autofunction:: convert_hpc_hg

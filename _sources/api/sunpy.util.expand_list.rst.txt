@@ -1,0 +1,6 @@
+expand_list
+===========
+
+.. currentmodule:: sunpy.util
+
+.. autofunction:: expand_list

@@ -1,0 +1,19 @@
+XRSTimeSeries
+=============
+
+.. currentmodule:: sunpy.timeseries
+
+.. autoclass:: XRSTimeSeries
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~XRSTimeSeries.is_datasource_for
+      ~XRSTimeSeries.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for
+   .. automethod:: peek

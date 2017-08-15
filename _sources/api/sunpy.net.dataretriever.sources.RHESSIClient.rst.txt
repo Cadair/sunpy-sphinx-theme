@@ -1,0 +1,7 @@
+RHESSIClient
+============
+
+.. currentmodule:: sunpy.net.dataretriever.sources
+
+.. autoclass:: RHESSIClient
+   :show-inheritance:

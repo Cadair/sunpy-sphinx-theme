@@ -1,0 +1,19 @@
+UnitSphericalWrap180Representation
+==================================
+
+.. currentmodule:: sunpy.coordinates.representation
+
+.. autoclass:: UnitSphericalWrap180Representation
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~UnitSphericalWrap180Representation.attr_classes
+      ~UnitSphericalWrap180Representation.recommended_units
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: attr_classes
+   .. autoattribute:: recommended_units

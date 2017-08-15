@@ -1,0 +1,19 @@
+Spectrum
+========
+
+.. currentmodule:: sunpy.spectra.spectrum
+
+.. autoclass:: Spectrum
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Spectrum.peek
+      ~Spectrum.plot
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: peek
+   .. automethod:: plot

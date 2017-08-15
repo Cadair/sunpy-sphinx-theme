@@ -1,0 +1,6 @@
+get_detector_sun_angles_for_time
+================================
+
+.. currentmodule:: sunpy.instr.fermi
+
+.. autofunction:: get_detector_sun_angles_for_time

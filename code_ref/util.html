@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy util &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="common_base" href="../api/sunpy.util.common_base.html" />
+    <link rel="prev" title="XRSTimeSeries" href="../api/sunpy.timeseries.XRSTimeSeries.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy util | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/code_ref/util.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SunPy util</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.common_base.html">common_base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.deprecated.html">deprecated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.expand_list.html">expand_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.expand_list_generator.html">expand_list_generator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.get_sys_dict.html">get_sys_dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.merge.html">merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.minimal_pairs.html">minimal_pairs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.print_table.html">print_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.replacement_filename.html">replacement_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.system_info.html">system_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.to_signed.html">to_signed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.unique.html">unique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.MetaDict.html">MetaDict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.SunpyDeprecationWarning.html">SunpyDeprecationWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.SunpyUserWarning.html">SunpyUserWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.SunpyWarning.html">SunpyWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.cond_dispatch.run_cls.html">run_cls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.cond_dispatch.matches_types.html">matches_types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.cond_dispatch.arginize.html">arginize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.cond_dispatch.correct_argspec.html">correct_argspec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.cond_dispatch.matches_signature.html">matches_signature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.cond_dispatch.fmt_argspec_types.html">fmt_argspec_types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.cond_dispatch.ConditionalDispatch.html">ConditionalDispatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.config.load_config.html">load_config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.config.print_config.html">print_config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.create.Parent.html">Parent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.datatype_factory_base.BasicRegistrationFactory.html">BasicRegistrationFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.datatype_factory_base.MultipleMatchError.html">MultipleMatchError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.datatype_factory_base.NoMatchError.html">NoMatchError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.datatype_factory_base.ValidationFunctionError.html">ValidationFunctionError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.multimethod.TypeWarning.html">TypeWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.multimethod.MultiMethod.html">MultiMethod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.net.slugify.html">slugify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.net.get_content_disposition.html">get_content_disposition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.net.get_filename.html">get_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.net.get_system_filename.html">get_system_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.net.get_system_filename_slugify.html">get_system_filename_slugify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.net.download_file.html">download_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.net.download_fileobj.html">download_fileobj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.net.check_download_file.html">check_download_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.net.url_exists.html">url_exists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.progressbar.TTYProgressBar.html">TTYProgressBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.xml.xml_to_dict.html">xml_to_dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.xml.node_to_dict.html">node_to_dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.xml.get_node_text.html">get_node_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.xml.NotTextNodeError.html">NotTextNodeError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.util.scraper.Scraper.html">Scraper</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-util">
+<h1>SunPy util<a class="headerlink" href="#sunpy-util" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-sunpy.util">
+<span id="sunpy-util-package"></span><h2>sunpy.util Package<a class="headerlink" href="#module-sunpy.util" title="Permalink to this headline">¶</a></h2>
+<p>SunPy utility functions</p>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.common_base.html#sunpy.util.common_base" title="sunpy.util.common_base"><code class="xref py py-obj docutils literal"><span class="pre">common_base</span></code></a>(objs)</td>
+<td>Find class that every item of objs is an instance of.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.deprecated.html#sunpy.util.deprecated" title="sunpy.util.deprecated"><code class="xref py py-obj docutils literal"><span class="pre">deprecated</span></code></a>(since[,&nbsp;message,&nbsp;name,&nbsp;alternative])</td>
+<td>Used to mark a function or class as deprecated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.expand_list.html#sunpy.util.expand_list" title="sunpy.util.expand_list"><code class="xref py py-obj docutils literal"><span class="pre">expand_list</span></code></a>(inp)</td>
+<td>Expand a list of lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.expand_list_generator.html#sunpy.util.expand_list_generator" title="sunpy.util.expand_list_generator"><code class="xref py py-obj docutils literal"><span class="pre">expand_list_generator</span></code></a>(inp)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.get_sys_dict.html#sunpy.util.get_sys_dict" title="sunpy.util.get_sys_dict"><code class="xref py py-obj docutils literal"><span class="pre">get_sys_dict</span></code></a>()</td>
+<td>Test which packages are installed on system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.merge.html#sunpy.util.merge" title="sunpy.util.merge"><code class="xref py py-obj docutils literal"><span class="pre">merge</span></code></a>(items[,&nbsp;key])</td>
+<td>Given sorted lists of iterables, return new iterable that returns elements of all iterables sorted with respect to key.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.minimal_pairs.html#sunpy.util.minimal_pairs" title="sunpy.util.minimal_pairs"><code class="xref py py-obj docutils literal"><span class="pre">minimal_pairs</span></code></a>(one,&nbsp;other)</td>
+<td>Find pairs of values in one and other with minimal distance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.print_table.html#sunpy.util.print_table" title="sunpy.util.print_table"><code class="xref py py-obj docutils literal"><span class="pre">print_table</span></code></a>(lst[,&nbsp;colsep,&nbsp;linesep])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.replacement_filename.html#sunpy.util.replacement_filename" title="sunpy.util.replacement_filename"><code class="xref py py-obj docutils literal"><span class="pre">replacement_filename</span></code></a>(path)</td>
+<td>Return replacement path for already used path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.system_info.html#sunpy.util.system_info" title="sunpy.util.system_info"><code class="xref py py-obj docutils literal"><span class="pre">system_info</span></code></a>()</td>
+<td>Takes dictionary from sys_info() and prints the contents in an attractive fashion.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.to_signed.html#sunpy.util.to_signed" title="sunpy.util.to_signed"><code class="xref py py-obj docutils literal"><span class="pre">to_signed</span></code></a>(dtype)</td>
+<td>Return dtype that can hold data of passed dtype but is signed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.unique.html#sunpy.util.unique" title="sunpy.util.unique"><code class="xref py py-obj docutils literal"><span class="pre">unique</span></code></a>(itr[,&nbsp;key])</td>
+<td>not documented yet</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.MetaDict.html#sunpy.util.MetaDict" title="sunpy.util.MetaDict"><code class="xref py py-obj docutils literal"><span class="pre">MetaDict</span></code></a>(*args)</td>
+<td>A class to hold meta data associated with a Map derivative.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.SunpyDeprecationWarning.html#sunpy.util.SunpyDeprecationWarning" title="sunpy.util.SunpyDeprecationWarning"><code class="xref py py-obj docutils literal"><span class="pre">SunpyDeprecationWarning</span></code></a></td>
+<td>A warning class to indicate a deprecated feature.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.SunpyUserWarning.html#sunpy.util.SunpyUserWarning" title="sunpy.util.SunpyUserWarning"><code class="xref py py-obj docutils literal"><span class="pre">SunpyUserWarning</span></code></a></td>
+<td>The primary warning class for Sunpy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.SunpyWarning.html#sunpy.util.SunpyWarning" title="sunpy.util.SunpyWarning"><code class="xref py py-obj docutils literal"><span class="pre">SunpyWarning</span></code></a></td>
+<td>The base warning class from which all Sunpy warnings should inherit.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-917ddfe2d9533f1d8365c1145a801ad146fa24ac.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.util.metadata.MetaDict, sunpy.util.exceptions.SunpyDeprecationWarning, sunpy.util.exceptions.SunpyUserWarning, sunpy.util.exceptions.SunpyWarning</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.util.cond_dispatch">
+<span id="sunpy-util-cond-dispatch-module"></span><h2>sunpy.util.cond_dispatch Module<a class="headerlink" href="#module-sunpy.util.cond_dispatch" title="Permalink to this headline">¶</a></h2>
+<p>Offer a callable object that dispatches based on arbitrary conditions
+and function signature. That means, whenever it is called, it finds the
+registered methods that match the input&#8217;s signature and then checks for
+user-defined conditions and types.</p>
+<p>First, we need to create a new ConditionalDispatch</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.util.cond_dispatch</span> <span class="k">import</span> <span class="n">ConditionalDispatch</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span> <span class="o">=</span> <span class="n">ConditionalDispatch</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>We then can start adding branches, in this case we add a branch for
+even integers, in which case the function applied is a multiplication by
+three.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="nb">int</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>By adding the other branch (odd), the function can be used for all integers.
+In the case of an odd integer, we double the input. Please note that the system
+has no way of verifying the conditions are mutually exclusive. In some cases
+it can even be useful to use not mutually exclusive conditions, in which case
+the branch that was added the earliest is executed.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="nb">int</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>We can verify this is working.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+<p>And that using a float, e.g., does not.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="p">(</span><span class="mf">3.2</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;/home/florian/Projects/sunpy/sunpy/util/cond_dispatch.py&quot;</span>, line <span class="m">128</span>, in <span class="n">__call__</span>
+    <span class="s2">&quot;There are no functions matching your input parameter &quot;</span>
+<span class="gr">TypeError</span>: <span class="n">There are no functions matching your input parameter signature.</span>
+</pre></div>
+</div>
+<p>We can then add a branch for floats, giving the condition None that means
+that this branch is always executed for floats.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">y</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="p">[</span><span class="nb">float</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Also note that the float branch takes y, while the integer branch takes x.
+Thus, if the user explicitly passes fun(x=1) using a keyword argument, only
+the integer branch is considered. This can be useful if the user wants
+control over which kind of data they are passing the the function.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="go">10.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;/home/florian/Projects/sunpy/sunpy/util/cond_dispatch.py&quot;</span>, line <span class="m">128</span>, in <span class="n">__call__</span>
+    <span class="s2">&quot;There are no functions matching your input parameter &quot;</span>
+<span class="gr">TypeError</span>: <span class="n">There are no functions matching your input parameter signature.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="go">12.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;/home/florian/Projects/sunpy/sunpy/util/cond_dispatch.py&quot;</span>, line <span class="m">128</span>, in <span class="n">__call__</span>
+    <span class="s2">&quot;There are no functions matching your input parameter &quot;</span>
+<span class="gr">TypeError</span>: <span class="n">There are no functions matching your input parameter signature.</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h3>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.cond_dispatch.run_cls.html#sunpy.util.cond_dispatch.run_cls" title="sunpy.util.cond_dispatch.run_cls"><code class="xref py py-obj docutils literal"><span class="pre">run_cls</span></code></a>((&#8220;foo&#8221;)(cls,&nbsp;*args,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.cond_dispatch.matches_types.html#sunpy.util.cond_dispatch.matches_types" title="sunpy.util.cond_dispatch.matches_types"><code class="xref py py-obj docutils literal"><span class="pre">matches_types</span></code></a>(fun,&nbsp;types,&nbsp;args,&nbsp;kwargs)</td>
+<td>See if args and kwargs match are instances of types.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.cond_dispatch.arginize.html#sunpy.util.cond_dispatch.arginize" title="sunpy.util.cond_dispatch.arginize"><code class="xref py py-obj docutils literal"><span class="pre">arginize</span></code></a>(fun,&nbsp;a,&nbsp;kw)</td>
+<td>Turn args and kwargs into args by considering the function signature.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.cond_dispatch.correct_argspec.html#sunpy.util.cond_dispatch.correct_argspec" title="sunpy.util.cond_dispatch.correct_argspec"><code class="xref py py-obj docutils literal"><span class="pre">correct_argspec</span></code></a>(fun)</td>
+<td>Remove first argument if method is bound.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.cond_dispatch.matches_signature.html#sunpy.util.cond_dispatch.matches_signature" title="sunpy.util.cond_dispatch.matches_signature"><code class="xref py py-obj docutils literal"><span class="pre">matches_signature</span></code></a>(fun,&nbsp;a,&nbsp;kw)</td>
+<td>Check whether function can be called with a as args and kw as kwargs.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.cond_dispatch.fmt_argspec_types.html#sunpy.util.cond_dispatch.fmt_argspec_types" title="sunpy.util.cond_dispatch.fmt_argspec_types"><code class="xref py py-obj docutils literal"><span class="pre">fmt_argspec_types</span></code></a>(fun,&nbsp;types[,&nbsp;start])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h3>Classes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.cond_dispatch.ConditionalDispatch.html#sunpy.util.cond_dispatch.ConditionalDispatch" title="sunpy.util.cond_dispatch.ConditionalDispatch"><code class="xref py py-obj docutils literal"><span class="pre">ConditionalDispatch</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-86e6890b42c9b2baa161708c935502ac350e7df9.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.util.cond_dispatch.ConditionalDispatch</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.util.config">
+<span id="sunpy-util-config-module"></span><h2>sunpy.util.config Module<a class="headerlink" href="#module-sunpy.util.config" title="Permalink to this headline">¶</a></h2>
+<p>SunPy configuration file functionality</p>
+<div class="section" id="id4">
+<h3>Functions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.config.load_config.html#sunpy.util.config.load_config" title="sunpy.util.config.load_config"><code class="xref py py-obj docutils literal"><span class="pre">load_config</span></code></a>()</td>
+<td>Read the sunpyrc configuration file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.config.print_config.html#sunpy.util.config.print_config" title="sunpy.util.config.print_config"><code class="xref py py-obj docutils literal"><span class="pre">print_config</span></code></a>()</td>
+<td>Print current configuration options</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.util.create">
+<span id="sunpy-util-create-module"></span><h2>sunpy.util.create Module<a class="headerlink" href="#module-sunpy.util.create" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Classes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.create.Parent.html#sunpy.util.create.Parent" title="sunpy.util.create.Parent"><code class="xref py py-obj docutils literal"><span class="pre">Parent</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-b0d8b5ff3233f538ba6a1ce6644d3de03115f92d.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.util.create.Parent</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.util.datatype_factory_base">
+<span id="sunpy-util-datatype-factory-base-module"></span><h2>sunpy.util.datatype_factory_base Module<a class="headerlink" href="#module-sunpy.util.datatype_factory_base" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>Classes<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.datatype_factory_base.BasicRegistrationFactory.html#sunpy.util.datatype_factory_base.BasicRegistrationFactory" title="sunpy.util.datatype_factory_base.BasicRegistrationFactory"><code class="xref py py-obj docutils literal"><span class="pre">BasicRegistrationFactory</span></code></a>([...])</td>
+<td>Generalized registerable factory type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.datatype_factory_base.MultipleMatchError.html#sunpy.util.datatype_factory_base.MultipleMatchError" title="sunpy.util.datatype_factory_base.MultipleMatchError"><code class="xref py py-obj docutils literal"><span class="pre">MultipleMatchError</span></code></a></td>
+<td>Exception for when too many candidate classes are found.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.datatype_factory_base.NoMatchError.html#sunpy.util.datatype_factory_base.NoMatchError" title="sunpy.util.datatype_factory_base.NoMatchError"><code class="xref py py-obj docutils literal"><span class="pre">NoMatchError</span></code></a></td>
+<td>Exception for when no candidate class is found.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.datatype_factory_base.ValidationFunctionError.html#sunpy.util.datatype_factory_base.ValidationFunctionError" title="sunpy.util.datatype_factory_base.ValidationFunctionError"><code class="xref py py-obj docutils literal"><span class="pre">ValidationFunctionError</span></code></a></td>
+<td>Exception for when no candidate class is found.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id8">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-09f2691663925d7bf44e89f2210f58348889897d.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.util.datatype_factory_base.BasicRegistrationFactory, sunpy.util.datatype_factory_base.MultipleMatchError, sunpy.util.datatype_factory_base.NoMatchError, sunpy.util.datatype_factory_base.ValidationFunctionError</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.util.multimethod">
+<span id="sunpy-util-multimethod-module"></span><h2>sunpy.util.multimethod Module<a class="headerlink" href="#module-sunpy.util.multimethod" title="Permalink to this headline">¶</a></h2>
+<p>Multimethod implementation in pure Python.</p>
+<div class="section" id="id9">
+<h3>Classes<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.multimethod.TypeWarning.html#sunpy.util.multimethod.TypeWarning" title="sunpy.util.multimethod.TypeWarning"><code class="xref py py-obj docutils literal"><span class="pre">TypeWarning</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.multimethod.MultiMethod.html#sunpy.util.multimethod.MultiMethod" title="sunpy.util.multimethod.MultiMethod"><code class="xref py py-obj docutils literal"><span class="pre">MultiMethod</span></code></a>(get)</td>
+<td>A multimethod is a callable object that decides which code to execute based on the type of one or more of its arguments.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id10">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-62c4fa85570caeffdfcb1fd0cd3c3f5c3a7f528d.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.util.multimethod.TypeWarning, sunpy.util.multimethod.MultiMethod</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.util.net">
+<span id="sunpy-util-net-module"></span><h2>sunpy.util.net Module<a class="headerlink" href="#module-sunpy.util.net" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>Functions<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.net.slugify.html#sunpy.util.net.slugify" title="sunpy.util.net.slugify"><code class="xref py py-obj docutils literal"><span class="pre">slugify</span></code></a>(text[,&nbsp;delim,&nbsp;encoding])</td>
+<td>Slugify given unicode text.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.net.get_content_disposition.html#sunpy.util.net.get_content_disposition" title="sunpy.util.net.get_content_disposition"><code class="xref py py-obj docutils literal"><span class="pre">get_content_disposition</span></code></a>(content_disposition)</td>
+<td>Get content disposition filename from given header.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.net.get_filename.html#sunpy.util.net.get_filename" title="sunpy.util.net.get_filename"><code class="xref py py-obj docutils literal"><span class="pre">get_filename</span></code></a>(sock,&nbsp;url)</td>
+<td>Get filename from given urllib2.urlopen object and URL.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.net.get_system_filename.html#sunpy.util.net.get_system_filename" title="sunpy.util.net.get_system_filename"><code class="xref py py-obj docutils literal"><span class="pre">get_system_filename</span></code></a>(sock,&nbsp;url[,&nbsp;default])</td>
+<td>Get filename from given urllib2.urlopen object and URL.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.net.get_system_filename_slugify.html#sunpy.util.net.get_system_filename_slugify" title="sunpy.util.net.get_system_filename_slugify"><code class="xref py py-obj docutils literal"><span class="pre">get_system_filename_slugify</span></code></a>(sock,&nbsp;url[,&nbsp;default])</td>
+<td>Get filename from given urllib2.urlopen object and URL.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.net.download_file.html#sunpy.util.net.download_file" title="sunpy.util.net.download_file"><code class="xref py py-obj docutils literal"><span class="pre">download_file</span></code></a>(url,&nbsp;directory[,&nbsp;default,&nbsp;...])</td>
+<td>Download file from url into directory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.net.download_fileobj.html#sunpy.util.net.download_fileobj" title="sunpy.util.net.download_fileobj"><code class="xref py py-obj docutils literal"><span class="pre">download_fileobj</span></code></a>(opn,&nbsp;directory[,&nbsp;url,&nbsp;...])</td>
+<td>Download file from url into directory.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.net.check_download_file.html#sunpy.util.net.check_download_file" title="sunpy.util.net.check_download_file"><code class="xref py py-obj docutils literal"><span class="pre">check_download_file</span></code></a>(filename,&nbsp;remotepath,&nbsp;...)</td>
+<td>Downloads a file from remotepath to localpath if it isn&#8217;t there.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.net.url_exists.html#sunpy.util.net.url_exists" title="sunpy.util.net.url_exists"><code class="xref py py-obj docutils literal"><span class="pre">url_exists</span></code></a>(url[,&nbsp;timeout])</td>
+<td>Checks whether a url is online.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.util.progressbar">
+<span id="sunpy-util-progressbar-module"></span><h2>sunpy.util.progressbar Module<a class="headerlink" href="#module-sunpy.util.progressbar" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>Classes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.progressbar.TTYProgressBar.html#sunpy.util.progressbar.TTYProgressBar" title="sunpy.util.progressbar.TTYProgressBar"><code class="xref py py-obj docutils literal"><span class="pre">TTYProgressBar</span></code></a>(n[,&nbsp;current,&nbsp;width,&nbsp;output])</td>
+<td>A simple progress bar to visualize progress on a TTY (teletypewriter).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-f3ae8eac033a829ec67719e37a6acfc05830c652.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.util.progressbar.TTYProgressBar</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.util.xml">
+<span id="sunpy-util-xml-module"></span><h2>sunpy.util.xml Module<a class="headerlink" href="#module-sunpy.util.xml" title="Permalink to this headline">¶</a></h2>
+<p>XML helper functions</p>
+<div class="section" id="id14">
+<h3>Functions<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.xml.xml_to_dict.html#sunpy.util.xml.xml_to_dict" title="sunpy.util.xml.xml_to_dict"><code class="xref py py-obj docutils literal"><span class="pre">xml_to_dict</span></code></a>(xmlstring)</td>
+<td>Converts an XML string to a Python dictionary</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.util.xml.node_to_dict.html#sunpy.util.xml.node_to_dict" title="sunpy.util.xml.node_to_dict"><code class="xref py py-obj docutils literal"><span class="pre">node_to_dict</span></code></a>(node)</td>
+<td>node_to_dict() scans through the children of node and makes a dictionary</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.xml.get_node_text.html#sunpy.util.xml.get_node_text" title="sunpy.util.xml.get_node_text"><code class="xref py py-obj docutils literal"><span class="pre">get_node_text</span></code></a>(node)</td>
+<td>scans through all children of node and gathers the text. if node has</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id15">
+<h3>Classes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.xml.NotTextNodeError.html#sunpy.util.xml.NotTextNodeError" title="sunpy.util.xml.NotTextNodeError"><code class="xref py py-obj docutils literal"><span class="pre">NotTextNodeError</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id16">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-4ecfa021cf08896bbee19e557b572d118037b75d.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.util.xml.NotTextNodeError</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.util.scraper">
+<span id="sunpy-util-scraper-module"></span><h2>sunpy.util.scraper Module<a class="headerlink" href="#module-sunpy.util.scraper" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h3>Classes<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.util.scraper.Scraper.html#sunpy.util.scraper.Scraper" title="sunpy.util.scraper.Scraper"><code class="xref py py-obj docutils literal"><span class="pre">Scraper</span></code></a>(pattern,&nbsp;**kwargs)</td>
+<td>A Scraper to scrap web data archives based on dates.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id18">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-cc81747daa2c4b092915080f7f96de6418805c5b.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.util.scraper.Scraper</p></object>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

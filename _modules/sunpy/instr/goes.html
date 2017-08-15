@@ -1,0 +1,1541 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.instr.goes &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.instr.goes | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/instr/goes.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.instr.goes</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Contains functions useful for analysing GOES/XRS data.</span>
+
+<span class="sd">Each of the Geostationary Operational Environmental Satellite (GOES) series</span>
+<span class="sd">since the mid-1970s has carried an X-Ray Sensor (XRS) which observes</span>
+<span class="sd">full-disk-integrated solar flux in two broadband channels:</span>
+<span class="sd">1--8 angstrom (long); and 0.5--4 angstrom (short).  For more information on</span>
+<span class="sd">the GOES/XRS instrument, see [Ref1]_.  GOES/XRS has become</span>
+<span class="sd">the &quot;standard candle&quot; for solar coronal observations due its longevity and</span>
+<span class="sd">consistency.  The GOES event list, based on GOES/XRS observations, has</span>
+<span class="sd">become the standard solar flare catalogue.</span>
+<span class="sd">See http://www.ngdc.noaa.gov/stp/solar/solarflares.html for information</span>
+<span class="sd">on the GOES event list definitions and data.</span>
+
+<span class="sd">The functions in this module provide useful software to analyse GOES/XRS</span>
+<span class="sd">observations.  First they allow the GOES event list to be imported into a</span>
+<span class="sd">Python session (`~sunpy.instr.goes.get_goes_event_list`).</span>
+
+<span class="sd">They also allow the thermodynamic properties of the emitting solar plasma to be</span>
+<span class="sd">determined. Temperature and emission measure are obtained using</span>
+<span class="sd">`~sunpy.instr.goes.calculate_temperature_em`, this function currently relies on</span>
+<span class="sd">lookup tables relating the GOES fluxes to the isothermal temperature and volume</span>
+<span class="sd">emission measure. These tables were calculated by functions in SolarSoftWare</span>
+<span class="sd">(SSW) using the CHIANTI atomic physics database ([Ref2]_). For more detail, see</span>
+<span class="sd">the docstring of calculate_temperature_em` and references therein.</span>
+
+<span class="sd">The radiative loss rate of the soft X-ray-emitting plasma across all</span>
+<span class="sd">wavelengths can be found with</span>
+<span class="sd">`~sunpy.instr.goes.calculate_radiative_loss_rate`, which makes use of a look up</span>
+<span class="sd">table calculated by functions in SSW using CHIANTI. This table relates the</span>
+<span class="sd">temperature and emission measure of the emitting solar plasma to the thermal</span>
+<span class="sd">energy radiated over all wavelengths. For more information on how this is</span>
+<span class="sd">done, see the docstring of `~sunpy.instr.goes._calc_rad_loss` and reference</span>
+<span class="sd">therein.</span>
+
+<span class="sd">Meanwhile, the X-ray luminosity in the two GOES passbands can be obtained by</span>
+<span class="sd">`~sunpy.instr.goes.calculate_xray_luminosity`. To do so, this function calls</span>
+<span class="sd">`~sunpy.instr.goes._goes_lx` and `~sunpy.instr.goes.calc_xraylum`.</span>
+
+<span class="sd">References</span>
+<span class="sd">----------</span>
+
+<span class="sd">.. [Ref1] Hanser, F.A., &amp; Sellers, F.B. 1996, Proc. SPIE, 2812, 344</span>
+<span class="sd">.. [Ref2] Dere, K.P., et al. 2009 A&amp;A, 498, 915 DOI: `10.1051/0004-6361/200911712 &lt;https://dx.doi.org/10.1051/0004-6361/200911712&gt;`__</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">dropwhile</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">interpolate</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="k">import</span> <span class="n">trapz</span><span class="p">,</span> <span class="n">cumtrapz</span>
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">hek</span>
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span>
+<span class="kn">from</span> <span class="nn">sunpy</span> <span class="k">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">sunpy</span> <span class="k">import</span> <span class="n">lightcurve</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.net</span> <span class="k">import</span> <span class="n">check_download_file</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.config</span> <span class="k">import</span> <span class="n">get_and_create_download_dir</span>
+<span class="kn">from</span> <span class="nn">sunpy</span> <span class="k">import</span> <span class="n">sun</span>
+<span class="kn">from</span> <span class="nn">sunpy.coordinates</span> <span class="k">import</span> <span class="n">get_sunearth_distance</span>
+
+<span class="n">GOES_CONVERSION_DICT</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mf">1e-4</span><span class="p">,</span> <span class="s2">&quot;W/m^2&quot;</span><span class="p">),</span>
+                        <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">,</span> <span class="s2">&quot;W/m^2&quot;</span><span class="p">),</span>
+                        <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mf">1e-6</span><span class="p">,</span> <span class="s2">&quot;W/m^2&quot;</span><span class="p">),</span>
+                        <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mf">1e-7</span><span class="p">,</span> <span class="s2">&quot;W/m^2&quot;</span><span class="p">),</span>
+                        <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mf">1e-8</span><span class="p">,</span> <span class="s2">&quot;W/m^2&quot;</span><span class="p">)}</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;get_goes_event_list&#39;</span><span class="p">,</span> <span class="s1">&#39;calculate_temperature_em&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;calculate_radiative_loss_rate&#39;</span><span class="p">,</span> <span class="s1">&#39;calculate_xray_luminosity&#39;</span><span class="p">,</span> <span class="s1">&#39;flux_to_flareclass&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;flareclass_to_flux&#39;</span><span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Check required data files are present in user&#39;s default download dir</span>
+    <span class="c1"># Define location where GOES data files are stored.</span>
+    <span class="c1"># Manually resolve the hostname</span>
+    <span class="n">HOST</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostbyname_ex</span><span class="p">(</span><span class="s1">&#39;hesperia.gsfc.nasa.gov&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">gaierror</span><span class="p">:</span>
+    <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">GOES_REMOTE_PATH</span> <span class="o">=</span> <span class="s2">&quot;http://</span><span class="si">{0}</span><span class="s2">/ssw/gen/idl/synoptic/goes/&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">HOST</span><span class="p">)</span>
+<span class="c1"># Define variables for file names</span>
+<span class="n">FILE_TEMP_COR</span> <span class="o">=</span> <span class="s2">&quot;goes_chianti_temp_cor.csv&quot;</span>
+<span class="n">FILE_TEMP_PHO</span> <span class="o">=</span> <span class="s2">&quot;goes_chianti_temp_pho.csv&quot;</span>
+<span class="n">FILE_EM_COR</span> <span class="o">=</span> <span class="s2">&quot;goes_chianti_em_cor.csv&quot;</span>
+<span class="n">FILE_EM_PHO</span> <span class="o">=</span> <span class="s2">&quot;goes_chianti_em_pho.csv&quot;</span>
+<span class="n">FILE_RAD_COR</span> <span class="o">=</span> <span class="s2">&quot;chianti7p1_rad_loss.txt&quot;</span>
+
+
+<div class="viewcode-block" id="get_goes_event_list"><a class="viewcode-back" href="../../../api/sunpy.instr.goes.get_goes_event_list.html#sunpy.instr.goes.get_goes_event_list">[docs]</a><span class="k">def</span> <span class="nf">get_goes_event_list</span><span class="p">(</span><span class="n">timerange</span><span class="p">,</span> <span class="n">goes_class_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieve list of flares detected by GOES within a given time range.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    timerange : `sunpy.time.TimeRange`</span>
+<span class="sd">        The time range to download the event list for.</span>
+
+<span class="sd">    goes_class_filter: (optional) string</span>
+<span class="sd">        A string specifying a minimum GOES class for inclusion in the list,</span>
+<span class="sd">        e.g. &#39;M1&#39;, &#39;X2&#39;.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># use HEK module to search for GOES events</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">hek</span><span class="o">.</span><span class="n">HEKClient</span><span class="p">()</span>
+    <span class="n">event_type</span> <span class="o">=</span> <span class="s1">&#39;FL&#39;</span>
+    <span class="n">tstart</span> <span class="o">=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span>
+    <span class="n">tend</span> <span class="o">=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">end</span>
+
+    <span class="c1"># query the HEK for a list of events detected by the GOES instrument</span>
+    <span class="c1"># between tstart and tend (using a GOES-class filter)</span>
+    <span class="k">if</span> <span class="n">goes_class_filter</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span> <span class="n">tend</span><span class="p">),</span>
+                              <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">),</span>
+                              <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FL</span><span class="o">.</span><span class="n">GOESCls</span> <span class="o">&gt;</span> <span class="n">goes_class_filter</span><span class="p">,</span>
+                              <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">OBS</span><span class="o">.</span><span class="n">Observatory</span> <span class="o">==</span> <span class="s1">&#39;GOES&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span> <span class="n">tend</span><span class="p">),</span>
+                              <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">),</span>
+                              <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">OBS</span><span class="o">.</span><span class="n">Observatory</span> <span class="o">==</span> <span class="s1">&#39;GOES&#39;</span><span class="p">)</span>
+
+    <span class="c1"># want to condense the results of the query into a more manageable</span>
+    <span class="c1"># dictionary</span>
+    <span class="c1"># keep event data, start time, peak time, end time, GOES-class,</span>
+    <span class="c1"># location, active region source (as per GOES list standard)</span>
+    <span class="c1"># make this into a list of dictionaries</span>
+    <span class="n">goes_event_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+        <span class="n">goes_event</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;event_date&#39;</span><span class="p">:</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;event_starttime&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">date</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
+                <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;start_time&#39;</span><span class="p">:</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;event_starttime&#39;</span><span class="p">]),</span>
+            <span class="s1">&#39;peak_time&#39;</span><span class="p">:</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;event_peaktime&#39;</span><span class="p">]),</span>
+            <span class="s1">&#39;end_time&#39;</span><span class="p">:</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;event_endtime&#39;</span><span class="p">]),</span>
+            <span class="s1">&#39;goes_class&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fl_goescls&#39;</span><span class="p">]),</span>
+            <span class="s1">&#39;goes_location&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;event_coord1&#39;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;event_coord2&#39;</span><span class="p">]),</span>
+            <span class="s1">&#39;noaa_active_region&#39;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;ar_noaanum&#39;</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="n">goes_event_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">goes_event</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">goes_event_list</span></div>
+
+
+<div class="viewcode-block" id="calculate_temperature_em"><a class="viewcode-back" href="../../../api/sunpy.instr.goes.calculate_temperature_em.html#sunpy.instr.goes.calculate_temperature_em">[docs]</a><span class="k">def</span> <span class="nf">calculate_temperature_em</span><span class="p">(</span><span class="n">goeslc</span><span class="p">,</span> <span class="n">abundances</span><span class="o">=</span><span class="s2">&quot;coronal&quot;</span><span class="p">,</span>
+                             <span class="n">download</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">download_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates temperature and emission measure from a GOESLightCurve.</span>
+
+<span class="sd">    This function calculates the isothermal temperature and</span>
+<span class="sd">    corresponding volume emission measure of the solar soft X-ray</span>
+<span class="sd">    emitting plasma observed by the GOES/XRS.  This is done using the</span>
+<span class="sd">    observed flux ratio of the short (0.5-4 angstrom) to long (1-8 angstrom)</span>
+<span class="sd">    channels.  The results are returned in a new LightCurve object which</span>
+<span class="sd">    contains metadata and flux data of the input LightCurve object in</span>
+<span class="sd">    addition to the newly found temperature and emission measure values.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    goeslc : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">        LightCurve object containing GOES flux data which MUST</span>
+<span class="sd">        be in units of W/m^2.</span>
+
+<span class="sd">    abundances : (optional) string equalling &#39;coronal&#39; or &#39;photospheric&#39;</span>
+<span class="sd">        States whether photospheric or coronal abundances should be</span>
+<span class="sd">        assumed.</span>
+<span class="sd">        Default=&#39;coronal&#39;</span>
+
+<span class="sd">    download : (optional) `bool`</span>
+<span class="sd">        If True, the GOES temperature and emission measure data files are</span>
+<span class="sd">        downloaded.  It is important to do this if a new version of the files</span>
+<span class="sd">        has been generated due to a new CHIANTI version being released or the</span>
+<span class="sd">        launch of new GOES satellites since these files were last downloaded.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    download_dir : (optional) `string`</span>
+<span class="sd">        The directory to download the GOES temperature and emission measure</span>
+<span class="sd">        data files to.</span>
+<span class="sd">        Default=SunPy default download directory</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    lc_new : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">        Contains same metadata and data as input GOESLightCurve with the</span>
+<span class="sd">        following two additional data columns:</span>
+
+<span class="sd">        | lc_new.data.temperature - Array of temperatures [MK]</span>
+<span class="sd">        | lc_new.data.em - Array of volume emission measures [cm**-3]</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The temperature and volume emission measure are calculated here</span>
+<span class="sd">    using the methods of White et al. (2005) who used the</span>
+<span class="sd">    CHIANTI atomic physics database to model the response of the ratio</span>
+<span class="sd">    of the short (0.5-4 angstrom) to long (1-8 angstrom) channels of the</span>
+<span class="sd">    XRSs onboard various GOES satellites.  This method assumes an</span>
+<span class="sd">    isothermal plasma, the ionisation equilibria of</span>
+<span class="sd">    [2]_, and a constant density of 10**10 cm**-3.</span>
+<span class="sd">    (See [1]_ for justification of this last assumption.)</span>
+<span class="sd">    This function is based on goes_chianti_tem.pro in SolarSoftWare</span>
+<span class="sd">    written in IDL by Stephen White.</span>
+
+<span class="sd">    Recent fluxes released to the public are scaled to be consistent</span>
+<span class="sd">    with GOES-7.  In fact these recent fluxes are correct and so this</span>
+<span class="sd">    correction must be removed before proceeding to use transfer</span>
+<span class="sd">    functions.</span>
+<span class="sd">    Email Rodney Viereck (NOAA) for more information.</span>
+
+<span class="sd">    Measurements of short channel flux of less than 1e-10 W/m**2 or</span>
+<span class="sd">    long channel flux less than 3e-8 W/m**2 are not considered good.</span>
+<span class="sd">    Ratio values corresponding to such fluxes are set to 0.003.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] White, S. M., Thomas, R. J., &amp; Schwartz, R. A. 2005,</span>
+<span class="sd">        Sol. Phys., 227, 231, DOI: 10.1007/s11207-005-2445-z</span>
+<span class="sd">    .. [2] Mazzotta, P., Mazzitelli, G., Colafrancesco, S., &amp;</span>
+<span class="sd">        Vittorio, N. 1998, A&amp;AS, 133, 339, DOI: 10.1051/aas:1998330</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import calculate_temperature_em</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.lightcurve as lc</span>
+<span class="sd">    &gt;&gt;&gt; time1 = &quot;2014-01-01 00:00:00&quot;</span>
+<span class="sd">    &gt;&gt;&gt; time2 = &quot;2014-01-01 00:00:08&quot;</span>
+<span class="sd">    &gt;&gt;&gt; goeslc = lc.GOESLightCurve.create(time1, time2)</span>
+<span class="sd">    &gt;&gt;&gt; goeslc.data</span>
+<span class="sd">                                        xrsa      xrsb</span>
+<span class="sd">    2014-01-01 00:00:00.421999  9.187300e-08  0.000004</span>
+<span class="sd">    2014-01-01 00:00:02.468999  9.187300e-08  0.000004</span>
+<span class="sd">    2014-01-01 00:00:04.518999  9.187300e-08  0.000004</span>
+<span class="sd">    2014-01-01 00:00:06.564999  9.298800e-08  0.000004</span>
+
+<span class="sd">    &gt;&gt;&gt; goeslc_new = calculate_temperature_em(goeslc)</span>
+<span class="sd">    &gt;&gt;&gt; goeslc_new.data</span>
+<span class="sd">                                        xrsa      xrsb  temperature            em</span>
+<span class="sd">    2014-01-01 00:00:00.421999  9.187300e-08  0.000004     6.270239  6.440648e+48</span>
+<span class="sd">    2014-01-01 00:00:02.468999  9.187300e-08  0.000004     6.270239  6.440648e+48</span>
+<span class="sd">    2014-01-01 00:00:04.518999  9.187300e-08  0.000004     6.273917  6.422208e+48</span>
+<span class="sd">    2014-01-01 00:00:06.564999  9.298800e-08  0.000004     6.304001  6.350370e+48</span>
+
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check that input argument is of correct type</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">goeslc</span><span class="p">,</span> <span class="n">lightcurve</span><span class="o">.</span><span class="n">LightCurve</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;goeslc must be a LightCurve object.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">download_dir</span><span class="p">:</span>
+        <span class="n">download_dir</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+
+    <span class="c1"># Find temperature and emission measure with _goes_chianti_tem</span>
+    <span class="n">temp</span><span class="p">,</span> <span class="n">em</span> <span class="o">=</span> <span class="n">_goes_chianti_tem</span><span class="p">(</span>
+        <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">xrsb</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span>
+        <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">xrsa</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span>
+        <span class="n">satellite</span><span class="o">=</span><span class="n">goeslc</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s2">&quot;TELESCOP&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">date</span><span class="o">=</span><span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">abundances</span><span class="o">=</span><span class="n">abundances</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="n">download</span><span class="p">,</span> <span class="n">download_dir</span><span class="o">=</span><span class="n">download_dir</span><span class="p">)</span>
+
+    <span class="c1"># Enter results into new version of GOES LightCurve Object</span>
+    <span class="c1"># Use copy.deepcopy for replicating meta and data so that input</span>
+    <span class="c1"># lightcurve is not altered.</span>
+    <span class="n">lc_new</span> <span class="o">=</span> <span class="n">lightcurve</span><span class="o">.</span><span class="n">LightCurve</span><span class="p">(</span><span class="n">meta</span><span class="o">=</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">meta</span><span class="p">),</span>
+                                   <span class="n">data</span><span class="o">=</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+    <span class="n">lc_new</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">lc_new</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;em&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">em</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="k">return</span> <span class="n">lc_new</span></div>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">longflux</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="n">shortflux</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_goes_chianti_tem</span><span class="p">(</span><span class="n">longflux</span><span class="p">,</span> <span class="n">shortflux</span><span class="p">,</span> <span class="n">satellite</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+                      <span class="n">date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">(),</span> <span class="n">abundances</span><span class="o">=</span><span class="s2">&quot;coronal&quot;</span><span class="p">,</span>
+                      <span class="n">download</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">download_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates temperature and emission measure from GOES/XRS data.</span>
+
+<span class="sd">    This function calculates the isothermal temperature and volume</span>
+<span class="sd">    emission measure of the solar soft X-ray emitting plasma observed by</span>
+<span class="sd">    the GOES/XRS.  This is done using the observed flux ratio of the</span>
+<span class="sd">    short (0.5-4 angstrom) to long (1-8 angstrom) channels.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    longflux, shortflux : `~astropy.units.Quantity`</span>
+<span class="sd">        Arrays containing the long and short GOES/XRS flux measurements</span>
+<span class="sd">        respectively as a function of time.  Must be of same length. [W/m**2].</span>
+
+<span class="sd">    satellite : int (optional)</span>
+<span class="sd">        Number of GOES satellite used to make observations, important for</span>
+<span class="sd">        correct calibration of data.</span>
+<span class="sd">        Default=8</span>
+
+<span class="sd">    date : `datetime.datetime` or `str`</span>
+<span class="sd">        Date when observations made.  Important for correctcalibration.</span>
+<span class="sd">        Default=today</span>
+
+<span class="sd">    abundances : (optional) string equalling &#39;coronal&#39; or &#39;photospheric&#39;</span>
+<span class="sd">        States whether photospheric or coronal abundances should be</span>
+<span class="sd">        assumed.</span>
+<span class="sd">        Default=&#39;coronal&#39;</span>
+
+<span class="sd">    download : (optional) bool</span>
+<span class="sd">        If True, the GOES temperature and emission measure data files are</span>
+<span class="sd">        downloaded.  It is important to do this if a new version of the files</span>
+<span class="sd">        has been generated due to a new CHIANTI version being released or the</span>
+<span class="sd">        launch of new GOES satellites since these files were last downloaded.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    download_dir : (optional) string</span>
+<span class="sd">        The directory to download the GOES temperature and emission measure</span>
+<span class="sd">        data files to.</span>
+<span class="sd">        Default=SunPy default download directory</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    temp : `~astropy.units.Quantity`</span>
+<span class="sd">        Array of temperature values of same length as longflux and</span>
+<span class="sd">        shortflux. Units=[MK]</span>
+
+<span class="sd">    em : `~astropy.units.Quantity`</span>
+<span class="sd">        Array of volume emission measure values of same length as longflux</span>
+<span class="sd">        and shortflux.  Units=[10**49 cm**-3]</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The temperature and volume emission measure are calculated here</span>
+<span class="sd">    using the methods of [1]_ who used the</span>
+<span class="sd">    CHIANTI atomic physics database to model the response of the ratio</span>
+<span class="sd">    of the short (0.5-4 angstrom) to long (1-8 angstrom) channels of the</span>
+<span class="sd">    XRSs onboard various GOES satellites.  This method assumes an</span>
+<span class="sd">    isothermal plasma, the ionisation equilibria of</span>
+<span class="sd">    [2]_, and a constant density of 10**10 cm**-3.</span>
+<span class="sd">    (See White et al. 2005 for justification of this last assumption.)</span>
+<span class="sd">    This function is based on goes_chianti_tem.pro in SolarSoftWare</span>
+<span class="sd">    written in IDL by Stephen White.</span>
+
+<span class="sd">    Recent fluxes released to the public are scaled to be consistent</span>
+<span class="sd">    with GOES-7.  In fact these recent fluxes are correct and so this</span>
+<span class="sd">    correction must be removed before proceeding to use transfer</span>
+<span class="sd">    functions.</span>
+<span class="sd">    Email Rodney Viereck (NOAA) for more information.</span>
+
+<span class="sd">    Measurements of short channel flux of less than 1e-10 W/m**2 or</span>
+<span class="sd">    long channel flux less than 3e-8 W/m**2 are not considered good.</span>
+<span class="sd">    Ratio values corresponding to such fluxes are set to 0.003.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] White, S. M., Thomas, R. J., &amp; Schwartz, R. A. 2005,</span>
+<span class="sd">        Sol. Phys., 227, 231, DOI: 10.1007/s11207-005-2445-z</span>
+<span class="sd">    .. [2] Mazzotta, P., Mazzitelli, G., Colafrancesco, S., &amp;</span>
+<span class="sd">        Vittorio, N. 1998, A&amp;AS, 133, 339, DOI: 10.1051/aas:1998330</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import _goes_chianti_tem</span>
+<span class="sd">    &gt;&gt;&gt; from astropy.units import Quantity</span>
+<span class="sd">    &gt;&gt;&gt; longflux = Quantity([7e-6, 7e-6], unit=&quot;W/m/m&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; shortflux = Quantity([7e-7, 7e-7], unit=&quot;W/m/m&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; temp, em = _goes_chianti_tem(longflux, shortflux, satellite=15,</span>
+<span class="sd">    ...                              date=&#39;2014-04-16&#39;,</span>
+<span class="sd">    ...                              abundances=&quot;coronal&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; temp</span>
+<span class="sd">    &lt;Quantity [ 11.28295376, 11.28295376] MK&gt;</span>
+<span class="sd">    &gt;&gt;&gt; em</span>
+<span class="sd">    &lt;Quantity [  4.78577516e+48,  4.78577516e+48] 1 / cm3&gt;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">download_dir</span><span class="p">:</span>
+        <span class="n">download_dir</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+    <span class="c1"># ENSURE INPUTS ARE OF CORRECT TYPE AND VALID VALUES</span>
+    <span class="n">longflux</span> <span class="o">=</span> <span class="n">longflux</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">shortflux</span> <span class="o">=</span> <span class="n">shortflux</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">satellite</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">satellite</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">satellite</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;satellite must be the number of a &quot;</span>
+                         <span class="s2">&quot;valid GOES satellite (&gt;1).&quot;</span><span class="p">)</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="c1"># Check flux arrays are of same length.</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">longflux</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">shortflux</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;longflux and shortflux must have same number of elements.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># PREPARE DATA</span>
+    <span class="c1"># GOES 6 long channel flux before 1983-Jun-28 must be corrected by a</span>
+    <span class="c1"># factor of 4.43/5.32</span>
+    <span class="k">if</span> <span class="n">date</span> <span class="o">&lt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1983</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span> <span class="ow">and</span> <span class="n">satellite</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">longflux_corrected</span> <span class="o">=</span> <span class="n">longflux</span><span class="o">*</span><span class="p">(</span><span class="mf">4.43</span><span class="o">/</span><span class="mf">5.32</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">longflux_corrected</span> <span class="o">=</span> <span class="n">longflux</span>
+    <span class="c1"># Un-scale fluxes if GOES satellite is after 7.  See 2nd paragraph</span>
+    <span class="c1"># in Notes section of docstring above.</span>
+    <span class="k">if</span> <span class="n">satellite</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="n">longflux_corrected</span> <span class="o">=</span> <span class="n">longflux_corrected</span> <span class="o">/</span> <span class="mf">0.7</span>
+        <span class="n">shortflux_corrected</span> <span class="o">=</span> <span class="n">shortflux</span> <span class="o">/</span> <span class="mf">0.85</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">shortflux_corrected</span> <span class="o">=</span> <span class="n">shortflux</span>
+    <span class="c1"># Calculate short to long channel ratio.</span>
+    <span class="c1"># Data which is not good have their ratio value set to 0.003.</span>
+    <span class="c1"># See Notes section in docstring above.</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span>
+        <span class="n">shortflux_corrected</span> <span class="o">&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mf">1e-10</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;W/m**2&quot;</span><span class="p">),</span>
+        <span class="n">longflux_corrected</span> <span class="o">&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mf">3e-8</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;W/m**2&quot;</span><span class="p">))</span>
+    <span class="n">fluxratio</span> <span class="o">=</span> <span class="n">shortflux_corrected</span> <span class="o">/</span> <span class="n">longflux_corrected</span>
+    <span class="n">fluxratio</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mf">0.003</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;W/m**2&quot;</span><span class="p">)</span>
+
+    <span class="c1"># FIND TEMPERATURE AND EMISSION MEASURE FROM FUNCTIONS BELOW</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">_goes_get_chianti_temp</span><span class="p">(</span><span class="n">fluxratio</span><span class="p">,</span> <span class="n">satellite</span><span class="o">=</span><span class="n">satellite</span><span class="p">,</span>
+                                  <span class="n">abundances</span><span class="o">=</span><span class="n">abundances</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="n">download</span><span class="p">,</span>
+                                  <span class="n">download_dir</span><span class="o">=</span><span class="n">download_dir</span><span class="p">)</span>
+    <span class="n">em</span> <span class="o">=</span> <span class="n">_goes_get_chianti_em</span><span class="p">(</span><span class="n">longflux_corrected</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">satellite</span><span class="o">=</span><span class="n">satellite</span><span class="p">,</span>
+                              <span class="n">abundances</span><span class="o">=</span><span class="n">abundances</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="n">download</span><span class="p">,</span>
+                              <span class="n">download_dir</span><span class="o">=</span><span class="n">download_dir</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">temp</span><span class="p">,</span> <span class="n">em</span>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">fluxratio</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_goes_get_chianti_temp</span><span class="p">(</span><span class="n">fluxratio</span><span class="p">,</span> <span class="n">satellite</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">abundances</span><span class="o">=</span><span class="s2">&quot;coronal&quot;</span><span class="p">,</span>
+                           <span class="n">download</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">download_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates temperature from GOES flux ratio.</span>
+
+<span class="sd">    This function calculates the isothermal temperature of the solar</span>
+<span class="sd">    soft X-ray emitting plasma observed by the GOES/XRS from the</span>
+<span class="sd">    observed flux ratio of the short (0.5-4 angstrom) to</span>
+<span class="sd">    long (1-8 angstrom) channels.  This function is not intended to be</span>
+<span class="sd">    called directly but by _goes_chianti_tem(), although it can be used</span>
+<span class="sd">    independently.  However, if used independently data preparation,</span>
+<span class="sd">    such as correctly rescaling fluxes for some satellites etc. will</span>
+<span class="sd">    not be carried out.  This is done in _goes_chianti_tem().</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    fluxratio : `~astropy.units.Quantity`</span>
+<span class="sd">        Array containing the ratio of short channel to long channel</span>
+<span class="sd">        GOES/XRS flux measurements.</span>
+
+<span class="sd">    satellite : int (optional)</span>
+<span class="sd">        Number of GOES satellite used to make observations. Important for</span>
+<span class="sd">        correct calibration of data.</span>
+<span class="sd">        Default=8</span>
+
+<span class="sd">    abundances : (optional) string equalling &#39;coronal&#39; or &#39;photospheric&#39;</span>
+<span class="sd">        States whether photospheric or coronal abundances should be</span>
+<span class="sd">        assumed.</span>
+<span class="sd">        Default=&#39;coronal&#39;</span>
+
+<span class="sd">    download : (optional) bool</span>
+<span class="sd">        If True, the GOES temperature data files are downloaded.</span>
+<span class="sd">        It is important to do this if a new version of the files has been</span>
+<span class="sd">        generated due to a new CHIANTI version being released or the launch</span>
+<span class="sd">        of new GOES satellites since these files were last downloaded.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    download_dir : (optional) string</span>
+<span class="sd">        The directory to download the GOES temperature data file to.</span>
+<span class="sd">        Default=SunPy default download directory</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    temp : `~astropy.units.Quantity`</span>
+<span class="sd">        Array of temperature values of same length as longflux and</span>
+<span class="sd">        shortflux. Units=[MK]</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function uses csv files representing the modelled relationship</span>
+<span class="sd">    between temperature of the soft X-ray emitting plasma and the</span>
+<span class="sd">    short to long channel GOES flux ratio.  goes_chianti_temp_cor.csv</span>
+<span class="sd">    is used when coronal abundances are assumed while</span>
+<span class="sd">    goes_chianti_temp_pho.csv is used when photospheric abundances are</span>
+<span class="sd">    assumed.  (See make_goes_chianti_temp.py for more detail.)</span>
+
+<span class="sd">    These files were calculated using the methods of [1]_</span>
+<span class="sd">    who used the CHIANTI atomic physics database to model the response</span>
+<span class="sd">    of the ratio of the short (0.5-4 angstrom) to long (1-8 angstrom)</span>
+<span class="sd">    channels of the XRSs onboard various GOES satellites.  This method</span>
+<span class="sd">    assumes an isothermal plasma, the ionisation equilibria of</span>
+<span class="sd">    [2]_, and a constant density of 10**10 cm**-3.</span>
+<span class="sd">    (See White et al. 2005 for justification of this last assumption.)</span>
+<span class="sd">    This function is based on goes_get_chianti_temp.pro in</span>
+<span class="sd">    SolarSoftWare written in IDL by Stephen White.</span>
+
+<span class="sd">    For correct preparation of GOES data before calculating temperature</span>
+<span class="sd">    see _goes_chianti_tem() (Notes section of docstring).</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] White, S. M., Thomas, R. J., &amp; Schwartz, R. A. 2005,</span>
+<span class="sd">        Sol. Phys., 227, 231, DOI: 10.1007/s11207-005-2445-z</span>
+<span class="sd">    .. [2] Mazzotta, P., Mazzitelli, G., Colafrancesco, S., &amp;</span>
+<span class="sd">        Vittorio, N. 1998, A&amp;AS, 133, 339, DOI: 10.1051/aas:1998330</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from astropy.units import Quantity</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import _goes_get_chianti_temp</span>
+<span class="sd">    &gt;&gt;&gt; fluxratio = Quantity([0.1,0.1])</span>
+<span class="sd">    &gt;&gt;&gt; temp = _goes_get_chianti_temp(fluxratio, satellite=15,</span>
+<span class="sd">    ...                               abundances=&quot;coronal&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; temp</span>
+<span class="sd">    &lt;Quantity [ 12.27557778, 12.27557778] MK&gt;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">download_dir</span><span class="p">:</span>
+        <span class="n">download_dir</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+    <span class="c1"># If download kwarg is True, or required data files cannot be</span>
+    <span class="c1"># found locally, download required data files.</span>
+    <span class="n">check_download_file</span><span class="p">(</span><span class="n">FILE_TEMP_COR</span><span class="p">,</span> <span class="n">GOES_REMOTE_PATH</span><span class="p">,</span> <span class="n">download_dir</span><span class="p">,</span>
+                        <span class="n">replace</span><span class="o">=</span><span class="n">download</span><span class="p">)</span>
+    <span class="n">check_download_file</span><span class="p">(</span><span class="n">FILE_TEMP_PHO</span><span class="p">,</span> <span class="n">GOES_REMOTE_PATH</span><span class="p">,</span> <span class="n">download_dir</span><span class="p">,</span>
+                        <span class="n">replace</span><span class="o">=</span><span class="n">download</span><span class="p">)</span>
+
+    <span class="c1"># check inputs are correct</span>
+    <span class="n">fluxratio</span> <span class="o">=</span> <span class="n">fluxratio</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span>
+    <span class="nb">int</span><span class="p">(</span><span class="n">satellite</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">satellite</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;satellite must be the number of a &quot;</span>
+                         <span class="s2">&quot;valid GOES satellite (&gt;1).&quot;</span><span class="p">)</span>
+    <span class="c1"># if abundance input is valid create file suffix, abund, equalling</span>
+    <span class="c1"># of &#39;cor&#39; or &#39;pho&#39;.</span>
+    <span class="k">if</span> <span class="n">abundances</span> <span class="o">==</span> <span class="s2">&quot;coronal&quot;</span><span class="p">:</span>
+        <span class="n">data_file</span> <span class="o">=</span> <span class="n">FILE_TEMP_COR</span>
+    <span class="k">elif</span> <span class="n">abundances</span> <span class="o">==</span> <span class="s2">&quot;photospheric&quot;</span><span class="p">:</span>
+        <span class="n">data_file</span> <span class="o">=</span> <span class="n">FILE_TEMP_PHO</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;abundances must be a string equalling &quot;</span>
+                         <span class="s2">&quot;&#39;coronal&#39; or &#39;photospheric&#39;.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Initialize lists to hold model data of flux ratio - temperature</span>
+    <span class="c1"># relationship read in from csv file</span>
+    <span class="n">modeltemp</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># modelled temperature is in log_10 space in units of MK</span>
+    <span class="n">modelratio</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Determine name of column in csv file containing model ratio values</span>
+    <span class="c1"># for relevant GOES satellite</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;ratioGOES</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">satellite</span><span class="p">)</span>
+    <span class="c1"># Read data representing appropriate temperature--flux ratio</span>
+    <span class="c1"># relationship depending on satellite number and assumed abundances.</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">get_and_create_download_dir</span><span class="p">(),</span> <span class="n">data_file</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="n">startline</span> <span class="o">=</span> <span class="n">dropwhile</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">),</span> <span class="n">csvfile</span><span class="p">)</span>
+        <span class="n">csvreader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">startline</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csvreader</span><span class="p">:</span>
+            <span class="n">modeltemp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;log10temp_MK&quot;</span><span class="p">]))</span>
+            <span class="n">modelratio</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">label</span><span class="p">]))</span>
+    <span class="n">modeltemp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">modeltemp</span><span class="p">)</span>
+    <span class="n">modelratio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">modelratio</span><span class="p">)</span>
+
+    <span class="c1"># Ensure input values of flux ratio are within limits of model table</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">fluxratio</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">modelratio</span><span class="p">)</span> <span class="ow">or</span> \
+       <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">fluxratio</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">modelratio</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;For GOES </span><span class="si">{0}</span><span class="s2">, all values in fluxratio input must be within &quot;</span> <span class="o">+</span>
+            <span class="s2">&quot;the range </span><span class="si">{1}</span><span class="s2"> - </span><span class="si">{2}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">satellite</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">modelratio</span><span class="p">),</span>
+                                          <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">modelratio</span><span class="p">)))</span>
+
+    <span class="c1"># Perform spline fit to model data to get temperatures for input</span>
+    <span class="c1"># values of flux ratio</span>
+    <span class="n">spline</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">splrep</span><span class="p">(</span><span class="n">modelratio</span><span class="p">,</span> <span class="n">modeltemp</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="mf">10.</span><span class="o">**</span><span class="n">interpolate</span><span class="o">.</span><span class="n">splev</span><span class="p">(</span><span class="n">fluxratio</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">spline</span><span class="p">,</span> <span class="n">der</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MK&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">temp</span>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">longflux</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="n">temp</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">MK</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_goes_get_chianti_em</span><span class="p">(</span><span class="n">longflux</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">satellite</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">abundances</span><span class="o">=</span><span class="s2">&quot;coronal&quot;</span><span class="p">,</span>
+                         <span class="n">download</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">download_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates emission measure from GOES 1-8A flux and temperature.</span>
+
+<span class="sd">    This function calculates the emission measure of the solar</span>
+<span class="sd">    soft X-ray emitting plasma observed by the GOES/XRS from the</span>
+<span class="sd">    the ratio of the isothermal temperature and observed long channel</span>
+<span class="sd">    (1-8 angstrom) flux which scales with the emission measure.</span>
+<span class="sd">    This function is not intended to be called directly but by</span>
+<span class="sd">    _goes_chianti_tem(), although it can be used independently.</span>
+<span class="sd">    However, if used independently data preparation, such as correctly</span>
+<span class="sd">    rescaling fluxes for some satellites etc. will not be carried out.</span>
+<span class="sd">    This is done in _goes_chianti_tem().</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    longflux : `~astropy.units.Quantity`</span>
+<span class="sd">        Array containing the observed GOES/XRS long channel flux.</span>
+<span class="sd">        Units=[W/m**2]</span>
+
+<span class="sd">    temp : `~astropy.units.Quantity`</span>
+<span class="sd">        Array containing the GOES temperature.  Units=[MK]</span>
+
+<span class="sd">    satellite : int (optional)</span>
+<span class="sd">        Number of GOES satellite used to make observations.</span>
+<span class="sd">        Important for correct calibration of data.</span>
+<span class="sd">        Default=8</span>
+
+<span class="sd">    abundances : (optional) {&#39;coronal&#39; | &#39;photospheric&#39;}</span>
+<span class="sd">        States whether photospheric or coronal abundances should be</span>
+<span class="sd">        assumed.</span>
+<span class="sd">        Default=&#39;coronal&#39;</span>
+
+<span class="sd">    download : (optional) `bool`</span>
+<span class="sd">        If True, the GOES emission measure data file is downloaded.</span>
+<span class="sd">        It is important to do this if a new version of the file has been</span>
+<span class="sd">        generated due to a new CHIANTI version being released or the launch of</span>
+<span class="sd">        new GOES satellites since these file was last downloaded.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    download_dir : (optional) `str`</span>
+<span class="sd">        The directory to download the GOES emission measure data file to.</span>
+<span class="sd">        Default=SunPy default download directory</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    em : `~astropy.units.Quantity`</span>
+<span class="sd">         Array of emission measure values of same length as longflux</span>
+<span class="sd">         and temp.  [cm**-3]</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function uses csv files representing the modelled relationship</span>
+<span class="sd">    between the temperature of the solar soft X-ray emitting plasma</span>
+<span class="sd">    and the resulting observed flux in the GOES/XRS long channel</span>
+<span class="sd">    (1-8 angstroms).  goes_chianti_em_cor.csv is used when coronal</span>
+<span class="sd">    abundances are assumed while goes_chianti_em_pho.csv is used when</span>
+<span class="sd">    photospheric abundances are assumed.</span>
+<span class="sd">    (See make_goes_chianti_temp.py for more detail.)</span>
+
+<span class="sd">    These files were calculated using the methods of White et al. (2005)</span>
+<span class="sd">    who used the CHIANTI atomic physics database and GOES transfer</span>
+<span class="sd">    functions to model the response of the long channel to the</span>
+<span class="sd">    temperature of the emitting plasma for XRSs onboard various GOES</span>
+<span class="sd">    satellites.  The emission measure can then be found by scaling the</span>
+<span class="sd">    ratio of these two properties.  This method assumes an isothermal</span>
+<span class="sd">    plasma, the ionisation equilibria of Mazzotta et al. (1998), and</span>
+<span class="sd">    a constant density of 10**10 cm**-3.</span>
+<span class="sd">    (See White et al. 2005 for justification of this last assumption.)</span>
+<span class="sd">    This function is based on goes_get_chianti_temp.pro in</span>
+<span class="sd">    SolarSoftWare written in IDL by Stephen White.</span>
+
+<span class="sd">    For correct preparation of GOES data before calculating temperature</span>
+<span class="sd">    see _goes_chianti_tem() (Notes section of docstring).</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] White, S. M., Thomas, R. J., &amp; Schwartz, R. A. 2005,</span>
+<span class="sd">        Sol. Phys., 227, 231, DOI: 10.1007/s11207-005-2445-z</span>
+<span class="sd">    .. [2] Mazzotta, P., Mazzitelli, G., Colafrancesco, S., &amp;</span>
+<span class="sd">        Vittorio, N. 1998, A&amp;AS, 133, 339, DOI: 10.1051/aas:1998330</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import astropy.units as u</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import _goes_get_chianti_em</span>
+<span class="sd">    &gt;&gt;&gt; longflux = u.Quantity([7e-6,7e-6], unit=u.W/u.m/u.m)</span>
+<span class="sd">    &gt;&gt;&gt; temp = u.Quantity([11, 11], unit=u.MK)</span>
+<span class="sd">    &gt;&gt;&gt; em = _goes_get_chianti_em(longflux, temp, satellite=15,</span>
+<span class="sd">    ...                           abundances=&quot;coronal&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; em</span>
+<span class="sd">    &lt;Quantity [  3.45200672e+48,  3.45200672e+48] 1 / cm3&gt;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">download_dir</span><span class="p">:</span>
+        <span class="n">download_dir</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+    <span class="c1"># If download kwarg is True, or required data files cannot be</span>
+    <span class="c1"># found locally, download required data files.</span>
+    <span class="n">check_download_file</span><span class="p">(</span><span class="n">FILE_EM_COR</span><span class="p">,</span> <span class="n">GOES_REMOTE_PATH</span><span class="p">,</span> <span class="n">download_dir</span><span class="p">,</span>
+                        <span class="n">replace</span><span class="o">=</span><span class="n">download</span><span class="p">)</span>
+    <span class="n">check_download_file</span><span class="p">(</span><span class="n">FILE_EM_PHO</span><span class="p">,</span> <span class="n">GOES_REMOTE_PATH</span><span class="p">,</span> <span class="n">download_dir</span><span class="p">,</span>
+                        <span class="n">replace</span><span class="o">=</span><span class="n">download</span><span class="p">)</span>
+
+    <span class="c1"># Check inputs are of correct type</span>
+    <span class="n">longflux</span> <span class="o">=</span> <span class="n">longflux</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">MK</span><span class="p">)</span>
+    <span class="n">log10_temp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">temp</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="nb">int</span><span class="p">(</span><span class="n">satellite</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">satellite</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;satellite must be the number of a &quot;</span>
+                         <span class="s2">&quot;valid GOES satellite (&gt;1).&quot;</span><span class="p">)</span>
+    <span class="c1"># if abundance input is valid create file suffix, abund, equalling</span>
+    <span class="c1"># of &#39;cor&#39; or &#39;pho&#39;.</span>
+    <span class="k">if</span> <span class="n">abundances</span> <span class="o">==</span> <span class="s2">&quot;coronal&quot;</span><span class="p">:</span>
+        <span class="n">data_file</span> <span class="o">=</span> <span class="n">FILE_EM_COR</span>
+    <span class="k">elif</span> <span class="n">abundances</span> <span class="o">==</span> <span class="s2">&quot;photospheric&quot;</span><span class="p">:</span>
+        <span class="n">data_file</span> <span class="o">=</span> <span class="n">FILE_EM_PHO</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;abundances must be a string equalling &quot;</span>
+                         <span class="s2">&quot;&#39;coronal&#39; or &#39;photospheric&#39;.&quot;</span><span class="p">)</span>
+    <span class="c1"># check input arrays are of same length</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">longflux</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;longflux and temp must have same number of &quot;</span>
+                         <span class="s2">&quot;elements.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Initialize lists to hold model data of temperature - long channel</span>
+    <span class="c1"># flux relationship read in from csv file.</span>
+    <span class="n">modeltemp</span> <span class="o">=</span> <span class="p">[]</span>   <span class="c1"># modelled temperature is in log_10 space in units of MK</span>
+    <span class="n">modelflux</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Determine name of column in csv file containing model ratio values</span>
+    <span class="c1"># for relevant GOES satellite</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;longfluxGOES</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">satellite</span><span class="p">)</span>
+
+    <span class="c1"># Read data representing appropriate temperature--long flux</span>
+    <span class="c1"># relationship depending on satellite number and assumed abundances.</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">get_and_create_download_dir</span><span class="p">(),</span> <span class="n">data_file</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="n">startline</span> <span class="o">=</span> <span class="n">dropwhile</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="n">l</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">),</span> <span class="n">csvfile</span><span class="p">)</span>
+        <span class="n">csvreader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">startline</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csvreader</span><span class="p">:</span>
+            <span class="n">modeltemp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;log10temp_MK&quot;</span><span class="p">]))</span>
+            <span class="n">modelflux</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">label</span><span class="p">]))</span>
+    <span class="n">modeltemp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">modeltemp</span><span class="p">)</span>
+    <span class="n">modelflux</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">modelflux</span><span class="p">)</span>
+
+    <span class="c1"># Ensure input values of flux ratio are within limits of model table</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">log10_temp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">modeltemp</span><span class="p">)</span> <span class="ow">or</span> \
+       <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">log10_temp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">modeltemp</span><span class="p">)</span> <span class="ow">or</span> \
+       <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">log10_temp</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;All values in temp must be within the range &quot;</span>
+                         <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> - </span><span class="si">{1}</span><span class="s2"> MK.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">modeltemp</span><span class="p">),</span>
+                                                <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">modeltemp</span><span class="p">)))</span>
+
+    <span class="c1"># Perform spline fit to model data</span>
+    <span class="n">spline</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">splrep</span><span class="p">(</span><span class="n">modeltemp</span><span class="p">,</span> <span class="n">modelflux</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">splev</span><span class="p">(</span><span class="n">log10_temp</span><span class="p">,</span> <span class="n">spline</span><span class="p">,</span> <span class="n">der</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">em</span> <span class="o">=</span> <span class="n">longflux</span><span class="o">.</span><span class="n">value</span><span class="o">/</span><span class="n">denom</span> <span class="o">*</span> <span class="mf">1e55</span>
+    <span class="n">em</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">em</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;cm**(-3)&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">em</span>
+
+
+<div class="viewcode-block" id="calculate_radiative_loss_rate"><a class="viewcode-back" href="../../../api/sunpy.instr.goes.calculate_radiative_loss_rate.html#sunpy.instr.goes.calculate_radiative_loss_rate">[docs]</a><span class="k">def</span> <span class="nf">calculate_radiative_loss_rate</span><span class="p">(</span><span class="n">goeslc</span><span class="p">,</span> <span class="n">force_download</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                  <span class="n">download_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates radiative loss rate from GOES observations.</span>
+
+<span class="sd">    This function calculates the radiative loss rate as a function of</span>
+<span class="sd">    time of solar soft X-ray-emitting plasma across all wavelengths given a</span>
+<span class="sd">    LightCurve object containing GOES data.  The radiative loss rate is</span>
+<span class="sd">    determined from the GOES isothermal temperature and volume emission</span>
+<span class="sd">    measure as a function of time, as calculated by</span>
+<span class="sd">    `~calculate_temperature_em()`.  See docstring of that function for more</span>
+<span class="sd">    details.  If the LightCurve object does not contain the temperatures and</span>
+<span class="sd">    emission measures, but only contain the GOES fluxes, then the temperature</span>
+<span class="sd">    and emission measures are calculated using calculate_temperature_em().</span>
+<span class="sd">    The unit of the resulting radiative loss rates is W.  Once</span>
+<span class="sd">    the radiative loss rates have been found, they are returned as part of a</span>
+<span class="sd">    new LightCurve object also containing the metadata, GOES fluxes and</span>
+<span class="sd">    corresponding temperatures and emission measures of the input LightCurve</span>
+<span class="sd">    object.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    goeslc : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">        LightCurve object containing GOES data.  The units of these</span>
+<span class="sd">        data MUST be W/m^2 (flux), MK (temperature) and cm^-3</span>
+<span class="sd">        (emission measure).  If LightCurve object does not contain</span>
+<span class="sd">        temperature and emission measure values, they are calculated from</span>
+<span class="sd">        the flux values using calculate_temperature_em().</span>
+
+<span class="sd">    force_download : (optional) `bool`</span>
+<span class="sd">        If True, the GOES radiative loss data file is downloaded even if</span>
+<span class="sd">        already locally stored. It is important to do this if a new version</span>
+<span class="sd">        of the file has been generated due to a new CHIANTI version being</span>
+<span class="sd">        released or the launch of new GOES satellites.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    download_dir : (optional) `str`</span>
+<span class="sd">        The directory to download the GOES radiative loss data file to.</span>
+<span class="sd">        Default=SunPy default download directory</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    lc_new : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">        Contains same metadata and data as input LightCurve with the</span>
+<span class="sd">        following additional data columns:</span>
+
+<span class="sd">        | lc_new.data.temperature - Array of temperature values [MK]</span>
+<span class="sd">        | lc_new.data.em - Array of volume emission measure values [cm**-3]</span>
+<span class="sd">        | lc_new.data.rad_loss_rate - radiative loss rate of the coronal soft</span>
+<span class="sd">          X-ray-emitting plasma across all wavelengths [W]</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The GOES radiative loss rates are calculated using a csv file containing</span>
+<span class="sd">    a table of radiative loss rate per unit emission measure at various</span>
+<span class="sd">    temperatures.  The appropriate values are then found via interpolation.</span>
+<span class="sd">    This table was generated using CHIANTI atomic physics database employing</span>
+<span class="sd">    the methods of [1]_.  Coronal abundances, a default</span>
+<span class="sd">    density of 10**10 cm**-3, and ionization equilibrium of</span>
+<span class="sd">    [2]_ were used.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] Cox, D.P., Tucker, W.H. 1969, ApJ, 157, 1157, DOI: 10.1086/150144</span>
+<span class="sd">    .. [2] Mazzotta, P., Mazzitelli, G., Colafrancesco, S., &amp; Vittorio, N.</span>
+<span class="sd">       1998, A&amp;AS, 133, 339, DOI: 10.1051/aas:1998330</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import calculate_radiative_loss_rate</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.lightcurve as lc</span>
+<span class="sd">    &gt;&gt;&gt; time1 = &quot;2014-01-01 00:00:00&quot;</span>
+<span class="sd">    &gt;&gt;&gt; time2 = &quot;2014-01-01 00:00:08&quot;</span>
+<span class="sd">    &gt;&gt;&gt; goeslc = lc.GOESLightCurve.create(time1, time2)</span>
+<span class="sd">    &gt;&gt;&gt; goeslc.data</span>
+<span class="sd">                                        xrsa      xrsb</span>
+<span class="sd">    2014-01-01 00:00:00.421999  9.187300e-08  0.000004</span>
+<span class="sd">    2014-01-01 00:00:02.468999  9.187300e-08  0.000004</span>
+<span class="sd">    2014-01-01 00:00:04.518999  9.187300e-08  0.000004</span>
+<span class="sd">    2014-01-01 00:00:06.564999  9.298800e-08  0.000004</span>
+
+<span class="sd">    &gt;&gt;&gt; goeslc_new = calculate_radiative_loss_rate(goeslc)</span>
+<span class="sd">    &gt;&gt;&gt; goeslc_new.data   # doctest: +NORMALIZE_WHITESPACE</span>
+<span class="sd">                                        xrsa      xrsb  temperature            em  \\</span>
+<span class="sd">    2014-01-01 00:00:00.421999  9.187300e-08  0.000004     6.270239  6.440648e+48</span>
+<span class="sd">    2014-01-01 00:00:02.468999  9.187300e-08  0.000004     6.270239  6.440648e+48</span>
+<span class="sd">    2014-01-01 00:00:04.518999  9.187300e-08  0.000004     6.273917  6.422208e+48</span>
+<span class="sd">    2014-01-01 00:00:06.564999  9.298800e-08  0.000004     6.304001  6.350370e+48</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+<span class="sd">                                rad_loss_rate</span>
+<span class="sd">    2014-01-01 00:00:00.421999   5.449144e+19</span>
+<span class="sd">    2014-01-01 00:00:02.468999   5.449144e+19</span>
+<span class="sd">    2014-01-01 00:00:04.518999   5.434659e+19</span>
+<span class="sd">    2014-01-01 00:00:06.564999   5.382823e+19</span>
+
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">download_dir</span><span class="p">:</span>
+        <span class="n">download_dir</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+    <span class="c1"># Check that input argument is of correct type</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">goeslc</span><span class="p">,</span> <span class="n">lightcurve</span><span class="o">.</span><span class="n">LightCurve</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;goeslc must be a LightCurve object.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># extract temperature and emission measure from GOESLightCurve</span>
+    <span class="c1"># object and change type to that required by _calc_rad_loss().</span>
+    <span class="c1"># If LightCurve object does not contain temperature and</span>
+    <span class="c1"># emission measure, calculate using calculate_temperature_em()</span>
+    <span class="k">if</span> <span class="s1">&#39;temperature&#39;</span> <span class="ow">in</span> <span class="n">goeslc</span><span class="o">.</span><span class="n">data</span> <span class="ow">and</span> <span class="s1">&#39;em&#39;</span> <span class="ow">in</span> <span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+        <span class="c1"># Use copy.deepcopy for replicating meta and data so that input</span>
+        <span class="c1"># lightcurve is not altered.</span>
+        <span class="n">lc_new</span> <span class="o">=</span> <span class="n">lightcurve</span><span class="o">.</span><span class="n">LightCurve</span><span class="p">(</span><span class="n">meta</span><span class="o">=</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">meta</span><span class="p">),</span>
+                                       <span class="n">data</span><span class="o">=</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">lc_new</span> <span class="o">=</span> <span class="n">calculate_temperature_em</span><span class="p">(</span><span class="n">goeslc</span><span class="p">)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">lc_new</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">),</span>
+                      <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">MK</span><span class="p">)</span>
+    <span class="n">em</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">lc_new</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">em</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">),</span>
+                    <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">))</span>
+
+    <span class="c1"># Find radiative loss rate with _calc_rad_loss()</span>
+    <span class="n">rad_loss_out</span> <span class="o">=</span> <span class="n">_calc_rad_loss</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">em</span><span class="p">,</span> <span class="n">force_download</span><span class="o">=</span><span class="n">force_download</span><span class="p">,</span>
+                                  <span class="n">download_dir</span><span class="o">=</span><span class="n">download_dir</span><span class="p">)</span>
+
+    <span class="c1"># Enter results into new version of GOES LightCurve Object</span>
+    <span class="n">lc_new</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;rad_loss_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rad_loss_out</span><span class="p">[</span><span class="s2">&quot;rad_loss_rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;W&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="k">return</span> <span class="n">lc_new</span></div>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">temp</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">MK</span><span class="p">,</span> <span class="n">em</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">_calc_rad_loss</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">em</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_download</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                   <span class="n">download_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Finds radiative loss rate of coronal plasma over all wavelengths.</span>
+
+<span class="sd">    This function calculates the radiative loss rate of solar coronal</span>
+<span class="sd">    soft X-ray-emitting plasma across all wavelengths given an isothermal</span>
+<span class="sd">    temperature and emission measure.  The units of the results are</span>
+<span class="sd">    W.  This function is based on calc_rad_loss.pro in SSW IDL.</span>
+<span class="sd">    In addition, if obstime keyword is set, giving the times to which</span>
+<span class="sd">    the temperature and emission measure values correspond, the</span>
+<span class="sd">    radiated losses integrated over time are also calculated.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    temp : `~astropy.units.Quantity`</span>
+<span class="sd">        Array containing the temperature of the coronal plasma at</span>
+<span class="sd">        different times.  Units=[MK]</span>
+
+<span class="sd">    em : `~astropy.units.Quantity`</span>
+<span class="sd">        Array containing the emission measure of the coronal plasma</span>
+<span class="sd">        at the same times corresponding to the temperatures in temp.</span>
+<span class="sd">        Must be same length as temp.  Units=[cm**-3]</span>
+
+<span class="sd">    obstime : (optional) array-like of `datetime.datetime` objects</span>
+<span class="sd">        Array of measurement times to which temperature and</span>
+<span class="sd">        emission measure values correspond.  Must be same length</span>
+<span class="sd">        as temp and em.  If this keyword is set, the integrated</span>
+<span class="sd">        radiated energy is calculated.</span>
+
+<span class="sd">    force_download : (optional) bool</span>
+<span class="sd">        If True, the GOES radiative loss data file is downloaded.  It is</span>
+<span class="sd">        important to do this if a new version of the files has been</span>
+<span class="sd">        generated due to a new CHIANTI version being released or the</span>
+<span class="sd">        launch of new GOES satellites.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    download_dir : (optional) string</span>
+<span class="sd">        The directory to download the GOES radiative loss data file to.</span>
+<span class="sd">        Default=SunPy default download directory</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    rad_loss_out : `dict` of `~astropy.units.quantity.Quantity` objects</span>
+<span class="sd">        Contains the following keys.</span>
+
+<span class="sd">        | &quot;rad_loss_rate&quot; - radiative loss rate of the soft X-ray-emitting</span>
+<span class="sd">           plasma across all wavelengths corresponding to temperatures and</span>
+<span class="sd">           emission measures in temp and em Quantity inputs.</span>
+<span class="sd">        | &quot;rad_loss_cumul&quot; - cumulative radiative losses as a function of</span>
+<span class="sd">          time.  (Only if obstime kwarg is NOT None.)</span>
+<span class="sd">        | &quot;rad_loss_int&quot; - total radiative losses as a function of time.</span>
+<span class="sd">          (Only if obstime kwarg is not None.)  Array containing radiative</span>
+<span class="sd">          loss rates of the coronal plasma corresponding to temperatures and</span>
+<span class="sd">          emission measures in temp and em arrays.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function calls a csv file containing a table of radiative loss</span>
+<span class="sd">    rate per unit emission measure at various temperatures.  The</span>
+<span class="sd">    appropriate values are then found via interpolation.  This table</span>
+<span class="sd">    was generated using CHIANTI atomic physics database employing the</span>
+<span class="sd">    methods of Cox &amp; Tucker (1969).  Coronal abundances, a default</span>
+<span class="sd">    density of 10**10 cm**-3, and ionization equilibrium of</span>
+<span class="sd">    Mazzotta et al. (1998) were used.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1] Cox, D.P., Tucker, W.H. 1969, ApJ, 157, 1157, DOI: 10.1086/150144</span>
+<span class="sd">    .. [2] Mazzotta, P., Mazzitelli, G., Colafrancesco, S., &amp; Vittorio, N.</span>
+<span class="sd">       1998, A&amp;AS, 133, 339, DOI: 10.1051/aas:1998330</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import _calc_rad_loss</span>
+<span class="sd">    &gt;&gt;&gt; from astropy.units.quantity import Quantity</span>
+<span class="sd">    &gt;&gt;&gt; temp = Quantity([11.0, 11.0], unit=&quot;MK&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; em = Quantity([4.0e+48, 4.0e+48], unit=&quot;cm**(-3)&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; rad_loss = _calc_rad_loss(temp, em)</span>
+<span class="sd">    &gt;&gt;&gt; rad_loss[&quot;rad_loss_rate&quot;]</span>
+<span class="sd">    &lt;Quantity [  3.01851392e+19,  3.01851392e+19] J / s&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">download_dir</span><span class="p">:</span>
+        <span class="n">download_dir</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+    <span class="c1"># Check inputs are correct</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">K</span><span class="p">)</span>
+    <span class="n">em</span> <span class="o">=</span> <span class="n">em</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">em</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;temp and em must all have same number of elements.&quot;</span><span class="p">)</span>
+    <span class="c1"># If force_download kwarg is True, or required data files cannot be</span>
+    <span class="c1"># found locally, download required data files.</span>
+    <span class="n">check_download_file</span><span class="p">(</span><span class="n">FILE_RAD_COR</span><span class="p">,</span> <span class="n">GOES_REMOTE_PATH</span><span class="p">,</span> <span class="n">download_dir</span><span class="p">,</span>
+                        <span class="n">replace</span><span class="o">=</span><span class="n">force_download</span><span class="p">)</span>
+
+    <span class="c1"># Initialize lists to hold model data of temperature - rad loss rate</span>
+    <span class="c1"># relationship read in from csv file</span>
+    <span class="n">modeltemp</span> <span class="o">=</span> <span class="p">[]</span>    <span class="c1"># modelled temperature is in log_10 space in units of MK</span>
+    <span class="n">model_loss_rate</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Read data from csv file into lists, being sure to skip commented</span>
+    <span class="c1"># lines beginning with &quot;#&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">get_and_create_download_dir</span><span class="p">(),</span> <span class="n">FILE_RAD_COR</span><span class="p">),</span>
+              <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="n">startline</span> <span class="o">=</span> <span class="n">csvfile</span><span class="o">.</span><span class="n">readlines</span><span class="p">()[</span><span class="mi">7</span><span class="p">:]</span>
+        <span class="n">csvreader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">startline</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csvreader</span><span class="p">:</span>
+            <span class="n">modeltemp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="n">model_loss_rate</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">modeltemp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">modeltemp</span><span class="p">)</span>
+    <span class="n">model_loss_rate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">model_loss_rate</span><span class="p">)</span>
+    <span class="c1"># Ensure input values of flux ratio are within limits of model table</span>
+    <span class="k">if</span> <span class="n">temp</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">modeltemp</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="ow">or</span> \
+    <span class="n">temp</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">modeltemp</span><span class="o">.</span><span class="n">max</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;All values in temp must be within the range &quot;</span> <span class="o">+</span>
+                         <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> - </span><span class="si">{1}</span><span class="s2"> MK.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">modeltemp</span><span class="o">/</span><span class="mf">1e6</span><span class="p">),</span>
+                                                <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">modeltemp</span><span class="o">/</span><span class="mf">1e6</span><span class="p">)))</span>
+    <span class="c1"># Perform spline fit to model data to get temperatures for input</span>
+    <span class="c1"># values of flux ratio</span>
+    <span class="n">spline</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">splrep</span><span class="p">(</span><span class="n">modeltemp</span><span class="p">,</span> <span class="n">model_loss_rate</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rad_loss</span> <span class="o">=</span> <span class="n">em</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">splev</span><span class="p">(</span><span class="n">temp</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">spline</span><span class="p">,</span> <span class="n">der</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">rad_loss</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">rad_loss</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;erg/s&#39;</span><span class="p">)</span>
+    <span class="n">rad_loss</span> <span class="o">=</span> <span class="n">rad_loss</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">J</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+
+    <span class="c1"># If obstime keyword giving measurement times is set, calculate</span>
+    <span class="c1"># radiative losses integrated over time.</span>
+    <span class="k">if</span> <span class="n">obstime</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># First ensure obstime is of same length as temp and em and of</span>
+        <span class="c1"># correct type.</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">obstime</span><span class="p">)</span> <span class="o">!=</span> <span class="n">n</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;obstime must have same number of elements as &quot;</span>
+                          <span class="s2">&quot;temp and em.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">obstime</span><span class="p">)</span> <span class="o">==</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">:</span>
+            <span class="n">obstime</span> <span class="o">=</span> <span class="n">obstime</span><span class="o">.</span><span class="n">to_pydatetime</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">obst</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span> <span class="k">for</span> <span class="n">obst</span> <span class="ow">in</span> <span class="n">obstime</span><span class="p">):</span>
+            <span class="n">parse_time</span><span class="p">(</span><span class="n">obstime</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">obst</span><span class="p">)</span> <span class="o">==</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span> <span class="k">for</span> <span class="n">obst</span> <span class="ow">in</span> <span class="n">obstime</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;obstime must be an array-like whose elements are&quot;</span>
+                            <span class="s2">&quot; convertible to datetime objects.&quot;</span><span class="p">)</span>
+        <span class="c1"># Check elements in obstime in chronological order</span>
+        <span class="n">chrono_check</span> <span class="o">=</span> <span class="n">obstime</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">obstime</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">chrono_check</span> <span class="o">=</span> <span class="n">chrono_check</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">chrono_check</span> <span class="o">&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Elements of obstime must be in chronological order.&quot;</span><span class="p">)</span>
+        <span class="c1"># Next, get measurement times in seconds from time of first</span>
+        <span class="c1"># measurement.</span>
+        <span class="n">obstime_seconds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="n">ot</span><span class="o">-</span><span class="n">obstime</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+                                    <span class="k">for</span> <span class="n">ot</span> <span class="ow">in</span> <span class="n">obstime</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">)</span>
+        <span class="c1"># Finally, integrate using trapezoid rule</span>
+        <span class="n">rad_loss_int</span> <span class="o">=</span> <span class="n">trapz</span><span class="p">(</span><span class="n">rad_loss</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">obstime_seconds</span><span class="p">)</span>
+        <span class="n">rad_loss_int</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">rad_loss_int</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">rad_loss</span><span class="o">.</span><span class="n">unit</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+        <span class="c1"># Calculate cumulative radiated energy in each GOES channel as</span>
+        <span class="c1"># a function of time.</span>
+        <span class="n">rad_loss_cumul</span> <span class="o">=</span> <span class="n">cumtrapz</span><span class="p">(</span><span class="n">rad_loss</span><span class="p">,</span> <span class="n">obstime_seconds</span><span class="p">)</span>
+        <span class="n">rad_loss_cumul</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">rad_loss_cumul</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">rad_loss</span><span class="o">.</span><span class="n">unit</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+        <span class="c1"># Enter results into output dictionary.</span>
+        <span class="n">rad_loss_out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;rad_loss_rate&quot;</span><span class="p">:</span> <span class="n">rad_loss</span><span class="p">,</span>
+                        <span class="s2">&quot;rad_loss_cumul&quot;</span><span class="p">:</span> <span class="n">rad_loss_cumul</span><span class="p">,</span>
+                        <span class="s2">&quot;rad_loss_int&quot;</span><span class="p">:</span> <span class="n">rad_loss_int</span><span class="p">}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rad_loss_out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;rad_loss_rate&quot;</span><span class="p">:</span> <span class="n">rad_loss</span><span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">rad_loss_out</span>
+
+
+<div class="viewcode-block" id="calculate_xray_luminosity"><a class="viewcode-back" href="../../../api/sunpy.instr.goes.calculate_xray_luminosity.html#sunpy.instr.goes.calculate_xray_luminosity">[docs]</a><span class="k">def</span> <span class="nf">calculate_xray_luminosity</span><span class="p">(</span><span class="n">goeslc</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates GOES solar X-ray luminosity.</span>
+
+<span class="sd">    This function calculates the solar X-ray luminosity in the GOES</span>
+<span class="sd">    wavelength ranges (1-8 angstroms and 0.5-4 angstroms) based on the</span>
+<span class="sd">    observed GOES fluxes.  The units of the results are W.  The calculation</span>
+<span class="sd">    is made by simply assuming that the radiation is emitted isotropically,</span>
+<span class="sd">    i.e. is distributed over a spherical surface area with a radius equal to</span>
+<span class="sd">    the Sun-Earth distance.  Once the luminosity in each GOES passband is</span>
+<span class="sd">    found, they are returned in a new LightCurve object also containing the</span>
+<span class="sd">    metadata and data of the input LightCurve object.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    goeslc : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">        LightCurve object containing GOES flux data which MUST</span>
+<span class="sd">        be in units of W/m^2.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    lc_new : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">        Contains same metadata and data as input LightCurve with the</span>
+<span class="sd">        following additional data columns;</span>
+
+<span class="sd">        | goeslc_new.data.luminosity_xrsa - Xray luminosity in 0.5-4A channel</span>
+<span class="sd">          unit=[W]</span>
+<span class="sd">        | goeslc_new.data.luminosity_xrsb - Xray luminosity in 1-8A channel</span>
+<span class="sd">          unit=[W]</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import calculate_xray_luminosity</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.lightcurve as lc</span>
+<span class="sd">    &gt;&gt;&gt; time1 = &quot;2014-01-01 00:00:00&quot;</span>
+<span class="sd">    &gt;&gt;&gt; time2 = &quot;2014-01-01 00:00:08&quot;</span>
+<span class="sd">    &gt;&gt;&gt; goeslc = lc.GOESLightCurve.create(time1, time2)</span>
+<span class="sd">    &gt;&gt;&gt; goeslc.data</span>
+<span class="sd">                                        xrsa      xrsb</span>
+<span class="sd">    2014-01-01 00:00:00.421999  9.187300e-08  0.000004</span>
+<span class="sd">    2014-01-01 00:00:02.468999  9.187300e-08  0.000004</span>
+<span class="sd">    2014-01-01 00:00:04.518999  9.187300e-08  0.000004</span>
+<span class="sd">    2014-01-01 00:00:06.564999  9.298800e-08  0.000004</span>
+
+<span class="sd">    &gt;&gt;&gt; goeslc_new = calculate_xray_luminosity(goeslc)</span>
+<span class="sd">    &gt;&gt;&gt; goeslc_new.data   # doctest: +NORMALIZE_WHITESPACE</span>
+<span class="sd">                                        xrsa      xrsb  luminosity_xrsa \\</span>
+<span class="sd">    2014-01-01 00:00:00.421999  9.187300e-08  0.000004     2.498319e+16</span>
+<span class="sd">    2014-01-01 00:00:02.468999  9.187300e-08  0.000004     2.498319e+16</span>
+<span class="sd">    2014-01-01 00:00:04.518999  9.187300e-08  0.000004     2.498319e+16</span>
+<span class="sd">    2014-01-01 00:00:06.564999  9.298800e-08  0.000004     2.528640e+16</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+<span class="sd">                                luminosity_xrsb</span>
+<span class="sd">    2014-01-01 00:00:00.421999     9.543993e+17</span>
+<span class="sd">    2014-01-01 00:00:02.468999     9.543993e+17</span>
+<span class="sd">    2014-01-01 00:00:04.518999     9.529851e+17</span>
+<span class="sd">    2014-01-01 00:00:06.564999     9.529851e+17</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check that input argument is of correct type</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">goeslc</span><span class="p">,</span> <span class="n">lightcurve</span><span class="o">.</span><span class="n">GOESLightCurve</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;goeslc must be a GOESLightCurve object.&quot;</span><span class="p">)</span>
+    <span class="c1"># Find temperature and emission measure with _goes_chianti_tem</span>
+    <span class="n">lx_out</span> <span class="o">=</span> <span class="n">_goes_lx</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">xrsb</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;W/m**2&quot;</span><span class="p">),</span>
+                      <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">xrsa</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;W/m**2&quot;</span><span class="p">),</span>
+                      <span class="n">date</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="c1"># Enter results into new version of GOES LightCurve Object</span>
+    <span class="c1"># Use copy.deepcopy for replicating meta and data so that input</span>
+    <span class="c1"># lightcurve is not altered.</span>
+    <span class="n">lc_new</span> <span class="o">=</span> <span class="n">lightcurve</span><span class="o">.</span><span class="n">LightCurve</span><span class="p">(</span><span class="n">meta</span><span class="o">=</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">meta</span><span class="p">),</span>
+                                   <span class="n">data</span><span class="o">=</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">goeslc</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+    <span class="n">lc_new</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;luminosity_xrsa&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lx_out</span><span class="p">[</span><span class="s2">&quot;shortlum&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;W&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">lc_new</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;luminosity_xrsb&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lx_out</span><span class="p">[</span><span class="s2">&quot;longlum&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;W&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="k">return</span> <span class="n">lc_new</span></div>
+
+
+<span class="k">def</span> <span class="nf">_goes_lx</span><span class="p">(</span><span class="n">longflux</span><span class="p">,</span> <span class="n">shortflux</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates solar X-ray luminosity in GOES wavelength ranges.</span>
+
+<span class="sd">    This function calculates the X-ray luminosity from the Sun in the</span>
+<span class="sd">    GOES wavelength ranges (1-8 angstroms and 0.5-4 angstroms) based</span>
+<span class="sd">    on the observed GOES fluxes.  The units of the results are erg/s.</span>
+<span class="sd">    The calculation is made by simply assuming that the radiation is</span>
+<span class="sd">    emitted isotropically, i.e. is distributed over a spherical</span>
+<span class="sd">    surface area with a radius equal to the Sun-Earth distance.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    longflux : `~astropy.units.Quantity`</span>
+<span class="sd">        Array containing the observed GOES/XRS long channel flux.</span>
+<span class="sd">        Units=[W/m**2]</span>
+
+<span class="sd">    shortflux : `~astropy.units.Quantity`</span>
+<span class="sd">        Array containing the observed GOES/XRS short channel flux.</span>
+<span class="sd">        Units=[W/m**2]</span>
+
+<span class="sd">    obstime : (optional) array-like of `datetime.datetime` objects</span>
+<span class="sd">        Measurement times corresponding to each flux measurement.</span>
+<span class="sd">        Assumes each pair of 0.5-4 and 1-8 angstrom flux measurements</span>
+<span class="sd">        were taken simultaneously.</span>
+
+<span class="sd">    date : (optional) `datetime.datetime` object or valid date string.</span>
+<span class="sd">        Date at which measurements were taken.  This is used to</span>
+<span class="sd">        calculate the Sun-Earth distance.</span>
+<span class="sd">        Default=None implies Sun-Earth distance is set to 1AU.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    lx_out : `dict`</span>
+<span class="sd">        dictionary containing the following fields.</span>
+<span class="sd">        longlum : `~astropy.units.Quantity`</span>
+<span class="sd">            Array of luminosity in the 1-8 angstroms range.</span>
+
+<span class="sd">        shortlum : `~astropy.units.Quantity`</span>
+<span class="sd">            Array of luminosity in the 0.5-4 angstroms range.</span>
+
+<span class="sd">        longlum_int : (only present if obstime kwarg is set)</span>
+
+<span class="sd">        shortlum_int : (only present if obstime kwarg is set)</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function calls _calc_xraylum() to calculate luminosities.</span>
+<span class="sd">    For more information on how this is done, see docstring of that</span>
+<span class="sd">    function.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import _goes_lx</span>
+<span class="sd">    &gt;&gt;&gt; from datetime import datetime</span>
+<span class="sd">    &gt;&gt;&gt; from astropy.units.quantity import Quantity</span>
+<span class="sd">    &gt;&gt;&gt; longflux = Quantity([7e-6,7e-6,7e-6,7e-6,7e-6,7e-6], unit=&#39;W/m**2&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; shortflux = Quantity([7e-7,7e-7,7e-7,7e-7,7e-7,7e-7], unit=&#39;W/m**2&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; obstime = np.array([datetime(2014,1,1,0,0,0),</span>
+<span class="sd">    ...                     datetime(2014,1,1,0,0,2),</span>
+<span class="sd">    ...                     datetime(2014,1,1,0,0,4),</span>
+<span class="sd">    ...                     datetime(2014,1,1,0,0,6),</span>
+<span class="sd">    ...                     datetime(2014,1,1,0,0,8),</span>
+<span class="sd">    ...                     datetime(2014,1,1,0,0,10),], dtype=object)</span>
+<span class="sd">    &gt;&gt;&gt; lx_out = _goes_lx(longflux, shortflux, obstime)</span>
+<span class="sd">    &gt;&gt;&gt; lx_out[&quot;longlum&quot;]</span>
+<span class="sd">    &lt;Quantity [  1.96860565e+18,  1.96860565e+18,  1.96860565e+18,</span>
+<span class="sd">                 1.96860565e+18,  1.96860565e+18,  1.96860565e+18] W&gt;</span>
+<span class="sd">    &gt;&gt;&gt; lx_out[&quot;shortlum&quot;]</span>
+<span class="sd">    &lt;Quantity [  1.96860565e+17,  1.96860565e+17,  1.96860565e+17,</span>
+<span class="sd">                 1.96860565e+17,  1.96860565e+17,  1.96860565e+17] W&gt;</span>
+<span class="sd">    &gt;&gt;&gt; lx_out[&quot;longlum_int&quot;]</span>
+<span class="sd">    &lt;Quantity 1.968605654118636e+19 s W&gt;</span>
+<span class="sd">    &gt;&gt;&gt; lx_out[&quot;shortlum_int&quot;]</span>
+<span class="sd">    &lt;Quantity 1.9686056541186358e+18 s W&gt;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Calculate X-ray luminosities</span>
+    <span class="n">longlum</span> <span class="o">=</span> <span class="n">_calc_xraylum</span><span class="p">(</span><span class="n">longflux</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">date</span><span class="p">)</span>
+    <span class="n">shortlum</span> <span class="o">=</span> <span class="n">_calc_xraylum</span><span class="p">(</span><span class="n">shortflux</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">date</span><span class="p">)</span>
+
+    <span class="c1"># If obstime keyword giving measurement times is set, calculate</span>
+    <span class="c1"># total energy radiated in the GOES bandpasses during the flare.</span>
+    <span class="k">if</span> <span class="n">obstime</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># First ensure longflux, shortflux, and obstime are all of</span>
+        <span class="c1"># equal length and obstime is of correct type.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">longflux</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">shortflux</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">obstime</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;longflux, shortflux, and obstime must all have &quot;</span>
+                             <span class="s2">&quot;same number of elements.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">obstime</span><span class="p">)</span> <span class="o">==</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">:</span>
+            <span class="n">obstime</span> <span class="o">=</span> <span class="n">obstime</span><span class="o">.</span><span class="n">to_pydatetime</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">obst</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span> <span class="k">for</span> <span class="n">obst</span> <span class="ow">in</span> <span class="n">obstime</span><span class="p">):</span>
+            <span class="n">parse_time</span><span class="p">(</span><span class="n">obstime</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">obst</span><span class="p">)</span> <span class="o">==</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span> <span class="k">for</span> <span class="n">obst</span> <span class="ow">in</span> <span class="n">obstime</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;obstime must be an array-like whose elements are&quot;</span>
+                            <span class="s2">&quot; convertible to datetime objects.&quot;</span><span class="p">)</span>
+        <span class="c1"># Check elements in obstime in chronological order</span>
+        <span class="n">chrono_check</span> <span class="o">=</span> <span class="n">obstime</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">obstime</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">chrono_check</span> <span class="o">=</span> <span class="n">chrono_check</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">chrono_check</span> <span class="o">&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Elements of obstime must be in chronological order.&quot;</span><span class="p">)</span>
+        <span class="c1"># Next, get measurement times in seconds from time of first</span>
+        <span class="c1"># measurement.</span>
+        <span class="n">obstime_seconds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="n">ot</span><span class="o">-</span><span class="n">obstime</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+                                    <span class="k">for</span> <span class="n">ot</span> <span class="ow">in</span> <span class="n">obstime</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">)</span>
+        <span class="c1"># Finally, integrate using trapezoid rule</span>
+        <span class="n">longlum_int</span> <span class="o">=</span> <span class="n">trapz</span><span class="p">(</span><span class="n">longlum</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">obstime_seconds</span><span class="p">)</span>
+        <span class="n">longlum_int</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">longlum_int</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">longlum</span><span class="o">.</span><span class="n">unit</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">shortlum_int</span> <span class="o">=</span> <span class="n">trapz</span><span class="p">(</span><span class="n">shortlum</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">obstime_seconds</span><span class="p">)</span>
+        <span class="n">shortlum_int</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">shortlum_int</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">shortlum</span><span class="o">.</span><span class="n">unit</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+        <span class="c1"># Calculate cumulative radiated energy in each GOES channel as</span>
+        <span class="c1"># a function of time.</span>
+        <span class="n">longlum_cumul</span> <span class="o">=</span> <span class="n">cumtrapz</span><span class="p">(</span><span class="n">longlum</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">obstime_seconds</span><span class="p">)</span>
+        <span class="n">longlum_cumul</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">longlum_cumul</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">longlum</span><span class="o">.</span><span class="n">unit</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">shortlum_cumul</span> <span class="o">=</span> <span class="n">cumtrapz</span><span class="p">(</span><span class="n">shortlum</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">obstime_seconds</span><span class="p">)</span>
+        <span class="n">shortlum_cumul</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">shortlum_cumul</span><span class="p">,</span>
+                                    <span class="n">unit</span><span class="o">=</span><span class="n">shortlum</span><span class="o">.</span><span class="n">unit</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">lx_out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;longlum&quot;</span><span class="p">:</span> <span class="n">longlum</span><span class="p">,</span> <span class="s2">&quot;shortlum&quot;</span><span class="p">:</span> <span class="n">shortlum</span><span class="p">,</span>
+                  <span class="s2">&quot;longlum_cumul&quot;</span><span class="p">:</span> <span class="n">longlum_cumul</span><span class="p">,</span>
+                  <span class="s2">&quot;shortlum_cumul&quot;</span><span class="p">:</span> <span class="n">shortlum_cumul</span><span class="p">,</span>
+                  <span class="s2">&quot;longlum_int&quot;</span><span class="p">:</span> <span class="n">longlum_int</span><span class="p">,</span> <span class="s2">&quot;shortlum_int&quot;</span><span class="p">:</span> <span class="n">shortlum_int</span><span class="p">}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">lx_out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;longlum&quot;</span><span class="p">:</span> <span class="n">longlum</span><span class="p">,</span> <span class="s2">&quot;shortlum&quot;</span><span class="p">:</span> <span class="n">shortlum</span><span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">lx_out</span>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">flux</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_calc_xraylum</span><span class="p">(</span><span class="n">flux</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates solar luminosity based on observed flux observed at 1AU.</span>
+
+<span class="sd">    This function calculates the luminosity from the Sun based</span>
+<span class="sd">    on observed flux in W/m**2.  The units of the results are erg/s.</span>
+<span class="sd">    The calculation is made by simply assuming that the radiation is</span>
+<span class="sd">    emitted isotropically, i.e. is distributed over a spherical</span>
+<span class="sd">    surface area with a radius equal to the Sun-Earth distance.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    flux : `~astropy.units.Quantity`</span>
+<span class="sd">       Containing the observed solar flux.  Units=[W/m**2]</span>
+
+<span class="sd">    date : (optional) `datetime.datetime` object or valid date string</span>
+<span class="sd">        Used to calculate a more accurate Sun-Earth distance based on</span>
+<span class="sd">        Earth&#39;s orbit at that date.  If date is None, Sun-Earth</span>
+<span class="sd">        distance is set to 1AU.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    xraylum : `~astropy.units.Quantity` array with units=erg/s.</span>
+<span class="sd">        Array of X-ray luminosity.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import _calc_xraylum</span>
+<span class="sd">    &gt;&gt;&gt; from astropy.units.quantity import Quantity</span>
+<span class="sd">    &gt;&gt;&gt; flux = Quantity([7e-6,7e-6], unit=&quot;W/m**2&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; xraylum = _calc_xraylum(flux, date=&quot;2014-04-21&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; xraylum</span>
+<span class="sd">    &lt;Quantity [  1.98649103e+18,  1.98649103e+18] W&gt;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+        <span class="n">xraylum</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">get_sunearth_distance</span><span class="p">(</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;m&quot;</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">flux</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">xraylum</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">sun</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">au</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;m&quot;</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">flux</span>
+    <span class="k">return</span> <span class="n">xraylum</span>
+
+
+<div class="viewcode-block" id="flareclass_to_flux"><a class="viewcode-back" href="../../../api/sunpy.instr.goes.flareclass_to_flux.html#sunpy.instr.goes.flareclass_to_flux">[docs]</a><span class="k">def</span> <span class="nf">flareclass_to_flux</span><span class="p">(</span><span class="n">flareclass</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a GOES flare class into the corresponding X-ray flux.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    flareclass : str</span>
+<span class="sd">        The case-insensitive flare class (e.g., &#39;X3.2&#39;, &#39;m1.5&#39;, &#39;A9.6&#39;).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    flux : `~astropy.units.Quantity`</span>
+<span class="sd">        X-ray flux between 1 and 8 Angstroms as measured near Earth in W/m^2.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        Input must be a string.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import flareclass_to_flux</span>
+<span class="sd">    &gt;&gt;&gt; flareclass_to_flux(&#39;A1.0&#39;)</span>
+<span class="sd">    &lt;Quantity 1e-08 W / m2&gt;</span>
+<span class="sd">    &gt;&gt;&gt; flareclass_to_flux(&#39;c4.7&#39;)</span>
+<span class="sd">    &lt;Quantity 4.7e-06 W / m2&gt;</span>
+<span class="sd">    &gt;&gt;&gt; flareclass_to_flux(&#39;X2.4&#39;)</span>
+<span class="sd">    &lt; Quantity 0.00024 W / m2&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">flareclass</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Input must be a string&quot;</span><span class="p">)</span>
+    <span class="c1"># TODO should probably make sure the string is in the expected format.</span>
+
+    <span class="n">flareclass</span> <span class="o">=</span> <span class="n">flareclass</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="c1"># invert the conversion dictionary</span>
+    <span class="c1"># conversion_dict = {v: k for k, v in GOES_CONVERSION_DICT.items()}</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">flareclass</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">*</span> <span class="n">GOES_CONVERSION_DICT</span><span class="p">[</span><span class="n">flareclass</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span></div>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">goesflux</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">watt</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<div class="viewcode-block" id="flux_to_flareclass"><a class="viewcode-back" href="../../../api/sunpy.instr.goes.flux_to_flareclass.html#sunpy.instr.goes.flux_to_flareclass">[docs]</a><span class="k">def</span> <span class="nf">flux_to_flareclass</span><span class="p">(</span><span class="n">goesflux</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts X-ray flux into the corresponding GOES flare class.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    flux : `~astropy.units.Quantity`</span>
+<span class="sd">        X-ray flux between 1 and 8 Angstroms (usually measured by GOES) as</span>
+<span class="sd">        measured at the Earth in W/m^2</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    flareclass : str</span>
+<span class="sd">        The flare class e.g.: &#39;X3.2&#39;, &#39;M1.5&#39;, &#39;A9.6&#39;.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        Flux cannot be negative.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    `Solar Flare Classification &lt;https://en.wikipedia.org/wiki/Solar_flare#Classification&gt;`_</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.instr.goes import flux_to_flareclass</span>
+<span class="sd">    &gt;&gt;&gt; import astropy.units as u</span>
+<span class="sd">    &gt;&gt;&gt; flux_to_flareclass(1e-08 * u.watt/u.m**2)</span>
+<span class="sd">    &#39;A1&#39;</span>
+<span class="sd">    &gt;&gt;&gt; flux_to_flareclass(4.7e-06 * u.watt/u.m**2)</span>
+<span class="sd">    &#39;C4.7&#39;</span>
+<span class="sd">    &gt;&gt;&gt; flux_to_flareclass(0.00024 * u.watt/u.m**2)</span>
+<span class="sd">    &#39;X2.4&#39;</span>
+<span class="sd">    &gt;&gt;&gt; flux_to_flareclass(7.8e-09 * u.watt/u.m**2)</span>
+<span class="sd">    &#39;A0.78&#39;</span>
+<span class="sd">    &gt;&gt;&gt; flux_to_flareclass(0.00682 * u.watt/u.m**2)</span>
+<span class="sd">    &#39;X68.2&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">goesflux</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Flux cannot be negative&quot;</span><span class="p">)</span>
+
+    <span class="n">decade</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">goesflux</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;W/m**2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+    <span class="c1"># invert the conversion dictionary</span>
+    <span class="n">conversion_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">GOES_CONVERSION_DICT</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+    <span class="k">if</span> <span class="n">decade</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">8</span><span class="p">:</span>
+        <span class="n">str_class</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
+        <span class="n">decade</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8</span>
+    <span class="k">elif</span> <span class="n">decade</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">4</span><span class="p">:</span>
+        <span class="n">str_class</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span>
+        <span class="n">decade</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">str_class</span> <span class="o">=</span> <span class="n">conversion_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="n">decade</span><span class="p">,</span> <span class="s2">&quot;W/m**2&quot;</span><span class="p">))</span>
+    <span class="n">goes_subclass</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="n">decade</span> <span class="o">*</span> <span class="n">goesflux</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;W/m**2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{0}{1:.3g}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">str_class</span><span class="p">,</span> <span class="n">goes_subclass</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

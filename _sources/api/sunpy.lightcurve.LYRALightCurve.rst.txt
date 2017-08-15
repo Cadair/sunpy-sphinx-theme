@@ -1,0 +1,17 @@
+LYRALightCurve
+==============
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: LYRALightCurve
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LYRALightCurve.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: peek

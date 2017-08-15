@@ -1,0 +1,6 @@
+clip_edges
+==========
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: clip_edges

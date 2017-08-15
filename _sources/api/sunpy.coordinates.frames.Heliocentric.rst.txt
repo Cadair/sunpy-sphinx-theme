@@ -1,0 +1,29 @@
+Heliocentric
+============
+
+.. currentmodule:: sunpy.coordinates.frames
+
+.. autoclass:: Heliocentric
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~Heliocentric.default_differential
+      ~Heliocentric.default_representation
+      ~Heliocentric.frame_attributes
+      ~Heliocentric.frame_specific_representation_info
+      ~Heliocentric.name
+      ~Heliocentric.observer
+      ~Heliocentric.obstime
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: default_differential
+   .. autoattribute:: default_representation
+   .. autoattribute:: frame_attributes
+   .. autoattribute:: frame_specific_representation_info
+   .. autoattribute:: name
+   .. autoattribute:: observer
+   .. autoattribute:: obstime

@@ -1,0 +1,6 @@
+convert_to_coord
+================
+
+.. currentmodule:: sunpy.wcs
+
+.. autofunction:: convert_to_coord

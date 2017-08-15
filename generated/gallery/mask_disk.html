@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Masking the solar disk &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Map Resampling and Superpixels" href="map_resampling_and_superpixels.html" />
+    <link rel="prev" title="Manipulating Map image data - finding bright regions" href="image_bright_regions_gallery_example.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Masking the solar disk | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/generated/gallery/mask_disk.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Example Gallery</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy_colormaps_reference.html">SunPy Colormaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aia_example.html">AIA Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_editcolormap.html">Editing Map Colormaps and Normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_from_numpy_array.html">Generating a Map From Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_sample_images.html">Sample Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brightness_pixel_location.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_searching_vso.html">Searching the VSO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submaps_and_cropping.html">Submaps and Cropping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_rotation.html">Map Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="masking_hot_pixels.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_bright_regions_gallery_example.html">Manipulating Map image data - finding bright regions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Masking the solar disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_resampling_and_superpixels.html">Map Resampling and Superpixels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="goes_hek_m25.html">GOES Flare and HEK Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loop_edge_enhance.html">Edge Enhancing Filtering a Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="great_arc_example.html">Drawing and using a Great Arc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lat_lon_lines.html">Longitude and Latitude Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solar_cycle_example.html">The Solar Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_limb_enhance.html">Enhancing Off-limb emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmi_synoptic_maps.html">HMI Daily Synoptic Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overplot_hek_polygon.html">Overplotting HEK feature/event polygons on SunPy maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_data_histogram.html">Map Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_differential_rotation.html">Simple Differential Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_magnetogram_active_regions.html">Overplotting Active Region locations on magnetogram Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps_example.html">Interacting with Data Using SunPy Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AIA_limb_STEREO.html">Drawing AIA Coordinates on STEREO Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseriesmetadata_example.html">The TimeSeriesMetaData Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2011_06_07_sampledata_overview.html">Sample Data Set Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SDO_to_STEREO_Coordinate_Conversion.html">AIA to STEREO Coordinate Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseries_example.html">Interacting with Data Using SunPy TimeSeries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="masking-the-solar-disk">
+<span id="sphx-glr-generated-gallery-mask-disk-py"></span><h1>Masking the solar disk<a class="headerlink" href="#masking-the-solar-disk" title="Permalink to this headline">¶</a></h1>
+<p>This example shows how to mask off emission from the disk.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="kn">as</span> <span class="nn">ma</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="kn">as</span> <span class="nn">u</span>
+
+<span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">from</span> <span class="nn">sunpy.data.sample</span> <span class="kn">import</span> <span class="n">AIA_171_IMAGE</span>
+</pre></div>
+</div>
+<p>We first create the Map using the sample data.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">aia</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Next we build two arrays which include all of the x and y pixel indices.
+We must not forget to add the correct units because we will next pass
+into a SunPy function which all require them.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.meshgrid.html#numpy.meshgrid" title="View documentation for numpy.meshgrid"><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span></a><span class="p">(</span><span class="o">*</span><span class="p">[</span><a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">aia</span><span class="o">.</span><span class="n">dimensions</span><span class="p">])</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pixel</span>
+</pre></div>
+</div>
+<p>Now we can convert this to helioprojective coordinates and create a new
+array which contains the normalized radial position for each pixel</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">hpc_coords</span> <span class="o">=</span> <span class="n">aia</span><span class="o">.</span><span class="n">pixel_to_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="n">hpc_coords</span><span class="o">.</span><span class="n">Tx</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">hpc_coords</span><span class="o">.</span><span class="n">Ty</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">aia</span><span class="o">.</span><span class="n">rsun_obs</span>
+</pre></div>
+</div>
+<p>Finally, we create a mask where all values which are less then Rsun are
+masked. We also make a slight change to the colormap so that masked values
+are shown as black instead of the default white.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ma.masked_less_equal.html#numpy.ma.masked_less_equal" title="View documentation for numpy.ma.masked_less_equal"><span class="n">ma</span><span class="o">.</span><span class="n">masked_less_equal</span></a><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">palette</span> <span class="o">=</span> <span class="n">aia</span><span class="o">.</span><span class="n">plot_settings</span><span class="p">[</span><span class="s1">&#39;cmap&#39;</span><span class="p">]</span>
+<span class="n">palette</span><span class="o">.</span><span class="n">set_bad</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we create a new custom aia with our new mask and
+plot the result using our modified colormap</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">scaled_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">aia</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">aia</span><span class="o">.</span><span class="n">meta</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="o">.</span><span class="n">mask</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <a href="http://matplotlib.org/api/figure_api.html#matplotlib.figure" title="View documentation for matplotlib.pyplot.figure"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">()</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot" title="View documentation for matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">scaled_map</span><span class="p">)</span>
+<span class="n">scaled_map</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">palette</span><span class="p">)</span>
+<span class="n">scaled_map</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">()</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_mask_disk_001.png" class="align-center" src="../../_images/sphx_glr_mask_disk_001.png" />
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.985 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/mask_disk.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mask_disk.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/mask_disk.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">mask_disk.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

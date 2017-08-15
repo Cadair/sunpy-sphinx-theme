@@ -1,0 +1,21 @@
+QueryResponse
+=============
+
+.. currentmodule:: sunpy.net.dataretriever
+
+.. autoclass:: QueryResponse
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~QueryResponse.create
+      ~QueryResponse.response_block_properties
+      ~QueryResponse.time_range
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: create
+   .. automethod:: response_block_properties
+   .. automethod:: time_range

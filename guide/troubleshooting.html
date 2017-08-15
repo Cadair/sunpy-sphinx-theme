@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Troubleshooting &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Code Reference" href="../code_ref/index.html" />
+    <link rel="prev" title="Customizing SunPy" href="customization.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Troubleshooting | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/guide/troubleshooting.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">SunPy User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html">A brief tour of SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acquiring_data/index.html">Acquiring Data with SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_types/index.html">Data Types in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html">Plotting in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="units-coordinates.html">Units and Coordinates in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">Time in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">Region of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customization.html">Customizing SunPy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="troubleshooting">
+<span id="troubleshooting-faq"></span><h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#troubleshooting" id="id1">Troubleshooting</a><ul>
+<li><a class="reference internal" href="#crotate-warning" id="id2">Crotate Warning</a></li>
+<li><a class="reference internal" href="#obtaining-sunpy-version" id="id3">Obtaining sunpy version</a></li>
+<li><a class="reference internal" href="#system-info" id="id4">System Info</a></li>
+<li><a class="reference internal" href="#sunpy-install-location" id="id5"><code class="file docutils literal"><span class="pre">sunpy</span></code> install location</a></li>
+<li><a class="reference internal" href="#sunpy-directory-location" id="id6"><code class="file docutils literal"><span class="pre">.sunpy</span></code> directory location</a></li>
+<li><a class="reference internal" href="#report-a-problem" id="id7">Report a problem</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="crotate-warning">
+<span id="crotatewarning"></span><h2>Crotate Warning<a class="headerlink" href="#crotate-warning" title="Permalink to this headline">¶</a></h2>
+<p>The SunPy map class has a custom rotate functionality, similar to IDL&#8217;s ROT function.
+This uses a Python C-API extension which should be compiled by installing sunpy.
+If for any reason this build process fails, you will not be able to use the C-API
+rotate code, but will be able to still use all the functionality of map.</p>
+<p>If this happens you will encounter the following warning upon using the rotate
+method</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rot_map</span> <span class="o">=</span> <span class="n">mymap</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>   
+<span class="go">sunpy/map/map.py:829: Warning: The C extension sunpy.image.Crotate is not installed, falling back to the interpolation=&#39;spline&#39; of order=3</span>
+<span class="go">  warnings.warn(&quot;The C extension sunpy.image.Crotate is not installed, falling back to the interpolation=&#39;spline&#39; of order=3&quot; ,Warning)</span>
+</pre></div>
+</div>
+<p>What happens is, because the C-API extension is not found, the rotate() function
+defaults to the spline interpolation method of order 3 which is implemented in scipy.</p>
+<p>To fix the C-API you should try and reinstall SunPy, if this still fails please
+ask the mailing list for assistance.</p>
+</div>
+<div class="section" id="obtaining-sunpy-version">
+<span id="sunpy-version"></span><h2>Obtaining sunpy version<a class="headerlink" href="#obtaining-sunpy-version" title="Permalink to this headline">¶</a></h2>
+<p>To find out your sunpy version number, import it and print the
+<code class="docutils literal"><span class="pre">__version__</span></code> attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sunpy</span><span class="o">.</span><span class="n">__version__</span>   
+</pre></div>
+</div>
+</div>
+<div class="section" id="system-info">
+<span id="locating-sunpy-install"></span><h2>System Info<a class="headerlink" href="#system-info" title="Permalink to this headline">¶</a></h2>
+<p>To quickly collect information on your system, you can use our convenience function
+<code class="docutils literal"><span class="pre">system_info</span></code> which you can run through:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sunpy</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">system_info</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>The output should look something like:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">==========================================================</span>
+ <span class="n">SunPy</span> <span class="n">Installation</span> <span class="n">Information</span>
+
+ <span class="n">Sunday</span><span class="p">,</span> <span class="mf">18.</span> <span class="n">November</span> <span class="mi">2012</span> <span class="mi">11</span><span class="p">:</span><span class="mi">06</span><span class="n">PM</span> <span class="n">UT</span>
+<span class="o">==========================================================</span>
+
+<span class="c1">###########</span>
+ <span class="n">General</span>
+<span class="c1">###########</span>
+<span class="n">OS</span><span class="p">:</span> <span class="n">Mac</span> <span class="n">OS</span> <span class="n">X</span> <span class="mf">10.8</span><span class="o">.</span><span class="mi">2</span> <span class="p">(</span><span class="n">i386</span><span class="p">)</span>
+<span class="n">Python</span><span class="p">:</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">3</span> <span class="p">(</span><span class="mi">64</span><span class="n">bit</span><span class="p">)</span>
+
+<span class="c1">####################</span>
+ <span class="n">Required</span> <span class="n">libraries</span>
+<span class="c1">####################</span>
+<span class="n">SunPy</span><span class="p">:</span> <span class="mf">0.1</span>
+<span class="n">NumPy</span><span class="p">:</span> <span class="mf">1.6</span><span class="o">.</span><span class="mi">2</span>
+<span class="n">SciPy</span><span class="p">:</span> <span class="mf">0.10</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">Matplotlib</span><span class="p">:</span> <span class="mf">1.2</span><span class="o">.</span><span class="n">x</span>
+<span class="n">PyFITS</span><span class="p">:</span> <span class="mf">3.0</span><span class="o">.</span><span class="mi">8</span>
+<span class="n">pandas</span><span class="p">:</span> <span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span>
+
+<span class="c1">#######################</span>
+ <span class="n">Recommended</span> <span class="n">libraries</span>
+<span class="c1">#######################</span>
+<span class="n">beautifulsoup4</span><span class="p">:</span> <span class="mf">4.1</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">PyQt</span><span class="p">:</span> <span class="mf">4.9</span><span class="o">.</span><span class="mi">4</span>
+<span class="n">SUDS</span><span class="p">:</span> <span class="mf">0.4</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<p>This information is especially useful if you are running into a bug and need help.</p>
+</div>
+<div class="section" id="sunpy-install-location">
+<h2><code class="file docutils literal"><span class="pre">sunpy</span></code> install location<a class="headerlink" href="#sunpy-install-location" title="Permalink to this headline">¶</a></h2>
+<p>You can find what directory sunpy is installed in by importing it
+and printing the <code class="docutils literal"><span class="pre">__file__</span></code> attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sunpy</span><span class="o">.</span><span class="vm">__file__</span>   
+</pre></div>
+</div>
+</div>
+<div class="section" id="sunpy-directory-location">
+<span id="locating-matplotlib-config-dir"></span><h2><code class="file docutils literal"><span class="pre">.sunpy</span></code> directory location<a class="headerlink" href="#sunpy-directory-location" title="Permalink to this headline">¶</a></h2>
+<p>Each user should have a <code class="file docutils literal"><span class="pre">.sunpy/</span></code> directory which should contain a
+<a class="reference internal" href="customization.html#customizing-with-sunpyrc-files"><span class="std std-ref">sunpyrc</span></a> file. To locate your <code class="file docutils literal"><span class="pre">.sunpy/</span></code>
+directory, use <a class="reference internal" href="../api/sunpy.print_config.html#sunpy.print_config" title="sunpy.print_config"><code class="xref py py-func docutils literal"><span class="pre">sunpy.print_config()</span></code></a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy</span> <span class="k">as</span> <span class="nn">sun</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sun</span><span class="o">.</span><span class="n">print_config</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>On unix-like systems, this directory is generally located in your
+<span class="target" id="index-0"></span><a class="reference external" href="http://matplotlib.org/faq/environment_variables_faq.html#envvar-HOME" title="(in Matplotlib v2.0.2)"><code class="xref std std-envvar docutils literal"><span class="pre">HOME</span></code></a> directory.  On windows, it is in your documents and
+settings directory by default.</p>
+<p>If you would like to use a different configuration directory, you can
+do so by specifying the location in your <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal"><span class="pre">SUNPY_CONFIGDIR</span></code>
+environment variable.</p>
+</div>
+<div class="section" id="report-a-problem">
+<span id="reporting-problems"></span><h2>Report a problem<a class="headerlink" href="#report-a-problem" title="Permalink to this headline">¶</a></h2>
+<p>If you are having a problem with sunpy, search the mailing
+lists first: it is possible that someone else has already run into
+your problem.</p>
+<p>If not, please provide the following information in your e-mail to the
+<a class="reference external" href="http://groups.google.com/forum/#!forum/sunpy">mailing list</a>:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">your operating system; (Linux/UNIX users: post the output of <code class="docutils literal"><span class="pre">uname</span> <span class="pre">-a</span></code>)</p>
+</li>
+<li><p class="first">sunpy version:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sunpy</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">system_info</span><span class="p">()</span>   
+</pre></div>
+</div>
+</li>
+<li><p class="first">how you obtained sunpy.</p>
+</li>
+<li><p class="first">any customizations to your <code class="docutils literal"><span class="pre">sunpyrc</span></code> file (see
+<a class="reference internal" href="customization.html#customizing-sunpy"><span class="std std-ref">Customizing SunPy</span></a>).</p>
+</li>
+<li><p class="first">Please try to provide a <em>minimal</em>,
+standalone Python script that demonstrates the problem.  This is
+<em>the</em> critical step.  If you can&#8217;t post a piece of code that we
+can run and reproduce your error, the chances of getting help are
+significantly diminished.  Very often, the mere act of trying to
+minimize your code to the smallest bit that produces the error
+will help you find a bug in <em>your</em> code that is causing the
+problem.</p>
+</li>
+</ul>
+</div></blockquote>
+<p>You will likely get a faster response writing to the mailing list than
+filing a bug in the <a class="reference external" href="http://github.com/sunpy/sunpy/issues">bug tracker</a>.
+If your problem has been determined to be a bug and can not be quickly solved, the issues
+may be filed a bug in the tracker so the issue doesn&#8217;t get lost.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

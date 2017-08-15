@@ -1,0 +1,6 @@
+day_of_year
+===========
+
+.. currentmodule:: sunpy.time
+
+.. autofunction:: day_of_year

@@ -1,0 +1,19 @@
+EVESpWxTimeSeries
+=================
+
+.. currentmodule:: sunpy.timeseries
+
+.. autoclass:: EVESpWxTimeSeries
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~EVESpWxTimeSeries.is_datasource_for
+      ~EVESpWxTimeSeries.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for
+   .. automethod:: peek

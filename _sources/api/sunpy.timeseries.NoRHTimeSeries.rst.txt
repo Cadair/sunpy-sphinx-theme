@@ -1,0 +1,19 @@
+NoRHTimeSeries
+==============
+
+.. currentmodule:: sunpy.timeseries
+
+.. autoclass:: NoRHTimeSeries
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~NoRHTimeSeries.is_datasource_for
+      ~NoRHTimeSeries.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for
+   .. automethod:: peek

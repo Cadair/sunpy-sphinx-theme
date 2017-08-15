@@ -1,0 +1,6 @@
+self_test
+=========
+
+.. currentmodule:: sunpy
+
+.. autofunction:: self_test

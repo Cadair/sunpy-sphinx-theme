@@ -1,0 +1,6 @@
+minimal_pairs
+=============
+
+.. currentmodule:: sunpy.util
+
+.. autofunction:: minimal_pairs

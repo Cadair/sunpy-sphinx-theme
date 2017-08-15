@@ -1,0 +1,6 @@
+get_header
+==========
+
+.. currentmodule:: sunpy.io.fits
+
+.. autofunction:: get_header

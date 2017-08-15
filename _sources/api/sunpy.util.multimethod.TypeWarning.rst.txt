@@ -1,0 +1,6 @@
+TypeWarning
+===========
+
+.. currentmodule:: sunpy.util.multimethod
+
+.. autoexception:: TypeWarning

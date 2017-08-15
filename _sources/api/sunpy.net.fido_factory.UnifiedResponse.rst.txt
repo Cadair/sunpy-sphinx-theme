@@ -1,0 +1,7 @@
+UnifiedResponse
+===============
+
+.. currentmodule:: sunpy.net.fido_factory
+
+.. autoclass:: UnifiedResponse
+   :show-inheritance:

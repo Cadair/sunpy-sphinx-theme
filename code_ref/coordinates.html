@@ -1,0 +1,856 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy coordinates &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="get_body_heliographic_stonyhurst" href="../api/sunpy.coordinates.get_body_heliographic_stonyhurst.html" />
+    <link rel="prev" title="show_colormaps" href="../api/sunpy.cm.show_colormaps.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy coordinates | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/code_ref/coordinates.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm.html">SunPy cm</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SunPy coordinates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.get_body_heliographic_stonyhurst.html">get_body_heliographic_stonyhurst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.get_earth.html">get_earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.get_sun_B0.html">get_sun_B0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.get_sun_L0.html">get_sun_L0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.get_sun_P.html">get_sun_P</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.get_sun_orientation.html">get_sun_orientation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.get_sunearth_distance.html">get_sunearth_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.solar_wcs_frame_mapping.html">solar_wcs_frame_mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.Heliocentric.html">Heliocentric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.HeliographicCarrington.html">HeliographicCarrington</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.HeliographicStonyhurst.html">HeliographicStonyhurst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.Helioprojective.html">Helioprojective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.NorthOffsetFrame.html">NorthOffsetFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicStonyhurst.html">HeliographicStonyhurst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicCarrington.html">HeliographicCarrington</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.frames.Heliocentric.html">Heliocentric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.frames.Helioprojective.html">Helioprojective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.transformations.hgs_to_hgc.html">hgs_to_hgc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.transformations.hgc_to_hgs.html">hgc_to_hgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.transformations.hcc_to_hpc.html">hcc_to_hpc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.transformations.hpc_to_hcc.html">hpc_to_hcc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.transformations.hcc_to_hgs.html">hcc_to_hgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.transformations.hgs_to_hcc.html">hgs_to_hcc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.transformations.hpc_to_hpc.html">hpc_to_hpc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.transformations.hcrs_to_hgs.html">hcrs_to_hgs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.transformations.hgs_to_hcrs.html">hgs_to_hcrs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_body_heliographic_stonyhurst.html">get_body_heliographic_stonyhurst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_earth.html">get_earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sun_B0.html">get_sun_B0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sun_L0.html">get_sun_L0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sun_P.html">get_sun_P</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sunearth_distance.html">get_sunearth_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sun_orientation.html">get_sun_orientation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.representation.Longitude180.html">Longitude180</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.representation.SphericalWrap180Representation.html">SphericalWrap180Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.representation.UnitSphericalWrap180Representation.html">UnitSphericalWrap180Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.offset_frame.NorthOffsetFrame.html">NorthOffsetFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.coordinates.wcs_utils.solar_wcs_frame_mapping.html">solar_wcs_frame_mapping</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-coordinates">
+<span id="id1"></span><h1>SunPy coordinates<a class="headerlink" href="#sunpy-coordinates" title="Permalink to this headline">¶</a></h1>
+<p>The SunPy coordinates submodule is an implementation of the common solar physics
+coordinate frames using the <a class="reference external" href="http://docs.astropy.org/en/stable/coordinates/index.html#astropy-coordinates" title="(in Astropy v2.0.1)"><span class="xref std std-ref">Astropy coordinates framework</span></a>.</p>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>The easiest interface to the coordinates module is through the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> class:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="n">SkyCoord</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.coordinates</span> <span class="k">import</span> <span class="n">frames</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="mi">500</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">Helioprojective</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="n">x</span><span class="o">=-</span><span class="mf">72241.0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">361206.1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mf">589951.4</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">Heliocentric</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">70</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">HeliographicStonyhurst</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
+<span class="go">&lt;SkyCoord (HeliographicStonyhurst: obstime=None): (lon, lat, rad) in (deg, deg, km)</span>
+<span class="go">    (70.0, -30.0, 695508.0)&gt;</span>
+</pre></div>
+</div>
+<p>It is also possible to use strings to define the frame but in that case make sure to
+explicitly import <a class="reference internal" href="#module-sunpy.coordinates" title="sunpy.coordinates"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates</span></code></a> as it registers solar coordinate frames with
+astropy coordinates.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="n">SkyCoord</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.coordinates</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="mi">500</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s1">&#39;helioprojective&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
+<span class="go">&lt;SkyCoord (Helioprojective: D0=149597870.7 km, obstime=None, L0=0.0 deg, B0=0.0 deg, rsun=695508.0 km): (Tx, Ty) in arcsec</span>
+<span class="go">  (-100.,  500.)&gt;</span>
+</pre></div>
+</div>
+<p>SunPy implements support for the following solar physics coordinate systems:</p>
+<ul class="simple">
+<li>Helioprojective (Cartesian) <a class="reference internal" href="../api/sunpy.coordinates.frames.Helioprojective.html#sunpy.coordinates.frames.Helioprojective" title="sunpy.coordinates.frames.Helioprojective"><code class="xref py py-obj docutils literal"><span class="pre">Helioprojective</span></code></a></li>
+<li>Heliocentric <a class="reference internal" href="../api/sunpy.coordinates.frames.Heliocentric.html#sunpy.coordinates.frames.Heliocentric" title="sunpy.coordinates.frames.Heliocentric"><code class="xref py py-obj docutils literal"><span class="pre">Heliocentric</span></code></a></li>
+<li>Heliographic Stonyhurst <a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicStonyhurst.html#sunpy.coordinates.frames.HeliographicStonyhurst" title="sunpy.coordinates.frames.HeliographicStonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicStonyhurst</span></code></a></li>
+<li>Heliographic Carrington <a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicCarrington.html#sunpy.coordinates.frames.HeliographicCarrington" title="sunpy.coordinates.frames.HeliographicCarrington"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicCarrington</span></code></a></li>
+</ul>
+<p>for a complete description of these frames see <a class="reference internal" href="#module-sunpy.coordinates.frames" title="sunpy.coordinates.frames"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates.frames</span></code></a>, for
+a more detailed description of the frames see <a class="reference external" href="http://dx.doi.org/10.1051/0004-6361:20054262">Thompson (2006)</a></p>
+<p><a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> and all other <a class="reference external" href="http://docs.astropy.org/en/stable/coordinates/index.html#module-astropy.coordinates" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">coordinates</span></code></a> objects
+also support array coordinates. These work the same as single-value coordinates,
+but they store multiple coordinates in a single object. When you&#8217;re going to
+apply the same operation to many different coordinates, this is a better choice
+than a list of <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> objects, because it will be
+<em>much</em> faster than applying the operation to each
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> in a <code class="docutils literal"><span class="pre">for</span></code> loop.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">([</span><span class="o">-</span><span class="mi">500</span><span class="p">,</span> <span class="mi">400</span><span class="p">]</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">Helioprojective</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
+<span class="go">&lt;SkyCoord (Helioprojective: obstime=None, rsun=695508.0 km, observer=&lt;HeliographicStonyhurst Coordinate (obstime=None): (lon, lat, radius) in (deg, deg, AU)</span>
+<span class="go">    ( 0.,  0.,  1.)&gt;): (Tx, Ty) in arcsec</span>
+<span class="go">    [(-500.,  100.), ( 400.,  200.)]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&lt;SkyCoord (Helioprojective: obstime=None, rsun=695508.0 km, observer=&lt;HeliographicStonyhurst Coordinate (obstime=None): (lon, lat, radius) in (deg, deg, AU)</span>
+<span class="go">    ( 0.,  0.,  1.)&gt;): (Tx, Ty) in arcsec</span>
+<span class="go">    (-500.,  100.)&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="accessing-coordinates">
+<h3>Accessing Coordinates<a class="headerlink" href="#accessing-coordinates" title="Permalink to this headline">¶</a></h3>
+<p>Individual coordinates can be accessed via attributes on the SkyCoord object,
+but the names of the components of the coordinates for each frame differ. For a full
+description of all the properties of the frames see <a class="reference internal" href="#module-sunpy.coordinates.frames" title="sunpy.coordinates.frames"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates.frames</span></code></a>.</p>
+<div class="section" id="helioprojective">
+<h4><a class="reference internal" href="../api/sunpy.coordinates.Helioprojective.html#sunpy.coordinates.Helioprojective" title="sunpy.coordinates.Helioprojective"><code class="xref py py-obj docutils literal"><span class="pre">Helioprojective</span></code></a><a class="headerlink" href="#helioprojective" title="Permalink to this headline">¶</a></h4>
+<p>For the helioprojective frame the coordinates are accessed as <code class="docutils literal"><span class="pre">Tx</span></code> and <code class="docutils literal"><span class="pre">Ty</span></code>
+representing theta x and y. These are the same coordinates that are often
+referred to as &#8216;solar-x&#8217; and &#8216;solar-y&#8217;.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="o">-</span><span class="mi">500</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="mi">100</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">Helioprojective</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">Tx</span>
+<span class="go">&lt;Longitude180 -500.0 arcsec&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">Ty</span>
+<span class="go">&lt;Latitude 100.0 arcsec&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="heliocentric">
+<h4><a class="reference internal" href="../api/sunpy.coordinates.Heliocentric.html#sunpy.coordinates.Heliocentric" title="sunpy.coordinates.Heliocentric"><code class="xref py py-obj docutils literal"><span class="pre">Heliocentric</span></code></a><a class="headerlink" href="#heliocentric" title="Permalink to this headline">¶</a></h4>
+<p>Heliocentric normally a Cartesian frame so the coordinates are accessed as <code class="docutils literal"><span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="o">-</span><span class="mf">72241.0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="mf">361206.1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="mf">589951.4</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">Heliocentric</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">x</span>
+<span class="go">&lt;Quantity -72241.0 km&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">y</span>
+<span class="go">&lt;Quantity 361206.1 km&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">z</span>
+<span class="go">&lt;Quantity 589951.4 km&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="heliographicstonyhurst-and-heliographiccarrington">
+<h4><a class="reference internal" href="../api/sunpy.coordinates.HeliographicStonyhurst.html#sunpy.coordinates.HeliographicStonyhurst" title="sunpy.coordinates.HeliographicStonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicStonyhurst</span></code></a> and <a class="reference internal" href="../api/sunpy.coordinates.HeliographicCarrington.html#sunpy.coordinates.HeliographicCarrington" title="sunpy.coordinates.HeliographicCarrington"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicCarrington</span></code></a><a class="headerlink" href="#heliographicstonyhurst-and-heliographiccarrington" title="Permalink to this headline">¶</a></h4>
+<p>Both the heliographic frames use latitude, longitude and radius which are accessed as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">70</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">HeliographicStonyhurst</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">lat</span>
+<span class="go">&lt;Latitude -30.0 deg&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">lon</span>
+<span class="go">&lt;Longitude180 70.0 deg&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">radius</span>
+<span class="go">&lt;Distance 695508.0 km&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="transforming-between-coordinate-frames">
+<h2>Transforming Between Coordinate Frames<a class="headerlink" href="#transforming-between-coordinate-frames" title="Permalink to this headline">¶</a></h2>
+<p>Both <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> and
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.BaseCoordinateFrame.html#astropy.coordinates.BaseCoordinateFrame" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">BaseCoordinateFrame</span></code></a> instances have a
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord.transform_to" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">transform_to</span></code></a> method. This can be used to
+transform the frame to any other frame, either implemented in SunPy or in
+Astropy <a class="reference external" href="http://docs.astropy.org/en/stable/coordinates/transforming.html">the astropy documentation</a> for more
+details. An example of transforming the center of the solar disk to Carrington
+coordinates is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">Helioprojective</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="s2">&quot;2017-07-26&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
+<span class="go">&lt;SkyCoord (Helioprojective: obstime=2017-07-26 00:00:00, rsun=695508.0 km, observer=&lt;HeliographicStonyhurst Coordinate (obstime=2017-07-26 00:00:00): (lon, lat, radius) in (deg, deg, AU)</span>
+<span class="go">    ( 0.,  5.31701821,  1.01567428)&gt;): (Tx, Ty) in arcsec</span>
+<span class="go">    ( 0.,  0.)&gt;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">frames</span><span class="o">.</span><span class="n">HeliographicCarrington</span><span class="p">)</span>
+<span class="go">&lt;SkyCoord (HeliographicCarrington: obstime=2017-07-26 00:00:00): (lon, lat, radius) in (deg, deg, km)</span>
+<span class="go">    (-76.00701638,  5.31701821,  695508.00000058)&gt;</span>
+</pre></div>
+</div>
+<p>It is also possible to transform to any coordinate system implemented in Astropy. This can be used to find the position of the solar limb in AltAz equatorial coordinates:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="n">EarthLocation</span><span class="p">,</span> <span class="n">AltAz</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time</span> <span class="o">=</span> <span class="s1">&#39;2017-07-11 15:00&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">greenbelt</span> <span class="o">=</span> <span class="n">EarthLocation</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mf">39.0044</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="n">lon</span><span class="o">=-</span><span class="mf">76.8758</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">greenbelt_frame</span> <span class="o">=</span> <span class="n">AltAz</span><span class="p">(</span><span class="n">obstime</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="n">greenbelt</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">west_limb</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">900</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">Helioprojective</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="n">time</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">west_limb</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">greenbelt_frame</span><span class="p">)</span>
+<span class="go">&lt;AltAz Coordinate (obstime=2017-07-11 15:00:00.000, location=(1126916.53031967, -4833386.58391627, 3992696.622115747) m, pressure=0.0 hPa, temperature=0.0 deg_C, relative_humidity=0, obswl=1.0 micron): (az, alt, distance) in (deg, deg, m)</span>
+<span class="go">    ( 111.40839171,  57.16645763,   1.51860261e+11)&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="observer-location-information">
+<h2>Observer Location Information<a class="headerlink" href="#observer-location-information" title="Permalink to this headline">¶</a></h2>
+<p>Both <a class="reference internal" href="../api/sunpy.coordinates.frames.Helioprojective.html#sunpy.coordinates.frames.Helioprojective" title="sunpy.coordinates.frames.Helioprojective"><code class="xref py py-obj docutils literal"><span class="pre">Helioprojective</span></code></a> and
+<a class="reference internal" href="../api/sunpy.coordinates.frames.Heliocentric.html#sunpy.coordinates.frames.Heliocentric" title="sunpy.coordinates.frames.Heliocentric"><code class="xref py py-obj docutils literal"><span class="pre">Heliocentric</span></code></a> frames are defined by the location of
+the observer. For example in <a class="reference internal" href="../api/sunpy.coordinates.frames.Helioprojective.html#sunpy.coordinates.frames.Helioprojective" title="sunpy.coordinates.frames.Helioprojective"><code class="xref py py-obj docutils literal"><span class="pre">Helioprojective</span></code></a> the
+observer is at the origin of the coordinate system. This information is encoded
+in the <a class="reference internal" href="../api/sunpy.coordinates.frames.Helioprojective.html#sunpy.coordinates.frames.Helioprojective" title="sunpy.coordinates.frames.Helioprojective"><code class="xref py py-obj docutils literal"><span class="pre">Helioprojective</span></code></a> and
+<a class="reference internal" href="../api/sunpy.coordinates.frames.Heliocentric.html#sunpy.coordinates.frames.Heliocentric" title="sunpy.coordinates.frames.Heliocentric"><code class="xref py py-obj docutils literal"><span class="pre">Heliocentric</span></code></a> frames as the <code class="docutils literal"><span class="pre">observer</span></code> attribute,
+which is itself an instance of the
+<a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicStonyhurst.html#sunpy.coordinates.frames.HeliographicStonyhurst" title="sunpy.coordinates.frames.HeliographicStonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicStonyhurst</span></code></a> frame. The default observer
+location is set to the position of the Earth (using
+<a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_body_heliographic_stonyhurst.html#sunpy.coordinates.ephemeris.get_body_heliographic_stonyhurst" title="sunpy.coordinates.ephemeris.get_body_heliographic_stonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">get_body_heliographic_stonyhurst</span></code></a>) as long as the
+<code class="docutils literal"><span class="pre">obstime</span></code> attribute is specified. If the <code class="docutils literal"><span class="pre">obstime</span></code> attribute is not set then
+you will be unable to transform the frame unless an explicit <code class="docutils literal"><span class="pre">observer</span></code> is
+specified, as the time is required to calculate the location of the Earth. The
+location of the observer is automatically populated from meta data when
+coordinate frames are created using map.</p>
+<p>It is possible to convert from a <a class="reference internal" href="../api/sunpy.coordinates.frames.Helioprojective.html#sunpy.coordinates.frames.Helioprojective" title="sunpy.coordinates.frames.Helioprojective"><code class="xref py py-obj docutils literal"><span class="pre">Helioprojective</span></code></a>
+frame with one observer location to another
+<a class="reference internal" href="../api/sunpy.coordinates.frames.Helioprojective.html#sunpy.coordinates.frames.Helioprojective" title="sunpy.coordinates.frames.Helioprojective"><code class="xref py py-obj docutils literal"><span class="pre">Helioprojective</span></code></a> frame with a different observer
+location, by converting through <code class="xref py py-obj docutils literal"><span class="pre">Heliographic</span></code>, this
+does involve making an assumption of the radius of the Sun to calculate the
+position on the solar sphere. The conversion can be performed as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Input coordinate</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hpc1</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">observer</span><span class="o">=</span><span class="s2">&quot;earth&quot;</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="s2">&quot;2017-07-26&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">frames</span><span class="o">.</span><span class="n">Helioprojective</span><span class="p">)</span>
+<span class="c1"># Define a new Helioprojective frame with a different observer.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hpc_out</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">Helioprojective</span><span class="p">(</span><span class="n">observer</span><span class="o">=</span><span class="s2">&quot;venus&quot;</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="s2">&quot;2017-07-26&quot;</span><span class="p">)</span>
+<span class="c1"># Perform the transformation from one to the other.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hpc2</span> <span class="o">=</span> <span class="n">hpc1</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">hpc_out</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>An example with two maps, named <code class="docutils literal"><span class="pre">aia</span></code> and <code class="docutils literal"><span class="pre">stereo</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hpc1</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">aia</span><span class="o">.</span><span class="n">coordinate_frame</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hpc2</span> <span class="o">=</span> <span class="n">hpc1</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">stereo</span><span class="o">.</span><span class="n">coordinate_frame</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="design-of-the-coordinates-module">
+<h2>Design of the Coordinates Module<a class="headerlink" href="#design-of-the-coordinates-module" title="Permalink to this headline">¶</a></h2>
+<p>This module works by defining a collection of <code class="docutils literal"><span class="pre">Frames</span></code>
+(<a class="reference internal" href="#module-sunpy.coordinates.frames" title="sunpy.coordinates.frames"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates.frames</span></code></a>), which exists on a transformation graph, where the
+transformations between the coordinate frames are then defined and registered
+with the transformation graph (<a class="reference internal" href="#module-sunpy.coordinates.transformations" title="sunpy.coordinates.transformations"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates.transformations</span></code></a>). It is also
+possible to transform SunPy frames to Astropy frames.</p>
+<p>Positions within these <code class="docutils literal"><span class="pre">Frames</span></code> are stored as a <code class="docutils literal"><span class="pre">Representation</span></code> of a
+coordinate, a representation being a description of a point in a Cartesian,
+spherical or cylindrical system (<a class="reference internal" href="#module-sunpy.coordinates.representation" title="sunpy.coordinates.representation"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates.representation</span></code></a>). A frame
+that contains a representation of one or many points is said to have been
+&#8216;realized&#8217;.</p>
+<p>For a more in depth look at the design and concepts of the Astropy coordinates
+system see <a class="reference external" href="http://docs.astropy.org/en/stable/coordinates/index.html#astropy-coordinates-overview" title="(in Astropy v2.0.1)"><span>Overview of astropy.coordinates concepts</span></a></p>
+<div class="section" id="frames-and-skycoord">
+<h3>Frames and SkyCoord<a class="headerlink" href="#frames-and-skycoord" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> class is a high level wrapper around the
+<a class="reference external" href="http://docs.astropy.org/en/stable/coordinates/index.html#module-astropy.coordinates" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.coordinates</span></code></a> package. It provides an easier way to create and transform
+coordinates, by using string representations for frames rather than the classes
+themselves and some other usability improvements, for more information see the
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> documentation.</p>
+<p>The main advantage provided by <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> is the support it
+provides for caching Frame attributes. Frame attributes are extra data specified
+with a frame, some examples in <a class="reference internal" href="#module-sunpy.coordinates" title="sunpy.coordinates"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates</span></code></a> are <code class="docutils literal"><span class="pre">obstime</span></code> or
+<code class="docutils literal"><span class="pre">observer</span></code> for observer location. Only the frames where this data is
+meaningful have these attributes, i.e. only the Helioprojective frames have
+<code class="docutils literal"><span class="pre">observer</span></code>. However, when you transform into another frame and then back to a
+projective frame using <code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code> it will remember the attributes previously
+provided, and repopulate the final frame with them. If you were to do
+transformations using the Frames alone this would not happen.</p>
+<p>The most important implication for this in <a class="reference internal" href="#module-sunpy.coordinates" title="sunpy.coordinates"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates</span></code></a> is the <code class="docutils literal"><span class="pre">rsun</span></code>
+parameter in the projective frames. If you create a projective frame with a
+<code class="docutils literal"><span class="pre">rsun</span></code> attribute, if you convert back to a projective frame it will be set
+correctly. It should also be noted that, if you create a Heliographic frame and
+then transform to a projective frame with an <code class="docutils literal"><span class="pre">rsun</span></code> attribute, it will not
+match the <code class="docutils literal"><span class="pre">radius</span></code> coordinate in the Heliographic frame. This is because you may
+mean to be describing a point above the defined &#8216;surface&#8217; of the Sun.</p>
+</div>
+</div>
+<div class="section" id="coordinates-and-wcs">
+<h2>Coordinates and WCS<a class="headerlink" href="#coordinates-and-wcs" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="#module-sunpy.coordinates" title="sunpy.coordinates"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates</span></code></a> package provides a mapping between FITS-WCS CTYPE
+convention and the coordinate frames as defined in <a class="reference internal" href="#module-sunpy.coordinates" title="sunpy.coordinates"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates</span></code></a>. This is
+used via the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.utils.wcs_to_celestial_frame.html#astropy.wcs.utils.wcs_to_celestial_frame" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.wcs.utils.wcs_to_celestial_frame</span></code></a> function, with which the
+SunPy frames are registered upon being imported. This list is used by packages
+such as <code class="docutils literal"><span class="pre">wcsaxes</span></code> to convert from <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.wcs.WCS</span></code></a> objects to coordinate
+frames.</p>
+<p>The <code class="xref py py-obj docutils literal"><span class="pre">sunpy.map.GenricMap</span></code> class creates <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.wcs.WCS</span></code></a> objects as
+<code class="docutils literal"><span class="pre">amap.wcs</span></code>, however, it adds some extra attributes to the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">WCS</span></code></a>
+object to be able to fully specify the coordinate frame. It adds
+<code class="docutils literal"><span class="pre">heliographic_observer</span></code> and <code class="docutils literal"><span class="pre">rsun</span></code>.</p>
+<p>If you want to obtain a un-realized coordinate frame corresponding to a
+<a class="reference internal" href="../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> object you can do the following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.data.sample</span> <span class="k">import</span> <span class="n">AIA_171_IMAGE</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">amap</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">amap</span><span class="o">.</span><span class="n">observer_coordinate</span>
+<span class="go">&lt;Helioprojective Frame (obstime=2011-06-07 06:33:02.770000, rsun=696000000.0 m, observer=&lt;HeliographicStonyhurst Coordinate (obstime=None): (lon, lat, radius) in (deg, deg, m)</span>
+<span class="go">    ( 0.,  0.048591,   1.51846026e+11)&gt;)&gt;</span>
+</pre></div>
+</div>
+<p>which is equivalent to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">astropy.wcs.utils</span> <span class="k">import</span> <span class="n">wcs_to_celestial_frame</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wcs_to_celestial_frame</span><span class="p">(</span><span class="n">amap</span><span class="o">.</span><span class="n">wcs</span><span class="p">)</span>
+<span class="go">&lt;Helioprojective Frame (obstime=2011-06-07 06:33:02.770000, rsun=696000000.0 m, observer=&lt;HeliographicStonyhurst Coordinate (obstime=None): (lon, lat, radius) in (deg, deg, m)</span>
+<span class="go">    ( 0.,  0.048591,   1.51846026e+11)&gt;)&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="module-sunpy.coordinates">
+<span id="sunpy-coordinates-package"></span><h3>sunpy.coordinates Package<a class="headerlink" href="#module-sunpy.coordinates" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="functions">
+<h4>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.get_body_heliographic_stonyhurst.html#sunpy.coordinates.get_body_heliographic_stonyhurst" title="sunpy.coordinates.get_body_heliographic_stonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">get_body_heliographic_stonyhurst</span></code></a>(body[,&nbsp;time])</td>
+<td>Return a <a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicStonyhurst.html#sunpy.coordinates.frames.HeliographicStonyhurst" title="sunpy.coordinates.frames.HeliographicStonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicStonyhurst</span></code></a> frame for the location of a solar-system body at a specified time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.get_earth.html#sunpy.coordinates.get_earth" title="sunpy.coordinates.get_earth"><code class="xref py py-obj docutils literal"><span class="pre">get_earth</span></code></a>([time])</td>
+<td>Return a <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> for the location of the Earth at a specified time in the <a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicStonyhurst.html#sunpy.coordinates.frames.HeliographicStonyhurst" title="sunpy.coordinates.frames.HeliographicStonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicStonyhurst</span></code></a> frame.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.get_sun_B0.html#sunpy.coordinates.get_sun_B0" title="sunpy.coordinates.get_sun_B0"><code class="xref py py-obj docutils literal"><span class="pre">get_sun_B0</span></code></a>([time])</td>
+<td>Return the B0 angle for the Sun at a specified time, which is the heliographic latitude of the Sun-disk center as seen from Earth.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.get_sun_L0.html#sunpy.coordinates.get_sun_L0" title="sunpy.coordinates.get_sun_L0"><code class="xref py py-obj docutils literal"><span class="pre">get_sun_L0</span></code></a>([time])</td>
+<td>Return the L0 angle for the Sun at a specified time, which is the Carrington longitude of the Sun-disk center as seen from Earth.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.get_sun_P.html#sunpy.coordinates.get_sun_P" title="sunpy.coordinates.get_sun_P"><code class="xref py py-obj docutils literal"><span class="pre">get_sun_P</span></code></a>([time])</td>
+<td>Return the position (P) angle for the Sun at a specified time, which is the angle between geocentric north and solar north as seen from Earth, measured eastward from geocentric north.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.get_sun_orientation.html#sunpy.coordinates.get_sun_orientation" title="sunpy.coordinates.get_sun_orientation"><code class="xref py py-obj docutils literal"><span class="pre">get_sun_orientation</span></code></a>(location[,&nbsp;time])</td>
+<td>Return the orientation angle for the Sun from a specified Earth location and time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.get_sunearth_distance.html#sunpy.coordinates.get_sunearth_distance" title="sunpy.coordinates.get_sunearth_distance"><code class="xref py py-obj docutils literal"><span class="pre">get_sunearth_distance</span></code></a>([time])</td>
+<td>Return the distance between the Sun and the Earth at a specified time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.solar_wcs_frame_mapping.html#sunpy.coordinates.solar_wcs_frame_mapping" title="sunpy.coordinates.solar_wcs_frame_mapping"><code class="xref py py-obj docutils literal"><span class="pre">solar_wcs_frame_mapping</span></code></a>(wcs)</td>
+<td>This function registers the coordinates frames to their FITS-WCS coordinate type values in the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.utils.wcs_to_celestial_frame.html#astropy.wcs.utils.wcs_to_celestial_frame" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.wcs.utils.wcs_to_celestial_frame</span></code></a> registry.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h4>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.Heliocentric.html#sunpy.coordinates.Heliocentric" title="sunpy.coordinates.Heliocentric"><code class="xref py py-obj docutils literal"><span class="pre">Heliocentric</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>A coordinate or frame in the Heliocentric system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.HeliographicCarrington.html#sunpy.coordinates.HeliographicCarrington" title="sunpy.coordinates.HeliographicCarrington"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicCarrington</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>A coordinate or frame in the Carrington Heliographic system.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.HeliographicStonyhurst.html#sunpy.coordinates.HeliographicStonyhurst" title="sunpy.coordinates.HeliographicStonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicStonyhurst</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>A coordinate or frame in the Stonyhurst Heliographic system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.Helioprojective.html#sunpy.coordinates.Helioprojective" title="sunpy.coordinates.Helioprojective"><code class="xref py py-obj docutils literal"><span class="pre">Helioprojective</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>A coordinate or frame in the Helioprojective (Cartesian) system.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.NorthOffsetFrame.html#sunpy.coordinates.NorthOffsetFrame" title="sunpy.coordinates.NorthOffsetFrame"><code class="xref py py-obj docutils literal"><span class="pre">NorthOffsetFrame</span></code></a></td>
+<td>A frame which is relative to some position and another frame.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h4>
+<object data="../_images/inheritance-56163c1bd8fb2b39c97d62defe11f1df56f25940.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.coordinates.frames.Heliocentric, sunpy.coordinates.frames.HeliographicCarrington, sunpy.coordinates.frames.HeliographicStonyhurst, sunpy.coordinates.frames.Helioprojective, sunpy.coordinates.offset_frame.NorthOffsetFrame</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.coordinates.frames">
+<span id="sunpy-coordinates-frames-module"></span><h3>sunpy.coordinates.frames Module<a class="headerlink" href="#module-sunpy.coordinates.frames" title="Permalink to this headline">¶</a></h3>
+<p>Common solar physics coordinate systems.</p>
+<p>This submodule implements various solar physics coordinate frames for use with
+the <a class="reference external" href="http://docs.astropy.org/en/stable/coordinates/index.html#module-astropy.coordinates" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.coordinates</span></code></a> module.</p>
+<div class="section" id="id2">
+<h4>Classes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicStonyhurst.html#sunpy.coordinates.frames.HeliographicStonyhurst" title="sunpy.coordinates.frames.HeliographicStonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicStonyhurst</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>A coordinate or frame in the Stonyhurst Heliographic system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicCarrington.html#sunpy.coordinates.frames.HeliographicCarrington" title="sunpy.coordinates.frames.HeliographicCarrington"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicCarrington</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>A coordinate or frame in the Carrington Heliographic system.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.frames.Heliocentric.html#sunpy.coordinates.frames.Heliocentric" title="sunpy.coordinates.frames.Heliocentric"><code class="xref py py-obj docutils literal"><span class="pre">Heliocentric</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>A coordinate or frame in the Heliocentric system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.frames.Helioprojective.html#sunpy.coordinates.frames.Helioprojective" title="sunpy.coordinates.frames.Helioprojective"><code class="xref py py-obj docutils literal"><span class="pre">Helioprojective</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>A coordinate or frame in the Helioprojective (Cartesian) system.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<object data="../_images/inheritance-ba4dae0f289d20a8c0b65351add66026a2e0727d.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.coordinates.frames.HeliographicStonyhurst, sunpy.coordinates.frames.HeliographicCarrington, sunpy.coordinates.frames.Heliocentric, sunpy.coordinates.frames.Helioprojective</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.coordinates.transformations">
+<span id="sunpy-coordinates-transformations-module"></span><h3>sunpy.coordinates.transformations Module<a class="headerlink" href="#module-sunpy.coordinates.transformations" title="Permalink to this headline">¶</a></h3>
+<p>Coordinate Transformation Functions</p>
+<p>This module contains the functions for converting one
+<a class="reference internal" href="#module-sunpy.coordinates.frames" title="sunpy.coordinates.frames"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.coordinates.frames</span></code></a> object to another.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The functions in this submodule should never be called directly, transforming
+between coordinate frames should be done using the <code class="docutils literal"><span class="pre">.transform_to</span></code> methods
+on <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.BaseCoordinateFrame.html#astropy.coordinates.BaseCoordinateFrame" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">BaseCoordinateFrame</span></code></a> or
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> instances.</p>
+</div>
+<p>The diagram below shows all of the coordinate systems built into the
+<a class="reference external" href="http://docs.astropy.org/en/stable/coordinates/index.html#module-astropy.coordinates" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">coordinates</span></code></a> package, their aliases (useful for converting
+other coordinates to them using attribute-style access) and the
+pre-defined transformations between them.  The user is free to
+override any of these transformations by defining new transformations
+between these systems, but the pre-defined transformations should be
+sufficient for typical usage.</p>
+<p>The color of an edge in the graph (i.e. the transformations between two
+frames) is set by the type of transformation; the legend box defines the
+mapping from transform class name to color.</p>
+<object data="../_images/graphviz-bd009944a99ba93b886c4e19d92641e5b3524ca0.svg" type="image/svg+xml">
+            <p class="warning">digraph AstropyCoordinateTransformGraph {
+FK5 [shape=oval label=&quot;FK5\n`fk5`&quot;]; ICRS [shape=oval label=&quot;ICRS\n`icrs`&quot;]; FK4NoETerms [shape=oval label=&quot;FK4NoETerms\n`fk4noeterms`&quot;]; Galactic [shape=oval label=&quot;Galactic\n`galactic`&quot;]; FK4 [shape=oval label=&quot;FK4\n`fk4`&quot;]; Galactocentric [shape=oval label=&quot;Galactocentric\n`galactocentric`&quot;]; LSR [shape=oval label=&quot;LSR\n`lsr`&quot;]; CIRS [shape=oval label=&quot;CIRS\n`cirs`&quot;]; GCRS [shape=oval label=&quot;GCRS\n`gcrs`&quot;]; HCRS [shape=oval label=&quot;HCRS\n`hcrs`&quot;]; BarycentricTrueEcliptic [shape=oval label=&quot;BarycentricTrueEcliptic\n`barycentrictrueecliptic`&quot;]; HeliocentricTrueEcliptic [shape=oval label=&quot;HeliocentricTrueEcliptic\n`heliocentrictrueecliptic`&quot;]; GalacticLSR [shape=oval label=&quot;GalacticLSR\n`galacticlsr`&quot;]; Supergalactic [shape=oval label=&quot;Supergalactic\n`supergalactic`&quot;]; AltAz [shape=oval label=&quot;AltAz\n`altaz`&quot;]; ITRS [shape=oval label=&quot;ITRS\n`itrs`&quot;]; PrecessedGeocentric [shape=oval label=&quot;PrecessedGeocentric\n`precessedgeocentric`&quot;]; GeocentricTrueEcliptic [shape=oval label=&quot;GeocentricTrueEcliptic\n`geocentrictrueecliptic`&quot;]; HeliographicStonyhurst [shape=oval label=&quot;HeliographicStonyhurst\n`heliographic_stonyhurst`&quot;]; HeliographicCarrington [shape=oval label=&quot;HeliographicCarrington\n`heliographic_carrington`&quot;]; Heliocentric [shape=oval label=&quot;Heliocentric\n`heliocentric`&quot;]; Helioprojective [shape=oval label=&quot;Helioprojective\n`helioprojective`&quot;]; BaseRADecFrame[ shape=oval ]; BaseEclipticFrame[ shape=oval ]; SkyOffsetFrame[ shape=oval ];
+FK5 -&gt; FK5[  color = &quot;#1b9e77&quot; ];
+FK5 -&gt; ICRS[  color = &quot;#1b9e77&quot; ];
+FK5 -&gt; FK4NoETerms[  color = &quot;#1b9e77&quot; ];
+FK5 -&gt; Galactic[  color = &quot;#1b9e77&quot; ];
+FK4 -&gt; FK4[  color = &quot;#d95f02&quot; ];
+FK4 -&gt; FK4NoETerms[  color = &quot;#d95f02&quot; ];
+FK4NoETerms -&gt; FK4NoETerms[  color = &quot;#1b9e77&quot; ];
+FK4NoETerms -&gt; FK4[  color = &quot;#d95f02&quot; ];
+FK4NoETerms -&gt; FK5[  color = &quot;#1b9e77&quot; ];
+FK4NoETerms -&gt; Galactic[  color = &quot;#1b9e77&quot; ];
+ICRS -&gt; Galactocentric[  color = &quot;#555555&quot; ];
+ICRS -&gt; LSR[  color = &quot;#555555&quot; ];
+ICRS -&gt; FK5[  color = &quot;#1b9e77&quot; ];
+ICRS -&gt; CIRS[  color = &quot;#d95f02&quot; ];
+ICRS -&gt; GCRS[  color = &quot;#d95f02&quot; ];
+ICRS -&gt; HCRS[  color = &quot;#555555&quot; ];
+ICRS -&gt; BarycentricTrueEcliptic[  color = &quot;#1b9e77&quot; ];
+ICRS -&gt; HeliocentricTrueEcliptic[  color = &quot;#d95f02&quot; ];
+Galactocentric -&gt; ICRS[  color = &quot;#555555&quot; ];
+LSR -&gt; ICRS[  color = &quot;#555555&quot; ];
+Galactic -&gt; GalacticLSR[  color = &quot;#555555&quot; ];
+Galactic -&gt; FK5[  color = &quot;#1b9e77&quot; ];
+Galactic -&gt; FK4NoETerms[  color = &quot;#1b9e77&quot; ];
+Galactic -&gt; Supergalactic[  color = &quot;#7570b3&quot; ];
+GalacticLSR -&gt; Galactic[  color = &quot;#555555&quot; ];
+Supergalactic -&gt; Galactic[  color = &quot;#7570b3&quot; ];
+CIRS -&gt; ICRS[  color = &quot;#d95f02&quot; ];
+CIRS -&gt; CIRS[  color = &quot;#d95f02&quot; ];
+CIRS -&gt; AltAz[  color = &quot;#d95f02&quot; ];
+CIRS -&gt; GCRS[  color = &quot;#d95f02&quot; ];
+CIRS -&gt; ITRS[  color = &quot;#d95f02&quot; ];
+GCRS -&gt; ICRS[  color = &quot;#d95f02&quot; ];
+GCRS -&gt; GCRS[  color = &quot;#d95f02&quot; ];
+GCRS -&gt; HCRS[  color = &quot;#d95f02&quot; ];
+GCRS -&gt; CIRS[  color = &quot;#d95f02&quot; ];
+GCRS -&gt; PrecessedGeocentric[  color = &quot;#d95f02&quot; ];
+GCRS -&gt; GeocentricTrueEcliptic[  color = &quot;#d95f02&quot; ];
+HCRS -&gt; ICRS[  color = &quot;#555555&quot; ];
+HCRS -&gt; HCRS[  color = &quot;#d95f02&quot; ];
+HCRS -&gt; HeliographicStonyhurst[  color = &quot;#1b9e77&quot; ];
+AltAz -&gt; CIRS[  color = &quot;#d95f02&quot; ];
+AltAz -&gt; AltAz[  color = &quot;#d95f02&quot; ];
+ITRS -&gt; CIRS[  color = &quot;#d95f02&quot; ];
+ITRS -&gt; ITRS[  color = &quot;#d95f02&quot; ];
+PrecessedGeocentric -&gt; GCRS[  color = &quot;#d95f02&quot; ];
+GeocentricTrueEcliptic -&gt; GCRS[  color = &quot;#d95f02&quot; ];
+BarycentricTrueEcliptic -&gt; ICRS[  color = &quot;#1b9e77&quot; ];
+HeliocentricTrueEcliptic -&gt; ICRS[  color = &quot;#d95f02&quot; ];
+HeliographicStonyhurst -&gt; HeliographicCarrington[  color = &quot;#783001&quot; ];
+HeliographicStonyhurst -&gt; Heliocentric[  color = &quot;#783001&quot; ];
+HeliographicStonyhurst -&gt; HCRS[  color = &quot;#1b9e77&quot; ];
+HeliographicCarrington -&gt; HeliographicStonyhurst[  color = &quot;#783001&quot; ];
+Heliocentric -&gt; Helioprojective[  color = &quot;#783001&quot; ];
+Heliocentric -&gt; HeliographicStonyhurst[  color = &quot;#783001&quot; ];
+Helioprojective -&gt; Heliocentric[  color = &quot;#783001&quot; ];
+Helioprojective -&gt; Helioprojective[  color = &quot;#783001&quot; ];
+
+overlap=false
+}</p></object>
+<ul>
+
+    <li style='list-style: none;'>
+        <p style="font-size: 12px;line-height: 24px;font-weight: normal;color: #848484;padding: 0;margin: 0;">
+            <b>AffineTransform:</b>
+            <span style="font-size: 24px; color: #555555;"><b>➝</b></span>
+        </p>
+    </li>
+
+
+    <li style='list-style: none;'>
+        <p style="font-size: 12px;line-height: 24px;font-weight: normal;color: #848484;padding: 0;margin: 0;">
+            <b>FunctionTransform:</b>
+            <span style="font-size: 24px; color: #783001;"><b>➝</b></span>
+        </p>
+    </li>
+
+
+    <li style='list-style: none;'>
+        <p style="font-size: 12px;line-height: 24px;font-weight: normal;color: #848484;padding: 0;margin: 0;">
+            <b>FunctionTransformWithFiniteDifference:</b>
+            <span style="font-size: 24px; color: #d95f02;"><b>➝</b></span>
+        </p>
+    </li>
+
+
+    <li style='list-style: none;'>
+        <p style="font-size: 12px;line-height: 24px;font-weight: normal;color: #848484;padding: 0;margin: 0;">
+            <b>StaticMatrixTransform:</b>
+            <span style="font-size: 24px; color: #7570b3;"><b>➝</b></span>
+        </p>
+    </li>
+
+
+    <li style='list-style: none;'>
+        <p style="font-size: 12px;line-height: 24px;font-weight: normal;color: #848484;padding: 0;margin: 0;">
+            <b>DynamicMatrixTransform:</b>
+            <span style="font-size: 24px; color: #1b9e77;"><b>➝</b></span>
+        </p>
+    </li>
+
+</ul><div class="section" id="id4">
+<h4>Functions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.transformations.hgs_to_hgc.html#sunpy.coordinates.transformations.hgs_to_hgc" title="sunpy.coordinates.transformations.hgs_to_hgc"><code class="xref py py-obj docutils literal"><span class="pre">hgs_to_hgc</span></code></a>(hgscoord,&nbsp;hgcframe)</td>
+<td>Transform from Heliographic Stonyhurst to Heliograpic Carrington.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.transformations.hgc_to_hgs.html#sunpy.coordinates.transformations.hgc_to_hgs" title="sunpy.coordinates.transformations.hgc_to_hgs"><code class="xref py py-obj docutils literal"><span class="pre">hgc_to_hgs</span></code></a>(hgccoord,&nbsp;hgsframe)</td>
+<td>Convert from Heliograpic Carrington to Heliographic Stonyhurst.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.transformations.hcc_to_hpc.html#sunpy.coordinates.transformations.hcc_to_hpc" title="sunpy.coordinates.transformations.hcc_to_hpc"><code class="xref py py-obj docutils literal"><span class="pre">hcc_to_hpc</span></code></a>(helioccoord,&nbsp;heliopframe)</td>
+<td>Convert from Heliocentic Cartesian to Helioprojective Cartesian.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.transformations.hpc_to_hcc.html#sunpy.coordinates.transformations.hpc_to_hcc" title="sunpy.coordinates.transformations.hpc_to_hcc"><code class="xref py py-obj docutils literal"><span class="pre">hpc_to_hcc</span></code></a>(heliopcoord,&nbsp;heliocframe)</td>
+<td>Convert from Helioprojective Cartesian to Heliocentric Cartesian.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.transformations.hcc_to_hgs.html#sunpy.coordinates.transformations.hcc_to_hgs" title="sunpy.coordinates.transformations.hcc_to_hgs"><code class="xref py py-obj docutils literal"><span class="pre">hcc_to_hgs</span></code></a>(helioccoord,&nbsp;heliogframe)</td>
+<td>Convert from Heliocentric Cartesian to Heliographic Stonyhurst.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.transformations.hgs_to_hcc.html#sunpy.coordinates.transformations.hgs_to_hcc" title="sunpy.coordinates.transformations.hgs_to_hcc"><code class="xref py py-obj docutils literal"><span class="pre">hgs_to_hcc</span></code></a>(heliogcoord,&nbsp;heliocframe)</td>
+<td>Convert from Heliographic Stonyhurst to Heliograpic Carrington.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.transformations.hpc_to_hpc.html#sunpy.coordinates.transformations.hpc_to_hpc" title="sunpy.coordinates.transformations.hpc_to_hpc"><code class="xref py py-obj docutils literal"><span class="pre">hpc_to_hpc</span></code></a>(heliopcoord,&nbsp;heliopframe)</td>
+<td>This converts from HPC to HPC, with different observer location parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.transformations.hcrs_to_hgs.html#sunpy.coordinates.transformations.hcrs_to_hgs" title="sunpy.coordinates.transformations.hcrs_to_hgs"><code class="xref py py-obj docutils literal"><span class="pre">hcrs_to_hgs</span></code></a>(hcrscoord,&nbsp;hgsframe)</td>
+<td>Convert from HCRS to Heliographic Stonyhurst (HGS).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.transformations.hgs_to_hcrs.html#sunpy.coordinates.transformations.hgs_to_hcrs" title="sunpy.coordinates.transformations.hgs_to_hcrs"><code class="xref py py-obj docutils literal"><span class="pre">hgs_to_hcrs</span></code></a>(hgscoord,&nbsp;hcrsframe)</td>
+<td>Convert from Heliographic Stonyhurst to HCRS.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.coordinates.ephemeris">
+<span id="sunpy-coordinates-ephemeris-module"></span><h3>sunpy.coordinates.ephemeris Module<a class="headerlink" href="#module-sunpy.coordinates.ephemeris" title="Permalink to this headline">¶</a></h3>
+<p>Ephemeris calculations using SunPy coordinate frames</p>
+<div class="section" id="id5">
+<h4>Functions<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_body_heliographic_stonyhurst.html#sunpy.coordinates.ephemeris.get_body_heliographic_stonyhurst" title="sunpy.coordinates.ephemeris.get_body_heliographic_stonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">get_body_heliographic_stonyhurst</span></code></a>(body[,&nbsp;time])</td>
+<td>Return a <a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicStonyhurst.html#sunpy.coordinates.frames.HeliographicStonyhurst" title="sunpy.coordinates.frames.HeliographicStonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicStonyhurst</span></code></a> frame for the location of a solar-system body at a specified time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_earth.html#sunpy.coordinates.ephemeris.get_earth" title="sunpy.coordinates.ephemeris.get_earth"><code class="xref py py-obj docutils literal"><span class="pre">get_earth</span></code></a>([time])</td>
+<td>Return a <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> for the location of the Earth at a specified time in the <a class="reference internal" href="../api/sunpy.coordinates.frames.HeliographicStonyhurst.html#sunpy.coordinates.frames.HeliographicStonyhurst" title="sunpy.coordinates.frames.HeliographicStonyhurst"><code class="xref py py-obj docutils literal"><span class="pre">HeliographicStonyhurst</span></code></a> frame.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sun_B0.html#sunpy.coordinates.ephemeris.get_sun_B0" title="sunpy.coordinates.ephemeris.get_sun_B0"><code class="xref py py-obj docutils literal"><span class="pre">get_sun_B0</span></code></a>([time])</td>
+<td>Return the B0 angle for the Sun at a specified time, which is the heliographic latitude of the Sun-disk center as seen from Earth.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sun_L0.html#sunpy.coordinates.ephemeris.get_sun_L0" title="sunpy.coordinates.ephemeris.get_sun_L0"><code class="xref py py-obj docutils literal"><span class="pre">get_sun_L0</span></code></a>([time])</td>
+<td>Return the L0 angle for the Sun at a specified time, which is the Carrington longitude of the Sun-disk center as seen from Earth.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sun_P.html#sunpy.coordinates.ephemeris.get_sun_P" title="sunpy.coordinates.ephemeris.get_sun_P"><code class="xref py py-obj docutils literal"><span class="pre">get_sun_P</span></code></a>([time])</td>
+<td>Return the position (P) angle for the Sun at a specified time, which is the angle between geocentric north and solar north as seen from Earth, measured eastward from geocentric north.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sunearth_distance.html#sunpy.coordinates.ephemeris.get_sunearth_distance" title="sunpy.coordinates.ephemeris.get_sunearth_distance"><code class="xref py py-obj docutils literal"><span class="pre">get_sunearth_distance</span></code></a>([time])</td>
+<td>Return the distance between the Sun and the Earth at a specified time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.ephemeris.get_sun_orientation.html#sunpy.coordinates.ephemeris.get_sun_orientation" title="sunpy.coordinates.ephemeris.get_sun_orientation"><code class="xref py py-obj docutils literal"><span class="pre">get_sun_orientation</span></code></a>(location[,&nbsp;time])</td>
+<td>Return the orientation angle for the Sun from a specified Earth location and time.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.coordinates.representation">
+<span id="sunpy-coordinates-representation-module"></span><h3>sunpy.coordinates.representation Module<a class="headerlink" href="#module-sunpy.coordinates.representation" title="Permalink to this headline">¶</a></h3>
+<p>SunPy specific representations.</p>
+<p>This submodule extends <code class="xref py py-obj docutils literal"><span class="pre">astropy.coordinates.representations</span></code> with two Spherical
+representation classes, primarily for use with the Helioprojective coordinate
+system, due to the convention of Longitude going from -180 to 180 degrees.</p>
+<div class="section" id="id6">
+<h4>Classes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.representation.Longitude180.html#sunpy.coordinates.representation.Longitude180" title="sunpy.coordinates.representation.Longitude180"><code class="xref py py-obj docutils literal"><span class="pre">Longitude180</span></code></a></td>
+<td>Quantity class that represents Longitude.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.coordinates.representation.SphericalWrap180Representation.html#sunpy.coordinates.representation.SphericalWrap180Representation" title="sunpy.coordinates.representation.SphericalWrap180Representation"><code class="xref py py-obj docutils literal"><span class="pre">SphericalWrap180Representation</span></code></a>(lon,&nbsp;lat,&nbsp;...)</td>
+<td>Representation of points in 3D Spherical coordinates.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.representation.UnitSphericalWrap180Representation.html#sunpy.coordinates.representation.UnitSphericalWrap180Representation" title="sunpy.coordinates.representation.UnitSphericalWrap180Representation"><code class="xref py py-obj docutils literal"><span class="pre">UnitSphericalWrap180Representation</span></code></a>(lon,&nbsp;lat)</td>
+<td>Representation of points in 3D Spherical coordinates.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id7">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<object data="../_images/inheritance-68d3cbb115e45ec5693e5f11fe1fd3dbd8a40823.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.coordinates.representation.Longitude180, sunpy.coordinates.representation.SphericalWrap180Representation, sunpy.coordinates.representation.UnitSphericalWrap180Representation</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.coordinates.offset_frame">
+<span id="sunpy-coordinates-offset-frame-module"></span><h3>sunpy.coordinates.offset_frame Module<a class="headerlink" href="#module-sunpy.coordinates.offset_frame" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h4>Classes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.offset_frame.NorthOffsetFrame.html#sunpy.coordinates.offset_frame.NorthOffsetFrame" title="sunpy.coordinates.offset_frame.NorthOffsetFrame"><code class="xref py py-obj docutils literal"><span class="pre">NorthOffsetFrame</span></code></a></td>
+<td>A frame which is relative to some position and another frame.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id9">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<object data="../_images/inheritance-358ecaf65398e196516a4281136efa772bdeaa70.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.coordinates.offset_frame.NorthOffsetFrame</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.coordinates.wcs_utils">
+<span id="sunpy-coordinates-wcs-utils-module"></span><h3>sunpy.coordinates.wcs_utils Module<a class="headerlink" href="#module-sunpy.coordinates.wcs_utils" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h4>Functions<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.coordinates.wcs_utils.solar_wcs_frame_mapping.html#sunpy.coordinates.wcs_utils.solar_wcs_frame_mapping" title="sunpy.coordinates.wcs_utils.solar_wcs_frame_mapping"><code class="xref py py-obj docutils literal"><span class="pre">solar_wcs_frame_mapping</span></code></a>(wcs)</td>
+<td>This function registers the coordinates frames to their FITS-WCS coordinate type values in the <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.utils.wcs_to_celestial_frame.html#astropy.wcs.utils.wcs_to_celestial_frame" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.wcs.utils.wcs_to_celestial_frame</span></code></a> registry.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="attribution">
+<h2>Attribution<a class="headerlink" href="#attribution" title="Permalink to this headline">¶</a></h2>
+<p>Some of this documentation was adapted from Astropy under the terms of the <a class="reference external" href="https://raw.githubusercontent.com/astropy/astropy/master/licenses/LICENSE.rst">BSD
+License</a>.</p>
+<p>This package was initially developed by Pritish Chakraborty as part of GSOC 2014 and Stuart Mumford.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

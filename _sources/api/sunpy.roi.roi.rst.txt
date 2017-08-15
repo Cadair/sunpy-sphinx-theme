@@ -1,0 +1,17 @@
+roi
+===
+
+.. currentmodule:: sunpy.roi
+
+.. autoclass:: roi
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~roi.time_range
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: time_range

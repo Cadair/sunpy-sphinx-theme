@@ -1,0 +1,19 @@
+H2VClient
+=========
+
+.. currentmodule:: sunpy.net.hek2vso
+
+.. autoclass:: H2VClient
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~H2VClient.full_query
+      ~H2VClient.translate_and_query
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: full_query
+   .. automethod:: translate_and_query

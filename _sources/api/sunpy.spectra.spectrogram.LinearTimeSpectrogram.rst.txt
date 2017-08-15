@@ -1,0 +1,45 @@
+LinearTimeSpectrogram
+=====================
+
+.. currentmodule:: sunpy.spectra.spectrogram
+
+.. autoclass:: LinearTimeSpectrogram
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~LinearTimeSpectrogram.COPY_PROPERTIES
+      ~LinearTimeSpectrogram.JOIN_REPEAT
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LinearTimeSpectrogram.check_linearity
+      ~LinearTimeSpectrogram.combine_frequencies
+      ~LinearTimeSpectrogram.in_interval
+      ~LinearTimeSpectrogram.intersect_time
+      ~LinearTimeSpectrogram.join_many
+      ~LinearTimeSpectrogram.make_array
+      ~LinearTimeSpectrogram.memmap
+      ~LinearTimeSpectrogram.resample_time
+      ~LinearTimeSpectrogram.time_to_x
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: COPY_PROPERTIES
+   .. autoattribute:: JOIN_REPEAT
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: check_linearity
+   .. automethod:: combine_frequencies
+   .. automethod:: in_interval
+   .. automethod:: intersect_time
+   .. automethod:: join_many
+   .. automethod:: make_array
+   .. automethod:: memmap
+   .. automethod:: resample_time
+   .. automethod:: time_to_x

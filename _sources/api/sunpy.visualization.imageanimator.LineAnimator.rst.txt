@@ -1,0 +1,19 @@
+LineAnimator
+============
+
+.. currentmodule:: sunpy.visualization.imageanimator
+
+.. autoclass:: LineAnimator
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LineAnimator.plot_start_image
+      ~LineAnimator.update_plot
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: plot_start_image
+   .. automethod:: update_plot

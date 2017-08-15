@@ -1,0 +1,31 @@
+CommandManager
+==============
+
+.. currentmodule:: sunpy.database.commands
+
+.. autoclass:: CommandManager
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CommandManager.clear_histories
+      ~CommandManager.do
+      ~CommandManager.pop_redo_command
+      ~CommandManager.pop_undo_command
+      ~CommandManager.push_redo_command
+      ~CommandManager.push_undo_command
+      ~CommandManager.redo
+      ~CommandManager.undo
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: clear_histories
+   .. automethod:: do
+   .. automethod:: pop_redo_command
+   .. automethod:: pop_undo_command
+   .. automethod:: push_redo_command
+   .. automethod:: push_undo_command
+   .. automethod:: redo
+   .. automethod:: undo

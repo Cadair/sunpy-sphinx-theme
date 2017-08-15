@@ -1,0 +1,6 @@
+diff_rot
+========
+
+.. currentmodule:: sunpy.physics.differential_rotation
+
+.. autofunction:: diff_rot

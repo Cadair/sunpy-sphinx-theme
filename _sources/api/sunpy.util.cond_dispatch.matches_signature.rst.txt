@@ -1,0 +1,6 @@
+matches_signature
+=================
+
+.. currentmodule:: sunpy.util.cond_dispatch
+
+.. autofunction:: matches_signature

@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>mapcube_solar_derotate &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SunPy roi" href="../code_ref/roi.html" />
+    <link rel="prev" title="calculate_solar_rotate_shift" href="sunpy.physics.solar_rotation.calculate_solar_rotate_shift.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="mapcube_solar_derotate | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.physics.solar_rotation.mapcube_solar_derotate.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/net.html">SunPy net</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.physics.differential_rotation.diff_rot.html">diff_rot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.physics.differential_rotation.solar_rotate_coordinate.html">solar_rotate_coordinate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.physics.differential_rotation.diffrot_map.html">diffrot_map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.physics.solar_rotation.calculate_solar_rotate_shift.html">calculate_solar_rotate_shift</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">mapcube_solar_derotate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="mapcube-solar-derotate">
+<h1>mapcube_solar_derotate<a class="headerlink" href="#mapcube-solar-derotate" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="sunpy.physics.solar_rotation.mapcube_solar_derotate">
+<code class="descclassname">sunpy.physics.solar_rotation.</code><code class="descname">mapcube_solar_derotate</code><span class="sig-paren">(</span><em>mc</em>, <em>layer_index=0</em>, <em>clip=True</em>, <em>shift=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/physics/solar_rotation.html#mapcube_solar_derotate"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/physics/solar_rotation.py#L82" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.physics.solar_rotation.mapcube_solar_derotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the layers in a mapcube according to the input shifts.
+If an input shift is not given, the shifts due to
+solar rotation relative to an index layer is calculated and
+applied.  When using this functionality, it is a good idea to check
+that the shifts that were applied to were reasonable and expected.
+One way of checking this is to animate the original mapcube, animate
+the derotated mapcube, and compare the differences you see to the
+calculated shifts.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mc</strong> (<a class="reference internal" href="sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.map.MapCube</span></code></a>) &#8211; A mapcube of shape (ny, nx, nt), where nt is the number of layers in
+the mapcube.</li>
+<li><strong>layer_index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Solar derotation shifts of all maps in the mapcube are assumed
+to be relative to the layer in the mapcube indexed by layer_index.</li>
+<li><strong>clip</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; If True, then clip off x, y edges in the datacube that are potentially
+affected by edges effects.</li>
+<li><strong>**kwargs</strong> &#8211; These keywords are passed to the function
+<a class="reference internal" href="sunpy.physics.solar_rotation.calculate_solar_rotate_shift.html#sunpy.physics.solar_rotation.calculate_solar_rotate_shift" title="sunpy.physics.solar_rotation.calculate_solar_rotate_shift"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.physics.solar_rotation.calculate_solar_rotate_shift</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>output</strong> (<a class="reference internal" href="sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.map.MapCube</span></code></a>) &#8211; The results of the shifts applied to the input mapcube.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.physics.solar_rotation</span> <span class="k">import</span> <span class="n">mapcube_solar_derotate</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">map1</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">map2</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">EIT_195_IMAGE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">([</span><span class="n">map1</span><span class="p">,</span> <span class="n">map2</span><span class="p">],</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">derotated_mc</span> <span class="o">=</span> <span class="n">mapcube_solar_derotate</span><span class="p">(</span><span class="n">mc</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">derotated_mc</span> <span class="o">=</span> <span class="n">mapcube_solar_derotate</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">layer_index</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">derotated_mc</span> <span class="o">=</span> <span class="n">mapcube_solar_derotate</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

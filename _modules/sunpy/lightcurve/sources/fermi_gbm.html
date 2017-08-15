@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.lightcurve.sources.fermi_gbm &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.lightcurve.sources.fermi_gbm | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/lightcurve/sources/fermi_gbm.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.lightcurve.sources.fermi_gbm</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Provides programs to process and analyse Fermi/GBM lightcurve data.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">print_function</span>
+
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.io.fits</span> <span class="k">import</span> <span class="n">fits</span>
+<span class="kn">from</span> <span class="nn">sunpy.instr</span> <span class="k">import</span> <span class="n">fermi</span>
+<span class="kn">from</span> <span class="nn">sunpy.lightcurve</span> <span class="k">import</span> <span class="n">LightCurve</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="n">urllib</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GBMSummaryLightCurve&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="GBMSummaryLightCurve"><a class="viewcode-back" href="../../../../api/sunpy.lightcurve.GBMSummaryLightCurve.html#sunpy.lightcurve.GBMSummaryLightCurve">[docs]</a><span class="k">class</span> <span class="nc">GBMSummaryLightCurve</span><span class="p">(</span><span class="n">LightCurve</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fermi/GBM Summary Lightcurve.</span>
+
+<span class="sd">    The Gamma-ray Burst Monitor (GBM) is an instrument aboard Fermi. It is meant</span>
+<span class="sd">    to detect gamma-ray bursts but also detects solar flares. It consists of</span>
+<span class="sd">    12 Sodium Iodide (NaI) scintillation detectors and 2 Bismuth Germanate (BGO)</span>
+<span class="sd">    scintillation detectors. The NaI detectors cover from a few keV to about 1 MeV</span>
+<span class="sd">    and provide burst triggers and locations. The BGO detectors cover the energy range from</span>
+<span class="sd">    about 150 keV to about 30 MeV.</span>
+
+<span class="sd">    This summary lightcurve makes use of the CSPEC (daily version) data set which</span>
+<span class="sd">    consists of the counts accumulated every 4.096 seconds in 128 energy channels</span>
+<span class="sd">    for each of the 14 detectors. Note that the data is re-binned from the</span>
+<span class="sd">    original 128 into the following 8 pre-determined energy channels.</span>
+
+<span class="sd">        * 4-15 keV</span>
+<span class="sd">        * 15-25 keV</span>
+<span class="sd">        * 25-50 keV</span>
+<span class="sd">        * 50-100 keV</span>
+<span class="sd">        * 100-300 keV</span>
+<span class="sd">        * 300-800 keV</span>
+<span class="sd">        * 800-2000 keV</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.lightcurve import GBMSummaryLightCurve</span>
+<span class="sd">    &gt;&gt;&gt; gbm = GBMSummaryLightCurve.create(&#39;2011-06-07&#39;)   # doctest: +SKIP</span>
+<span class="sd">    &gt;&gt;&gt; gbm.peek()   # doctest: +SKIP</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    * `Fermi Mission Homepage &lt;http://fermi.gsfc.nasa.gov&gt;`_</span>
+<span class="sd">    * `Fermi GBM Homepage &lt;http://gammaray.nsstc.nasa.gov/gbm/&gt;`_</span>
+<span class="sd">    * `Fermi Science Support Center &lt;http://fermi.gsfc.nasa.gov/ssc/&gt;`_</span>
+<span class="sd">    * `Fermi Data Product &lt;http://fermi.gsfc.nasa.gov/ssc/data/access/&gt;`_</span>
+<span class="sd">    * `GBM Instrument Papers &lt;http://gammaray.msfc.nasa.gov/gbm/publications/&gt;`_</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="GBMSummaryLightCurve.peek"><a class="viewcode-back" href="../../../../api/sunpy.lightcurve.GBMSummaryLightCurve.html#sunpy.lightcurve.GBMSummaryLightCurve.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Plots the GBM lightcurve. An example can be seen below.</span>
+
+<span class="sd">        .. plot::</span>
+
+<span class="sd">            from sunpy.lightcurve import GBMSummaryLightCurve</span>
+<span class="sd">            from sunpy.data.sample import GBM_TIMESERIES</span>
+<span class="sd">            gbm = GBMSummaryLightCurve.create(GBM_TIMESERIES)</span>
+<span class="sd">            gbm.peek()</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        **kwargs : dict</span>
+<span class="sd">            Any additional plot arguments that should be used</span>
+<span class="sd">            when plotting.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+        <span class="n">data_lab</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data_lab</span><span class="p">:</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">d</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
+
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Fermi GBM Summary data &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s1">&#39;DETNAM&#39;</span><span class="p">])</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Start time: &#39;</span> <span class="o">+</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S UT&#39;</span><span class="p">))</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Counts/s/keV&#39;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_get_url_for_date</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the url for Fermi/GBM data for the given date.&quot;&quot;&quot;</span>
+        <span class="n">baseurl</span> <span class="o">=</span> <span class="s1">&#39;http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/daily/&#39;</span>
+        <span class="c1"># date is a datetime object</span>
+        <span class="k">if</span> <span class="s1">&#39;detector&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">det</span> <span class="o">=</span> <span class="n">_parse_detector</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;detector&#39;</span><span class="p">])</span>
+            <span class="n">final_url</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urljoin</span><span class="p">(</span>
+                <span class="n">baseurl</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y/%m/</span><span class="si">%d</span><span class="s1">/&#39;</span> <span class="o">+</span> <span class="s1">&#39;current/&#39;</span> <span class="o">+</span>
+                                       <span class="s1">&#39;glg_cspec_&#39;</span> <span class="o">+</span> <span class="n">det</span> <span class="o">+</span> <span class="s1">&#39;_%y%m</span><span class="si">%d</span><span class="s1">_v00.pha&#39;</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># if user doesn&#39;t specify a detector, find the one pointing</span>
+            <span class="c1"># closest to the Sun.&#39;</span>
+            <span class="c1"># OR: maybe user should have to specify detector or fail.</span>
+            <span class="n">det</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_closest_detector_for_date</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No detector specified. Detector with smallest mean angle &#39;</span>
+                  <span class="s1">&#39;to Sun is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">det</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using Detector &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">det</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;For Fermi detector pointing information, use tools in &#39;</span>
+                  <span class="s1">&#39;sunpy/instr/fermi&#39;</span><span class="p">)</span>
+            <span class="n">final_url</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urljoin</span><span class="p">(</span>
+                <span class="n">baseurl</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y/%m/</span><span class="si">%d</span><span class="s1">/&#39;</span> <span class="o">+</span> <span class="s1">&#39;current/&#39;</span> <span class="o">+</span>
+                                       <span class="s1">&#39;glg_cspec_&#39;</span> <span class="o">+</span> <span class="n">det</span> <span class="o">+</span> <span class="s1">&#39;_%y%m</span><span class="si">%d</span><span class="s1">_v00.pha&#39;</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">final_url</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_get_closest_detector_for_date</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the GBM detector with the smallest mean angle to the Sun</span>
+<span class="sd">        for the given date&quot;&quot;&quot;</span>
+        <span class="n">pointing_file</span> <span class="o">=</span> <span class="n">fermi</span><span class="o">.</span><span class="n">download_weekly_pointing_file</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+        <span class="n">det_angles</span> <span class="o">=</span> <span class="n">fermi</span><span class="o">.</span><span class="n">get_detector_sun_angles_for_date</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">pointing_file</span><span class="p">)</span>
+        <span class="n">det_angle_means</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">det_angles</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span> <span class="o">==</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span>
+                <span class="n">det_angle_values</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">angle</span> <span class="ow">in</span> <span class="n">det_angles</span><span class="p">[</span><span class="n">n</span><span class="p">]:</span>
+                    <span class="n">det_angle_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">angle</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+                <span class="n">det_angle_means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">det_angle_values</span><span class="p">))</span>
+
+        <span class="n">best_det</span> <span class="o">=</span> <span class="s1">&#39;n&#39;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">det_angle_means</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">best_det</span>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_parse_fits</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Parses GBM CSPEC data files to create summary lightcurves.&quot;&quot;&quot;</span>
+        <span class="n">hdulist</span><span class="o">=</span><span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="n">header</span><span class="o">=</span><span class="n">OrderedDict</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
+        <span class="c1">#these GBM files have three FITS extensions.</span>
+        <span class="c1">#extn1 - this gives the energy range for each of the 128 energy bins</span>
+        <span class="c1">#extn2 - this contains the data, e.g. counts, exposure time, time of observation</span>
+        <span class="c1">#extn3 - eclipse times?</span>
+        <span class="n">energy_bins</span><span class="o">=</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">count_data</span><span class="o">=</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">misc</span><span class="o">=</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+
+
+        <span class="c1">#rebin the 128 energy channels into some summary ranges</span>
+        <span class="c1">#4-15 keV, 15 - 25 keV, 25-50 keV, 50-100 keV, 100-300 keV, 300-800 keV, 800 - 2000 keV</span>
+        <span class="c1">#put the data in the units of counts/s/keV</span>
+        <span class="n">summary_counts</span><span class="o">=</span><span class="n">_bin_data_for_summary</span><span class="p">(</span><span class="n">energy_bins</span><span class="p">,</span><span class="n">count_data</span><span class="p">)</span>
+
+        <span class="n">gbm_times</span><span class="o">=</span><span class="p">[]</span>
+        <span class="c1">#get the time information in datetime format with the correct MET adjustment</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">count_data</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]:</span>
+            <span class="n">gbm_times</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fermi</span><span class="o">.</span><span class="n">met_to_utc</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+        <span class="n">column_labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;4-15 keV&#39;</span><span class="p">,</span><span class="s1">&#39;15-25 keV&#39;</span><span class="p">,</span><span class="s1">&#39;25-50 keV&#39;</span><span class="p">,</span><span class="s1">&#39;50-100 keV&#39;</span><span class="p">,</span><span class="s1">&#39;100-300 keV&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;300-800 keV&#39;</span><span class="p">,</span><span class="s1">&#39;800-2000 keV&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">header</span><span class="p">,</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">summary_counts</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">column_labels</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">gbm_times</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_bin_data_for_summary</span><span class="p">(</span><span class="n">energy_bins</span><span class="p">,</span><span class="n">count_data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Missing doc string&quot;&quot;&quot;</span>
+    <span class="c1">#find the indices corresponding to some standard summary energy bins</span>
+    <span class="n">ebands</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">2000</span><span class="p">]</span>
+    <span class="n">indices</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ebands</span><span class="p">:</span>
+        <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">energy_bins</span><span class="p">[</span><span class="s1">&#39;e_max&#39;</span><span class="p">],</span><span class="n">e</span><span class="p">))</span>
+
+    <span class="c1">#rebin the 128 energy channels into some summary ranges</span>
+    <span class="c1">#4-15 keV, 15 - 25 keV, 25-50 keV, 50-100 keV, 100-300 keV, 300-800 keV, 800 - 2000 keV</span>
+    <span class="c1">#put the data in the units of counts/s/keV</span>
+    <span class="n">summary_counts</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">count_data</span><span class="p">[</span><span class="s1">&#39;counts&#39;</span><span class="p">])):</span>
+        <span class="n">counts_in_bands</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ebands</span><span class="p">)):</span>
+            <span class="n">counts_in_bands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">count_data</span><span class="p">[</span><span class="s1">&#39;counts&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">indices</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span><span class="n">indices</span><span class="p">[</span><span class="n">j</span><span class="p">]])</span> <span class="o">/</span>
+                                <span class="p">(</span><span class="n">count_data</span><span class="p">[</span><span class="s1">&#39;exposure&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">energy_bins</span><span class="p">[</span><span class="s1">&#39;e_max&#39;</span><span class="p">][</span><span class="n">indices</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">-</span>
+                                                              <span class="n">energy_bins</span><span class="p">[</span><span class="s1">&#39;e_min&#39;</span><span class="p">][</span><span class="n">indices</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]])))</span>
+
+        <span class="n">summary_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">counts_in_bands</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">summary_counts</span>
+
+
+<span class="k">def</span> <span class="nf">_parse_detector</span><span class="p">(</span><span class="n">detector</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Missing Doc String&quot;&quot;&quot;</span>
+    <span class="n">oklist</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;n0&#39;</span><span class="p">,</span><span class="s1">&#39;n1&#39;</span><span class="p">,</span><span class="s1">&#39;n2&#39;</span><span class="p">,</span><span class="s1">&#39;n3&#39;</span><span class="p">,</span><span class="s1">&#39;n4&#39;</span><span class="p">,</span><span class="s1">&#39;n5&#39;</span><span class="p">,</span><span class="s1">&#39;n6&#39;</span><span class="p">,</span><span class="s1">&#39;n7&#39;</span><span class="p">,</span><span class="s1">&#39;n8&#39;</span><span class="p">,</span><span class="s1">&#39;n9&#39;</span><span class="p">,</span><span class="s1">&#39;n10&#39;</span><span class="p">,</span><span class="s1">&#39;n11&#39;</span><span class="p">]</span>
+    <span class="n">altlist</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="n">detector</span> <span class="ow">in</span> <span class="n">oklist</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">detector</span>
+    <span class="k">elif</span> <span class="n">detector</span> <span class="ow">in</span> <span class="n">altlist</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;n&#39;</span><span class="o">+</span><span class="n">detector</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Detector string could not be interpreted&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

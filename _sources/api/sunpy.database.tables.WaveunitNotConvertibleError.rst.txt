@@ -1,0 +1,6 @@
+WaveunitNotConvertibleError
+===========================
+
+.. currentmodule:: sunpy.database.tables
+
+.. autoexception:: WaveunitNotConvertibleError

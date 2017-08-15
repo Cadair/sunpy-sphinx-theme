@@ -1,0 +1,17 @@
+FitsHeaderEntry
+===============
+
+.. currentmodule:: sunpy.database.attrs
+
+.. autoclass:: FitsHeaderEntry
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~FitsHeaderEntry.collides
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: collides

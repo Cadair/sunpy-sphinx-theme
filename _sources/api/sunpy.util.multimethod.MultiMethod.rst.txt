@@ -1,0 +1,23 @@
+MultiMethod
+===========
+
+.. currentmodule:: sunpy.util.multimethod
+
+.. autoclass:: MultiMethod
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MultiMethod.__call__
+      ~MultiMethod.add
+      ~MultiMethod.add_dec
+      ~MultiMethod.super
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: __call__
+   .. automethod:: add
+   .. automethod:: add_dec
+   .. automethod:: super

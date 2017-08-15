@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.timeseries.sources.goes &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.timeseries.sources.goes | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/timeseries/sources/goes.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.timeseries.sources.goes</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;GOES XRS TimeSeries subclass definitions.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+<span class="c1"># pylint: disable=W0221,W0222,E1101,E1121</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">DataFrame</span>
+
+<span class="kn">import</span> <span class="nn">sunpy.io</span>
+<span class="kn">from</span> <span class="nn">sunpy.timeseries.timeseriesbase</span> <span class="k">import</span> <span class="n">GenericTimeSeries</span>
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span><span class="p">,</span> <span class="n">TimeRange</span><span class="p">,</span> <span class="n">is_time_in_given_format</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.metadata</span> <span class="k">import</span> <span class="n">MetaDict</span>
+
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex Hamilton&quot;</span><span class="p">]</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;####&quot;</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;XRSTimeSeries&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="XRSTimeSeries"><a class="viewcode-back" href="../../../../api/sunpy.timeseries.XRSTimeSeries.html#sunpy.timeseries.XRSTimeSeries">[docs]</a><span class="k">class</span> <span class="nc">XRSTimeSeries</span><span class="p">(</span><span class="n">GenericTimeSeries</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    GOES XRS Time Series</span>
+
+<span class="sd">    Each GOES satellite there are two X-ray Sensors (XRS) which provide solar X</span>
+<span class="sd">    ray fluxes for the wavelength bands of 0.5 to 4 Å (short channel)</span>
+<span class="sd">    and 1 to 8 Å (long channel). Most recent data is usually available one or two days late.</span>
+
+<span class="sd">    Data is available starting on 1981/01/01.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.timeseries</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.data.sample</span>
+<span class="sd">    &gt;&gt;&gt; goes = sunpy.timeseries.TimeSeries(sunpy.data.sample.GOES_XRS_TIMESERIES, source=&#39;XRS&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; goes.peek()   # doctest: +SKIP</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    * `GOES Mission Homepage &lt;http://www.goes.noaa.gov&gt;`_</span>
+<span class="sd">    * `GOES XRS Homepage &lt;http://www.swpc.noaa.gov/products/goes-x-ray-flux&gt;`_</span>
+<span class="sd">    * `GOES XRS Guide &lt;http://ngdc.noaa.gov/stp/satellite/goes/doc/GOES_XRS_readme.pdf&gt;`_</span>
+<span class="sd">    * `NASCOM Data Archive &lt;http://umbra.nascom.nasa.gov/goes/fits/&gt;`_</span>
+
+<span class="sd">    Notes:</span>
+<span class="sd">    http://umbra.nascom.nasa.gov/goes/fits/goes_fits_files_notes.txt</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Class attribute used to specify the source class of the TimeSeries.</span>
+    <span class="n">_source</span> <span class="o">=</span> <span class="s1">&#39;xrs&#39;</span>
+
+<div class="viewcode-block" id="XRSTimeSeries.peek"><a class="viewcode-back" href="../../../../api/sunpy.timeseries.XRSTimeSeries.html#sunpy.timeseries.XRSTimeSeries.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;GOES Xray Flux&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Plots GOES XRS light curve is the usual manner. An example is shown</span>
+<span class="sd">        below.</span>
+
+<span class="sd">        .. plot::</span>
+
+<span class="sd">            import sunpy.timeseries</span>
+<span class="sd">            import sunpy.data.sample</span>
+<span class="sd">            ts_goes = sunpy.timeseries.TimeSeries(sunpy.data.sample.GOES_XRS_TIMESERIES, source=&#39;XRS&#39;)</span>
+<span class="sd">            ts_goes.peek()</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        title : `str`</span>
+<span class="sd">            The title of the plot.</span>
+
+<span class="sd">        **kwargs : `dict`</span>
+<span class="sd">            Any additional plot arguments that should be used when plotting.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fig : `~matplotlib.Figure`</span>
+<span class="sd">            A plot figure.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Check we have a timeseries valid for plotting</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_data_for_ploting</span><span class="p">()</span>
+
+        <span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+        <span class="n">dates</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">dates</span><span class="o">.</span><span class="n">date2num</span><span class="p">(</span><span class="n">parse_time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+
+        <span class="n">axes</span><span class="o">.</span><span class="n">plot_date</span><span class="p">(</span><span class="n">dates</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;xrsa&#39;</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span>
+                     <span class="n">label</span><span class="o">=</span><span class="s1">&#39;0.5--4.0 $\AA$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">plot_date</span><span class="p">(</span><span class="n">dates</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;xrsb&#39;</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span>
+                     <span class="n">label</span><span class="o">=</span><span class="s1">&#39;1.0--8.0 $\AA$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Watts m$^{-2}$&#39;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+
+        <span class="n">ax2</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">((</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">))</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">((</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">))</span>
+
+        <span class="n">axes</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;major&#39;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;major&#39;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+        <span class="c1"># @todo: display better tick labels for date range (e.g. 06/01 - 06/05)</span>
+        <span class="n">formatter</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">dates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%H:%M&#39;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+
+        <span class="n">axes</span><span class="o">.</span><span class="n">fmt_xdata</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">dates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%H:%M&#39;</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">figure</span></div>
+
+    <span class="c1"># ToDo: is this part of the DL pipeline? If so delete.</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_get_goes_sat_num</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Parses the query time to determine which GOES satellite to use.&quot;&quot;&quot;</span>
+
+        <span class="n">goes_operational</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;1980-01-04&#39;</span><span class="p">,</span> <span class="s1">&#39;1983-05-01&#39;</span><span class="p">),</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;1983-05-02&#39;</span><span class="p">,</span> <span class="s1">&#39;1984-08-01&#39;</span><span class="p">),</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;1983-06-01&#39;</span><span class="p">,</span> <span class="s1">&#39;1994-08-19&#39;</span><span class="p">),</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;1994-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;1996-08-14&#39;</span><span class="p">),</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;1996-03-21&#39;</span><span class="p">,</span> <span class="s1">&#39;2003-06-19&#39;</span><span class="p">),</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;1997-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;1998-09-09&#39;</span><span class="p">),</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;1998-07-10&#39;</span><span class="p">,</span> <span class="s1">&#39;2009-12-02&#39;</span><span class="p">),</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2006-06-20&#39;</span><span class="p">,</span> <span class="s1">&#39;2008-02-16&#39;</span><span class="p">),</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2002-12-13&#39;</span><span class="p">,</span> <span class="s1">&#39;2007-05-09&#39;</span><span class="p">),</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2006-08-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2006-08-01&#39;</span><span class="p">),</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2009-12-02&#39;</span><span class="p">,</span> <span class="s1">&#39;2010-11-05&#39;</span><span class="p">),</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2010-09-01&#39;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">())}</span>
+
+        <span class="n">sat_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">sat_num</span> <span class="ow">in</span> <span class="n">goes_operational</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">((</span><span class="n">start</span> <span class="o">&gt;=</span> <span class="n">goes_operational</span><span class="p">[</span><span class="n">sat_num</span><span class="p">]</span><span class="o">.</span><span class="n">start</span> <span class="ow">and</span>
+                 <span class="n">start</span> <span class="o">&lt;=</span> <span class="n">goes_operational</span><span class="p">[</span><span class="n">sat_num</span><span class="p">]</span><span class="o">.</span><span class="n">end</span> <span class="ow">and</span>
+                <span class="p">(</span><span class="n">end</span> <span class="o">&gt;=</span> <span class="n">goes_operational</span><span class="p">[</span><span class="n">sat_num</span><span class="p">]</span><span class="o">.</span><span class="n">start</span> <span class="ow">and</span>
+                 <span class="n">end</span> <span class="o">&lt;=</span> <span class="n">goes_operational</span><span class="p">[</span><span class="n">sat_num</span><span class="p">]</span><span class="o">.</span><span class="n">end</span><span class="p">))):</span>
+                <span class="c1"># if true then the satellite with sat_num is available</span>
+                <span class="n">sat_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sat_num</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">sat_list</span><span class="p">:</span>
+            <span class="c1"># if no satellites were found then raise an exception</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;No operational GOES satellites within time range&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">sat_list</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_parse_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Parses a GOES/XRS FITS file from</span>
+<span class="sd">        http://umbra.nascom.nasa.gov/goes/fits/&quot;&quot;&quot;</span>
+
+        <span class="n">hdus</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_parse_hdus</span><span class="p">(</span><span class="n">hdus</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_parse_hdus</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">hdulist</span><span class="p">):</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="n">MetaDict</span><span class="p">(</span><span class="n">OrderedDict</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">header</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">hdulist</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">is_time_in_given_format</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;DATE-OBS&#39;</span><span class="p">],</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y&#39;</span><span class="p">):</span>
+                <span class="n">start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;DATE-OBS&#39;</span><span class="p">],</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">is_time_in_given_format</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;DATE-OBS&#39;</span><span class="p">],</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%y&#39;</span><span class="p">):</span>
+                <span class="n">start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;DATE-OBS&#39;</span><span class="p">],</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%y&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Date not recognized&quot;</span><span class="p">)</span>
+            <span class="n">xrsb</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;FLUX&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">xrsa</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;FLUX&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="n">seconds_from_start</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">hdulist</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">start_time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;TIMEZERO&#39;</span><span class="p">])</span>
+            <span class="n">seconds_from_start</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">xrsb</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">xrsa</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Don&#39;t know how to parse this file&quot;</span><span class="p">)</span>
+
+        <span class="n">times</span> <span class="o">=</span> <span class="p">[</span><span class="n">start_time</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">s</span><span class="p">)),</span>
+                                                    <span class="n">microseconds</span><span class="o">=</span><span class="nb">int</span><span class="p">((</span><span class="n">s</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">s</span><span class="p">))</span> <span class="o">*</span> <span class="mf">1e6</span><span class="p">))</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">seconds_from_start</span><span class="p">]</span>
+
+        <span class="c1"># remove bad values as defined in header comments</span>
+        <span class="n">xrsb</span><span class="p">[</span><span class="n">xrsb</span> <span class="o">==</span> <span class="o">-</span><span class="mi">99999</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="n">xrsa</span><span class="p">[</span><span class="n">xrsa</span> <span class="o">==</span> <span class="o">-</span><span class="mi">99999</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+        <span class="c1"># fix byte ordering</span>
+        <span class="n">newxrsa</span> <span class="o">=</span> <span class="n">xrsa</span><span class="o">.</span><span class="n">byteswap</span><span class="p">()</span><span class="o">.</span><span class="n">newbyteorder</span><span class="p">()</span>
+        <span class="n">newxrsb</span> <span class="o">=</span> <span class="n">xrsb</span><span class="o">.</span><span class="n">byteswap</span><span class="p">()</span><span class="o">.</span><span class="n">newbyteorder</span><span class="p">()</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;xrsa&#39;</span><span class="p">:</span> <span class="n">newxrsa</span><span class="p">,</span> <span class="s1">&#39;xrsb&#39;</span><span class="p">:</span> <span class="n">newxrsb</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">times</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Add the units</span>
+        <span class="n">units</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="s1">&#39;xrsa&#39;</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span>
+                             <span class="p">(</span><span class="s1">&#39;xrsb&#39;</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)])</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">units</span>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="XRSTimeSeries.is_datasource_for"><a class="viewcode-back" href="../../../../api/sunpy.timeseries.XRSTimeSeries.html#sunpy.timeseries.XRSTimeSeries.is_datasource_for">[docs]</a>    <span class="k">def</span> <span class="nf">is_datasource_for</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Determines if header corresponds to a GOES lightcurve TimeSeries&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="s1">&#39;source&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_source</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;meta&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;meta&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TELESCOP&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;GOES&#39;</span><span class="p">)</span></div></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+vso_attribute_parse
+===================
+
+.. currentmodule:: sunpy.net.hek2vso
+
+.. autofunction:: vso_attribute_parse

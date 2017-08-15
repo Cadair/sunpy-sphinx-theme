@@ -1,0 +1,6 @@
+SJI_to_cube
+===========
+
+.. currentmodule:: sunpy.instr.iris
+
+.. autofunction:: SJI_to_cube

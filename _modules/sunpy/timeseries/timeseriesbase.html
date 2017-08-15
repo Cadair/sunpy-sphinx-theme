@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.timeseries.timeseriesbase &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.timeseries.timeseriesbase | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/timeseries/timeseriesbase.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.timeseries.timeseriesbase</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">TimeSeries is a generic time series class from which all other TimeSeries</span>
+<span class="sd">classes inherit from.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+<span class="n">__authors__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex Hamilton, Stuart Mumford&quot;</span><span class="p">]</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;stuart@mumford.me.uk&quot;</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">ABCMeta</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">sunpy</span> <span class="k">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">TimeRange</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">from</span> <span class="nn">sunpy.timeseries</span> <span class="k">import</span> <span class="n">TimeSeriesMetaData</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.metadata</span> <span class="k">import</span> <span class="n">MetaDict</span>
+
+<span class="kn">import</span> <span class="nn">astropy</span>
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="k">import</span> <span class="n">Table</span>
+<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="k">import</span> <span class="n">Column</span>
+
+<span class="c1"># define and register a new unit, needed for RHESSI</span>
+<span class="n">det</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">def_unit</span><span class="p">(</span><span class="s1">&#39;detector&#39;</span><span class="p">)</span>
+<span class="n">u</span><span class="o">.</span><span class="n">add_enabled_units</span><span class="p">([</span><span class="n">det</span><span class="p">])</span>
+
+<span class="n">TIME_FORMAT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;general&quot;</span><span class="p">,</span> <span class="s2">&quot;time_format&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># pylint: disable=E1101,E1121,W0404,W0612,W0613</span>
+<span class="n">__authors__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex Hamilton&quot;</span><span class="p">]</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;####&quot;</span>
+
+
+<span class="c1"># GenericTimeSeries subclass registry.</span>
+<span class="n">TIMESERIES_CLASSES</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">GenericTimeSeriesMeta</span><span class="p">(</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Registration metaclass for `~sunpy.timeseries.GenericTimeSeries`.</span>
+<span class="sd">    This class checks for the existance of a method named ``is_datasource_for``</span>
+<span class="sd">    when a subclass of `GenericTimeSeries` is defined. If it exists it will add</span>
+<span class="sd">    that class to the registry.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_registry</span> <span class="o">=</span> <span class="n">TIMESERIES_CLASSES</span>
+
+    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="n">mcls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">members</span><span class="p">):</span>
+        <span class="bp">cls</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">GenericTimeSeriesMeta</span><span class="p">,</span> <span class="n">mcls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">members</span><span class="p">)</span>
+
+        <span class="c1"># The registry contains the class as the key and the validation method</span>
+        <span class="c1"># as the item.</span>
+        <span class="k">if</span> <span class="s1">&#39;is_datasource_for&#39;</span> <span class="ow">in</span> <span class="n">members</span><span class="p">:</span>
+            <span class="n">mcls</span><span class="o">.</span><span class="n">_registry</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">is_datasource_for</span>
+
+        <span class="k">return</span> <span class="bp">cls</span>
+
+
+<span class="nd">@six</span><span class="o">.</span><span class="n">add_metaclass</span><span class="p">(</span><span class="n">GenericTimeSeriesMeta</span><span class="p">)</span>
+<div class="viewcode-block" id="GenericTimeSeries"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries">[docs]</a><span class="k">class</span> <span class="nc">GenericTimeSeries</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A generic time series object.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    meta : `~sunpy.timeseries.metadata.TimeSeriesMetaData`</span>
+<span class="sd">        The metadata giving details about the time series data/instrument.</span>
+<span class="sd">    data : `~pandas.DataFrame`</span>
+<span class="sd">        An pandas DataFrame prepresenting one or more fields as a function of time.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    filename: `str` or File</span>
+<span class="sd">        A file to read.</span>
+<span class="sd">    source: `str`</span>
+<span class="sd">        A string identifier for a registered subclass, matched by that</span>
+<span class="sd">         subclasses `_is_source_for` method.</span>
+<span class="sd">    concatenate :  `bool`</span>
+<span class="sd">        Concatenate all files into one TimeSeries object if True, or return</span>
+<span class="sd">        one TimeSeries for each file if False.</span>
+
+<span class="sd">    All other keywords are passed to _is_source_for and then __init__.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.timeseries import TimeSeries</span>
+<span class="sd">    &gt;&gt;&gt; import datetime</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; import pandas as pd</span>
+<span class="sd">    &gt;&gt;&gt; base = datetime.datetime.today()</span>
+<span class="sd">    &gt;&gt;&gt; times = [base - datetime.timedelta(minutes=x) for x in range(0, 24 * 60)]</span>
+<span class="sd">    &gt;&gt;&gt; intensity = np.sin(np.arange(0, 12 * np.pi, step=(12 * np.pi) / (24 * 60)))</span>
+<span class="sd">    &gt;&gt;&gt; df = pd.DataFrame(intensity, index=times, columns=[&#39;intensity&#39;])</span>
+<span class="sd">    &gt;&gt;&gt; ts = TimeSeries(df)</span>
+<span class="sd">    &gt;&gt;&gt; ts.peek()   # doctest: +SKIP</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    * `Pandas Documentation &lt;http://pandas.pydata.org/pandas-docs/dev/dsintro.html&gt;`_</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Class attribute used to specify the source class of the TimeSeries.</span>
+    <span class="n">_source</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="n">tr</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+        <span class="c1"># Check metadata input</span>
+        <span class="k">if</span> <span class="n">meta</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># No meta given, so default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">meta</span> <span class="o">=</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">MetaDict</span><span class="p">(),</span> <span class="n">tr</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">,</span> <span class="n">MetaDict</span><span class="p">)):</span>
+            <span class="c1"># Given the values for metadata (dict) and infer timerange and colnames from the data</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">meta</span> <span class="o">=</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="n">tr</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="c1"># Given the values all in a tuple</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">meta</span> <span class="o">=</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="n">tr</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Should have a list of 3-tuples giving a complex metadata list.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">meta</span> <span class="o">=</span> <span class="n">meta</span>
+
+        <span class="k">if</span> <span class="n">units</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="n">units</span>
+
+        <span class="c1"># Validate input data</span>
+        <span class="c1">#self._validate_meta()</span>
+        <span class="c1">#self._validate_units()</span>
+
+<span class="c1"># #### Attribute definitions #### #</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a string/object used to specify the source class of the TimeSeries.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">columns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of all the names of the columns in the data.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the time index of the data.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">time_range</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the start and end times of the TimeSeries as a `~sunpy.time.TimeRange`</span>
+<span class="sd">        object&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">TimeRange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+<span class="c1"># #### Data Access, Selection and Organisation Methods #### #</span>
+
+<div class="viewcode-block" id="GenericTimeSeries.quantity"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.quantity">[docs]</a>    <span class="k">def</span> <span class="nf">quantity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colname</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a `~astropy.units.quantity.Quantity` for the given column.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        colname : `str`</span>
+<span class="sd">            The heading of the column you want output.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        quantity : `~astropy.units.quantity.Quantity`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">colname</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">unit</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="n">colname</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GenericTimeSeries.add_column"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.add_column">[docs]</a>    <span class="k">def</span> <span class="nf">add_column</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colname</span><span class="p">,</span> <span class="n">quantity</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return an new TimeSeries with the given column added or updated.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        colname : `str`</span>
+<span class="sd">            The heading of the column you want output.</span>
+
+<span class="sd">        quantity : `~astropy.units.quantity.Quantity` or `~numpy.ndarray`</span>
+<span class="sd">            The values to be placed within the column.</span>
+<span class="sd">            If updating values only then a numpy array is permitted.</span>
+
+<span class="sd">        overwrite : `bool`, optional, default:True</span>
+<span class="sd">            Set to true to allow the method to overwrite a column already present</span>
+<span class="sd">            in the TimeSeries.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newts : TimeSeries</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Get the expected units from the quantity if required</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">unit</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">astropy</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">Quantity</span><span class="p">):</span>
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">quantity</span><span class="o">.</span><span class="n">unit</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">unit</span><span class="p">:</span>
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span>
+
+        <span class="c1"># Make a copy of all the TimeSeries components.</span>
+        <span class="n">data</span>  <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">meta</span>  <span class="o">=</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">metadata</span><span class="p">))</span>
+        <span class="n">units</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+
+        <span class="c1"># Add the unit to the units dictionary if already there.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">colname</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+            <span class="n">units</span><span class="p">[</span><span class="n">colname</span><span class="p">]</span> <span class="o">=</span> <span class="n">unit</span>
+
+        <span class="c1"># Convert the given quantity into values for given units if necessary.</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">quantity</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">astropy</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">Quantity</span><span class="p">)</span> <span class="ow">and</span> <span class="n">overwrite</span><span class="p">:</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="p">[</span><span class="n">colname</span><span class="p">])</span><span class="o">.</span><span class="n">value</span>
+
+        <span class="c1"># Update or add the data.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">colname</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="ow">or</span> <span class="n">overwrite</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">colname</span><span class="p">]</span> <span class="o">=</span> <span class="n">values</span>
+
+        <span class="c1"># Return a new TimeSeries with the given updated/added column.</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">meta</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GenericTimeSeries.sort_index"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.sort_index">[docs]</a>    <span class="k">def</span> <span class="nf">sort_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a sorted version of the TimeSeries object.</span>
+<span class="sd">        Generally this shouldn&#39;t be necessary as most TimeSeries operations sort</span>
+<span class="sd">        the data anyway to ensure consistent behaviour when truncating.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newts : `~sunpy.timeseries.TimeSeries`</span>
+<span class="sd">            A new time series in ascending chronological order.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">GenericTimeSeries</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">),</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">metadata</span><span class="p">)),</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="GenericTimeSeries.truncate"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.truncate">[docs]</a>    <span class="k">def</span> <span class="nf">truncate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a truncated version of the TimeSeries object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        a : `sunpy.time.TimeRange`, `str` or `int`</span>
+<span class="sd">            Either a time range to truncate to, or a start time in some format</span>
+<span class="sd">            recognised by pandas, or a index integer.</span>
+
+<span class="sd">        b : `str` or `int`</span>
+<span class="sd">            If specified, the end time of the time range in some format</span>
+<span class="sd">            recognised by pandas, or a index integer.</span>
+
+<span class="sd">        int : `int`</span>
+<span class="sd">            If specified, the integer indicating the slicing intervals.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newts : `~sunpy.timeseries.TimeSeries`</span>
+<span class="sd">            A new time series with only the selected times.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Evaluate inputs</span>
+        <span class="c1"># If given strings, then use to create a sunpy.time.timerange.TimeRange</span>
+        <span class="c1"># for the SunPy text date parser.</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">TimeRange</span><span class="p">):</span>
+            <span class="c1"># If we have a TimeRange, extract the values</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">start</span>
+            <span class="n">end</span>   <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">end</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Otherwise we already have the values</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">a</span>
+            <span class="n">end</span>   <span class="o">=</span> <span class="n">b</span>
+
+        <span class="c1"># If an interval integer was given then use in truncation.</span>
+        <span class="n">truncated_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">:</span><span class="nb">int</span><span class="p">]</span>
+
+        <span class="c1"># Truncate the metadata</span>
+        <span class="c1"># Check there is data still</span>
+        <span class="n">truncated_meta</span> <span class="o">=</span> <span class="n">TimeSeriesMetaData</span><span class="p">([])</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">truncated_data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">tr</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="n">truncated_data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">truncated_data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+            <span class="n">truncated_meta</span> <span class="o">=</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">metadata</span><span class="p">))</span>
+            <span class="n">truncated_meta</span><span class="o">.</span><span class="n">_truncate</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
+
+        <span class="c1"># Build similar TimeSeries object and sanatise metadata and units.</span>
+        <span class="nb">object</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">truncated_data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(),</span> <span class="n">truncated_meta</span><span class="p">,</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">))</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">_sanitize_metadata</span><span class="p">()</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">_sanitize_units</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">object</span></div>
+
+<div class="viewcode-block" id="GenericTimeSeries.extract"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.extract">[docs]</a>    <span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a new time series with the chosen column.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        column_name : `str`</span>
+<span class="sd">            A valid column name.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newts : `~sunpy.timeseries.TimeSeries`</span>
+<span class="sd">            A new time series with only the selected column.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        # TODO allow the extract function to pick more than one column</span>
+<span class="sd">        if isinstance(self, pandas.Series):</span>
+<span class="sd">            return self</span>
+<span class="sd">        else:</span>
+<span class="sd">            return GenericTimeSeries(self.data[column_name], TimeSeriesMetaData(self.meta.metadata.copy()))</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Extract column and remove empty rows</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[[</span><span class="n">column_name</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+        <span class="c1"># Build generic TimeSeries object and sanatise metadata and units.</span>
+        <span class="nb">object</span> <span class="o">=</span> <span class="n">GenericTimeSeries</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(),</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">metadata</span><span class="p">)),</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">))</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">_sanitize_metadata</span><span class="p">()</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">_sanitize_units</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">object</span></div>
+
+<div class="viewcode-block" id="GenericTimeSeries.concatenate"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.concatenate">[docs]</a>    <span class="k">def</span> <span class="nf">concatenate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otherts</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Concatenate with another TimeSeries. This function will check and</span>
+<span class="sd">        remove any duplicate times. It will keep the column values from the</span>
+<span class="sd">        original time series to which the new time series is being added.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        otherts : `~sunpy.timeseries.TimeSeries`</span>
+<span class="sd">            Another time series.</span>
+
+<span class="sd">        same_source : `bool` Optional</span>
+<span class="sd">            Set to true to check if the sources of the time series match.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newts : `~sunpy.timeseries.TimeSeries`</span>
+<span class="sd">            A new time series.</span>
+
+<span class="sd">        Debate: decide if we want to be able to concatenate multiple time series</span>
+<span class="sd">        at once.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># check to see if nothing needs to be done</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">otherts</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="c1"># Check the sources match if specified.</span>
+        <span class="n">same_source</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;same_source&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">same_source</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">otherts</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;TimeSeries classes must match if specified.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Concatenate the metadata and data</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">otherts</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">otherts</span><span class="o">.</span><span class="n">data</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="c1"># Add all the new units to the dictionary.</span>
+        <span class="n">units</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+        <span class="n">units</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+        <span class="n">units</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">otherts</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+
+        <span class="c1"># If sources match then build similar TimeSeries.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span> <span class="o">==</span> <span class="n">otherts</span><span class="o">.</span><span class="vm">__class__</span><span class="p">:</span>
+            <span class="nb">object</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(),</span> <span class="n">meta</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Build generic time series if the sources don&#39;t match.</span>
+            <span class="nb">object</span> <span class="o">=</span> <span class="n">GenericTimeSeries</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(),</span> <span class="n">meta</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span>
+
+        <span class="c1"># Sanatise metadata and units</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">_sanitize_metadata</span><span class="p">()</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">_sanitize_units</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">object</span></div>
+
+<span class="c1"># #### Plotting Methods #### #</span>
+
+<div class="viewcode-block" id="GenericTimeSeries.plot"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.plot">[docs]</a>    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">plot_args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Plot a plot of the time series</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        axes : `~matplotlib.axes.Axes` or None</span>
+<span class="sd">            If provided the image will be plotted on the given axes. Otherwise</span>
+<span class="sd">            the current axes will be used.</span>
+
+<span class="sd">        **plot_args : `dict`</span>
+<span class="sd">            Any additional plot arguments that should be used</span>
+<span class="sd">            when plotting.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        axes : `~matplotlib.axes.Axes`</span>
+<span class="sd">            The plot axes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Get current axes</span>
+        <span class="k">if</span> <span class="n">axes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+        <span class="n">axes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">,</span> <span class="o">**</span><span class="n">plot_args</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">axes</span></div>
+
+<div class="viewcode-block" id="GenericTimeSeries.peek"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Displays the time series in a new figure.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        **kwargs : `dict`</span>
+<span class="sd">            Any additional plot arguments that should be used when plotting.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fig : `~matplotlib.Figure`</span>
+<span class="sd">            A plot figure.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Check we have a timeseries valid for plotting</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_data_for_ploting</span><span class="p">()</span>
+
+        <span class="c1"># Now make the plot</span>
+        <span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">figure</span></div>
+
+    <span class="k">def</span> <span class="nf">_validate_data_for_ploting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Raises an exception if the timeseries is invalid for plotting.</span>
+<span class="sd">        To be added into all the peek methods in all source sup-classes.</span>
+<span class="sd">        Currently only checks if we have an empty timeseries, where:</span>
+<span class="sd">        len(self.data) == 0</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Check we have a valid TS</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The timeseries can</span><span class="se">\&#39;</span><span class="s1">t be plotted as it has no data present. (len(self.data) == 0)&#39;</span><span class="p">)</span>
+
+<span class="c1"># #### Miscellaneous #### #</span>
+
+    <span class="k">def</span> <span class="nf">_validate_meta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validates the meta-information associated with a TimeSeries.</span>
+
+<span class="sd">        This method includes very basic validation checks which apply to</span>
+<span class="sd">        all of the kinds of files that SunPy can read. Datasource-specific</span>
+<span class="sd">        validation should be handled in the relevant file in the</span>
+<span class="sd">        sunpy.timeseries.sources package.</span>
+
+<span class="sd">        Allows for default unit assignment for:</span>
+<span class="sd">            COL_UNITS</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;always&#39;</span><span class="p">,</span> <span class="ne">Warning</span><span class="p">)</span>
+
+        <span class="c1">#</span>
+        <span class="k">for</span> <span class="n">meta_property</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;cunit1&#39;</span><span class="p">,</span> <span class="s1">&#39;cunit2&#39;</span><span class="p">,</span> <span class="s1">&#39;waveunit&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">meta_property</span><span class="p">)</span> <span class="ow">and</span>
+                <span class="n">u</span><span class="o">.</span><span class="n">Unit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">meta_property</span><span class="p">),</span>
+                       <span class="n">parse_strict</span><span class="o">=</span><span class="s1">&#39;silent&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">physical_type</span> <span class="o">==</span> <span class="s1">&#39;unknown&#39;</span><span class="p">):</span>
+
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Unknown value for &quot;</span><span class="o">+</span><span class="n">meta_property</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="ne">Warning</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_validate_units</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validates the astropy unit-information associated with a TimeSeries.</span>
+
+<span class="sd">        This method includes very basic validation checks which apply to</span>
+<span class="sd">        all of the kinds of files that SunPy can read. Datasource-specific</span>
+<span class="sd">        validation should be handled in the relevant file in the</span>
+<span class="sd">        sunpy.timeseries.sources package.</span>
+
+<span class="sd">        Allows for default unit assignment for:</span>
+<span class="sd">            COL_UNITS</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;always&#39;</span><span class="p">,</span> <span class="ne">Warning</span><span class="p">)</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">units</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">astropy</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">UnitBase</span><span class="p">):</span>
+                <span class="c1"># If this is not a unit then this can&#39;t be a valid units dict.</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Invalid unit given for </span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">,</span> <span class="ne">Warning</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="nf">_sanitize_units</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sanitises the collections.OrderedDict used to store the units.</span>
+<span class="sd">        Primarily this method will:</span>
+
+<span class="sd">        Remove entries that don&#39;t match up to a column,</span>
+<span class="sd">        Add unitless entries for columns with no units defined.</span>
+<span class="sd">        Re-arrange the order of the dictionary to match the columns.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;always&#39;</span><span class="p">,</span> <span class="ne">Warning</span><span class="p">)</span>
+
+        <span class="c1"># Populate unspecified units:</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+            <span class="c1"># For all columns not present in the units dictionary.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Unknown units for </span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">column</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">,</span> <span class="ne">Warning</span><span class="p">)</span>
+
+        <span class="c1"># Re-arrange so it&#39;s in the same order as the columns and removed unused.</span>
+        <span class="n">units</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">():</span>
+            <span class="n">units</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">column</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="n">column</span><span class="p">]})</span>
+
+        <span class="c1"># Now use the amended units Ordered Dictionary</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="n">units</span>
+
+    <span class="k">def</span> <span class="nf">_sanitize_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sanitises the TimeSeriesMetaData object used to store the metadata.</span>
+<span class="sd">        Primarily this method will:</span>
+
+<span class="sd">        Remove entries outside of the datas TimeRange or truncate TimeRanges</span>
+<span class="sd">        if the metadata overflows past the data,</span>
+<span class="sd">        Remove column references in the metadata that don&#39;t match to a column</span>
+<span class="sd">        in the data.</span>
+<span class="sd">        Remove metadata entries that have no columns matching the data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;always&#39;</span><span class="p">,</span> <span class="ne">Warning</span><span class="p">)</span>
+
+        <span class="c1"># Truncate the metadata</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">_truncate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_range</span><span class="p">)</span>
+
+        <span class="c1"># Remove non-existant columns</span>
+        <span class="n">redundant_cols</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">_remove_columns</span><span class="p">(</span><span class="n">redundant_cols</span><span class="p">)</span>
+
+<span class="c1"># #### Export/Output Methods #### #</span>
+
+<div class="viewcode-block" id="GenericTimeSeries.to_table"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.to_table">[docs]</a>    <span class="k">def</span> <span class="nf">to_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return an Astropy Table of the give TimeSeries object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newtable : `~astrpy.table`</span>
+<span class="sd">            A new astropy table containing the data from the time series.</span>
+<span class="sd">            The table will include units where relevant.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># ToDo: Table.from_pandas(df) doesn&#39;t include the index column. Add request?</span>
+        <span class="c1"># Get data columns</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="c1"># Get index column and add to table.</span>
+        <span class="n">index_col</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="n">index_col</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Add in units.</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="c1"># Output the table</span>
+        <span class="k">return</span> <span class="n">table</span></div>
+
+<div class="viewcode-block" id="GenericTimeSeries.to_dataframe"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.to_dataframe">[docs]</a>    <span class="k">def</span> <span class="nf">to_dataframe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a Pandas DataFrame of the give TimeSeries object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newdf : `~pandas.core.frame.DataFrame`</span>
+<span class="sd">            A Pandas Dataframe containing the data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span></div>
+
+<div class="viewcode-block" id="GenericTimeSeries.to_array"><a class="viewcode-back" href="../../../api/sunpy.timeseries.GenericTimeSeries.html#sunpy.timeseries.GenericTimeSeries.to_array">[docs]</a>    <span class="k">def</span> <span class="nf">to_array</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a numpy array of the give TimeSeries object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        columns: `list`, optional, default:None</span>
+<span class="sd">            If None, return all columns minus the index, otherwise, returns</span>
+<span class="sd">            specified columns.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        values : `~numpy.ndarray`</span>
+<span class="sd">            If the caller is heterogeneous and contains booleans or objects,</span>
+<span class="sd">            the result will be of dtype=object. See Notes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check two TimeSeries objects are the same, they have matching type, data,</span>
+<span class="sd">        metadata and units entries.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : `~sunpy.timeseries.GenericTimeSeries`</span>
+<span class="sd">            The second TimeSeries object to compare with.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        result : `bool`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">units</span><span class="p">):</span>
+                <span class="n">match</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="n">match</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check two TimeSeries objects are not the same, they don&#39;t have matching</span>
+<span class="sd">        type, data, metadata and/or units entries.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : `~sunpy.timeseries.GenericTimeSeries`</span>
+<span class="sd">            The second TimeSeries object to compare with.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        result : `bool`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_parse_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Parses a file - to be implemented in any subclass that may use files&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

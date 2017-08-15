@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Spectrogram &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LinearTimeSpectrogram" href="sunpy.spectra.spectrogram.LinearTimeSpectrogram.html" />
+    <link rel="prev" title="Spectrum" href="sunpy.spectra.spectrum.Spectrum.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Spectrogram | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.spectra.spectrogram.Spectrogram.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.spectra.spectrum.Spectrum.html">Spectrum</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Spectrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.spectra.spectrogram.LinearTimeSpectrogram.html">LinearTimeSpectrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.spectra.sources.CallistoSpectrogram.html">CallistoSpectrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.spectra.sources.SWavesSpectrogram.html">SWavesSpectrogram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="spectrogram">
+<h1>Spectrogram<a class="headerlink" href="#spectrogram" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.spectra.spectrogram.Spectrogram">
+<em class="property">class </em><code class="descclassname">sunpy.spectra.spectrogram.</code><code class="descname">Spectrogram</code><span class="sig-paren">(</span><em>data</em>, <em>time_axis</em>, <em>freq_axis</em>, <em>start</em>, <em>end</em>, <em>t_init=None</em>, <em>t_label='Time'</em>, <em>f_label='Frequency'</em>, <em>content=''</em>, <em>instruments=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L271" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sunpy.util.create.Parent.html#sunpy.util.create.Parent" title="sunpy.util.create.Parent"><code class="xref py py-class docutils literal"><span class="pre">sunpy.util.create.Parent</span></code></a></p>
+<div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>this module is being moved to sunpyspectra - <a class="reference external" href="https://github.com/sunpy/spectra">https://github.com/sunpy/spectra</a></p>
+</div>
+<p>Spectrogram Class.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This module is under development! Use at your own risk.</p>
+</div>
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.data">
+<code class="descname">data</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.data" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a> &#8211; two-dimensional array of the image data of the spectrogram.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.time_axis">
+<code class="descname">time_axis</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.time_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a> &#8211; one-dimensional array containing the offset from the start
+for each column of data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.freq_axis">
+<code class="descname">freq_axis</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.freq_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a> &#8211; one-dimensional array containing information about the
+frequencies each row of the image corresponds to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.start">
+<code class="descname">start</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.start" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> &#8211; starting time of the measurement</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.end">
+<code class="descname">end</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.end" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> &#8211; end time of the measurement</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.t_init">
+<code class="descname">t_init</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.t_init" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em> &#8211; offset from the start of the day the measurement began. If None
+gets automatically set from start.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.t_label">
+<code class="descname">t_label</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.t_label" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> &#8211; label for the time axis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.f_label">
+<code class="descname">f_label</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.f_label" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> &#8211; label for the frequency axis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.content">
+<code class="descname">content</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.content" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> &#8211; header for the image</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.instruments">
+<code class="descname">instruments</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.instruments" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str array</em> &#8211; instruments that recorded the data, may be more than one if
+it was constructed using combine_frequencies or join_many.</p>
+</dd></dl>
+
+<div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>this module is being moved to sunpyspectra - <a class="reference external" href="https://github.com/sunpy/spectra">https://github.com/sunpy/spectra</a></p>
+</div>
+<p></p>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.COPY_PROPERTIES" title="sunpy.spectra.spectrogram.Spectrogram.COPY_PROPERTIES"><code class="xref py py-obj docutils literal"><span class="pre">COPY_PROPERTIES</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.dtype" title="sunpy.spectra.spectrogram.Spectrogram.dtype"><code class="xref py py-obj docutils literal"><span class="pre">dtype</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.shape" title="sunpy.spectra.spectrogram.Spectrogram.shape"><code class="xref py py-obj docutils literal"><span class="pre">shape</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.at_freq" title="sunpy.spectra.spectrogram.Spectrogram.at_freq"><code class="xref py py-obj docutils literal"><span class="pre">at_freq</span></code></a>(freq)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.auto_const_bg" title="sunpy.spectra.spectrogram.Spectrogram.auto_const_bg"><code class="xref py py-obj docutils literal"><span class="pre">auto_const_bg</span></code></a>()</td>
+<td>Automatically determine background.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.auto_find_background" title="sunpy.spectra.spectrogram.Spectrogram.auto_find_background"><code class="xref py py-obj docutils literal"><span class="pre">auto_find_background</span></code></a>([amount])</td>
+<td>Automatically find the background.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.clip_freq" title="sunpy.spectra.spectrogram.Spectrogram.clip_freq"><code class="xref py py-obj docutils literal"><span class="pre">clip_freq</span></code></a>([vmin,&nbsp;vmax])</td>
+<td>Return a new spectrogram only consisting of frequencies in the interval [vmin, vmax].</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.clip_values" title="sunpy.spectra.spectrogram.Spectrogram.clip_values"><code class="xref py py-obj docutils literal"><span class="pre">clip_values</span></code></a>([vmin,&nbsp;vmax,&nbsp;out])</td>
+<td>Clip intensities to be in the interval [vmin, vmax].</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.format_freq" title="sunpy.spectra.spectrogram.Spectrogram.format_freq"><code class="xref py py-obj docutils literal"><span class="pre">format_freq</span></code></a>(freq)</td>
+<td>Override to configure default plotting.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.format_time" title="sunpy.spectra.spectrogram.Spectrogram.format_time"><code class="xref py py-obj docutils literal"><span class="pre">format_time</span></code></a>(time)</td>
+<td>Override to configure default plotting.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.freq_overlap" title="sunpy.spectra.spectrogram.Spectrogram.freq_overlap"><code class="xref py py-obj docutils literal"><span class="pre">freq_overlap</span></code></a>(other)</td>
+<td>Get frequency range present in both spectrograms.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.interpolate" title="sunpy.spectra.spectrogram.Spectrogram.interpolate"><code class="xref py py-obj docutils literal"><span class="pre">interpolate</span></code></a>(frequency)</td>
+<td>Linearly interpolate intensity at unknown frequency using linear interpolation of its two neighbours.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.linearize_freqs" title="sunpy.spectra.spectrogram.Spectrogram.linearize_freqs"><code class="xref py py-obj docutils literal"><span class="pre">linearize_freqs</span></code></a>([delta_freq])</td>
+<td>Rebin frequencies so that the frequency axis is linear.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.peek" title="sunpy.spectra.spectrogram.Spectrogram.peek"><code class="xref py py-obj docutils literal"><span class="pre">peek</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Plot spectrum onto current axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.plot" title="sunpy.spectra.spectrogram.Spectrogram.plot"><code class="xref py py-obj docutils literal"><span class="pre">plot</span></code></a>([figure,&nbsp;overlays,&nbsp;colorbar,&nbsp;vmin,&nbsp;...])</td>
+<td>Plot spectrogram onto figure.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.randomized_auto_const_bg" title="sunpy.spectra.spectrogram.Spectrogram.randomized_auto_const_bg"><code class="xref py py-obj docutils literal"><span class="pre">randomized_auto_const_bg</span></code></a>(amount)</td>
+<td>Automatically determine background.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.randomized_subtract_bg" title="sunpy.spectra.spectrogram.Spectrogram.randomized_subtract_bg"><code class="xref py py-obj docutils literal"><span class="pre">randomized_subtract_bg</span></code></a>(amount)</td>
+<td>Perform randomized constant background subtraction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.rescale" title="sunpy.spectra.spectrogram.Spectrogram.rescale"><code class="xref py py-obj docutils literal"><span class="pre">rescale</span></code></a>([vmin,&nbsp;vmax,&nbsp;dtype])</td>
+<td>Rescale intensities to [vmin, vmax].</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.subtract_bg" title="sunpy.spectra.spectrogram.Spectrogram.subtract_bg"><code class="xref py py-obj docutils literal"><span class="pre">subtract_bg</span></code></a>()</td>
+<td>Perform constant background subtraction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.time_formatter" title="sunpy.spectra.spectrogram.Spectrogram.time_formatter"><code class="xref py py-obj docutils literal"><span class="pre">time_formatter</span></code></a>(x,&nbsp;pos)</td>
+<td>This returns the label for the tick of value x at a specified pos on the time axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram.time_to_x" title="sunpy.spectra.spectrogram.Spectrogram.time_to_x"><code class="xref py py-obj docutils literal"><span class="pre">time_to_x</span></code></a>(time)</td>
+<td>Return x-coordinate in spectrogram that corresponds to the passed <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> value.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.COPY_PROPERTIES">
+<code class="descname">COPY_PROPERTIES</code><em class="property"> = [('time_axis', 1), ('freq_axis', 1), ('instruments', 1), ('start', 0), ('end', 0), ('t_label', 0), ('f_label', 0), ('content', 0), ('t_init', 0)]</em><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.COPY_PROPERTIES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.dtype">
+<code class="descname">dtype</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.shape">
+<code class="descname">shape</code><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.at_freq">
+<code class="descname">at_freq</code><span class="sig-paren">(</span><em>freq</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.at_freq"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L871" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.at_freq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.auto_const_bg">
+<code class="descname">auto_const_bg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.auto_const_bg"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L669" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.auto_const_bg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically determine background.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.auto_find_background">
+<code class="descname">auto_find_background</code><span class="sig-paren">(</span><em>amount=0.05</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.auto_find_background"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L644" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.auto_find_background" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically find the background. This
+is done by first subtracting the average value in each channel and then
+finding those times which have the lowest standard deviation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; The percent amount (out of 1) of lowest standard deviation to
+consider.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.clip_freq">
+<code class="descname">clip_freq</code><span class="sig-paren">(</span><em>vmin=None</em>, <em>vmax=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.clip_freq"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L620" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.clip_freq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new spectrogram only consisting of frequencies
+in the interval [vmin, vmax].</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>vmin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; All frequencies in the result are greater or equal to this.</li>
+<li><strong>vmax</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; All frequencies in the result are smaller or equal to this.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.clip_values">
+<code class="descname">clip_values</code><span class="sig-paren">(</span><em>vmin=None</em>, <em>vmax=None</em>, <em>out=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.clip_values"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L723" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.clip_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clip intensities to be in the interval [vmin, vmax].</p>
+<p>Any values greater than the maximum will be assigned the maximum,
+any values lower than the minimum will be assigned the minimum.
+If either is left out or None, do not clip at that side of the interval.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>min</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; New minimum value for intensities.</li>
+<li><strong>max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; New maximum value for intensities</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.format_freq">
+<em class="property">static </em><code class="descname">format_freq</code><span class="sig-paren">(</span><em>freq</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.format_freq"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L418" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.format_freq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override to configure default plotting.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.format_time">
+<em class="property">static </em><code class="descname">format_time</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.format_time"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L413" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.format_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override to configure default plotting.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.freq_overlap">
+<code class="descname">freq_overlap</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.freq_overlap"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L837" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.freq_overlap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get frequency range present in both spectrograms. Returns
+(min, max) tuple.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#sunpy.spectra.spectrogram.Spectrogram" title="sunpy.spectra.spectrogram.Spectrogram"><em>Spectrogram</em></a>) &#8211; other spectrogram with which to look for frequency overlap</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.interpolate">
+<code class="descname">interpolate</code><span class="sig-paren">(</span><em>frequency</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.interpolate"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L771" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linearly interpolate intensity at unknown frequency using linear
+interpolation of its two neighbours.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frequency</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Unknown frequency for which to linearly interpolate the intensities.
+freq_axis[0] &gt;= frequency &gt;= self_freq_axis[-1]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.linearize_freqs">
+<code class="descname">linearize_freqs</code><span class="sig-paren">(</span><em>delta_freq=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.linearize_freqs"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L795" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.linearize_freqs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rebin frequencies so that the frequency axis is linear.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>delta_freq</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; Difference between consecutive values on the new frequency axis.
+Defaults to half of smallest delta in current frequency axis.
+Compare Nyquist-Shannon sampling theorem.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.peek">
+<code class="descname">peek</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.peek"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L423" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.peek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot spectrum onto current axes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>*args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><em>dict</em></a>) &#8211; </li>
+<li><strong>**kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><em>dict</em></a>) &#8211; Any additional plot arguments that should be used
+when plotting.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>fig</strong> (<code class="xref py py-obj docutils literal"><span class="pre">Figure</span></code>) &#8211; A plot figure.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>figure=None</em>, <em>overlays=[]</em>, <em>colorbar=True</em>, <em>vmin=None</em>, <em>vmax=None</em>, <em>linear=True</em>, <em>showz=True</em>, <em>yres=1080</em>, <em>max_dist=None</em>, <em>**matplotlib_args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.plot"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L445" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot spectrogram onto figure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>figure</strong> (<code class="xref py py-obj docutils literal"><span class="pre">Figure</span></code>) &#8211; Figure to plot the spectrogram on. If None, new Figure is created.</li>
+<li><strong>overlays</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) &#8211; List of overlays (functions that receive figure and axes and return
+new ones) to be applied after drawing.</li>
+<li><strong>colorbar</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Flag that determines whether or not to draw a colorbar. If existing
+figure is passed, it is attempted to overdraw old colorbar.</li>
+<li><strong>vmin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; Clip intensities lower than vmin before drawing.</li>
+<li><strong>vmax</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; Clip intensities higher than vmax before drawing.</li>
+<li><strong>linear</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; If set to True, &#8220;stretch&#8221; image to make frequency axis linear.</li>
+<li><strong>showz</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; If set to True, the value of the pixel that is hovered with the
+mouse is shown in the bottom right corner.</li>
+<li><strong>yres</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.6)"><em>None</em></a>) &#8211; To be used in combination with linear=True. If None, sample the
+image with half the minimum frequency delta. Else, sample the
+image to be at most yres pixels in vertical dimension. Defaults
+to 1080 because that&#8217;s a common screen size.</li>
+<li><strong>max_dist</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.6)"><em>None</em></a>) &#8211; If not None, mask elements that are further than max_dist away
+from actual data points (ie, frequencies that actually have data
+from the receiver and are not just nearest-neighbour interpolated).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.randomized_auto_const_bg">
+<code class="descname">randomized_auto_const_bg</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.randomized_auto_const_bg"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L679" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.randomized_auto_const_bg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically determine background. Only consider a randomly
+chosen subset of the image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Size of random sample that is considered for calculation of
+the background.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.randomized_subtract_bg">
+<code class="descname">randomized_subtract_bg</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.randomized_subtract_bg"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L711" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.randomized_subtract_bg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform randomized constant background subtraction.
+Does not produce the same result every time it is run.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Size of random sample that is considered for calculation of
+the background.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.rescale">
+<code class="descname">rescale</code><span class="sig-paren">(</span><em>vmin=0</em>, <em>vmax=1</em>, <em>dtype=dtype('float32')</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.rescale"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L747" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.rescale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rescale intensities to [vmin, vmax].
+Note that vmin ≠ vmax and spectrogram.min() ≠ spectrogram.max().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>vmin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; New minimum value in the resulting spectrogram.</li>
+<li><strong>vmax</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; New maximum value in the resulting spectrogram.</li>
+<li><strong>dtype</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">numpy.dtype</span></code></a>) &#8211; Data-type of the resulting spectrogram.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.subtract_bg">
+<code class="descname">subtract_bg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.subtract_bg"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L675" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.subtract_bg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform constant background subtraction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.time_formatter">
+<code class="descname">time_formatter</code><span class="sig-paren">(</span><em>x</em>, <em>pos</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.time_formatter"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L399" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.time_formatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>This returns the label for the tick of value x at
+a specified pos on the time axis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.Spectrogram.time_to_x">
+<code class="descname">time_to_x</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#Spectrogram.time_to_x"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L852" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.Spectrogram.time_to_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return x-coordinate in spectrogram that corresponds to the
+passed <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time</strong> (<a class="reference internal" href="sunpy.time.parse_time.html#sunpy.time.parse_time" title="sunpy.time.parse_time"><code class="xref py py-obj docutils literal"><span class="pre">parse_time</span></code></a> compatible str) &#8211; <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> to find the x coordinate for.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

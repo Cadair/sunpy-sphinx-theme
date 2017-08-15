@@ -1,0 +1,6 @@
+toggle_pylab
+============
+
+.. currentmodule:: sunpy.visualization
+
+.. autofunction:: toggle_pylab

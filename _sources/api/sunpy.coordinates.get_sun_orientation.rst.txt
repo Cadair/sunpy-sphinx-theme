@@ -1,0 +1,6 @@
+get_sun_orientation
+===================
+
+.. currentmodule:: sunpy.coordinates
+
+.. autofunction:: get_sun_orientation

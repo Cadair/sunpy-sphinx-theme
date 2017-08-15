@@ -1,0 +1,6 @@
+plot_detector_sun_angles
+========================
+
+.. currentmodule:: sunpy.instr.fermi
+
+.. autofunction:: plot_detector_sun_angles

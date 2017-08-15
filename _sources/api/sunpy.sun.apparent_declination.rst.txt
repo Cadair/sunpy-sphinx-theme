@@ -1,0 +1,6 @@
+apparent_declination
+====================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: apparent_declination

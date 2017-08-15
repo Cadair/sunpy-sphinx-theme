@@ -1,0 +1,6 @@
+get_day
+=======
+
+.. currentmodule:: sunpy.time
+
+.. autofunction:: get_day

@@ -1,0 +1,6 @@
+calculate_xray_luminosity
+=========================
+
+.. currentmodule:: sunpy.instr.goes
+
+.. autofunction:: calculate_xray_luminosity

@@ -1,0 +1,6 @@
+NotTextNodeError
+================
+
+.. currentmodule:: sunpy.util.xml
+
+.. autoexception:: NotTextNodeError

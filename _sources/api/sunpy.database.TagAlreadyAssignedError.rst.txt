@@ -1,0 +1,6 @@
+TagAlreadyAssignedError
+=======================
+
+.. currentmodule:: sunpy.database
+
+.. autoexception:: TagAlreadyAssignedError

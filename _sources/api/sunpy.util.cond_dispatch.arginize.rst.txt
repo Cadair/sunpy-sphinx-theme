@@ -1,0 +1,6 @@
+arginize
+========
+
+.. currentmodule:: sunpy.util.cond_dispatch
+
+.. autofunction:: arginize

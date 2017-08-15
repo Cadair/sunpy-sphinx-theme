@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.sun.sun &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.sun.sun | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/sun/sun.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.sun.sun</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Provides Sun-related parameters</span>
+
+<span class="sd">The following code is heavily based on IDL function get_sun.pro which itself</span>
+<span class="sd">is based on algorithms presented in the book Astronomical Formulae for</span>
+<span class="sd">Calculators, by Jean Meeus.</span>
+<span class="sd">Every function returning a quantity is of type astropy.units.Quantity</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="n">Angle</span><span class="p">,</span> <span class="n">Longitude</span><span class="p">,</span> <span class="n">Latitude</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span><span class="p">,</span> <span class="n">julian_day</span><span class="p">,</span> <span class="n">julian_centuries</span>
+<span class="kn">from</span> <span class="nn">sunpy.sun</span> <span class="k">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.decorators</span> <span class="k">import</span> <span class="n">deprecated</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;print_params&quot;</span><span class="p">,</span> <span class="s2">&quot;heliographic_solar_center&quot;</span><span class="p">,</span> <span class="s2">&quot;solar_north&quot;</span><span class="p">,</span> <span class="s2">&quot;apparent_declination&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;apparent_rightascension&quot;</span><span class="p">,</span> <span class="s2">&quot;apparent_obliquity_of_ecliptic&quot;</span><span class="p">,</span> <span class="s2">&quot;true_declination&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;true_rightascension&quot;</span><span class="p">,</span> <span class="s2">&quot;true_obliquity_of_ecliptic&quot;</span><span class="p">,</span> <span class="s2">&quot;apparent_latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;true_latitude&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;apparent_longitude&quot;</span><span class="p">,</span> <span class="s2">&quot;sunearth_distance&quot;</span><span class="p">,</span> <span class="s2">&quot;true_anomaly&quot;</span><span class="p">,</span> <span class="s2">&quot;true_longitude&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;equation_of_center&quot;</span><span class="p">,</span> <span class="s2">&quot;geometric_mean_longitude&quot;</span><span class="p">,</span> <span class="s2">&quot;carrington_rotation_number&quot;</span><span class="p">,</span> <span class="s2">&quot;mean_anomaly&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;longitude_Sun_perigee&quot;</span><span class="p">,</span> <span class="s2">&quot;mean_ecliptic_longitude&quot;</span><span class="p">,</span> <span class="s2">&quot;eccentricity_SunEarth_orbit&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;solar_semidiameter_angular_size&quot;</span><span class="p">,</span> <span class="s2">&quot;solar_cycle_number&quot;</span>
+<span class="p">]</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">A correct answer set to compare to:</span>
+
+<span class="sd">Solar Ephemeris for  1-JAN-01  00:00:00</span>
+
+<span class="sd">Distance (AU) = 0.98330468</span>
+<span class="sd">Semidiameter (arc sec) = 975.92336</span>
+<span class="sd">True (long, lat) in degrees = (280.64366, 0.00000)</span>
+<span class="sd">Apparent (long, lat) in degrees = (280.63336, 0.00000)</span>
+<span class="sd">True (RA, Dec) in hrs, deg = (18.771741, -23.012449)</span>
+<span class="sd">Apparent (RA, Dec) in hrs, deg = (18.770994, -23.012593)</span>
+<span class="sd">Heliographic long. and lat. of disk center in deg = (217.31269, -3.0416292)</span>
+<span class="sd">Position angle of north pole in deg = 2.0102649</span>
+<span class="sd">Carrington Rotation Number = 1971.4091        check!</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">__authors__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Steven Christe&quot;</span><span class="p">]</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;steven.d.christe@nasa.gov&quot;</span>
+
+
+<div class="viewcode-block" id="solar_cycle_number"><a class="viewcode-back" href="../../../api/sunpy.sun.solar_cycle_number.html#sunpy.sun.solar_cycle_number">[docs]</a><span class="k">def</span> <span class="nf">solar_cycle_number</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the solar cycle number.&quot;&quot;&quot;</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">year</span> <span class="o">+</span> <span class="mi">8</span><span class="p">)</span> <span class="o">%</span> <span class="mi">28</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="solar_semidiameter_angular_size"><a class="viewcode-back" href="../../../api/sunpy.sun.solar_semidiameter_angular_size.html#sunpy.sun.solar_semidiameter_angular_size">[docs]</a><span class="k">def</span> <span class="nf">solar_semidiameter_angular_size</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the angular size of the semi-diameter of the Sun as</span>
+<span class="sd">    a function of time as viewed from Earth (in arcsec)</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">        Radius_{\odot}[rad]=\tan^{-1}\left(\frac{&lt;Radius_{\odot}[m]&gt;}{D_{\odot \oplus}(t)[m]}\right)</span>
+
+<span class="sd">    since :math:`tan(x) \approx x` when :math:`x &lt;&lt; 1`</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">        Radius_{\odot}[rad]=\frac{&lt;Radius_{\odot}[m]&gt;}{D_{\odot \oplus}(t)[m]}</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Import here to avoid a circular import</span>
+    <span class="kn">from</span> <span class="nn">sunpy.coordinates</span> <span class="k">import</span> <span class="n">get_sunearth_distance</span>
+    <span class="n">solar_semidiameter_rad</span> <span class="o">=</span> <span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">radius</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">AU</span><span class="p">))</span> <span class="o">/</span> <span class="n">get_sunearth_distance</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">solar_semidiameter_rad</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless_angles</span><span class="p">()))</span></div>
+
+
+<div class="viewcode-block" id="position"><a class="viewcode-back" href="../../../api/sunpy.sun.position.html#sunpy.sun.position">[docs]</a><span class="k">def</span> <span class="nf">position</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the position of the Sun (right ascension and declination)</span>
+<span class="sd">    on the celestial sphere using the equatorial coordinate system in arcsec.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ra</span> <span class="o">=</span> <span class="n">true_rightascension</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">dec</span> <span class="o">=</span> <span class="n">true_declination</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ra</span><span class="p">,</span> <span class="n">dec</span></div>
+
+
+<div class="viewcode-block" id="eccentricity_SunEarth_orbit"><a class="viewcode-back" href="../../../api/sunpy.sun.eccentricity_SunEarth_orbit.html#sunpy.sun.eccentricity_SunEarth_orbit">[docs]</a><span class="k">def</span> <span class="nf">eccentricity_SunEarth_orbit</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the eccentricity of the Sun Earth Orbit.&quot;&quot;&quot;</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">julian_centuries</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mf">0.016751040</span> <span class="o">-</span> <span class="mf">0.00004180</span> <span class="o">*</span> <span class="n">T</span> <span class="o">-</span> <span class="mf">0.0000001260</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="mean_ecliptic_longitude"><a class="viewcode-back" href="../../../api/sunpy.sun.mean_ecliptic_longitude.html#sunpy.sun.mean_ecliptic_longitude">[docs]</a><span class="k">def</span> <span class="nf">mean_ecliptic_longitude</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the mean ecliptic longitude.&quot;&quot;&quot;</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">julian_centuries</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mf">279.696680</span> <span class="o">+</span> <span class="mf">36000.76892</span> <span class="o">*</span> <span class="n">T</span> <span class="o">+</span> <span class="mf">0.0003025</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="longitude_Sun_perigee"><a class="viewcode-back" href="../../../api/sunpy.sun.longitude_Sun_perigee.html#sunpy.sun.longitude_Sun_perigee">[docs]</a><span class="k">def</span> <span class="nf">longitude_Sun_perigee</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>  <span class="c1"># pylint: disable=W0613</span>
+    <span class="c1"># T = julian_centuries(t)</span>
+    <span class="k">return</span> <span class="mi">1</span></div>
+
+
+<div class="viewcode-block" id="mean_anomaly"><a class="viewcode-back" href="../../../api/sunpy.sun.mean_anomaly.html#sunpy.sun.mean_anomaly">[docs]</a><span class="k">def</span> <span class="nf">mean_anomaly</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the mean anomaly (the angle through which the Sun has moved</span>
+<span class="sd">    assuming a circular orbit) as a function of time.&quot;&quot;&quot;</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">julian_centuries</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mf">358.475830</span> <span class="o">+</span> <span class="mf">35999.049750</span> <span class="o">*</span> <span class="n">T</span> <span class="o">-</span> <span class="mf">0.0001500</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.00000330</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">3</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="carrington_rotation_number"><a class="viewcode-back" href="../../../api/sunpy.sun.carrington_rotation_number.html#sunpy.sun.carrington_rotation_number">[docs]</a><span class="k">def</span> <span class="nf">carrington_rotation_number</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the Carrington Rotation number&quot;&quot;&quot;</span>
+    <span class="n">jd</span> <span class="o">=</span> <span class="n">julian_day</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="mf">27.2753</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">jd</span> <span class="o">-</span> <span class="mf">2398167.0</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.0</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="geometric_mean_longitude"><a class="viewcode-back" href="../../../api/sunpy.sun.geometric_mean_longitude.html#sunpy.sun.geometric_mean_longitude">[docs]</a><span class="k">def</span> <span class="nf">geometric_mean_longitude</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the geometric mean longitude (in degrees)&quot;&quot;&quot;</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">julian_centuries</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mf">279.696680</span> <span class="o">+</span> <span class="mf">36000.76892</span> <span class="o">*</span> <span class="n">T</span> <span class="o">+</span> <span class="mf">0.0003025</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="equation_of_center"><a class="viewcode-back" href="../../../api/sunpy.sun.equation_of_center.html#sunpy.sun.equation_of_center">[docs]</a><span class="k">def</span> <span class="nf">equation_of_center</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the Sun&#39;s equation of center (in degrees)&quot;&quot;&quot;</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">julian_centuries</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">mna</span> <span class="o">=</span> <span class="n">mean_anomaly</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">((</span><span class="mf">1.9194600</span> <span class="o">-</span> <span class="mf">0.0047890</span> <span class="o">*</span> <span class="n">T</span> <span class="o">-</span> <span class="mf">0.0000140</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">mna</span><span class="p">)</span> <span class="o">+</span>
+              <span class="p">(</span><span class="mf">0.0200940</span> <span class="o">-</span> <span class="mf">0.0001000</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mna</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.0002930</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">mna</span><span class="p">))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="true_longitude"><a class="viewcode-back" href="../../../api/sunpy.sun.true_longitude.html#sunpy.sun.true_longitude">[docs]</a><span class="k">def</span> <span class="nf">true_longitude</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the Sun&#39;s true geometric longitude (in degrees)</span>
+<span class="sd">    (Referred to the mean equinox of date.  Question: Should the higher</span>
+<span class="sd">    accuracy terms from which app_long is derived be added to true_long?)&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">equation_of_center</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">geometric_mean_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="true_anomaly"><a class="viewcode-back" href="../../../api/sunpy.sun.true_anomaly.html#sunpy.sun.true_anomaly">[docs]</a><span class="k">def</span> <span class="nf">true_anomaly</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the Sun&#39;s true anomaly (in degrees).&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">mean_anomaly</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">equation_of_center</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;0.8&#39;</span><span class="p">,</span> <span class="s1">&#39;Use sunpy.coordinates.get_sunearth_distance() for higher accuracy&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="sunearth_distance"><a class="viewcode-back" href="../../../api/sunpy.sun.sunearth_distance.html#sunpy.sun.sunearth_distance">[docs]</a><span class="k">def</span> <span class="nf">sunearth_distance</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the Sun Earth distance (AU). There are a set of higher</span>
+<span class="sd">    accuracy terms not included here.&quot;&quot;&quot;</span>
+    <span class="n">ta</span> <span class="o">=</span> <span class="n">true_anomaly</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">eccentricity_SunEarth_orbit</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mf">1.00000020</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">e</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ta</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">AU</span></div>
+
+
+<div class="viewcode-block" id="apparent_longitude"><a class="viewcode-back" href="../../../api/sunpy.sun.apparent_longitude.html#sunpy.sun.apparent_longitude">[docs]</a><span class="k">def</span> <span class="nf">apparent_longitude</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the apparent longitude of the Sun.&quot;&quot;&quot;</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">julian_centuries</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">omega</span> <span class="o">=</span> <span class="p">(</span><span class="mf">259.18</span> <span class="o">-</span> <span class="mf">1934.142</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="n">true_long</span> <span class="o">=</span> <span class="n">true_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">true_long</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.00569</span> <span class="o">-</span> <span class="mf">0.00479</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omega</span><span class="p">))</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="true_latitude"><a class="viewcode-back" href="../../../api/sunpy.sun.true_latitude.html#sunpy.sun.true_latitude">[docs]</a><span class="k">def</span> <span class="nf">true_latitude</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>  <span class="c1"># pylint: disable=W0613</span>
+    <span class="sd">&quot;&quot;&quot;Returns the true latitude. Never more than 1.2 arcsec from 0,</span>
+<span class="sd">    set to 0 here.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Latitude</span><span class="p">(</span><span class="mf">0.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="apparent_latitude"><a class="viewcode-back" href="../../../api/sunpy.sun.apparent_latitude.html#sunpy.sun.apparent_latitude">[docs]</a><span class="k">def</span> <span class="nf">apparent_latitude</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>  <span class="c1"># pylint: disable=W0613</span>
+    <span class="sd">&quot;&quot;&quot;Returns the true latitude. Set to 0 here.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Latitude</span><span class="p">(</span><span class="mf">0.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="true_obliquity_of_ecliptic"><a class="viewcode-back" href="../../../api/sunpy.sun.true_obliquity_of_ecliptic.html#sunpy.sun.true_obliquity_of_ecliptic">[docs]</a><span class="k">def</span> <span class="nf">true_obliquity_of_ecliptic</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the true obliquity of the ecliptic.&quot;&quot;&quot;</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">julian_centuries</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mf">23.452294</span> <span class="o">-</span> <span class="mf">0.0130125</span> <span class="o">*</span> <span class="n">T</span> <span class="o">-</span> <span class="mf">0.00000164</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.000000503</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">3</span>
+    <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="true_rightascension"><a class="viewcode-back" href="../../../api/sunpy.sun.true_rightascension.html#sunpy.sun.true_rightascension">[docs]</a><span class="k">def</span> <span class="nf">true_rightascension</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the true right ascension.&quot;&quot;&quot;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">true_obliquity_of_ecliptic</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">true_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">true_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+    <span class="n">true_ra</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">true_ra</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">hourangle</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="true_declination"><a class="viewcode-back" href="../../../api/sunpy.sun.true_declination.html#sunpy.sun.true_declination">[docs]</a><span class="k">def</span> <span class="nf">true_declination</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the true declination.&quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">true_obliquity_of_ecliptic</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">apparent_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">Latitude</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="apparent_obliquity_of_ecliptic"><a class="viewcode-back" href="../../../api/sunpy.sun.apparent_obliquity_of_ecliptic.html#sunpy.sun.apparent_obliquity_of_ecliptic">[docs]</a><span class="k">def</span> <span class="nf">apparent_obliquity_of_ecliptic</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the apparent obliquity of the ecliptic.&quot;&quot;&quot;</span>
+    <span class="n">omega</span> <span class="o">=</span> <span class="n">apparent_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">true_obliquity_of_ecliptic</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.00256</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">omega</span><span class="p">))</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="apparent_rightascension"><a class="viewcode-back" href="../../../api/sunpy.sun.apparent_rightascension.html#sunpy.sun.apparent_rightascension">[docs]</a><span class="k">def</span> <span class="nf">apparent_rightascension</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the apparent right ascension of the Sun.&quot;&quot;&quot;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">apparent_obliquity_of_ecliptic</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">apparent_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">apparent_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+    <span class="n">app_ra</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">app_ra</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">hourangle</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="apparent_declination"><a class="viewcode-back" href="../../../api/sunpy.sun.apparent_declination.html#sunpy.sun.apparent_declination">[docs]</a><span class="k">def</span> <span class="nf">apparent_declination</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the apparent declination of the Sun.&quot;&quot;&quot;</span>
+    <span class="n">ob</span> <span class="o">=</span> <span class="n">apparent_obliquity_of_ecliptic</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">app_long</span> <span class="o">=</span> <span class="n">apparent_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ob</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">app_long</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Latitude</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;0.8&#39;</span><span class="p">,</span> <span class="s1">&#39;Use sunpy.coordinates.get_sun_P() for higher accuracy&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="solar_north"><a class="viewcode-back" href="../../../api/sunpy.sun.solar_north.html#sunpy.sun.solar_north">[docs]</a><span class="k">def</span> <span class="nf">solar_north</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the position of the Solar north pole in degrees.&quot;&quot;&quot;</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">julian_centuries</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">ob1</span> <span class="o">=</span> <span class="n">true_obliquity_of_ecliptic</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="c1"># in degrees</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mf">7.25</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="mf">74.3646</span> <span class="o">+</span> <span class="mf">1.395833</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="n">lamda</span> <span class="o">=</span> <span class="n">true_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.00569</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+    <span class="n">omega</span> <span class="o">=</span> <span class="p">(</span><span class="mf">259.18</span> <span class="o">-</span> <span class="mf">1934.142</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="n">lamda2</span> <span class="o">=</span> <span class="n">lamda</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.00479</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omega</span><span class="p">))</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">lamda</span> <span class="o">-</span> <span class="n">k</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lamda2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">ob1</span><span class="p">))</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;0.8&#39;</span><span class="p">,</span> <span class="s1">&#39;Use sunpy.coordinates.get_sun_L0() and .get_sun_B0() for higher accuracy&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="heliographic_solar_center"><a class="viewcode-back" href="../../../api/sunpy.sun.heliographic_solar_center.html#sunpy.sun.heliographic_solar_center">[docs]</a><span class="k">def</span> <span class="nf">heliographic_solar_center</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the position of the solar center in heliographic coordinates.&quot;&quot;&quot;</span>
+    <span class="n">jd</span> <span class="o">=</span> <span class="n">julian_day</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">julian_centuries</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="c1"># Heliographic coordinates in degrees</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="p">((</span><span class="n">jd</span> <span class="o">-</span> <span class="mi">2398220</span><span class="p">)</span> <span class="o">*</span> <span class="mi">360</span> <span class="o">/</span> <span class="mf">25.38</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mf">7.25</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="mf">74.3646</span> <span class="o">+</span> <span class="mf">1.395833</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="n">lamda</span> <span class="o">=</span> <span class="n">true_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.00569</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">lamda</span> <span class="o">-</span> <span class="n">k</span>
+    <span class="c1"># Latitude at center of disk (deg):</span>
+    <span class="n">he_lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="c1"># Longitude at center of disk (deg):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+    <span class="n">rpol</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+    <span class="n">he_lon</span> <span class="o">=</span> <span class="n">rpol</span> <span class="o">-</span> <span class="n">theta</span>
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">he_lon</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)),</span> <span class="n">Latitude</span><span class="p">(</span><span class="n">he_lat</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="print_params"><a class="viewcode-back" href="../../../api/sunpy.sun.print_params.html#sunpy.sun.print_params">[docs]</a><span class="k">def</span> <span class="nf">print_params</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Print out a summary of Solar ephemeris&quot;&quot;&quot;</span>
+
+    <span class="c1"># import here to avoid circular import</span>
+    <span class="kn">from</span> <span class="nn">sunpy.coordinates.ephemeris</span> <span class="k">import</span> <span class="p">(</span><span class="n">get_sun_L0</span><span class="p">,</span> <span class="n">get_sun_B0</span><span class="p">,</span>
+                                             <span class="n">get_sun_P</span><span class="p">,</span> <span class="n">get_sunearth_distance</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Solar Ephemeris for </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">parse_time</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distance = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">get_sunearth_distance</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Semidiameter = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">solar_semidiameter_angular_size</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True (long, lat) = (</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">true_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">true_latitude</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Apparent (long, lat) = (</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">apparent_longitude</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">apparent_latitude</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True (RA, Dec) = (</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">true_rightascension</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">true_declination</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Apparent (RA, Dec) = (</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">apparent_rightascension</span><span class="p">(</span><span class="n">t</span><span class="p">),</span>
+                                                 <span class="n">apparent_declination</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Heliographic long. and lat of disk center = (</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">get_sun_L0</span><span class="p">(</span><span class="n">t</span><span class="p">),</span>
+                                                                        <span class="n">get_sun_B0</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Position angle of north pole in = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">get_sun_P</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Carrington Rotation Number = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">carrington_rotation_number</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

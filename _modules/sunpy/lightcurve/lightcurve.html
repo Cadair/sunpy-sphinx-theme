@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.lightcurve.lightcurve &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.lightcurve.lightcurve | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/lightcurve/lightcurve.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.lightcurve.lightcurve</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">LightCurve is a generic LightCurve class from which all other LightCurve</span>
+<span class="sd">classes inherit from.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="kn">from</span> <span class="nn">sunpy</span> <span class="k">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">is_time</span><span class="p">,</span> <span class="n">TimeRange</span><span class="p">,</span> <span class="n">parse_time</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.cond_dispatch</span> <span class="k">import</span> <span class="n">ConditionalDispatch</span><span class="p">,</span> <span class="n">run_cls</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.config</span> <span class="k">import</span> <span class="n">get_and_create_download_dir</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="n">urllib</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern</span> <span class="k">import</span> <span class="n">six</span>
+
+<span class="c1"># pylint: disable=E1101,E1121,W0404,W0612,W0613</span>
+<span class="n">__authors__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Keith Hughitt&quot;</span><span class="p">]</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;keith.hughitt@nasa.gov&quot;</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;LightCurve&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="LightCurve"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve">[docs]</a><span class="k">class</span> <span class="nc">LightCurve</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    LightCurve(filepath)</span>
+
+<span class="sd">    A generic light curve object.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    meta : `str` or `dict`</span>
+<span class="sd">        The comment string or header associated with the data.</span>
+<span class="sd">    data : `~pandas.DataFrame`</span>
+<span class="sd">        An pandas DataFrame prepresenting one or more fields as a function of time.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.lightcurve import LightCurve</span>
+<span class="sd">    &gt;&gt;&gt; import datetime</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; base = datetime.datetime.today()</span>
+<span class="sd">    &gt;&gt;&gt; dates = [base - datetime.timedelta(minutes=x) for x in range(0, 24 * 60)]</span>
+<span class="sd">    &gt;&gt;&gt; intensity = np.sin(np.arange(0, 12 * np.pi, step=(12 * np.pi) / 24 * 60))</span>
+<span class="sd">    &gt;&gt;&gt; light_curve = LightCurve.create({&quot;param1&quot;: intensity}, index=dates)</span>
+<span class="sd">    &gt;&gt;&gt; light_curve.peek()   # doctest: +SKIP</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    * `Pandas Documentation &lt;http://pandas.pydata.org/pandas-docs/dev/dsintro.html&gt;`_</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_cond_dispatch</span> <span class="o">=</span> <span class="n">ConditionalDispatch</span><span class="p">()</span>
+    <span class="n">create</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">_cond_dispatch</span><span class="o">.</span><span class="n">wrapper</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">meta</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="n">meta</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">meta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">meta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span><span class="n">meta</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">header</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the lightcurves metadata</span>
+
+<span class="sd">        .. deprecated:: 0.4.0</span>
+<span class="sd">            Use .meta instead</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;lightcurve.header has been renamed to lightcurve.meta</span>
+<span class="s2">        for compatibility with map, please use meta instead&quot;&quot;&quot;</span><span class="p">,</span> <span class="ne">Warning</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta</span>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LightCurve.from_time"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.from_time">[docs]</a>    <span class="k">def</span> <span class="nf">from_time</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called by Conditional Dispatch object when valid time is passed as</span>
+<span class="sd">        input to create method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_url_for_date</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">filepath</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_download</span><span class="p">(</span>
+            <span class="n">url</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">err</span><span class="o">=</span><span class="s2">&quot;Unable to download data for specified date&quot;</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LightCurve.from_range"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.from_range">[docs]</a>    <span class="k">def</span> <span class="nf">from_range</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Called by Conditional Dispatch object when start and end time are</span>
+<span class="sd">        passed as input to create method.</span>
+
+<span class="sd">        :param start:</span>
+<span class="sd">        :param end:</span>
+<span class="sd">        :param kwargs:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_url_for_date_range</span><span class="p">(</span><span class="n">parse_time</span><span class="p">(</span><span class="n">start</span><span class="p">),</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">end</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">filepath</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_download</span><span class="p">(</span>
+            <span class="n">url</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span>
+            <span class="n">err</span><span class="o">=</span><span class="s2">&quot;Unable to download data for specified date range&quot;</span>
+        <span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">truncate</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LightCurve.from_timerange"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.from_timerange">[docs]</a>    <span class="k">def</span> <span class="nf">from_timerange</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">timerange</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called by Conditional Dispatch object when time range is passed as</span>
+<span class="sd">        input to create method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_url_for_date_range</span><span class="p">(</span><span class="n">timerange</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">filepath</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_download</span><span class="p">(</span>
+            <span class="n">url</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="s2">&quot;Unable to download data for specified date range&quot;</span>
+        <span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">truncate</span><span class="p">(</span><span class="n">timerange</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">timerange</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LightCurve.from_file"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.from_file">[docs]</a>    <span class="k">def</span> <span class="nf">from_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Used to return Light Curve object by reading the given filename.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filename: `str`</span>
+<span class="sd">            Path of the file to be read.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Lightcurve object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">meta</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_parse_filepath</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No data found!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">meta</span><span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LightCurve.from_url"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.from_url">[docs]</a>    <span class="k">def</span> <span class="nf">from_url</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called by Conditional Dispatch object to create Light Curve object when</span>
+<span class="sd">        given a url. Downloads a file from the given url, attemps to read it</span>
+<span class="sd">        and returns a Light Curve object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        url : str</span>
+<span class="sd">            A url given as a string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">filepath</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">HTTPError</span><span class="p">,</span> <span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">URLError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="s2">&quot;Unable to read location </span><span class="si">{!s}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LightCurve.from_data"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.from_data">[docs]</a>    <span class="k">def</span> <span class="nf">from_data</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called by Conditional Dispatch object to create Light Curve object when</span>
+<span class="sd">        corresponding data is passed to create method.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        data : `~numpy.ndarray`</span>
+<span class="sd">            The data array</span>
+<span class="sd">        index : `~datetime.datetime` array</span>
+<span class="sd">            The time values</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">),</span>
+            <span class="n">meta</span>
+        <span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LightCurve.from_yesterday"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.from_yesterday">[docs]</a>    <span class="k">def</span> <span class="nf">from_yesterday</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called by Conditional Dispatch object if no input if given</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_url</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_get_default_uri</span><span class="p">())</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LightCurve.from_dataframe"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.from_dataframe">[docs]</a>    <span class="k">def</span> <span class="nf">from_dataframe</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">dataframe</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called by Conditional Dispatch object to create Light Curve object when</span>
+<span class="sd">        Pandas DataFrame is passed to create method.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dataframe : `~pandas.DataFrame`</span>
+<span class="sd">            The data.</span>
+<span class="sd">        meta : `str` or `dict`</span>
+<span class="sd">            The metadata.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">meta</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LightCurve.plot"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.plot">[docs]</a>    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">plot_args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Plot a plot of the light curve</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        axes : `~matplotlib.axes.Axes` or None</span>
+<span class="sd">            If provided the image will be plotted on the given axes. Otherwise</span>
+<span class="sd">            the current axes will be used.</span>
+
+<span class="sd">        **plot_args : `dict`</span>
+<span class="sd">            Any additional plot arguments that should be used</span>
+<span class="sd">            when plotting.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        axes : `~matplotlib.axes.Axes`</span>
+<span class="sd">            The plot axes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Get current axes</span>
+        <span class="k">if</span> <span class="n">axes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+        <span class="n">axes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">,</span> <span class="o">**</span><span class="n">plot_args</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">axes</span></div>
+
+<div class="viewcode-block" id="LightCurve.peek"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Displays the light curve in a new figure.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        **kwargs : `dict`</span>
+<span class="sd">            Any additional plot arguments that should be used</span>
+<span class="sd">            when plotting.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fig : `~matplotlib.Figure`</span>
+<span class="sd">            A plot figure.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">figure</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_download</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span>
+                  <span class="n">err</span><span class="o">=</span><span class="s1">&#39;Unable to download data at specified URL&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Attempts to download data at the specified URI.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        **kwargs : uri</span>
+<span class="sd">            A url</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">_filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># user specifies a download directory</span>
+        <span class="k">if</span> <span class="s2">&quot;directory&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">download_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;directory&quot;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">download_dir</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+
+        <span class="c1"># overwrite the existing file if the keyword is present</span>
+        <span class="k">if</span> <span class="s2">&quot;overwrite&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">overwrite</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;overwrite&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">overwrite</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="c1"># If the file is not already there, download it</span>
+        <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">download_dir</span><span class="p">,</span> <span class="n">_filename</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filepath</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="n">overwrite</span> <span class="ow">and</span>
+                                             <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filepath</span><span class="p">)):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+            <span class="k">except</span> <span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">HTTPError</span><span class="p">,</span> <span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">URLError</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">URLError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">shutil</span><span class="o">.</span><span class="n">copyfileobj</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Using existing file rather than downloading, use &quot;</span>
+                          <span class="s2">&quot;overwrite=True to override.&quot;</span><span class="p">,</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">filepath</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_get_default_uri</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Default data to load when none is specified.&quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;No default action set for </span><span class="si">{}</span><span class="s2">&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_get_url_for_date</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a URL to the data for the specified date.&quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Date-based downloads not supported for for </span><span class="si">{}</span><span class="s2">&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_get_url_for_date_range</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a URL to the data for the specified date range.&quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Date-range based downloads not supported for for </span><span class="si">{}</span><span class="s2">&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_parse_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Place holder method to parse CSV files.&quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Generic CSV parsing not yet implemented for LightCurve&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_parse_fits</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Place holder method to parse FITS files.&quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Generic FITS parsing not yet implemented for LightCurve&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_parse_filepath</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check the file extension to see how to parse the file.&quot;&quot;&quot;</span>
+        <span class="n">filename</span><span class="p">,</span> <span class="n">extension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">extension</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;.txt&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_parse_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_parse_fits</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+<div class="viewcode-block" id="LightCurve.truncate"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.truncate">[docs]</a>    <span class="k">def</span> <span class="nf">truncate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a truncated version of the lightcurve object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        a : `sunpy.time.TimeRange`</span>
+<span class="sd">            A time range to truncate to.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newlc : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">            A new lightcurve with only the selected times.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">TimeRange</span><span class="p">):</span>
+            <span class="n">time_range</span> <span class="o">=</span> <span class="n">a</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">time_range</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+        <span class="n">truncated</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">truncate</span><span class="p">(</span><span class="n">time_range</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">time_range</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">truncated</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="LightCurve.extract"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.extract">[docs]</a>    <span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a new lightcurve with the chosen column.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        column_name : `str`</span>
+<span class="sd">            A valid column name</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newlc : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">            A new lightcurve with only the selected column.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO allow the extract function to pick more than one column</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pandas</span><span class="o">.</span><span class="n">Series</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">LightCurve</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">column_name</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="LightCurve.time_range"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.time_range">[docs]</a>    <span class="k">def</span> <span class="nf">time_range</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the start and end times of the LightCurve as a `~sunpy.time.TimeRange`</span>
+<span class="sd">        object&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">TimeRange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="LightCurve.concatenate"><a class="viewcode-back" href="../../../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.concatenate">[docs]</a>    <span class="k">def</span> <span class="nf">concatenate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otherlightcurve</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Concatenate another light curve. This function will check and remove</span>
+<span class="sd">        any duplicate times. It will keep the column values from the original</span>
+<span class="sd">        lightcurve to which the new lightcurve is being added.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        otherlightcurve : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">            Another lightcurve of the same type.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        newlc : `~sunpy.lightcurve.LightCurve`</span>
+<span class="sd">            A new lightcurve.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">otherlightcurve</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Lightcurve classes must match.&quot;</span><span class="p">)</span>
+
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+        <span class="n">meta</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">copy</span><span class="p">()})</span>
+        <span class="n">meta</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="nb">str</span><span class="p">(</span><span class="n">otherlightcurve</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span> <span class="n">otherlightcurve</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">copy</span><span class="p">()})</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">otherlightcurve</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">index</span>
+        <span class="c1"># default behavior of drop_duplicates is keep the first column.</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">set_index</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">meta</span><span class="p">)</span></div></div>
+
+
+<span class="c1"># What&#39;s happening here is the following: The ConditionalDispatch is just an</span>
+<span class="c1"># unbound callable object, that is, it does not know which class it is attached</span>
+<span class="c1"># to. What we do against that is return a wrapper and make that a classmethod -</span>
+<span class="c1"># thus we get the class as whose member it is called as as the first argument,</span>
+<span class="c1"># this is why in the type signature we always have type as the first type.</span>
+
+<span class="c1"># We then use run_cls, which just returns a wrapper that interprets the first</span>
+<span class="c1"># argument as the class the function should be called of. So,</span>
+<span class="c1"># x = run_cls(&quot;foo&quot;) returns something that turns x(cls, 1) into cls.foo(1).</span>
+<span class="c1"># Because this has *args, **kwargs as its signature we need to disable the</span>
+<span class="c1"># check of ConditionalDispatch that makes sure the function and the</span>
+<span class="c1"># conditional need to have the same signature - but they still do have to.</span>
+
+<span class="n">LightCurve</span><span class="o">.</span><span class="n">_cond_dispatch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">run_cls</span><span class="p">(</span><span class="s2">&quot;from_time&quot;</span><span class="p">),</span>
+    <span class="k">lambda</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">is_time</span><span class="p">(</span><span class="n">time</span><span class="p">),</span>
+    <span class="c1"># type is here because the class parameter is a class,</span>
+    <span class="c1"># i.e. an instance of type (which is the base meta-class).</span>
+    <span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)],</span>
+    <span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">LightCurve</span><span class="o">.</span><span class="n">_cond_dispatch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">run_cls</span><span class="p">(</span><span class="s2">&quot;from_range&quot;</span><span class="p">),</span>
+    <span class="k">lambda</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">time1</span><span class="p">,</span> <span class="n">time2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">is_time</span><span class="p">(</span><span class="n">time1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">is_time</span><span class="p">(</span><span class="n">time2</span><span class="p">),</span>
+    <span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">),</span>
+     <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)],</span>
+    <span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">LightCurve</span><span class="o">.</span><span class="n">_cond_dispatch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">run_cls</span><span class="p">(</span><span class="s2">&quot;from_timerange&quot;</span><span class="p">),</span>
+    <span class="k">lambda</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">timerange</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="n">TimeRange</span><span class="p">],</span>
+    <span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">LightCurve</span><span class="o">.</span><span class="n">_cond_dispatch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">run_cls</span><span class="p">(</span><span class="s2">&quot;from_file&quot;</span><span class="p">),</span>
+    <span class="k">lambda</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">filename</span><span class="p">)),</span>
+    <span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">],</span>
+    <span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">LightCurve</span><span class="o">.</span><span class="n">_cond_dispatch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">run_cls</span><span class="p">(</span><span class="s2">&quot;from_url&quot;</span><span class="p">),</span>
+    <span class="k">lambda</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">],</span>
+    <span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">LightCurve</span><span class="o">.</span><span class="n">_cond_dispatch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">run_cls</span><span class="p">(</span><span class="s2">&quot;from_data&quot;</span><span class="p">),</span>
+    <span class="k">lambda</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pandas</span><span class="o">.</span><span class="n">Series</span><span class="p">),</span> <span class="nb">object</span><span class="p">,</span> <span class="nb">object</span><span class="p">],</span>
+    <span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">LightCurve</span><span class="o">.</span><span class="n">_cond_dispatch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">run_cls</span><span class="p">(</span><span class="s2">&quot;from_dataframe&quot;</span><span class="p">),</span>
+    <span class="k">lambda</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">dataframe</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="nb">object</span><span class="p">],</span>
+    <span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">LightCurve</span><span class="o">.</span><span class="n">_cond_dispatch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">run_cls</span><span class="p">(</span><span class="s2">&quot;from_yesterday&quot;</span><span class="p">),</span>
+    <span class="k">lambda</span> <span class="bp">cls</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">[</span><span class="nb">type</span><span class="p">],</span>
+    <span class="kc">False</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

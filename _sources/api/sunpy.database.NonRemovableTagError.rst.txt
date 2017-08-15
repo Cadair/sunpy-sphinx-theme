@@ -1,0 +1,6 @@
+NonRemovableTagError
+====================
+
+.. currentmodule:: sunpy.database
+
+.. autoexception:: NonRemovableTagError

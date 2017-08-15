@@ -1,0 +1,6 @@
+calculate_clipping
+==================
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: calculate_clipping

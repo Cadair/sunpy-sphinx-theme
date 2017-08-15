@@ -1,0 +1,135 @@
+GenericMap
+==========
+
+.. currentmodule:: sunpy.map
+
+.. autoclass:: GenericMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~GenericMap.bottom_left_coord
+      ~GenericMap.carrington_longitude
+      ~GenericMap.center
+      ~GenericMap.coordinate_frame
+      ~GenericMap.coordinate_system
+      ~GenericMap.date
+      ~GenericMap.detector
+      ~GenericMap.dimensions
+      ~GenericMap.dsun
+      ~GenericMap.dtype
+      ~GenericMap.exposure_time
+      ~GenericMap.heliographic_latitude
+      ~GenericMap.heliographic_longitude
+      ~GenericMap.instrument
+      ~GenericMap.latex_name
+      ~GenericMap.measurement
+      ~GenericMap.name
+      ~GenericMap.ndim
+      ~GenericMap.nickname
+      ~GenericMap.observatory
+      ~GenericMap.observer_coordinate
+      ~GenericMap.processing_level
+      ~GenericMap.reference_coordinate
+      ~GenericMap.reference_pixel
+      ~GenericMap.rotation_matrix
+      ~GenericMap.rsun_meters
+      ~GenericMap.rsun_obs
+      ~GenericMap.scale
+      ~GenericMap.shifted_value
+      ~GenericMap.size
+      ~GenericMap.spatial_units
+      ~GenericMap.top_right_coord
+      ~GenericMap.wavelength
+      ~GenericMap.wcs
+      ~GenericMap.xrange
+      ~GenericMap.yrange
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GenericMap.data_to_pixel
+      ~GenericMap.draw_contours
+      ~GenericMap.draw_grid
+      ~GenericMap.draw_limb
+      ~GenericMap.draw_rectangle
+      ~GenericMap.max
+      ~GenericMap.mean
+      ~GenericMap.min
+      ~GenericMap.peek
+      ~GenericMap.pixel_to_data
+      ~GenericMap.pixel_to_world
+      ~GenericMap.plot
+      ~GenericMap.resample
+      ~GenericMap.rotate
+      ~GenericMap.save
+      ~GenericMap.shift
+      ~GenericMap.std
+      ~GenericMap.submap
+      ~GenericMap.superpixel
+      ~GenericMap.world_to_pixel
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: bottom_left_coord
+   .. autoattribute:: carrington_longitude
+   .. autoattribute:: center
+   .. autoattribute:: coordinate_frame
+   .. autoattribute:: coordinate_system
+   .. autoattribute:: date
+   .. autoattribute:: detector
+   .. autoattribute:: dimensions
+   .. autoattribute:: dsun
+   .. autoattribute:: dtype
+   .. autoattribute:: exposure_time
+   .. autoattribute:: heliographic_latitude
+   .. autoattribute:: heliographic_longitude
+   .. autoattribute:: instrument
+   .. autoattribute:: latex_name
+   .. autoattribute:: measurement
+   .. autoattribute:: name
+   .. autoattribute:: ndim
+   .. autoattribute:: nickname
+   .. autoattribute:: observatory
+   .. autoattribute:: observer_coordinate
+   .. autoattribute:: processing_level
+   .. autoattribute:: reference_coordinate
+   .. autoattribute:: reference_pixel
+   .. autoattribute:: rotation_matrix
+   .. autoattribute:: rsun_meters
+   .. autoattribute:: rsun_obs
+   .. autoattribute:: scale
+   .. autoattribute:: shifted_value
+   .. autoattribute:: size
+   .. autoattribute:: spatial_units
+   .. autoattribute:: top_right_coord
+   .. autoattribute:: wavelength
+   .. autoattribute:: wcs
+   .. autoattribute:: xrange
+   .. autoattribute:: yrange
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: data_to_pixel
+   .. automethod:: draw_contours
+   .. automethod:: draw_grid
+   .. automethod:: draw_limb
+   .. automethod:: draw_rectangle
+   .. automethod:: max
+   .. automethod:: mean
+   .. automethod:: min
+   .. automethod:: peek
+   .. automethod:: pixel_to_data
+   .. automethod:: pixel_to_world
+   .. automethod:: plot
+   .. automethod:: resample
+   .. automethod:: rotate
+   .. automethod:: save
+   .. automethod:: shift
+   .. automethod:: std
+   .. automethod:: submap
+   .. automethod:: superpixel
+   .. automethod:: world_to_pixel

@@ -1,0 +1,913 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Database &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="EntryAlreadyAddedError" href="sunpy.database.EntryAlreadyAddedError.html" />
+    <link rel="prev" title="split_database" href="sunpy.database.split_database.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Database | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.database.Database.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/database.html">SunPy database</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.disable_undo.html">disable_undo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.split_database.html">split_database</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.EntryAlreadyAddedError.html">EntryAlreadyAddedError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.NoSuchEntryError.html">NoSuchEntryError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.NoSuchTagError.html">NoSuchTagError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.NonRemovableTagError.html">NonRemovableTagError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.EntryAlreadyStarredError.html">EntryAlreadyStarredError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.EntryAlreadyUnstarredError.html">EntryAlreadyUnstarredError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.EntryNotFoundError.html">EntryNotFoundError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.TagAlreadyAssignedError.html">TagAlreadyAssignedError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.entries_from_query_result.html">entries_from_query_result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.entries_from_file.html">entries_from_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.entries_from_dir.html">entries_from_dir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.display_entries.html">display_entries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.WaveunitNotFoundError.html">WaveunitNotFoundError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.WaveunitNotConvertibleError.html">WaveunitNotConvertibleError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.JSONDump.html">JSONDump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.FitsHeaderEntry.html">FitsHeaderEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.FitsKeyComment.html">FitsKeyComment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.Tag.html">Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.tables.DatabaseEntry.html">DatabaseEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.caching.BaseCache.html">BaseCache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.caching.LRUCache.html">LRUCache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.caching.LFUCache.html">LFUCache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.commands.EmptyCommandStackError.html">EmptyCommandStackError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.commands.NoSuchEntryError.html">NoSuchEntryError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.commands.NonRemovableTagError.html">NonRemovableTagError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.commands.DatabaseOperation.html">DatabaseOperation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.commands.AddEntry.html">AddEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.commands.RemoveEntry.html">RemoveEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.commands.EditEntry.html">EditEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.commands.CommandManager.html">CommandManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.attrs.Starred.html">Starred</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.attrs.Tag.html">Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.attrs.Path.html">Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.attrs.DownloadTime.html">DownloadTime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.database.attrs.FitsHeaderEntry.html">FitsHeaderEntry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="database">
+<h1>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.database.Database">
+<em class="property">class </em><code class="descclassname">sunpy.database.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>url</em><span class="optional">[</span>, <em>CacheClass</em><span class="optional">[</span>, <em>cache_size</em><span class="optional">[</span>, <em>default_waveunit</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L202" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; A URL describing the database. This value is simply passed to
+<code class="xref py py-func docutils literal"><span class="pre">sqlalchemy.create_engine()</span></code>
+If not specified the value will be read from the sunpy config file.</li>
+<li><strong>CacheClass</strong> (<a class="reference internal" href="sunpy.database.caching.BaseCache.html#sunpy.database.caching.BaseCache" title="sunpy.database.caching.BaseCache"><em>sunpy.database.caching.BaseCache</em></a>) &#8211; A concrete cache implementation of the abstract class BaseCache.
+Builtin supported values for this parameters are
+<a class="reference internal" href="sunpy.database.caching.LRUCache.html#sunpy.database.caching.LRUCache" title="sunpy.database.caching.LRUCache"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.caching.LRUCache</span></code></a> and
+<a class="reference internal" href="sunpy.database.caching.LFUCache.html#sunpy.database.caching.LFUCache" title="sunpy.database.caching.LFUCache"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.caching.LFUCache</span></code></a>.
+The default value is <a class="reference internal" href="sunpy.database.caching.LRUCache.html#sunpy.database.caching.LRUCache" title="sunpy.database.caching.LRUCache"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.caching.LRUCache</span></code></a>.</li>
+<li><strong>cache_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; The maximum number of database entries, default is no limit.</li>
+<li><strong>default_waveunit</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Unit</span></code></a>, optional) &#8211; The wavelength unit that will be used if an entry is added to the
+database but its wavelength unit cannot be found (either in the file or
+the VSO query result block, depending on the way the entry was added).
+If an <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Unit</span></code></a> is passed, it is assigned to <code class="docutils literal"><span class="pre">default_waveunit</span></code>.
+If a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> is passed, it will be converted to <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Unit</span></code></a> through
+the <code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Unit()</span></code> initializer, and then assigned to default_waveunit.
+If an invalid string is passed, <code class="xref py py-obj docutils literal"><span class="pre">WaveunitNotConvertibleError</span></code>
+is raised. If <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">None</span></code></a> (the default), attempting to add an entry without knowing
+the wavelength unit results in a
+<code class="xref py py-exc docutils literal"><span class="pre">sunpy.database.WaveunitNotFoundError</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.cache_maxsize" title="sunpy.database.Database.cache_maxsize"><code class="xref py py-obj docutils literal"><span class="pre">cache_maxsize</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.cache_size" title="sunpy.database.Database.cache_size"><code class="xref py py-obj docutils literal"><span class="pre">cache_size</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.tags" title="sunpy.database.Database.tags"><code class="xref py py-obj docutils literal"><span class="pre">tags</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.url" title="sunpy.database.Database.url"><code class="xref py py-obj docutils literal"><span class="pre">url</span></code></a></td>
+<td>The sqlalchemy url of the database instance</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.add" title="sunpy.database.Database.add"><code class="xref py py-obj docutils literal"><span class="pre">add</span></code></a>(database_entry[,&nbsp;ignore_already_added])</td>
+<td>Add the given database entry to the database table.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.add_from_dir" title="sunpy.database.Database.add_from_dir"><code class="xref py py-obj docutils literal"><span class="pre">add_from_dir</span></code></a>(path[,&nbsp;recursive,&nbsp;pattern,&nbsp;...])</td>
+<td>Search the given directory for FITS files and use their FITS headers to add new entries to the database.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.add_from_fido_search_result" title="sunpy.database.Database.add_from_fido_search_result"><code class="xref py py-obj docutils literal"><span class="pre">add_from_fido_search_result</span></code></a>(search_result[,&nbsp;...])</td>
+<td>Generate database entries from a Fido search result and add all the generated entries to this database.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.add_from_file" title="sunpy.database.Database.add_from_file"><code class="xref py py-obj docutils literal"><span class="pre">add_from_file</span></code></a>(file[,&nbsp;ignore_already_added])</td>
+<td>Generate as many database entries as there are FITS headers in the given file and add them to the database.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.add_from_hek_query_result" title="sunpy.database.Database.add_from_hek_query_result"><code class="xref py py-obj docutils literal"><span class="pre">add_from_hek_query_result</span></code></a>(query_result[,&nbsp;...])</td>
+<td>Add database entries from a HEK query result.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.add_from_vso_query_result" title="sunpy.database.Database.add_from_vso_query_result"><code class="xref py py-obj docutils literal"><span class="pre">add_from_vso_query_result</span></code></a>(query_result[,&nbsp;...])</td>
+<td>Generate database entries from a VSO query result and add all the generated entries to this database.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.add_many" title="sunpy.database.Database.add_many"><code class="xref py py-obj docutils literal"><span class="pre">add_many</span></code></a>(database_entries[,&nbsp;...])</td>
+<td>Add a row of database entries &#8220;at once&#8221;.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.clear" title="sunpy.database.Database.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>()</td>
+<td>Remove all entries from the database.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.clear_histories" title="sunpy.database.Database.clear_histories"><code class="xref py py-obj docutils literal"><span class="pre">clear_histories</span></code></a>()</td>
+<td>Clears all entries from the undo and redo history.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.commit" title="sunpy.database.Database.commit"><code class="xref py py-obj docutils literal"><span class="pre">commit</span></code></a>()</td>
+<td>Flush pending changes and commit the current transaction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.display_entries" title="sunpy.database.Database.display_entries"><code class="xref py py-obj docutils literal"><span class="pre">display_entries</span></code></a>([columns,&nbsp;sort])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.download" title="sunpy.database.Database.download"><code class="xref py py-obj docutils literal"><span class="pre">download</span></code></a>(*query,&nbsp;**kwargs)</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.download_from_vso_query_result" title="sunpy.database.Database.download_from_vso_query_result"><code class="xref py py-obj docutils literal"><span class="pre">download_from_vso_query_result</span></code></a>(query_result)</td>
+<td>download(query_result, client=sunpy.net.vso.VSOClient(),</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.edit" title="sunpy.database.Database.edit"><code class="xref py py-obj docutils literal"><span class="pre">edit</span></code></a>(database_entry,&nbsp;**kwargs)</td>
+<td>Change the given database entry so that it interprets the passed key-value pairs as new values where the keys represent the attributes of this entry.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.fetch" title="sunpy.database.Database.fetch"><code class="xref py py-obj docutils literal"><span class="pre">fetch</span></code></a>(*query[,&nbsp;path,&nbsp;overwrite,&nbsp;client,&nbsp;...)</td>
+<td>Check if the query has already been used to collect new data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.get_entry_by_id" title="sunpy.database.Database.get_entry_by_id"><code class="xref py py-obj docutils literal"><span class="pre">get_entry_by_id</span></code></a>(entry_id)</td>
+<td>Get a database entry by its unique ID number.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.get_tag" title="sunpy.database.Database.get_tag"><code class="xref py py-obj docutils literal"><span class="pre">get_tag</span></code></a>(tag_name)</td>
+<td>Get the tag which has the given name.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.query" title="sunpy.database.Database.query"><code class="xref py py-obj docutils literal"><span class="pre">query</span></code></a>(*query,&nbsp;**kwargs)</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.redo" title="sunpy.database.Database.redo"><code class="xref py py-obj docutils literal"><span class="pre">redo</span></code></a>([n])</td>
+<td>redo the last n commands.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.remove" title="sunpy.database.Database.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(database_entry)</td>
+<td>Remove the given database entry from the database table.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.remove_many" title="sunpy.database.Database.remove_many"><code class="xref py py-obj docutils literal"><span class="pre">remove_many</span></code></a>(database_entries)</td>
+<td>Remove a row of database entries &#8220;at once&#8221;.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.remove_tag" title="sunpy.database.Database.remove_tag"><code class="xref py py-obj docutils literal"><span class="pre">remove_tag</span></code></a>(database_entry,&nbsp;tag_name)</td>
+<td>Remove the given tag from the database entry.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.search" title="sunpy.database.Database.search"><code class="xref py py-obj docutils literal"><span class="pre">search</span></code></a>(*query[,&nbsp;sortby])</td>
+<td>Send the given query to the database and return a list of database entries that satisfy all of the given attributes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.set_cache_size" title="sunpy.database.Database.set_cache_size"><code class="xref py py-obj docutils literal"><span class="pre">set_cache_size</span></code></a>(cache_size)</td>
+<td>Set a new value for the maximum number of database entries in the cache.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.show_in_browser" title="sunpy.database.Database.show_in_browser"><code class="xref py py-obj docutils literal"><span class="pre">show_in_browser</span></code></a>([columns,&nbsp;sort,&nbsp;jsviewer])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.star" title="sunpy.database.Database.star"><code class="xref py py-obj docutils literal"><span class="pre">star</span></code></a>(database_entry[,&nbsp;ignore_already_starred])</td>
+<td>Mark the given database entry as starred.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.tag" title="sunpy.database.Database.tag"><code class="xref py py-obj docutils literal"><span class="pre">tag</span></code></a>(database_entry,&nbsp;*tags)</td>
+<td>Assign the given database entry the given tags.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.database.Database.undo" title="sunpy.database.Database.undo"><code class="xref py py-obj docutils literal"><span class="pre">undo</span></code></a>([n])</td>
+<td>undo the last n commands.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.database.Database.unstar" title="sunpy.database.Database.unstar"><code class="xref py py-obj docutils literal"><span class="pre">unstar</span></code></a>(database_entry[,&nbsp;...])</td>
+<td>Remove the starred mark of the given entry.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="sunpy.database.Database.cache_maxsize">
+<code class="descname">cache_maxsize</code><a class="headerlink" href="#sunpy.database.Database.cache_maxsize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.database.Database.cache_size">
+<code class="descname">cache_size</code><a class="headerlink" href="#sunpy.database.Database.cache_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.database.Database.tags">
+<code class="descname">tags</code><a class="headerlink" href="#sunpy.database.Database.tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.database.Database.url">
+<code class="descname">url</code><a class="headerlink" href="#sunpy.database.Database.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The sqlalchemy url of the database instance</p>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="sunpy.database.Database.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>database_entry</em>, <em>ignore_already_added=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.add"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L778" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the given database entry to the database table.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>database_entry</strong> (<a class="reference internal" href="sunpy.database.tables.DatabaseEntry.html#sunpy.database.tables.DatabaseEntry" title="sunpy.database.tables.DatabaseEntry"><em>sunpy.database.tables.DatabaseEntry</em></a>) &#8211; The database entry that will be added to this database.</li>
+<li><strong>ignore_already_added</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a><em>, </em><em>optional</em>) &#8211; If True, attempts to add an already existing database entry will
+result in a <a class="reference internal" href="sunpy.database.EntryAlreadyAddedError.html#sunpy.database.EntryAlreadyAddedError" title="sunpy.database.EntryAlreadyAddedError"><code class="xref py py-exc docutils literal"><span class="pre">sunpy.database.EntryAlreadyAddedError</span></code></a>.
+Otherwise, a new entry will be added and there will be duplicates
+in the database.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.add_from_dir">
+<code class="descname">add_from_dir</code><span class="sig-paren">(</span><em>path</em>, <em>recursive=False</em>, <em>pattern='*'</em>, <em>ignore_already_added=False</em>, <em>time_string_parse_format=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.add_from_dir"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L890" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.add_from_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search the given directory for FITS files and use their FITS headers
+to add new entries to the database. Note that one entry in the database
+is assigned to a list of FITS headers, so not the number of FITS headers
+but the number of FITS files which have been read determine the number
+of database entries that will be added. FITS files are detected by
+reading the content of each file, the <code class="xref py py-obj docutils literal"><span class="pre">pattern</span></code> argument may be used to
+avoid reading entire directories if one knows that all FITS files have
+the same filename extension.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.6)"><em>string</em></a>) &#8211; The directory where to look for FITS files.</li>
+<li><strong>recursive</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a><em>, </em><em>optional</em>) &#8211; If True, the given directory will be searched recursively.
+Otherwise, only the given directory and no subdirectories are
+searched. The default is <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">False</span></code></a>, i.e. the given directory is not
+searched recursively.</li>
+<li><strong>pattern</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.6)"><em>string</em></a><em>, </em><em>optional</em>) &#8211; The pattern can be used to filter the list of filenames before the
+files are attempted to be read. The default is to collect all
+files. This value is passed to the function <a class="reference external" href="https://docs.python.org/3/library/fnmatch.html#fnmatch.filter" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">fnmatch.filter()</span></code></a>,
+see its documentation for more information on the supported syntax.</li>
+<li><strong>ignore_already_added</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a><em>, </em><em>optional</em>) &#8211; See <a class="reference internal" href="#sunpy.database.Database.add" title="sunpy.database.Database.add"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.Database.add()</span></code></a>.</li>
+<li><strong>time_string_parse_format</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a><em>, </em><em>optional</em>) &#8211; Fallback timestamp format which will be passed to
+<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.strftime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">strftime</span></code></a> if <a class="reference internal" href="sunpy.time.parse_time.html#sunpy.time.parse_time" title="sunpy.time.parse_time"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.time.parse_time</span></code></a> is unable to
+automatically read the <code class="xref py py-obj docutils literal"><span class="pre">date-obs</span></code> metadata.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.add_from_fido_search_result">
+<code class="descname">add_from_fido_search_result</code><span class="sig-paren">(</span><em>search_result</em>, <em>ignore_already_added=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.add_from_fido_search_result"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L868" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.add_from_fido_search_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate database entries from a Fido search result and add all the
+generated entries to this database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>search_result</strong> (<a class="reference internal" href="sunpy.net.fido_factory.UnifiedResponse.html#sunpy.net.fido_factory.UnifiedResponse" title="sunpy.net.fido_factory.UnifiedResponse"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.net.fido_factory.UnifiedResponse</span></code></a>) &#8211; A UnifiedResponse object that is used to store responses from the
+unified downloader. This is returned by the <code class="docutils literal"><span class="pre">search</span></code> method of a
+<a class="reference internal" href="sunpy.net.fido_factory.UnifiedDownloaderFactory.html#sunpy.net.fido_factory.UnifiedDownloaderFactory" title="sunpy.net.fido_factory.UnifiedDownloaderFactory"><code class="xref py py-class docutils literal"><span class="pre">sunpy.net.fido_factory.UnifiedDownloaderFactory</span></code></a>
+object.</li>
+<li><strong>ignore_already_added</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>) &#8211; See <a class="reference internal" href="#sunpy.database.Database.add" title="sunpy.database.Database.add"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.Database.add()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.add_from_file">
+<code class="descname">add_from_file</code><span class="sig-paren">(</span><em>file</em>, <em>ignore_already_added=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.add_from_file"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L943" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.add_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate as many database entries as there are FITS headers in the
+given file and add them to the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a><em> or </em><em>file-like object</em>) &#8211; Either a path pointing to a FITS file or a an opened file-like
+object. If an opened file object, its mode must be one of the
+following rb, rb+, or ab+.</li>
+<li><strong>ignore_already_added</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a><em>, </em><em>optional</em>) &#8211; See <a class="reference internal" href="#sunpy.database.Database.add" title="sunpy.database.Database.add"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.Database.add()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.add_from_hek_query_result">
+<code class="descname">add_from_hek_query_result</code><span class="sig-paren">(</span><em>query_result</em>, <em>ignore_already_added=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.add_from_hek_query_result"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L805" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.add_from_hek_query_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add database entries from a HEK query result.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>query_result</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) &#8211; The value returned by <code class="xref py py-meth docutils literal"><span class="pre">sunpy.net.hek.HEKClient().query()</span></code></li>
+<li><strong>ignore_already_added</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; See <a class="reference internal" href="#sunpy.database.Database.add" title="sunpy.database.Database.add"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.Database.add()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.add_from_vso_query_result">
+<code class="descname">add_from_vso_query_result</code><span class="sig-paren">(</span><em>query_result</em>, <em>ignore_already_added=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.add_from_vso_query_result"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L848" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.add_from_vso_query_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate database entries from a VSO query result and add all the
+generated entries to this database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>query_result</strong> (<em>sunpy.net.vso.vso.QueryResponse</em>) &#8211; A VSO query response that was returned by the <code class="docutils literal"><span class="pre">query</span></code> method of a
+<a class="reference internal" href="sunpy.net.vso.VSOClient.html#sunpy.net.vso.VSOClient" title="sunpy.net.vso.VSOClient"><code class="xref py py-class docutils literal"><span class="pre">sunpy.net.vso.VSOClient</span></code></a> object.</li>
+<li><strong>ignore_already_added</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; See <a class="reference internal" href="#sunpy.database.Database.add" title="sunpy.database.Database.add"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.Database.add()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.add_many">
+<code class="descname">add_many</code><span class="sig-paren">(</span><em>database_entries</em>, <em>ignore_already_added=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.add_many"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L746" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.add_many" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a row of database entries &#8220;at once&#8221;. If this method is used,
+only one entry is saved in the undo history.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>database_entries</strong> (<em>iterable of sunpy.database.tables.DatabaseEntry</em>) &#8211; The database entries that will be added to the database.</li>
+<li><strong>ignore_already_added</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a><em>, </em><em>optional</em>) &#8211; See Database.add</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.clear"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L1015" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all entries from the database. This operation can be undone
+using the <a class="reference internal" href="#sunpy.database.Database.undo" title="sunpy.database.Database.undo"><code class="xref py py-meth docutils literal"><span class="pre">undo()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.clear_histories">
+<code class="descname">clear_histories</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.clear_histories"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L1041" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.clear_histories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears all entries from the undo and redo history.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="sunpy.database.commands.CommandManager.html#sunpy.database.commands.CommandManager.clear_histories" title="sunpy.database.commands.CommandManager.clear_histories"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.commands.CommandManager.clear_histories()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.commit">
+<code class="descname">commit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.commit"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L380" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.commit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush pending changes and commit the current transaction. This is a
+shortcut for <code class="xref py py-meth docutils literal"><span class="pre">session.commit()</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.display_entries">
+<code class="descname">display_entries</code><span class="sig-paren">(</span><em>columns=None</em>, <em>sort=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.display_entries"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L1070" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.display_entries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.download">
+<code class="descname">download</code><span class="sig-paren">(</span><em>*query</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.download"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L449" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.download" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>The download function is deprecated and may be removed in a future version.
+    Use database.fetch() instead.</p>
+</div>
+<p>See <a class="reference internal" href="#sunpy.database.Database.fetch" title="sunpy.database.Database.fetch"><code class="xref py py-obj docutils literal"><span class="pre">fetch</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.download_from_vso_query_result">
+<code class="descname">download_from_vso_query_result</code><span class="sig-paren">(</span><em>query_result</em>, <em>client=None</em>, <em>path=None</em>, <em>progress=False</em>, <em>ignore_already_added=False</em>, <em>overwrite=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.download_from_vso_query_result"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L822" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.download_from_vso_query_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>download(query_result, client=sunpy.net.vso.VSOClient(),
+path=None, progress=False, ignore_already_added=False)</p>
+<p>Add new database entries from a VSO query result and download the
+corresponding data files. See <a class="reference internal" href="#sunpy.database.Database.download" title="sunpy.database.Database.download"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.Database.download()</span></code></a>
+for information about the caching mechanism used and about the
+parameters <code class="xref py py-obj docutils literal"><span class="pre">client</span></code>, <code class="xref py py-obj docutils literal"><span class="pre">path</span></code>, <code class="xref py py-obj docutils literal"><span class="pre">progress</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>query_result</strong> (<em>sunpy.net.vso.vso.QueryResponse</em>) &#8211; A VSO query response that was returned by the <code class="docutils literal"><span class="pre">query</span></code> method of a
+<a class="reference internal" href="sunpy.net.vso.VSOClient.html#sunpy.net.vso.VSOClient" title="sunpy.net.vso.VSOClient"><code class="xref py py-class docutils literal"><span class="pre">sunpy.net.vso.VSOClient</span></code></a> object.</li>
+<li><strong>ignore_already_added</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; See <a class="reference internal" href="#sunpy.database.Database.add" title="sunpy.database.Database.add"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.Database.add()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.edit">
+<code class="descname">edit</code><span class="sig-paren">(</span><em>database_entry</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.edit"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L962" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the given database entry so that it interprets the passed
+key-value pairs as new values where the keys represent the attributes
+of this entry. If no keywords arguments are given, <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> is
+raised.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.fetch">
+<code class="descname">fetch</code><span class="sig-paren">(</span><em>*query</em><span class="optional">[</span>, <em>path</em>, <em>overwrite</em>, <em>client</em>, <em>progress</em>, <em>methods</em><span class="optional">]</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.fetch"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L457" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.fetch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the query has already been used to collect new data.</p>
+<p>If yes, query the database using the method
+<a class="reference internal" href="#sunpy.database.Database.query" title="sunpy.database.Database.query"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.Database.query()</span></code></a> and return the result.</p>
+<p>Otherwise, the retrieved search result is used to download all files
+that belong to this search result. After that, all the gathered
+information (the one from the query result and the one from the
+downloaded files) is added to the database in a way that each header
+is represented by one database entry.</p>
+<p>It uses the
+<code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.Database._download_and_collect_entries()</span></code> method
+to download files, which uses query result block level caching. This
+means that files will not be downloaded for any query result block
+that had its files downloaded previously. If files for Query A were
+already downloaded, and then Query B is made which has some result
+blocks common with Query A, then files for these common blocks will
+not be downloaded again. Files will only be downloaded for those
+blocks which are new or haven&#8217;t had their files downloaded yet.</p>
+<p>If querying results in no data, no operation is performed. Concrete,
+this means that no entry is added to the database and no file is
+downloaded.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>query</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a>) &#8211; A variable number of attributes that are chained together via the
+boolean AND operator. The | operator may be used between attributes
+to express the boolean OR operator.</li>
+<li><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a>, optional) &#8211; The directory into which files will be downloaded.</li>
+<li><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>, optional) &#8211; If True, matching database entries from the query results will be
+deleted and replaced with new database entries, with all files
+getting downloaded.
+Otherwise, no new file download and update of matching database
+entries takes place.</li>
+<li><strong>client</strong> (<a class="reference internal" href="sunpy.net.vso.VSOClient.html#sunpy.net.vso.VSOClient" title="sunpy.net.vso.VSOClient"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.net.vso.VSOClient</span></code></a>, optional) &#8211; VSO Client instance to use for search and download.
+If not specified a new instance will be created.</li>
+<li><strong>progress</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>, optional) &#8211; If True, displays the progress bar during file download.</li>
+<li><strong>methods</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> or iterable of <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a>, optional) &#8211; Set VSOClient download method, see`~sunpy.net.vso.VSOClient.get`
+for details.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>The <code class="xref py py-obj docutils literal"><span class="pre">fetch</span></code> method can be used along with the <code class="xref py py-obj docutils literal"><span class="pre">overwrite=True</span></code>
+argument to overwrite and redownload files corresponding to the query, even if
+its entries are already present in the database. Note that the <code class="xref py py-obj docutils literal"><span class="pre">overwrite=True</span></code>
+argument deletes the old matching database entries and new database entries are
+added with information from the redownloaded files.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.database</span> <span class="k">import</span> <span class="n">Database</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.database.tables</span> <span class="k">import</span> <span class="n">display_entries</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">vso</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">database</span> <span class="o">=</span> <span class="n">Database</span><span class="p">(</span><span class="s1">&#39;sqlite:///:memory:&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">database</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2012-08-05&#39;</span><span class="p">,</span> <span class="s1">&#39;2012-08-05 00:00:05&#39;</span><span class="p">),</span>
+<span class="gp">... </span>               <span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;AIA&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">display_entries</span><span class="p">(</span><span class="n">database</span><span class="p">,</span>
+<span class="gp">... </span>                      <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;observation_time_start&#39;</span><span class="p">,</span> <span class="s1">&#39;observation_time_end&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                       <span class="s1">&#39;instrument&#39;</span><span class="p">,</span> <span class="s1">&#39;wavemin&#39;</span><span class="p">,</span> <span class="s1">&#39;wavemax&#39;</span><span class="p">]))</span>
+<span class="go">    id observation_time_start observation_time_end instrument wavemin wavemax</span>
+<span class="go">    --- ---------------------- -------------------- ---------- ------- -------</span>
+<span class="go">      1    2012-08-05 00:00:01  2012-08-05 00:00:02        AIA     9.4     9.4</span>
+<span class="go">      2    2012-08-05 00:00:01  2012-08-05 00:00:02        AIA     9.4     9.4</span>
+<span class="go">      3    2012-08-05 00:00:02  2012-08-05 00:00:03        AIA    33.5    33.5</span>
+<span class="go">      4    2012-08-05 00:00:02  2012-08-05 00:00:03        AIA    33.5    33.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">database</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2012-08-05&#39;</span><span class="p">,</span> <span class="s1">&#39;2012-08-05 00:00:01&#39;</span><span class="p">),</span>
+<span class="gp">... </span>               <span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;AIA&#39;</span><span class="p">),</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">display_entries</span><span class="p">(</span><span class="n">database</span><span class="p">,</span>
+<span class="gp">... </span>                      <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;observation_time_start&#39;</span><span class="p">,</span> <span class="s1">&#39;observation_time_end&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                       <span class="s1">&#39;instrument&#39;</span><span class="p">,</span> <span class="s1">&#39;wavemin&#39;</span><span class="p">,</span> <span class="s1">&#39;wavemax&#39;</span><span class="p">]))</span>
+<span class="go">     id observation_time_start observation_time_end instrument wavemin wavemax</span>
+<span class="go">    --- ---------------------- -------------------- ---------- ------- -------</span>
+<span class="go">      3    2012-08-05 00:00:02  2012-08-05 00:00:03        AIA    33.5    33.5</span>
+<span class="go">      4    2012-08-05 00:00:02  2012-08-05 00:00:03        AIA    33.5    33.5</span>
+<span class="go">      5    2012-08-05 00:00:01  2012-08-05 00:00:02        AIA     9.4     9.4</span>
+<span class="go">      6    2012-08-05 00:00:01  2012-08-05 00:00:02        AIA     9.4     9.4</span>
+</pre></div>
+</div>
+<p>Here the first 2 entries (IDs 1 and 2) were overwritten and its files were redownloaded,
+resulting in the entries with IDs 5 and 6.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.get_entry_by_id">
+<code class="descname">get_entry_by_id</code><span class="sig-paren">(</span><em>entry_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.get_entry_by_id"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L638" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.get_entry_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a database entry by its unique ID number. If an entry with the
+given ID does not exist, <a class="reference internal" href="sunpy.database.EntryNotFoundError.html#sunpy.database.EntryNotFoundError" title="sunpy.database.EntryNotFoundError"><code class="xref py py-exc docutils literal"><span class="pre">sunpy.database.EntryNotFoundError</span></code></a> is
+raised.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.get_tag">
+<code class="descname">get_tag</code><span class="sig-paren">(</span><em>tag_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.get_tag"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L653" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.get_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the tag which has the given name. If no such tag exists,
+<a class="reference internal" href="sunpy.database.NoSuchTagError.html#sunpy.database.NoSuchTagError" title="sunpy.database.NoSuchTagError"><code class="xref py py-exc docutils literal"><span class="pre">sunpy.database.NoSuchTagError</span></code></a> is raised.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>*query</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.query"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L631" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.query" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>The query function is deprecated and may be removed in a future version.
+    Use database.search instead.</p>
+</div>
+<p>See <a class="reference internal" href="#sunpy.database.Database.search" title="sunpy.database.Database.search"><code class="xref py py-obj docutils literal"><span class="pre">search</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.redo">
+<code class="descname">redo</code><span class="sig-paren">(</span><em>n=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.redo"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L1060" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.redo" title="Permalink to this definition">¶</a></dt>
+<dd><p>redo the last n commands.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="sunpy.database.commands.CommandManager.html#sunpy.database.commands.CommandManager.redo" title="sunpy.database.commands.CommandManager.redo"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.commands.CommandManager.redo()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.remove">
+<code class="descname">remove</code><span class="sig-paren">(</span><em>database_entry</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.remove"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L1000" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the given database entry from the database table.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.remove_many">
+<code class="descname">remove_many</code><span class="sig-paren">(</span><em>database_entries</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.remove_many"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L976" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.remove_many" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a row of database entries &#8220;at once&#8221;. If this method is used,
+only one entry is saved in the undo history.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>database_entries</strong> (<em>iterable of sunpy.database.tables.DatabaseEntry</em>) &#8211; The database entries that will be removed from the database.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.remove_tag">
+<code class="descname">remove_tag</code><span class="sig-paren">(</span><em>database_entry</em>, <em>tag_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.remove_tag"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L697" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.remove_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the given tag from the database entry. If the tag is not
+connected to any entry after this operation, the tag itself is removed
+from the database as well.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="sunpy.database.NoSuchTagError.html#sunpy.database.NoSuchTagError" title="sunpy.database.NoSuchTagError"><code class="xref py py-exc docutils literal"><span class="pre">sunpy.database.NoSuchTagError</span></code></a> &#8211; If the tag is not connected to the given entry.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.search">
+<code class="descname">search</code><span class="sig-paren">(</span><em>*query</em><span class="optional">[</span>, <em>sortby</em><span class="optional">]</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.search"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L566" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send the given query to the database and return a list of
+database entries that satisfy all of the given attributes.</p>
+<p>Apart from the attributes supported by the VSO interface, the following
+attributes are supported:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="sunpy.database.attrs.Starred.html#sunpy.database.attrs.Starred" title="sunpy.database.attrs.Starred"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.attrs.Starred</span></code></a></li>
+<li><a class="reference internal" href="sunpy.database.attrs.Tag.html#sunpy.database.attrs.Tag" title="sunpy.database.attrs.Tag"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.attrs.Tag</span></code></a></li>
+<li><a class="reference internal" href="sunpy.database.attrs.Path.html#sunpy.database.attrs.Path" title="sunpy.database.attrs.Path"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.attrs.Path</span></code></a></li>
+<li><a class="reference internal" href="sunpy.database.attrs.DownloadTime.html#sunpy.database.attrs.DownloadTime" title="sunpy.database.attrs.DownloadTime"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.attrs.DownloadTime</span></code></a></li>
+<li><a class="reference internal" href="sunpy.database.attrs.FitsHeaderEntry.html#sunpy.database.attrs.FitsHeaderEntry" title="sunpy.database.attrs.FitsHeaderEntry"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.attrs.FitsHeaderEntry</span></code></a></li>
+</ul>
+</div></blockquote>
+<p>An important difference to the VSO attributes is that these attributes
+may also be used in negated form using the tilde ~ operator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>query</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a>) &#8211; A variable number of attributes that are chained together via the
+boolean AND operator. The | operator may be used between attributes
+to express the boolean OR operator.</li>
+<li><strong>sortby</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a>, optional) &#8211; The column by which to sort the returned entries. The default is to
+sort by the start of the observation. See the attributes of
+<a class="reference internal" href="sunpy.database.tables.DatabaseEntry.html#sunpy.database.tables.DatabaseEntry" title="sunpy.database.tables.DatabaseEntry"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.tables.DatabaseEntry</span></code></a> for a list of all
+possible values.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> &#8211; if no attribute is given or if some keyword argument other than
+&#8216;sortby&#8217; is given.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>The query in the following example searches for all non-starred entries
+with the tag &#8216;foo&#8217; or &#8216;bar&#8217; (or both).</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">database</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="o">~</span><span class="n">attrs</span><span class="o">.</span><span class="n">Starred</span><span class="p">(),</span> <span class="n">attrs</span><span class="o">.</span><span class="n">Tag</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="n">attrs</span><span class="o">.</span><span class="n">Tag</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">))</span>   
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.set_cache_size">
+<code class="descname">set_cache_size</code><span class="sig-paren">(</span><em>cache_size</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.set_cache_size"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L343" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.set_cache_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a new value for the maximum number of database entries in the
+cache. Use the value <code class="docutils literal"><span class="pre">float('inf')</span></code> to disable caching. If the new
+cache is smaller than the previous one and cannot contain all the
+entries anymore, entries are removed from the cache until the number of
+entries equals the cache size. Which entries are removed depends on the
+implementation of the cache (e.g.
+<a class="reference internal" href="sunpy.database.caching.LRUCache.html#sunpy.database.caching.LRUCache" title="sunpy.database.caching.LRUCache"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.caching.LRUCache</span></code></a>,
+<a class="reference internal" href="sunpy.database.caching.LFUCache.html#sunpy.database.caching.LFUCache" title="sunpy.database.caching.LFUCache"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.caching.LFUCache</span></code></a>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.show_in_browser">
+<code class="descname">show_in_browser</code><span class="sig-paren">(</span><em>columns=None</em>, <em>sort=False</em>, <em>jsviewer=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.show_in_browser"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L1073" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.show_in_browser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.star">
+<code class="descname">star</code><span class="sig-paren">(</span><em>database_entry</em>, <em>ignore_already_starred=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.star"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L722" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.star" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark the given database entry as starred. If this entry is already
+marked as starred, the behaviour depends on the optional argument
+<code class="docutils literal"><span class="pre">ignore_already_starred</span></code>: if it is <code class="docutils literal"><span class="pre">False</span></code> (the default),
+<a class="reference internal" href="sunpy.database.EntryAlreadyStarredError.html#sunpy.database.EntryAlreadyStarredError" title="sunpy.database.EntryAlreadyStarredError"><code class="xref py py-exc docutils literal"><span class="pre">sunpy.database.EntryAlreadyStarredError</span></code></a> is raised. Otherwise,
+the entry is kept as starred and no exception is raised.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.tag">
+<code class="descname">tag</code><span class="sig-paren">(</span><em>database_entry</em>, <em>*tags</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.tag"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L663" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign the given database entry the given tags.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> &#8211; If no tags are given.</li>
+<li><a class="reference internal" href="sunpy.database.TagAlreadyAssignedError.html#sunpy.database.TagAlreadyAssignedError" title="sunpy.database.TagAlreadyAssignedError"><code class="xref py py-exc docutils literal"><span class="pre">sunpy.database.TagAlreadyAssignedError</span></code></a> &#8211; If at least one of the given tags is already assigned to the given
+database entry.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.undo">
+<code class="descname">undo</code><span class="sig-paren">(</span><em>n=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.undo"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L1050" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.undo" title="Permalink to this definition">¶</a></dt>
+<dd><p>undo the last n commands.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="sunpy.database.commands.CommandManager.html#sunpy.database.commands.CommandManager.undo" title="sunpy.database.commands.CommandManager.undo"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.database.commands.CommandManager.undo()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.database.Database.unstar">
+<code class="descname">unstar</code><span class="sig-paren">(</span><em>database_entry</em>, <em>ignore_already_unstarred=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/database/database.html#Database.unstar"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/database/database.py#L734" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.database.Database.unstar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the starred mark of the given entry. If this entry is not
+marked as starred, the behaviour depends on the optional argument
+<code class="docutils literal"><span class="pre">ignore_already_unstarred</span></code>: if it is <code class="docutils literal"><span class="pre">False</span></code> (the default),
+<a class="reference internal" href="sunpy.database.EntryAlreadyUnstarredError.html#sunpy.database.EntryAlreadyUnstarredError" title="sunpy.database.EntryAlreadyUnstarredError"><code class="xref py py-exc docutils literal"><span class="pre">sunpy.database.EntryAlreadyUnstarredError</span></code></a> is raised. Otherwise,
+the entry is kept as unstarred and no exception is raised.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

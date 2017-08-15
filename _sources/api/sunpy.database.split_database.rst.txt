@@ -1,0 +1,6 @@
+split_database
+==============
+
+.. currentmodule:: sunpy.database
+
+.. autofunction:: split_database

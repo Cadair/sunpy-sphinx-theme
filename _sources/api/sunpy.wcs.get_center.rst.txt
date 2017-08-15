@@ -1,0 +1,6 @@
+get_center
+==========
+
+.. currentmodule:: sunpy.wcs
+
+.. autofunction:: get_center

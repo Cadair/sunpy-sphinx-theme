@@ -1,0 +1,6 @@
+break_time
+==========
+
+.. currentmodule:: sunpy.time
+
+.. autofunction:: break_time

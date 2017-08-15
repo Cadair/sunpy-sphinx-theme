@@ -1,0 +1,17 @@
+SWAPMap
+=======
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: SWAPMap
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SWAPMap.is_datasource_for
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

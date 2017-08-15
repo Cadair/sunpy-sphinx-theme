@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>HECClient &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Compression" href="sunpy.net.jsoc.Compression.html" />
+    <link rel="prev" title="H2VClient" href="sunpy.net.hek2vso.H2VClient.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="HECClient | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.net.helio.hec.HECClient.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/map.html">SunPy map</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/net.html">SunPy net</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.fido_factory.UnifiedResponse.html">UnifiedResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.fido_factory.UnifiedDownloaderFactory.html">UnifiedDownloaderFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.fido_factory.DownloadResponse.html">DownloadResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.GenericClient.html">GenericClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.QueryResponse.html">QueryResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.QueryResponseBlock.html">QueryResponseBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.EVEClient.html">EVEClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.GOESClient.html">GOESClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.LYRAClient.html">LYRAClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.NOAAIndicesClient.html">NOAAIndicesClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.NOAAPredictClient.html">NOAAPredictClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.NoRHClient.html">NoRHClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.RHESSIClient.html">RHESSIClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.VSOClient.html">VSOClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.InteractiveVSOClient.html">InteractiveVSOClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Wavelength.html">Wavelength</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Extent.html">Extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Field.html">Field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Provider.html">Provider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Source.html">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Instrument.html">Instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Physobs.html">Physobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Pixels.html">Pixels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Level.html">Level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Resolution.html">Resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Detector.html">Detector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Filter.html">Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Sample.html">Sample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Quicklook.html">Quicklook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.PScale.html">PScale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek.HEKClient.html">HEKClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek2vso.translate_results_to_query.html">translate_results_to_query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek2vso.vso_attribute_parse.html">vso_attribute_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek2vso.H2VClient.html">H2VClient</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">HECClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Compression.html">Compression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.JSOCClient.html">JSOCClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.JSOCResponse.html">JSOCResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Notify.html">Notify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Protocol.html">Protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Segment.html">Segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Series.html">Series</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="hecclient">
+<h1>HECClient<a class="headerlink" href="#hecclient" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.net.helio.hec.HECClient">
+<em class="property">class </em><code class="descclassname">sunpy.net.helio.hec.</code><code class="descname">HECClient</code><span class="sig-paren">(</span><em>link=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/helio/hec.html#HECClient"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/helio/hec.py#L137" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.helio.hec.HECClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>A client class used to interface with and query HELIO webservices.</p>
+<p>The constructor; establishes the webservice link for the client</p>
+<p>Initializes the client with a weblink</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>link</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Contains URL to valid WSDL endpoint</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net.helio</span> <span class="k">import</span> <span class="n">hec</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hc</span> <span class="o">=</span> <span class="n">hec</span><span class="o">.</span><span class="n">HECClient</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.helio.hec.HECClient.get_table_names" title="sunpy.net.helio.hec.HECClient.get_table_names"><code class="xref py py-obj docutils literal"><span class="pre">get_table_names</span></code></a>()</td>
+<td>Returns a list of the available tables to query.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.helio.hec.HECClient.make_table_list" title="sunpy.net.helio.hec.HECClient.make_table_list"><code class="xref py py-obj docutils literal"><span class="pre">make_table_list</span></code></a>()</td>
+<td>Creates a list of table names and prompts the user for a choice</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.helio.hec.HECClient.time_query" title="sunpy.net.helio.hec.HECClient.time_query"><code class="xref py py-obj docutils literal"><span class="pre">time_query</span></code></a>(start_time,&nbsp;end_time[,&nbsp;table,&nbsp;...])</td>
+<td>The simple interface to query the wsdl service.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="sunpy.net.helio.hec.HECClient.get_table_names">
+<code class="descname">get_table_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/helio/hec.html#HECClient.get_table_names"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/helio/hec.py#L212" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.helio.hec.HECClient.get_table_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the available tables to query.</p>
+<p>Returns the names of all the tables that can be queried via the
+webservice.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>tables.array</strong> (<code class="xref py py-obj docutils literal"><span class="pre">numpy.ma.core.MaskedArray</span></code>) &#8211; A VOtable table of available tables names</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net.helio</span> <span class="k">import</span> <span class="n">hec</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hc</span> <span class="o">=</span> <span class="n">hec</span><span class="o">.</span><span class="n">HECClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">hc</span><span class="o">.</span><span class="n">get_table_names</span><span class="p">())</span>   
+<span class="go">[(&#39;timed_see_flare&#39;,) (&#39;hi_event&#39;,) (&#39;yohkoh_flare_list&#39;,)</span>
+<span class="go"> (&#39;wind_mfi_bs_crossing_time&#39;,) (&#39;seeds_soho&#39;,) (&#39;seeds_stb&#39;,)</span>
+<span class="go"> ...</span>
+<span class="go"> (&#39;rhessi_hxr_flare&#39;,) (&#39;cactus_soho_flow&#39;,) (&#39;cactus_soho_cme&#39;,)</span>
+<span class="go"> (&#39;stereob_het_sep&#39;,)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.helio.hec.HECClient.make_table_list">
+<code class="descname">make_table_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/helio/hec.html#HECClient.make_table_list"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/helio/hec.py#L240" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.helio.hec.HECClient.make_table_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a list of table names and prompts the user for a choice</p>
+<p>This takes the table of table names from get_table_names(), creates a
+list of the names, sorts them, then presents the tables in a
+convenient menu for the user to choose from. It returns a string
+containing the name of the table that the user picked.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>temp</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a>) &#8211; contains the name of the table that the user picked.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net.helio</span> <span class="k">import</span> <span class="n">hec</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hc</span> <span class="o">=</span> <span class="n">hec</span><span class="o">.</span><span class="n">HECClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hc</span><span class="o">.</span><span class="n">make_table_list</span><span class="p">()</span>   
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.helio.hec.HECClient.time_query">
+<code class="descname">time_query</code><span class="sig-paren">(</span><em>start_time</em>, <em>end_time</em>, <em>table=None</em>, <em>max_records=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/helio/hec.html#HECClient.time_query"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/helio/hec.py#L165" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.helio.hec.HECClient.time_query" title="Permalink to this definition">¶</a></dt>
+<dd><p>The simple interface to query the wsdl service.</p>
+<p>Used to utilize the service&#8217;s TimeQuery() method, this is a simple
+interface between the sunpy module library and the web-service&#8217;s API.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The datetime where the query window opens</li>
+<li><strong>end_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The datetime where the query window closes</li>
+<li><strong>table</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The table to query from. If the table is unknown, the user will be
+prompted to pick from a list of tables.</li>
+<li><strong>max_records</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; The maximum number of desired records.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>results</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.io.votable.tree.Table.html#astropy.io.votable.tree.Table" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.io.votable.tree.Table</span></code></a>) &#8211; Table containing the results from the query</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net.helio</span> <span class="k">import</span> <span class="n">hec</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hc</span> <span class="o">=</span> <span class="n">hec</span><span class="o">.</span><span class="n">HECClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">start</span> <span class="o">=</span> <span class="s1">&#39;2005/01/03&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;2005/12/03&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">temp</span> <span class="o">=</span> <span class="n">hc</span><span class="o">.</span><span class="n">time_query</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">max_records</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>   
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

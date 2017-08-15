@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.map.compositemap &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.map.compositemap | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/map/compositemap.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.map.compositemap</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;A Composite Map class</span>
+
+<span class="sd">Author: `Keith Hughitt &lt;keith.hughitt@nasa.gov&gt;`</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.map</span> <span class="k">import</span> <span class="n">GenericMap</span>
+<span class="kn">from</span> <span class="nn">sunpy.visualization</span> <span class="k">import</span> <span class="n">axis_labels_from_ctype</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.util</span> <span class="k">import</span> <span class="n">expand_list</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="nb">range</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CompositeMap&#39;</span><span class="p">]</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Keith Hughitt&quot;</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;keith.hughitt@nasa.gov&quot;</span>
+
+
+<div class="viewcode-block" id="CompositeMap"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap">[docs]</a><span class="k">class</span> <span class="nc">CompositeMap</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    CompositeMap(map1 [,map2,..])</span>
+
+<span class="sd">    A Composite Map class</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    args : [`~sunpy.map.Map` | string]</span>
+<span class="sd">        One or more map of filepaths</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    add_map(map, zorder=None, alpha=1, levels=False)</span>
+<span class="sd">        Adds a map to the CompositeMap</span>
+<span class="sd">    remove_map(index)</span>
+<span class="sd">        Removes and returns the map with the given index.</span>
+<span class="sd">    list_maps()</span>
+<span class="sd">        Prints a list of the currently included maps.</span>
+<span class="sd">    get_alpha(index=None)</span>
+<span class="sd">        Returns the alpha-channel value for a layer in the composite image</span>
+<span class="sd">    get_levels(index=None)</span>
+<span class="sd">        Returns the list of contour levels for a map within the CompositeMap.</span>
+<span class="sd">    get_plot_settings(index=None)</span>
+<span class="sd">        Returns the plot settings for a map within the CompositeMap.</span>
+<span class="sd">    get_zorder(index=None)</span>
+<span class="sd">        Returns the layering preference (z-order) for a map within the composite.</span>
+<span class="sd">    set_alpha(index, alpha)</span>
+<span class="sd">        Sets the alpha-channel value for a layer in the CompositeMap.</span>
+<span class="sd">    set_levels(index, levels, percent=False)</span>
+<span class="sd">        Sets the contour levels for a layer in the CompositeMap.</span>
+<span class="sd">    set_plot_settings(index, plot_setiings)</span>
+<span class="sd">        Set the plot settings for a map with the CompositeMap.</span>
+<span class="sd">    set_zorder(index, zorder)</span>
+<span class="sd">        Set the layering preference (z-order) for a map within the CompositeMap.</span>
+<span class="sd">    plot(figure=None, overlays=None, draw_limb=False, gamma=1.0,</span>
+<span class="sd">    draw_grid=False, colorbar=True, basic_plot=False,title=&quot;SunPy Plot&quot;,</span>
+<span class="sd">    matplot_args)</span>
+<span class="sd">        Plots the composite map object using matplotlib</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.map</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.data.sample</span>
+<span class="sd">    &gt;&gt;&gt; comp_map = sunpy.map.Map(sunpy.data.sample.AIA_171_IMAGE,</span>
+<span class="sd">    ...                          sunpy.data.sample.EIT_195_IMAGE,</span>
+<span class="sd">    ...                          composite=True)</span>
+<span class="sd">    &gt;&gt;&gt; comp_map.add_map(sunpy.map.Map(sunpy.data.sample.RHESSI_IMAGE))</span>
+<span class="sd">    &gt;&gt;&gt; comp_map.peek()   # doctest: +SKIP</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span> <span class="o">=</span> <span class="n">expand_list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">GenericMap</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                           <span class="s1">&#39;CompositeMap expects pre-constructed map objects.&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Default alpha and zorder values</span>
+        <span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">)</span>
+        <span class="n">zorders</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">),</span> <span class="mi">10</span><span class="p">))</span>
+        <span class="n">levels</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">)</span>
+
+        <span class="c1"># Set z-order and alpha values for the map</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">):</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">zorder</span> <span class="o">=</span> <span class="n">zorders</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alphas</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">levels</span> <span class="o">=</span> <span class="n">levels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+<div class="viewcode-block" id="CompositeMap.add_map"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.add_map">[docs]</a>    <span class="k">def</span> <span class="nf">add_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amap</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Adds a map to the CompositeMap.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        amap : `~sunpy.map.GenericMap` or subclass</span>
+<span class="sd">            Map instance to be added</span>
+<span class="sd">        zorder : `int`</span>
+<span class="sd">            The index to use when determining where the map should lie along</span>
+<span class="sd">            the z-axis; maps with higher z-orders appear above maps with lower</span>
+<span class="sd">            z-orders.</span>
+<span class="sd">        alpha : `float`</span>
+<span class="sd">            Opacity at which the map should be displayed. An alpha value of 0</span>
+<span class="sd">            results in a fully transparent image while an alpha value of 1</span>
+<span class="sd">            results in a fully opaque image. Values between result in semi-</span>
+<span class="sd">            transparent images.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">zorder</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">zorder</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="n">m</span><span class="o">.</span><span class="n">zorder</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">])</span> <span class="o">+</span> <span class="mi">10</span>
+
+        <span class="n">amap</span><span class="o">.</span><span class="n">zorder</span> <span class="o">=</span> <span class="n">zorder</span>
+        <span class="n">amap</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
+        <span class="n">amap</span><span class="o">.</span><span class="n">levels</span> <span class="o">=</span> <span class="n">levels</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">amap</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CompositeMap.remove_map"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.remove_map">[docs]</a>    <span class="k">def</span> <span class="nf">remove_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Removes and returns the map with the given index.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : `int`</span>
+<span class="sd">            The index of the map in the composite map.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `sunpy.map.CompositeMap`</span>
+<span class="sd">            A composite map with the map indexed by &#39;index&#39; removed from the</span>
+<span class="sd">            composite map.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CompositeMap.list_maps"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.list_maps">[docs]</a>    <span class="k">def</span> <span class="nf">list_maps</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Prints a list of the currently included maps.&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">([</span><span class="n">m</span><span class="o">.</span><span class="vm">__class__</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="CompositeMap.get_map"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.get_map">[docs]</a>    <span class="k">def</span> <span class="nf">get_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the map with given index &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="CompositeMap.get_alpha"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.get_alpha">[docs]</a>    <span class="k">def</span> <span class="nf">get_alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the alpha-channel value for a layer in the composite image.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">_map</span><span class="o">.</span><span class="n">alpha</span> <span class="k">for</span> <span class="n">_map</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">alpha</span></div>
+
+<div class="viewcode-block" id="CompositeMap.get_levels"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.get_levels">[docs]</a>    <span class="k">def</span> <span class="nf">get_levels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the list of contour levels for a map within the</span>
+<span class="sd">        composite.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : {`int` | None}</span>
+<span class="sd">            The index of the map in the composite map.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `list`</span>
+<span class="sd">            A list of the contour levels of map at index &#39;index&#39; in the</span>
+<span class="sd">            composite map.  If index is None, then the contour levels of all</span>
+<span class="sd">            the maps are returned as a list of lists.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">_map</span><span class="o">.</span><span class="n">levels</span> <span class="k">for</span> <span class="n">_map</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">levels</span></div>
+
+<div class="viewcode-block" id="CompositeMap.get_plot_settings"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.get_plot_settings">[docs]</a>    <span class="k">def</span> <span class="nf">get_plot_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the plot settings for a map within the composite map.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : {`int` | None}</span>
+<span class="sd">            The index of the map in the composite map.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        {`dict` | `list`}</span>
+<span class="sd">            The plot settings of the map(s) in the composite map.  If None</span>
+<span class="sd">            then the plot settings of all the maps are returned in a list.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">_map</span><span class="o">.</span><span class="n">plot_settings</span> <span class="k">for</span> <span class="n">_map</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">plot_settings</span></div>
+
+<div class="viewcode-block" id="CompositeMap.get_zorder"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.get_zorder">[docs]</a>    <span class="k">def</span> <span class="nf">get_zorder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the layering preference (z-order) for a map within the</span>
+<span class="sd">        composite.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : {`int` | None}</span>
+<span class="sd">            The index of the map in the composite map.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        {`float` | `list`}</span>
+<span class="sd">            The layering order (z-order) of the map(s) in the composite</span>
+<span class="sd">            map.  If None then the layering order of all the maps is returned in</span>
+<span class="sd">            a list.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">_map</span><span class="o">.</span><span class="n">zorder</span> <span class="k">for</span> <span class="n">_map</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">zorder</span></div>
+
+<div class="viewcode-block" id="CompositeMap.set_alpha"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.set_alpha">[docs]</a>    <span class="k">def</span> <span class="nf">set_alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets the alpha-channel value for a layer in the composite image.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : `int`</span>
+<span class="sd">            The index of the map in the composite map.</span>
+
+<span class="sd">        alpha : `float`</span>
+<span class="sd">            A float in the range 0 to 1.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `~sunpy.map.CompositeMap`</span>
+<span class="sd">            A composite map with alpha-channel value &#39;alpha&#39; at layer &#39;index&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">alpha</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">OutOfRangeAlphaValue</span><span class="p">(</span><span class="s2">&quot;Alpha value must be between 0 and 1.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CompositeMap.set_levels"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.set_levels">[docs]</a>    <span class="k">def</span> <span class="nf">set_levels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">levels</span><span class="p">,</span> <span class="n">percent</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the contour levels for a layer in the composite image.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : `int`</span>
+<span class="sd">            The index of the map in the composite map.</span>
+
+<span class="sd">        levels : array-like</span>
+<span class="sd">            The contour levels.</span>
+
+<span class="sd">        percent : `bool`</span>
+<span class="sd">            If True, the input &#39;levels&#39; are interpreted as percentages relative</span>
+<span class="sd">            to the maximum value of the data in layer &#39;index&#39; of the composite</span>
+<span class="sd">            map.  If False, the contour levels are set directly from &#39;levels&#39;.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `~sunpy.map.CompositeMap`</span>
+<span class="sd">            A composite map with contour levels &#39;levels&#39; at layer &#39;index&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">percent</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">levels</span> <span class="o">=</span> <span class="n">levels</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">levels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">*</span><span class="n">level</span><span class="o">/</span><span class="mf">100.0</span> <span class="k">for</span> <span class="n">level</span> <span class="ow">in</span> <span class="n">levels</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="CompositeMap.set_plot_settings"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.set_plot_settings">[docs]</a>    <span class="k">def</span> <span class="nf">set_plot_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">plot_settings</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets the plot settings for a layer in the composite image.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : `int`</span>
+<span class="sd">            The index of the map in the composite map.</span>
+
+<span class="sd">        plot_settings : `dict`</span>
+<span class="sd">            A dictionary of the form</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `~sunpy.map.CompositeMap`</span>
+<span class="sd">            A composite map with plot settings &#39;plot_settings&#39; at layer</span>
+<span class="sd">            &#39;index&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">plot_settings</span> <span class="o">=</span> <span class="n">plot_settings</span></div>
+
+<div class="viewcode-block" id="CompositeMap.set_zorder"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.set_zorder">[docs]</a>    <span class="k">def</span> <span class="nf">set_zorder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">zorder</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the layering order (z-order) for a map within the</span>
+<span class="sd">        composite.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : `int`</span>
+<span class="sd">            The index of the map in the composite map.</span>
+
+<span class="sd">        zorder : `int`</span>
+<span class="sd">            The layer order.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `~sunpy.map.CompositeMap`</span>
+<span class="sd">            A composite map with the map at layer &#39;index&#39; having layering order</span>
+<span class="sd">            &#39;zorder&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">zorder</span> <span class="o">=</span> <span class="n">zorder</span></div>
+
+<div class="viewcode-block" id="CompositeMap.draw_limb"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.draw_limb">[docs]</a>    <span class="k">def</span> <span class="nf">draw_limb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Draws a circle representing the solar limb.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : `int`</span>
+<span class="sd">            Map index to use to plot limb.</span>
+
+<span class="sd">        axes : `matplotlib.axes.Axes` or None</span>
+<span class="sd">            Axes to plot limb on or None to use current axes.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `matplotlib.axes.Axes`</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        Keyword arguments are passed onto `sunpy.map.mapbase.GenericMap.draw_limb`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">amap</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">amap</span><span class="p">,</span> <span class="s1">&#39;rsun_obs&#39;</span><span class="p">):</span>
+                    <span class="n">index</span> <span class="o">=</span> <span class="n">i</span>
+                    <span class="k">break</span>
+
+        <span class="n">index_check</span> <span class="o">=</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="s1">&#39;rsun_obs&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">index_check</span> <span class="ow">or</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Specified index does not have all the required attributes to draw limb.&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="n">axes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">grid_spacing</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+<div class="viewcode-block" id="CompositeMap.draw_grid"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.draw_grid">[docs]</a>    <span class="k">def</span> <span class="nf">draw_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid_spacing</span><span class="o">=</span><span class="mi">20</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Draws a grid over the surface of the Sun.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index: int</span>
+<span class="sd">            Index to determine which map to use to draw grid.</span>
+
+<span class="sd">        axes: `~matplotlib.axes.Axes` or None</span>
+<span class="sd">            Axes to plot limb on or None to use current axes.</span>
+
+<span class="sd">        grid_spacing : `float`</span>
+<span class="sd">            Spacing (in degrees) for longitude and latitude grid.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `matplotlib.axes.Axes` object</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        Keyword arguments are passed onto `sunpy.map.mapbase.GenericMap.draw_grid`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">needed_attrs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rsun_meters&#39;</span><span class="p">,</span> <span class="s1">&#39;dsun&#39;</span><span class="p">,</span> <span class="s1">&#39;heliographic_latitude&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;heliographic_longitude&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">amap</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">all</span><span class="p">([</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">amap</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">needed_attrs</span><span class="p">]):</span>
+                    <span class="n">index</span> <span class="o">=</span> <span class="n">i</span>
+                    <span class="k">break</span>
+
+        <span class="n">index_check</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span><span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">needed_attrs</span><span class="p">])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">index_check</span> <span class="ow">or</span> <span class="n">index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Specified index does not have all the required attributes to draw grid.&quot;</span><span class="p">)</span>
+
+        <span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">draw_grid</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="n">axes</span><span class="p">,</span> <span class="n">grid_spacing</span><span class="o">=</span><span class="n">grid_spacing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ax</span></div>
+
+<div class="viewcode-block" id="CompositeMap.plot"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.plot">[docs]</a>    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">annotate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># pylint: disable=W0613</span>
+             <span class="n">title</span><span class="o">=</span><span class="s2">&quot;SunPy Composite Plot&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">matplot_args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Plots the composite map object using matplotlib</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        axes: `~matplotlib.axes.Axes` or None</span>
+<span class="sd">            If provided the image will be plotted on the given axes. Else the</span>
+<span class="sd">            current matplotlib axes will be used.</span>
+
+<span class="sd">        annotate : `bool`</span>
+<span class="sd">            If true, the data is plotted at it&#39;s natural scale; with</span>
+<span class="sd">            title and axis labels.</span>
+
+<span class="sd">        title : `str`</span>
+<span class="sd">            Title of the composite map.</span>
+
+<span class="sd">        **matplot_args : `dict`</span>
+<span class="sd">            Matplotlib Any additional imshow arguments that should be used</span>
+<span class="sd">            when plotting.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ret : `list`</span>
+<span class="sd">            List of axes image or quad contour sets that have been plotted.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Get current axes</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">axes</span><span class="p">:</span>
+            <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">annotate</span><span class="p">:</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">axis_labels_from_ctype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">coordinate_system</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">spatial_units</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">axis_labels_from_ctype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">coordinate_system</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">spatial_units</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+            <span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+        <span class="c1"># Define a list of plotted objects</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Plot layers of composite map</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maps</span><span class="p">:</span>
+            <span class="c1"># Parameters for plotting</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;origin&quot;</span><span class="p">:</span> <span class="s2">&quot;lower&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;extent&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">xrange</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">yrange</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+                <span class="s2">&quot;cmap&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">plot_settings</span><span class="p">[</span><span class="s1">&#39;cmap&#39;</span><span class="p">],</span>
+                <span class="s2">&quot;norm&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">plot_settings</span><span class="p">[</span><span class="s1">&#39;norm&#39;</span><span class="p">],</span>
+                <span class="s2">&quot;alpha&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span>
+                <span class="s2">&quot;zorder&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">zorder</span><span class="p">,</span>
+            <span class="p">}</span>
+            <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">matplot_args</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">levels</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">))</span>
+
+            <span class="c1"># Use contour for contour data, and imshow otherwise</span>
+            <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">levels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="c1"># Set data with values &lt;= 0 to transparent</span>
+                <span class="c1"># contour_data = np.ma.masked_array(m, mask=(m &lt;= 0))</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">levels</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">))</span>
+                <span class="c1"># Set the label of the first line so a legend can be created</span>
+                <span class="n">ret</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="c1"># Adjust axes extents to include all data</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Set current image (makes colorbar work)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">sci</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+<div class="viewcode-block" id="CompositeMap.peek"><a class="viewcode-back" href="../../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">basic_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">draw_limb</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+             <span class="n">draw_grid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">matplot_args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Displays the map in a new figure.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        colorbar : `bool` or `int`</span>
+<span class="sd">            Whether to display a colorbar next to the plot.</span>
+<span class="sd">            If specified as an integer a colorbar is plotted for that index.</span>
+
+<span class="sd">        basic_plot : `bool`</span>
+<span class="sd">            If true, the data is plotted by itself at it&#39;s natural scale; no</span>
+<span class="sd">            title, labels, or axes are shown.</span>
+
+<span class="sd">        draw_limb : `bool`</span>
+<span class="sd">            If true, draws a circle representing the solar limb.</span>
+
+<span class="sd">        draw_grid :  `bool`</span>
+<span class="sd">            If true, draws a grid over the surface of the Sun.</span>
+
+<span class="sd">        **matplot_args : dict</span>
+<span class="sd">            Matplotlib Any additional imshow arguments that should be used</span>
+<span class="sd">            when plotting.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Create a figure and add title and axes</span>
+        <span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="ow">not</span> <span class="n">basic_plot</span><span class="p">)</span>
+
+        <span class="c1"># Basic plot</span>
+        <span class="k">if</span> <span class="n">basic_plot</span><span class="p">:</span>
+            <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Axes</span><span class="p">(</span><span class="n">figure</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">])</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+            <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">(</span><span class="n">axes</span><span class="p">)</span>
+            <span class="n">matplot_args</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;annotate&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+        <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="n">axes</span><span class="p">,</span> <span class="o">**</span><span class="n">matplot_args</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">colorbar</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">colorbar</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">figure</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="n">colorbar</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">colorbar</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">draw_limb</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="n">axes</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">draw_grid</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">draw_grid</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">draw_grid</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="n">axes</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">draw_grid</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">integer_types</span> <span class="o">+</span> <span class="p">(</span><span class="nb">float</span><span class="p">,)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">draw_grid</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="n">axes</span><span class="p">,</span> <span class="n">grid_spacing</span><span class="o">=</span><span class="n">draw_grid</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;draw_grid should be bool, int, long or float&quot;</span><span class="p">)</span>
+
+        <span class="n">figure</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">OutOfRangeAlphaValue</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Exception to raise when an alpha value outside of the range 0-1 is</span>
+<span class="sd">    requested.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

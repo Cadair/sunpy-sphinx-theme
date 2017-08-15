@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.coordinates.offset_frame &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.coordinates.offset_frame | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/coordinates/offset_frame.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.coordinates.offset_frame</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="n">SkyOffsetFrame</span><span class="p">,</span> <span class="n">SphericalRepresentation</span><span class="p">,</span> <span class="n">UnitSphericalRepresentation</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NorthOffsetFrame&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="NorthOffsetFrame"><a class="viewcode-back" href="../../../api/sunpy.coordinates.offset_frame.NorthOffsetFrame.html#sunpy.coordinates.NorthOffsetFrame">[docs]</a><span class="k">class</span> <span class="nc">NorthOffsetFrame</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A frame which is relative to some position and another frame. Based on</span>
+<span class="sd">    `astropy.coordinates.SkyOffsetFrame`</span>
+
+<span class="sd">    Coordinates in a NorthOffsetFrame are both centered on the position</span>
+<span class="sd">    specified by the ``north`` keyword *and* they are oriented in the same</span>
+<span class="sd">    manner as the ``north`` frame.</span>
+
+<span class="sd">    Unlike `~astropy.coordinates.SkyOffsetFrame` a `NorthOffsetFrame` allows</span>
+<span class="sd">    you to specify the position of the new north pole rather than the new</span>
+<span class="sd">    origin to centre the new frame.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    A common use for this is to create a frame derived from Heliographic, which</span>
+<span class="sd">    has the north pole at some point of interest. In this new frame, lines of</span>
+<span class="sd">    longitude form great circles radially away from the point, and lines of</span>
+<span class="sd">    latitude measure angular distance from the point.</span>
+
+<span class="sd">    In this example the new frame is shifted so the new north pole is at (20,</span>
+<span class="sd">    20) in the Heliographic Stonyhurst frame. The new grid is overplotted in</span>
+<span class="sd">    blue.</span>
+
+<span class="sd">    .. plot::</span>
+<span class="sd">        :include-source:</span>
+
+<span class="sd">        import matplotlib.pyplot as plt</span>
+<span class="sd">        import astropy.units as u</span>
+
+<span class="sd">        from astropy.coordinates import SkyCoord</span>
+<span class="sd">        from sunpy.coordinates import NorthOffsetFrame</span>
+
+<span class="sd">        import sunpy.map</span>
+<span class="sd">        from sunpy.data.sample import AIA_171_IMAGE</span>
+
+<span class="sd">        m = sunpy.map.Map(AIA_171_IMAGE)</span>
+
+<span class="sd">        north = SkyCoord(20*u.deg, 20*u.deg, frame=&quot;heliographic_stonyhurst&quot;)</span>
+<span class="sd">        new_frame = NorthOffsetFrame(north=north)</span>
+
+<span class="sd">        ax = plt.subplot(projection=m)</span>
+<span class="sd">        m.plot()</span>
+
+<span class="sd">        overlay = ax.get_coords_overlay(&#39;heliographic_stonyhurst&#39;)</span>
+<span class="sd">        overlay[0].set_ticks(spacing=30. * u.deg, color=&#39;white&#39;)</span>
+<span class="sd">        overlay.grid(ls=&#39;-&#39;, color=&#39;white&#39;)</span>
+
+<span class="sd">        overlay = ax.get_coords_overlay(new_frame)</span>
+<span class="sd">        overlay[0].set_ticks(spacing=30. * u.deg)</span>
+<span class="sd">        overlay.grid(ls=&#39;-&#39;, color=&#39;blue&#39;)</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    ``NorthOffsetFrame`` is a wrapper around the</span>
+<span class="sd">    `~astropy.coordinates.SkyOffsetFrame` factory class. This class will</span>
+<span class="sd">    calculate the desired coordianates of the ``origin`` from the ``north``</span>
+<span class="sd">    keyword argument and then create a `~astropy.coordinates.SkyOffsetFrame`.</span>
+
+<span class="sd">    Using this frame is equivalent to using</span>
+<span class="sd">    `~astropy.coordinates.SkyOffsetFrame` with ``lat = lat - 90*u.deg`` for a</span>
+<span class="sd">    position of the north pole in the original northern hemisphere.</span>
+
+<span class="sd">    This class will only work for Heliographic-Stonyhurst and Heliographic</span>
+<span class="sd">    Carrington frames, and not helioprojective. If you want to rotate a</span>
+<span class="sd">    helioprojective frame, it would be more natural to use the</span>
+<span class="sd">    `~astropy.coordinates.SkyOffsetFrame`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">origin_frame</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;north&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">origin_frame</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t initialize an NorthOffsetFrame without origin= keyword.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">origin_frame</span><span class="p">,</span> <span class="s1">&#39;frame&#39;</span><span class="p">):</span>
+            <span class="n">origin_frame</span> <span class="o">=</span> <span class="n">origin_frame</span><span class="o">.</span><span class="n">frame</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">origin_frame</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">SphericalRepresentation</span><span class="p">):</span>
+            <span class="n">rep</span> <span class="o">=</span> <span class="n">origin_frame</span><span class="o">.</span><span class="n">represent_as</span><span class="p">(</span><span class="n">SphericalRepresentation</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rep</span> <span class="o">=</span> <span class="n">origin_frame</span><span class="o">.</span><span class="n">data</span>
+
+        <span class="n">lon</span> <span class="o">=</span> <span class="n">rep</span><span class="o">.</span><span class="n">lon</span>
+        <span class="n">lat</span> <span class="o">=</span> <span class="n">rep</span><span class="o">.</span><span class="n">lat</span>
+        <span class="k">if</span> <span class="n">lat</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">:</span>
+            <span class="n">lat</span> <span class="o">=</span> <span class="n">lat</span> <span class="o">-</span> <span class="mi">90</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+            <span class="n">rotation</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lon</span> <span class="o">=</span> <span class="n">lon</span> <span class="o">-</span> <span class="mi">180</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+            <span class="n">lat</span> <span class="o">=</span> <span class="o">-</span><span class="mi">90</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span> <span class="o">-</span> <span class="n">lat</span>
+            <span class="n">rotation</span> <span class="o">=</span> <span class="mi">180</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">origin_frame</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">UnitSphericalRepresentation</span><span class="p">):</span>
+            <span class="n">new_rep</span> <span class="o">=</span> <span class="n">origin_frame</span><span class="o">.</span><span class="n">representation</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="n">lon</span><span class="p">,</span>
+                                                  <span class="n">lat</span><span class="o">=</span><span class="n">lat</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_rep</span> <span class="o">=</span> <span class="n">origin_frame</span><span class="o">.</span><span class="n">representation</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="n">lon</span><span class="p">,</span>
+                                                  <span class="n">lat</span><span class="o">=</span><span class="n">lat</span><span class="p">,</span>
+                                                  <span class="n">distance</span><span class="o">=</span><span class="n">rep</span><span class="o">.</span><span class="n">distance</span><span class="p">)</span>
+
+        <span class="n">new_origin</span> <span class="o">=</span> <span class="n">origin_frame</span><span class="o">.</span><span class="n">realize_frame</span><span class="p">(</span><span class="n">new_rep</span><span class="p">)</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;origin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_origin</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;rotation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rotation</span>
+
+        <span class="k">return</span> <span class="n">SkyOffsetFrame</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

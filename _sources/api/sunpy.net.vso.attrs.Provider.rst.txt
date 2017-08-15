@@ -1,0 +1,7 @@
+Provider
+========
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Provider
+   :show-inheritance:

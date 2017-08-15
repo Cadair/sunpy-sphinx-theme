@@ -1,0 +1,19 @@
+MapCubeAnimator
+===============
+
+.. currentmodule:: sunpy.visualization.mapcubeanimator
+
+.. autoclass:: MapCubeAnimator
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MapCubeAnimator.plot_start_image
+      ~MapCubeAnimator.updatefig
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: plot_start_image
+   .. automethod:: updatefig

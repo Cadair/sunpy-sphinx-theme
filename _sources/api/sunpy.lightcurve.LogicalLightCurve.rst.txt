@@ -1,0 +1,19 @@
+LogicalLightCurve
+=================
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: LogicalLightCurve
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LogicalLightCurve.complement
+      ~LogicalLightCurve.times
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: complement
+   .. automethod:: times

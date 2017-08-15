@@ -1,0 +1,6 @@
+SunpyDeprecationWarning
+=======================
+
+.. currentmodule:: sunpy.util
+
+.. autoexception:: SunpyDeprecationWarning

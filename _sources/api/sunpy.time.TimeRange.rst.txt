@@ -1,0 +1,51 @@
+TimeRange
+=========
+
+.. currentmodule:: sunpy.time
+
+.. autoclass:: TimeRange
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~TimeRange.center
+      ~TimeRange.days
+      ~TimeRange.dt
+      ~TimeRange.end
+      ~TimeRange.hours
+      ~TimeRange.minutes
+      ~TimeRange.seconds
+      ~TimeRange.start
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TimeRange.extend
+      ~TimeRange.get_dates
+      ~TimeRange.next
+      ~TimeRange.previous
+      ~TimeRange.split
+      ~TimeRange.window
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: center
+   .. autoattribute:: days
+   .. autoattribute:: dt
+   .. autoattribute:: end
+   .. autoattribute:: hours
+   .. autoattribute:: minutes
+   .. autoattribute:: seconds
+   .. autoattribute:: start
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: extend
+   .. automethod:: get_dates
+   .. automethod:: next
+   .. automethod:: previous
+   .. automethod:: split
+   .. automethod:: window

@@ -1,0 +1,6 @@
+carrington_rotation_number
+==========================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: carrington_rotation_number

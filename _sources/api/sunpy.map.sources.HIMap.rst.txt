@@ -1,0 +1,27 @@
+HIMap
+=====
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: HIMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~HIMap.measurement
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~HIMap.is_datasource_for
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: measurement
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

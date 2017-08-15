@@ -1,0 +1,17 @@
+Tag
+===
+
+.. currentmodule:: sunpy.database.attrs
+
+.. autoclass:: Tag
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Tag.collides
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: collides

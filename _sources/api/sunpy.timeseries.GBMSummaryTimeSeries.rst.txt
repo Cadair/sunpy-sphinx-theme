@@ -1,0 +1,19 @@
+GBMSummaryTimeSeries
+====================
+
+.. currentmodule:: sunpy.timeseries
+
+.. autoclass:: GBMSummaryTimeSeries
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GBMSummaryTimeSeries.is_datasource_for
+      ~GBMSummaryTimeSeries.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for
+   .. automethod:: peek

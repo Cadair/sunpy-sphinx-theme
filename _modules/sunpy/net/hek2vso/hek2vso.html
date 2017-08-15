@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.net.hek2vso.hek2vso &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.net.hek2vso.hek2vso | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/net/hek2vso/hek2vso.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.net.hek2vso.hek2vso</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># Author:   Michael Malocha &lt;mjm159@humboldt.edu&gt;</span>
+<span class="c1"># Last Edit:  August 10th, 2013</span>
+<span class="c1">#</span>
+<span class="c1"># This module was developed with funding from the GSOC 2013 summer of code</span>
+<span class="c1">#</span>
+<span class="c1">#pylint: disable=W0142</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module translates the results of a HEK query into a VSO query</span>
+<span class="sd">and returns the results from the VSO query to the user.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">units</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">hek</span>
+<span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">vso</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.progressbar</span> <span class="k">import</span> <span class="n">TTYProgressBar</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Michael Malocha&#39;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;Aug 10th, 2013&#39;</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;translate_results_to_query&#39;</span><span class="p">,</span> <span class="s1">&#39;vso_attribute_parse&#39;</span><span class="p">,</span> <span class="s1">&#39;H2VClient&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="translate_results_to_query"><a class="viewcode-back" href="../../../../api/sunpy.net.hek2vso.translate_results_to_query.html#sunpy.net.hek2vso.translate_results_to_query">[docs]</a><span class="k">def</span> <span class="nf">translate_results_to_query</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Formulate VSO queries from HEK results.</span>
+
+<span class="sd">    Take the results from a HEK query either in the form of a single HEK</span>
+<span class="sd">    response or a list containing multiple HEK responses then translates</span>
+<span class="sd">    them into a VSO compatible query.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    results : `sunpy.net.hek.hek.Response` or list of `sunpy.net.hek.hek.Response`</span>
+<span class="sd">        The HEK results from a HEK query to be translated.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net.hek import hek, HEKClient</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net.hek2vso import hek2vso, H2VClient</span>
+<span class="sd">    &gt;&gt;&gt; h = HEKClient()</span>
+<span class="sd">    &gt;&gt;&gt; h2v = H2VClient()</span>
+<span class="sd">    &gt;&gt;&gt; q = h.search(hek.attrs.Time(&#39;2011/08/09 07:23:56&#39;,</span>
+<span class="sd">    ...             &#39;2011/08/09 12:40:29&#39;), hek.attrs.EventType(&#39;FL&#39;))</span>
+<span class="sd">    &gt;&gt;&gt; len(q)</span>
+<span class="sd">    19</span>
+
+<span class="sd">    &gt;&gt;&gt; hek2vso.translate_results_to_query(q[0])</span>
+<span class="sd">    [[&lt;Time(datetime.datetime(2011, 8, 8, 1, 30, 4), datetime.datetime(2011, 8, 10, 0, 0, 4), None)&gt;, &lt;Source(u&#39;SDO&#39;)&gt;, &lt;Instrument(u&#39;AIA&#39;)&gt;, &lt;Wave(210.99999999999997, 210.99999999999997, &#39;Angstrom&#39;)&gt;]]</span>
+
+<span class="sd">    &gt;&gt;&gt; hek2vso.translate_results_to_query(q)   # doctest: +ELLIPSIS</span>
+<span class="sd">    [[&lt;Time(datetime.datetime(2011, 8, 8, 1, 30, 4), datetime.datetime(2011, 8, 10, 0, 0, 4), None)&gt;, &lt;Source(u&#39;SDO&#39;)&gt;, &lt;Instrument(u&#39;AIA&#39;)&gt;, &lt;Wave(210.99999999999997, 210.99999999999997, &#39;Angstrom&#39;)&gt;], ..., [&lt;Time(datetime.datetime(2011, 8, 9, 8, 1, 21), datetime.datetime(2011, 8, 9, 8, 16, 45), None)&gt;, &lt;Source(u&#39;SDO&#39;)&gt;, &lt;Instrument(u&#39;AIA&#39;)&gt;, &lt;Wave(303.99999999999994, 303.99999999999994, &#39;Angstrom&#39;)&gt;]]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">queries</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+            <span class="n">query</span> <span class="o">=</span> <span class="n">vso_attribute_parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+            <span class="n">queries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="n">vso_attribute_parse</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+        <span class="n">queries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">queries</span></div>
+
+
+<div class="viewcode-block" id="vso_attribute_parse"><a class="viewcode-back" href="../../../../api/sunpy.net.hek2vso.vso_attribute_parse.html#sunpy.net.hek2vso.vso_attribute_parse">[docs]</a><span class="k">def</span> <span class="nf">vso_attribute_parse</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Parses VSO attributes from a HEK result.</span>
+
+<span class="sd">    This is a simple function to parse HEK query result and generate a list</span>
+<span class="sd">    containing VSO relevant attributes.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    phrase : `dict` containing a `sunpy.net.hek.hek.Response`.</span>
+<span class="sd">        The single HEK result to be parsed for VSO attribute data.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net.hek import hek, HEKClient</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net.hek2vso import hek2vso, H2VClient</span>
+<span class="sd">    &gt;&gt;&gt; h = HEKClient()</span>
+<span class="sd">    &gt;&gt;&gt; h2v = H2VClient()</span>
+<span class="sd">    &gt;&gt;&gt; q = h.search(hek.attrs.Time(&#39;2011/08/09 07:23:56&#39;, &#39;2011/08/09 12:40:29&#39;), hek.attrs.EventType(&#39;FL&#39;))</span>
+<span class="sd">    &gt;&gt;&gt; len(q)</span>
+<span class="sd">    19</span>
+
+<span class="sd">    &gt;&gt;&gt; hek2vso.vso_attribute_parse(q[9])</span>
+<span class="sd">    [&lt;Time(datetime.datetime(2011, 8, 9, 7, 22, 38), datetime.datetime(2011, 8, 9, 8, 32, 2), None)&gt;, &lt;Source(u&#39;SDO&#39;)&gt;, &lt;Instrument(u&#39;AIA&#39;)&gt;, &lt;Wave(210.99999999999997, 210.99999999999997, &#39;Angstrom&#39;)&gt;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="p">[</span><span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">phrase</span><span class="p">[</span><span class="s1">&#39;event_starttime&#39;</span><span class="p">],</span>
+                                <span class="n">phrase</span><span class="p">[</span><span class="s1">&#39;event_endtime&#39;</span><span class="p">]),</span>
+                 <span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">phrase</span><span class="p">[</span><span class="s1">&#39;obs_observatory&#39;</span><span class="p">]),</span>
+                 <span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="n">phrase</span><span class="p">[</span><span class="s1">&#39;obs_instrument&#39;</span><span class="p">])]</span>
+        <span class="n">avg_wave_len</span> <span class="o">=</span> <span class="n">phrase</span><span class="p">[</span><span class="s1">&#39;obs_meanwavel&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">Unit</span><span class="p">(</span><span class="n">phrase</span><span class="p">[</span><span class="s1">&#39;obs_wavelunit&#39;</span><span class="p">])</span>
+        <span class="n">query</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Wavelength</span><span class="p">(</span><span class="n">avg_wave_len</span><span class="p">,</span> <span class="n">avg_wave_len</span><span class="p">))</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">{dtype!s}</span><span class="s2">&#39; is an improper data type&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="nb">type</span><span class="p">(</span><span class="n">phrase</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">query</span></div>
+
+
+<div class="viewcode-block" id="H2VClient"><a class="viewcode-back" href="../../../../api/sunpy.net.hek2vso.H2VClient.html#sunpy.net.hek2vso.H2VClient">[docs]</a><span class="k">class</span> <span class="nc">H2VClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class to handle HEK to VSO translations</span>
+
+<span class="sd">    Though the single step functions exists outside this class where</span>
+<span class="sd">    translation is also possible, this class provides a framework where</span>
+<span class="sd">    all the necessary functionality is easily accessed, along with a few</span>
+<span class="sd">    additional and helpful methods.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net.hek import hek</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net import hek2vso</span>
+<span class="sd">    &gt;&gt;&gt; h2v = hek2vso.H2VClient()</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hek_client</span> <span class="o">=</span> <span class="n">hek</span><span class="o">.</span><span class="n">HEKClient</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hek_results</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vso_client</span> <span class="o">=</span> <span class="n">vso</span><span class="o">.</span><span class="n">VSOClient</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vso_results</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_of_records</span> <span class="o">=</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="H2VClient.full_query"><a class="viewcode-back" href="../../../../api/sunpy.net.hek2vso.H2VClient.html#sunpy.net.hek2vso.H2VClient.full_query">[docs]</a>    <span class="k">def</span> <span class="nf">full_query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_query</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        An encompassing method that takes a HEK query and returns a VSO result</span>
+
+<span class="sd">        Takes a list containing a HEK style query, passes it to a HEKClient</span>
+<span class="sd">        instance, translates it, queries the VSO webservice, then returns</span>
+<span class="sd">        the VSO results inside a structured list.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        client_query : `list`</span>
+<span class="sd">            The list containing the HEK style query.</span>
+<span class="sd">        limit : `int`</span>
+<span class="sd">            An approximate limit to the desired number of VSO results.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.net import hek, hek2vso</span>
+<span class="sd">        &gt;&gt;&gt; h2v = hek2vso.H2VClient()</span>
+<span class="sd">        &gt;&gt;&gt; q = h2v.full_query((hek.attrs.Time(&#39;2011/08/09 07:23:56&#39;, &#39;2011/08/09 12:40:29&#39;), hek.attrs.EventType(&#39;FL&#39;)))</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_quick_clean</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">Querying HEK webservice...&#39;</span><span class="p">)</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hek_results</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hek_client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="o">*</span><span class="n">client_query</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_quick_clean</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate_and_query</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hek_results</span><span class="p">,</span>
+                                        <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="H2VClient.translate_and_query"><a class="viewcode-back" href="../../../../api/sunpy.net.hek2vso.H2VClient.html#sunpy.net.hek2vso.H2VClient.translate_and_query">[docs]</a>    <span class="k">def</span> <span class="nf">translate_and_query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hek_results</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Translates HEK results, makes a VSO query, then returns the results.</span>
+
+<span class="sd">        Takes the results from a HEK query, translates them, then makes a VSO</span>
+<span class="sd">        query, returning the results in a list organized by their</span>
+<span class="sd">        corresponding HEK query.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        hek_results : `sunpy.net.hek.hek.Response` or list of such Responses</span>
+<span class="sd">            The results from a HEK query in the form of a list.</span>
+<span class="sd">        limit : int</span>
+<span class="sd">            An approximate limit to the desired number of VSO results.</span>
+<span class="sd">        progress : Boolean</span>
+<span class="sd">            A flag to turn off the progress bar, defaults to &quot;off&quot;</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.net import hek, hek2vso</span>
+<span class="sd">        &gt;&gt;&gt; h = hek.HEKClient()</span>
+<span class="sd">        &gt;&gt;&gt; tstart = &#39;2011/08/09 07:23:56&#39;</span>
+<span class="sd">        &gt;&gt;&gt; tend = &#39;2011/08/09 12:40:29&#39;</span>
+<span class="sd">        &gt;&gt;&gt; event_type = &#39;FL&#39;</span>
+<span class="sd">        &gt;&gt;&gt; q = h.search(hek.attrs.Time(tstart, tend), hek.attrs.EventType(event_type))</span>
+<span class="sd">        &gt;&gt;&gt; h2v = hek2vso.H2VClient()</span>
+<span class="sd">        &gt;&gt;&gt; res = h2v.translate_and_query(q)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">vso_query</span> <span class="o">=</span> <span class="n">translate_results_to_query</span><span class="p">(</span><span class="n">hek_results</span><span class="p">)</span>
+        <span class="n">result_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vso_query</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">Querying VSO webservice&#39;</span><span class="p">)</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+            <span class="n">pbar</span> <span class="o">=</span> <span class="n">TTYProgressBar</span><span class="p">(</span><span class="n">result_size</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">query</span> <span class="ow">in</span> <span class="n">vso_query</span><span class="p">:</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vso_client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vso_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">num_of_records</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_of_records</span> <span class="o">&gt;=</span> <span class="n">limit</span><span class="p">:</span>
+                    <span class="k">break</span>
+            <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+                <span class="n">pbar</span><span class="o">.</span><span class="n">poke</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">pbar</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vso_results</span></div>
+
+    <span class="k">def</span> <span class="nf">_quick_clean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A simple method to quickly sterilize the instance variables.</span>
+
+<span class="sd">        Used to bleach local variables before a new query is made. Not</span>
+<span class="sd">        intended to be run by user.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vso_results</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_of_records</span> <span class="o">=</span> <span class="mi">0</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

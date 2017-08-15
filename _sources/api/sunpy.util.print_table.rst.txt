@@ -1,0 +1,6 @@
+print_table
+===========
+
+.. currentmodule:: sunpy.util
+
+.. autofunction:: print_table

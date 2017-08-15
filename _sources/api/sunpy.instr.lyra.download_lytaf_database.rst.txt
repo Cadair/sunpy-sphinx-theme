@@ -1,0 +1,6 @@
+download_lytaf_database
+=======================
+
+.. currentmodule:: sunpy.instr.lyra
+
+.. autofunction:: download_lytaf_database

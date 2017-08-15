@@ -1,0 +1,6 @@
+display_entries
+===============
+
+.. currentmodule:: sunpy.database.tables
+
+.. autofunction:: display_entries

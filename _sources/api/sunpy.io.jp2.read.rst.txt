@@ -1,0 +1,6 @@
+read
+====
+
+.. currentmodule:: sunpy.io.jp2
+
+.. autofunction:: read

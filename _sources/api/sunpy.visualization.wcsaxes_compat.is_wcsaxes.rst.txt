@@ -1,0 +1,6 @@
+is_wcsaxes
+==========
+
+.. currentmodule:: sunpy.visualization.wcsaxes_compat
+
+.. autofunction:: is_wcsaxes

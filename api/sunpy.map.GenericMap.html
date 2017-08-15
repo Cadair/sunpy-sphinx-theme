@@ -1,0 +1,1255 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GenericMap &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MapCube" href="sunpy.map.MapCube.html" />
+    <link rel="prev" title="CompositeMap" href="sunpy.map.CompositeMap.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="GenericMap | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.map.GenericMap.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/map.html">SunPy map</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.CompositeMap.html">CompositeMap</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">GenericMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.MapCube.html">MapCube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.source_stretch.html">source_stretch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.XRTMap.html">XRTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SOTMap.html">SOTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SWAPMap.html">SWAPMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.RHESSIMap.html">RHESSIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.AIAMap.html">AIAMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.HMIMap.html">HMIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.EITMap.html">EITMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.LASCOMap.html">LASCOMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.MDIMap.html">MDIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.EUVIMap.html">EUVIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.CORMap.html">CORMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.HIMap.html">HIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SXTMap.html">SXTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SJIMap.html">SJIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.TRACEMap.html">TRACEMap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="genericmap">
+<h1>GenericMap<a class="headerlink" href="#genericmap" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.map.GenericMap">
+<em class="property">class </em><code class="descclassname">sunpy.map.</code><code class="descname">GenericMap</code><span class="sig-paren">(</span><em>data</em>, <em>header</em>, <em>plot_settings=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L80" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="http://docs.astropy.org/en/stable/api/astropy.nddata.NDData.html#astropy.nddata.NDData" title="astropy.nddata.NDData"><code class="docutils literal"><span class="pre">astropy.nddata.NDData</span></code></a></p>
+<p>A Generic spatially-aware 2D data array</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a>, list) &#8211; A 2d list or ndarray containing the map data</li>
+<li><strong>meta</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><em>dict</em></a>) &#8211; A dictionary of the original image header tags</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span>   
+<span class="go">SunPy AIAMap</span>
+<span class="go">---------</span>
+<span class="go">Observatory:         SDO</span>
+<span class="go">Instrument:  AIA 3</span>
+<span class="go">Detector:    AIA</span>
+<span class="go">Measurement:         171.0 Angstrom</span>
+<span class="go">Wavelength:  171.0 Angstrom</span>
+<span class="go">Obs Date:    2011-03-19 10:54:00</span>
+<span class="go">dt:          1.999601 s</span>
+<span class="go">Dimension:   [ 1024.  1024.] pix</span>
+<span class="go">scale:               [ 2.4  2.4] arcsec / pix</span>
+
+<span class="go">array([[ 0.3125, -0.0625, -0.125 , ...,  0.625 , -0.625 ,  0.    ],</span>
+<span class="go">       [ 1.    ,  0.1875, -0.8125, ...,  0.625 , -0.625 ,  0.    ],</span>
+<span class="go">       [-1.1875,  0.375 , -0.5   , ..., -0.125 , -0.625 , -1.1875],</span>
+<span class="go">       ...,</span>
+<span class="go">       [-0.625 ,  0.0625, -0.3125, ...,  0.125 ,  0.125 ,  0.125 ],</span>
+<span class="go">       [ 0.5625,  0.0625,  0.5625, ..., -0.0625, -0.0625,  0.    ],</span>
+<span class="go">       [ 0.5   , -0.125 ,  0.4375, ...,  0.6875,  0.6875,  0.6875]])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span><span class="o">.</span><span class="n">spatial_units</span>
+<span class="go">SpatialPair(axis1=Unit(&quot;arcsec&quot;), axis2=Unit(&quot;arcsec&quot;))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>A number of the properties of this class are returned as two-value named
+tuples that can either be indexed by position ([0] or [1]) or be accessed
+by the names (.x and .y) or (.axis1 and .axis2). Things that refer to pixel
+axes use the <code class="docutils literal"><span class="pre">.x</span></code>, <code class="docutils literal"><span class="pre">.y</span></code> convention, where x and y refer to the FITS
+axes (x for columns y for rows). Spatial axes use <code class="docutils literal"><span class="pre">.axis1</span></code> and <code class="docutils literal"><span class="pre">.axis2</span></code>
+which correspond to the first and second axes in the header. <code class="docutils literal"><span class="pre">axis1</span></code>
+corresponds to the coordinate axis for <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">axis2</span></code> corresponds to
+<code class="docutils literal"><span class="pre">y</span></code>.</p>
+<p>This class makes some assumptions about the WCS information contained in
+the meta data. The first and most extensive assumption is that it is
+FITS-like WCS information as defined in the FITS WCS papers.</p>
+<p>Within this scope it also makes some other assumptions.</p>
+<ul class="simple">
+<li>In the case of APIS convention headers where the CROTAi/j arguments are
+provided it assumes that these can be converted to the standard PCi_j
+notation using equations 32 in Thompson (2006).</li>
+<li>If a CDi_j matrix is provided it is assumed that it can be converted to a
+PCi_j matrix and CDELT keywords as described in
+<a class="reference external" href="http://dx.doi.org/10.1051/0004-6361:20021327">Greisen &amp; Calabretta (2002)</a></li>
+<li>The &#8216;standard&#8217; FITS keywords that are used by this class are the PCi_j
+matrix and CDELT, along with the other keywords specified in the WCS
+papers. All subclasses of this class must convert their header
+information to this formalism. The CROTA to PCi_j conversion is done in
+this class.</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This class currently assumes that a header with the CDi_j matrix
+information also includes the CDELT keywords, without these keywords
+this class will not process the WCS.
+Also the rotation_matrix does not work if the CDELT1 and CDELT2
+keywords are exactly equal.
+Also, if a file with more than two dimensions is feed into the class,
+only the first two dimensions (NAXIS1, NAXIS2) will be loaded and the
+rest will be discarded.</p>
+</div>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.bottom_left_coord" title="sunpy.map.GenericMap.bottom_left_coord"><code class="xref py py-obj docutils literal"><span class="pre">bottom_left_coord</span></code></a></td>
+<td>The physical coordinate for the bottom left [0,0] pixel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.carrington_longitude" title="sunpy.map.GenericMap.carrington_longitude"><code class="xref py py-obj docutils literal"><span class="pre">carrington_longitude</span></code></a></td>
+<td>Carrington longitude (crln_obs)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.center" title="sunpy.map.GenericMap.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a></td>
+<td>Return a coordinate object for the center pixel of the array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.coordinate_frame" title="sunpy.map.GenericMap.coordinate_frame"><code class="xref py py-obj docutils literal"><span class="pre">coordinate_frame</span></code></a></td>
+<td>An <code class="xref py py-obj docutils literal"><span class="pre">astropy.coordinates.BaseFrame</span></code> instance created from the coordinate information for this Map.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.coordinate_system" title="sunpy.map.GenericMap.coordinate_system"><code class="xref py py-obj docutils literal"><span class="pre">coordinate_system</span></code></a></td>
+<td>Coordinate system used for x and y axes (ctype1/2)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.date" title="sunpy.map.GenericMap.date"><code class="xref py py-obj docutils literal"><span class="pre">date</span></code></a></td>
+<td>Image observation time</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.detector" title="sunpy.map.GenericMap.detector"><code class="xref py py-obj docutils literal"><span class="pre">detector</span></code></a></td>
+<td>Detector name</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.dimensions" title="sunpy.map.GenericMap.dimensions"><code class="xref py py-obj docutils literal"><span class="pre">dimensions</span></code></a></td>
+<td>The dimensions of the array (x axis first, y axis second).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.dsun" title="sunpy.map.GenericMap.dsun"><code class="xref py py-obj docutils literal"><span class="pre">dsun</span></code></a></td>
+<td>The observer distance from the Sun.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.dtype" title="sunpy.map.GenericMap.dtype"><code class="xref py py-obj docutils literal"><span class="pre">dtype</span></code></a></td>
+<td>The <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">numpy.dtype</span></code></a> of the array of the map.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.exposure_time" title="sunpy.map.GenericMap.exposure_time"><code class="xref py py-obj docutils literal"><span class="pre">exposure_time</span></code></a></td>
+<td>Exposure time of the image in seconds.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.heliographic_latitude" title="sunpy.map.GenericMap.heliographic_latitude"><code class="xref py py-obj docutils literal"><span class="pre">heliographic_latitude</span></code></a></td>
+<td>Heliographic latitude</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.heliographic_longitude" title="sunpy.map.GenericMap.heliographic_longitude"><code class="xref py py-obj docutils literal"><span class="pre">heliographic_longitude</span></code></a></td>
+<td>Heliographic longitude</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.instrument" title="sunpy.map.GenericMap.instrument"><code class="xref py py-obj docutils literal"><span class="pre">instrument</span></code></a></td>
+<td>Instrument name</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.latex_name" title="sunpy.map.GenericMap.latex_name"><code class="xref py py-obj docutils literal"><span class="pre">latex_name</span></code></a></td>
+<td>LaTeX formatted description of the Map.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.measurement" title="sunpy.map.GenericMap.measurement"><code class="xref py py-obj docutils literal"><span class="pre">measurement</span></code></a></td>
+<td>Measurement name, defaults to the wavelength of image</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.name" title="sunpy.map.GenericMap.name"><code class="xref py py-obj docutils literal"><span class="pre">name</span></code></a></td>
+<td>Human-readable description of the Map.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.ndim" title="sunpy.map.GenericMap.ndim"><code class="xref py py-obj docutils literal"><span class="pre">ndim</span></code></a></td>
+<td>The value of <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.ndim.html#numpy.ndarray.ndim" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">numpy.ndarray.ndim</span></code></a> of the data array of the map.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.nickname" title="sunpy.map.GenericMap.nickname"><code class="xref py py-obj docutils literal"><span class="pre">nickname</span></code></a></td>
+<td>An abbreviated human-readable description of the map-type; part of</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.observatory" title="sunpy.map.GenericMap.observatory"><code class="xref py py-obj docutils literal"><span class="pre">observatory</span></code></a></td>
+<td>Observatory or Telescope name</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.observer_coordinate" title="sunpy.map.GenericMap.observer_coordinate"><code class="xref py py-obj docutils literal"><span class="pre">observer_coordinate</span></code></a></td>
+<td>The Heliographic Stonyhurst Coordinate of the observer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.processing_level" title="sunpy.map.GenericMap.processing_level"><code class="xref py py-obj docutils literal"><span class="pre">processing_level</span></code></a></td>
+<td>Returns the FITS processing level if present.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.reference_coordinate" title="sunpy.map.GenericMap.reference_coordinate"><code class="xref py py-obj docutils literal"><span class="pre">reference_coordinate</span></code></a></td>
+<td>Reference point WCS axes in data units (i.e.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.reference_pixel" title="sunpy.map.GenericMap.reference_pixel"><code class="xref py py-obj docutils literal"><span class="pre">reference_pixel</span></code></a></td>
+<td>Reference point axes in pixels (i.e.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.rotation_matrix" title="sunpy.map.GenericMap.rotation_matrix"><code class="xref py py-obj docutils literal"><span class="pre">rotation_matrix</span></code></a></td>
+<td>Matrix describing the rotation required to align solar North with the top of the image.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.rsun_meters" title="sunpy.map.GenericMap.rsun_meters"><code class="xref py py-obj docutils literal"><span class="pre">rsun_meters</span></code></a></td>
+<td>Radius of the sun in meters</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.rsun_obs" title="sunpy.map.GenericMap.rsun_obs"><code class="xref py py-obj docutils literal"><span class="pre">rsun_obs</span></code></a></td>
+<td>Radius of the Sun.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.scale" title="sunpy.map.GenericMap.scale"><code class="xref py py-obj docutils literal"><span class="pre">scale</span></code></a></td>
+<td>Image scale along the x and y axes in units/pixel (i.e.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.shifted_value" title="sunpy.map.GenericMap.shifted_value"><code class="xref py py-obj docutils literal"><span class="pre">shifted_value</span></code></a></td>
+<td>The total shift applied to the reference coordinate by past applications of <a class="reference internal" href="#sunpy.map.GenericMap.shift" title="sunpy.map.GenericMap.shift"><code class="xref py py-obj docutils literal"><span class="pre">shift</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.size" title="sunpy.map.GenericMap.size"><code class="xref py py-obj docutils literal"><span class="pre">size</span></code></a></td>
+<td>The number of pixels in the array of the map.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.spatial_units" title="sunpy.map.GenericMap.spatial_units"><code class="xref py py-obj docutils literal"><span class="pre">spatial_units</span></code></a></td>
+<td>Image coordinate units along the x and y axes (i.e.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.top_right_coord" title="sunpy.map.GenericMap.top_right_coord"><code class="xref py py-obj docutils literal"><span class="pre">top_right_coord</span></code></a></td>
+<td>The physical coordinate for the top left pixel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.wavelength" title="sunpy.map.GenericMap.wavelength"><code class="xref py py-obj docutils literal"><span class="pre">wavelength</span></code></a></td>
+<td>wavelength of the observation</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.wcs" title="sunpy.map.GenericMap.wcs"><code class="xref py py-obj docutils literal"><span class="pre">wcs</span></code></a></td>
+<td>The <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">WCS</span></code></a> property of the map.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.xrange" title="sunpy.map.GenericMap.xrange"><code class="xref py py-obj docutils literal"><span class="pre">xrange</span></code></a></td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.yrange" title="sunpy.map.GenericMap.yrange"><code class="xref py py-obj docutils literal"><span class="pre">yrange</span></code></a></td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.data_to_pixel" title="sunpy.map.GenericMap.data_to_pixel"><code class="xref py py-obj docutils literal"><span class="pre">data_to_pixel</span></code></a>(coordinate[,&nbsp;origin])</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.0.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.draw_contours" title="sunpy.map.GenericMap.draw_contours"><code class="xref py py-obj docutils literal"><span class="pre">draw_contours</span></code></a>(levels[,&nbsp;axes])</td>
+<td>Draw contours of the data</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.draw_grid" title="sunpy.map.GenericMap.draw_grid"><code class="xref py py-obj docutils literal"><span class="pre">draw_grid</span></code></a>([axes,&nbsp;grid_spacing])</td>
+<td>Draws a coordinate overlay on the plot in the Heliographic Stonyhurst coordinate system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.draw_limb" title="sunpy.map.GenericMap.draw_limb"><code class="xref py py-obj docutils literal"><span class="pre">draw_limb</span></code></a>([axes])</td>
+<td>Draws a circle representing the solar limb</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.draw_rectangle" title="sunpy.map.GenericMap.draw_rectangle"><code class="xref py py-obj docutils literal"><span class="pre">draw_rectangle</span></code></a>(bottom_left,&nbsp;width,&nbsp;height[,&nbsp;...])</td>
+<td>Draw a rectangle defined in world coordinates on the plot.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.max" title="sunpy.map.GenericMap.max"><code class="xref py py-obj docutils literal"><span class="pre">max</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Calculate the maximum value of the data array.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.mean" title="sunpy.map.GenericMap.mean"><code class="xref py py-obj docutils literal"><span class="pre">mean</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Calculate the mean of the data array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.min" title="sunpy.map.GenericMap.min"><code class="xref py py-obj docutils literal"><span class="pre">min</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Calculate the minimum value of the data array.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.peek" title="sunpy.map.GenericMap.peek"><code class="xref py py-obj docutils literal"><span class="pre">peek</span></code></a>([draw_limb,&nbsp;draw_grid,&nbsp;colorbar,&nbsp;...])</td>
+<td>Displays the map in a new figure</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.pixel_to_data" title="sunpy.map.GenericMap.pixel_to_data"><code class="xref py py-obj docutils literal"><span class="pre">pixel_to_data</span></code></a>(x,&nbsp;y[,&nbsp;origin])</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.0.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.pixel_to_world" title="sunpy.map.GenericMap.pixel_to_world"><code class="xref py py-obj docutils literal"><span class="pre">pixel_to_world</span></code></a>(x,&nbsp;y[,&nbsp;origin])</td>
+<td>Convert a pixel coordinate to a data (world) coordinate by using <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS.wcs_pix2world" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">wcs_pix2world</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.plot" title="sunpy.map.GenericMap.plot"><code class="xref py py-obj docutils literal"><span class="pre">plot</span></code></a>([annotate,&nbsp;axes,&nbsp;title])</td>
+<td>Plots the map object using matplotlib, in a method equivalent to plt.imshow() using nearest neighbour interpolation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.resample" title="sunpy.map.GenericMap.resample"><code class="xref py py-obj docutils literal"><span class="pre">resample</span></code></a>(dimensions[,&nbsp;method])</td>
+<td>Returns a new Map that has been resampled up or down</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.rotate" title="sunpy.map.GenericMap.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>([angle,&nbsp;rmatrix,&nbsp;order,&nbsp;scale,&nbsp;...])</td>
+<td>Returns a new rotated and rescaled map.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.save" title="sunpy.map.GenericMap.save"><code class="xref py py-obj docutils literal"><span class="pre">save</span></code></a>(filepath[,&nbsp;filetype])</td>
+<td>Saves the SunPy Map object to a file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.shift" title="sunpy.map.GenericMap.shift"><code class="xref py py-obj docutils literal"><span class="pre">shift</span></code></a>(axis1,&nbsp;axis2)</td>
+<td>Returns a map shifted by a specified amount to, for example, correct for a bad map location.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.std" title="sunpy.map.GenericMap.std"><code class="xref py py-obj docutils literal"><span class="pre">std</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Calculate the standard deviation of the data array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.submap" title="sunpy.map.GenericMap.submap"><code class="xref py py-obj docutils literal"><span class="pre">submap</span></code></a>(bottom_left[,&nbsp;top_right])</td>
+<td>Returns a submap of the map defined by the rectangle given by the <code class="docutils literal"><span class="pre">[bottom_left,</span> <span class="pre">top_right]</span></code> coordinates.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.GenericMap.superpixel" title="sunpy.map.GenericMap.superpixel"><code class="xref py py-obj docutils literal"><span class="pre">superpixel</span></code></a>(dimensions[,&nbsp;offset,&nbsp;func])</td>
+<td>Returns a new map consisting of superpixels formed by applying &#8216;func&#8217; to the original map data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.GenericMap.world_to_pixel" title="sunpy.map.GenericMap.world_to_pixel"><code class="xref py py-obj docutils literal"><span class="pre">world_to_pixel</span></code></a>(coordinate[,&nbsp;origin])</td>
+<td>Convert a world (data) coordinate to a pixel coordinate by using <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS.wcs_world2pix" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">wcs_world2pix</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.bottom_left_coord">
+<code class="descname">bottom_left_coord</code><a class="headerlink" href="#sunpy.map.GenericMap.bottom_left_coord" title="Permalink to this definition">¶</a></dt>
+<dd><p>The physical coordinate for the bottom left [0,0] pixel.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.carrington_longitude">
+<code class="descname">carrington_longitude</code><a class="headerlink" href="#sunpy.map.GenericMap.carrington_longitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrington longitude (crln_obs)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.center">
+<code class="descname">center</code><a class="headerlink" href="#sunpy.map.GenericMap.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a coordinate object for the center pixel of the array.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.coordinate_frame">
+<code class="descname">coordinate_frame</code><a class="headerlink" href="#sunpy.map.GenericMap.coordinate_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="xref py py-obj docutils literal"><span class="pre">astropy.coordinates.BaseFrame</span></code> instance created from the coordinate
+information for this Map.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.coordinate_system">
+<code class="descname">coordinate_system</code><a class="headerlink" href="#sunpy.map.GenericMap.coordinate_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coordinate system used for x and y axes (ctype1/2)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.date">
+<code class="descname">date</code><a class="headerlink" href="#sunpy.map.GenericMap.date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image observation time</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.detector">
+<code class="descname">detector</code><a class="headerlink" href="#sunpy.map.GenericMap.detector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detector name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.dimensions">
+<code class="descname">dimensions</code><a class="headerlink" href="#sunpy.map.GenericMap.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dimensions of the array (x axis first, y axis second).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.dsun">
+<code class="descname">dsun</code><a class="headerlink" href="#sunpy.map.GenericMap.dsun" title="Permalink to this definition">¶</a></dt>
+<dd><p>The observer distance from the Sun.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.dtype">
+<code class="descname">dtype</code><a class="headerlink" href="#sunpy.map.GenericMap.dtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">numpy.dtype</span></code></a> of the array of the map.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.exposure_time">
+<code class="descname">exposure_time</code><a class="headerlink" href="#sunpy.map.GenericMap.exposure_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exposure time of the image in seconds.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.heliographic_latitude">
+<code class="descname">heliographic_latitude</code><a class="headerlink" href="#sunpy.map.GenericMap.heliographic_latitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Heliographic latitude</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.heliographic_longitude">
+<code class="descname">heliographic_longitude</code><a class="headerlink" href="#sunpy.map.GenericMap.heliographic_longitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Heliographic longitude</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.instrument">
+<code class="descname">instrument</code><a class="headerlink" href="#sunpy.map.GenericMap.instrument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instrument name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.latex_name">
+<code class="descname">latex_name</code><a class="headerlink" href="#sunpy.map.GenericMap.latex_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>LaTeX formatted description of the Map.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.measurement">
+<code class="descname">measurement</code><a class="headerlink" href="#sunpy.map.GenericMap.measurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measurement name, defaults to the wavelength of image</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.name">
+<code class="descname">name</code><a class="headerlink" href="#sunpy.map.GenericMap.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human-readable description of the Map.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.ndim">
+<code class="descname">ndim</code><a class="headerlink" href="#sunpy.map.GenericMap.ndim" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.ndim.html#numpy.ndarray.ndim" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">numpy.ndarray.ndim</span></code></a> of the data array of the map.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.nickname">
+<code class="descname">nickname</code><a class="headerlink" href="#sunpy.map.GenericMap.nickname" title="Permalink to this definition">¶</a></dt>
+<dd><p>An abbreviated human-readable description of the map-type; part of
+the Helioviewer data model</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.observatory">
+<code class="descname">observatory</code><a class="headerlink" href="#sunpy.map.GenericMap.observatory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Observatory or Telescope name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.observer_coordinate">
+<code class="descname">observer_coordinate</code><a class="headerlink" href="#sunpy.map.GenericMap.observer_coordinate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Heliographic Stonyhurst Coordinate of the observer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.processing_level">
+<code class="descname">processing_level</code><a class="headerlink" href="#sunpy.map.GenericMap.processing_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the FITS processing level if present.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.reference_coordinate">
+<code class="descname">reference_coordinate</code><a class="headerlink" href="#sunpy.map.GenericMap.reference_coordinate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference point WCS axes in data units (i.e. crval1, crval2). This value
+includes a shift if one is set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.reference_pixel">
+<code class="descname">reference_pixel</code><a class="headerlink" href="#sunpy.map.GenericMap.reference_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference point axes in pixels (i.e. crpix1, crpix2)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.rotation_matrix">
+<code class="descname">rotation_matrix</code><a class="headerlink" href="#sunpy.map.GenericMap.rotation_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix describing the rotation required to align solar North with
+the top of the image.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.rsun_meters">
+<code class="descname">rsun_meters</code><a class="headerlink" href="#sunpy.map.GenericMap.rsun_meters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Radius of the sun in meters</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.rsun_obs">
+<code class="descname">rsun_obs</code><a class="headerlink" href="#sunpy.map.GenericMap.rsun_obs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Radius of the Sun.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.scale">
+<code class="descname">scale</code><a class="headerlink" href="#sunpy.map.GenericMap.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image scale along the x and y axes in units/pixel (i.e. cdelt1, cdelt2)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.shifted_value">
+<code class="descname">shifted_value</code><a class="headerlink" href="#sunpy.map.GenericMap.shifted_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The total shift applied to the reference coordinate by past applications of
+<a class="reference internal" href="#sunpy.map.GenericMap.shift" title="sunpy.map.GenericMap.shift"><code class="xref py py-obj docutils literal"><span class="pre">shift</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.size">
+<code class="descname">size</code><a class="headerlink" href="#sunpy.map.GenericMap.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of pixels in the array of the map.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.spatial_units">
+<code class="descname">spatial_units</code><a class="headerlink" href="#sunpy.map.GenericMap.spatial_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image coordinate units along the x and y axes (i.e. cunit1, cunit2).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.top_right_coord">
+<code class="descname">top_right_coord</code><a class="headerlink" href="#sunpy.map.GenericMap.top_right_coord" title="Permalink to this definition">¶</a></dt>
+<dd><p>The physical coordinate for the top left pixel.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.wavelength">
+<code class="descname">wavelength</code><a class="headerlink" href="#sunpy.map.GenericMap.wavelength" title="Permalink to this definition">¶</a></dt>
+<dd><p>wavelength of the observation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.wcs">
+<code class="descname">wcs</code><a class="headerlink" href="#sunpy.map.GenericMap.wcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">WCS</span></code></a> property of the map.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.xrange">
+<code class="descname">xrange</code><a class="headerlink" href="#sunpy.map.GenericMap.xrange" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>This property is only valid for non-rotated WCS</p>
+</div>
+<p>Return the X range of the image from edge to edge.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.map.GenericMap.yrange">
+<code class="descname">yrange</code><a class="headerlink" href="#sunpy.map.GenericMap.yrange" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>This property is only valid for non-rotated WCS</p>
+</div>
+<p>Return the Y range of the image from edge to edge.</p>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="sunpy.map.GenericMap.data_to_pixel">
+<code class="descname">data_to_pixel</code><span class="sig-paren">(</span><em>coordinate</em>, <em>origin=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.data_to_pixel"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L819" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.data_to_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.0: </span>The data_to_pixel function is deprecated and may be removed in a future version.
+    Use sunpy.map.GenericMap.world_to_pixel instead.</p>
+</div>
+<p>See <a class="reference internal" href="../code_ref/map.html#sunpy.map.mapbase.GenericMap.world_to_pixel" title="sunpy.map.mapbase.GenericMap.world_to_pixel"><code class="xref py py-obj docutils literal"><span class="pre">world_to_pixel</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.draw_contours">
+<code class="descname">draw_contours</code><span class="sig-paren">(</span><em>levels</em>, <em>axes=None</em>, <em>**contour_args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.draw_contours"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L1555" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.draw_contours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw contours of the data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>levels</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; A list of numbers indicating the level curves to draw given in
+percent.</li>
+<li><strong>axes</strong> (<a class="reference external" href="http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.axes.Axes</span></code></a>) &#8211; The axes on which to plot the rectangle, defaults to the current
+axes.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>cs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a>) &#8211; The <code class="xref py py-obj docutils literal"><span class="pre">QuadContourSet</span></code> object, after it has been added to
+<code class="docutils literal"><span class="pre">axes</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Extra keyword arguments to this function are passed through to the
+<a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.contour" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">contour</span></code></a> function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.draw_grid">
+<code class="descname">draw_grid</code><span class="sig-paren">(</span><em>axes=None</em>, <em>grid_spacing=&lt;Quantity 15.0 deg&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.draw_grid"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L1416" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.draw_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a coordinate overlay on the plot in the Heliographic Stonyhurst
+coordinate system.</p>
+<p>To overlay other coordinate systems see the <a class="reference external" href="http://docs.astropy.org/en/stable/visualization/wcsaxes/overlaying_coordinate_systems.html">WCSAxes Documentation</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>axes</strong> (<code class="xref py py-obj docutils literal"><span class="pre">axes</span></code> or None) &#8211; </li>
+<li><strong>to plot limb on</strong><strong> or </strong><strong>None to use current axes.</strong> (<em>Axes</em>) &#8211; </li>
+<li><strong>grid_spacing</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; Spacing for longitude and latitude grid, if length two it specifies
+(lon, lat) spacing.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>overlay</strong> (<code class="xref py py-obj docutils literal"><span class="pre">CoordinatesMap</span></code>) &#8211; The wcsaxes coordinate overlay instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Keyword arguments are passed onto the <code class="xref py py-obj docutils literal"><span class="pre">sunpy.visualization.wcsaxes_compat.wcsaxes_heliographic_overlay</span></code> function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.draw_limb">
+<code class="descname">draw_limb</code><span class="sig-paren">(</span><em>axes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.draw_limb"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L1452" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.draw_limb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a circle representing the solar limb</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> (<code class="xref py py-obj docutils literal"><span class="pre">axes</span></code> or None) &#8211; Axes to plot limb on or None to use current axes.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>circ</strong> (<em>list</em>) &#8211; A list containing the <a class="reference external" href="http://matplotlib.org/api/patches_api.html#matplotlib.patches.Circle" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">Circle</span></code></a> object that
+has been added to the axes.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Keyword arguments are passed onto <a class="reference external" href="http://matplotlib.org/api/patches_api.html#matplotlib.patches.Circle" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.patches.Circle</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.draw_rectangle">
+<code class="descname">draw_rectangle</code><span class="sig-paren">(</span><em>bottom_left</em>, <em>width</em>, <em>height</em>, <em>axes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.draw_rectangle"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L1493" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.draw_rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a rectangle defined in world coordinates on the plot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bottom_left</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> or <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.BaseCoordinateFrame.html#astropy.coordinates.BaseCoordinateFrame" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">BaseCoordinateFrame</span></code></a>) &#8211; The bottom left corner of the rectangle.</li>
+<li><strong>width</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a>) &#8211; The width of the rectangle.</li>
+<li><strong>height</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a>) &#8211; The height of the rectangle.</li>
+<li><strong>axes</strong> (<a class="reference external" href="http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.axes.Axes</span></code></a>) &#8211; The axes on which to plot the rectangle, defaults to the current
+axes.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>rect</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a>) &#8211; A list containing the <a class="reference external" href="http://matplotlib.org/api/patches_api.html#matplotlib.patches.Rectangle" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">Rectangle</span></code></a> object, after
+it has been added to <code class="docutils literal"><span class="pre">axes</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Extra keyword arguments to this function are passed through to the
+<a class="reference external" href="http://matplotlib.org/api/patches_api.html#matplotlib.patches.Rectangle" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">Rectangle</span></code></a> instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.max">
+<code class="descname">max</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.max"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L368" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the maximum value of the data array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.mean">
+<code class="descname">mean</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.mean"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L356" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the mean of the data array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.min">
+<code class="descname">min</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.min"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L362" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the minimum value of the data array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.peek">
+<code class="descname">peek</code><span class="sig-paren">(</span><em>draw_limb=False</em>, <em>draw_grid=False</em>, <em>colorbar=True</em>, <em>basic_plot=False</em>, <em>**matplot_args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.peek"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L1595" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.peek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays the map in a new figure</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>draw_limb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Whether the solar limb should be plotted.</li>
+<li><strong>draw_grid</strong> (bool or <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; Whether solar meridians and parallels are plotted.
+If <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a> then sets degree difference between
+parallels and meridians.</li>
+<li><strong>gamma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; Gamma value to use for the color map</li>
+<li><strong>colorbar</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Whether to display a colorbar next to the plot</li>
+<li><strong>basic_plot</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; If true, the data is plotted by itself at it&#8217;s natural scale; no
+title, labels, or axes are shown.</li>
+<li><strong>**matplot_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><em>dict</em></a>) &#8211; Matplotlib Any additional imshow arguments that should be used
+when plotting.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.pixel_to_data">
+<code class="descname">pixel_to_data</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>origin=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.pixel_to_data"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L867" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.pixel_to_data" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.0: </span>The pixel_to_data function is deprecated and may be removed in a future version.
+    Use sunpy.map.GenericMap.pixel_to_world instead.</p>
+</div>
+<p>See <a class="reference internal" href="../code_ref/map.html#sunpy.map.mapbase.GenericMap.pixel_to_world" title="sunpy.map.mapbase.GenericMap.pixel_to_world"><code class="xref py py-obj docutils literal"><span class="pre">pixel_to_world</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.pixel_to_world">
+<code class="descname">pixel_to_world</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>origin=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.pixel_to_world"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L826" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.pixel_to_world" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a pixel coordinate to a data (world) coordinate by using
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS.wcs_pix2world" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">wcs_pix2world</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; Pixel coordinate of the CTYPE1 axis. (Normally solar-x).</li>
+<li><strong>y</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; Pixel coordinate of the CTYPE2 axis. (Normally solar-y).</li>
+<li><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Origin of the top-left corner. i.e. count from 0 or 1.
+Normally, origin should be 0 when passing numpy indices, or 1 if
+passing values from FITS header or map attributes.
+See <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS.wcs_pix2world" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">wcs_pix2world</span></code></a> for more information.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>coord</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.coordinates.SkyCoord</span></code></a>) &#8211; A coordinate object representing the output coordinate.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>annotate=True</em>, <em>axes=None</em>, <em>title=True</em>, <em>**imshow_kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.plot"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L1653" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots the map object using matplotlib, in a method equivalent
+to plt.imshow() using nearest neighbour interpolation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>annotate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; If True, the data is plotted at it&#8217;s natural scale; with
+title and axis labels.</li>
+<li><strong>axes</strong> (<code class="xref py py-obj docutils literal"><span class="pre">axes</span></code> or None) &#8211; If provided the image will be plotted on the given axes. Else the
+current matplotlib axes will be used.</li>
+<li><strong>**imshow_kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><em>dict</em></a>) &#8211; Any additional imshow arguments that should be used
+when plotting.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Simple Plot with color bar</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>   
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Add a limb line and grid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">()</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span><span class="o">.</span><span class="n">draw_grid</span><span class="p">()</span>   
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.resample">
+<code class="descname">resample</code><span class="sig-paren">(</span><em>dimensions</em>, <em>method='linear'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.resample"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L895" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.resample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new Map that has been resampled up or down</p>
+<p>Arbitrary resampling of the Map to new dimension sizes.</p>
+<p>Uses the same parameters and creates the same co-ordinate lookup points
+as IDL&#8217;&#8217;s congrid routine, which apparently originally came from a
+VAX/VMS routine of the same name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dimensions</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; Pixel dimensions that new Map should have.
+Note: the first argument corresponds to the &#8216;x&#8217; axis and the second
+argument corresponds to the &#8216;y&#8217; axis.</li>
+<li><strong>method</strong> (<em>{'neighbor' | 'nearest' | 'linear' | 'spline'}</em>) &#8211; <dl class="docutils">
+<dt>Method to use for resampling interpolation.</dt>
+<dd><ul class="first last">
+<li>neighbor - Closest value from original data</li>
+<li>nearest and linear - Uses n x 1-D interpolations using
+scipy.interpolate.interp1d</li>
+<li>spline - Uses ndimage.map_coordinates</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>out</strong> (<a class="reference internal" href="#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> or subclass) &#8211; A new Map which has been resampled to the desired dimensions.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.scipy.org/Cookbook/Rebinning">Rebinning</a> (Original
+source, 2011/11/19)</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.rotate">
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>angle=None</em>, <em>rmatrix=None</em>, <em>order=4</em>, <em>scale=1.0</em>, <em>recenter=False</em>, <em>missing=0.0</em>, <em>use_scipy=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.rotate"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L964" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new rotated and rescaled map.</p>
+<p>Specify either a rotation angle or a rotation matrix, but not both. If
+neither an angle or a rotation matrix are specified, the map will be
+rotated by the rotation angle in the metadata.</p>
+<p>The map will be rotated around the reference coordinate defined in the
+meta data.</p>
+<p>This method also updates the <code class="docutils literal"><span class="pre">rotation_matrix</span></code> attribute and any
+appropriate header data so that they correctly describe the new map.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>angle</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; The angle (degrees) to rotate counterclockwise.</li>
+<li><strong>rmatrix</strong> (<em>2x2</em>) &#8211; Linear transformation rotation matrix.</li>
+<li><strong>order</strong> (<em>int 0-5</em>) &#8211; Interpolation order to be used. When using scikit-image this
+parameter is passed into <a class="reference external" href="http://scikit-image.org/docs/stable/api/skimage.transform.html#skimage.transform.warp" title="(in skimage v0.13.0)"><code class="xref py py-func docutils literal"><span class="pre">skimage.transform.warp()</span></code></a> (e.g., 4
+corresponds to bi-quartic interpolation).
+When using scipy it is passed into
+<code class="xref py py-func docutils literal"><span class="pre">scipy.ndimage.interpolation.affine_transform()</span></code> where it
+controls the order of the spline. Faster performance may be
+obtained at the cost of accuracy by using lower values.
+Default: 4</li>
+<li><strong>scale</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; A scale factor for the image, default is no scaling</li>
+<li><strong>recenter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; If True, position the axis of rotation at the center of the new map
+Default: False</li>
+<li><strong>missing</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; The numerical value to fill any missing points after rotation.
+Default: 0.0</li>
+<li><strong>use_scipy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; If True, forces the rotation to use
+<code class="xref py py-func docutils literal"><span class="pre">scipy.ndimage.interpolation.affine_transform()</span></code>, otherwise it
+uses the <a class="reference external" href="http://scikit-image.org/docs/stable/api/skimage.transform.html#skimage.transform.warp" title="(in skimage v0.13.0)"><code class="xref py py-func docutils literal"><span class="pre">skimage.transform.warp()</span></code></a>.
+Default: False, unless scikit-image can&#8217;t be imported</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>out</strong> (<a class="reference internal" href="#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> or subclass) &#8211; A new Map instance containing the rotated and rescaled data of the
+original map.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="sunpy.image.transform.affine_transform.html#sunpy.image.transform.affine_transform" title="sunpy.image.transform.affine_transform"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.image.transform.affine_transform()</span></code></a></dt>
+<dd>The routine this method calls</dd>
+</dl>
+<p class="last"><code class="xref py py-meth docutils literal"><span class="pre">for()</span></code></p>
+</div>
+<p class="rubric">Notes</p>
+<p>This function will remove old CROTA keywords from the header.
+This function will also convert a CDi_j matrix to a PCi_j matrix.</p>
+<p>See <a class="reference internal" href="sunpy.image.transform.affine_transform.html#sunpy.image.transform.affine_transform" title="sunpy.image.transform.affine_transform"><code class="xref py py-func docutils literal"><span class="pre">sunpy.image.transform.affine_transform()</span></code></a> for details on the
+transformations, situations when the underlying data is modified prior
+to rotation, and differences from IDL&#8217;s rot().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>filepath</em>, <em>filetype='auto'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.save"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L876" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the SunPy Map object to a file.</p>
+<p>Currently SunPy can only save files in the FITS format. In the future
+support will be added for saving to other formats.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Location to save file to.</li>
+<li><strong>filetype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; &#8216;auto&#8217; or any supported file extension</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.shift">
+<code class="descname">shift</code><span class="sig-paren">(</span><em>axis1</em>, <em>axis2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.shift"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L514" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a map shifted by a specified amount to, for example, correct
+for a bad map location. These values are applied directly to the
+<a class="reference internal" href="#sunpy.map.GenericMap.reference_coordinate" title="sunpy.map.GenericMap.reference_coordinate"><code class="xref py py-obj docutils literal"><span class="pre">reference_coordinate</span></code></a>. To check how much shift
+has already been applied see <a class="reference internal" href="#sunpy.map.GenericMap.shifted_value" title="sunpy.map.GenericMap.shifted_value"><code class="xref py py-obj docutils literal"><span class="pre">shifted_value</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>axis1</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; The shift to apply to the Longitude (solar-x) coordinate.</li>
+<li><strong>axis2</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; The shift to apply to the Latitude (solar-y) coordinate</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>out</strong> (<a class="reference internal" href="#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> or subclass) &#8211; A new shifted Map.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.std">
+<code class="descname">std</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.std"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L350" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.std" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the standard deviation of the data array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.submap">
+<code class="descname">submap</code><span class="sig-paren">(</span><em>bottom_left</em>, <em>top_right=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.submap"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L1167" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.submap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a submap of the map defined by the rectangle given by the
+<code class="docutils literal"><span class="pre">[bottom_left,</span> <span class="pre">top_right]</span></code> coordinates.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bottom_left</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a> or <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a>) &#8211; The bottom_left coordinate of the rectangle. If a <code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code> it can
+have shape <code class="docutils literal"><span class="pre">(2,)</span></code> and also define <code class="docutils literal"><span class="pre">top_right</span></code>. If specifying
+pixel coordinates it must be given as an <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>
+object with units of <code class="xref py py-obj docutils literal"><span class="pre">pixel</span></code>.</li>
+<li><strong>top_right</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a> or <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a>) &#8211; The top_right coordinate of the rectangle. Can only be omitted if
+<code class="docutils literal"><span class="pre">bottom_left</span></code> has shape <code class="docutils literal"><span class="pre">(2,)</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>out</strong> (<a class="reference internal" href="#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> or subclass) &#8211; A new map instance is returned representing to specified sub-region</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bl</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="o">-</span><span class="mi">300</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="o">-</span><span class="mi">300</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">aia</span><span class="o">.</span><span class="n">coordinate_frame</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tr</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">500</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="mi">500</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">aia</span><span class="o">.</span><span class="n">coordinate_frame</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span><span class="o">.</span><span class="n">submap</span><span class="p">(</span><span class="n">bl</span><span class="p">,</span> <span class="n">tr</span><span class="p">)</span>   
+<span class="go">SunPy Map</span>
+<span class="go">---------</span>
+<span class="go">Observatory:             SDO</span>
+<span class="go">Instrument:              AIA 3</span>
+<span class="go">Detector:                AIA</span>
+<span class="go">Measurement:             171.0 Angstrom</span>
+<span class="go">Wavelength:              171.0 Angstrom</span>
+<span class="go">Observation Date:        2011-03-19 10:54:00</span>
+<span class="go">Exposure Time:           1.999601 s</span>
+<span class="go">Dimension:               [ 333.  333.] pix</span>
+<span class="go">Coordinate System:       helioprojective</span>
+<span class="go">Scale:                   [ 2.4  2.4] arcsec / pix</span>
+<span class="go">Reference Pixel:         [ 125.5  125.5] pix</span>
+<span class="go">Reference Coord:         [ 0.  0.] arcsec</span>
+
+<span class="go">array([[ 365.625 ,  438.1875,  395.1875, ...,  201.375 ,  204.4375,  216.    ],</span>
+<span class="go">    [ 386.125 ,  389.5   ,  370.3125, ...,  207.3125,  202.1875,  196.75  ],</span>
+<span class="go">    [ 380.75  ,  342.875 ,  320.875 , ...,  187.5   ,  196.9375,</span>
+<span class="go">        178.875 ],</span>
+<span class="go">    ...,</span>
+<span class="go">    [ 225.3125,  219.1875,  211.1875, ...,  359.8125,  324.5625,</span>
+<span class="go">        305.375 ],</span>
+<span class="go">    [ 228.625 ,  228.8125,  225.8125, ...,  358.5   ,  318.    ,</span>
+<span class="go">        297.1875],</span>
+<span class="go">    [ 220.6875,  221.125 ,  209.625 , ...,  390.4375,  329.375 ,</span>
+<span class="go">        302.3125]])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">aia</span><span class="o">.</span><span class="n">submap</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">pixel</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">pixel</span><span class="p">)</span>   
+<span class="go">SunPy Map</span>
+<span class="go">---------</span>
+<span class="go">Observatory:             SDO</span>
+<span class="go">Instrument:              AIA 3</span>
+<span class="go">Detector:                AIA</span>
+<span class="go">Measurement:             171.0 Angstrom</span>
+<span class="go">Wavelength:              171.0 Angstrom</span>
+<span class="go">Observation Date:        2011-03-19 10:54:00</span>
+<span class="go">Exposure Time:           1.999601 s</span>
+<span class="go">Dimension:               [ 5.  5.] pix</span>
+<span class="go">Coordinate System:       helioprojective</span>
+<span class="go">Scale:                   [ 2.4  2.4] arcsec / pix</span>
+<span class="go">Reference Pixel:         [ 512.5  512.5] pix</span>
+<span class="go">Reference Coord:         [ 0.  0.] arcsec</span>
+
+<span class="go">array([[ 0.3125, -0.0625, -0.125 ,  0.    , -0.375 ],</span>
+<span class="go">    [ 1.    ,  0.1875, -0.8125,  0.125 ,  0.3125],</span>
+<span class="go">    [-1.1875,  0.375 , -0.5   ,  0.25  , -0.4375],</span>
+<span class="go">    [-0.6875, -0.3125,  0.8125,  0.0625,  0.1875],</span>
+<span class="go">    [-0.875 ,  0.25  ,  0.1875,  0.    , -0.6875]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.superpixel">
+<code class="descname">superpixel</code><span class="sig-paren">(</span><em>dimensions</em>, <em>offset=&lt;Quantity [ 0.</em>, <em>0.] pix&gt;</em>, <em>func=&lt;function sum&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.superpixel"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L1326" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.superpixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new map consisting of superpixels formed by applying
+&#8216;func&#8217; to the original map data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dimensions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.6)"><em>tuple</em></a>) &#8211; One superpixel in the new map is equal to (dimension[0],
+dimension[1]) pixels of the original map.
+Note: the first argument corresponds to the &#8216;x&#8217; axis and the second
+argument corresponds to the &#8216;y&#8217; axis.</li>
+<li><strong>offset</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.6)"><em>tuple</em></a>) &#8211; Offset from (0,0) in original map pixels used to calculate where
+the data used to make the resulting superpixel map starts.</li>
+<li><strong>func</strong> (<em>function applied to the original data</em>) &#8211; The function &#8216;func&#8217; must take a numpy array as its first argument,
+and support the axis keyword with the meaning of a numpy axis
+keyword (see the description of <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html#numpy.sum" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">sum</span></code></a> for an example.)
+The default value of &#8216;func&#8217; is <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html#numpy.sum" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">sum</span></code></a>; using this causes
+superpixel to sum over (dimension[0], dimension[1]) pixels of the
+original map.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>out</strong> (<a class="reference internal" href="#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> or subclass) &#8211; A new Map which has superpixels of the required size.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://mail.scipy.org/pipermail/numpy-discussion/2010-July/051760.html">Summarizing blocks of an array using a moving window</a></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.GenericMap.world_to_pixel">
+<code class="descname">world_to_pixel</code><span class="sig-paren">(</span><em>coordinate</em>, <em>origin=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapbase.html#GenericMap.world_to_pixel"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapbase.py#L784" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.GenericMap.world_to_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a world (data) coordinate to a pixel coordinate by using
+<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS.wcs_world2pix" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">wcs_world2pix</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>coordinate</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code></a> or <code class="xref py py-obj docutils literal"><span class="pre">BaseFrame</span></code>) &#8211; The coordinate object to convert to pixel coordinates.</li>
+<li><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Origin of the top-left corner. i.e. count from 0 or 1.
+Normally, origin should be 0 when passing numpy indices, or 1 if
+passing values from FITS header or map attributes.
+See <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.wcs.WCS.html#astropy.wcs.WCS.wcs_world2pix" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">wcs_world2pix</span></code></a> for more information.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>x</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; Pixel coordinate on the CTYPE1 axis.</li>
+<li><strong>y</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>) &#8211; Pixel coordinate on the CTYPE2 axis.</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

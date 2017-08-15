@@ -1,0 +1,51 @@
+DatabaseEntry
+=============
+
+.. currentmodule:: sunpy.database.tables
+
+.. autoclass:: DatabaseEntry
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~DatabaseEntry.download_time
+      ~DatabaseEntry.fileid
+      ~DatabaseEntry.fits_header_entries
+      ~DatabaseEntry.fits_key_comments
+      ~DatabaseEntry.hdu_index
+      ~DatabaseEntry.id
+      ~DatabaseEntry.instrument
+      ~DatabaseEntry.observation_time_end
+      ~DatabaseEntry.observation_time_start
+      ~DatabaseEntry.path
+      ~DatabaseEntry.physobs
+      ~DatabaseEntry.provider
+      ~DatabaseEntry.size
+      ~DatabaseEntry.source
+      ~DatabaseEntry.starred
+      ~DatabaseEntry.tags
+      ~DatabaseEntry.wavemax
+      ~DatabaseEntry.wavemin
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: download_time
+   .. autoattribute:: fileid
+   .. autoattribute:: fits_header_entries
+   .. autoattribute:: fits_key_comments
+   .. autoattribute:: hdu_index
+   .. autoattribute:: id
+   .. autoattribute:: instrument
+   .. autoattribute:: observation_time_end
+   .. autoattribute:: observation_time_start
+   .. autoattribute:: path
+   .. autoattribute:: physobs
+   .. autoattribute:: provider
+   .. autoattribute:: size
+   .. autoattribute:: source
+   .. autoattribute:: starred
+   .. autoattribute:: tags
+   .. autoattribute:: wavemax
+   .. autoattribute:: wavemin

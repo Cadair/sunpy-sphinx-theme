@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy instr &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="aiaprep" href="../api/sunpy.instr.aia.aiaprep.html" />
+    <link rel="prev" title="calculate_match_template_shift" href="../api/sunpy.image.coalignment.calculate_match_template_shift.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy instr | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/code_ref/instr.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">SunPy image</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SunPy instr</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.aia.aiaprep.html">aiaprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.fermi.download_weekly_pointing_file.html">download_weekly_pointing_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.fermi.get_detector_sun_angles_for_time.html">get_detector_sun_angles_for_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.fermi.get_detector_sun_angles_for_date.html">get_detector_sun_angles_for_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.fermi.plot_detector_sun_angles.html">plot_detector_sun_angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.fermi.met_to_utc.html">met_to_utc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.goes.get_goes_event_list.html">get_goes_event_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.goes.calculate_temperature_em.html">calculate_temperature_em</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.goes.calculate_radiative_loss_rate.html">calculate_radiative_loss_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.goes.calculate_xray_luminosity.html">calculate_xray_luminosity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.goes.flux_to_flareclass.html">flux_to_flareclass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.goes.flareclass_to_flux.html">flareclass_to_flux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.iris.SJI_to_cube.html">SJI_to_cube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.lyra.remove_lytaf_events_from_lightcurve.html">remove_lytaf_events_from_lightcurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.lyra.remove_lytaf_events_from_timeseries.html">remove_lytaf_events_from_timeseries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.lyra.get_lytaf_events.html">get_lytaf_events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.lyra.get_lytaf_event_types.html">get_lytaf_event_types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.lyra.download_lytaf_database.html">download_lytaf_database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.lyra.split_series_using_lytaf.html">split_series_using_lytaf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.rhessi.get_obssumm_dbase_file.html">get_obssumm_dbase_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.rhessi.parse_obssumm_dbase_file.html">parse_obssumm_dbase_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.rhessi.get_obssum_filename.html">get_obssum_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.rhessi.get_obssumm_file.html">get_obssumm_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.rhessi.parse_obssumm_file.html">parse_obssumm_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.instr.rhessi.backprojection.html">backprojection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-instr">
+<h1>SunPy instr<a class="headerlink" href="#sunpy-instr" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">instr</span></code> submodule contains instrument specific routines, generally this
+submodule is focused on routines that process calibrated data.</p>
+<div class="section" id="module-sunpy.instr">
+<span id="sunpy-instr-package"></span><h2>sunpy.instr Package<a class="headerlink" href="#module-sunpy.instr" title="Permalink to this headline">¶</a></h2>
+<p>This is where libraries for individual missions resides</p>
+</div>
+<div class="section" id="module-sunpy.instr.aia">
+<span id="sunpy-instr-aia-module"></span><h2>sunpy.instr.aia Module<a class="headerlink" href="#module-sunpy.instr.aia" title="Permalink to this headline">¶</a></h2>
+<p>Provides processing routines for data captured with the AIA instrument on SDO.</p>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.aia.aiaprep.html#sunpy.instr.aia.aiaprep" title="sunpy.instr.aia.aiaprep"><code class="xref py py-obj docutils literal"><span class="pre">aiaprep</span></code></a>(aiamap)</td>
+<td>Processes a level 1 <a class="reference internal" href="../api/sunpy.map.sources.AIAMap.html#sunpy.map.sources.AIAMap" title="sunpy.map.sources.sdo.AIAMap"><code class="xref py py-obj docutils literal"><span class="pre">AIAMap</span></code></a> into a level 1.5 <a class="reference internal" href="../api/sunpy.map.sources.AIAMap.html#sunpy.map.sources.AIAMap" title="sunpy.map.sources.sdo.AIAMap"><code class="xref py py-obj docutils literal"><span class="pre">AIAMap</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.instr.fermi">
+<span id="sunpy-instr-fermi-module"></span><h2>sunpy.instr.fermi Module<a class="headerlink" href="#module-sunpy.instr.fermi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.fermi.download_weekly_pointing_file.html#sunpy.instr.fermi.download_weekly_pointing_file" title="sunpy.instr.fermi.download_weekly_pointing_file"><code class="xref py py-obj docutils literal"><span class="pre">download_weekly_pointing_file</span></code></a>(date)</td>
+<td>Downloads the FERMI/LAT weekly pointing file corresponding to the specified date.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.fermi.get_detector_sun_angles_for_time.html#sunpy.instr.fermi.get_detector_sun_angles_for_time" title="sunpy.instr.fermi.get_detector_sun_angles_for_time"><code class="xref py py-obj docutils literal"><span class="pre">get_detector_sun_angles_for_time</span></code></a>(time,&nbsp;file)</td>
+<td>get the GBM detector angles vs the sun for a single time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.fermi.get_detector_sun_angles_for_date.html#sunpy.instr.fermi.get_detector_sun_angles_for_date" title="sunpy.instr.fermi.get_detector_sun_angles_for_date"><code class="xref py py-obj docutils literal"><span class="pre">get_detector_sun_angles_for_date</span></code></a>(date,&nbsp;file)</td>
+<td>get the GBM detector angles vs the sun as a function of time for a given</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.fermi.plot_detector_sun_angles.html#sunpy.instr.fermi.plot_detector_sun_angles" title="sunpy.instr.fermi.plot_detector_sun_angles"><code class="xref py py-obj docutils literal"><span class="pre">plot_detector_sun_angles</span></code></a>(angles)</td>
+<td>Plots the Fermi/GBM detector angles as a function of time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.fermi.met_to_utc.html#sunpy.instr.fermi.met_to_utc" title="sunpy.instr.fermi.met_to_utc"><code class="xref py py-obj docutils literal"><span class="pre">met_to_utc</span></code></a>(timeinsec)</td>
+<td>Converts Fermi Mission Elapsed Time (MET) in seconds to a datetime object.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.instr.goes">
+<span id="sunpy-instr-goes-module"></span><h2>sunpy.instr.goes Module<a class="headerlink" href="#module-sunpy.instr.goes" title="Permalink to this headline">¶</a></h2>
+<p>Contains functions useful for analysing GOES/XRS data.</p>
+<p>Each of the Geostationary Operational Environmental Satellite (GOES) series
+since the mid-1970s has carried an X-Ray Sensor (XRS) which observes
+full-disk-integrated solar flux in two broadband channels:
+1&#8211;8 angstrom (long); and 0.5&#8211;4 angstrom (short).  For more information on
+the GOES/XRS instrument, see <a class="reference internal" href="#ref1" id="id2">[Ref1]</a>.  GOES/XRS has become
+the &#8220;standard candle&#8221; for solar coronal observations due its longevity and
+consistency.  The GOES event list, based on GOES/XRS observations, has
+become the standard solar flare catalogue.
+See <a class="reference external" href="http://www.ngdc.noaa.gov/stp/solar/solarflares.html">http://www.ngdc.noaa.gov/stp/solar/solarflares.html</a> for information
+on the GOES event list definitions and data.</p>
+<p>The functions in this module provide useful software to analyse GOES/XRS
+observations.  First they allow the GOES event list to be imported into a
+Python session (<a class="reference internal" href="../api/sunpy.instr.goes.get_goes_event_list.html#sunpy.instr.goes.get_goes_event_list" title="sunpy.instr.goes.get_goes_event_list"><code class="xref py py-obj docutils literal"><span class="pre">get_goes_event_list</span></code></a>).</p>
+<p>They also allow the thermodynamic properties of the emitting solar plasma to be
+determined. Temperature and emission measure are obtained using
+<a class="reference internal" href="../api/sunpy.instr.goes.calculate_temperature_em.html#sunpy.instr.goes.calculate_temperature_em" title="sunpy.instr.goes.calculate_temperature_em"><code class="xref py py-obj docutils literal"><span class="pre">calculate_temperature_em</span></code></a>, this function currently relies on
+lookup tables relating the GOES fluxes to the isothermal temperature and volume
+emission measure. These tables were calculated by functions in SolarSoftWare
+(SSW) using the CHIANTI atomic physics database (<a class="reference internal" href="#ref2" id="id3">[Ref2]</a>). For more detail, see
+the docstring of calculate_temperature_em` and references therein.</p>
+<p>The radiative loss rate of the soft X-ray-emitting plasma across all
+wavelengths can be found with
+<a class="reference internal" href="../api/sunpy.instr.goes.calculate_radiative_loss_rate.html#sunpy.instr.goes.calculate_radiative_loss_rate" title="sunpy.instr.goes.calculate_radiative_loss_rate"><code class="xref py py-obj docutils literal"><span class="pre">calculate_radiative_loss_rate</span></code></a>, which makes use of a look up
+table calculated by functions in SSW using CHIANTI. This table relates the
+temperature and emission measure of the emitting solar plasma to the thermal
+energy radiated over all wavelengths. For more information on how this is
+done, see the docstring of <code class="xref py py-obj docutils literal"><span class="pre">_calc_rad_loss</span></code> and reference
+therein.</p>
+<p>Meanwhile, the X-ray luminosity in the two GOES passbands can be obtained by
+<a class="reference internal" href="../api/sunpy.instr.goes.calculate_xray_luminosity.html#sunpy.instr.goes.calculate_xray_luminosity" title="sunpy.instr.goes.calculate_xray_luminosity"><code class="xref py py-obj docutils literal"><span class="pre">calculate_xray_luminosity</span></code></a>. To do so, this function calls
+<code class="xref py py-obj docutils literal"><span class="pre">_goes_lx</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">calc_xraylum</span></code>.</p>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="ref1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[Ref1]</a></td><td>Hanser, F.A., &amp; Sellers, F.B. 1996, Proc. SPIE, 2812, 344</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="ref2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[Ref2]</a></td><td>Dere, K.P., et al. 2009 A&amp;A, 498, 915 DOI: <a class="reference external" href="https://dx.doi.org/10.1051/0004-6361/200911712">10.1051/0004-6361/200911712</a></td></tr>
+</tbody>
+</table>
+<div class="section" id="id4">
+<h3>Functions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.goes.get_goes_event_list.html#sunpy.instr.goes.get_goes_event_list" title="sunpy.instr.goes.get_goes_event_list"><code class="xref py py-obj docutils literal"><span class="pre">get_goes_event_list</span></code></a>(timerange[,&nbsp;...])</td>
+<td>Retrieve list of flares detected by GOES within a given time range.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.goes.calculate_temperature_em.html#sunpy.instr.goes.calculate_temperature_em" title="sunpy.instr.goes.calculate_temperature_em"><code class="xref py py-obj docutils literal"><span class="pre">calculate_temperature_em</span></code></a>(goeslc[,&nbsp;...])</td>
+<td>Calculates temperature and emission measure from a GOESLightCurve.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.goes.calculate_radiative_loss_rate.html#sunpy.instr.goes.calculate_radiative_loss_rate" title="sunpy.instr.goes.calculate_radiative_loss_rate"><code class="xref py py-obj docutils literal"><span class="pre">calculate_radiative_loss_rate</span></code></a>(goeslc[,&nbsp;...])</td>
+<td>Calculates radiative loss rate from GOES observations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.goes.calculate_xray_luminosity.html#sunpy.instr.goes.calculate_xray_luminosity" title="sunpy.instr.goes.calculate_xray_luminosity"><code class="xref py py-obj docutils literal"><span class="pre">calculate_xray_luminosity</span></code></a>(goeslc)</td>
+<td>Calculates GOES solar X-ray luminosity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.goes.flux_to_flareclass.html#sunpy.instr.goes.flux_to_flareclass" title="sunpy.instr.goes.flux_to_flareclass"><code class="xref py py-obj docutils literal"><span class="pre">flux_to_flareclass</span></code></a>(goesflux)</td>
+<td>Converts X-ray flux into the corresponding GOES flare class.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.goes.flareclass_to_flux.html#sunpy.instr.goes.flareclass_to_flux" title="sunpy.instr.goes.flareclass_to_flux"><code class="xref py py-obj docutils literal"><span class="pre">flareclass_to_flux</span></code></a>(flareclass)</td>
+<td>Converts a GOES flare class into the corresponding X-ray flux.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.instr.iris">
+<span id="sunpy-instr-iris-package"></span><h2>sunpy.instr.iris Package<a class="headerlink" href="#module-sunpy.instr.iris" title="Permalink to this headline">¶</a></h2>
+<p>The Interface Region Imaging Spectrometer (IRIS) instrument routines.</p>
+<p>Currently this module only includes a simple hack to convert SJI mode files to
+a <a class="reference internal" href="../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.map.MapCube</span></code></a> instance.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">More comprehensive IRIS tools are now being developed in the <a class="reference external" href="https://github.com/sunpy/irispy">IRISPy</a> affiliated pacakge.</p>
+</div>
+<div class="section" id="id5">
+<h3>Functions<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.iris.SJI_to_cube.html#sunpy.instr.iris.SJI_to_cube" title="sunpy.instr.iris.SJI_to_cube"><code class="xref py py-obj docutils literal"><span class="pre">SJI_to_cube</span></code></a>(filename[,&nbsp;start,&nbsp;stop,&nbsp;hdu])</td>
+<td>Read a SJI file and return a MapCube</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.instr.lyra">
+<span id="sunpy-instr-lyra-module"></span><h2>sunpy.instr.lyra Module<a class="headerlink" href="#module-sunpy.instr.lyra" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Functions<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.lyra.remove_lytaf_events_from_lightcurve.html#sunpy.instr.lyra.remove_lytaf_events_from_lightcurve" title="sunpy.instr.lyra.remove_lytaf_events_from_lightcurve"><code class="xref py py-obj docutils literal"><span class="pre">remove_lytaf_events_from_lightcurve</span></code></a>(lc,&nbsp;**kwargs)</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version v0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.lyra.remove_lytaf_events_from_timeseries.html#sunpy.instr.lyra.remove_lytaf_events_from_timeseries" title="sunpy.instr.lyra.remove_lytaf_events_from_timeseries"><code class="xref py py-obj docutils literal"><span class="pre">remove_lytaf_events_from_timeseries</span></code></a>(ts[,&nbsp;...])</td>
+<td>Removes periods of LYRA artifacts defined in LYTAF from a TimeSeries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.lyra.get_lytaf_events.html#sunpy.instr.lyra.get_lytaf_events" title="sunpy.instr.lyra.get_lytaf_events"><code class="xref py py-obj docutils literal"><span class="pre">get_lytaf_events</span></code></a>(start_time,&nbsp;end_time[,&nbsp;...])</td>
+<td>Extracts combined lytaf file for given time range.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.lyra.get_lytaf_event_types.html#sunpy.instr.lyra.get_lytaf_event_types" title="sunpy.instr.lyra.get_lytaf_event_types"><code class="xref py py-obj docutils literal"><span class="pre">get_lytaf_event_types</span></code></a>([lytaf_path,&nbsp;...])</td>
+<td>Prints the different event types in the each of the LYTAF databases.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.lyra.download_lytaf_database.html#sunpy.instr.lyra.download_lytaf_database" title="sunpy.instr.lyra.download_lytaf_database"><code class="xref py py-obj docutils literal"><span class="pre">download_lytaf_database</span></code></a>([lytaf_dir])</td>
+<td>download latest Proba2 pointing database from Proba2 Science Center</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.lyra.split_series_using_lytaf.html#sunpy.instr.lyra.split_series_using_lytaf" title="sunpy.instr.lyra.split_series_using_lytaf"><code class="xref py py-obj docutils literal"><span class="pre">split_series_using_lytaf</span></code></a>(timearray,&nbsp;data,&nbsp;lytaf)</td>
+<td>Proba-2 analysis code for splitting up LYRA timeseries around locations where LARs (and other data events) are observed.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.instr.rhessi">
+<span id="sunpy-instr-rhessi-module"></span><h2>sunpy.instr.rhessi Module<a class="headerlink" href="#module-sunpy.instr.rhessi" title="Permalink to this headline">¶</a></h2>
+<p>Provides programs to process and analyze RHESSI data.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This module is in development.</p>
+</div>
+<div class="section" id="id7">
+<h3>Functions<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.rhessi.get_obssumm_dbase_file.html#sunpy.instr.rhessi.get_obssumm_dbase_file" title="sunpy.instr.rhessi.get_obssumm_dbase_file"><code class="xref py py-obj docutils literal"><span class="pre">get_obssumm_dbase_file</span></code></a>(time_range)</td>
+<td>Download the RHESSI observing summary database file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.rhessi.parse_obssumm_dbase_file.html#sunpy.instr.rhessi.parse_obssumm_dbase_file" title="sunpy.instr.rhessi.parse_obssumm_dbase_file"><code class="xref py py-obj docutils literal"><span class="pre">parse_obssumm_dbase_file</span></code></a>(filename)</td>
+<td>Parse the RHESSI observing summary database file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.rhessi.get_obssum_filename.html#sunpy.instr.rhessi.get_obssum_filename" title="sunpy.instr.rhessi.get_obssum_filename"><code class="xref py py-obj docutils literal"><span class="pre">get_obssum_filename</span></code></a>(time_range)</td>
+<td>Download the RHESSI observing summary data from one of the RHESSI servers, parses it, and returns the name of the obssumm files relevant for the time range.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.rhessi.get_obssumm_file.html#sunpy.instr.rhessi.get_obssumm_file" title="sunpy.instr.rhessi.get_obssumm_file"><code class="xref py py-obj docutils literal"><span class="pre">get_obssumm_file</span></code></a>(time_range)</td>
+<td>Download the RHESSI observing summary data from one of the RHESSI servers.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.instr.rhessi.parse_obssumm_file.html#sunpy.instr.rhessi.parse_obssumm_file" title="sunpy.instr.rhessi.parse_obssumm_file"><code class="xref py py-obj docutils literal"><span class="pre">parse_obssumm_file</span></code></a>(filename)</td>
+<td>Parse a RHESSI observation summary file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.instr.rhessi.backprojection.html#sunpy.instr.rhessi.backprojection" title="sunpy.instr.rhessi.backprojection"><code class="xref py py-obj docutils literal"><span class="pre">backprojection</span></code></a>(calibrated_event_list[,&nbsp;...])</td>
+<td>Given a stacked calibrated event list fits file create a back projection image.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

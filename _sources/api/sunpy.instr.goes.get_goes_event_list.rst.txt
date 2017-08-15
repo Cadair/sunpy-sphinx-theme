@@ -1,0 +1,6 @@
+get_goes_event_list
+===================
+
+.. currentmodule:: sunpy.instr.goes
+
+.. autofunction:: get_goes_event_list

@@ -1,0 +1,6 @@
+calculate_match_template_shift
+==============================
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: calculate_match_template_shift

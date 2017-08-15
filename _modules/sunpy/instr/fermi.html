@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.instr.fermi &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.instr.fermi | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/instr/fermi.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.instr.fermi</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="n">urllib</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="n">Longitude</span><span class="p">,</span> <span class="n">Latitude</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span><span class="p">,</span> <span class="n">TimeRange</span>
+<span class="kn">from</span> <span class="nn">sunpy</span> <span class="k">import</span> <span class="n">sun</span>
+<span class="kn">from</span> <span class="nn">sunpy.io.fits</span> <span class="k">import</span> <span class="n">fits</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;download_weekly_pointing_file&#39;</span><span class="p">,</span> <span class="s1">&#39;get_detector_sun_angles_for_time&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;get_detector_sun_angles_for_date&#39;</span><span class="p">,</span> <span class="s1">&#39;plot_detector_sun_angles&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;met_to_utc&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="download_weekly_pointing_file"><a class="viewcode-back" href="../../../api/sunpy.instr.fermi.download_weekly_pointing_file.html#sunpy.instr.fermi.download_weekly_pointing_file">[docs]</a><span class="k">def</span> <span class="nf">download_weekly_pointing_file</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Downloads the FERMI/LAT weekly pointing file corresponding to the specified</span>
+<span class="sd">    date. This file contains 1 minute cadence data on the spacecraft pointing,</span>
+<span class="sd">    useful for calculating detector angles.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    date : `datetime.datetime`</span>
+<span class="sd">        A datetime object or other date format understood by the parse_time</span>
+<span class="sd">        function.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">date</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="c1"># use a temp directory to hold the file</span>
+    <span class="n">tmp_dir</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkdtemp</span><span class="p">()</span>
+    <span class="c1"># use Fermi data server to access weekly LAT pointing file.</span>
+    <span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;ftp://legacy.gsfc.nasa.gov/FTP/glast/data/lat/weekly/spacecraft/&#39;</span>
+    <span class="n">fbasename</span> <span class="o">=</span> <span class="s1">&#39;lat_spacecraft_weekly_w&#39;</span>
+
+    <span class="c1"># find out which file to get based on date</span>
+    <span class="c1"># earliest full file in the FERMI server is for mission week 10,</span>
+    <span class="c1"># beginning 2008 August 7.</span>
+    <span class="n">weekly_file_start</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;2008-08-07&#39;</span><span class="p">)</span>
+    <span class="n">base_week</span> <span class="o">=</span> <span class="mi">10</span>
+
+    <span class="c1"># find out which mission week corresponds to date</span>
+    <span class="n">time_diff</span> <span class="o">=</span> <span class="n">date</span> <span class="o">-</span> <span class="n">weekly_file_start</span>
+    <span class="n">weekdiff</span> <span class="o">=</span> <span class="n">time_diff</span><span class="o">.</span><span class="n">days</span> <span class="o">//</span> <span class="mi">7</span>
+    <span class="n">week</span> <span class="o">=</span> <span class="n">weekdiff</span> <span class="o">+</span> <span class="n">base_week</span>
+    <span class="c1"># weekstr = (&#39;%03.0f&#39; % week)</span>
+    <span class="n">weekstr</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:03.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">week</span><span class="p">)</span>
+
+    <span class="c1"># construct the full url for the weekly pointing file</span>
+    <span class="n">full_fname</span> <span class="o">=</span> <span class="n">fbasename</span> <span class="o">+</span> <span class="n">weekstr</span> <span class="o">+</span> <span class="s1">&#39;_p202_v001.fits&#39;</span>
+    <span class="n">pointing_file_url</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="n">full_fname</span>
+
+    <span class="c1"># try to download the file from the FTP site</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">pointing_file_url</span><span class="p">)</span>
+        <span class="n">exists</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">HTTPError</span>
+        <span class="n">exists</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1"># if no matches at all were found, then the pointing file doesn&#39;t exist</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No Fermi pointing files found for given date!&#39;</span><span class="p">)</span>
+
+    <span class="c1"># download the file</span>
+    <span class="n">destination</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tmp_dir</span><span class="p">,</span> <span class="n">full_fname</span><span class="p">)</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">pointing_file_url</span><span class="p">,</span> <span class="n">destination</span><span class="p">)</span>
+
+    <span class="c1"># return the location of the downloaded file</span>
+    <span class="k">return</span> <span class="n">destination</span></div>
+
+
+<div class="viewcode-block" id="get_detector_sun_angles_for_time"><a class="viewcode-back" href="../../../api/sunpy.instr.fermi.get_detector_sun_angles_for_time.html#sunpy.instr.fermi.get_detector_sun_angles_for_time">[docs]</a><span class="k">def</span> <span class="nf">get_detector_sun_angles_for_time</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    get the GBM detector angles vs the sun for a single time.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    time : `datetime.datetime`</span>
+<span class="sd">        A datetime object or other time format understood by the parse_time</span>
+<span class="sd">        function.</span>
+<span class="sd">    file : `str`</span>
+<span class="sd">        A filepath to a Fermi/LAT weekly pointing file (e.g. as obtained by the</span>
+<span class="sd">        download_weekly_pointing_file function).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+    <span class="n">scx</span><span class="p">,</span> <span class="n">scz</span><span class="p">,</span> <span class="n">tt</span> <span class="o">=</span> <span class="n">get_scx_scz_at_time</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+    <span class="c1"># retrieve the detector angle information in spacecraft coordinates</span>
+    <span class="n">detectors</span> <span class="o">=</span> <span class="n">nai_detector_angles</span><span class="p">()</span>
+
+    <span class="c1"># get the detector pointings in RA/DEC given the input spacecraft x and z</span>
+    <span class="c1"># axes</span>
+    <span class="n">detector_radecs</span> <span class="o">=</span> <span class="n">nai_detector_radecs</span><span class="p">(</span><span class="n">detectors</span><span class="p">,</span> <span class="n">scx</span><span class="p">,</span> <span class="n">scz</span><span class="p">,</span> <span class="n">tt</span><span class="p">)</span>
+
+    <span class="c1"># this gets the sun position with RA in hours in decimal format (e.g. 4.3).</span>
+    <span class="c1"># DEC is already in degrees</span>
+    <span class="n">sunpos_ra_not_in_deg</span> <span class="o">=</span> <span class="p">[</span><span class="n">sun</span><span class="o">.</span><span class="n">sun</span><span class="o">.</span><span class="n">apparent_rightascension</span><span class="p">(</span><span class="n">time</span><span class="p">),</span>
+                            <span class="n">sun</span><span class="o">.</span><span class="n">sun</span><span class="o">.</span><span class="n">apparent_declination</span><span class="p">(</span><span class="n">time</span><span class="p">)]</span>
+    <span class="c1"># now Sun position with RA in degrees</span>
+    <span class="n">sun_pos</span> <span class="o">=</span> <span class="p">[</span><span class="n">sunpos_ra_not_in_deg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;deg&#39;</span><span class="p">),</span> <span class="n">sunpos_ra_not_in_deg</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="c1"># sun_pos = [(sunpos_ra_not_in_deg[0] / 24) * 360., sunpos_ra_not_in_deg[1]]</span>
+    <span class="c1"># now get the angle between each detector and the Sun</span>
+    <span class="n">detector_to_sun_angles</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_detector_separation_angles</span><span class="p">(</span><span class="n">detector_radecs</span><span class="p">,</span>
+                                                             <span class="n">sun_pos</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">detector_to_sun_angles</span></div>
+
+
+<div class="viewcode-block" id="get_detector_sun_angles_for_date"><a class="viewcode-back" href="../../../api/sunpy.instr.fermi.get_detector_sun_angles_for_date.html#sunpy.instr.fermi.get_detector_sun_angles_for_date">[docs]</a><span class="k">def</span> <span class="nf">get_detector_sun_angles_for_date</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    get the GBM detector angles vs the sun as a function of time for a given</span>
+<span class="sd">    date</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    date : `datetime.datetime`</span>
+<span class="sd">        A datetime object or other date format understood by the parse_time</span>
+<span class="sd">        function.</span>
+<span class="sd">    file : `str`</span>
+<span class="sd">        A filepath to a Fermi/LAT weekly pointing file (e.g. as obtained by the</span>
+<span class="sd">        download_weekly_pointing_file function).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">date</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="n">tran</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">date</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">scx</span><span class="p">,</span> <span class="n">scz</span><span class="p">,</span> <span class="n">times</span> <span class="o">=</span> <span class="n">get_scx_scz_in_timerange</span><span class="p">(</span><span class="n">tran</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+
+    <span class="c1"># retrieve the detector angle information in spacecraft coordinates</span>
+    <span class="n">detectors</span> <span class="o">=</span> <span class="n">nai_detector_angles</span><span class="p">()</span>
+
+    <span class="n">detector_to_sun_angles</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># get the detector vs Sun angles for each t and store in a list of</span>
+    <span class="c1"># dictionaries.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">scx</span><span class="p">)):</span>
+        <span class="n">detector_radecs</span> <span class="o">=</span> <span class="n">nai_detector_radecs</span><span class="p">(</span><span class="n">detectors</span><span class="p">,</span> <span class="n">scx</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">scz</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                              <span class="n">times</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="c1"># this gets the sun position with RA in hours in decimal format</span>
+        <span class="c1"># (e.g. 4.3). DEC is already in degrees</span>
+        <span class="n">sunpos_ra_not_in_deg</span> <span class="o">=</span> <span class="p">[</span><span class="n">sun</span><span class="o">.</span><span class="n">sun</span><span class="o">.</span><span class="n">apparent_rightascension</span><span class="p">(</span><span class="n">times</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+                                <span class="n">sun</span><span class="o">.</span><span class="n">sun</span><span class="o">.</span><span class="n">apparent_declination</span><span class="p">(</span><span class="n">times</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span>
+        <span class="c1"># now Sun position with RA in degrees</span>
+        <span class="n">sun_pos</span> <span class="o">=</span> <span class="p">[</span><span class="n">sunpos_ra_not_in_deg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;deg&#39;</span><span class="p">),</span> <span class="n">sunpos_ra_not_in_deg</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="c1"># now get the angle between each detector and the Sun</span>
+        <span class="n">detector_to_sun_angles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">get_detector_separation_angles</span><span class="p">(</span><span class="n">detector_radecs</span><span class="p">,</span> <span class="n">sun_pos</span><span class="p">))</span>
+
+    <span class="c1"># slice the list of dictionaries to get the angles for each detector in a</span>
+    <span class="c1"># list form</span>
+    <span class="n">angles</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+    <span class="n">key_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;n0&#39;</span><span class="p">,</span> <span class="s1">&#39;n1&#39;</span><span class="p">,</span> <span class="s1">&#39;n2&#39;</span><span class="p">,</span> <span class="s1">&#39;n3&#39;</span><span class="p">,</span> <span class="s1">&#39;n4&#39;</span><span class="p">,</span> <span class="s1">&#39;n5&#39;</span><span class="p">,</span> <span class="s1">&#39;n6&#39;</span><span class="p">,</span> <span class="s1">&#39;n7&#39;</span><span class="p">,</span> <span class="s1">&#39;n8&#39;</span><span class="p">,</span> <span class="s1">&#39;n9&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;n10&#39;</span><span class="p">,</span> <span class="s1">&#39;n11&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">13</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">key_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span>
+            <span class="n">angles</span><span class="p">[</span><span class="n">key_list</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="n">key_list</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">.</span><span class="n">value</span>
+                                   <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">detector_to_sun_angles</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">angles</span><span class="p">[</span><span class="n">key_list</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="n">key_list</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+                                   <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">detector_to_sun_angles</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">angles</span></div>
+
+
+<div class="viewcode-block" id="plot_detector_sun_angles"><a class="viewcode-back" href="../../../api/sunpy.instr.fermi.plot_detector_sun_angles.html#sunpy.instr.fermi.plot_detector_sun_angles">[docs]</a><span class="k">def</span> <span class="nf">plot_detector_sun_angles</span><span class="p">(</span><span class="n">angles</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Plots the Fermi/GBM detector angles as a function of time.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    angles : `dict`</span>
+<span class="sd">        A dictionary containing the Fermi/GBM detector angle information as a</span>
+<span class="sd">        function of time. Obtained from the get_detector_separation_angles</span>
+<span class="sd">        function.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># make a plot showing the angles vs time</span>
+    <span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">angles</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span> <span class="o">==</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+                <span class="n">angles</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
+                <span class="n">angles</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="n">label</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{lab}</span><span class="s1"> (</span><span class="si">{val}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">lab</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">angles</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">))[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;angle (degrees)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Start time: &#39;</span> <span class="o">+</span> <span class="n">angles</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isoformat</span><span class="p">())</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Detector pointing angle from Sun&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">figure</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+
+<span class="k">def</span> <span class="nf">get_scx_scz_at_time</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Read a downloaded FERMI weekly pointing file and extract scx, scz for a</span>
+<span class="sd">    single time.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    time : `datetime.datetime`</span>
+<span class="sd">        A datetime object or other time format understood by the parse_time function.</span>
+<span class="sd">    file : `str`</span>
+<span class="sd">        A filepath to a Fermi/LAT weekly pointing file (e.g. as obtained by the</span>
+<span class="sd">         download_weekly_pointing_file function).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+    <span class="n">hdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">timesinutc</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">tim</span> <span class="ow">in</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;START&#39;</span><span class="p">]:</span>
+        <span class="n">timesinutc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">met_to_utc</span><span class="p">(</span><span class="n">tim</span><span class="p">))</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">timesinutc</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+
+    <span class="n">scx_radec</span> <span class="o">=</span> <span class="p">(</span><span class="n">Longitude</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;RA_SCX&#39;</span><span class="p">][</span><span class="n">ind</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+                 <span class="n">Latitude</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;DEC_SCX&#39;</span><span class="p">][</span><span class="n">ind</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span>
+    <span class="n">scz_radec</span> <span class="o">=</span> <span class="p">(</span><span class="n">Longitude</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;RA_SCZ&#39;</span><span class="p">][</span><span class="n">ind</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+                 <span class="n">Latitude</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;DEC_SCZ&#39;</span><span class="p">][</span><span class="n">ind</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">scx_radec</span><span class="p">,</span> <span class="n">scz_radec</span><span class="p">,</span> <span class="n">timesinutc</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">get_scx_scz_in_timerange</span><span class="p">(</span><span class="n">timerange</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Read a downloaded FERMI weekly pointing file and extract scx, scz for a</span>
+<span class="sd">    timerange.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    timerange : `sunpy.time.TimeRange`</span>
+<span class="sd">        A SunPy TimeRange object.</span>
+<span class="sd">    file : `str`</span>
+<span class="sd">        A filepath to a Fermi/LAT weekly pointing file (e.g. as obtained by the</span>
+<span class="sd">        download_weekly_pointing_file function).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">hdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">timesinutc</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">tim</span> <span class="ow">in</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;START&#39;</span><span class="p">]:</span>
+        <span class="n">timesinutc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">met_to_utc</span><span class="p">(</span><span class="n">tim</span><span class="p">))</span>
+
+    <span class="n">startind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">timesinutc</span><span class="p">,</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">endind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">timesinutc</span><span class="p">,</span> <span class="n">timerange</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+
+    <span class="n">scx_radec</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">scz_radec</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">startind</span><span class="p">,</span> <span class="n">endind</span><span class="p">):</span>
+        <span class="n">scx_radec</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">Longitude</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;RA_SCX&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+                          <span class="n">Latitude</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;DEC_SCX&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)))</span>
+        <span class="n">scz_radec</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">Longitude</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;RA_SCZ&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+                          <span class="n">Latitude</span><span class="p">(</span><span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;DEC_SCZ&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">scx_radec</span><span class="p">,</span> <span class="n">scz_radec</span><span class="p">,</span> <span class="n">timesinutc</span><span class="p">[</span><span class="n">startind</span><span class="p">:</span><span class="n">endind</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">nai_detector_angles</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the dictionary of Fermi/GBM NAI detector zenith and azimuth angles,</span>
+<span class="sd">    in spacecraft coordinates. zenith angle is measured from +z (along the LAT</span>
+<span class="sd">    boresight), azimuth is measured from +x. see Meegan et al. (2009) for</span>
+<span class="sd">    details and detector angles.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># angles listed as [azimuth, zenith]</span>
+    <span class="n">detectors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;n0&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">45.89</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">20.58</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">45.11</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">45.31</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">58.44</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">90.21</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n3&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">314.87</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">45.24</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n4&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">303.15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">90.27</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n5&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">3.35</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">89.79</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n6&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">224.93</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">20.43</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n7&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">224.62</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">46.18</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n8&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">236.61</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">89.97</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n9&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">135.19</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">45.55</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n10&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">123.73</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">90.42</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">],</span>
+                 <span class="s1">&#39;n11&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">183.74</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mf">90.32</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">]}</span>
+
+    <span class="k">return</span> <span class="n">detectors</span>
+
+
+<span class="k">def</span> <span class="nf">nai_detector_radecs</span><span class="p">(</span><span class="n">detectors</span><span class="p">,</span> <span class="n">scx</span><span class="p">,</span> <span class="n">scz</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    calculates the RA/DEC for each NaI detector given spacecraft z and x RA/DEC</span>
+<span class="sd">    positions.</span>
+
+<span class="sd">    NB: This routine is based on code found in GTBURST, originally written by</span>
+<span class="sd">    Dr Giacamo Vianello for the Fermi Science Tools.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    detectors : `dict`</span>
+<span class="sd">        A dictionary containing the Fermi/GBM detector pointing angles relative</span>
+<span class="sd">        to the spacecraft axes. Obtained from the nai_detector_angles function.</span>
+<span class="sd">    scx : array-like</span>
+<span class="sd">        Two-element tuple containing the RA/DEC information of the Fermi</span>
+<span class="sd">        spacecraft X-axis</span>
+<span class="sd">    scz : array-like</span>
+<span class="sd">        Two-element tuple containing the RA/DEC information of the Fermi</span>
+<span class="sd">        spacecraft Z-axis</span>
+<span class="sd">    time : `datetime.datetime`</span>
+<span class="sd">        The time corresponding to the input scx and scz values, in a format</span>
+<span class="sd">        understandable by parse_time.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    `dict`</span>
+<span class="sd">        A dictionary containing the RA/DEC for each Fermi/GBM NaI detector at</span>
+<span class="sd">        the given input time.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">scx_vector</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">scx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">scx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+         <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">scx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">scx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+         <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">scx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)]))</span>
+
+    <span class="n">scz_vector</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">scz</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">scz</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+         <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">scz</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">scz</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+         <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">scz</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)]))</span>
+
+    <span class="c1"># For each detector, do the rotation depending on the detector zenith and</span>
+    <span class="c1"># azimuth angles.</span>
+    <span class="n">detector_radecs</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">detectors</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">detectors</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">phi</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">theta</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+
+        <span class="c1"># rotate about spacecraft z-axis first</span>
+        <span class="n">vx_primed</span> <span class="o">=</span> <span class="n">rotate_vector</span><span class="p">(</span><span class="n">scx_vector</span><span class="p">,</span> <span class="n">scz_vector</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span>
+
+        <span class="c1"># now find spacecraft y-axis using cross product</span>
+        <span class="n">vy_primed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">scz_vector</span><span class="p">,</span> <span class="n">vx_primed</span><span class="p">)</span>
+
+        <span class="c1"># do the second part of the rotation around vy</span>
+        <span class="n">vz_primed</span> <span class="o">=</span> <span class="n">rotate_vector</span><span class="p">(</span><span class="n">scz_vector</span><span class="p">,</span> <span class="n">vy_primed</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span>
+
+        <span class="c1"># now we should be pointing at the new RA/DEC.</span>
+        <span class="n">ra</span> <span class="o">=</span> <span class="n">Longitude</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">vz_primed</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vz_primed</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+        <span class="n">dec</span> <span class="o">=</span> <span class="n">Latitude</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">vz_primed</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+
+        <span class="c1"># save the RA/DEC in a dictionary</span>
+        <span class="n">detector_radecs</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">]</span>
+
+    <span class="n">detector_radecs</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span>
+    <span class="k">return</span> <span class="n">detector_radecs</span>
+
+
+<span class="k">def</span> <span class="nf">rotate_vector</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Euler-Rodrigues formula for rotating vectors.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    vector : `numpy.ndarray`</span>
+<span class="sd">          a three-element vector to be rotated</span>
+<span class="sd">    axis : `numpy.ndarray`</span>
+<span class="sd">          the the-element vector to rotate around</span>
+<span class="sd">    theta : `float`</span>
+<span class="sd">          the angle (in radians) by which to rotate vector around axis</span>
+
+<span class="sd">    Reference</span>
+<span class="sd">    ---------</span>
+<span class="sd">    http://en.wikipedia.org/wiki/Euler-Rodrigues_parameters#Rotation_angle_and_rotation_axis</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">axis</span> <span class="o">=</span> <span class="n">axis</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">axis</span><span class="p">))</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="n">axis</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">rot_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+        <span class="p">[[</span><span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="n">c</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="n">d</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">d</span><span class="p">),</span> <span class="mi">2</span> <span class="o">*</span>
+          <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">d</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">)],</span> <span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="n">d</span><span class="p">),</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">+</span> <span class="n">c</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="n">b</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="n">d</span> <span class="o">*</span>
+                             <span class="n">d</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span> <span class="n">d</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)],</span>
+         <span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">d</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">),</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span> <span class="n">d</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">),</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">+</span> <span class="n">d</span> <span class="o">*</span> <span class="n">d</span> <span class="o">-</span> <span class="n">b</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="n">c</span> <span class="o">*</span>
+          <span class="n">c</span><span class="p">]])</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">rot_matrix</span><span class="p">,</span> <span class="n">vector</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">get_detector_separation_angles</span><span class="p">(</span><span class="n">detector_radecs</span><span class="p">,</span> <span class="n">sunpos</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Finds the separation angle between the Sun and each NaI detector,</span>
+<span class="sd">    given a dictionary of detector RA/DECs.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    detector_radecs : `dict`</span>
+<span class="sd">            the RA/DEC for each NaI detector as AstroPy quantities. Obtained</span>
+<span class="sd">            from the fermi.nai_detector_radecs function</span>
+<span class="sd">    sunpos : `list`</span>
+<span class="sd">            Two-element list containing the RA/DEC of the Sun position as</span>
+<span class="sd">            AstroPy Quantities, e.g. [&lt;Longitude 73.94 deg&gt;,</span>
+<span class="sd">            &lt;Latitude 22.66 deg&gt;]</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">angles</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">detector_radecs</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">detector_radecs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">l</span> <span class="o">==</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span>
+            <span class="n">angle</span> <span class="o">=</span> <span class="n">separation_angle</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">sunpos</span><span class="p">)</span>
+            <span class="n">angles</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="n">angle</span>
+
+    <span class="k">return</span> <span class="n">angles</span>
+
+
+<span class="k">def</span> <span class="nf">separation_angle</span><span class="p">(</span><span class="n">radec1</span><span class="p">,</span> <span class="n">radec2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Use the law of spherical cosines to calculate the separation angle</span>
+<span class="sd">    between two RA/DEC positions.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    radec1 : `list`</span>
+<span class="sd">           A two-element list containing an RA/DEC position as AstroPy Quantities,</span>
+<span class="sd">           e.g. [&lt;Longitude 73.94 deg&gt;, &lt;Latitude 22.66 deg&gt;]</span>
+<span class="sd">    radec2 : `list`</span>
+<span class="sd">           A two-element list containing an RA/DEC position as AstroPy Quantities,</span>
+<span class="sd">           e.g. [&lt;Longitude 73.94 deg&gt;, &lt;Latitude 22.66 deg&gt;]</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">cosine_of_angle</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(((</span><span class="mi">90</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span> <span class="o">-</span> <span class="n">radec1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degree&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">))</span> <span class="o">*</span>
+         <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">((</span><span class="mi">90</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span> <span class="o">-</span> <span class="n">radec2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degree&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">)))</span> <span class="o">+</span>
+        <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(((</span><span class="mi">90</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span> <span class="o">-</span> <span class="n">radec1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degree&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">))</span> <span class="o">*</span>
+         <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(((</span><span class="mi">90</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span> <span class="o">-</span> <span class="n">radec2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degree&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">))</span> <span class="o">*</span>
+         <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">((</span><span class="n">radec1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degree&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">radec2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degree&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;rad&#39;</span><span class="p">))))</span>
+
+    <span class="n">angle</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">cosine_of_angle</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degree&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">angle</span>
+
+
+<div class="viewcode-block" id="met_to_utc"><a class="viewcode-back" href="../../../api/sunpy.instr.fermi.met_to_utc.html#sunpy.instr.fermi.met_to_utc">[docs]</a><span class="k">def</span> <span class="nf">met_to_utc</span><span class="p">(</span><span class="n">timeinsec</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts Fermi Mission Elapsed Time (MET) in seconds to a datetime object.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    timeinsec : `float`</span>
+<span class="sd">        time in seconds since 00:00 UT on 1st January 2001 (the Fermi MET</span>
+<span class="sd">        format)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    `datetime.datetime`</span>
+<span class="sd">        The input Fermi Mission Elapsed Time converted to a datetime object.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Times for GBM are in Mission Elapsed Time (MET).</span>
+    <span class="c1"># The reference time for this is 2001-Jan-01 00:00.</span>
+    <span class="n">met_ref_time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;2001-01-01 00:00&#39;</span><span class="p">)</span>
+    <span class="n">offset_from_utc</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">met_ref_time</span> <span class="o">-</span> <span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;1979-01-01 00:00&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+    <span class="n">time_in_utc</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">timeinsec</span> <span class="o">+</span> <span class="n">offset_from_utc</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">time_in_utc</span></div>
+
+
+<span class="k">def</span> <span class="nf">utc_to_met</span><span class="p">(</span><span class="n">time_ut</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a UT (in datetime format) to a Fermi Mission Elapsed Time (MET) float.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    time_ut : &#39;datetime.datetime&#39;</span>
+<span class="sd">        A datetime object in UT</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    &#39;float&#39;</span>
+<span class="sd">        The Fermi Mission Elapsed Time corresponding to the input UT</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">met_ref_time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;2001-01-01 00:00&#39;</span><span class="p">)</span>
+    <span class="n">ut_seconds</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_ut</span> <span class="o">-</span> <span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;1979-01-01&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+    <span class="n">offset_from_utc</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">met_ref_time</span> <span class="o">-</span> <span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;1979-01-01 00:00&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+    <span class="n">fermi_met</span> <span class="o">=</span> <span class="n">ut_seconds</span> <span class="o">-</span> <span class="n">offset_from_utc</span>
+
+    <span class="k">return</span> <span class="n">fermi_met</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

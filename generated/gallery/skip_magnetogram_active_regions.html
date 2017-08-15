@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Overplotting Active Region locations on magnetogram Plots &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Interacting with Data Using SunPy Maps" href="maps_example.html" />
+    <link rel="prev" title="Simple Differential Rotation" href="simple_differential_rotation.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Overplotting Active Region locations on magnetogram Plots | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/generated/gallery/skip_magnetogram_active_regions.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Example Gallery</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy_colormaps_reference.html">SunPy Colormaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aia_example.html">AIA Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_editcolormap.html">Editing Map Colormaps and Normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_from_numpy_array.html">Generating a Map From Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_sample_images.html">Sample Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brightness_pixel_location.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_searching_vso.html">Searching the VSO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submaps_and_cropping.html">Submaps and Cropping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_rotation.html">Map Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="masking_hot_pixels.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_bright_regions_gallery_example.html">Manipulating Map image data - finding bright regions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mask_disk.html">Masking the solar disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_resampling_and_superpixels.html">Map Resampling and Superpixels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="goes_hek_m25.html">GOES Flare and HEK Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loop_edge_enhance.html">Edge Enhancing Filtering a Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="great_arc_example.html">Drawing and using a Great Arc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lat_lon_lines.html">Longitude and Latitude Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solar_cycle_example.html">The Solar Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_limb_enhance.html">Enhancing Off-limb emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmi_synoptic_maps.html">HMI Daily Synoptic Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overplot_hek_polygon.html">Overplotting HEK feature/event polygons on SunPy maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_data_histogram.html">Map Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_differential_rotation.html">Simple Differential Rotation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Overplotting Active Region locations on magnetogram Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps_example.html">Interacting with Data Using SunPy Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AIA_limb_STEREO.html">Drawing AIA Coordinates on STEREO Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseriesmetadata_example.html">The TimeSeriesMetaData Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2011_06_07_sampledata_overview.html">Sample Data Set Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SDO_to_STEREO_Coordinate_Conversion.html">AIA to STEREO Coordinate Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseries_example.html">Interacting with Data Using SunPy TimeSeries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="overplotting-active-region-locations-on-magnetogram-plots">
+<span id="sphx-glr-generated-gallery-skip-magnetogram-active-regions-py"></span><h1>Overplotting Active Region locations on magnetogram Plots<a class="headerlink" href="#overplotting-active-region-locations-on-magnetogram-plots" title="Permalink to this headline">¶</a></h1>
+<p>This example shows how to overplot Active Region location on magnetogram plots.</p>
+<p>Start by importing the necessary modules.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <a href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="View documentation for astropy.coordinates.SkyCoord"><span class="n">SkyCoord</span></a>
+
+<span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">sunpy.coordinates</span>
+<span class="kn">from</span> <span class="nn">sunpy.io.special</span> <span class="kn">import</span> <span class="n">srs</span>
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="kn">import</span> <a href="../../api/sunpy.time.parse_time.html#sunpy.time.parse_time" title="View documentation for sunpy.time.parse_time"><span class="n">parse_time</span></a>
+<span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="kn">import</span> <span class="n">Fido</span><span class="p">,</span> <span class="n">attrs</span> <span class="k">as</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>Let&#8217;s select a date (yyyy-mm-dd) for which we will be downloading files.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <a href="../../api/sunpy.time.parse_time.html#sunpy.time.parse_time" title="View documentation for sunpy.time.parse_time"><span class="n">parse_time</span></a><span class="p">(</span><span class="s2">&quot;2017-01-25&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We will select the entire day as our timerange.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">start_time</span> <span class="o">=</span> <span class="n">day</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">day</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">59</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Send the search query.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">Fido</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">),</span>
+                      <span class="n">a</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;HMI&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">a</span><span class="o">.</span><span class="n">vso</span><span class="o">.</span><span class="n">Physobs</span><span class="p">(</span><span class="s2">&quot;LOS_magnetic_field&quot;</span><span class="p">),</span>
+                      <span class="n">a</span><span class="o">.</span><span class="n">vso</span><span class="o">.</span><span class="n">Sample</span><span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">second</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>We will only download the first file for the day. For that we use fido
+indexing on the search results which will return the first file for the day.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Download the file. The <code class="xref py py-obj docutils literal"><span class="pre">fetch</span></code> method returns a list of filenames. As we
+used indexing to get the first file of the day, the list contains one
+filename.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">file_name</span> <span class="o">=</span> <span class="n">Fido</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Download the SRS file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">srs_results</span> <span class="o">=</span> <span class="n">Fido</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;SRS_TABLE&#39;</span><span class="p">))</span>
+<span class="n">srs_downloaded_files</span> <span class="o">=</span> <span class="n">Fido</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">srs_results</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We get one SRS file per day. To read this file, we pass the filename into
+the SRS reader. So now <code class="xref py py-obj docutils literal"><span class="pre">srs_table</span></code> contains an astropy table.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">srs_table</span> <span class="o">=</span> <span class="n">srs</span><span class="o">.</span><span class="n">read_srs</span><span class="p">(</span><span class="n">srs_downloaded_files</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">srs_table</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We only need the rows which have &#8216;ID&#8217; = &#8216;I&#8217; or &#8216;IA&#8217;.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;I&#39;</span> <span class="ow">in</span> <span class="n">srs_table</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span> <span class="ow">or</span> <span class="s1">&#39;IA&#39;</span> <span class="ow">in</span> <span class="n">srs_table</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]:</span>
+    <span class="n">srs_table</span> <span class="o">=</span> <span class="n">srs_table</span><span class="p">[</span><a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_or.html#numpy.logical_or" title="View documentation for numpy.logical_or"><span class="n">np</span><span class="o">.</span><span class="n">logical_or</span></a><span class="p">(</span><span class="n">srs_table</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span>
+                                        <span class="n">srs_table</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;IA&#39;</span><span class="p">)]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Warning : No I or IA entries for this date.&quot;</span><span class="p">)</span>
+    <span class="n">srs_table</span> <span class="o">=</span> <span class="bp">None</span>
+</pre></div>
+</div>
+<p>Now we extract the latitudes, longitudes and the region numbers. We make an
+empty list if there are no ARs.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">srs_table</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">lats</span> <span class="o">=</span> <span class="n">srs_table</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">]</span>
+    <span class="n">lngs</span> <span class="o">=</span> <span class="n">srs_table</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">]</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="n">srs_table</span><span class="p">[</span><span class="s1">&#39;Number&#39;</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">lats</span> <span class="o">=</span> <span class="n">lngs</span> <span class="o">=</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>Now to make the plot.
+Create the magnetogram plot using the FITS file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">smap</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot" title="View documentation for matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">smap</span><span class="p">)</span>
+
+<span class="n">smap</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">120</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
+
+<span class="n">smap</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_autoscale_on</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We make a SkyCoord object and plot the active points on the map.
+Add the numbers as labels for each point.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lats</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <a href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="View documentation for astropy.coordinates.SkyCoord"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="n">lngs</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;heliographic_stonyhurst&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot_coord</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="p">(</span><span class="n">lngs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">lats</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+                    <span class="n">xycoords</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">get_transform</span><span class="p">(</span><span class="s1">&#39;heliographic_stonyhurst&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Now we display the combined plot.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/skip_magnetogram_active_regions.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">skip_magnetogram_active_regions.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/skip_magnetogram_active_regions.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">skip_magnetogram_active_regions.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+DatabaseOperation
+=================
+
+.. currentmodule:: sunpy.database.commands
+
+.. autoclass:: DatabaseOperation
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~DatabaseOperation.__call__
+      ~DatabaseOperation.undo
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: __call__
+   .. automethod:: undo

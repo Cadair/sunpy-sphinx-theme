@@ -1,0 +1,27 @@
+HeliographicStonyhurst
+======================
+
+.. currentmodule:: sunpy.coordinates
+
+.. autoclass:: HeliographicStonyhurst
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~HeliographicStonyhurst.default_differential
+      ~HeliographicStonyhurst.default_representation
+      ~HeliographicStonyhurst.frame_attributes
+      ~HeliographicStonyhurst.frame_specific_representation_info
+      ~HeliographicStonyhurst.name
+      ~HeliographicStonyhurst.obstime
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: default_differential
+   .. autoattribute:: default_representation
+   .. autoattribute:: frame_attributes
+   .. autoattribute:: frame_specific_representation_info
+   .. autoattribute:: name
+   .. autoattribute:: obstime

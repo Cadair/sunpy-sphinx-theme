@@ -1,0 +1,6 @@
+NoMatchError
+============
+
+.. currentmodule:: sunpy.util.datatype_factory_base
+
+.. autoexception:: NoMatchError

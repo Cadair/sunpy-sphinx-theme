@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.coordinates.ephemeris &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.coordinates.ephemeris | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/coordinates/ephemeris.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.coordinates.ephemeris</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Ephemeris calculations using SunPy coordinate frames</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">from</span> <span class="nn">astropy.time</span> <span class="k">import</span> <span class="n">Time</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="k">import</span> <span class="p">(</span><span class="n">SkyCoord</span><span class="p">,</span> <span class="n">Angle</span><span class="p">,</span> <span class="n">Longitude</span><span class="p">,</span>
+                                 <span class="n">ICRS</span><span class="p">,</span> <span class="n">PrecessedGeocentric</span><span class="p">,</span> <span class="n">AltAz</span><span class="p">,</span>
+                                 <span class="n">get_body_barycentric</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates.representation</span> <span class="k">import</span> <span class="n">CartesianRepresentation</span><span class="p">,</span> <span class="n">SphericalRepresentation</span>
+<span class="kn">from</span> <span class="nn">astropy._erfa.core</span> <span class="k">import</span> <span class="n">ErfaWarning</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span>
+<span class="kn">from</span> <span class="nn">sunpy.time.time</span> <span class="k">import</span> <span class="n">_astropy_time</span>
+
+<span class="kn">from</span> <span class="nn">.frames</span> <span class="k">import</span> <span class="n">HeliographicStonyhurst</span> <span class="k">as</span> <span class="n">HGS</span>
+<span class="kn">from</span> <span class="nn">.transformations</span> <span class="k">import</span> <span class="n">_SUN_DETILT_MATRIX</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;get_body_heliographic_stonyhurst&#39;</span><span class="p">,</span> <span class="s1">&#39;get_earth&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;get_sun_B0&#39;</span><span class="p">,</span> <span class="s1">&#39;get_sun_L0&#39;</span><span class="p">,</span> <span class="s1">&#39;get_sun_P&#39;</span><span class="p">,</span> <span class="s1">&#39;get_sunearth_distance&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;get_sun_orientation&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="get_body_heliographic_stonyhurst"><a class="viewcode-back" href="../../../api/sunpy.coordinates.get_body_heliographic_stonyhurst.html#sunpy.coordinates.ephemeris.get_body_heliographic_stonyhurst">[docs]</a><span class="k">def</span> <span class="nf">get_body_heliographic_stonyhurst</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a `~sunpy.coordinates.frames.HeliographicStonyhurst` frame for the location of a</span>
+<span class="sd">    solar-system body at a specified time.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    body : `str`</span>
+<span class="sd">        The solar-system body for which to calculate positions</span>
+<span class="sd">    time : various</span>
+<span class="sd">        Time to use as `~astropy.time.Time` or in a parse_time-compatible format</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : `~sunpy.coordinates.frames.HeliographicStonyhurst`</span>
+<span class="sd">        Location of the solar-system body in the `~sunpy.coordinates.HeliographicStonyhurst` frame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">obstime</span> <span class="o">=</span> <span class="n">_astropy_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+
+    <span class="n">body_icrs</span> <span class="o">=</span> <span class="n">ICRS</span><span class="p">(</span><span class="n">get_body_barycentric</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">obstime</span><span class="p">))</span>
+    <span class="n">body_hgs</span> <span class="o">=</span> <span class="n">body_icrs</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">HGS</span><span class="p">(</span><span class="n">obstime</span><span class="o">=</span><span class="n">obstime</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">body_hgs</span></div>
+
+
+<div class="viewcode-block" id="get_earth"><a class="viewcode-back" href="../../../api/sunpy.coordinates.get_earth.html#sunpy.coordinates.ephemeris.get_earth">[docs]</a><span class="k">def</span> <span class="nf">get_earth</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a `~astropy.coordinates.SkyCoord` for the location of the Earth at a specified time in</span>
+<span class="sd">    the `~sunpy.coordinates.frames.HeliographicStonyhurst` frame.  The longitude will be 0 by definition.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    time : various</span>
+<span class="sd">        Time to use as `~astropy.time.Time` or in a parse_time-compatible format</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : `~astropy.coordinates.SkyCoord`</span>
+<span class="sd">        Location of the Earth in the `~sunpy.coordinates.frames.HeliographicStonyhurst` frame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">earth</span> <span class="o">=</span> <span class="n">get_body_heliographic_stonyhurst</span><span class="p">(</span><span class="s1">&#39;earth&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="p">)</span>
+
+    <span class="c1"># Explicitly set the longitude to 0</span>
+    <span class="n">earth</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="n">earth</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">earth</span><span class="o">.</span><span class="n">radius</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">earth</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">earth</span></div>
+
+
+<div class="viewcode-block" id="get_sun_B0"><a class="viewcode-back" href="../../../api/sunpy.coordinates.get_sun_B0.html#sunpy.coordinates.ephemeris.get_sun_B0">[docs]</a><span class="k">def</span> <span class="nf">get_sun_B0</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the B0 angle for the Sun at a specified time, which is the heliographic latitude of the</span>
+<span class="sd">    Sun-disk center as seen from Earth.  The range of B0 is +/-7.23 degrees.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    time : various</span>
+<span class="sd">        Time to use as `~astropy.time.Time` or in a parse_time-compatible format</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : `~astropy.coordinates.Angle`</span>
+<span class="sd">        The position angle</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">get_earth</span><span class="p">(</span><span class="n">time</span><span class="p">)</span><span class="o">.</span><span class="n">lat</span><span class="p">)</span></div>
+
+
+<span class="c1"># Ignore warnings that result from going back in time to the first Carrington rotation</span>
+<span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">ErfaWarning</span><span class="p">)</span>
+
+    <span class="c1"># Carrington rotation 1 starts late in the day on 1853 Nov 9</span>
+    <span class="c1"># according to Astronomical Algorithms (Meeus 1998, p.191)</span>
+    <span class="n">_time_first_rotation</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="s1">&#39;1853-11-09 21:36&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Longitude of Earth at Carrington rotation 1 in de-tilted HCRS (so that solar north pole is Z)</span>
+    <span class="n">_lon_first_rotation</span> <span class="o">=</span> \
+        <span class="n">get_earth</span><span class="p">(</span><span class="n">_time_first_rotation</span><span class="p">)</span><span class="o">.</span><span class="n">hcrs</span><span class="o">.</span><span class="n">cartesian</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">_SUN_DETILT_MATRIX</span><span class="p">)</span> \
+        <span class="o">.</span><span class="n">represent_as</span><span class="p">(</span><span class="n">SphericalRepresentation</span><span class="p">)</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="get_sun_L0"><a class="viewcode-back" href="../../../api/sunpy.coordinates.get_sun_L0.html#sunpy.coordinates.ephemeris.get_sun_L0">[docs]</a><span class="k">def</span> <span class="nf">get_sun_L0</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the L0 angle for the Sun at a specified time, which is the Carrington longitude of the</span>
+<span class="sd">    Sun-disk center as seen from Earth.</span>
+
+<span class="sd">    .. warning::</span>
+<span class="sd">       Due to apparent disagreement between published references, the returned L0 may be inaccurate</span>
+<span class="sd">       by up to ~2 arcmin, which translates in the worst case to a shift of ~0.5 arcsec in</span>
+<span class="sd">       helioprojective coordinates for an observer at 1 AU.  Until this is resolved, be cautious</span>
+<span class="sd">       with analysis that depends critically on absolute (as opposed to relative) values of</span>
+<span class="sd">       Carrington longitude.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    time : various</span>
+<span class="sd">        Time to use as `~astropy.time.Time` or in a parse_time-compatible format</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : `~astropy.coordinates.Longitude`</span>
+<span class="sd">        The Carrington longitude</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">obstime</span> <span class="o">=</span> <span class="n">_astropy_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+
+    <span class="c1"># Calculate the longitude due to the Sun&#39;s rotation relative to the stars</span>
+    <span class="c1"># A sidereal rotation is defined to be exactly 25.38 days</span>
+    <span class="n">sidereal_lon</span> <span class="o">=</span> <span class="n">Longitude</span><span class="p">((</span><span class="n">obstime</span><span class="o">.</span><span class="n">jd</span> <span class="o">-</span> <span class="n">_time_first_rotation</span><span class="o">.</span><span class="n">jd</span><span class="p">)</span> <span class="o">/</span> <span class="mf">25.38</span> <span class="o">*</span> <span class="mi">360</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+
+    <span class="c1"># Calculate the longitude of the Earth in de-tilted HCRS</span>
+    <span class="n">lon_obstime</span> <span class="o">=</span> <span class="n">get_earth</span><span class="p">(</span><span class="n">obstime</span><span class="p">)</span><span class="o">.</span><span class="n">hcrs</span><span class="o">.</span><span class="n">cartesian</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">_SUN_DETILT_MATRIX</span><span class="p">)</span> \
+                  <span class="o">.</span><span class="n">represent_as</span><span class="p">(</span><span class="n">SphericalRepresentation</span><span class="p">)</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Longitude</span><span class="p">(</span><span class="n">lon_obstime</span> <span class="o">-</span> <span class="n">_lon_first_rotation</span> <span class="o">-</span> <span class="n">sidereal_lon</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_sun_P"><a class="viewcode-back" href="../../../api/sunpy.coordinates.get_sun_P.html#sunpy.coordinates.ephemeris.get_sun_P">[docs]</a><span class="k">def</span> <span class="nf">get_sun_P</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the position (P) angle for the Sun at a specified time, which is the angle between</span>
+<span class="sd">    geocentric north and solar north as seen from Earth, measured eastward from geocentric north.</span>
+<span class="sd">    The range of P is +/-26.3 degrees.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    time : various</span>
+<span class="sd">        Time to use as `~astropy.time.Time` or in a parse_time-compatible format</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : `~astropy.coordinates.Angle`</span>
+<span class="sd">        The position angle</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">obstime</span> <span class="o">=</span> <span class="n">_astropy_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+
+    <span class="c1"># Define the frame where its Z axis is aligned with geocentric north</span>
+    <span class="n">geocentric</span> <span class="o">=</span> <span class="n">PrecessedGeocentric</span><span class="p">(</span><span class="n">equinox</span><span class="o">=</span><span class="n">obstime</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="n">obstime</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">_sun_north_angle_to_z</span><span class="p">(</span><span class="n">geocentric</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_sunearth_distance"><a class="viewcode-back" href="../../../api/sunpy.coordinates.get_sunearth_distance.html#sunpy.coordinates.ephemeris.get_sunearth_distance">[docs]</a><span class="k">def</span> <span class="nf">get_sunearth_distance</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the distance between the Sun and the Earth at a specified time.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    time : various</span>
+<span class="sd">        Time to use as `~astropy.time.Time` or in a parse_time-compatible format</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : `~astropy.coordinates.Distance`</span>
+<span class="sd">        The Sun-Earth distance</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">get_earth</span><span class="p">(</span><span class="n">time</span><span class="p">)</span><span class="o">.</span><span class="n">radius</span></div>
+
+
+<div class="viewcode-block" id="get_sun_orientation"><a class="viewcode-back" href="../../../api/sunpy.coordinates.get_sun_orientation.html#sunpy.coordinates.ephemeris.get_sun_orientation">[docs]</a><span class="k">def</span> <span class="nf">get_sun_orientation</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="s1">&#39;now&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the orientation angle for the Sun from a specified Earth location and time.  The</span>
+<span class="sd">    orientation angle is the angle between local zenith and solar north, measured eastward from</span>
+<span class="sd">    local zenith.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    location : `~astropy.coordinates.EarthLocation`</span>
+<span class="sd">        Observer location on Earth</span>
+<span class="sd">    time : various</span>
+<span class="sd">        Time to use as `~astropy.time.Time` or in a parse_time-compatible format</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : `~astropy.coordinates.Angle`</span>
+<span class="sd">        The orientation of the Sun</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">obstime</span> <span class="o">=</span> <span class="n">_astropy_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+
+    <span class="c1"># Define the frame where its Z axis is aligned with local zenith</span>
+    <span class="n">local_frame</span> <span class="o">=</span> <span class="n">AltAz</span><span class="p">(</span><span class="n">obstime</span><span class="o">=</span><span class="n">obstime</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">_sun_north_angle_to_z</span><span class="p">(</span><span class="n">local_frame</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_sun_north_angle_to_z</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the angle between solar north and the Z axis of the provided frame&#39;s coordinate system</span>
+<span class="sd">    and observation time.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Find the Sun center in HGS at the frame&#39;s observation time</span>
+    <span class="n">sun_center</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">HGS</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="n">frame</span><span class="o">.</span><span class="n">obstime</span><span class="p">)</span>
+
+    <span class="c1"># Find the Sun north in HGS at the frame&#39;s observation time</span>
+    <span class="c1"># Only a rough value of the solar radius is needed here because, after the cross product,</span>
+    <span class="c1">#   only the direction from the Sun center to the Sun north pole matters</span>
+    <span class="n">sun_north</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mi">90</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mi">690000</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">HGS</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="n">frame</span><span class="o">.</span><span class="n">obstime</span><span class="p">)</span>
+
+    <span class="c1"># Find the Sun center and Sun north in the frame&#39;s coordinate system</span>
+    <span class="n">sky_normal</span> <span class="o">=</span> <span class="n">sun_center</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">to_cartesian</span><span class="p">()</span>
+    <span class="n">sun_north</span> <span class="o">=</span> <span class="n">sun_north</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">to_cartesian</span><span class="p">()</span>
+
+    <span class="c1"># Use cross products to obtain the sky projections of the two vectors (rotated by 90 deg)</span>
+    <span class="n">sun_north_in_sky</span> <span class="o">=</span> <span class="n">sun_north</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">sky_normal</span><span class="p">)</span>
+    <span class="n">z_in_sky</span> <span class="o">=</span> <span class="n">CartesianRepresentation</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">sky_normal</span><span class="p">)</span>
+
+    <span class="c1"># Normalize directional vectors</span>
+    <span class="n">sky_normal</span> <span class="o">/=</span> <span class="n">sky_normal</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
+    <span class="n">sun_north_in_sky</span> <span class="o">/=</span> <span class="n">sun_north_in_sky</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
+    <span class="n">z_in_sky</span> <span class="o">/=</span> <span class="n">z_in_sky</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
+
+    <span class="c1"># Calculate the signed angle between the two projected vectors</span>
+    <span class="n">cos_theta</span> <span class="o">=</span> <span class="n">sun_north_in_sky</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">z_in_sky</span><span class="p">)</span>
+    <span class="n">sin_theta</span> <span class="o">=</span> <span class="n">sun_north_in_sky</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">z_in_sky</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">sky_normal</span><span class="p">)</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">sin_theta</span><span class="p">,</span> <span class="n">cos_theta</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

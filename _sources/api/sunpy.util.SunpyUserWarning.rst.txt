@@ -1,0 +1,6 @@
+SunpyUserWarning
+================
+
+.. currentmodule:: sunpy.util
+
+.. autoexception:: SunpyUserWarning

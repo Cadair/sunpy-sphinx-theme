@@ -1,0 +1,6 @@
+read_genx
+=========
+
+.. currentmodule:: sunpy.io.special.genx
+
+.. autofunction:: read_genx

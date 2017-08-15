@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy net &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="UnifiedResponse" href="../api/sunpy.net.fido_factory.UnifiedResponse.html" />
+    <link rel="prev" title="TRACEMap" href="../api/sunpy.map.sources.TRACEMap.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy net | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/code_ref/net.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html">SunPy map</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SunPy net</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.fido_factory.UnifiedResponse.html">UnifiedResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.fido_factory.UnifiedDownloaderFactory.html">UnifiedDownloaderFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.fido_factory.DownloadResponse.html">DownloadResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.GenericClient.html">GenericClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.QueryResponse.html">QueryResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.QueryResponseBlock.html">QueryResponseBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.EVEClient.html">EVEClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.GOESClient.html">GOESClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.LYRAClient.html">LYRAClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.NOAAIndicesClient.html">NOAAIndicesClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.NOAAPredictClient.html">NOAAPredictClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.NoRHClient.html">NoRHClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.RHESSIClient.html">RHESSIClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.VSOClient.html">VSOClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.InteractiveVSOClient.html">InteractiveVSOClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Wavelength.html">Wavelength</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Extent.html">Extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Field.html">Field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Provider.html">Provider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Source.html">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Instrument.html">Instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Physobs.html">Physobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Pixels.html">Pixels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Level.html">Level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Resolution.html">Resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Detector.html">Detector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Filter.html">Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Sample.html">Sample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.Quicklook.html">Quicklook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.vso.attrs.PScale.html">PScale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.hek.HEKClient.html">HEKClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.hek2vso.translate_results_to_query.html">translate_results_to_query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.hek2vso.vso_attribute_parse.html">vso_attribute_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.hek2vso.H2VClient.html">H2VClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.helio.hec.HECClient.html">HECClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.jsoc.Compression.html">Compression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.jsoc.JSOCClient.html">JSOCClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.jsoc.JSOCResponse.html">JSOCResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.jsoc.Notify.html">Notify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.jsoc.Protocol.html">Protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.jsoc.Segment.html">Segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.net.jsoc.Series.html">Series</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-net">
+<h1>SunPy net<a class="headerlink" href="#sunpy-net" title="Permalink to this headline">¶</a></h1>
+<p>SunPy&#8217;s net submodule contains a lot of different code for accessing various
+solar physics related web services. This submodule contains many layers. Most
+users should use <code class="docutils literal"><span class="pre">Fido</span></code>, which is an interface to multiple sources including
+all the sources implemented in <a class="reference internal" href="#module-sunpy.net.dataretriever" title="sunpy.net.dataretriever"><code class="xref py py-obj docutils literal"><span class="pre">dataretriever</span></code></a> as well as
+<a class="reference internal" href="#module-sunpy.net.vso" title="sunpy.net.vso"><code class="xref py py-obj docutils literal"><span class="pre">vso</span></code></a> and <a class="reference internal" href="#module-sunpy.net.jsoc" title="sunpy.net.jsoc"><code class="xref py py-obj docutils literal"><span class="pre">jsoc</span></code></a>. <code class="docutils literal"><span class="pre">Fido</span></code> can be used like so:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">Fido</span><span class="p">,</span> <span class="n">attrs</span> <span class="k">as</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">Fido</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s2">&quot;2012/1/1&quot;</span><span class="p">,</span> <span class="s2">&quot;2012/1/2&quot;</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;lyra&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">files</span> <span class="o">=</span> <span class="n">Fido</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="module-sunpy.net.fido_factory">
+<span id="sunpy-net-fido-factory-module"></span><h2>sunpy.net.fido_factory Module<a class="headerlink" href="#module-sunpy.net.fido_factory" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the factory code for the <code class="docutils literal"><span class="pre">sunpy.net.Fido</span></code> factory. As
+well as defining <code class="docutils literal"><span class="pre">Fido</span></code> which is an instance of
+<a class="reference internal" href="../api/sunpy.net.fido_factory.UnifiedDownloaderFactory.html#sunpy.net.fido_factory.UnifiedDownloaderFactory" title="sunpy.net.fido_factory.UnifiedDownloaderFactory"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.net.fido_factory.UnifiedDownloaderFactory</span></code></a> it defines
+<a class="reference internal" href="../api/sunpy.net.fido_factory.UnifiedResponse.html#sunpy.net.fido_factory.UnifiedResponse" title="sunpy.net.fido_factory.UnifiedResponse"><code class="xref py py-obj docutils literal"><span class="pre">UnifiedResponse</span></code></a> which <code class="docutils literal"><span class="pre">Fido.search</span></code> returns.
+<a class="reference internal" href="../api/sunpy.net.fido_factory.DownloadResponse.html#sunpy.net.fido_factory.DownloadResponse" title="sunpy.net.fido_factory.DownloadResponse"><code class="xref py py-obj docutils literal"><span class="pre">DownloadResponse</span></code></a> objects are returned by <code class="docutils literal"><span class="pre">Fido.fetch</span></code>.</p>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.fido_factory.UnifiedResponse.html#sunpy.net.fido_factory.UnifiedResponse" title="sunpy.net.fido_factory.UnifiedResponse"><code class="xref py py-obj docutils literal"><span class="pre">UnifiedResponse</span></code></a>(lst)</td>
+<td>The object used to store results from <code class="xref py py-obj docutils literal"><span class="pre">search</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.fido_factory.UnifiedDownloaderFactory.html#sunpy.net.fido_factory.UnifiedDownloaderFactory" title="sunpy.net.fido_factory.UnifiedDownloaderFactory"><code class="xref py py-obj docutils literal"><span class="pre">UnifiedDownloaderFactory</span></code></a>([...])</td>
+<td>sunpy.net.Fido(*args, **kwargs)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.fido_factory.DownloadResponse.html#sunpy.net.fido_factory.DownloadResponse" title="sunpy.net.fido_factory.DownloadResponse"><code class="xref py py-obj docutils literal"><span class="pre">DownloadResponse</span></code></a>(lst)</td>
+<td>Object returned by clients servicing the query.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-15f9a5f496270f52c1d766c1d208d64eccde59c2.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.net.fido_factory.UnifiedResponse, sunpy.net.fido_factory.UnifiedDownloaderFactory, sunpy.net.fido_factory.DownloadResponse</p></object>
+</div>
+</div>
+<div class="section" id="dataretriever">
+<h2>Dataretriever<a class="headerlink" href="#dataretriever" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-sunpy.net.dataretriever">
+<span id="sunpy-net-dataretriever-package"></span><h3>sunpy.net.dataretriever Package<a class="headerlink" href="#module-sunpy.net.dataretriever" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference internal" href="#module-sunpy.net.dataretriever" title="sunpy.net.dataretriever"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.net.dataretriever</span></code></a> submodule is a framework for downloading data
+from &#8220;simple&#8221; web sources such as HTTP or FTP servers. Although it could be
+used for more complex services as well. Following the example of <a class="reference internal" href="map.html#module-sunpy.map" title="sunpy.map"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.map</span></code></a>
+and <a class="reference internal" href="timeseries.html#module-sunpy.timeseries" title="sunpy.timeseries"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.timeseries</span></code></a> this module provides a base class
+<a class="reference internal" href="../api/sunpy.net.dataretriever.GenericClient.html#sunpy.net.dataretriever.GenericClient" title="sunpy.net.dataretriever.GenericClient"><code class="xref py py-obj docutils literal"><span class="pre">GenericClient</span></code></a> from which specific services can
+subclass. All these subclasses are then registered with the <code class="docutils literal"><span class="pre">Fido</span></code> factory
+class, so do not need to be called individually.</p>
+<div class="section" id="id1">
+<h4>Classes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.GenericClient.html#sunpy.net.dataretriever.GenericClient" title="sunpy.net.dataretriever.GenericClient"><code class="xref py py-obj docutils literal"><span class="pre">GenericClient</span></code></a>()</td>
+<td>Base class for simple web clients for the data retriever module.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.QueryResponse.html#sunpy.net.dataretriever.QueryResponse" title="sunpy.net.dataretriever.QueryResponse"><code class="xref py py-obj docutils literal"><span class="pre">QueryResponse</span></code></a>(lst)</td>
+<td>Container of QueryResponseBlocks</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.QueryResponseBlock.html#sunpy.net.dataretriever.QueryResponseBlock" title="sunpy.net.dataretriever.QueryResponseBlock"><code class="xref py py-obj docutils literal"><span class="pre">QueryResponseBlock</span></code></a>(map0,&nbsp;url[,&nbsp;time])</td>
+<td>Represents url, source along with other information</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<object data="../_images/inheritance-071c7cd2405c528c8c728e115874be568ca1024a.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.net.dataretriever.client.GenericClient, sunpy.net.dataretriever.client.QueryResponse, sunpy.net.dataretriever.client.QueryResponseBlock</p></object>
+</div>
+<div class="section" id="module-sunpy.net.dataretriever.sources">
+<span id="sunpy-net-dataretriever-sources-package"></span><h4>sunpy.net.dataretriever.sources Package<a class="headerlink" href="#module-sunpy.net.dataretriever.sources" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id3">
+<h5>Classes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.EVEClient.html#sunpy.net.dataretriever.sources.EVEClient" title="sunpy.net.dataretriever.sources.EVEClient"><code class="xref py py-obj docutils literal"><span class="pre">EVEClient</span></code></a>()</td>
+<td>This EVEClient is for the Level 0C data from <a class="reference external" href="http://lasp.colorado.edu/home/eve/data/data-access/">http://lasp.colorado.edu/home/eve/data/data-access/</a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.GOESClient.html#sunpy.net.dataretriever.sources.GOESClient" title="sunpy.net.dataretriever.sources.GOESClient"><code class="xref py py-obj docutils literal"><span class="pre">GOESClient</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.LYRAClient.html#sunpy.net.dataretriever.sources.LYRAClient" title="sunpy.net.dataretriever.sources.LYRAClient"><code class="xref py py-obj docutils literal"><span class="pre">LYRAClient</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.NOAAIndicesClient.html#sunpy.net.dataretriever.sources.NOAAIndicesClient" title="sunpy.net.dataretriever.sources.NOAAIndicesClient"><code class="xref py py-obj docutils literal"><span class="pre">NOAAIndicesClient</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.NOAAPredictClient.html#sunpy.net.dataretriever.sources.NOAAPredictClient" title="sunpy.net.dataretriever.sources.NOAAPredictClient"><code class="xref py py-obj docutils literal"><span class="pre">NOAAPredictClient</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.NoRHClient.html#sunpy.net.dataretriever.sources.NoRHClient" title="sunpy.net.dataretriever.sources.NoRHClient"><code class="xref py py-obj docutils literal"><span class="pre">NoRHClient</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.dataretriever.sources.RHESSIClient.html#sunpy.net.dataretriever.sources.RHESSIClient" title="sunpy.net.dataretriever.sources.RHESSIClient"><code class="xref py py-obj docutils literal"><span class="pre">RHESSIClient</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h5>Class Inheritance Diagram<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
+<object data="../_images/inheritance-fbf7128b4fdf0b004500af79498a80498cb97ef4.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.net.dataretriever.sources.eve.EVEClient, sunpy.net.dataretriever.sources.goes.GOESClient, sunpy.net.dataretriever.sources.lyra.LYRAClient, sunpy.net.dataretriever.sources.noaa.NOAAIndicesClient, sunpy.net.dataretriever.sources.noaa.NOAAPredictClient, sunpy.net.dataretriever.sources.norh.NoRHClient, sunpy.net.dataretriever.sources.rhessi.RHESSIClient</p></object>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="vso">
+<h2>VSO<a class="headerlink" href="#vso" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-sunpy.net.vso">
+<span id="sunpy-net-vso-package"></span><h3>sunpy.net.vso Package<a class="headerlink" href="#module-sunpy.net.vso" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>Classes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.vso.VSOClient.html#sunpy.net.vso.VSOClient" title="sunpy.net.vso.VSOClient"><code class="xref py py-obj docutils literal"><span class="pre">VSOClient</span></code></a>([url,&nbsp;port,&nbsp;api])</td>
+<td>Main VSO Client.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.vso.InteractiveVSOClient.html#sunpy.net.vso.InteractiveVSOClient" title="sunpy.net.vso.InteractiveVSOClient"><code class="xref py py-obj docutils literal"><span class="pre">InteractiveVSOClient</span></code></a>([url,&nbsp;port,&nbsp;api])</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<object data="../_images/inheritance-3d81f2683d9317aaf18177faeaacedb529b42269.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.net.vso.vso.VSOClient, sunpy.net.vso.vso.InteractiveVSOClient</p></object>
+</div>
+<div class="section" id="module-sunpy.net.vso.attrs">
+<span id="sunpy-net-vso-attrs-module"></span><h4>sunpy.net.vso.attrs Module<a class="headerlink" href="#module-sunpy.net.vso.attrs" title="Permalink to this headline">¶</a></h4>
+<p>Attributes that can be used to construct VSO queries. Attributes are the
+fundamental building blocks of queries that, together with the two
+operations of AND and OR (and in some rare cases XOR) can be used to
+construct complex queries. Most attributes can only be used once in an
+AND-expression, if you still attempt to do so it is called a collision.
+For a quick example think about how the system should handle
+Instrument(&#8216;aia&#8217;) &amp; Instrument(&#8216;eit&#8217;).</p>
+<div class="section" id="id7">
+<h5>Classes<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Wavelength.html#sunpy.net.vso.attrs.Wavelength" title="sunpy.net.vso.attrs.Wavelength"><code class="xref py py-obj docutils literal"><span class="pre">Wavelength</span></code></a>(wavemin[,&nbsp;wavemax])</td>
+<td>Specifies the wavelength or spectral energy range of the detector.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Time.html#sunpy.net.vso.attrs.Time" title="sunpy.net.vso.attrs.Time"><code class="xref py py-obj docutils literal"><span class="pre">Time</span></code></a>(start[,&nbsp;end,&nbsp;near])</td>
+<td>Specify the time range of the query.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Extent.html#sunpy.net.vso.attrs.Extent" title="sunpy.net.vso.attrs.Extent"><code class="xref py py-obj docutils literal"><span class="pre">Extent</span></code></a>(x,&nbsp;y,&nbsp;width,&nbsp;length,&nbsp;atype)</td>
+<td>Specify the spatial field-of-view of the query.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Field.html#sunpy.net.vso.attrs.Field" title="sunpy.net.vso.attrs.Field"><code class="xref py py-obj docutils literal"><span class="pre">Field</span></code></a>(fielditem)</td>
+<td>A subclass of the value attribute.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Provider.html#sunpy.net.vso.attrs.Provider" title="sunpy.net.vso.attrs.Provider"><code class="xref py py-obj docutils literal"><span class="pre">Provider</span></code></a>(value)</td>
+<td>Specifies the VSO data provider to search for data for.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Source.html#sunpy.net.vso.attrs.Source" title="sunpy.net.vso.attrs.Source"><code class="xref py py-obj docutils literal"><span class="pre">Source</span></code></a>(value)</td>
+<td>Data sources that VSO can search on.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Instrument.html#sunpy.net.vso.attrs.Instrument" title="sunpy.net.vso.attrs.Instrument"><code class="xref py py-obj docutils literal"><span class="pre">Instrument</span></code></a>(value)</td>
+<td>Specifies the Instrument name for the search.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Physobs.html#sunpy.net.vso.attrs.Physobs" title="sunpy.net.vso.attrs.Physobs"><code class="xref py py-obj docutils literal"><span class="pre">Physobs</span></code></a>(value)</td>
+<td>Specifies the physical observable the VSO can search for.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Pixels.html#sunpy.net.vso.attrs.Pixels" title="sunpy.net.vso.attrs.Pixels"><code class="xref py py-obj docutils literal"><span class="pre">Pixels</span></code></a>(value)</td>
+<td>Pixels are (currently) limited to a single dimension (and only implemented for SDO data)  We hope to change this in the future to support TRACE, Hinode and other investigations where this changed between observations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Level.html#sunpy.net.vso.attrs.Level" title="sunpy.net.vso.attrs.Level"><code class="xref py py-obj docutils literal"><span class="pre">Level</span></code></a>(value)</td>
+<td>Specifies the data processing level to search for.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Resolution.html#sunpy.net.vso.attrs.Resolution" title="sunpy.net.vso.attrs.Resolution"><code class="xref py py-obj docutils literal"><span class="pre">Resolution</span></code></a>(value)</td>
+<td>Resolution level of the data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Detector.html#sunpy.net.vso.attrs.Detector" title="sunpy.net.vso.attrs.Detector"><code class="xref py py-obj docutils literal"><span class="pre">Detector</span></code></a>(value)</td>
+<td>The detector from which the data comes from.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Filter.html#sunpy.net.vso.attrs.Filter" title="sunpy.net.vso.attrs.Filter"><code class="xref py py-obj docutils literal"><span class="pre">Filter</span></code></a>(value)</td>
+<td>This attribute is a placeholder for the future.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Sample.html#sunpy.net.vso.attrs.Sample" title="sunpy.net.vso.attrs.Sample"><code class="xref py py-obj docutils literal"><span class="pre">Sample</span></code></a>(value)</td>
+<td>Time interval for data sampling.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.Quicklook.html#sunpy.net.vso.attrs.Quicklook" title="sunpy.net.vso.attrs.Quicklook"><code class="xref py py-obj docutils literal"><span class="pre">Quicklook</span></code></a>(value)</td>
+<td>Retrieve &#8216;quicklook&#8217; data if available.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.vso.attrs.PScale.html#sunpy.net.vso.attrs.PScale" title="sunpy.net.vso.attrs.PScale"><code class="xref py py-obj docutils literal"><span class="pre">PScale</span></code></a>(value)</td>
+<td>Pixel Scale (PSCALE) is in arc seconds.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id8">
+<h5>Class Inheritance Diagram<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
+<object data="../_images/inheritance-3498706057675a006ed9270b5d54c7e3944eca10.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.net.vso.attrs.Wavelength, sunpy.net.vso.attrs.Time, sunpy.net.vso.attrs.Extent, sunpy.net.vso.attrs.Field, sunpy.net.vso.attrs.Provider, sunpy.net.vso.attrs.Source, sunpy.net.vso.attrs.Instrument, sunpy.net.vso.attrs.Physobs, sunpy.net.vso.attrs.Pixels, sunpy.net.vso.attrs.Level, sunpy.net.vso.attrs.Resolution, sunpy.net.vso.attrs.Detector, sunpy.net.vso.attrs.Filter, sunpy.net.vso.attrs.Sample, sunpy.net.vso.attrs.Quicklook, sunpy.net.vso.attrs.PScale</p></object>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hek">
+<h2>HEK<a class="headerlink" href="#hek" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-sunpy.net.hek">
+<span id="sunpy-net-hek-package"></span><h3>sunpy.net.hek Package<a class="headerlink" href="#module-sunpy.net.hek" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h4>Classes<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.hek.HEKClient.html#sunpy.net.hek.HEKClient" title="sunpy.net.hek.HEKClient"><code class="xref py py-obj docutils literal"><span class="pre">HEKClient</span></code></a>([url])</td>
+<td>Client to interact with the Heliophysics Event Knowledgebase (HEK).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id10">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<object data="../_images/inheritance-ed699195028039e8aaf36b87e57efae715ccad37.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.net.hek.hek.HEKClient</p></object>
+</div>
+</div>
+<div class="section" id="module-sunpy.net.hek2vso">
+<span id="sunpy-net-hek2vso-package"></span><h3>sunpy.net.hek2vso Package<a class="headerlink" href="#module-sunpy.net.hek2vso" title="Permalink to this headline">¶</a></h3>
+<p>This module provides a translation layer between the HEK and the VSO.
+It allows you to acquire records of data that are available via the
+VSO, based on the data in HEK event entries.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This module is in beta and maybe unstable.</p>
+</div>
+<div class="section" id="functions">
+<h4>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.hek2vso.translate_results_to_query.html#sunpy.net.hek2vso.translate_results_to_query" title="sunpy.net.hek2vso.translate_results_to_query"><code class="xref py py-obj docutils literal"><span class="pre">translate_results_to_query</span></code></a>(results)</td>
+<td>Formulate VSO queries from HEK results.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.hek2vso.vso_attribute_parse.html#sunpy.net.hek2vso.vso_attribute_parse" title="sunpy.net.hek2vso.vso_attribute_parse"><code class="xref py py-obj docutils literal"><span class="pre">vso_attribute_parse</span></code></a>(phrase)</td>
+<td>Parses VSO attributes from a HEK result.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id11">
+<h4>Classes<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.hek2vso.H2VClient.html#sunpy.net.hek2vso.H2VClient" title="sunpy.net.hek2vso.H2VClient"><code class="xref py py-obj docutils literal"><span class="pre">H2VClient</span></code></a>()</td>
+<td>Class to handle HEK to VSO translations</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id12">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<object data="../_images/inheritance-7908208bc5937ed0c0c14d19516c0ae42ba688d9.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.net.hek2vso.hek2vso.H2VClient</p></object>
+</div>
+</div>
+</div>
+<div class="section" id="helio">
+<h2>HELIO<a class="headerlink" href="#helio" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-sunpy.net.helio">
+<span id="sunpy-net-helio-package"></span><h3>sunpy.net.helio Package<a class="headerlink" href="#module-sunpy.net.helio" title="Permalink to this headline">¶</a></h3>
+<p>A Module for accessing the HELIO web service</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This module is still in beta and may be unstable</p>
+</div>
+<div class="section" id="module-sunpy.net.helio.hec">
+<span id="sunpy-net-helio-hec-module"></span><h4>sunpy.net.helio.hec Module<a class="headerlink" href="#module-sunpy.net.helio.hec" title="Permalink to this headline">¶</a></h4>
+<p>Access the Helio Event Catalogue</p>
+<div class="section" id="id13">
+<h5>Classes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h5>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.helio.hec.HECClient.html#sunpy.net.helio.hec.HECClient" title="sunpy.net.helio.hec.HECClient"><code class="xref py py-obj docutils literal"><span class="pre">HECClient</span></code></a>([link])</td>
+<td>A client class used to interface with and query HELIO webservices.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id14">
+<h5>Class Inheritance Diagram<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h5>
+<object data="../_images/inheritance-bdaf136820cabed5799754f28a1dc6b9c142a9f1.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.net.helio.hec.HECClient</p></object>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="jsoc">
+<h2>JSOC<a class="headerlink" href="#jsoc" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-sunpy.net.jsoc">
+<span id="sunpy-net-jsoc-package"></span><h3>sunpy.net.jsoc Package<a class="headerlink" href="#module-sunpy.net.jsoc" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h4>Classes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.jsoc.Compression.html#sunpy.net.jsoc.Compression" title="sunpy.net.jsoc.Compression"><code class="xref py py-obj docutils literal"><span class="pre">Compression</span></code></a>(value)</td>
+<td>Compression format for requested files.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.jsoc.JSOCClient.html#sunpy.net.jsoc.JSOCClient" title="sunpy.net.jsoc.JSOCClient"><code class="xref py py-obj docutils literal"><span class="pre">JSOCClient</span></code></a></td>
+<td>This is a Client to the JSOC Data Export service.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.jsoc.JSOCResponse.html#sunpy.net.jsoc.JSOCResponse" title="sunpy.net.jsoc.JSOCResponse"><code class="xref py py-obj docutils literal"><span class="pre">JSOCResponse</span></code></a>([table])</td>
+<td>table : <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.table.Table</span></code></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.jsoc.Notify.html#sunpy.net.jsoc.Notify" title="sunpy.net.jsoc.Notify"><code class="xref py py-obj docutils literal"><span class="pre">Notify</span></code></a>(value)</td>
+<td>An email address to get a notification to when JSOC has staged your request</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.jsoc.Protocol.html#sunpy.net.jsoc.Protocol" title="sunpy.net.jsoc.Protocol"><code class="xref py py-obj docutils literal"><span class="pre">Protocol</span></code></a>(value)</td>
+<td>The type of download to request one of (&#8220;FITS&#8221;, &#8220;JPEG&#8221;, &#8220;MPG&#8221;, &#8220;MP4&#8221;, or &#8220;as-is&#8221;).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.net.jsoc.Segment.html#sunpy.net.jsoc.Segment" title="sunpy.net.jsoc.Segment"><code class="xref py py-obj docutils literal"><span class="pre">Segment</span></code></a>(value)</td>
+<td>Segments choose which files to download when there are more than one present for each record e.g.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.net.jsoc.Series.html#sunpy.net.jsoc.Series" title="sunpy.net.jsoc.Series"><code class="xref py py-obj docutils literal"><span class="pre">Series</span></code></a>(value)</td>
+<td>The JSOC Series to Download.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id16">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<object data="../_images/inheritance-6c9b9b2a7f4aaba551f29a0cd917b0697dc7ff12.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.net.jsoc.attrs.Compression, sunpy.net.jsoc.jsoc.JSOCClient, sunpy.net.jsoc.jsoc.JSOCResponse, sunpy.net.jsoc.attrs.Notify, sunpy.net.jsoc.attrs.Protocol, sunpy.net.jsoc.attrs.Segment, sunpy.net.jsoc.attrs.Series</p></object>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

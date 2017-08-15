@@ -1,0 +1,7 @@
+QueryResponseBlock
+==================
+
+.. currentmodule:: sunpy.net.dataretriever
+
+.. autoclass:: QueryResponseBlock
+   :show-inheritance:

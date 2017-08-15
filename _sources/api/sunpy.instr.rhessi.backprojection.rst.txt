@@ -1,0 +1,6 @@
+backprojection
+==============
+
+.. currentmodule:: sunpy.instr.rhessi
+
+.. autofunction:: backprojection

@@ -1,0 +1,6 @@
+get_obssumm_dbase_file
+======================
+
+.. currentmodule:: sunpy.instr.rhessi
+
+.. autofunction:: get_obssumm_dbase_file

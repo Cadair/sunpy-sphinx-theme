@@ -1,0 +1,6 @@
+calculate_solar_rotate_shift
+============================
+
+.. currentmodule:: sunpy.physics.solar_rotation
+
+.. autofunction:: calculate_solar_rotate_shift

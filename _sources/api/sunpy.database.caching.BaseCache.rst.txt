@@ -1,0 +1,65 @@
+BaseCache
+=========
+
+.. currentmodule:: sunpy.database.caching
+
+.. autoclass:: BaseCache
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~BaseCache.is_full
+      ~BaseCache.to_be_removed
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BaseCache.callback
+      ~BaseCache.clear
+      ~BaseCache.copy
+      ~BaseCache.fromkeys
+      ~BaseCache.get
+      ~BaseCache.items
+      ~BaseCache.iteritems
+      ~BaseCache.iterkeys
+      ~BaseCache.itervalues
+      ~BaseCache.keys
+      ~BaseCache.pop
+      ~BaseCache.popitem
+      ~BaseCache.remove
+      ~BaseCache.setdefault
+      ~BaseCache.update
+      ~BaseCache.values
+      ~BaseCache.viewitems
+      ~BaseCache.viewkeys
+      ~BaseCache.viewvalues
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: is_full
+   .. autoattribute:: to_be_removed
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: callback
+   .. automethod:: clear
+   .. automethod:: copy
+   .. automethod:: fromkeys
+   .. automethod:: get
+   .. automethod:: items
+   .. automethod:: iteritems
+   .. automethod:: iterkeys
+   .. automethod:: itervalues
+   .. automethod:: keys
+   .. automethod:: pop
+   .. automethod:: popitem
+   .. automethod:: remove
+   .. automethod:: setdefault
+   .. automethod:: update
+   .. automethod:: values
+   .. automethod:: viewitems
+   .. automethod:: viewkeys
+   .. automethod:: viewvalues

@@ -1,0 +1,6 @@
+hcrs_to_hgs
+===========
+
+.. currentmodule:: sunpy.coordinates.transformations
+
+.. autofunction:: hcrs_to_hgs

@@ -1,0 +1,17 @@
+JSONDump
+========
+
+.. currentmodule:: sunpy.database.tables
+
+.. autoclass:: JSONDump
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~JSONDump.dump
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: dump

@@ -1,0 +1,6 @@
+apparent_rightascension
+=======================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: apparent_rightascension

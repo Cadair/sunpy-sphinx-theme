@@ -1,0 +1,6 @@
+position
+========
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: position

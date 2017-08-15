@@ -1,0 +1,6 @@
+url_exists
+==========
+
+.. currentmodule:: sunpy.util.net
+
+.. autofunction:: url_exists

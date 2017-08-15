@@ -1,0 +1,6 @@
+remove_lytaf_events_from_timeseries
+===================================
+
+.. currentmodule:: sunpy.instr.lyra
+
+.. autofunction:: remove_lytaf_events_from_timeseries

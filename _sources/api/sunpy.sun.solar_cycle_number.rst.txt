@@ -1,0 +1,6 @@
+solar_cycle_number
+==================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: solar_cycle_number

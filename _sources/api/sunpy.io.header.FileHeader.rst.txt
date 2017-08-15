@@ -1,0 +1,7 @@
+FileHeader
+==========
+
+.. currentmodule:: sunpy.io.header
+
+.. autoclass:: FileHeader
+   :show-inheritance:

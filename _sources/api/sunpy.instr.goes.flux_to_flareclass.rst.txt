@@ -1,0 +1,6 @@
+flux_to_flareclass
+==================
+
+.. currentmodule:: sunpy.instr.goes
+
+.. autofunction:: flux_to_flareclass

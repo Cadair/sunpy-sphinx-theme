@@ -1,0 +1,6 @@
+solar_semidiameter_angular_size
+===============================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: solar_semidiameter_angular_size

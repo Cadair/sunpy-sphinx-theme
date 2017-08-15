@@ -1,0 +1,7 @@
+Compression
+===========
+
+.. currentmodule:: sunpy.net.jsoc
+
+.. autoclass:: Compression
+   :show-inheritance:

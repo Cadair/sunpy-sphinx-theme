@@ -1,0 +1,17 @@
+NoRHLightCurve
+==============
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: NoRHLightCurve
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~NoRHLightCurve.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: peek

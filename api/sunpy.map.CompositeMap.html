@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>CompositeMap &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GenericMap" href="sunpy.map.GenericMap.html" />
+    <link rel="prev" title="SunPy map" href="../code_ref/map.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="CompositeMap | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.map.CompositeMap.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/map.html">SunPy map</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CompositeMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.GenericMap.html">GenericMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.MapCube.html">MapCube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.source_stretch.html">source_stretch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.XRTMap.html">XRTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SOTMap.html">SOTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SWAPMap.html">SWAPMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.RHESSIMap.html">RHESSIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.AIAMap.html">AIAMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.HMIMap.html">HMIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.EITMap.html">EITMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.LASCOMap.html">LASCOMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.MDIMap.html">MDIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.EUVIMap.html">EUVIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.CORMap.html">CORMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.HIMap.html">HIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SXTMap.html">SXTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SJIMap.html">SJIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.TRACEMap.html">TRACEMap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="compositemap">
+<h1>CompositeMap<a class="headerlink" href="#compositemap" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.map.CompositeMap">
+<em class="property">class </em><code class="descclassname">sunpy.map.</code><code class="descname">CompositeMap</code><span class="sig-paren">(</span><em>map1</em><span class="optional">[</span>, <em>map2</em>, <em>..</em><span class="optional">]</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L24" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>A Composite Map class</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> ([<code class="xref py py-obj docutils literal"><span class="pre">Map</span></code> | string]) &#8211; One or more map of filepaths</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.add_map">
+<code class="descname">add_map</code><span class="sig-paren">(</span><em>map</em>, <em>zorder=None</em>, <em>alpha=1</em>, <em>levels=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.add_map"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L94" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.add_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a map to the CompositeMap</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.remove_map">
+<code class="descname">remove_map</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.remove_map"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L120" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.remove_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes and returns the map with the given index.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.list_maps">
+<code class="descname">list_maps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.list_maps"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L136" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.list_maps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints a list of the currently included maps.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.get_alpha">
+<code class="descname">get_alpha</code><span class="sig-paren">(</span><em>index=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.get_alpha"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L144" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.get_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the alpha-channel value for a layer in the composite image</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.get_levels">
+<code class="descname">get_levels</code><span class="sig-paren">(</span><em>index=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.get_levels"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L153" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.get_levels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of contour levels for a map within the CompositeMap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.get_plot_settings">
+<code class="descname">get_plot_settings</code><span class="sig-paren">(</span><em>index=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.get_plot_settings"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L174" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.get_plot_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the plot settings for a map within the CompositeMap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.get_zorder">
+<code class="descname">get_zorder</code><span class="sig-paren">(</span><em>index=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.get_zorder"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L194" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.get_zorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the layering preference (z-order) for a map within the composite.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.set_alpha">
+<code class="descname">set_alpha</code><span class="sig-paren">(</span><em>index</em>, <em>alpha</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.set_alpha"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L215" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.set_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the alpha-channel value for a layer in the CompositeMap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.set_levels">
+<code class="descname">set_levels</code><span class="sig-paren">(</span><em>index</em>, <em>levels</em>, <em>percent=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.set_levels"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L236" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.set_levels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the contour levels for a layer in the CompositeMap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.set_plot_settings">
+<code class="descname">set_plot_settings</code><span class="sig-paren">(</span><em>index</em>, <em>plot_setiings</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.set_plot_settings"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L263" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.set_plot_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the plot settings for a map with the CompositeMap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.set_zorder">
+<code class="descname">set_zorder</code><span class="sig-paren">(</span><em>index</em>, <em>zorder</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.set_zorder"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L282" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.set_zorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the layering preference (z-order) for a map within the CompositeMap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">plot(figure=None, overlays=None, draw_limb=False, gamma=1.0,</code></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">draw_grid=False, colorbar=True, basic_plot=False,title=&quot;SunPy Plot&quot;,</code></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">matplot_args)</code></dt>
+<dd><p>Plots the composite map object using matplotlib</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">comp_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">,</span>
+<span class="gp">... </span>                         <span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">EIT_195_IMAGE</span><span class="p">,</span>
+<span class="gp">... </span>                         <span class="n">composite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">comp_map</span><span class="o">.</span><span class="n">add_map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">RHESSI_IMAGE</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">comp_map</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.CompositeMap.add_map" title="sunpy.map.CompositeMap.add_map"><code class="xref py py-obj docutils literal"><span class="pre">add_map</span></code></a>(amap[,&nbsp;zorder,&nbsp;alpha,&nbsp;levels])</td>
+<td>Adds a map to the CompositeMap.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.CompositeMap.draw_grid" title="sunpy.map.CompositeMap.draw_grid"><code class="xref py py-obj docutils literal"><span class="pre">draw_grid</span></code></a>([index,&nbsp;axes,&nbsp;grid_spacing])</td>
+<td>Draws a grid over the surface of the Sun.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.CompositeMap.draw_limb" title="sunpy.map.CompositeMap.draw_limb"><code class="xref py py-obj docutils literal"><span class="pre">draw_limb</span></code></a>([index,&nbsp;axes])</td>
+<td>Draws a circle representing the solar limb.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.CompositeMap.get_alpha" title="sunpy.map.CompositeMap.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>([index])</td>
+<td>Returns the alpha-channel value for a layer in the composite image.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.CompositeMap.get_levels" title="sunpy.map.CompositeMap.get_levels"><code class="xref py py-obj docutils literal"><span class="pre">get_levels</span></code></a>([index])</td>
+<td>Returns the list of contour levels for a map within the composite.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.CompositeMap.get_map" title="sunpy.map.CompositeMap.get_map"><code class="xref py py-obj docutils literal"><span class="pre">get_map</span></code></a>(index)</td>
+<td>Returns the map with given index</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.CompositeMap.get_plot_settings" title="sunpy.map.CompositeMap.get_plot_settings"><code class="xref py py-obj docutils literal"><span class="pre">get_plot_settings</span></code></a>([index])</td>
+<td>Returns the plot settings for a map within the composite map.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.CompositeMap.get_zorder" title="sunpy.map.CompositeMap.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>([index])</td>
+<td>Returns the layering preference (z-order) for a map within the composite.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.CompositeMap.list_maps" title="sunpy.map.CompositeMap.list_maps"><code class="xref py py-obj docutils literal"><span class="pre">list_maps</span></code></a>()</td>
+<td>Prints a list of the currently included maps.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.CompositeMap.peek" title="sunpy.map.CompositeMap.peek"><code class="xref py py-obj docutils literal"><span class="pre">peek</span></code></a>([colorbar,&nbsp;basic_plot,&nbsp;draw_limb,&nbsp;...])</td>
+<td>Displays the map in a new figure.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.CompositeMap.plot" title="sunpy.map.CompositeMap.plot"><code class="xref py py-obj docutils literal"><span class="pre">plot</span></code></a>([axes,&nbsp;annotate,&nbsp;title])</td>
+<td>Plots the composite map object using matplotlib</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.CompositeMap.remove_map" title="sunpy.map.CompositeMap.remove_map"><code class="xref py py-obj docutils literal"><span class="pre">remove_map</span></code></a>(index)</td>
+<td>Removes and returns the map with the given index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.CompositeMap.set_alpha" title="sunpy.map.CompositeMap.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(index,&nbsp;alpha)</td>
+<td>Sets the alpha-channel value for a layer in the composite image.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.CompositeMap.set_levels" title="sunpy.map.CompositeMap.set_levels"><code class="xref py py-obj docutils literal"><span class="pre">set_levels</span></code></a>(index,&nbsp;levels[,&nbsp;percent])</td>
+<td>Sets the contour levels for a layer in the composite image.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.CompositeMap.set_plot_settings" title="sunpy.map.CompositeMap.set_plot_settings"><code class="xref py py-obj docutils literal"><span class="pre">set_plot_settings</span></code></a>(index,&nbsp;plot_settings)</td>
+<td>Sets the plot settings for a layer in the composite image.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.CompositeMap.set_zorder" title="sunpy.map.CompositeMap.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(index,&nbsp;zorder)</td>
+<td>Set the layering order (z-order) for a map within the composite.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt>
+<code class="descname">add_map</code><span class="sig-paren">(</span><em>amap</em>, <em>zorder=None</em>, <em>alpha=1</em>, <em>levels=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.add_map"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L94" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Adds a map to the CompositeMap.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>amap</strong> (<a class="reference internal" href="sunpy.map.GenericMap.html#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> or subclass) &#8211; Map instance to be added</li>
+<li><strong>zorder</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The index to use when determining where the map should lie along
+the z-axis; maps with higher z-orders appear above maps with lower
+z-orders.</li>
+<li><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">float</span></code></a>) &#8211; Opacity at which the map should be displayed. An alpha value of 0
+results in a fully transparent image while an alpha value of 1
+results in a fully opaque image. Values between result in semi-
+transparent images.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.draw_grid">
+<code class="descname">draw_grid</code><span class="sig-paren">(</span><em>index=None</em>, <em>axes=None</em>, <em>grid_spacing=&lt;Quantity 20.0 deg&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.draw_grid"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L333" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.draw_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a grid over the surface of the Sun.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Index to determine which map to use to draw grid.</li>
+<li><strong>axes</strong> (<a class="reference external" href="http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">Axes</span></code></a> or None) &#8211; Axes to plot limb on or None to use current axes.</li>
+<li><strong>grid_spacing</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">float</span></code></a>) &#8211; Spacing (in degrees) for longitude and latitude grid.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.axes.Axes</span></code></a> object</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Keyword arguments are passed onto <a class="reference internal" href="../code_ref/map.html#sunpy.map.mapbase.GenericMap.draw_grid" title="sunpy.map.mapbase.GenericMap.draw_grid"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.map.mapbase.GenericMap.draw_grid</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.draw_limb">
+<code class="descname">draw_limb</code><span class="sig-paren">(</span><em>index=None</em>, <em>axes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.draw_limb"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L302" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.draw_limb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a circle representing the solar limb.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; Map index to use to plot limb.</li>
+<li><strong>axes</strong> (<a class="reference external" href="http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.axes.Axes</span></code></a> or None) &#8211; Axes to plot limb on or None to use current axes.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">matplotlib.axes.Axes</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Keyword arguments are passed onto <a class="reference internal" href="../code_ref/map.html#sunpy.map.mapbase.GenericMap.draw_limb" title="sunpy.map.mapbase.GenericMap.draw_limb"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.map.mapbase.GenericMap.draw_limb</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">get_alpha</code><span class="sig-paren">(</span><em>index=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.get_alpha"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L144" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Returns the alpha-channel value for a layer in the composite image.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">get_levels</code><span class="sig-paren">(</span><em>index=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.get_levels"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L153" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Returns the list of contour levels for a map within the
+composite.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> ({<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a> | None}) &#8211; The index of the map in the composite map.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a> &#8211; A list of the contour levels of map at index &#8216;index&#8217; in the
+composite map.  If index is None, then the contour levels of all
+the maps are returned as a list of lists.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.get_map">
+<code class="descname">get_map</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.get_map"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L140" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.get_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the map with given index</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">get_plot_settings</code><span class="sig-paren">(</span><em>index=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.get_plot_settings"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L174" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Returns the plot settings for a map within the composite map.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> ({<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a> | None}) &#8211; The index of the map in the composite map.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">{<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">dict</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a>} &#8211; The plot settings of the map(s) in the composite map.  If None
+then the plot settings of all the maps are returned in a list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">get_zorder</code><span class="sig-paren">(</span><em>index=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.get_zorder"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L194" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Returns the layering preference (z-order) for a map within the
+composite.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> ({<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a> | None}) &#8211; The index of the map in the composite map.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">{<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a>} &#8211; The layering order (z-order) of the map(s) in the composite
+map.  If None then the layering order of all the maps is returned in
+a list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">list_maps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.list_maps"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L136" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Prints a list of the currently included maps.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.peek">
+<code class="descname">peek</code><span class="sig-paren">(</span><em>colorbar=True</em>, <em>basic_plot=False</em>, <em>draw_limb=True</em>, <em>draw_grid=False</em>, <em>**matplot_args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.peek"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L444" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.peek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays the map in a new figure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>colorbar</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; Whether to display a colorbar next to the plot.
+If specified as an integer a colorbar is plotted for that index.</li>
+<li><strong>basic_plot</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>) &#8211; If true, the data is plotted by itself at it&#8217;s natural scale; no
+title, labels, or axes are shown.</li>
+<li><strong>draw_limb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>) &#8211; If true, draws a circle representing the solar limb.</li>
+<li><strong>draw_grid</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>) &#8211; If true, draws a grid over the surface of the Sun.</li>
+<li><strong>**matplot_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><em>dict</em></a>) &#8211; Matplotlib Any additional imshow arguments that should be used
+when plotting.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.CompositeMap.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>axes=None</em>, <em>annotate=True</em>, <em>title='SunPy Composite Plot'</em>, <em>**matplot_args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.plot"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L371" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.CompositeMap.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots the composite map object using matplotlib</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>axes</strong> (<a class="reference external" href="http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">Axes</span></code></a> or None) &#8211; If provided the image will be plotted on the given axes. Else the
+current matplotlib axes will be used.</li>
+<li><strong>annotate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>) &#8211; If true, the data is plotted at it&#8217;s natural scale; with
+title and axis labels.</li>
+<li><strong>title</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a>) &#8211; Title of the composite map.</li>
+<li><strong>**matplot_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">dict</span></code></a>) &#8211; Matplotlib Any additional imshow arguments that should be used
+when plotting.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>ret</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a>) &#8211; List of axes image or quad contour sets that have been plotted.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">remove_map</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.remove_map"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L120" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Removes and returns the map with the given index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The index of the map in the composite map.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="#sunpy.map.CompositeMap" title="sunpy.map.CompositeMap"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.map.CompositeMap</span></code></a> &#8211; A composite map with the map indexed by &#8216;index&#8217; removed from the
+composite map.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">set_alpha</code><span class="sig-paren">(</span><em>index</em>, <em>alpha</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.set_alpha"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L215" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Sets the alpha-channel value for a layer in the composite image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The index of the map in the composite map.</li>
+<li><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">float</span></code></a>) &#8211; A float in the range 0 to 1.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#sunpy.map.CompositeMap" title="sunpy.map.CompositeMap"><code class="xref py py-obj docutils literal"><span class="pre">CompositeMap</span></code></a> &#8211; A composite map with alpha-channel value &#8216;alpha&#8217; at layer &#8216;index&#8217;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">set_levels</code><span class="sig-paren">(</span><em>index</em>, <em>levels</em>, <em>percent=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.set_levels"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L236" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Sets the contour levels for a layer in the composite image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The index of the map in the composite map.</li>
+<li><strong>levels</strong> (<em>array-like</em>) &#8211; The contour levels.</li>
+<li><strong>percent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a>) &#8211; If True, the input &#8216;levels&#8217; are interpreted as percentages relative
+to the maximum value of the data in layer &#8216;index&#8217; of the composite
+map.  If False, the contour levels are set directly from &#8216;levels&#8217;.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#sunpy.map.CompositeMap" title="sunpy.map.CompositeMap"><code class="xref py py-obj docutils literal"><span class="pre">CompositeMap</span></code></a> &#8211; A composite map with contour levels &#8216;levels&#8217; at layer &#8216;index&#8217;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">set_plot_settings</code><span class="sig-paren">(</span><em>index</em>, <em>plot_settings</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.set_plot_settings"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L263" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Sets the plot settings for a layer in the composite image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The index of the map in the composite map.</li>
+<li><strong>plot_settings</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">dict</span></code></a>) &#8211; A dictionary of the form</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#sunpy.map.CompositeMap" title="sunpy.map.CompositeMap"><code class="xref py py-obj docutils literal"><span class="pre">CompositeMap</span></code></a> &#8211; A composite map with plot settings &#8216;plot_settings&#8217; at layer
+&#8216;index&#8217;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">set_zorder</code><span class="sig-paren">(</span><em>index</em>, <em>zorder</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/compositemap.html#CompositeMap.set_zorder"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/compositemap.py#L282" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a></dt>
+<dd><p>Set the layering order (z-order) for a map within the
+composite.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The index of the map in the composite map.</li>
+<li><strong>zorder</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The layer order.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#sunpy.map.CompositeMap" title="sunpy.map.CompositeMap"><code class="xref py py-obj docutils literal"><span class="pre">CompositeMap</span></code></a> &#8211; A composite map with the map at layer &#8216;index&#8217; having layering order
+&#8216;zorder&#8217;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

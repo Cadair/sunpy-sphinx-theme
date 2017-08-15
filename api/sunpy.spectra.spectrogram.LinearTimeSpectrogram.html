@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LinearTimeSpectrogram &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CallistoSpectrogram" href="sunpy.spectra.sources.CallistoSpectrogram.html" />
+    <link rel="prev" title="Spectrogram" href="sunpy.spectra.spectrogram.Spectrogram.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="LinearTimeSpectrogram | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.spectra.spectrum.Spectrum.html">Spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.spectra.spectrogram.Spectrogram.html">Spectrogram</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">LinearTimeSpectrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.spectra.sources.CallistoSpectrogram.html">CallistoSpectrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.spectra.sources.SWavesSpectrogram.html">SWavesSpectrogram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="lineartimespectrogram">
+<h1>LinearTimeSpectrogram<a class="headerlink" href="#lineartimespectrogram" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram">
+<em class="property">class </em><code class="descclassname">sunpy.spectra.spectrogram.</code><code class="descname">LinearTimeSpectrogram</code><span class="sig-paren">(</span><em>data</em>, <em>time_axis</em>, <em>freq_axis</em>, <em>start</em>, <em>end</em>, <em>t_init=None</em>, <em>t_delt=None</em>, <em>t_label='Time'</em>, <em>f_label='Frequency'</em>, <em>content=''</em>, <em>instruments=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L891" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram" title="sunpy.spectra.spectrogram.Spectrogram"><code class="xref py py-class docutils literal"><span class="pre">sunpy.spectra.spectrogram.Spectrogram</span></code></a></p>
+<div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>this module is being moved to sunpyspectra - <a class="reference external" href="https://github.com/sunpy/spectra">https://github.com/sunpy/spectra</a></p>
+</div>
+<p>Spectrogram evenly sampled in time.</p>
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.t_delt">
+<code class="descname">t_delt</code><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.t_delt" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>float</em> &#8211; difference between the items on the time axis</p>
+</dd></dl>
+
+<div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>this module is being moved to sunpyspectra - <a class="reference external" href="https://github.com/sunpy/spectra">https://github.com/sunpy/spectra</a></p>
+</div>
+<p></p>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.COPY_PROPERTIES" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.COPY_PROPERTIES"><code class="xref py py-obj docutils literal"><span class="pre">COPY_PROPERTIES</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.JOIN_REPEAT" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.JOIN_REPEAT"><code class="xref py py-obj docutils literal"><span class="pre">JOIN_REPEAT</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.check_linearity" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.check_linearity"><code class="xref py py-obj docutils literal"><span class="pre">check_linearity</span></code></a>([err,&nbsp;err_factor])</td>
+<td>Check linearity of time axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.combine_frequencies" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.combine_frequencies"><code class="xref py py-obj docutils literal"><span class="pre">combine_frequencies</span></code></a>(specs)</td>
+<td>Return new spectrogram that contains frequencies from all the spectrograms in spec.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.in_interval" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.in_interval"><code class="xref py py-obj docutils literal"><span class="pre">in_interval</span></code></a>([start,&nbsp;end])</td>
+<td>Return part of spectrogram that lies in [start, end).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.intersect_time" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.intersect_time"><code class="xref py py-obj docutils literal"><span class="pre">intersect_time</span></code></a>(specs)</td>
+<td>Return slice of spectrograms that is present in all of the ones passed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.join_many" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.join_many"><code class="xref py py-obj docutils literal"><span class="pre">join_many</span></code></a>(specs[,&nbsp;mk_arr,&nbsp;nonlinear,&nbsp;...])</td>
+<td>Produce new Spectrogram that contains spectrograms joined together in time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.make_array" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.make_array"><code class="xref py py-obj docutils literal"><span class="pre">make_array</span></code></a>(shape[,&nbsp;dtype])</td>
+<td>Function to create an array with shape and dtype.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.memmap" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.memmap"><code class="xref py py-obj docutils literal"><span class="pre">memmap</span></code></a>(filename)</td>
+<td>Return function that takes shape and dtype and returns a memory mapped array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.resample_time" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.resample_time"><code class="xref py py-obj docutils literal"><span class="pre">resample_time</span></code></a>(new_delt)</td>
+<td>Rescale image so that the difference in time between pixels is new_delt seconds.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.time_to_x" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.time_to_x"><code class="xref py py-obj docutils literal"><span class="pre">time_to_x</span></code></a>(time)</td>
+<td>Return x-coordinate in spectrogram that corresponds to the passed datetime value.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.COPY_PROPERTIES">
+<code class="descname">COPY_PROPERTIES</code><em class="property"> = [('time_axis', 1), ('freq_axis', 1), ('instruments', 1), ('start', 0), ('end', 0), ('t_label', 0), ('f_label', 0), ('content', 0), ('t_init', 0), ('t_delt', 0)]</em><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.COPY_PROPERTIES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.JOIN_REPEAT">
+<code class="descname">JOIN_REPEAT</code><em class="property"> = &lt;object object&gt;</em><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.JOIN_REPEAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.check_linearity">
+<code class="descname">check_linearity</code><span class="sig-paren">(</span><em>err=None</em>, <em>err_factor=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram.check_linearity"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L1202" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.check_linearity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check linearity of time axis. If err is given, tolerate absolute
+derivation from average delta up to err. If err_factor is given,
+tolerate up to err_factor * average_delta. If both are given,
+TypeError is raised. Default to err=0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>err</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; Absolute difference each delta is allowed to diverge from the
+average. Cannot be used in combination with err_factor.</li>
+<li><strong>err_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; Relative difference each delta is allowed to diverge from the
+average, i.e. err_factor * average. Cannot be used in combination
+with err.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.combine_frequencies">
+<em class="property">classmethod </em><code class="descname">combine_frequencies</code><span class="sig-paren">(</span><em>specs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram.combine_frequencies"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L1156" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.combine_frequencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return new spectrogram that contains frequencies from all the
+spectrograms in spec. Only returns time intersection of all of them.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>spec</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) &#8211; List of spectrograms of which to combine the frequencies into one.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.in_interval">
+<code class="descname">in_interval</code><span class="sig-paren">(</span><em>start=None</em>, <em>end=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram.in_interval"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L1228" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.in_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return part of spectrogram that lies in [start, end).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>start</strong> (None or <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> or <a class="reference internal" href="sunpy.time.parse_time.html#sunpy.time.parse_time" title="sunpy.time.parse_time"><code class="xref py py-obj docutils literal"><span class="pre">parse_time</span></code></a> compatible string or time string) &#8211; Start time of the part of the spectrogram that is returned. If the
+measurement only spans over one day, a colon separated string
+representing the time can be passed.</li>
+<li><strong>end</strong> (None or <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> or <a class="reference internal" href="sunpy.time.parse_time.html#sunpy.time.parse_time" title="sunpy.time.parse_time"><code class="xref py py-obj docutils literal"><span class="pre">parse_time</span></code></a> compatible string or time string) &#8211; See start.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.intersect_time">
+<em class="property">static </em><code class="descname">intersect_time</code><span class="sig-paren">(</span><em>specs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram.intersect_time"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L1135" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.intersect_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return slice of spectrograms that is present in all of the ones
+passed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>specs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) &#8211; List of spectrograms of which to find the time intersections.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.join_many">
+<em class="property">classmethod </em><code class="descname">join_many</code><span class="sig-paren">(</span><em>specs</em>, <em>mk_arr=None</em>, <em>nonlinear=False</em>, <em>maxgap=0</em>, <em>fill=&lt;object object&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram.join_many"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L976" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.join_many" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produce new Spectrogram that contains spectrograms
+joined together in time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>specs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) &#8211; List of spectrograms to join together in time.</li>
+<li><strong>nonlinear</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; If True, leave out gaps between spectrograms. Else, fill them with
+the value specified in fill.</li>
+<li><strong>maxgap</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.6)"><em>None</em></a>) &#8211; Largest gap to allow in second. If None, allow gap of arbitrary
+size.</li>
+<li><strong>fill</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Value to fill missing values (assuming nonlinear=False) with.
+Can be LinearTimeSpectrogram.JOIN_REPEAT to repeat the values for
+the time just before the gap.</li>
+<li><strong>mk_array</strong> (<em>function</em>) &#8211; Function that is called to create the resulting array. Can be set
+to LinearTimeSpectrogram.memap(filename) to create a memory mapped
+result array.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.make_array">
+<em class="property">static </em><code class="descname">make_array</code><span class="sig-paren">(</span><em>shape</em>, <em>dtype=dtype('float32')</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram.make_array"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L917" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.make_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to create an array with shape and dtype.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.6)"><em>tuple</em></a>) &#8211; shape of the array to create</li>
+<li><strong>dtype</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">numpy.dtype</span></code></a>) &#8211; data-type of the array to create</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.memmap">
+<em class="property">static </em><code class="descname">memmap</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram.memmap"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L930" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.memmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return function that takes shape and dtype and returns a
+memory mapped array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; File to store the memory mapped array in.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.resample_time">
+<code class="descname">resample_time</code><span class="sig-paren">(</span><em>new_delt</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram.resample_time"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L946" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.resample_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rescale image so that the difference in time between pixels is
+new_delt seconds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_delt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; New delta between consecutive values.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.spectra.spectrogram.LinearTimeSpectrogram.time_to_x">
+<code class="descname">time_to_x</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/spectra/spectrogram.html#LinearTimeSpectrogram.time_to_x"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/spectra/spectrogram.py#L1116" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.spectra.spectrogram.LinearTimeSpectrogram.time_to_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return x-coordinate in spectrogram that corresponds to the
+passed datetime value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time</strong> (<a class="reference internal" href="sunpy.time.parse_time.html#sunpy.time.parse_time" title="sunpy.time.parse_time"><code class="xref py py-obj docutils literal"><span class="pre">parse_time</span></code></a> compatible str) &#8211; <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.datetime</span></code></a> to find the x coordinate for.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

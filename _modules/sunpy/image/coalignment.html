@@ -1,0 +1,769 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.image.coalignment &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.image.coalignment | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/image/coalignment.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.image.coalignment</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides routines for the coalignment of images and mapcubes.</span>
+
+<span class="sd">Currently this module provides image coalignment by template matching.</span>
+<span class="sd">Which is partially inspired by the SSWIDL routine</span>
+<span class="sd">`tr_get_disp.pro &lt;http://hesperia.gsfc.nasa.gov/ssw/trace/idl/util/routines/tr_get_disp.pro&gt;`_.</span>
+
+<span class="sd">In this implementation, the template matching is handled via the scikit-image</span>
+<span class="sd">routine :func:`skimage.feature.match_template`.</span>
+
+<span class="sd">References</span>
+<span class="sd">----------</span>
+<span class="sd">Template matching algorithm:</span>
+
+<span class="sd"> * http://scribblethink.org/Work/nvisionInterface/nip.html</span>
+<span class="sd"> * J.P. Lewis, Fast Template Matching, Vision Interface 95, Canadian Image</span>
+<span class="sd">   Processing and Pattern Recognition Society, Quebec City, Canada, May 15-19,</span>
+<span class="sd">   1995, p. 120-123 http://www.scribblethink.org/Work/nvisionInterface/vi95_lewis.pdf.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.ndimage.interpolation</span> <span class="k">import</span> <span class="n">shift</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="k">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="c1"># Image co-registration by matching templates</span>
+<span class="kn">from</span> <span class="nn">skimage.feature</span> <span class="k">import</span> <span class="n">match_template</span>
+
+<span class="c1"># SunPy imports</span>
+<span class="kn">from</span> <span class="nn">sunpy.map.mapbase</span> <span class="k">import</span> <span class="n">GenericMap</span>
+<span class="kn">import</span> <span class="nn">sunpy.map</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;J. Ireland&#39;</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;calculate_shift&#39;</span><span class="p">,</span> <span class="s1">&#39;clip_edges&#39;</span><span class="p">,</span> <span class="s1">&#39;calculate_clipping&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;match_template_to_layer&#39;</span><span class="p">,</span> <span class="s1">&#39;find_best_match_location&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;get_correlation_shifts&#39;</span><span class="p">,</span> <span class="s1">&#39;parabolic_turning_point&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;repair_image_nonfinite&#39;</span><span class="p">,</span> <span class="s1">&#39;apply_shifts&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;mapcube_coalign_by_match_template&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;calculate_match_template_shift&#39;</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">_default_fmap_function</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function ensures that the data are floats.  It is the default data</span>
+<span class="sd">    manipulation function for the coalignment method.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="calculate_shift"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.calculate_shift.html#sunpy.image.coalignment.calculate_shift">[docs]</a><span class="k">def</span> <span class="nf">calculate_shift</span><span class="p">(</span><span class="n">this_layer</span><span class="p">,</span> <span class="n">template</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculates the pixel shift required to put the template in the &quot;best&quot;</span>
+<span class="sd">    position on a layer.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    this_layer : `~numpy.ndarray`</span>
+<span class="sd">        A numpy array of size (ny, nx), where the first two dimensions are</span>
+<span class="sd">        spatial dimensions.</span>
+<span class="sd">    template : `~numpy.ndarray`</span>
+<span class="sd">        A numpy array of size (N, M) where N &lt; ny and M &lt; nx.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    shifts : tuple</span>
+<span class="sd">        Pixel shifts (yshift, xshift) relative to the offset of the template</span>
+<span class="sd">        to the input array.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Repair any NANs, Infs, etc in the layer and the template</span>
+    <span class="n">this_layer</span> <span class="o">=</span> <span class="n">repair_image_nonfinite</span><span class="p">(</span><span class="n">this_layer</span><span class="p">)</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">repair_image_nonfinite</span><span class="p">(</span><span class="n">template</span><span class="p">)</span>
+
+    <span class="c1"># Calculate the correlation array matching the template to this layer</span>
+    <span class="n">corr</span> <span class="o">=</span> <span class="n">match_template_to_layer</span><span class="p">(</span><span class="n">this_layer</span><span class="p">,</span> <span class="n">template</span><span class="p">)</span>
+
+    <span class="c1"># Calculate the y and x shifts in pixels</span>
+    <span class="k">return</span> <span class="n">find_best_match_location</span><span class="p">(</span><span class="n">corr</span><span class="p">)</span></div>
+
+
+<span class="c1">#</span>
+<span class="c1"># Remove the edges of a datacube</span>
+<span class="c1">#</span>
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">yclips</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">,</span> <span class="n">xclips</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">)</span>
+<div class="viewcode-block" id="clip_edges"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.clip_edges.html#sunpy.image.coalignment.clip_edges">[docs]</a><span class="k">def</span> <span class="nf">clip_edges</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">yclips</span><span class="p">,</span> <span class="n">xclips</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clips off the y and x edges of a 2d array according to a list of pixel</span>
+<span class="sd">    values.  This function is useful for removing data at the edge of</span>
+<span class="sd">    2d images that may be affected by shifts from solar de-rotation and</span>
+<span class="sd">    layer co-registration, leaving an image unaffected by edge effects.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : `numpy.ndarray`</span>
+<span class="sd">        A numpy array of shape (ny, nx).</span>
+<span class="sd">    yclips : `astropy.units.Quantity`</span>
+<span class="sd">        The amount to clip in the y-direction of the data.  Has units of</span>
+<span class="sd">        pixels, and values should be whole non-negative numbers.</span>
+<span class="sd">    xclips : `astropy.units.Quantity`</span>
+<span class="sd">        The amount to clip in the x-direction of the data.  Has units of</span>
+<span class="sd">        pixels, and values should be whole non-negative numbers.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    image : `numpy.ndarray`</span>
+<span class="sd">        A 2d image with edges clipped off according to yclips and xclips</span>
+<span class="sd">        arrays.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ny</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">nx</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># The purpose of the int below is to ensure integer type since by default</span>
+    <span class="c1"># astropy quantities are converted to floats.</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">yclips</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">):</span> <span class="n">ny</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">yclips</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+                <span class="nb">int</span><span class="p">(</span><span class="n">xclips</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">):</span> <span class="n">nx</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">xclips</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)]</span></div>
+
+
+<span class="c1">#</span>
+<span class="c1"># Return the upper and lower clipping values for the y and x directions an</span>
+<span class="c1"># input set of pixel shifts y and x</span>
+<span class="c1">#</span>
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">)</span>
+<div class="viewcode-block" id="calculate_clipping"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.calculate_clipping.html#sunpy.image.coalignment.calculate_clipping">[docs]</a><span class="k">def</span> <span class="nf">calculate_clipping</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the upper and lower clipping values for the y and x directions.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    y : `astropy.units.Quantity`</span>
+<span class="sd">        An array of pixel shifts in the y-direction for an image.</span>
+<span class="sd">    x : `astropy.units.Quantity`</span>
+<span class="sd">        An array of pixel shifts in the x-direction for an image.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    clipping : tuple</span>
+<span class="sd">        The tuple is of the form ([y0, y1], [x0, x1]).</span>
+<span class="sd">        The number of (integer) pixels that need to be clipped off at each</span>
+<span class="sd">        edge in an image. The first element in the tuple is a list that gives</span>
+<span class="sd">        the number of pixels to clip in the y-direction.  The first element in</span>
+<span class="sd">        that list is the number of rows to clip at the lower edge of the image</span>
+<span class="sd">        in y.  The clipped image has &quot;clipping[0][0]&quot; rows removed from its</span>
+<span class="sd">        lower edge when compared to the original image.  The second element in</span>
+<span class="sd">        that list is the number of rows to clip at the upper edge of the image</span>
+<span class="sd">        in y.  The clipped image has &quot;clipping[0][1]&quot; rows removed from its</span>
+<span class="sd">        upper edge when compared to the original image.  The second element in</span>
+<span class="sd">        the &quot;clipping&quot; tuple applies similarly to the x-direction (image</span>
+<span class="sd">        columns).  The parameters y0, y1, x0, x1 have the type</span>
+<span class="sd">        `~astropy.units.Quantity`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">([</span><span class="n">_lower_clip</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="n">_upper_clip</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">value</span><span class="p">)]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">,</span>
+            <span class="p">[</span><span class="n">_lower_clip</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="n">_upper_clip</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">value</span><span class="p">)]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">)</span></div>
+
+
+<span class="c1">#</span>
+<span class="c1"># Helper functions for clipping edges</span>
+<span class="c1">#</span>
+<span class="k">def</span> <span class="nf">_upper_clip</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find smallest integer bigger than all the positive entries in the input</span>
+<span class="sd">    array.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">zupper</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">zcond</span> <span class="o">=</span> <span class="n">z</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">zcond</span><span class="p">):</span>
+        <span class="n">zupper</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="n">zcond</span><span class="p">])))</span>
+    <span class="k">return</span> <span class="n">zupper</span>
+
+
+<span class="k">def</span> <span class="nf">_lower_clip</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find smallest positive integer bigger than the absolute values of the</span>
+<span class="sd">    negative entries in the input array.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">zlower</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">zcond</span> <span class="o">=</span> <span class="n">z</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">zcond</span><span class="p">):</span>
+        <span class="n">zlower</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="p">[</span><span class="n">zcond</span><span class="p">])))</span>
+    <span class="k">return</span> <span class="n">zlower</span>
+
+
+<div class="viewcode-block" id="match_template_to_layer"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.match_template_to_layer.html#sunpy.image.coalignment.match_template_to_layer">[docs]</a><span class="k">def</span> <span class="nf">match_template_to_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">template</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the correlation array that describes how well the template</span>
+<span class="sd">    matches the layer. All inputs are assumed to be numpy arrays.  This</span>
+<span class="sd">    function requires the &quot;match_template&quot; function in scikit image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    layer : `~numpy.ndarray`</span>
+<span class="sd">        A numpy array of size (ny, nx).</span>
+<span class="sd">    template : `~numpy.ndarray`</span>
+<span class="sd">        A numpy array of size (N, M) where N &lt; ny and M &lt; nx.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    correlationarray : `~numpy.ndarray`</span>
+<span class="sd">        A correlation array between the layer and the template.</span>
+<span class="sd">        The values in the array range between 0 and 1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">match_template</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">template</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="find_best_match_location"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.find_best_match_location.html#sunpy.image.coalignment.find_best_match_location">[docs]</a><span class="k">def</span> <span class="nf">find_best_match_location</span><span class="p">(</span><span class="n">corr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate an estimate of the location of the peak of the correlation</span>
+<span class="sd">    result in image pixels.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    corr : `~numpy.ndarray`</span>
+<span class="sd">        A 2-d correlation array.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    shift : `~astropy.units.Quantity`</span>
+<span class="sd">        The shift amounts (y, x) in image pixels.  Subpixel values are</span>
+<span class="sd">        possible.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Get the index of the maximum in the correlation function</span>
+    <span class="n">ij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">corr</span><span class="p">),</span> <span class="n">corr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">cor_max_x</span><span class="p">,</span> <span class="n">cor_max_y</span> <span class="o">=</span> <span class="n">ij</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Get the correlation function around the maximum</span>
+    <span class="n">array_around_maximum</span> <span class="o">=</span> <span class="n">corr</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">cor_max_y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]):</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">([</span><span class="n">cor_max_y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">corr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]),</span>
+                                  <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">cor_max_x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]):</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">([</span><span class="n">cor_max_x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">corr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])]</span>
+    <span class="n">y_shift_relative_to_maximum</span><span class="p">,</span> <span class="n">x_shift_relative_to_maximum</span> <span class="o">=</span> \
+    <span class="n">get_correlation_shifts</span><span class="p">(</span><span class="n">array_around_maximum</span><span class="p">)</span>
+
+    <span class="c1"># Get shift relative to correlation array</span>
+    <span class="n">y_shift_relative_to_correlation_array</span> <span class="o">=</span> <span class="n">y_shift_relative_to_maximum</span> <span class="o">+</span> <span class="n">cor_max_y</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span>
+    <span class="n">x_shift_relative_to_correlation_array</span> <span class="o">=</span> <span class="n">x_shift_relative_to_maximum</span> <span class="o">+</span> <span class="n">cor_max_x</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span>
+
+    <span class="k">return</span> <span class="n">y_shift_relative_to_correlation_array</span><span class="p">,</span> <span class="n">x_shift_relative_to_correlation_array</span></div>
+
+
+<div class="viewcode-block" id="get_correlation_shifts"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.get_correlation_shifts.html#sunpy.image.coalignment.get_correlation_shifts">[docs]</a><span class="k">def</span> <span class="nf">get_correlation_shifts</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Estimate the location of the maximum of a fit to the input array.  The</span>
+<span class="sd">    estimation in the x and y directions are done separately. The location</span>
+<span class="sd">    estimates can be used to implement subpixel shifts between two different</span>
+<span class="sd">    images.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    array : `~numpy.ndarray`</span>
+<span class="sd">        An array with at least one dimension that has three elements.  The</span>
+<span class="sd">        input array is at most a 3 x 3 array of correlation values calculated</span>
+<span class="sd">        by matching a template to an image.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    peakloc : `~astropy.units.Quantity`</span>
+<span class="sd">        The (y, x) location of the peak of a parabolic fit, in image pixels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check input shape</span>
+    <span class="n">ny</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">nx</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">nx</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">ny</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Input array is too big in at least one dimension. Returning Nones&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+    <span class="c1"># Find where the maximum of the input array is</span>
+    <span class="n">ij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">array</span><span class="p">),</span> <span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">x_max_location</span><span class="p">,</span> <span class="n">y_max_location</span> <span class="o">=</span> <span class="n">ij</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Estimate the location of the parabolic peak if there is enough data.</span>
+    <span class="c1"># Otherwise, just return the location of the maximum in a particular</span>
+    <span class="c1"># direction.</span>
+    <span class="k">if</span> <span class="n">ny</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">y_location</span> <span class="o">=</span> <span class="n">parabolic_turning_point</span><span class="p">(</span><span class="n">array</span><span class="p">[:,</span> <span class="n">x_max_location</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">y_location</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">y_max_location</span>
+
+    <span class="k">if</span> <span class="n">nx</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">x_location</span> <span class="o">=</span> <span class="n">parabolic_turning_point</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">y_max_location</span><span class="p">,</span> <span class="p">:])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">x_location</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">x_max_location</span>
+
+    <span class="k">return</span> <span class="n">y_location</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">,</span> <span class="n">x_location</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span></div>
+
+
+<div class="viewcode-block" id="parabolic_turning_point"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.parabolic_turning_point.html#sunpy.image.coalignment.parabolic_turning_point">[docs]</a><span class="k">def</span> <span class="nf">parabolic_turning_point</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find the location of the turning point for a parabola</span>
+<span class="sd">    y(x) = ax^2 + bx + c, given input values y(-1), y(0), y(1).</span>
+<span class="sd">    The maximum is located at x0 = -b / 2a .  Assumes</span>
+<span class="sd">    that the input array represents an equally spaced sampling at the</span>
+<span class="sd">    locations y(-1), y(0) and y(1).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    y : `~numpy.ndarray`</span>
+<span class="sd">        A one dimensional numpy array of shape 3 with entries that sample the</span>
+<span class="sd">        parabola at -1, 0, and 1.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    location : float</span>
+<span class="sd">        A digit, the location of the parabola maximum.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">numerator</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">y</span><span class="o">.</span><span class="n">dot</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">denominator</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">dot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span></div>
+
+
+<div class="viewcode-block" id="repair_image_nonfinite"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.repair_image_nonfinite.html#sunpy.image.coalignment.repair_image_nonfinite">[docs]</a><span class="k">def</span> <span class="nf">repair_image_nonfinite</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a new image in which all the nonfinite entries of the original</span>
+<span class="sd">    image have been replaced by the local mean.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : `~numpy.ndarray`</span>
+<span class="sd">        A two-dimensional `~numpy.ndarray`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    repaired_image : `~numpy.ndarray`</span>
+<span class="sd">        A two-dimensional `~numpy.ndarray` of the same shape as the input</span>
+<span class="sd">        that has all the non-finite entries replaced by a local mean.  The</span>
+<span class="sd">        algorithm repairs one non-finite entry at every pass.  At each pass,</span>
+<span class="sd">        the next non-finite value is replaced by the mean of its finite</span>
+<span class="sd">        valued nearest neighbours.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">repaired_image</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="n">nx</span> <span class="o">=</span> <span class="n">repaired_image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">ny</span> <span class="o">=</span> <span class="n">repaired_image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">bad_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">repaired_image</span><span class="p">)))</span>
+    <span class="k">while</span> <span class="n">bad_index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">by</span> <span class="o">=</span> <span class="n">bad_index</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">bx</span> <span class="o">=</span> <span class="n">bad_index</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># x locations taking in to account the boundary</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">bx</span>
+        <span class="k">if</span> <span class="n">bx</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">bx</span> <span class="o">==</span> <span class="n">nx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">nx</span> <span class="o">-</span> <span class="mi">2</span>
+
+        <span class="c1"># y locations taking in to account the boundary</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">by</span>
+        <span class="k">if</span> <span class="n">by</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">by</span> <span class="o">==</span> <span class="n">ny</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">ny</span> <span class="o">-</span> <span class="mi">2</span>
+
+        <span class="c1"># Get the sub array around the bad index, and find the local mean</span>
+        <span class="c1"># ignoring nans</span>
+        <span class="n">subarray</span> <span class="o">=</span> <span class="n">repaired_image</span><span class="p">[</span><span class="n">y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="n">repaired_image</span><span class="p">[</span><span class="n">by</span><span class="p">,</span> <span class="n">bx</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">subarray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">subarray</span><span class="p">)])</span>
+        <span class="n">bad_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">repaired_image</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">repaired_image</span></div>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">yshift</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">,</span> <span class="n">xshift</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">)</span>
+<div class="viewcode-block" id="apply_shifts"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.apply_shifts.html#sunpy.image.coalignment.apply_shifts">[docs]</a><span class="k">def</span> <span class="nf">apply_shifts</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">yshift</span><span class="p">,</span> <span class="n">xshift</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply a set of pixel shifts to a `~sunpy.map.MapCube`, and return a new</span>
+<span class="sd">    `~sunpy.map.MapCube`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mc : `sunpy.map.MapCube`</span>
+<span class="sd">        A `~sunpy.map.MapCube` of shape (ny, nx, nt), where nt is the number of</span>
+<span class="sd">        layers in the `~sunpy.map.MapCube`.  &#39;ny&#39; is the number of pixels in the</span>
+<span class="sd">        y direction, &#39;nx&#39; is the number of pixels in the &#39;x&#39; direction.</span>
+
+<span class="sd">    yshift : `~astropy.units.Quantity` instance</span>
+<span class="sd">        An array of pixel shifts in the y-direction for an image.</span>
+
+<span class="sd">    xshift : `~astropy.units.Quantity` instance</span>
+<span class="sd">        An array of pixel shifts in the x-direction for an image.</span>
+
+<span class="sd">    clip : bool</span>
+<span class="sd">        If True, then clip off x, y edges in the datacube that are potentially</span>
+<span class="sd">        affected by edges effects.</span>
+
+<span class="sd">    All other keywords are passed to `scipy.ndimage.interpolation.shift`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    newmapcube : `sunpy.map.MapCube`</span>
+<span class="sd">        A `~sunpy.map.MapCube` of the same shape as the input.  All layers in</span>
+<span class="sd">        the `~sunpy.map.MapCube` have been shifted according the input shifts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># New mapcube will be constructed from this list</span>
+    <span class="n">new_mc</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Calculate the clipping</span>
+    <span class="k">if</span> <span class="n">clip</span><span class="p">:</span>
+        <span class="n">yclips</span><span class="p">,</span> <span class="n">xclips</span> <span class="o">=</span> <span class="n">calculate_clipping</span><span class="p">(</span><span class="o">-</span><span class="n">yshift</span><span class="p">,</span> <span class="o">-</span><span class="n">xshift</span><span class="p">)</span>
+
+    <span class="c1"># Shift the data and construct the mapcube</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mc</span><span class="p">):</span>
+        <span class="n">shifted_data</span> <span class="o">=</span> <span class="n">shift</span><span class="p">(</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="p">[</span><span class="n">yshift</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">xshift</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">new_meta</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span>
+        <span class="c1"># Clip if required.  Use the submap function to return the appropriate</span>
+        <span class="c1"># portion of the data.</span>
+        <span class="k">if</span> <span class="n">clip</span><span class="p">:</span>
+            <span class="n">shifted_data</span> <span class="o">=</span> <span class="n">clip_edges</span><span class="p">(</span><span class="n">shifted_data</span><span class="p">,</span> <span class="n">yclips</span><span class="p">,</span> <span class="n">xclips</span><span class="p">)</span>
+            <span class="n">new_meta</span><span class="p">[</span><span class="s1">&#39;naxis1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shifted_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">new_meta</span><span class="p">[</span><span class="s1">&#39;naxis2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shifted_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">new_meta</span><span class="p">[</span><span class="s1">&#39;crpix1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">reference_pixel</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="n">xshift</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">-</span> <span class="n">xshift</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+            <span class="n">new_meta</span><span class="p">[</span><span class="s1">&#39;crpix2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">reference_pixel</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="n">yshift</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">-</span> <span class="n">yshift</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+
+        <span class="n">new_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">shifted_data</span><span class="p">,</span> <span class="n">new_meta</span><span class="p">)</span>
+
+        <span class="c1"># Append to the list</span>
+        <span class="n">new_mc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_map</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">new_mc</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="calculate_match_template_shift"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.calculate_match_template_shift.html#sunpy.image.coalignment.calculate_match_template_shift">[docs]</a><span class="k">def</span> <span class="nf">calculate_match_template_shift</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">layer_index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                   <span class="n">func</span><span class="o">=</span><span class="n">_default_fmap_function</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the arcsecond shifts necessary to co-register the layers in a</span>
+<span class="sd">    `~sunpy.map.MapCube` according to a template taken from that</span>
+<span class="sd">    `~sunpy.map.MapCube`.  This method REQUIRES that scikit-image be installed.</span>
+<span class="sd">    When using this functionality, it is a good idea to check that the shifts</span>
+<span class="sd">    that were applied to were reasonable and expected.  One way of checking this</span>
+<span class="sd">    is to animate the original `~sunpy.map.MapCube`, animate the coaligned</span>
+<span class="sd">    `~sunpy.map.MapCube`, and compare the differences you see to the calculated</span>
+<span class="sd">    shifts.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mc : `sunpy.map.MapCube`</span>
+<span class="sd">        A `~sunpy.map.MapCube` of shape (ny, nx, nt), where nt is the number of</span>
+<span class="sd">        layers in the `~sunpy.map.MapCube`.</span>
+
+<span class="sd">    template : {None | `~sunpy.map.Map` | `~numpy.ndarray`}</span>
+<span class="sd">        The template used in the matching.  If an `~numpy.ndarray` is passed,</span>
+<span class="sd">        the `~numpy.ndarray` has to have two dimensions.</span>
+
+<span class="sd">    layer_index : int</span>
+<span class="sd">        The template is assumed to refer to the map in the `~sunpy.map.MapCube`</span>
+<span class="sd">        indexed by the value of &quot;layer_index&quot;.  Displacements of all maps in the</span>
+<span class="sd">        `~sunpy.map.MapCube` are assumed to be relative to this layer.  The</span>
+<span class="sd">        displacements of the template relative to this layer are therefore</span>
+<span class="sd">        (0, 0).</span>
+
+<span class="sd">    func : function</span>
+<span class="sd">        A function which is applied to the data values before the coalignment</span>
+<span class="sd">        method is applied.  This can be useful in coalignment, because it is</span>
+<span class="sd">        sometimes better to co-align on a function of the data rather than the</span>
+<span class="sd">        data itself.  The calculated shifts are applied to the original data.</span>
+<span class="sd">        Examples of useful functions to consider for EUV images are the</span>
+<span class="sd">        logarithm or the square root.  The function is of the form</span>
+<span class="sd">        func = F(data).  The default function ensures that the data are</span>
+<span class="sd">        floats.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Size of the data</span>
+    <span class="n">ny</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="n">layer_index</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">nx</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="n">layer_index</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">nt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mc</span><span class="o">.</span><span class="n">maps</span><span class="p">)</span>
+
+    <span class="c1"># Calculate a template.  If no template is passed then define one</span>
+    <span class="c1"># from the index layer.</span>
+    <span class="k">if</span> <span class="n">template</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">tplate</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="n">layer_index</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">ny</span><span class="o">/</span><span class="mi">4</span><span class="p">):</span> <span class="nb">int</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">ny</span><span class="o">/</span><span class="mi">4</span><span class="p">),</span>
+                                           <span class="nb">int</span><span class="p">(</span><span class="n">nx</span><span class="o">/</span><span class="mi">4</span><span class="p">):</span> <span class="nb">int</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">nx</span><span class="o">/</span><span class="mi">4</span><span class="p">)]</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="n">GenericMap</span><span class="p">):</span>
+        <span class="n">tplate</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">data</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">tplate</span> <span class="o">=</span> <span class="n">template</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Invalid template.&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Apply the function to the template</span>
+    <span class="n">tplate</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">tplate</span><span class="p">)</span>
+
+    <span class="c1"># Storage for the pixel shift</span>
+    <span class="n">xshift_keep</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nt</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span>
+    <span class="n">yshift_keep</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xshift_keep</span><span class="p">)</span>
+
+    <span class="c1"># Storage for the arcsecond shift</span>
+    <span class="n">xshift_arcseconds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nt</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">arcsec</span>
+    <span class="n">yshift_arcseconds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xshift_arcseconds</span><span class="p">)</span>
+
+    <span class="c1"># Match the template and calculate shifts</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mc</span><span class="o">.</span><span class="n">maps</span><span class="p">):</span>
+        <span class="c1"># Get the next 2-d data array</span>
+        <span class="n">this_layer</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="c1"># Calculate the y and x shifts in pixels</span>
+        <span class="n">yshift</span><span class="p">,</span> <span class="n">xshift</span> <span class="o">=</span> <span class="n">calculate_shift</span><span class="p">(</span><span class="n">this_layer</span><span class="p">,</span> <span class="n">tplate</span><span class="p">)</span>
+
+        <span class="c1"># Keep shifts in pixels</span>
+        <span class="n">yshift_keep</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">yshift</span>
+        <span class="n">xshift_keep</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">xshift</span>
+
+    <span class="c1"># Calculate shifts relative to the template layer</span>
+    <span class="n">yshift_keep</span> <span class="o">=</span> <span class="n">yshift_keep</span> <span class="o">-</span> <span class="n">yshift_keep</span><span class="p">[</span><span class="n">layer_index</span><span class="p">]</span>
+    <span class="n">xshift_keep</span> <span class="o">=</span> <span class="n">xshift_keep</span> <span class="o">-</span> <span class="n">xshift_keep</span><span class="p">[</span><span class="n">layer_index</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mc</span><span class="o">.</span><span class="n">maps</span><span class="p">):</span>
+        <span class="c1"># Calculate the shifts required in physical units, which are</span>
+        <span class="c1"># presumed to be arcseconds.</span>
+        <span class="n">xshift_arcseconds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">xshift_keep</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">scale</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">yshift_arcseconds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">yshift_keep</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">scale</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">xshift_arcseconds</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="n">yshift_arcseconds</span><span class="p">}</span></div>
+
+
+<span class="c1"># Coalignment by matching a template</span>
+<div class="viewcode-block" id="mapcube_coalign_by_match_template"><a class="viewcode-back" href="../../../api/sunpy.image.coalignment.mapcube_coalign_by_match_template.html#sunpy.image.coalignment.mapcube_coalign_by_match_template">[docs]</a><span class="k">def</span> <span class="nf">mapcube_coalign_by_match_template</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">layer_index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                      <span class="n">func</span><span class="o">=</span><span class="n">_default_fmap_function</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                      <span class="n">shift</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Co-register the layers in a `~sunpy.map.MapCube` according to a template</span>
+<span class="sd">    taken from that `~sunpy.map.MapCube`.  This method REQUIRES that</span>
+<span class="sd">    scikit-image be installed. When using this functionality, it is a good idea</span>
+<span class="sd">    to check that the shifts that were applied to were reasonable and expected.</span>
+<span class="sd">    One way of checking this is to animate the original `~sunpy.map.MapCube`,</span>
+<span class="sd">    animate the coaligned `~sunpy.map.MapCube`, and compare the differences you</span>
+<span class="sd">    see to the calculated shifts.</span>
+
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mc : `sunpy.map.MapCube`</span>
+<span class="sd">        A `~sunpy.map.MapCube` of shape (ny, nx, nt), where nt is the number of</span>
+<span class="sd">        layers in the `~sunpy.map.MapCube`.</span>
+<span class="sd">    template : {None | sunpy.map.Map | `~numpy.ndarray`}</span>
+<span class="sd">        The template used in the matching.  If an `~numpy.ndarray` is passed,</span>
+<span class="sd">        the `~numpy.ndarray` has to have two dimensions.</span>
+<span class="sd">    layer_index : int</span>
+<span class="sd">        The template is assumed to refer to the map in the `~sunpy.map.MapCube`</span>
+<span class="sd">        indexed by the value of &quot;layer_index&quot;.  Displacements of all maps in the</span>
+<span class="sd">        `~sunpy.map.MapCube` are assumed to be relative to this layer.  The</span>
+<span class="sd">        displacements of the template relative to this layer are therefore</span>
+<span class="sd">        (0, 0).</span>
+<span class="sd">    func : function</span>
+<span class="sd">        A function which is applied to the data values before the coalignment</span>
+<span class="sd">        method is applied.  This can be useful in coalignment, because it is</span>
+<span class="sd">        sometimes better to co-align on a function of the data rather than the</span>
+<span class="sd">        data itself.  The calculated shifts are applied to the original data.</span>
+<span class="sd">        Examples of useful functions to consider for EUV images are the</span>
+<span class="sd">        logarithm or the square root.  The function is of the form</span>
+<span class="sd">        func = F(data).  The default function ensures that the data are</span>
+<span class="sd">        floats.</span>
+<span class="sd">    clip : bool</span>
+<span class="sd">        If True, then clip off x, y edges in the datacube that are potentially</span>
+<span class="sd">        affected by edges effects.</span>
+<span class="sd">    shift : dict</span>
+<span class="sd">        A dictionary with two keys, &#39;x&#39; and &#39;y&#39;.  Key &#39;x&#39; is an astropy</span>
+<span class="sd">        quantities array of corresponding to the amount of shift in the</span>
+<span class="sd">        x-direction (in arcseconds, assuming the helio-projective</span>
+<span class="sd">        Cartesian co-ordinate system) that is applied to the input</span>
+<span class="sd">        `~sunpy.map.MapCube`.  Key &#39;y&#39; is an `~astropy.units.Quantity` array</span>
+<span class="sd">        corresponding to the amount of shift in the y-direction (in arcseconds,</span>
+<span class="sd">        assuming the helio-projective Cartesian co-ordinate system) that is</span>
+<span class="sd">        applied to the input `~sunpy.map.MapCube`. The number of elements in</span>
+<span class="sd">        each array must be the same as the number of maps in the</span>
+<span class="sd">        `~sunpy.map.MapCube`.  If a shift is passed in to the function, that</span>
+<span class="sd">        shift is applied to the input `~sunpy.map.MapCube` and the template</span>
+<span class="sd">        matching algorithm is not used.</span>
+
+<span class="sd">    The remaining keyword arguments are sent to `sunpy.image.coalignment.apply_shifts`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    output : `sunpy.map.MapCube`</span>
+<span class="sd">        A `~sunpy.map.MapCube` that has co-aligned by matching the template.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.image.coalignment import mapcube_coalign_by_match_template as mc_coalign</span>
+
+<span class="sd">    &gt;&gt;&gt; coaligned_mc = mc_coalign(mc)   # doctest: +SKIP</span>
+<span class="sd">    &gt;&gt;&gt; coaligned_mc = mc_coalign(mc, layer_index=-1)   # doctest: +SKIP</span>
+<span class="sd">    &gt;&gt;&gt; coaligned_mc = mc_coalign(mc, clip=False)   # doctest: +SKIP</span>
+<span class="sd">    &gt;&gt;&gt; coaligned_mc = mc_coalign(mc, template=sunpy_map)   # doctest: +SKIP</span>
+<span class="sd">    &gt;&gt;&gt; coaligned_mc = mc_coalign(mc, template=two_dimensional_ndarray)   # doctest: +SKIP</span>
+<span class="sd">    &gt;&gt;&gt; coaligned_mc = mc_coalign(mc, func=np.log)   # doctest: +SKIP</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Number of maps</span>
+    <span class="n">nt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mc</span><span class="o">.</span><span class="n">maps</span><span class="p">)</span>
+
+    <span class="c1"># Storage for the pixel shifts and the shifts in arcseconds</span>
+    <span class="n">xshift_keep</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nt</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span>
+    <span class="n">yshift_keep</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">xshift_keep</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">shift</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">shifts</span> <span class="o">=</span> <span class="n">calculate_match_template_shift</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="n">template</span><span class="p">,</span>
+                                                <span class="n">layer_index</span><span class="o">=</span><span class="n">layer_index</span><span class="p">,</span>
+                                                <span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">)</span>
+        <span class="n">xshift_arcseconds</span> <span class="o">=</span> <span class="n">shifts</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
+        <span class="n">yshift_arcseconds</span> <span class="o">=</span> <span class="n">shifts</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">xshift_arcseconds</span> <span class="o">=</span> <span class="n">shift</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
+        <span class="n">yshift_arcseconds</span> <span class="o">=</span> <span class="n">shift</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Calculate the pixel shifts</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mc</span><span class="p">):</span>
+        <span class="n">xshift_keep</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">xshift_arcseconds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">m</span><span class="o">.</span><span class="n">scale</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">yshift_keep</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yshift_arcseconds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">m</span><span class="o">.</span><span class="n">scale</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="c1"># Apply the shifts and return the coaligned mapcube</span>
+    <span class="k">return</span> <span class="n">apply_shifts</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="o">-</span><span class="n">yshift_keep</span><span class="p">,</span> <span class="o">-</span><span class="n">xshift_keep</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="n">clip</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

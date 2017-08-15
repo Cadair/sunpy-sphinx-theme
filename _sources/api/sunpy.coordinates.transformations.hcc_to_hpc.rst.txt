@@ -1,0 +1,6 @@
+hcc_to_hpc
+==========
+
+.. currentmodule:: sunpy.coordinates.transformations
+
+.. autofunction:: hcc_to_hpc

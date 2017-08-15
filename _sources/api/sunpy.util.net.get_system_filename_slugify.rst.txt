@@ -1,0 +1,6 @@
+get_system_filename_slugify
+===========================
+
+.. currentmodule:: sunpy.util.net
+
+.. autofunction:: get_system_filename_slugify

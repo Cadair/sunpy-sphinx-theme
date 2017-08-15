@@ -1,0 +1,6 @@
+met_to_utc
+==========
+
+.. currentmodule:: sunpy.instr.fermi
+
+.. autofunction:: met_to_utc

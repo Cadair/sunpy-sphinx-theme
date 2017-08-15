@@ -1,0 +1,7 @@
+Series
+======
+
+.. currentmodule:: sunpy.net.jsoc
+
+.. autoclass:: Series
+   :show-inheritance:

@@ -1,0 +1,21 @@
+HECClient
+=========
+
+.. currentmodule:: sunpy.net.helio.hec
+
+.. autoclass:: HECClient
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~HECClient.get_table_names
+      ~HECClient.make_table_list
+      ~HECClient.time_query
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_table_names
+   .. automethod:: make_table_list
+   .. automethod:: time_query

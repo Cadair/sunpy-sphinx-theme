@@ -1,0 +1,6 @@
+axis_labels_from_ctype
+======================
+
+.. currentmodule:: sunpy.visualization
+
+.. autofunction:: axis_labels_from_ctype

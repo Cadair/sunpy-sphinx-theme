@@ -1,0 +1,31 @@
+Parent
+======
+
+.. currentmodule:: sunpy.util.create
+
+.. autoclass:: Parent
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Parent.from_dir
+      ~Parent.from_file
+      ~Parent.from_files
+      ~Parent.from_glob
+      ~Parent.from_single_glob
+      ~Parent.from_url
+      ~Parent.read
+      ~Parent.read_many
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: from_dir
+   .. automethod:: from_file
+   .. automethod:: from_files
+   .. automethod:: from_glob
+   .. automethod:: from_single_glob
+   .. automethod:: from_url
+   .. automethod:: read
+   .. automethod:: read_many

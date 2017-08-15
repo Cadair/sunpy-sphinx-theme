@@ -1,0 +1,63 @@
+VSOClient
+=========
+
+.. currentmodule:: sunpy.net.vso
+
+.. autoclass:: VSOClient
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~VSOClient.method_order
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~VSOClient.by_fileid
+      ~VSOClient.by_provider
+      ~VSOClient.create_getdatarequest
+      ~VSOClient.download
+      ~VSOClient.download_all
+      ~VSOClient.fetch
+      ~VSOClient.get
+      ~VSOClient.latest
+      ~VSOClient.link
+      ~VSOClient.make
+      ~VSOClient.make_getdatarequest
+      ~VSOClient.merge
+      ~VSOClient.missing_information
+      ~VSOClient.mk_filename
+      ~VSOClient.multiple_choices
+      ~VSOClient.query
+      ~VSOClient.query_legacy
+      ~VSOClient.search
+      ~VSOClient.unknown_method
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: method_order
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: by_fileid
+   .. automethod:: by_provider
+   .. automethod:: create_getdatarequest
+   .. automethod:: download
+   .. automethod:: download_all
+   .. automethod:: fetch
+   .. automethod:: get
+   .. automethod:: latest
+   .. automethod:: link
+   .. automethod:: make
+   .. automethod:: make_getdatarequest
+   .. automethod:: merge
+   .. automethod:: missing_information
+   .. automethod:: mk_filename
+   .. automethod:: multiple_choices
+   .. automethod:: query
+   .. automethod:: query_legacy
+   .. automethod:: search
+   .. automethod:: unknown_method

@@ -1,0 +1,27 @@
+NOAAPredictIndicesLightCurve
+============================
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: NOAAPredictIndicesLightCurve
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~NOAAPredictIndicesLightCurve.default_url_noaa_predict_indices
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~NOAAPredictIndicesLightCurve.peek
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: default_url_noaa_predict_indices
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: peek

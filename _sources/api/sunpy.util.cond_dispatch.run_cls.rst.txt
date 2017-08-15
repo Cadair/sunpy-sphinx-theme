@@ -1,0 +1,6 @@
+run_cls
+=======
+
+.. currentmodule:: sunpy.util.cond_dispatch
+
+.. autofunction:: run_cls

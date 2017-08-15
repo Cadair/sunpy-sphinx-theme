@@ -1,0 +1,23 @@
+GenericClient
+=============
+
+.. currentmodule:: sunpy.net.dataretriever
+
+.. autoclass:: GenericClient
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GenericClient.fetch
+      ~GenericClient.get
+      ~GenericClient.query
+      ~GenericClient.search
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: fetch
+   .. automethod:: get
+   .. automethod:: query
+   .. automethod:: search

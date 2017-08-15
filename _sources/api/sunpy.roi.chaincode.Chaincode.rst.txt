@@ -1,0 +1,27 @@
+Chaincode
+=========
+
+.. currentmodule:: sunpy.roi.chaincode
+
+.. autoclass:: Chaincode
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Chaincode.BoundingBox
+      ~Chaincode.area
+      ~Chaincode.length
+      ~Chaincode.matchany
+      ~Chaincode.matchend
+      ~Chaincode.subBoundingBox
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: BoundingBox
+   .. automethod:: area
+   .. automethod:: length
+   .. automethod:: matchany
+   .. automethod:: matchend
+   .. automethod:: subBoundingBox

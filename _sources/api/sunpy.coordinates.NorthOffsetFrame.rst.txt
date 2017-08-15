@@ -1,0 +1,7 @@
+NorthOffsetFrame
+================
+
+.. currentmodule:: sunpy.coordinates
+
+.. autoclass:: NorthOffsetFrame
+   :show-inheritance:

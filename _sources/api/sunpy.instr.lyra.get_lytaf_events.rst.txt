@@ -1,0 +1,6 @@
+get_lytaf_events
+================
+
+.. currentmodule:: sunpy.instr.lyra
+
+.. autofunction:: get_lytaf_events

@@ -1,0 +1,6 @@
+system_info
+===========
+
+.. currentmodule:: sunpy
+
+.. autofunction:: system_info

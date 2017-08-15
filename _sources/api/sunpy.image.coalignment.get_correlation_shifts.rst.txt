@@ -1,0 +1,6 @@
+get_correlation_shifts
+======================
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: get_correlation_shifts

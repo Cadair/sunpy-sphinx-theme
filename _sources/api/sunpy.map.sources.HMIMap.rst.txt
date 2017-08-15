@@ -1,0 +1,29 @@
+HMIMap
+======
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: HMIMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~HMIMap.measurement
+      ~HMIMap.observatory
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~HMIMap.is_datasource_for
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: measurement
+   .. autoattribute:: observatory
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

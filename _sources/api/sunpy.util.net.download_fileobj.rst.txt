@@ -1,0 +1,6 @@
+download_fileobj
+================
+
+.. currentmodule:: sunpy.util.net
+
+.. autofunction:: download_fileobj

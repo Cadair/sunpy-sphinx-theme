@@ -1,0 +1,6 @@
+find
+====
+
+.. currentmodule:: sunpy.sun.constants
+
+.. autofunction:: find

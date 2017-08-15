@@ -1,0 +1,6 @@
+sunearth_distance
+=================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: sunearth_distance

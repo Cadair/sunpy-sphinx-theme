@@ -1,0 +1,6 @@
+download_weekly_pointing_file
+=============================
+
+.. currentmodule:: sunpy.instr.fermi
+
+.. autofunction:: download_weekly_pointing_file

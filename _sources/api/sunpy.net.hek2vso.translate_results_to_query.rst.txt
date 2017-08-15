@@ -1,0 +1,6 @@
+translate_results_to_query
+==========================
+
+.. currentmodule:: sunpy.net.hek2vso
+
+.. autofunction:: translate_results_to_query

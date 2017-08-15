@@ -1,0 +1,6 @@
+is_time
+=======
+
+.. currentmodule:: sunpy.time
+
+.. autofunction:: is_time

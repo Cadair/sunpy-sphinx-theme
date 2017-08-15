@@ -1,0 +1,17 @@
+JSOCResponse
+============
+
+.. currentmodule:: sunpy.net.jsoc
+
+.. autoclass:: JSOCResponse
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~JSOCResponse.append
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: append

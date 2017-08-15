@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MapCube &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="source_stretch" href="sunpy.map.sources.source_stretch.html" />
+    <link rel="prev" title="GenericMap" href="sunpy.map.GenericMap.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="MapCube | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.map.MapCube.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/map.html">SunPy map</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.CompositeMap.html">CompositeMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.GenericMap.html">GenericMap</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">MapCube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.source_stretch.html">source_stretch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.XRTMap.html">XRTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SOTMap.html">SOTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SWAPMap.html">SWAPMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.RHESSIMap.html">RHESSIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.AIAMap.html">AIAMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.HMIMap.html">HMIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.EITMap.html">EITMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.LASCOMap.html">LASCOMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.MDIMap.html">MDIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.EUVIMap.html">EUVIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.CORMap.html">CORMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.HIMap.html">HIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SXTMap.html">SXTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.SJIMap.html">SJIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.map.sources.TRACEMap.html">TRACEMap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="mapcube">
+<h1>MapCube<a class="headerlink" href="#mapcube" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.map.MapCube">
+<em class="property">class </em><code class="descclassname">sunpy.map.</code><code class="descname">MapCube</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapcube.html#MapCube"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapcube.py#L22" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.MapCube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>A series of spatially aligned Maps.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>args</strong> (<em>{List}</em>) &#8211; A list of Map instances</li>
+<li><strong>sortby</strong> (<em>{&quot;date&quot;</em><em>, </em><em>None}</em>) &#8211; Method by which the MapCube should be sorted along the z-axis.</li>
+<li><strong>derotate</strong> (<em>{None}</em>) &#8211; Apply a derotation to the data (Not Implemented)</li>
+<li><strong>coalign a mapcube so that solar features remain on the same pixels</strong><strong>,</strong> (<em>To</em>) &#8211; </li>
+<li><strong>see the &quot;Coalignment of mapcubes&quot; note below.</strong> (<em>please</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="sunpy.map.MapCube.maps">
+<code class="descname">maps</code><a class="headerlink" href="#sunpy.map.MapCube.maps" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>{List}</em> &#8211; This attribute holds the list of Map instances obtained from parameter args.</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapcube</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="s1">&#39;images/*.fits&#39;</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>Mapcubes can be co-aligned using the routines in sunpy.image.coalignment.</p>
+<p>Creates a new Map instance</p>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.MapCube.all_maps_same_shape" title="sunpy.map.MapCube.all_maps_same_shape"><code class="xref py py-obj docutils literal"><span class="pre">all_maps_same_shape</span></code></a>()</td>
+<td>Tests if all the maps have the same number pixels in the x and y directions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.MapCube.all_meta" title="sunpy.map.MapCube.all_meta"><code class="xref py py-obj docutils literal"><span class="pre">all_meta</span></code></a>()</td>
+<td>Return all the meta objects as a list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.MapCube.as_array" title="sunpy.map.MapCube.as_array"><code class="xref py py-obj docutils literal"><span class="pre">as_array</span></code></a>()</td>
+<td>If all the map shapes are the same, their image data is rendered into the appropriate numpy object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.MapCube.at_least_one_map_has_mask" title="sunpy.map.MapCube.at_least_one_map_has_mask"><code class="xref py py-obj docutils literal"><span class="pre">at_least_one_map_has_mask</span></code></a>()</td>
+<td>Tests if at least one map has a mask.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.map.MapCube.peek" title="sunpy.map.MapCube.peek"><code class="xref py py-obj docutils literal"><span class="pre">peek</span></code></a>([resample])</td>
+<td>A animation plotting routine that animates each element in the</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.map.MapCube.plot" title="sunpy.map.MapCube.plot"><code class="xref py py-obj docutils literal"><span class="pre">plot</span></code></a>([axes,&nbsp;resample,&nbsp;annotate,&nbsp;interval,&nbsp;...])</td>
+<td>A animation plotting routine that animates each element in the</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="sunpy.map.MapCube.all_maps_same_shape">
+<code class="descname">all_maps_same_shape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapcube.html#MapCube.all_maps_same_shape"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapcube.py#L320" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.MapCube.all_maps_same_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if all the maps have the same number pixels in the x and y
+directions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.MapCube.all_meta">
+<code class="descname">all_meta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapcube.html#MapCube.all_meta"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapcube.py#L358" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.MapCube.all_meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all the meta objects as a list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.MapCube.as_array">
+<code class="descname">as_array</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapcube.html#MapCube.as_array"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapcube.py#L333" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.MapCube.as_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>If all the map shapes are the same, their image data is rendered
+into the appropriate numpy object.  If none of the maps have masks,
+then the data is returned as a (ny, nx, nt) ndarray.  If all the maps
+have masks, then the data is returned as a (ny, nx, nt) masked array
+with all the masks copied from each map.  If only some of the maps
+have masked then the data is returned as a (ny, nx, nt) masked array,
+with masks copied from maps as appropriately; maps that do not have a
+mask are supplied with a mask that is full of False entries.
+If all the map shapes are not the same, a ValueError is thrown.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.MapCube.at_least_one_map_has_mask">
+<code class="descname">at_least_one_map_has_mask</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapcube.html#MapCube.at_least_one_map_has_mask"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapcube.py#L327" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.MapCube.at_least_one_map_has_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if at least one map has a mask.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.MapCube.peek">
+<code class="descname">peek</code><span class="sig-paren">(</span><em>resample=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapcube.html#MapCube.peek"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapcube.py#L238" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.MapCube.peek" title="Permalink to this definition">¶</a></dt>
+<dd><p>A animation plotting routine that animates each element in the
+MapCube</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>fig</strong> (<em>mpl.figure</em>) &#8211; Figure to use to create the explorer</li>
+<li><strong>resample</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.6)"><em>False</em></a>) &#8211; Draws the map at a lower resolution to increase the speed of
+animation. Specify a list as a fraction i.e. [0.25, 0.25] to
+plot at 1/4 resolution.
+[Note: this will only work where the map arrays are the same size]</li>
+<li><strong>annotate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Annotate the figure with scale and titles</li>
+<li><strong>interval</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Animation interval in ms</li>
+<li><strong>colorbar</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Plot colorbar</li>
+<li><strong>plot_function</strong> (<em>function</em>) &#8211; A function to call to overplot extra items on the map plot.
+For more information see <code class="xref py py-obj docutils literal"><span class="pre">sunpy.visualization.MapCubeAnimator</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>mapcubeanim</strong> (<code class="xref py py-obj docutils literal"><span class="pre">sunpy.visualization.MapCubeAnimator</span></code>) &#8211; A mapcube animator instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="sunpy.visualization.mapcubeanimator.MapCubeAnimator.html#sunpy.visualization.mapcubeanimator.MapCubeAnimator" title="sunpy.visualization.mapcubeanimator.MapCubeAnimator"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.visualization.mapcubeanimator.MapCubeAnimator()</span></code></a></p>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.map</span> <span class="k">import</span> <span class="n">Map</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ani</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>Plot the map at 1/2 original resolution</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ani</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">resample</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>Plot the map with the limb at each time step</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">sunpy_map</span><span class="p">):</span>
+<span class="gp">... </span>   <span class="n">p</span> <span class="o">=</span> <span class="n">sunpy_map</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">()</span>
+<span class="gp">... </span>   <span class="k">return</span> <span class="n">p</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ani</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">plot_function</span><span class="o">=</span><span class="n">myplot</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>Decide you want an animation:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ani</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">resample</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mplani</span> <span class="o">=</span> <span class="n">ani</span><span class="o">.</span><span class="n">get_animation</span><span class="p">()</span>   
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.map.MapCube.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>axes=None</em>, <em>resample=None</em>, <em>annotate=True</em>, <em>interval=200</em>, <em>plot_function=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/map/mapcube.html#MapCube.plot"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/map/mapcube.py#L100" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.map.MapCube.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>A animation plotting routine that animates each element in the
+MapCube</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>gamma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) &#8211; Gamma value to use for the color map</li>
+<li><strong>axes</strong> (<em>mpl axes</em>) &#8211; axes to plot the animation on, if none uses current axes</li>
+<li><strong>resample</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.6)"><em>False</em></a>) &#8211; Draws the map at a lower resolution to increase the speed of
+animation. Specify a list as a fraction i.e. [0.25, 0.25] to
+plot at 1/4 resolution.
+[Note: this will only work where the map arrays are the same size]</li>
+<li><strong>annotate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Annotate the figure with scale and titles</li>
+<li><strong>interval</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Animation interval in ms</li>
+<li><strong>plot_function</strong> (<em>function</em>) &#8211; A function to be called as each map is plotted. Any variables
+returned from the function will have their <code class="docutils literal"><span class="pre">remove()</span></code> method called
+at the start of the next frame so that they are removed from the plot.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.animation</span> <span class="k">as</span> <span class="nn">animation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.map</span> <span class="k">import</span> <span class="n">Map</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ani</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>Plot the map at 1/2 original resolution</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ani</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">resample</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>Save an animation of the MapCube</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ani</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>   
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Writer</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">writers</span><span class="p">[</span><span class="s1">&#39;ffmpeg&#39;</span><span class="p">]</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">writer</span> <span class="o">=</span> <span class="n">Writer</span><span class="p">(</span><span class="n">fps</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">artist</span><span class="o">=</span><span class="s1">&#39;SunPy&#39;</span><span class="p">),</span> <span class="n">bitrate</span><span class="o">=</span><span class="mi">1800</span><span class="p">)</span>   
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ani</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;mapcube_animation.mp4&#39;</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="n">writer</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>Save an animation with the limb at each time step</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">sunpy_map</span><span class="p">):</span>
+<span class="gp">... </span>   <span class="n">p</span> <span class="o">=</span> <span class="n">sunpy_map</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">()</span>
+<span class="gp">... </span>   <span class="k">return</span> <span class="n">p</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ani</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">plot_function</span><span class="o">=</span><span class="n">myplot</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

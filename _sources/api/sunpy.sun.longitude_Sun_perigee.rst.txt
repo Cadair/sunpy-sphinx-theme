@@ -1,0 +1,6 @@
+longitude_Sun_perigee
+=====================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: longitude_Sun_perigee

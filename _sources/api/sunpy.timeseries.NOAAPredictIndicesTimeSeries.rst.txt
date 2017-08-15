@@ -1,0 +1,19 @@
+NOAAPredictIndicesTimeSeries
+============================
+
+.. currentmodule:: sunpy.timeseries
+
+.. autoclass:: NOAAPredictIndicesTimeSeries
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~NOAAPredictIndicesTimeSeries.is_datasource_for
+      ~NOAAPredictIndicesTimeSeries.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for
+   .. automethod:: peek

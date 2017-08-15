@@ -1,0 +1,6 @@
+parse_obssumm_dbase_file
+========================
+
+.. currentmodule:: sunpy.instr.rhessi
+
+.. autofunction:: parse_obssumm_dbase_file

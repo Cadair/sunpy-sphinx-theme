@@ -1,0 +1,6 @@
+read_file
+=========
+
+.. currentmodule:: sunpy.io
+
+.. autofunction:: read_file

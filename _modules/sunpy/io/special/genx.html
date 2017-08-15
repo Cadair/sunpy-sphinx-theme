@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.io.special.genx &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.io.special.genx | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/io/special/genx.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.io.special.genx</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">xdrlib</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;read_genx&#39;</span><span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">SSWUnpacker</span><span class="p">(</span><span class="n">xdrlib</span><span class="o">.</span><span class="n">Unpacker</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    `xdrlib.Unpacker` customisation to read strings and complex data as written</span>
+<span class="sd">    by IDL.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">unpack_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unpack_uint</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unpack_uint</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">unpack_fstring</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">unpack_complex</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">complex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">unpack_float</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">unpack_float</span><span class="p">())</span>
+    <span class="k">def</span> <span class="nf">unpack_complex_double</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">complex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">unpack_double</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">unpack_double</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">read_struct_skeleton</span><span class="p">(</span><span class="n">xdrdata</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reads the skeleton of the IDL&#39;s structure as written in</span>
+<span class="sd">    solarsoft `build_str()` function.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Read Number of tags</span>
+    <span class="n">ntags</span> <span class="o">=</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_uint</span><span class="p">()</span>
+    <span class="c1"># Read names of tags</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="p">[</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_string</span><span class="p">()</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ntags</span><span class="p">)]</span>
+    <span class="c1"># Read the tag type</span>
+    <span class="n">tagdict</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">tt</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_uint</span><span class="p">()</span>
+        <span class="n">arr_size</span> <span class="o">=</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_farray</span><span class="p">(</span><span class="n">dim</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_int</span><span class="p">)</span> <span class="c1"># [7, 1]</span>
+        <span class="n">typedata</span> <span class="o">=</span> <span class="n">arr_size</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">typedata</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span> <span class="c1"># it&#39;s a structure</span>
+            <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">arr_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="c1"># For when structures has been defined with 2 dim but only has one:</span>
+                <span class="c1"># bb = replicate({tata: 1, bebe:2, casa:&#39;asa&#39;}, 3)</span>
+                <span class="c1"># dd = replicate({tata: 1, bebe:2, casa:&#39;asa&#39;}, 1, 3)</span>
+                <span class="c1"># print,size(bb), size(dd)</span>
+                <span class="c1">#            1           3           8           3</span>
+                <span class="c1">#            2           1           3           8           3</span>
+                <span class="n">dim</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">arr_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">arr_size</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">tagdict</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">read_struct_skeleton</span><span class="p">(</span><span class="n">xdrdata</span><span class="p">)]</span> <span class="o">*</span> <span class="n">arr_size</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">arr_size</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tagdict</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="n">read_struct_skeleton</span><span class="p">(</span><span class="n">xdrdata</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tagdict</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">dim</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr_size</span>
+    <span class="k">return</span> <span class="n">tagdict</span>
+
+<span class="k">def</span> <span class="nf">struct_to_data</span><span class="p">(</span><span class="n">xdrdata</span><span class="p">,</span> <span class="n">subskeleton</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">    Converts the dictionary with the keys and IDL&#39;s size output to</span>
+<span class="sd">    the data stored in the xdrdata.</span>
+
+<span class="sd">    `subskeleton` must contain the size and type of the data that&#39;s going to be</span>
+<span class="sd">    read in the right order (that&#39;s why `OrderedDict` is used). Then the data is</span>
+<span class="sd">    read and the `subskeleton` is updated with the data itself.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#http://www.harrisgeospatial.com/docs/SIZE.html</span>
+    <span class="n">types_dict</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_int</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">),</span> <span class="c1"># int</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_int</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span> <span class="c1"># long</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_float</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_double</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">),</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_complex</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">complex</span><span class="p">),</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_string</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_complex_double</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">complex64</span><span class="p">),</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_uint</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">),</span> <span class="c1"># unsign int</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_uint</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">),</span> <span class="c1"># unsign Long int</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_hyper</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">),</span> <span class="c1"># Long64</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_uhyper</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">uint64</span><span class="p">),</span> <span class="c1"># unsign Long64</span>
+    <span class="p">}</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">subskeleton</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">subskeleton</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">OrderedDict</span><span class="p">):</span>
+            <span class="n">struct_to_data</span><span class="p">(</span><span class="n">xdrdata</span><span class="p">,</span> <span class="n">subskeleton</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">subskeleton</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="n">testlist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="n">struct_shape</span> <span class="o">=</span> <span class="n">subskeleton</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+            <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">subskeleton</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">():</span>
+                <span class="n">elem2</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+                <span class="n">struct_to_data</span><span class="p">(</span><span class="n">xdrdata</span><span class="p">,</span> <span class="n">elem2</span><span class="p">)</span>
+                <span class="n">testlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elem2</span><span class="p">)</span>
+            <span class="n">subskeleton</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">testlist</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">struct_shape</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sswsize</span> <span class="o">=</span> <span class="n">subskeleton</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">sswtype</span> <span class="o">=</span> <span class="n">sswsize</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">sswsize</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">subskeleton</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">types_dict</span><span class="p">[</span><span class="n">sswtype</span><span class="p">][</span><span class="mi">0</span><span class="p">]()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">subskeleton</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_farray</span><span class="p">(</span><span class="n">sswsize</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">types_dict</span><span class="p">[</span><span class="n">sswtype</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span>
+                                            <span class="n">dtype</span><span class="o">=</span><span class="n">types_dict</span><span class="p">[</span><span class="n">sswtype</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sswsize</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<div class="viewcode-block" id="read_genx"><a class="viewcode-back" href="../../../../api/sunpy.io.special.genx.read_genx.html#sunpy.io.special.genx.read_genx">[docs]</a><span class="k">def</span> <span class="nf">read_genx</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;solarsoft genx file reader</span>
+
+<span class="sd">    genx files have been used to store calibration data for multiple</span>
+<span class="sd">    instruments and distributed within solarsoft. They are stored in XDR</span>
+<span class="sd">    format; The External Data Representation Standard file format (XDR) is</span>
+<span class="sd">    described in `RFC 1014 &lt;https://tools.ietf.org/html/rfc1014&gt;`_,</span>
+<span class="sd">    written by Sun Microsystems, Inc. June 1987</span>
+
+<span class="sd">    SolarSoft genx writer creates structures to store the values together with</span>
+<span class="sd">    the variable names. It use the `size` IDL function to include the data</span>
+<span class="sd">    type, dimension and number of elements that each variable contains.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : `str`</span>
+<span class="sd">        The genx file to be read</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    output : `OrderedDict`</span>
+<span class="sd">        A dictionary with possibly nested dictionaries with the data in</span>
+<span class="sd">        the genx file.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The reader aims to maintain the shape and type of the arrays, but take care with the</span>
+<span class="sd">    difference in indexing between Python and IDL (row mayor vs column mayor).</span>
+
+<span class="sd">    Regarding the type notice that single numbers are converted to python precision, therefore</span>
+<span class="sd">    a single integer is converted from 16 to 32/64 bits, and a float from 32 to 64.</span>
+
+<span class="sd">    **Strings** read from genx files are assumed to be UTF-8.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">xdrfile</span><span class="p">:</span>
+        <span class="n">xdrdata</span> <span class="o">=</span> <span class="n">SSWUnpacker</span><span class="p">(</span><span class="n">xdrfile</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+    <span class="c1"># HEADER information</span>
+    <span class="n">version</span><span class="p">,</span> <span class="n">xdr</span> <span class="o">=</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_int</span><span class="p">(),</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_int</span><span class="p">()</span>
+    <span class="n">creation</span> <span class="o">=</span>  <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_string</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">arch</span> <span class="o">=</span>  <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_string</span><span class="p">()</span>
+        <span class="n">os</span> <span class="o">=</span>  <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_string</span><span class="p">()</span>
+        <span class="n">release</span> <span class="o">=</span>  <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_string</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_string</span><span class="p">()</span>
+
+
+    <span class="n">dim</span> <span class="o">=</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_int</span><span class="p">()</span> <span class="c1"># TODO: I don&#39;t think will have dim&gt;1 but need</span>
+                               <span class="c1"># to check, if it&#39;s larger like savegen has run</span>
+                               <span class="c1"># with a multidimensional structure, then</span>
+                               <span class="c1"># probably the read_struct_skeleton will have to</span>
+                               <span class="c1"># run as in multi-dim structure.</span>
+    <span class="n">arr_size</span> <span class="o">=</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_farray</span><span class="p">(</span><span class="n">dim</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">xdrdata</span><span class="o">.</span><span class="n">unpack_int</span><span class="p">)</span> <span class="c1"># [1, 8, 1] = Main structure for the data</span>
+    <span class="n">mainsize</span> <span class="o">=</span> <span class="n">arr_size</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># number of upper level strs</span>
+    <span class="n">skeleton</span> <span class="o">=</span> <span class="n">read_struct_skeleton</span><span class="p">(</span><span class="n">xdrdata</span><span class="p">)</span>
+    <span class="n">struct_to_data</span><span class="p">(</span><span class="n">xdrdata</span><span class="p">,</span> <span class="n">skeleton</span><span class="p">)</span>
+    <span class="n">xdrdata</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+    <span class="n">skeleton</span><span class="p">[</span><span class="s1">&#39;HEADER&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="s1">&#39;VERSION&#39;</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;XDR&#39;</span><span class="p">,</span> <span class="n">xdr</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;CREATION&#39;</span><span class="p">,</span> <span class="n">creation</span><span class="p">)])</span>
+    <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">skeleton</span><span class="p">[</span><span class="s1">&#39;HEADER&#39;</span><span class="p">][</span><span class="s1">&#39;IDL_VERSION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="s1">&#39;ARCH&#39;</span><span class="p">,</span> <span class="n">arch</span><span class="p">),</span>
+                                                         <span class="p">(</span><span class="s1">&#39;OS&#39;</span><span class="p">,</span> <span class="n">os</span><span class="p">),</span>
+                                                         <span class="p">(</span><span class="s1">&#39;RELEASE&#39;</span><span class="p">,</span> <span class="n">release</span><span class="p">)])</span>
+    <span class="n">skeleton</span><span class="p">[</span><span class="s1">&#39;HEADER&#39;</span><span class="p">][</span><span class="s1">&#39;TEXT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">text</span>
+    <span class="c1"># TODO: for python &gt;= 3.2; so we can keep the original order as how it&#39;s stored in the file</span>
+    <span class="c1"># skeleton.move_to_end(&#39;HEADER&#39;, last=False)</span>
+    <span class="k">return</span> <span class="n">skeleton</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

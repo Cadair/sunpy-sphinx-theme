@@ -1,0 +1,6 @@
+mean_ecliptic_longitude
+=======================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: mean_ecliptic_longitude

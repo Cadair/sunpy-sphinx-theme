@@ -1,0 +1,17 @@
+DownloadResponse
+================
+
+.. currentmodule:: sunpy.net.fido_factory
+
+.. autoclass:: DownloadResponse
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~DownloadResponse.wait
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: wait

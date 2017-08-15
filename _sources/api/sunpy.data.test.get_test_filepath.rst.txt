@@ -1,0 +1,6 @@
+get_test_filepath
+=================
+
+.. currentmodule:: sunpy.data.test
+
+.. autofunction:: get_test_filepath

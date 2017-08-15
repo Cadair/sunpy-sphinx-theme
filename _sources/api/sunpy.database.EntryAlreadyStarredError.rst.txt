@@ -1,0 +1,6 @@
+EntryAlreadyStarredError
+========================
+
+.. currentmodule:: sunpy.database
+
+.. autoexception:: EntryAlreadyStarredError

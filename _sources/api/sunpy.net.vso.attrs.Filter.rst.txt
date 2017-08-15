@@ -1,0 +1,7 @@
+Filter
+======
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Filter
+   :show-inheritance:

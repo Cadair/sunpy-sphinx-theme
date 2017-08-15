@@ -1,0 +1,19 @@
+RemoveEntry
+===========
+
+.. currentmodule:: sunpy.database.commands
+
+.. autoclass:: RemoveEntry
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~RemoveEntry.__call__
+      ~RemoveEntry.undo
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: __call__
+   .. automethod:: undo

@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Testing new features &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="_static/version.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Reporting Bugs" href="bugs.html" />
+    <link rel="prev" title="Testing" href="dev_guide/tests.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Testing new features | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/testingfeatures.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="testing-new-features">
+<h1>Testing new features<a class="headerlink" href="#testing-new-features" title="Permalink to this headline">¶</a></h1>
+<p>New features are constantly being developed for SunPy by contributors from
+around the world. These new features are normally submitted as a
+<a class="reference internal" href="dev_guide/index.html#dev-guide"><span class="std std-ref">Pull Request</span></a>. Due to the review process imposed
+on pull requests to maintain the stability and consistency of the code base,
+it may take some time for a new feature to get accepted into the <code class="xref py py-obj docutils literal"><span class="pre">master</span></code>
+branch, and a bit more to get into the next stable release version.</p>
+<p>In order to make it easier for people to test out new features (and hopefully provide valuable
+feedback to the authors) we&#8217;ve put together this tutorial.</p>
+<p>This assumes you have installed sunpy using anaconda, though a similar result
+can be obtained using <code class="xref py py-obj docutils literal"><span class="pre">virtualenv</span></code>.</p>
+<p>We start by creating a new environment, so your current one still works as
+expected:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">sunpy</span><span class="o">-</span><span class="n">featureX</span> <span class="n">python</span><span class="o">=</span><span class="mi">3</span> <span class="n">sunpy</span>
+</pre></div>
+</div>
+<p>This creates an environment called <code class="xref py py-obj docutils literal"><span class="pre">sunpy-featureX</span></code> (change <code class="xref py py-obj docutils literal"><span class="pre">featureX</span></code> for
+something more meaningful in your case) and specifies Python 3. You can change
+this to an older version of Python if you need to. Then we can activate it as</p>
+<dl class="docutils">
+<dt>Linux, OS X:</dt>
+<dd><code class="xref py py-obj docutils literal"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">sunpy-featureX</span></code></dd>
+<dt>Windows:</dt>
+<dd><code class="xref py py-obj docutils literal"><span class="pre">activate</span> <span class="pre">sunpy-featureX</span></code></dd>
+</dl>
+<p>We proceed to remove the installed version of sunpy (only in this environment)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">remove</span> <span class="n">sunpy</span>
+</pre></div>
+</div>
+<p>and now we can proceed to install the development version by cloning the git
+repository</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">to</span><span class="o">/</span><span class="n">a</span><span class="o">/</span><span class="n">place</span><span class="o">/</span><span class="n">I</span><span class="o">/</span><span class="n">want</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sunpy</span><span class="o">/</span><span class="n">sunpy</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">sunpy</span>
+</pre></div>
+</div>
+<p>That will download the latest development (<code class="xref py py-obj docutils literal"><span class="pre">master</span></code>) version of sunpy. You can
+stop here if you just want and now you can test the bleeding edge of SunPy!
+However, let&#8217;s continue and <code class="xref py py-obj docutils literal"><span class="pre">install</span></code> someone&#8217;s new feature awaiting for approval
+as a pull request. First <a class="reference external" href="https://github.com/sunpy/sunpy/pulls">find out which pull request you want to test</a>. Each pull request has a number like
+<code class="xref py py-obj docutils literal"><span class="pre">#1234</span></code>, use that number to get the feature you want to test as</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span> <span class="n">pull</span><span class="o">/</span><span class="mi">1234</span><span class="o">/</span><span class="n">head</span><span class="p">:</span><span class="n">featureX</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">featureX</span>
+</pre></div>
+</div>
+<p>Remember, change the <code class="xref py py-obj docutils literal"><span class="pre">1234</span></code> by the pull request number, and the <code class="xref py py-obj docutils literal"><span class="pre">featurex</span></code> by
+something meaningful to you.</p>
+<p>Next step is to install sunpy in your new environment</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>Once you&#8217;ve done so, you have the new feature ready for testing. Just start
+your python and play with it. Once you are done with testing go back to your
+original environment by</p>
+<dl class="docutils">
+<dt>Linux, OS X:</dt>
+<dd><code class="xref py py-obj docutils literal"><span class="pre">source</span> <span class="pre">deactivate</span></code></dd>
+<dt>Windows:</dt>
+<dd><code class="xref py py-obj docutils literal"><span class="pre">deactivate</span></code></dd>
+</dl>
+<p>Remember, each time you start a new shell you will be using your default
+environment, so you have to use reactivate your new feature environment.</p>
+<p><strong>Final Note</strong></p>
+<p>Please, once you have tested it, if you find it works as you expected, go to the
+particular pull request discussion page and give your comments (or at least
+thank the person who implemented it - it&#8217;s always nice to know that what you do
+is useful for others).</p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

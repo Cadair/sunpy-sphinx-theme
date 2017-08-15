@@ -1,0 +1,6 @@
+true_declination
+================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: true_declination

@@ -1,0 +1,27 @@
+NOAAIndicesLightCurve
+=====================
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: NOAAIndicesLightCurve
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~NOAAIndicesLightCurve.default_url_noaa_indices
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~NOAAIndicesLightCurve.peek
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: default_url_noaa_indices
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: peek

@@ -1,0 +1,89 @@
+Database
+========
+
+.. currentmodule:: sunpy.database
+
+.. autoclass:: Database
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~Database.cache_maxsize
+      ~Database.cache_size
+      ~Database.tags
+      ~Database.url
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Database.add
+      ~Database.add_from_dir
+      ~Database.add_from_fido_search_result
+      ~Database.add_from_file
+      ~Database.add_from_hek_query_result
+      ~Database.add_from_vso_query_result
+      ~Database.add_many
+      ~Database.clear
+      ~Database.clear_histories
+      ~Database.commit
+      ~Database.display_entries
+      ~Database.download
+      ~Database.download_from_vso_query_result
+      ~Database.edit
+      ~Database.fetch
+      ~Database.get_entry_by_id
+      ~Database.get_tag
+      ~Database.query
+      ~Database.redo
+      ~Database.remove
+      ~Database.remove_many
+      ~Database.remove_tag
+      ~Database.search
+      ~Database.set_cache_size
+      ~Database.show_in_browser
+      ~Database.star
+      ~Database.tag
+      ~Database.undo
+      ~Database.unstar
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: cache_maxsize
+   .. autoattribute:: cache_size
+   .. autoattribute:: tags
+   .. autoattribute:: url
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: add
+   .. automethod:: add_from_dir
+   .. automethod:: add_from_fido_search_result
+   .. automethod:: add_from_file
+   .. automethod:: add_from_hek_query_result
+   .. automethod:: add_from_vso_query_result
+   .. automethod:: add_many
+   .. automethod:: clear
+   .. automethod:: clear_histories
+   .. automethod:: commit
+   .. automethod:: display_entries
+   .. automethod:: download
+   .. automethod:: download_from_vso_query_result
+   .. automethod:: edit
+   .. automethod:: fetch
+   .. automethod:: get_entry_by_id
+   .. automethod:: get_tag
+   .. automethod:: query
+   .. automethod:: redo
+   .. automethod:: remove
+   .. automethod:: remove_many
+   .. automethod:: remove_tag
+   .. automethod:: search
+   .. automethod:: set_cache_size
+   .. automethod:: show_in_browser
+   .. automethod:: star
+   .. automethod:: tag
+   .. automethod:: undo
+   .. automethod:: unstar

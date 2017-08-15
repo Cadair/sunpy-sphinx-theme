@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>TimeSeriesMetaData &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="XRSTimeSeries" href="sunpy.timeseries.XRSTimeSeries.html" />
+    <link rel="prev" title="RHESSISummaryTimeSeries" href="sunpy.timeseries.RHESSISummaryTimeSeries.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="TimeSeriesMetaData | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.timeseries.TimeSeriesMetaData.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.timeseries.EVESpWxTimeSeries.html">EVESpWxTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.timeseries.GBMSummaryTimeSeries.html">GBMSummaryTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.timeseries.GenericTimeSeries.html">GenericTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.timeseries.LYRATimeSeries.html">LYRATimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.timeseries.NOAAIndicesTimeSeries.html">NOAAIndicesTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.timeseries.NOAAPredictIndicesTimeSeries.html">NOAAPredictIndicesTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.timeseries.NoRHTimeSeries.html">NoRHTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.timeseries.RHESSISummaryTimeSeries.html">RHESSISummaryTimeSeries</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TimeSeriesMetaData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.timeseries.XRSTimeSeries.html">XRSTimeSeries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="timeseriesmetadata">
+<h1>TimeSeriesMetaData<a class="headerlink" href="#timeseriesmetadata" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.timeseries.TimeSeriesMetaData">
+<em class="property">class </em><code class="descclassname">sunpy.timeseries.</code><code class="descname">TimeSeriesMetaData</code><span class="sig-paren">(</span><em>meta=None</em>, <em>timerange=None</em>, <em>colnames=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L15" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>An object used to store metadata for TimeSeries objects that enables multiple
+TimeSeries metadata to be concatenated in an organised fashion.</p>
+<dl class="attribute">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.metadata">
+<code class="descname">metadata</code><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a> of <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">tuple</span></code></a> &#8211; The list of 3-tuples which each represent a source files metadata.
+The tuples consist of: ( TimeRange, [ colnames ], MetaDict(metadata) )</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.timeseries</span> <span class="k">import</span> <span class="n">TimeSeriesMetaData</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">TimeRange</span><span class="p">,</span> <span class="n">parse_time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.util</span> <span class="k">import</span> <span class="n">MetaDict</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tr</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2012-06-01 00:00&#39;</span><span class="p">,</span><span class="s1">&#39;2012-06-02 00:00&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">md</span> <span class="o">=</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">timerange</span><span class="o">=</span><span class="n">tr</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GOES&#39;</span><span class="p">],</span> <span class="n">meta</span><span class="o">=</span><span class="n">MetaDict</span><span class="p">([(</span><span class="s1">&#39;goes_key&#39;</span><span class="p">,</span><span class="s1">&#39;goes_val&#39;</span><span class="p">)]))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tr2</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2012-06-01 12:00&#39;</span><span class="p">,</span><span class="s1">&#39;2012-06-02 12:00&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">md</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tr2</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;EVE&#39;</span><span class="p">],</span> <span class="n">MetaDict</span><span class="p">([(</span><span class="s1">&#39;eve_key&#39;</span><span class="p">,</span><span class="s1">&#39;eve_val&#39;</span><span class="p">)]))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">md</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;2012-06-01T21:08:12&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">md</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;2012-06-01T21:08:12&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">columns</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">md</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;2012-06-01T21:08:12&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">md</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;2012-06-01T21:08:12&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">metas</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">md</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">parse_time</span><span class="p">(</span><span class="s1">&#39;2012-06-01T21:08:12&#39;</span><span class="p">),</span> <span class="s1">&#39;GOES&#39;</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.columns" title="sunpy.timeseries.TimeSeriesMetaData.columns"><code class="xref py py-obj docutils literal"><span class="pre">columns</span></code></a></td>
+<td>Returns a list of all the names of the columns in the metadata.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.metas" title="sunpy.timeseries.TimeSeriesMetaData.metas"><code class="xref py py-obj docutils literal"><span class="pre">metas</span></code></a></td>
+<td>Returns a list of all the metadict objects in the TimeSeriesMetaData object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.time_range" title="sunpy.timeseries.TimeSeriesMetaData.time_range"><code class="xref py py-obj docutils literal"><span class="pre">time_range</span></code></a></td>
+<td>Returns the TimeRange of the entire time series meta data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.timeranges" title="sunpy.timeseries.TimeSeriesMetaData.timeranges"><code class="xref py py-obj docutils literal"><span class="pre">timeranges</span></code></a></td>
+<td>Returns a list of all the TimeRange objects the TimeSeriesMetaData object.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.append" title="sunpy.timeseries.TimeSeriesMetaData.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(timerange,&nbsp;columns,&nbsp;metadata,&nbsp;**kwargs)</td>
+<td>Add the given metadata MetaDict into the metadata list as a tuple with it&#8217;s TimeRange and colnames (list).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.concatenate" title="sunpy.timeseries.TimeSeriesMetaData.concatenate"><code class="xref py py-obj docutils literal"><span class="pre">concatenate</span></code></a>(tsmetadata2,&nbsp;**kwargs)</td>
+<td>Combine the metadata from a TimeSeriesMetaData object with the current TimeSeriesMetaData and return as a new TimeSeriesMetaData object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.find" title="sunpy.timeseries.TimeSeriesMetaData.find"><code class="xref py py-obj docutils literal"><span class="pre">find</span></code></a>([time,&nbsp;colname])</td>
+<td>Find all metadata matching the given filters for datetime and/or column name.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.find_indices" title="sunpy.timeseries.TimeSeriesMetaData.find_indices"><code class="xref py py-obj docutils literal"><span class="pre">find_indices</span></code></a>([time,&nbsp;colname])</td>
+<td>Find the indices for all the metadata entries matching the given filters for datetime and/or column name.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.get" title="sunpy.timeseries.TimeSeriesMetaData.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(keys[,&nbsp;time,&nbsp;colname])</td>
+<td>Return a TimeSeriesMetaData object of all entries matching the time and colname filters with the dictionaries containing only the key value pairs with the key matching the given input key.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.get_index" title="sunpy.timeseries.TimeSeriesMetaData.get_index"><code class="xref py py-obj docutils literal"><span class="pre">get_index</span></code></a>(index)</td>
+<td>Return the dictionary entry at the given index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.to_string" title="sunpy.timeseries.TimeSeriesMetaData.to_string"><code class="xref py py-obj docutils literal"><span class="pre">to_string</span></code></a>([depth,&nbsp;width])</td>
+<td>Print a table-like representation of the TimeSeriesMetaData object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.update" title="sunpy.timeseries.TimeSeriesMetaData.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(dictionary[,&nbsp;time,&nbsp;colname,&nbsp;row,&nbsp;...])</td>
+<td>Make updates to the MetaDict metadata for all matching metadata entries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData.values" title="sunpy.timeseries.TimeSeriesMetaData.values"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a>()</td>
+<td>Returns a list of all the values from the metadict objects in each entry in the TimeSeriesMetaData object.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.columns">
+<code class="descname">columns</code><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all the names of the columns in the metadata.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.metas">
+<code class="descname">metas</code><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.metas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all the metadict objects in the TimeSeriesMetaData object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.time_range">
+<code class="descname">time_range</code><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.time_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the TimeRange of the entire time series meta data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.timeranges">
+<code class="descname">timeranges</code><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.timeranges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all the TimeRange objects the TimeSeriesMetaData object.</p>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>timerange</em>, <em>columns</em>, <em>metadata</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData.append"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L105" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the given metadata MetaDict into the metadata list as a tuple with
+it&#8217;s TimeRange and colnames (list).
+Will add the new entry so the list is in chronological order for the
+TimeRange.start datetime values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>timerange</strong> (<a class="reference internal" href="sunpy.time.TimeRange.html#sunpy.time.TimeRange" title="sunpy.time.TimeRange"><code class="xref py py-obj docutils literal"><span class="pre">TimeRange</span></code></a>) &#8211; The timerange for which a given metadict is relevant. This will
+generally initilly be the full range of the original file, but if
+the TimeSeries gets truncated this may change appropriately.</li>
+<li><strong>columns</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a>) &#8211; A list of the colomn name strings that the metadata is relevant for.</li>
+<li><strong>metadata</strong> (<a class="reference internal" href="sunpy.util.MetaDict.html#sunpy.util.MetaDict" title="sunpy.util.metadata.MetaDict"><code class="xref py py-obj docutils literal"><span class="pre">MetaDict</span></code></a> or <code class="xref py py-obj docutils literal"><span class="pre">OrderedDict</span></code> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">dict</span></code></a>) &#8211; The dictionary holding the metadata.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.concatenate">
+<code class="descname">concatenate</code><span class="sig-paren">(</span><em>tsmetadata2</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData.concatenate"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L291" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.concatenate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine the metadata from a TimeSeriesMetaData object with the current
+TimeSeriesMetaData and return as a new TimeSeriesMetaData object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tsmetadata2</strong> (<a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>) &#8211; The second TimeSeriesMetaData object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.find">
+<code class="descname">find</code><span class="sig-paren">(</span><em>time=None</em>, <em>colname=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData.find"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L197" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.find" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find all metadata matching the given filters for datetime and/or column name.
+Will return all metadata entries if no filters are given.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> optional) &#8211; The string (parsed using the <a class="reference internal" href="sunpy.time.parse_time.html#sunpy.time.parse_time" title="sunpy.time.parse_time"><code class="xref py py-obj docutils literal"><span class="pre">parse_time</span></code></a>) or datetime
+that you need metadata for.</li>
+<li><strong>colname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> optional) &#8211; A string that can be used to narrow results to specific columns.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>metadata</strong> (<a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>) &#8211; A TimeSeriesMetaData that contain all matching metadata entries.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.find_indices">
+<code class="descname">find_indices</code><span class="sig-paren">(</span><em>time=None</em>, <em>colname=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData.find_indices"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L152" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.find_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the indices for all the metadata entries matching the given filters
+for datetime and/or column name.
+Will return all metadata entry indices if no filters are given.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> optional) &#8211; The string (parsed using the <a class="reference internal" href="sunpy.time.parse_time.html#sunpy.time.parse_time" title="sunpy.time.parse_time"><code class="xref py py-obj docutils literal"><span class="pre">parse_time</span></code></a>) or datetime
+that you need metadata for.</li>
+<li><strong>colname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> optional) &#8211; A string that can be used to narrow results to specific columns.</li>
+<li><strong>indices</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a> optional) &#8211; If True then return a list of indices, not of MetaDict items.
+Used when other methods use the filters for selecting metadata entries.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">list</span></code></a>) &#8211; A list of integers that contain all matching metadata.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>keys</em>, <em>time=None</em>, <em>colname=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData.get"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L243" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a TimeSeriesMetaData object of all entries matching the time and
+colname filters with the dictionaries containing only the key value pairs
+with the key matching the given input key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>keys</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a>) &#8211; The Key/s to be searched in the dictionary.</li>
+<li><strong>time</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> optional) &#8211; The string (parsed using the <a class="reference internal" href="sunpy.time.parse_time.html#sunpy.time.parse_time" title="sunpy.time.parse_time"><code class="xref py py-obj docutils literal"><span class="pre">parse_time</span></code></a>) or datetime
+that you need metadata for.</li>
+<li><strong>colname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> optional) &#8211; A string that can be used to narrow results to specific columns.</li>
+<li><strong>itemised</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a> optional) &#8211; Option to allow the return of the time ranges and column names
+(as list) that match each given value.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>metadata</strong> (<a class="reference internal" href="#sunpy.timeseries.TimeSeriesMetaData" title="sunpy.timeseries.metadata.TimeSeriesMetaData"><code class="xref py py-obj docutils literal"><span class="pre">TimeSeriesMetaData</span></code></a>) &#8211; A TimeSeriesMetaData that contain all matching metadata entries but
+with only the requested key/value pairs in the MetaDict objects.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.get_index">
+<code class="descname">get_index</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData.get_index"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L227" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.get_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dictionary entry at the given index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The integer index of the metadata entry in the list.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>metadata</strong> (<a class="reference internal" href="sunpy.util.MetaDict.html#sunpy.util.MetaDict" title="sunpy.util.metadata.MetaDict"><code class="xref py py-obj docutils literal"><span class="pre">MetaDict</span></code></a>) &#8211; An ordered Dictionary containing the metadata at the given index.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.to_string">
+<code class="descname">to_string</code><span class="sig-paren">(</span><em>depth=10</em>, <em>width=99</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData.to_string"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L505" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print a table-like representation of the TimeSeriesMetaData object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The maximum number of lines to show for each entry. Metadata
+dictionaries and column lists will be truncated if this is small.</li>
+<li><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a>) &#8211; The number of characters wide to make the entire table.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>dictionary</em>, <em>time=None</em>, <em>colname=None</em>, <em>row=None</em>, <em>overwrite=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData.update"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L311" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make updates to the MetaDict metadata for all matching metadata entries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dictionary</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">dict</span></code></a> or <code class="xref py py-obj docutils literal"><span class="pre">OrderedDict</span></code> or <a class="reference internal" href="sunpy.util.MetaDict.html#sunpy.util.MetaDict" title="sunpy.util.metadata.MetaDict"><code class="xref py py-obj docutils literal"><span class="pre">MetaDict</span></code></a>) &#8211; The second TimeSeriesMetaData object.</li>
+<li><strong>time</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime</span></code></a> optional) &#8211; The string (parsed using the <a class="reference internal" href="sunpy.time.parse_time.html#sunpy.time.parse_time" title="sunpy.time.parse_time"><code class="xref py py-obj docutils literal"><span class="pre">parse_time</span></code></a>) or datetime
+to filter the metadata entries updated.</li>
+<li><strong>colname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> optional) &#8211; A string that can be used to narrow results to specific columns.</li>
+<li><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">bool</span></code></a> optional) &#8211; Option to define if the user is able to overwrite already present keys.
+Defaults to False, designed to stop users from being able to
+corrupt/damage the metadict values so easily.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.timeseries.TimeSeriesMetaData.values">
+<code class="descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/timeseries/metadata.html#TimeSeriesMetaData.values"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/timeseries/metadata.py#L415" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.timeseries.TimeSeriesMetaData.values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all the values from the metadict objects in each
+entry in the TimeSeriesMetaData object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

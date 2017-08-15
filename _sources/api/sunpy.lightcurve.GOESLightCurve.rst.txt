@@ -1,0 +1,17 @@
+GOESLightCurve
+==============
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: GOESLightCurve
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GOESLightCurve.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: peek

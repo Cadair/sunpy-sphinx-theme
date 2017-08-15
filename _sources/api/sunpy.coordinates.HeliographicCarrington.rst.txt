@@ -1,0 +1,27 @@
+HeliographicCarrington
+======================
+
+.. currentmodule:: sunpy.coordinates
+
+.. autoclass:: HeliographicCarrington
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~HeliographicCarrington.default_differential
+      ~HeliographicCarrington.default_representation
+      ~HeliographicCarrington.frame_attributes
+      ~HeliographicCarrington.frame_specific_representation_info
+      ~HeliographicCarrington.name
+      ~HeliographicCarrington.obstime
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: default_differential
+   .. autoattribute:: default_representation
+   .. autoattribute:: frame_attributes
+   .. autoattribute:: frame_specific_representation_info
+   .. autoattribute:: name
+   .. autoattribute:: obstime

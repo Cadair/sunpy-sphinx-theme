@@ -1,0 +1,6 @@
+heliographic_solar_center
+=========================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: heliographic_solar_center

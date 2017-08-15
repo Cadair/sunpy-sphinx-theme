@@ -1,0 +1,6 @@
+NoSuchEntryError
+================
+
+.. currentmodule:: sunpy.database.commands
+
+.. autoexception:: NoSuchEntryError

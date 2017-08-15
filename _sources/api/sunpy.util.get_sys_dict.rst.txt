@@ -1,0 +1,6 @@
+get_sys_dict
+============
+
+.. currentmodule:: sunpy.util
+
+.. autofunction:: get_sys_dict

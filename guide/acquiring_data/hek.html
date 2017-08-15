@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Using SunPy’s HEK module &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Querying Helioviewer.org with SunPy" href="helioviewer.html" />
+    <link rel="prev" title="Using the database package" href="database.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Using SunPy’s HEK module | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/guide/acquiring_data/hek.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">SunPy User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tour.html">A brief tour of SunPy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Acquiring Data with SunPy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sample-data.html">Downloading Sample Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fido.html">Finding and Downloading Data using Fido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database.html">Using the database package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using SunPy&#8217;s HEK module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helioviewer.html">Querying Helioviewer.org with SunPy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_types/index.html">Data Types in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plotting.html">Plotting in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../units-coordinates.html">Units and Coordinates in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time.html">Time in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roi.html">Region of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customization.html">Customizing SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="using-sunpy-s-hek-module">
+<h1>Using SunPy&#8217;s HEK module<a class="headerlink" href="#using-sunpy-s-hek-module" title="Permalink to this headline">¶</a></h1>
+<p>The Heliophysics Event Knowledgebase (HEK) is a repository of feature
+and event information about the Sun.  Entries are generated both
+by automated algorithms and human observers.  SunPy accesses this
+information through the <code class="xref py py-obj docutils literal"><span class="pre">hek</span></code> module, which was developed through
+support from the European Space Agency Summer of Code in Space
+(ESA-SOCIS) 2011.</p>
+<div class="section" id="setting-up-the-client">
+<h2>1. Setting up the client<a class="headerlink" href="#setting-up-the-client" title="Permalink to this headline">¶</a></h2>
+<p>SunPy&#8217;s HEK module is in sunpy.net.  It can be imported into your
+session as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">hek</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">hek</span><span class="o">.</span><span class="n">HEKClient</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This creates a client that we will use to interact with the HEK.</p>
+</div>
+<div class="section" id="a-simple-query">
+<h2>2. A simple query<a class="headerlink" href="#a-simple-query" title="Permalink to this headline">¶</a></h2>
+<p>To search the HEK, you need a start time, an end time, and an event
+type.  Times are specified as strings or Python datetime objects.  Event types
+are specified as upper case, two letter strings, and are identical to
+the two letter abbreviations found at the HEK website,
+<a class="reference external" href="http://www.lmsal.com/hek/VOEvent_Spec.html">http://www.lmsal.com/hek/VOEvent_Spec.html</a>.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tstart</span> <span class="o">=</span> <span class="s1">&#39;2011/08/09 07:23:56&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tend</span> <span class="o">=</span> <span class="s1">&#39;2011/08/09 12:40:29&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">event_type</span> <span class="o">=</span> <span class="s1">&#39;FL&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span><span class="n">tend</span><span class="p">),</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The first line defines the search start and end times.  The
+second line specifies the event type, in this &#8216;FL&#8217; or flare.  Line 4
+goes out to the web, contacts the HEK, and queries it for the
+information you have requested.  Event data for ALL flares available
+in the HEK within the time range 2011/08/09 07:23: 56 UT - 2011/08/09
+12:40:20 UT will be returned, regardless of which feature recognition
+method used to detect the flare.</p>
+<p>Let&#8217;s break down the arguments of client.query.  The first argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span><span class="n">tend</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sets the start and end times for the query.  The second argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sets the type of event to look for.  Since we have defined event_type
+= &#8216;FL&#8217;, this sets the query to look for flares.  We could have also
+set the flare event type using the syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FL</span>
+</pre></div>
+</div>
+<p>There is more on the attributes of hek.attrs in section 4 of this
+guide.</p>
+</div>
+<div class="section" id="the-result">
+<h2>3. The result<a class="headerlink" href="#the-result" title="Permalink to this headline">¶</a></h2>
+<p>So, how many flare detections did the query turn up?</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">19</span>
+</pre></div>
+</div>
+<p>The object returned by the above query is a list of Python dictionary
+objects.  Each dictionary consists of key-value pairs that exactly
+correspond to the parameters listed at
+<a class="reference external" href="http://www.lmsal.com/hek/VOEvent_Spec.html">http://www.lmsal.com/hek/VOEvent_Spec.html</a>. You can inspect all the
+dictionary keys very simply:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> 
+<span class="go">[u&#39;skel_startc1&#39;,</span>
+<span class="go"> u&#39;concept&#39;,</span>
+<span class="go"> u&#39;frm_versionnumber&#39;,</span>
+<span class="go"> u&#39;hrc_coord&#39;,</span>
+<span class="go"> u&#39;refs_orig&#39;,....</span>
+</pre></div>
+</div>
+<p>and so on.  Remember, the HEK query we made returns all the flares in
+the time-range stored in the HEK, regardless of the feature
+recognition method.  The HEK parameter which stores the the feature
+recognition method is called &#8220;frm_name&#8221;. Using list comprehensions
+(which are very cool), it is easy to get a list of the feature
+recognition methods used to find each of the flares in the result
+object, for example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">elem</span><span class="p">[</span><span class="s2">&quot;frm_name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span> 
+<span class="go">[u&#39;asainz&#39;,</span>
+<span class="go"> u&#39;asainz&#39;,</span>
+<span class="go"> u&#39;asainz&#39;,</span>
+<span class="go"> u&#39;asainz&#39;,</span>
+<span class="go"> u&#39;asainz&#39;,</span>
+<span class="go"> u&#39;asainz&#39;,</span>
+<span class="go"> u&#39;asainz&#39;,</span>
+<span class="go"> u&#39;SSW Latest Events&#39;,</span>
+<span class="go"> u&#39;SEC standard&#39;,</span>
+<span class="go"> u&#39;Flare Detective - Trigger Module&#39;,</span>
+<span class="go"> u&#39;Flare Detective - Trigger Module&#39;,</span>
+<span class="go"> u&#39;SSW Latest Events&#39;,</span>
+<span class="go"> u&#39;SEC standard&#39;,</span>
+<span class="go"> u&#39;Flare Detective - Trigger Module&#39;,</span>
+<span class="go"> u&#39;Flare Detective - Trigger Module&#39;,</span>
+<span class="go"> u&#39;Flare Detective - Trigger Module&#39;,</span>
+<span class="go"> u&#39;Flare Detective - Trigger Module&#39;,</span>
+<span class="go"> u&#39;Flare Detective - Trigger Module&#39;]</span>
+</pre></div>
+</div>
+<p>It is likely each flare on the Sun was actually detected multiple
+times by many different methods.</p>
+</div>
+<div class="section" id="more-complex-queries">
+<h2>4. More complex queries<a class="headerlink" href="#more-complex-queries" title="Permalink to this headline">¶</a></h2>
+<p>The HEK client allows you to make more complex queries.  There are two
+key features you need to know in order to make use of the full power
+of the HEK client.  Firstly, the attribute module - hek.attrs -
+describes ALL the parameters stored by the HEK as listed in
+<a class="reference external" href="http://www.lmsal.com/hek/VOEvent_Spec.html">http://www.lmsal.com/hek/VOEvent_Spec.html</a>, and the HEK client makes
+these parameters searchable.</p>
+<p>To explain this, let&#8217;s have a closer look at hek.attrs. The help
+command is your friend here; scroll down to section DATA you will see:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="p">)</span> 
+<span class="go">AR = &lt;sunpy.net.hek.attrs.AR object&gt;</span>
+<span class="go">Area = &lt;sunpy.net.hek.attrs.Area object&gt;</span>
+<span class="go">Bound = &lt;sunpy.net.hek.attrs.Bound object&gt;</span>
+<span class="go">BoundBox = &lt;sunpy.net.hek.attrs.BoundBox object&gt;</span>
+<span class="go">CC = &lt;sunpy.net.hek.attrs.CC object&gt;</span>
+<span class="go">CD = &lt;sunpy.net.hek.attrs.CD object&gt;</span>
+<span class="go">CE = &lt;sunpy.net.hek.attrs.CE object&gt;</span>
+<span class="go">CH = &lt;sunpy.net.hek.attrs.EventType object&gt;</span>
+<span class="go">CJ = &lt;sunpy.net.hek.attrs.EventType object&gt;</span>
+<span class="go">CR = &lt;sunpy.net.hek.attrs.EventType object&gt;</span>
+<span class="go">CW = &lt;sunpy.net.hek.attrs.EventType object&gt;</span>
+<span class="go">EF = &lt;sunpy.net.hek.attrs.EF object&gt;</span>
+<span class="go">ER = &lt;sunpy.net.hek.attrs.EventType object&gt;</span>
+<span class="go">Event = &lt;sunpy.net.hek.attrs.Event object&gt;</span>
+<span class="go">FA = &lt;sunpy.net.hek.attrs.EventType object&gt;</span>
+<span class="go">FE = &lt;sunpy.net.hek.attrs.EventType object&gt;</span>
+<span class="go">FI = &lt;sunpy.net.hek.attrs.FI object&gt;</span>
+<span class="go">FL = &lt;sunpy.net.hek.attrs.FL object&gt;</span>
+<span class="go">FRM = &lt;sunpy.net.hek.attrs.FRM object&gt;</span>
+<span class="go">etc etc...</span>
+</pre></div>
+</div>
+<p>The object hek.attrs knows the attributes of the HEK.  You&#8217;ll see that
+one of the attributes is a flare object:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">FL</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">sunpy</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FL</span> <span class="nb">object</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>We can replace hek.attrs.EventType(&#8216;FL&#8217;) with hek.attrs.FL - they do
+the same thing, setting the query to look for flare events.  Both
+methods of setting the event type are provided as a convenience</p>
+<p>Let&#8217;s look further at the FRM attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FRM</span><span class="p">)</span> 
+<span class="go">Help on FRM in module sunpy.net.hek.attrs object:</span>
+<span class="go">class FRM(__builtin__.object)</span>
+<span class="go"> |  Data descriptors defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  __dict__</span>
+<span class="go"> |      dictionary for instance variables (if defined)</span>
+<span class="go"> |</span>
+<span class="go"> |  __weakref__</span>
+<span class="go"> |      list of weak references to the object (if defined)</span>
+<span class="go"> |</span>
+<span class="go"> |  ----------------------------------------------------------------------</span>
+<span class="go"> |  Data and other attributes defined here:</span>
+<span class="go"> |</span>
+<span class="go"> |  Contact = &lt;sunpy.net.hek.attrs._StringParamAttrWrapper object&gt;</span>
+<span class="go"> |</span>
+<span class="go"> |  HumanFlag = &lt;sunpy.net.hek.attrs._StringParamAttrWrapper object&gt;</span>
+<span class="go"> |</span>
+<span class="go"> |  Identifier = &lt;sunpy.net.hek.attrs._StringParamAttrWrapper object&gt;</span>
+<span class="go"> |</span>
+<span class="go"> |  Institute = &lt;sunpy.net.hek.attrs._StringParamAttrWrapper object&gt;</span>
+<span class="go"> |</span>
+<span class="go"> |  Name = &lt;sunpy.net.hek.attrs._StringParamAttrWrapper object&gt;</span>
+<span class="go"> |</span>
+<span class="go"> |  ParamSet = &lt;sunpy.net.hek.attrs._StringParamAttrWrapper object&gt;</span>
+<span class="go"> |</span>
+<span class="go"> |  SpecificID = &lt;sunpy.net.hek.attrs._StringParamAttrWrapper object&gt;</span>
+<span class="go"> |</span>
+<span class="go"> |  URL = &lt;sunpy.net.hek.attrs._StringParamAttrWrapper object&gt;</span>
+<span class="go"> |</span>
+<span class="go"> |  VersionNumber = &lt;sunpy.net.hek.attrs._StringParamAttrWrapper object&gt;</span>
+</pre></div>
+</div>
+<p>Let&#8217;s say I am only interested in those flares identified by the SSW
+Latest Events tool.  I can retrieve those entries only from the HEK
+with the following command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span><span class="n">tend</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FRM</span><span class="o">.</span><span class="n">Name</span> <span class="o">==</span> <span class="s1">&#39;SSW Latest Events&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>We can also retrieve all the entries in the time range which were not
+made by SSW Latest Events with the following command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span><span class="n">tend</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">),</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FRM</span><span class="o">.</span><span class="n">Name</span> <span class="o">!=</span> <span class="s1">&#39;SSW Latest Events&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">17</span>
+</pre></div>
+</div>
+<p>We are using Python&#8217;s comparison operators to filter the returns from
+the HEK client.  Other comparisons are possible.  For example, let&#8217;s
+say I want all the flares that have a peak flux of over 4000.0:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span><span class="n">tend</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FL</span><span class="o">.</span><span class="n">PeakFlux</span> <span class="o">&gt;</span> <span class="mf">4000.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+<p>Multiple comparisons can be included.  For example, let&#8217;s say I want
+all the flares with a peak flux above 1000 AND west of 800 arcseconds
+from disk center of the Sun</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span><span class="n">tend</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">Coord1</span> <span class="o">&gt;</span> <span class="mi">800</span><span class="p">,</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FL</span><span class="o">.</span><span class="n">PeakFlux</span> <span class="o">&gt;</span> <span class="mf">1000.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Multiple comparison operators can be used to filter the results back
+from the HEK.</p>
+<p>The second important feature about the HEK client is that the
+comparisons we&#8217;ve made above can be combined using Python&#8217;s logical
+operators.  This makes complex queries easy to create.  However, some
+caution is advisable.  Let&#8217;s say I want all the flares west of 50
+arcseconds OR have a peak flux over 1000.0:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span><span class="n">tend</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">),</span> <span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">Coord1</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FL</span><span class="o">.</span><span class="n">PeakFlux</span> <span class="o">&gt;</span> <span class="mf">1000.0</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>and as a check</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">elem</span><span class="p">[</span><span class="s2">&quot;fl_peakflux&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span> 
+<span class="go">[None,</span>
+<span class="go">None,</span>
+<span class="go">None,</span>
+<span class="go">None,</span>
+<span class="go">None,</span>
+<span class="go">None,</span>
+<span class="go">None,</span>
+<span class="go">2326.86,</span>
+<span class="go">1698.83,</span>
+<span class="go">None,</span>
+<span class="go">None,</span>
+<span class="go">2360.49,</span>
+<span class="go">3242.64,</span>
+<span class="go">1375.93,</span>
+<span class="go">6275.98,</span>
+<span class="go">923.984]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">elem</span><span class="p">[</span><span class="s2">&quot;event_coord1&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span> 
+<span class="go">[51,</span>
+<span class="go">51,</span>
+<span class="go">51,</span>
+<span class="go">924,</span>
+<span class="go">924,</span>
+<span class="go">924,</span>
+<span class="go">69,</span>
+<span class="go">883.2,</span>
+<span class="go">883.2,</span>
+<span class="go">69,</span>
+<span class="go">69,</span>
+<span class="go">883.2,</span>
+<span class="go">883.2,</span>
+<span class="go">883.2,</span>
+<span class="go">883.2,</span>
+<span class="go">883.2]</span>
+</pre></div>
+</div>
+<p>Note that some of the fluxes are returned as &#8220;None&#8221;.  This is because
+some feature recognition methods for flares do not report the peak
+flux.  However, because the location of event_coord1 is greater than
+50, the entry from the HEK for that flare detection is returned.</p>
+<p>Let&#8217;s say we want all the flares west of 50 arcseconds AND have a peak
+flux over 1000.0:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span><span class="n">tend</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">),</span> <span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">Coord1</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">FL</span><span class="o">.</span><span class="n">PeakFlux</span> <span class="o">&gt;</span> <span class="mf">1000.0</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">elem</span><span class="p">[</span><span class="s2">&quot;fl_peakflux&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span> 
+<span class="go">[2326.86, 1698.83, 2360.49, 3242.64, 1375.93, 6275.98]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">elem</span><span class="p">[</span><span class="s2">&quot;event_coord1&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span> 
+<span class="go">[883.2, 883.2, 883.2, 883.2, 883.2, 883.2]</span>
+</pre></div>
+</div>
+<p>In this case none of the peak fluxes are returned with the value
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">None</span></code></a>.  Since we are using an <code class="xref py py-obj docutils literal"><span class="pre">and</span></code> logical operator we need a result
+from the <code class="xref py py-obj docutils literal"><span class="pre">(hek.attrs.FL.PeakFlux</span> <span class="pre">&gt;</span> <span class="pre">1000.0)</span></code> filter.  Flares that have
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">None</span></code></a> for a peak flux cannot provide this, and so are excluded.  The
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">None</span></code></a> type in this context effectively means &#8220;Don&#8217;t know&#8221;; in such
+cases the client returns only those results from the HEK that
+definitely satisfy the criteria passed to it.</p>
+</div>
+<div class="section" id="getting-data-for-your-event">
+<h2>5. Getting data for your event<a class="headerlink" href="#getting-data-for-your-event" title="Permalink to this headline">¶</a></h2>
+<p>The &#8216;hek2vso&#8217; module allows you to take an HEK event and acquire VSO
+records specific to that event.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">hek2vso</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">h2v</span> <span class="o">=</span> <span class="n">hek2vso</span><span class="o">.</span><span class="n">H2VClient</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>There are several ways to use this capability.  For example, you can
+pass in a list of HEK results and get out the corresponding VSO
+records.  Here are the VSO records returned via the tenth result from
+the HEK query in Section 2 above:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">tstart</span><span class="p">,</span><span class="n">tend</span><span class="p">),</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="n">event_type</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vso_records</span> <span class="o">=</span> <span class="n">h2v</span><span class="o">.</span><span class="n">translate_and_query</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">vso_records</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">31</span>
+</pre></div>
+</div>
+<p>Result 10 is an HEK entry generated by the &#8220;Flare Detective&#8221; automated
+flare detection algorithm running on the AIA 193 angstrom waveband.
+The VSO records are for full disk AIA 193 images between the start and
+end times of this event.  The &#8216;translate_and_query&#8217; function uses
+exactly that information supplied by the HEK in order to find the
+relevant data for that event.  Note that the VSO does not generate
+records for all solar data, so it is possible that an HEK entry
+corresponds to data that is not accessible via the VSO.</p>
+<p>You can also go one step further back, passing in a list of HEK
+attribute objects to define your search, the results of which are then
+used to generate their corresponding VSO records:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">hek</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">q</span> <span class="o">=</span> <span class="n">h2v</span><span class="o">.</span><span class="n">full_query</span><span class="p">((</span><span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2011/08/09 07:23:56&#39;</span><span class="p">,</span> <span class="s1">&#39;2011/08/09 12:40:29&#39;</span><span class="p">),</span> <span class="n">hek</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">EventType</span><span class="p">(</span><span class="s1">&#39;FL&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>The full capabilities of the HEK query module can be used in this
+function (see above).</p>
+<p>Finally, for greater flexibility, it is possible to pass in a list of
+HEK results and create the corresponding VSO query attributes.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vso_query</span> <span class="o">=</span> <span class="n">hek2vso</span><span class="o">.</span><span class="n">translate_results_to_query</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">11</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vso_query</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">[&lt;Time(datetime.datetime(2011, 8, 9, 7, 22, 44), datetime.datetime(2011, 8, 9, 7, 28, 56), None)&gt;, &lt;Source(u&#39;SDO&#39;)&gt;, &lt;Instrument(u&#39;AIA&#39;)&gt;, &lt;Wave(193.0, 193.0, &#39;Angstrom&#39;)&gt;]</span>
+</pre></div>
+</div>
+<p>This function allows users finer-grained control of VSO queries
+generated from HEK results.</p>
+<p>The &#8216;hek2vso&#8217; module was developed with support from the 2013 Google
+Summer of Code.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

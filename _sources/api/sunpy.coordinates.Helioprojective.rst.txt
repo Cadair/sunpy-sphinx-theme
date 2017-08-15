@@ -1,0 +1,41 @@
+Helioprojective
+===============
+
+.. currentmodule:: sunpy.coordinates
+
+.. autoclass:: Helioprojective
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~Helioprojective.default_differential
+      ~Helioprojective.default_representation
+      ~Helioprojective.frame_attributes
+      ~Helioprojective.frame_specific_representation_info
+      ~Helioprojective.name
+      ~Helioprojective.observer
+      ~Helioprojective.obstime
+      ~Helioprojective.rsun
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Helioprojective.calculate_distance
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: default_differential
+   .. autoattribute:: default_representation
+   .. autoattribute:: frame_attributes
+   .. autoattribute:: frame_specific_representation_info
+   .. autoattribute:: name
+   .. autoattribute:: observer
+   .. autoattribute:: obstime
+   .. autoattribute:: rsun
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calculate_distance

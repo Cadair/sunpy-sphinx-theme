@@ -1,0 +1,6 @@
+split_series_using_lytaf
+========================
+
+.. currentmodule:: sunpy.instr.lyra
+
+.. autofunction:: split_series_using_lytaf

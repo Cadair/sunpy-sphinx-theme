@@ -1,0 +1,25 @@
+MetaDict
+========
+
+.. currentmodule:: sunpy.util
+
+.. autoclass:: MetaDict
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MetaDict.get
+      ~MetaDict.has_key
+      ~MetaDict.pop
+      ~MetaDict.setdefault
+      ~MetaDict.update
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get
+   .. automethod:: has_key
+   .. automethod:: pop
+   .. automethod:: setdefault
+   .. automethod:: update

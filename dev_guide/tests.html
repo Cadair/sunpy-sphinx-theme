@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Testing &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Testing new features" href="../testingfeatures.html" />
+    <link rel="prev" title="Documentation" href="documentation.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Testing | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/dev_guide/tests.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer&#8217;s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="newcomers.html">Newcomer&#8217;s Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version_control.html">Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_standards.html">Coding Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Global Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="testing">
+<h1>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
+<p>This is a brief tutorial on how to write and run SunPy unit tests. SunPy makes use
+of the great package <code class="xref py py-obj docutils literal"><span class="pre">pytest</span></code> for all of its testing needs.</p>
+<div class="section" id="writing-a-unit-test">
+<h2>Writing a unit test<a class="headerlink" href="#writing-a-unit-test" title="Permalink to this headline">¶</a></h2>
+<p>Consider a simple module <code class="xref py py-obj docutils literal"><span class="pre">stuff.py</span></code> that contains the simple function shown
+below.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>We can write a test case for this function by defining a new function
+containing the test (or tests) we want to perform. Suppose we want to check
+that the correct behaviour occurs when we pass a value of 5 to <code class="xref py py-obj docutils literal"><span class="pre">double()</span></code>. We
+would write the test function like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_answer</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">double</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>There are two things to note here. Firstly, names of test cases should always
+begin with <code class="xref py py-obj docutils literal"><span class="pre">test_</span></code>. This is because <code class="xref py py-obj docutils literal"><span class="pre">pytest</span></code> searches for test cases named this
+way. Secondly, we use <code class="xref py py-obj docutils literal"><span class="pre">assert</span></code> to assert our expectation of what the result of
+the test should be. In this example, the test returns true and so the test
+passes.</p>
+<p>The example given above is one in which the function and test reside in the
+same module. In SunPy, functions and tests are separated and the latter can be
+found in the <code class="xref py py-obj docutils literal"><span class="pre">tests</span></code> directory within the directory containing the module.
+The convention is to have one test module per module, with the names for
+the test modules being the same as those for the modules prefixed with
+<code class="xref py py-obj docutils literal"><span class="pre">test_</span></code>. For example, the modules <code class="xref py py-obj docutils literal"><span class="pre">xml.py</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">multimethod.py</span></code> in <code class="xref py py-obj docutils literal"><span class="pre">sunpy/util</span></code>
+have corresponding test modules <code class="xref py py-obj docutils literal"><span class="pre">test_xml.py</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">test_multimethod.py</span></code> in
+<code class="xref py py-obj docutils literal"><span class="pre">sunpy/util/tests</span></code>.</p>
+<p>There are some tests for functions and methods in SunPy that require a
+working connection to the internet. pytest is configured in a way that it
+iterates over all tests that have been marked as <em>online</em> and checks if
+there is an established connection to the internet. If there is none, the
+test is skipped, otherwise it is run. Marking tests is pretty
+straightforward in pytest: use the decorator <code class="docutils literal"><span class="pre">&#64;pytest.mark.online</span></code> to
+mark a test function as needing an internet connection.</p>
+</div>
+<div class="section" id="writing-a-unit-test-for-a-figure">
+<h2>Writing a unit test for a figure<a class="headerlink" href="#writing-a-unit-test-for-a-figure" title="Permalink to this headline">¶</a></h2>
+<p>You can write SunPy unit tests that test the generation of matplotlib figures
+by adding the decorator <code class="xref py py-obj docutils literal"><span class="pre">sunpy.tests.helpers.figure_test</span></code>.
+Here is a simple example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sunpy.tests.helpers</span> <span class="k">import</span> <span class="n">figure_test</span>
+
+<span class="nd">@figure_test</span>
+<span class="k">def</span> <span class="nf">test_simple_plot</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The current figure at the end of the unit test, or an explicitly returned
+figure, has its hash compared against an established hash library (more on
+this below).  If the hashes do not match, the figure has changed, and thus
+the test is considered to have failed.</p>
+<p>All such tests are automatically marked with the pytest mark
+<code class="xref py py-obj docutils literal"><span class="pre">pytest.mark.figure</span></code>.  See the next section for how to use marks.</p>
+<p>You will need to update the library of figure hashes after you create a new
+figure test or after a figure has intentionally changed due to code improvement.
+After you have confirmed that any conflicting hashes are associated with desired
+changes in figures, copy the hash-library file listed at the end of the test
+report to <code class="xref py py-obj docutils literal"><span class="pre">sunpy/tests/</span></code>.  Be forewarned that the hash library will likely need
+to be updated for multiple versions of Python.</p>
+</div>
+<div class="section" id="running-unit-tests">
+<h2>Running unit tests<a class="headerlink" href="#running-unit-tests" title="Permalink to this headline">¶</a></h2>
+<p>To find and run all the SunPy unit tests, simply run</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">test</span>
+</pre></div>
+</div>
+<p>from the root of the SunPy tree (i.e. the directory containing <code class="xref py py-obj docutils literal"><span class="pre">INSTALL.TXT</span></code>,
+<a class="reference internal" href="../code_ref/sunpy.html#module-sunpy" title="sunpy"><code class="xref py py-obj docutils literal"><span class="pre">sunpy</span></code></a>, <code class="xref py py-obj docutils literal"><span class="pre">doc</span></code>, etc.). This will produce a lot of output and you&#8217;ll probably
+want to run only selected test modules at a time. This is done by specifying
+the module on the command line, e.g.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">test</span> <span class="n">sunpy</span><span class="o">/</span><span class="n">util</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test_xml</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>for the tests for <a class="reference internal" href="../code_ref/util.html#module-sunpy.util.xml" title="sunpy.util.xml"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.util.xml</span></code></a>.</p>
+<p>To run only tests that been marked with a specific pytest mark using the
+decorator <code class="docutils literal"><span class="pre">&#64;pytest.mark</span></code> (see the section <em>Writing a unit test</em>), use the
+following command (where <code class="docutils literal"><span class="pre">MARK</span></code> is the name of the mark):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">test</span> <span class="o">-</span><span class="n">k</span> <span class="n">MARK</span>
+</pre></div>
+</div>
+<p>To exclude (i.e. skip all tests with a certain mark, use the following
+code (where <code class="docutils literal"><span class="pre">MARK</span></code> is the name of the mark):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">test</span> <span class="o">-</span><span class="n">k</span><span class="o">-</span><span class="n">MARK</span>
+</pre></div>
+</div>
+<p>Note that pytest is configured to skip all tests with the mark <em>online</em> if
+there is no connection to the internet. This cannot be circumvented, i.e.
+it cannot be forced to run a test with the mark <em>online</em> if there is no
+working internet connection (rename the mark to something else to call the test
+function anyway).</p>
+<p>To get more information about skipped and xfailed tests (xfail means a
+test has passed although it has been marked as <code class="docutils literal"><span class="pre">&#64;pytest.mark.xfail</span></code>),
+you need to use the option <code class="docutils literal"><span class="pre">-rs</span></code> for skipped tests and <code class="docutils literal"><span class="pre">-rx</span></code> for
+xfailed tests, respectively. Or use <code class="docutils literal"><span class="pre">-rxs</span></code> for detailed information on
+both skipped and xfailed tests.</p>
+</div>
+<div class="section" id="when-to-write-unit-tests">
+<h2>When to write unit tests<a class="headerlink" href="#when-to-write-unit-tests" title="Permalink to this headline">¶</a></h2>
+<p>A rule of thumb for unit testing is to have at least one unit test per public
+function.</p>
+</div>
+<div class="section" id="testing-your-code-before-committing">
+<h2>Testing Your Code Before Committing<a class="headerlink" href="#testing-your-code-before-committing" title="Permalink to this headline">¶</a></h2>
+<p>When you commit your changes and make a Pull Request to the main SunPy repo on
+GitHub, your code will be tested by Travis CI to make sure that all the tests
+pass and the documentation builds without any warnings. Before you commit your
+code you should check that this is the case. There is a helper script in
+<code class="xref py py-obj docutils literal"><span class="pre">sunpy/tools/pre-commit.sh</span></code> that is designed to run these tests automatically
+every time you run <code class="xref py py-obj docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code> to install it copy the file from
+<code class="xref py py-obj docutils literal"><span class="pre">sunpy/tools/pre-commit.sh</span></code> to <code class="xref py py-obj docutils literal"><span class="pre">sunpy/.git/hooks/pre-commit</span></code>, you should also
+check the script to make sure that it is configured properly for your system.</p>
+</div>
+<div class="section" id="continuous-integration">
+<h2>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permalink to this headline">¶</a></h2>
+<p>SunPy makes use of the <a class="reference external" href="https://travis-ci.org/sunpy/sunpy">Travis CI service</a>.
+This service builds a version of SunPy and runs all the tests. It also integrates
+with GitHub and will report the test results on any Pull Request when they are
+submitted and when they are updated.</p>
+<p>The Travis CI server not only builds SunPy from source, but currently it builds all
+of SunPy&#8217;s dependencies from source as well using pip, all of this behaviour is
+specified in the .travis.yml file in the root of the SunPy repo.</p>
+</div>
+<div class="section" id="new-functionality">
+<h2>New Functionality<a class="headerlink" href="#new-functionality" title="Permalink to this headline">¶</a></h2>
+<p>For SunPy, we would encourage all developers to thoroughly <a class="reference external" href="http://en.wikipedia.org/wiki/Code_coverage">cover</a>
+their code by writing unit tests for each new function created.</p>
+<p>Developers who want to take an aggressive approach to reducing bugs may even
+wish to consider adopting a practice such as Test Drive Development (TDD)
+whereby unit tests are written before any actual code is written. The tests
+begin by failing, and then as they code is developed the user re-runs the
+tests until all of them are passing.</p>
+</div>
+<div class="section" id="bugs-discovered">
+<h2>Bugs discovered<a class="headerlink" href="#bugs-discovered" title="Permalink to this headline">¶</a></h2>
+<p>In addition to writing unit tests new functionality, it is also a good practice
+to write a unit test each time a bug is found, and submit the unit test along
+with the fix for the problem. This way we can ensure that the bug does not
+re-emerge at a later time.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

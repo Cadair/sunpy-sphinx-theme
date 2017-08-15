@@ -1,0 +1,7 @@
+Resolution
+==========
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Resolution
+   :show-inheritance:

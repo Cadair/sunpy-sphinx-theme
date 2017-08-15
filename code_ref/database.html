@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy database &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="disable_undo" href="../api/sunpy.database.disable_undo.html" />
+    <link rel="prev" title="get_test_filepath" href="../api/sunpy.data.test.get_test_filepath.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy database | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/code_ref/database.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">SunPy data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SunPy database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.disable_undo.html">disable_undo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.split_database.html">split_database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.Database.html">Database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.EntryAlreadyAddedError.html">EntryAlreadyAddedError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.NoSuchEntryError.html">NoSuchEntryError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.NoSuchTagError.html">NoSuchTagError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.NonRemovableTagError.html">NonRemovableTagError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.EntryAlreadyStarredError.html">EntryAlreadyStarredError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.EntryAlreadyUnstarredError.html">EntryAlreadyUnstarredError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.EntryNotFoundError.html">EntryNotFoundError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.TagAlreadyAssignedError.html">TagAlreadyAssignedError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.entries_from_query_result.html">entries_from_query_result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.entries_from_file.html">entries_from_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.entries_from_dir.html">entries_from_dir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.display_entries.html">display_entries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.WaveunitNotFoundError.html">WaveunitNotFoundError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.WaveunitNotConvertibleError.html">WaveunitNotConvertibleError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.JSONDump.html">JSONDump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.FitsHeaderEntry.html">FitsHeaderEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.FitsKeyComment.html">FitsKeyComment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.Tag.html">Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.tables.DatabaseEntry.html">DatabaseEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.caching.BaseCache.html">BaseCache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.caching.LRUCache.html">LRUCache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.caching.LFUCache.html">LFUCache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.commands.EmptyCommandStackError.html">EmptyCommandStackError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.commands.NoSuchEntryError.html">NoSuchEntryError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.commands.NonRemovableTagError.html">NonRemovableTagError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.commands.DatabaseOperation.html">DatabaseOperation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.commands.AddEntry.html">AddEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.commands.RemoveEntry.html">RemoveEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.commands.EditEntry.html">EditEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.commands.CommandManager.html">CommandManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.attrs.Starred.html">Starred</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.attrs.Tag.html">Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.attrs.Path.html">Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.attrs.DownloadTime.html">DownloadTime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.database.attrs.FitsHeaderEntry.html">FitsHeaderEntry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-database">
+<h1>SunPy database<a class="headerlink" href="#sunpy-database" title="Permalink to this headline">¶</a></h1>
+<p>The database submodule can be used to provide a local cache of the files and
+records retrieved from various remote services. For an introduction to the
+database see <a class="reference internal" href="../guide/acquiring_data/database.html#database-guide"><span class="std std-ref">Using the database package</span></a>.</p>
+<div class="section" id="module-sunpy.database">
+<span id="sunpy-database-package"></span><h2>sunpy.database Package<a class="headerlink" href="#module-sunpy.database" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h3>
+<p>The database package exports the following classes and exceptions:</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">classes:</th><td class="field-body"><ul class="first simple">
+<li>Database</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">exceptions:</th><td class="field-body"><ul class="first simple">
+<li>EntryAlreadyAddedError</li>
+<li>NoSuchEntryError</li>
+<li>EntryAlreadyStarredError</li>
+<li>EntryAlreadyUnstarredError</li>
+<li>EntryNotFoundError</li>
+<li>TagAlreadyAssignedError</li>
+<li>NoSuchTagError</li>
+<li>NonRemovableTagError</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">functions:</th><td class="field-body"><ul class="first last simple">
+<li>disable_undo</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.disable_undo.html#sunpy.database.disable_undo" title="sunpy.database.disable_undo"><code class="xref py py-obj docutils literal"><span class="pre">disable_undo</span></code></a>(database)</td>
+<td>A context manager to disable saving the used commands in the undo history.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.split_database.html#sunpy.database.split_database" title="sunpy.database.split_database"><code class="xref py py-obj docutils literal"><span class="pre">split_database</span></code></a>(source_database,&nbsp;...)</td>
+<td>Queries the source database with the query string, and moves the matched entries to the destination database.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.Database.html#sunpy.database.Database" title="sunpy.database.Database"><code class="xref py py-obj docutils literal"><span class="pre">Database</span></code></a>(url[,&nbsp;CacheClass[,&nbsp;cache_size[,&nbsp;...)</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param url:</th><td class="field-body">A URL describing the database. This value is simply passed to</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.EntryAlreadyAddedError.html#sunpy.database.EntryAlreadyAddedError" title="sunpy.database.EntryAlreadyAddedError"><code class="xref py py-obj docutils literal"><span class="pre">EntryAlreadyAddedError</span></code></a>(database_entry)</td>
+<td>This exception is raised if a database entry is attempted to be added to the database although it was already saved in it.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.NoSuchEntryError.html#sunpy.database.NoSuchEntryError" title="sunpy.database.NoSuchEntryError"><code class="xref py py-obj docutils literal"><span class="pre">NoSuchEntryError</span></code></a>(database_entry)</td>
+<td>This exception is raised if it is attempted to remove an entry even though it does not exist in the database.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.NoSuchTagError.html#sunpy.database.NoSuchTagError" title="sunpy.database.NoSuchTagError"><code class="xref py py-obj docutils literal"><span class="pre">NoSuchTagError</span></code></a>(tag_name)</td>
+<td>This exception is raised if a tag cannot be found in a database by its name.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.NonRemovableTagError.html#sunpy.database.NonRemovableTagError" title="sunpy.database.NonRemovableTagError"><code class="xref py py-obj docutils literal"><span class="pre">NonRemovableTagError</span></code></a>(database_entry,&nbsp;tag)</td>
+<td>This exception is raised if it is attempted to remove a tag from a database entry even though it is not saved in this entry.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.EntryAlreadyStarredError.html#sunpy.database.EntryAlreadyStarredError" title="sunpy.database.EntryAlreadyStarredError"><code class="xref py py-obj docutils literal"><span class="pre">EntryAlreadyStarredError</span></code></a>(database_entry)</td>
+<td>This exception is raised if a database entry is marked as starred using <a class="reference internal" href="../api/sunpy.database.Database.html#sunpy.database.Database.star" title="sunpy.database.Database.star"><code class="xref py py-meth docutils literal"><span class="pre">Database.star()</span></code></a> although it was already starred before this operation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.EntryAlreadyUnstarredError.html#sunpy.database.EntryAlreadyUnstarredError" title="sunpy.database.EntryAlreadyUnstarredError"><code class="xref py py-obj docutils literal"><span class="pre">EntryAlreadyUnstarredError</span></code></a>(database_entry)</td>
+<td>This exception is raised if the star mark from a database entry is attempted to be removed although the entry is not starred.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.EntryNotFoundError.html#sunpy.database.EntryNotFoundError" title="sunpy.database.EntryNotFoundError"><code class="xref py py-obj docutils literal"><span class="pre">EntryNotFoundError</span></code></a>(entry_id)</td>
+<td>This exception is raised if a database entry cannot be found by its unique ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.TagAlreadyAssignedError.html#sunpy.database.TagAlreadyAssignedError" title="sunpy.database.TagAlreadyAssignedError"><code class="xref py py-obj docutils literal"><span class="pre">TagAlreadyAssignedError</span></code></a>(database_entry,&nbsp;tag_name)</td>
+<td>This exception is raised if it is attempted to assign a tag to a database entry but the database entry already has this tag assigned.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-sunpy.database.tables">
+<span id="sunpy-database-tables-module"></span><h3>sunpy.database.tables Module<a class="headerlink" href="#module-sunpy.database.tables" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.tables.entries_from_query_result.html#sunpy.database.tables.entries_from_query_result" title="sunpy.database.tables.entries_from_query_result"><code class="xref py py-obj docutils literal"><span class="pre">entries_from_query_result</span></code></a>(qr[,&nbsp;default_waveunit])</td>
+<td>Use a query response returned from <a class="reference internal" href="../api/sunpy.net.vso.VSOClient.html#sunpy.net.vso.VSOClient.query" title="sunpy.net.vso.VSOClient.query"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.net.vso.VSOClient.query()</span></code></a> or <a class="reference internal" href="../api/sunpy.net.vso.VSOClient.html#sunpy.net.vso.VSOClient.query_legacy" title="sunpy.net.vso.VSOClient.query_legacy"><code class="xref py py-meth docutils literal"><span class="pre">sunpy.net.vso.VSOClient.query_legacy()</span></code></a> to generate instances of <a class="reference internal" href="../api/sunpy.database.tables.DatabaseEntry.html#sunpy.database.tables.DatabaseEntry" title="sunpy.database.tables.DatabaseEntry"><code class="xref py py-class docutils literal"><span class="pre">DatabaseEntry</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.tables.entries_from_file.html#sunpy.database.tables.entries_from_file" title="sunpy.database.tables.entries_from_file"><code class="xref py py-obj docutils literal"><span class="pre">entries_from_file</span></code></a>(file[,&nbsp;default_waveunit,&nbsp;...])</td>
+<td>Use the headers of a FITS file to generate an iterator of <a class="reference internal" href="../api/sunpy.database.tables.DatabaseEntry.html#sunpy.database.tables.DatabaseEntry" title="sunpy.database.tables.DatabaseEntry"><code class="xref py py-class docutils literal"><span class="pre">sunpy.database.tables.DatabaseEntry</span></code></a> instances.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.tables.entries_from_dir.html#sunpy.database.tables.entries_from_dir" title="sunpy.database.tables.entries_from_dir"><code class="xref py py-obj docutils literal"><span class="pre">entries_from_dir</span></code></a>(fitsdir[,&nbsp;recursive,&nbsp;...])</td>
+<td>Search the given directory for FITS files and use the corresponding FITS headers to generate instances of <a class="reference internal" href="../api/sunpy.database.tables.DatabaseEntry.html#sunpy.database.tables.DatabaseEntry" title="sunpy.database.tables.DatabaseEntry"><code class="xref py py-class docutils literal"><span class="pre">DatabaseEntry</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.tables.display_entries.html#sunpy.database.tables.display_entries" title="sunpy.database.tables.display_entries"><code class="xref py py-obj docutils literal"><span class="pre">display_entries</span></code></a>(database_entries[,&nbsp;columns,&nbsp;...])</td>
+<td>Print a table to display the database entries.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h4>Classes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.tables.WaveunitNotFoundError.html#sunpy.database.tables.WaveunitNotFoundError" title="sunpy.database.tables.WaveunitNotFoundError"><code class="xref py py-obj docutils literal"><span class="pre">WaveunitNotFoundError</span></code></a>(obj)</td>
+<td>This exception is raised if a wavelength unit cannot be found in a FITS header or in a VSO query result block.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.tables.WaveunitNotConvertibleError.html#sunpy.database.tables.WaveunitNotConvertibleError" title="sunpy.database.tables.WaveunitNotConvertibleError"><code class="xref py py-obj docutils literal"><span class="pre">WaveunitNotConvertibleError</span></code></a>(waveunit)</td>
+<td>This exception is raised if a wavelength cannot be converted to an astropy.units.Unit instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.tables.JSONDump.html#sunpy.database.tables.JSONDump" title="sunpy.database.tables.JSONDump"><code class="xref py py-obj docutils literal"><span class="pre">JSONDump</span></code></a>(dump)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.tables.FitsHeaderEntry.html#sunpy.database.tables.FitsHeaderEntry" title="sunpy.database.tables.FitsHeaderEntry"><code class="xref py py-obj docutils literal"><span class="pre">FitsHeaderEntry</span></code></a>(key,&nbsp;value)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.tables.FitsKeyComment.html#sunpy.database.tables.FitsKeyComment" title="sunpy.database.tables.FitsKeyComment"><code class="xref py py-obj docutils literal"><span class="pre">FitsKeyComment</span></code></a>(key,&nbsp;value)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.tables.Tag.html#sunpy.database.tables.Tag" title="sunpy.database.tables.Tag"><code class="xref py py-obj docutils literal"><span class="pre">Tag</span></code></a>(name)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.tables.DatabaseEntry.html#sunpy.database.tables.DatabaseEntry" title="sunpy.database.tables.DatabaseEntry"><code class="xref py py-obj docutils literal"><span class="pre">DatabaseEntry</span></code></a>()</td>
+<td>The class <a class="reference internal" href="../api/sunpy.database.tables.DatabaseEntry.html#sunpy.database.tables.DatabaseEntry" title="sunpy.database.tables.DatabaseEntry"><code class="xref py py-class docutils literal"><span class="pre">DatabaseEntry</span></code></a> represents the main table of the database and each instance represents one record that <em>can</em> be saved in the database.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.database.caching">
+<span id="sunpy-database-caching-module"></span><h3>sunpy.database.caching Module<a class="headerlink" href="#module-sunpy.database.caching" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Classes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.caching.BaseCache.html#sunpy.database.caching.BaseCache" title="sunpy.database.caching.BaseCache"><code class="xref py py-obj docutils literal"><span class="pre">BaseCache</span></code></a>([maxsize])</td>
+<td>BaseCache is a class that saves and operates on an OrderedDict.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.caching.LRUCache.html#sunpy.database.caching.LRUCache" title="sunpy.database.caching.LRUCache"><code class="xref py py-obj docutils literal"><span class="pre">LRUCache</span></code></a>([maxsize])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.caching.LFUCache.html#sunpy.database.caching.LFUCache" title="sunpy.database.caching.LFUCache"><code class="xref py py-obj docutils literal"><span class="pre">LFUCache</span></code></a>([maxsize])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.database.commands">
+<span id="sunpy-database-commands-module"></span><h3>sunpy.database.commands Module<a class="headerlink" href="#module-sunpy.database.commands" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h4>Classes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.commands.EmptyCommandStackError.html#sunpy.database.commands.EmptyCommandStackError" title="sunpy.database.commands.EmptyCommandStackError"><code class="xref py py-obj docutils literal"><span class="pre">EmptyCommandStackError</span></code></a></td>
+<td>This exception is raised if it is attempted to pop from a command stack even though it is empty.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.commands.NoSuchEntryError.html#sunpy.database.commands.NoSuchEntryError" title="sunpy.database.commands.NoSuchEntryError"><code class="xref py py-obj docutils literal"><span class="pre">NoSuchEntryError</span></code></a>(database_entry)</td>
+<td>This exception is raised if it is attempted to remove an entry even though it does not exist in the database.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.commands.NonRemovableTagError.html#sunpy.database.commands.NonRemovableTagError" title="sunpy.database.commands.NonRemovableTagError"><code class="xref py py-obj docutils literal"><span class="pre">NonRemovableTagError</span></code></a>(database_entry,&nbsp;tag)</td>
+<td>This exception is raised if it is attempted to remove a tag from a database entry even though it is not saved in this entry.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.commands.DatabaseOperation.html#sunpy.database.commands.DatabaseOperation" title="sunpy.database.commands.DatabaseOperation"><code class="xref py py-obj docutils literal"><span class="pre">DatabaseOperation</span></code></a></td>
+<td>This is the abstract main class for all database operations.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.commands.AddEntry.html#sunpy.database.commands.AddEntry" title="sunpy.database.commands.AddEntry"><code class="xref py py-obj docutils literal"><span class="pre">AddEntry</span></code></a>(session,&nbsp;database_entry)</td>
+<td>Add a new database entry to this session.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.commands.RemoveEntry.html#sunpy.database.commands.RemoveEntry" title="sunpy.database.commands.RemoveEntry"><code class="xref py py-obj docutils literal"><span class="pre">RemoveEntry</span></code></a>(session,&nbsp;entry)</td>
+<td>Remove the given database entry from the session.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.commands.EditEntry.html#sunpy.database.commands.EditEntry" title="sunpy.database.commands.EditEntry"><code class="xref py py-obj docutils literal"><span class="pre">EditEntry</span></code></a>(database_entry,&nbsp;**kwargs)</td>
+<td>Change the properties of the database entry.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.commands.CommandManager.html#sunpy.database.commands.CommandManager" title="sunpy.database.commands.CommandManager"><code class="xref py py-obj docutils literal"><span class="pre">CommandManager</span></code></a>()</td>
+<td>The CommandManager saves all executed and reverted commands to act as an undo-redo-manager.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.database.attrs">
+<span id="sunpy-database-attrs-module"></span><h3>sunpy.database.attrs Module<a class="headerlink" href="#module-sunpy.database.attrs" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>Classes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.attrs.Starred.html#sunpy.database.attrs.Starred" title="sunpy.database.attrs.Starred"><code class="xref py py-obj docutils literal"><span class="pre">Starred</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.attrs.Tag.html#sunpy.database.attrs.Tag" title="sunpy.database.attrs.Tag"><code class="xref py py-obj docutils literal"><span class="pre">Tag</span></code></a>(tagname)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.attrs.Path.html#sunpy.database.attrs.Path" title="sunpy.database.attrs.Path"><code class="xref py py-obj docutils literal"><span class="pre">Path</span></code></a>(value)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.database.attrs.DownloadTime.html#sunpy.database.attrs.DownloadTime" title="sunpy.database.attrs.DownloadTime"><code class="xref py py-obj docutils literal"><span class="pre">DownloadTime</span></code></a>(start,&nbsp;end)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.database.attrs.FitsHeaderEntry.html#sunpy.database.attrs.FitsHeaderEntry" title="sunpy.database.attrs.FitsHeaderEntry"><code class="xref py py-obj docutils literal"><span class="pre">FitsHeaderEntry</span></code></a>(key,&nbsp;value)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+get_header
+==========
+
+.. currentmodule:: sunpy.io.jp2
+
+.. autofunction:: get_header

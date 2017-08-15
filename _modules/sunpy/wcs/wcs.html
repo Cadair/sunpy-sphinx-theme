@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.wcs.wcs &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.wcs.wcs | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/wcs/wcs.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.wcs.wcs</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.util.decorators</span> <span class="k">import</span> <span class="n">deprecated</span>
+
+<span class="kn">import</span> <span class="nn">sunpy.sun</span> <span class="k">as</span> <span class="nn">sun</span>
+
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+
+<span class="n">rsun_meters</span> <span class="o">=</span> <span class="n">sun</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">radius</span><span class="o">.</span><span class="n">si</span><span class="o">.</span><span class="n">value</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_convert_angle_units&#39;</span><span class="p">,</span> <span class="s1">&#39;convert_pixel_to_data&#39;</span><span class="p">,</span> <span class="s1">&#39;convert_hpc_hg&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;convert_data_to_pixel&#39;</span><span class="p">,</span> <span class="s1">&#39;convert_hpc_hcc&#39;</span><span class="p">,</span> <span class="s1">&#39;convert_hcc_hpc&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;convert_hcc_hg&#39;</span><span class="p">,</span> <span class="s1">&#39;convert_hg_hcc&#39;</span><span class="p">,</span> <span class="s1">&#39;proj_tan&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;convert_hg_hpc&#39;</span><span class="p">,</span>  <span class="s1">&#39;convert_to_coord&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;get_center&#39;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">_convert_angle_units</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;arcsec&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Determine the conversion factor between the data units and radians.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s1">&#39;degrees&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">unit</span> <span class="o">==</span> <span class="s1">&#39;arcmin&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">60.0</span>
+    <span class="k">elif</span> <span class="n">unit</span> <span class="o">==</span> <span class="s1">&#39;arcsec&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mf">60.0</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">unit</span> <span class="o">==</span> <span class="s1">&#39;mas&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mf">1000.0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The units specified are either invalid or is not supported at this time.&quot;</span><span class="p">)</span>
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.map.GenericMap.pixel_to_world&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="convert_pixel_to_data"><a class="viewcode-back" href="../../../api/sunpy.wcs.convert_pixel_to_data.html#sunpy.wcs.convert_pixel_to_data">[docs]</a><span class="k">def</span> <span class="nf">convert_pixel_to_data</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">reference_pixel</span><span class="p">,</span>
+                          <span class="n">reference_coordinate</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the data coordinate for particular pixel indices.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    size : 2d ndarray</span>
+<span class="sd">        Number of pixels in width and height.</span>
+<span class="sd">    scale : 2d ndarray</span>
+<span class="sd">        The size of a pixel (dx,dy) in data coordinates (equivalent to WCS/CDELT)</span>
+<span class="sd">    reference_pixel : 2d ndarray</span>
+<span class="sd">        The reference pixel (x,y) at which the reference coordinate is given (equivalent to WCS/CRPIX)</span>
+<span class="sd">    reference_coordinate : 2d ndarray</span>
+<span class="sd">        The data coordinate (x, y) as measured at the reference pixel (equivalent to WCS/CRVAL)</span>
+<span class="sd">    x,y : int or ndarray</span>
+<span class="sd">        The pixel values at which data coordinates are requested. If none are given,</span>
+<span class="sd">        returns coordinates for every pixel.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ndarray</span>
+<span class="sd">        The data coordinates at pixel (x,y).</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function assumes a gnomic projection which is correct for a detector at the focus</span>
+<span class="sd">    of an optic observing the Sun.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cdelt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+    <span class="n">crpix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">reference_pixel</span><span class="p">)</span>
+    <span class="n">crval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">reference_coordinate</span><span class="p">)</span>
+
+    <span class="c1"># first assume that coord is just [x,y]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+    <span class="c1"># note that crpix[] counts pixels starting at 1</span>
+
+    <span class="n">coordx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">crpix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="n">cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">crval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">coordy</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="p">(</span><span class="n">crpix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="n">cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">crval</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Correct for Gnomic projection</span>
+    <span class="n">coordx</span><span class="p">,</span> <span class="n">coordy</span> <span class="o">=</span> <span class="n">proj_tan</span><span class="p">(</span><span class="n">coordx</span><span class="p">,</span> <span class="n">coordy</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">coordx</span><span class="p">,</span> <span class="n">coordy</span></div>
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="get_center"><a class="viewcode-back" href="../../../api/sunpy.wcs.get_center.html#sunpy.wcs.get_center">[docs]</a><span class="k">def</span> <span class="nf">get_center</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">reference_pixel</span><span class="p">,</span> <span class="n">reference_coordinate</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the center of the image in data coordinates.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    size : 2d ndarray</span>
+<span class="sd">        Number of pixels in width and height.</span>
+<span class="sd">    scale : 2d ndarray</span>
+<span class="sd">        The size of a pixel (dx,dy) in data coordinates (equivalent to WCS/CDELT)</span>
+<span class="sd">    reference_pixel : 2d ndarray</span>
+<span class="sd">        The reference pixel (x,y) at which the reference coordinate is given (equivalent to WCS/CRPIX)</span>
+<span class="sd">    reference_coordinate : 2d ndarray</span>
+<span class="sd">        The data coordinate (x, y) as measured at the reference pixel (equivalent to WCS/CRVAL)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ndarray</span>
+<span class="sd">        The data coordinates</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">scale</span> <span class="o">*</span> <span class="p">(</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.</span> <span class="o">+</span> <span class="n">reference_coordinate</span> <span class="o">-</span> <span class="p">(</span><span class="n">reference_pixel</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pix</span><span class="p">)</span> <span class="o">*</span> <span class="n">scale</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.map.GenericMap.world_to_pixel&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="convert_data_to_pixel"><a class="viewcode-back" href="../../../api/sunpy.wcs.convert_data_to_pixel.html#sunpy.wcs.convert_data_to_pixel">[docs]</a><span class="k">def</span> <span class="nf">convert_data_to_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">reference_pixel</span><span class="p">,</span> <span class="n">reference_coordinate</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the pixel indices for a given data coordinate.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x, y : float</span>
+<span class="sd">        Data coordinate in same units as reference coordinate</span>
+<span class="sd">    scale : 2d ndarray</span>
+<span class="sd">        The size of a pixel (dx,dy) in data coordinates (equivalent to WCS/CDELT)</span>
+<span class="sd">    reference_pixel : 2d ndarray</span>
+<span class="sd">        The reference pixel (x,y) at which the reference coordinate is given (equivalent to WCS/CRPIX)</span>
+<span class="sd">    reference_coordinate : 2d ndarray</span>
+<span class="sd">        The data coordinate (x, y) as measured at the reference pixel (equivalent to WCS/CRVAL)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ndarray</span>
+<span class="sd">        The  pixel coordinates (x,y) at that data coordinate.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># TODO: Needs to check what coordinate system the data is given in</span>
+    <span class="n">cdelt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+    <span class="n">crpix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">reference_pixel</span><span class="p">)</span>
+    <span class="n">crval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">reference_coordinate</span><span class="p">)</span>
+    <span class="c1"># De-apply any tabular projections.</span>
+    <span class="c1"># coord = inv_proj_tan(coord)</span>
+
+    <span class="c1"># note that crpix[] counts pixels starting at 1</span>
+    <span class="n">pixelx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">crval</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="n">cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">crpix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">pixely</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">crval</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">crpix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">pixelx</span><span class="p">,</span> <span class="n">pixely</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.coordinates&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="convert_hpc_hcc"><a class="viewcode-back" href="../../../api/sunpy.wcs.convert_hpc_hcc.html#sunpy.wcs.convert_hpc_hcc">[docs]</a><span class="k">def</span> <span class="nf">convert_hpc_hcc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="s1">&#39;arcsec&#39;</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts from Helioprojective-Cartesian (HPC) coordinates into</span>
+<span class="sd">    Heliocentric-Cartesian (HCC) coordinates. Returns all three dimensions, x, y, z in</span>
+<span class="sd">    meters.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x, y : float</span>
+<span class="sd">        Data coordinate in angle units (default is arcsec)</span>
+<span class="sd">    dsun_meters : float</span>
+<span class="sd">        Distance from the observer to the Sun in meters. Default is 1 AU.</span>
+<span class="sd">    angle_units : str</span>
+<span class="sd">        Units of the data coordinates (e.g. arcsec, arcmin, degrees). Default is arcsec.</span>
+<span class="sd">    z : Bool</span>
+<span class="sd">        If true return the z coordinate as well.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ndarray</span>
+<span class="sd">        The data coordinates (x,y,z) in heliocentric cartesian coordinates in meters.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Implements Eq. (15) of Thompson (2006), A&amp;A, 449, 791.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.wcs</span>
+<span class="sd">    &gt;&gt;&gt; sunpy.wcs.convert_hpc_hcc(40.0, 32.0, z=True)</span>
+<span class="sd">    (28876152.176423457, 23100922.071266972, 694524220.8157959)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">_convert_angle_units</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">angle_units</span><span class="p">),</span>
+                  <span class="n">_convert_angle_units</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">angle_units</span><span class="p">)])</span>
+
+    <span class="n">cosx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">sinx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">cosy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">siny</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">dsun_meters</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">dsun_meters</span> <span class="o">=</span> <span class="n">sun</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">au</span><span class="o">.</span><span class="n">si</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dsun_meters</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">):</span>
+        <span class="n">dsun_meters</span> <span class="o">=</span> <span class="n">dsun_meters</span><span class="o">.</span><span class="n">si</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="n">q</span> <span class="o">=</span> <span class="n">dsun_meters</span> <span class="o">*</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">cosx</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">q</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">dsun_meters</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">rsun_meters</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="c1"># distance[np.where(distance &lt; 0)] = np.sqrt(-1)</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">q</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+
+    <span class="n">rx</span> <span class="o">=</span> <span class="n">distance</span> <span class="o">*</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">sinx</span>
+    <span class="n">ry</span> <span class="o">=</span> <span class="n">distance</span> <span class="o">*</span> <span class="n">siny</span>
+    <span class="n">rz</span> <span class="o">=</span> <span class="n">dsun_meters</span> <span class="o">-</span> <span class="n">distance</span> <span class="o">*</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">cosx</span>
+
+
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">z</span> <span class="o">==</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span><span class="p">,</span> <span class="n">rz</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.coordinates&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="convert_hcc_hpc"><a class="viewcode-back" href="../../../api/sunpy.wcs.convert_hcc_hpc.html#sunpy.wcs.convert_hcc_hpc">[docs]</a><span class="k">def</span> <span class="nf">convert_hcc_hpc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="s1">&#39;arcsec&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert Heliocentric-Cartesian (HCC) to angular</span>
+<span class="sd">    Helioprojective-Cartesian (HPC) coordinates (in degrees).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x, y : float (meters)</span>
+<span class="sd">        Data coordinate in meters.</span>
+<span class="sd">    dsun_meters : float</span>
+<span class="sd">        Distance from the observer to the Sun in meters. Default is 1 AU.</span>
+<span class="sd">    angle_units : str</span>
+<span class="sd">        Units of the data coordinates (e.g. arcsec, arcmin, degrees). Default is arcsec.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ndarray</span>
+<span class="sd">        The  data coordinates (x,y) in helioprojective cartesian coordinates in arcsec.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Implements Eq. (16) of Thompson (2006), A&amp;A, 449, 791.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.wcs</span>
+<span class="sd">    &gt;&gt;&gt; sunpy.wcs.convert_hcc_hpc(28748691, 22998953)</span>
+<span class="sd">    (39.823439773829705, 31.858751644835717)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Calculate the z coordinate by assuming that it is on the surface of the Sun</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">rsun_meters</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">dsun_meters</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">dsun_meters</span> <span class="o">=</span> <span class="n">sun</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">au</span><span class="o">.</span><span class="n">si</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dsun_meters</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">):</span>
+        <span class="n">dsun_meters</span> <span class="o">=</span> <span class="n">dsun_meters</span><span class="o">.</span><span class="n">si</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="n">zeta</span> <span class="o">=</span> <span class="n">dsun_meters</span> <span class="o">-</span> <span class="n">z</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">zeta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">hpcx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">zeta</span><span class="p">))</span>
+    <span class="n">hpcy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">distance</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">angle_units</span> <span class="o">==</span> <span class="s1">&#39;arcsec&#39;</span><span class="p">:</span>
+        <span class="n">hpcx</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">hpcx</span>
+        <span class="n">hpcy</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">hpcy</span>
+    <span class="k">elif</span> <span class="n">angle_units</span> <span class="o">==</span> <span class="s1">&#39;arcmin&#39;</span><span class="p">:</span>
+        <span class="n">hpcx</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">hpcx</span>
+        <span class="n">hpcy</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">hpcy</span>
+
+    <span class="k">return</span> <span class="n">hpcx</span><span class="p">,</span> <span class="n">hpcy</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.coordinates&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="convert_hcc_hg"><a class="viewcode-back" href="../../../api/sunpy.wcs.convert_hcc_hg.html#sunpy.wcs.convert_hcc_hg">[docs]</a><span class="k">def</span> <span class="nf">convert_hcc_hg</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Heliocentric-Cartesian (HCC) (given in meters) to</span>
+<span class="sd">    Stonyhurst Heliographic coordinates (HG) given in degrees, with</span>
+<span class="sd">    radial output in meters.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x, y : float (meters)</span>
+<span class="sd">        Data coordinate in meters.</span>
+<span class="sd">    z : float (meters)</span>
+<span class="sd">        Data coordinate in meters.  If None, then the z-coordinate is assumed</span>
+<span class="sd">        to be on the Sun.</span>
+<span class="sd">    b0_deg : float (degrees)</span>
+<span class="sd">        Tilt of the solar North rotational axis toward the observer</span>
+<span class="sd">        (heliographic latitude of the observer). Usually given as SOLAR_B0,</span>
+<span class="sd">        HGLT_OBS, or CRLT_OBS. Default is 0.</span>
+<span class="sd">    l0_deg : float (degrees)</span>
+<span class="sd">        Carrington longitude of central meridian as seen from Earth. Default is 0.</span>
+<span class="sd">    radius : Bool</span>
+<span class="sd">        If true, forces the output to return a triple of (lon, lat, r). If</span>
+<span class="sd">        false, return (lon, lat) only.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ndarray (degrees, meters)</span>
+<span class="sd">        if radius is false, return the data coordinates (lon, lat).  If</span>
+<span class="sd">        radius=True, return the data coordinates (lon, lat, r).  The quantities</span>
+<span class="sd">        (lon, lat) are the heliographic coordinates in degrees.  The quantity</span>
+<span class="sd">        &#39;r&#39; is the heliographic radius in meters.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Implements Eq. (12) of Thompson (2006), A&amp;A, 449, 791.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.wcs</span>
+<span class="sd">    &gt;&gt;&gt; sunpy.wcs.convert_hcc_hg(230000.0,45000000.0,</span>
+<span class="sd">    ...                          z=695508000.0 + 8000000.0, radius=True)</span>
+<span class="sd">    (0.01873188196651189, 3.6599471896203317, 704945784.41465974)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">z</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">rsun_meters</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">cosb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">b0_deg</span><span class="p">))</span>
+    <span class="n">sinb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">b0_deg</span><span class="p">))</span>
+
+    <span class="n">hecr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">hgln</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="o">*</span> <span class="n">cosb</span> <span class="o">-</span> <span class="n">y</span> <span class="o">*</span> <span class="n">sinb</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">l0_deg</span><span class="p">)</span>
+    <span class="n">hglt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">((</span><span class="n">y</span> <span class="o">*</span> <span class="n">cosb</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">sinb</span><span class="p">)</span> <span class="o">/</span> <span class="n">hecr</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">radius</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">hgln</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">hglt</span><span class="p">),</span> <span class="n">hecr</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">hgln</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">hglt</span><span class="p">)</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.coordinates&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="convert_hg_hcc"><a class="viewcode-back" href="../../../api/sunpy.wcs.convert_hg_hcc.html#sunpy.wcs.convert_hg_hcc">[docs]</a><span class="k">def</span> <span class="nf">convert_hg_hcc</span><span class="p">(</span><span class="n">hglon_deg</span><span class="p">,</span> <span class="n">hglat_deg</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">occultation</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                   <span class="n">z</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">rsun_meters</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Stonyhurst Heliographic coordinates (given in degrees) to</span>
+<span class="sd">    Heliocentric-Cartesian coordinates (given in meters).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    hglon_deg, hglat_deg : float (degrees)</span>
+<span class="sd">        Heliographic longitude and latitude in degrees.</span>
+<span class="sd">    b0_deg : float (degrees)</span>
+<span class="sd">        Tilt of the solar North rotational axis toward the observer</span>
+<span class="sd">        (heliographic latitude of the observer). Usually given as SOLAR_B0,</span>
+<span class="sd">        HGLT_OBS, or CRLT_OBS. Default is 0.</span>
+<span class="sd">    l0_deg : float (degrees)</span>
+<span class="sd">        Carrington longitude of central meridian as seen from Earth. Default is 0.</span>
+<span class="sd">    occultation : Bool</span>
+<span class="sd">        If true set all points behind the Sun (e.g. not visible) to Nan.</span>
+<span class="sd">    z : Bool</span>
+<span class="sd">        If true return the z coordinate as well.</span>
+<span class="sd">    r : float (meters)</span>
+<span class="sd">        Heliographic radius</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ndarray (meters)</span>
+<span class="sd">        The data coordinates in Heliocentric-Cartesian coordinates.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Implements Eq. (11) of Thompson (2006), A&amp;A, 449, 791, with the default</span>
+<span class="sd">    assumption that the value &#39;r&#39; in Eq. (11) is identical to the radius of the</span>
+<span class="sd">    Sun.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.wcs</span>
+<span class="sd">    &gt;&gt;&gt; sunpy.wcs.convert_hg_hcc(0.01873188196651189, 3.6599471896203317,</span>
+<span class="sd">    ...                          r=704945784.41465974, z=True)</span>
+<span class="sd">    (230000.0, 45000000.0, 703508000.0)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">hglon_deg</span><span class="p">)</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">hglat_deg</span><span class="p">)</span>
+
+    <span class="n">cosb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">b0_deg</span><span class="p">))</span>
+    <span class="n">sinb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">b0_deg</span><span class="p">))</span>
+
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">lon</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">l0_deg</span><span class="p">)</span>
+
+    <span class="n">cosx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lon</span><span class="p">)</span>
+    <span class="n">sinx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">lon</span><span class="p">)</span>
+    <span class="n">cosy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
+    <span class="n">siny</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
+
+    <span class="c1"># Perform the conversion.</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">sinx</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="p">(</span><span class="n">siny</span> <span class="o">*</span> <span class="n">cosb</span> <span class="o">-</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">cosx</span> <span class="o">*</span> <span class="n">sinb</span><span class="p">)</span>
+    <span class="n">zz</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="p">(</span><span class="n">siny</span> <span class="o">*</span> <span class="n">sinb</span> <span class="o">+</span> <span class="n">cosy</span> <span class="o">*</span> <span class="n">cosx</span> <span class="o">*</span> <span class="n">cosb</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">occultation</span><span class="p">:</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">zz</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">zz</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">z</span> <span class="o">==</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">zz</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.coordinates&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="convert_hg_hpc"><a class="viewcode-back" href="../../../api/sunpy.wcs.convert_hg_hpc.html#sunpy.wcs.convert_hg_hpc">[docs]</a><span class="k">def</span> <span class="nf">convert_hg_hpc</span><span class="p">(</span><span class="n">hglon_deg</span><span class="p">,</span> <span class="n">hglat_deg</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="s1">&#39;arcsec&#39;</span><span class="p">,</span>
+                   <span class="n">occultation</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Heliographic coordinates (HG) to Helioprojective-Cartesian</span>
+<span class="sd">    (HPC).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    hglon_deg, hglat_deg : float (degrees)</span>
+<span class="sd">        Heliographic longitude and latitude in degrees.</span>
+<span class="sd">    b0_deg : float (degrees)</span>
+<span class="sd">        Tilt of the solar North rotational axis toward the observer</span>
+<span class="sd">        (heliographic latitude of the observer). Usually given as SOLAR_B0,</span>
+<span class="sd">        HGLT_OBS, or CRLT_OBS. Default is 0.</span>
+<span class="sd">    l0_deg : float (degrees)</span>
+<span class="sd">        Carrington longitude of central meridian as seen from Earth. Default is 0.</span>
+<span class="sd">    occultation : Bool</span>
+<span class="sd">        If true set all points behind the Sun (e.g. not visible) to Nan.</span>
+<span class="sd">    dsun_meters : float (meters)</span>
+<span class="sd">        Distance between the observer and the Sun.</span>
+<span class="sd">    angle_units : str</span>
+
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ndarray (arcsec)</span>
+<span class="sd">        The data coordinates (x,y) in Helioprojective-Cartesian coordinates.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Uses equations 11 and 16 in Thompson (2006), A&amp;A, 449, 791-803.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.wcs</span>
+<span class="sd">    &gt;&gt;&gt; sunpy.wcs.convert_hg_hpc(34.0, 45.0, b0_deg=-7.064078, l0_deg=0.0)</span>
+<span class="sd">    (380.05656560308898, 743.78281283290016)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">tempx</span><span class="p">,</span> <span class="n">tempy</span> <span class="o">=</span> <span class="n">convert_hg_hcc</span><span class="p">(</span><span class="n">hglon_deg</span><span class="p">,</span> <span class="n">hglat_deg</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="n">b0_deg</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="n">l0_deg</span><span class="p">,</span> <span class="n">occultation</span><span class="o">=</span><span class="n">occultation</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">convert_hcc_hpc</span><span class="p">(</span><span class="n">tempx</span><span class="p">,</span> <span class="n">tempy</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="n">dsun_meters</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="n">angle_units</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span></div>
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.coordinates&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="convert_hpc_hg"><a class="viewcode-back" href="../../../api/sunpy.wcs.convert_hpc_hg.html#sunpy.wcs.convert_hpc_hg">[docs]</a><span class="k">def</span> <span class="nf">convert_hpc_hg</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="s1">&#39;arcsec&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert from Helioprojective-Cartesian (HPC) to Heliographic coordinates</span>
+<span class="sd">    (HG) in degrees.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x, y : float ()</span>
+<span class="sd">        Data coordinate in angle units.</span>
+<span class="sd">    b0 : float (degrees)</span>
+<span class="sd">        Tilt of the solar North rotational axis toward the observer</span>
+<span class="sd">        (heliographic latitude of the observer). Usually given as SOLAR_B0,</span>
+<span class="sd">        HGLT_OBS, or CRLT_OBS. Default is 0.</span>
+<span class="sd">    l0 : float (degrees)</span>
+<span class="sd">        Carrington longitude of central meridian as seen from Earth. Default is 0.</span>
+<span class="sd">    dsun_meters : float (meters)</span>
+<span class="sd">        Distance between the observer and the Sun.</span>
+<span class="sd">    angle_units : str</span>
+<span class="sd">        Units used for input x and y. Default is arcsec.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ndarray (degrees)</span>
+<span class="sd">        The  data coordinates (hglongitude, hglatitude) in Heliographic coordinates.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Uses equations 15 and 12 in Thompson (2006), A&amp;A, 449, 791-803.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.wcs</span>
+<span class="sd">    &gt;&gt;&gt; sunpy.wcs.convert_hpc_hg(382, 748, b0_deg=-7.064078, l0_deg=0.0)</span>
+<span class="sd">    (34.504653439914669, 45.443143275518182)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tempx</span><span class="p">,</span> <span class="n">tempy</span> <span class="o">=</span> <span class="n">convert_hpc_hcc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="n">dsun_meters</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="n">angle_units</span><span class="p">)</span>
+    <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="n">convert_hcc_hg</span><span class="p">(</span><span class="n">tempx</span><span class="p">,</span> <span class="n">tempy</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="n">b0_deg</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="n">l0_deg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.map&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="proj_tan"><a class="viewcode-back" href="../../../api/sunpy.wcs.proj_tan.html#sunpy.wcs.proj_tan">[docs]</a><span class="k">def</span> <span class="nf">proj_tan</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies the gnomonic (TAN) projection to intermediate relative</span>
+<span class="sd">    coordinates. This function is not currently implemented!&quot;&quot;&quot;</span>
+    <span class="c1"># if pixels are within 3 degrees of the Sun then skip the calculation unless</span>
+    <span class="c1"># force is True. This applies to all sdo images so this function is just</span>
+    <span class="c1"># here as a place holder for the future</span>
+    <span class="c1"># TODO: write proj_tan function</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span></div>
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.coordinates&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="convert_to_coord"><a class="viewcode-back" href="../../../api/sunpy.wcs.convert_to_coord.html#sunpy.wcs.convert_to_coord">[docs]</a><span class="k">def</span> <span class="nf">convert_to_coord</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">from_coord</span><span class="p">,</span> <span class="n">to_coord</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="s1">&#39;arcsec&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply a coordinate transform to coordinates. Right now can only do hpc</span>
+<span class="sd">    to hcc to hg</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">from_coord</span> <span class="o">==</span> <span class="s1">&#39;hcc&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">to_coord</span> <span class="o">==</span> <span class="s1">&#39;hg&#39;</span><span class="p">):</span>
+        <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span> <span class="o">=</span> <span class="n">convert_hcc_hg</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="n">b0_deg</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="n">l0_deg</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">from_coord</span> <span class="o">==</span> <span class="s1">&#39;hpc&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">to_coord</span> <span class="o">==</span> <span class="s1">&#39;hg&#39;</span><span class="p">):</span>
+        <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span> <span class="o">=</span> <span class="n">convert_hpc_hg</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="n">b0_deg</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="n">l0_deg</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="n">dsun_meters</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="n">angle_units</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">from_coord</span> <span class="o">==</span> <span class="s1">&#39;hg&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">to_coord</span> <span class="o">==</span> <span class="s1">&#39;hcc&#39;</span><span class="p">):</span>
+        <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span> <span class="o">=</span> <span class="n">convert_hg_hcc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="n">b0_deg</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="n">l0_deg</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">from_coord</span> <span class="o">==</span> <span class="s1">&#39;hcc&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">to_coord</span> <span class="o">==</span> <span class="s1">&#39;hpc&#39;</span><span class="p">):</span>
+        <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span> <span class="o">=</span> <span class="n">convert_hcc_hpc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="n">dsun_meters</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="n">angle_units</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">from_coord</span> <span class="o">==</span> <span class="s1">&#39;hg&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">to_coord</span> <span class="o">==</span> <span class="s1">&#39;hpc&#39;</span><span class="p">):</span>
+        <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span> <span class="o">=</span> <span class="n">convert_hg_hpc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">b0_deg</span><span class="o">=</span><span class="n">b0_deg</span><span class="p">,</span> <span class="n">l0_deg</span><span class="o">=</span><span class="n">l0_deg</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="n">dsun_meters</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="n">angle_units</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">from_coord</span> <span class="o">==</span> <span class="s1">&#39;hpc&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">to_coord</span> <span class="o">==</span> <span class="s1">&#39;hcc&#39;</span><span class="p">):</span>
+        <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span> <span class="o">=</span> <span class="n">convert_hpc_hcc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">dsun_meters</span><span class="o">=</span><span class="n">dsun_meters</span><span class="p">,</span> <span class="n">angle_units</span><span class="o">=</span><span class="n">angle_units</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

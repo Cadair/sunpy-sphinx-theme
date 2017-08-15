@@ -1,0 +1,21 @@
+BasicRegistrationFactory
+========================
+
+.. currentmodule:: sunpy.util.datatype_factory_base
+
+.. autoclass:: BasicRegistrationFactory
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BasicRegistrationFactory.__call__
+      ~BasicRegistrationFactory.register
+      ~BasicRegistrationFactory.unregister
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: __call__
+   .. automethod:: register
+   .. automethod:: unregister

@@ -1,0 +1,155 @@
+
+
+.. _sphx_glr_generated_gallery_map_resampling_and_superpixels.py:
+
+
+=========================================
+Map Resampling and Superpixels
+=========================================
+
+In this example you will see how to resample a map using the resample method
+(which implements interpolation) and superpixels.
+
+
+Start by importing the necessary modules.
+
+
+
+.. code-block:: python
+
+
+    from __future__ import print_function, division
+
+    import astropy.units as u
+
+    import matplotlib.pyplot as plt
+
+    import sunpy.map
+    import sunpy.data.sample
+
+
+
+
+
+
+
+Sunpy sample data contains a number of suitable maps, where the sunpy.data.sample.NAME
+returns the location of the given FITS file.
+
+
+
+.. code-block:: python
+
+    aia_map = sunpy.map.Map(sunpy.data.sample.AIA_171_IMAGE)
+
+
+
+
+
+
+
+This has a resolution of:
+
+
+
+.. code-block:: python
+
+    print(aia_map.dimensions)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    PixelPair(x=<Quantity 1024.0 pix>, y=<Quantity 1024.0 pix>)
+
+
+To find out more specifics about this map and the instrument used, check it's
+metatdata:
+
+
+
+.. code-block:: python
+
+    print(aia_map.meta)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    MetaDict([('simple', True), ('bitpix', -32), ('naxis', 2), ('naxis1', 1024), ('naxis2', 1024), ('bld_vers', 'V5R12X'), ('lvl_num', 1.5), ('t_rec', '2011-06-07T06:33:03Z'), ('trecstep', 1.0), ('trecepoc', '1977.01.01_00:00:00_TAI'), ('trecroun', 1), ('origin', 'SDO'), ('date', '2012-10-16T19:45:34'), ('telescop', 'SDO'), ('instrume', 'AIA_3'), ('date-obs', '2011-06-07T06:33:02.77'), ('t_obs', '2011-06-07T06:33:02.88Z'), ('camera', 3), ('img_type', 'LIGHT'), ('exptime', 0.234256), ('expsdev', 0.000135), ('int_time', 0.507812), ('wavelnth', 171), ('waveunit', 'angstrom'), ('wave_str', '171_THIN'), ('fsn', 27194331), ('fid', 0), ('quallev0', 0), ('quality', 0), ('totvals', 16777216), ('datavals', 16777216), ('missvals', 0), ('percentd', 100.0), ('datamin', -8), ('datamax', 17722), ('datamedn', 18), ('datamean', 26.6888), ('datarms', 9429260.0), ('dataskew', 81.433), ('datakurt', 17076.7421875), ('datacent', 30.76), ('datap01', -1.0), ('datap10', 1.0), ('datap25', 3.0), ('datap75', 39.0), ('datap90', 64.0), ('datap95', 87.0), ('datap98', 127.0), ('datap99', 168.0), ('nsatpix', 29), ('oscnmean', 'nan'), ('oscnrms', 'nan'), ('flat_rec', 'aia.flatfield[:#30]'), ('nspikes', 977), ('ctype1', 'HPLN-TAN'), ('cunit1', 'arcsec'), ('crval1', 3.223099507700556), ('cdelt1', 2.402792), ('crpix1', 512.5), ('ctype2', 'HPLT-TAN'), ('cunit2', 'arcsec'), ('crval2', 1.385781353025793), ('cdelt2', 2.402792), ('crpix2', 512.5), ('crota2', -0.138829), ('r_sun', 1573.89688496), ('mpo_rec', 'sdo.master_pointing[:#394]'), ('inst_rot', 0.019327), ('imscl_mp', 0.599489), ('x0_mp', 2049.459961), ('y0_mp', 2049.030029), ('asd_rec', 'sdo.lev0_asd_0004[:#10672125]'), ('sat_y0', -4.519384), ('sat_z0', 13.793308), ('sat_rot', -3.4e-05), ('acs_mode', 'SCIENCE'), ('acs_eclp', 'NO'), ('acs_sunp', 'YES'), ('acs_safe', 'NO'), ('acs_cgt', 'GT3'), ('orb_rec', 'sdo.fds_orbit_vectors[2011.06.07_06:33:00_UTC]'), ('dsun_ref', 149597870691.0), ('dsun_obs', 151846026489.0), ('rsun_ref', 696000000.0), ('rsun_obs', 945.436711), ('gaex_obs', -13315441.72), ('gaey_obs', -25080995.82), ('gaez_obs', 31173320.91), ('haex_obs', -36634444009.2), ('haey_obs', -147360551017.0), ('haez_obs', 35731768.47), ('obs_vr', 86.972467), ('obs_vw', 31968.269521), ('obs_vn', 4842.822869), ('crln_obs', 340.698273), ('crlt_obs', 0.048591), ('car_rot', 2111), ('hgln_obs', 0.0), ('hglt_obs', 0.048591), ('roi_nwin', -2147483648), ('roi_sum', -2147483648), ('roi_nax1', -2147483648), ('roi_nay1', -2147483648), ('roi_llx1', -2147483648), ('roi_lly1', -2147483648), ('roi_nax2', -2147483648), ('roi_nay2', -2147483648), ('roi_llx2', -2147483648), ('roi_lly2', -2147483648), ('pixlunit', 'DN'), ('dn_gain', 17.7), ('eff_area', 2.419), ('eff_ar_v', 3.0), ('tempccd', -71.0), ('tempgt', 14.327), ('tempsmir', 34.029), ('tempfpad', 16.29), ('ispsname', 'aia.lev0_isp_0011'), ('isppktim', '2011-06-07T06:32:57.50Z'), ('isppktvn', '001.197'), ('aivnmst', 453), ('aimgots', 1686119616), ('asqhdr', 2174677979), ('asqtnum', 2), ('asqfsn', 27194331), ('aiahfsn', 27194323), ('aecdelay', 1537), ('aiaecti', 0), ('aiasen', 0), ('aifdbid', 241), ('aimgotss', 55109), ('aifcps', 10), ('aiftswth', 0), ('aifrmlid', 3057), ('aiftsid', 41729), ('aihismxb', 7), ('aihis192', 8377773), ('aihis348', 8384772), ('aihis604', 8386035), ('aihis860', 8386516), ('aifwen', 204), ('aimgshce', 237), ('aectype', 2), ('aecmode', 'ON'), ('aistate', 'CLOSED'), ('aiaecenf', 1), ('aifiltyp', 0), ('aimshobc', 41.104), ('aimshobe', 26.068001), ('aimshotc', 55.327999), ('aimshote', 69.344002), ('aimshcbc', 275.432007), ('aimshcbe', 260.484009), ('aimshctc', 289.556), ('aimshcte', 303.395996), ('aicfgdl1', 0), ('aicfgdl2', 107), ('aicfgdl3', 171), ('aicfgdl4', 236), ('aifoenfl', 1), ('aimgfsn', 5), ('aimgtyp', 0), ('aiawvlen', 7), ('aiagp1', 0), ('aiagp2', 0), ('aiagp3', 0), ('aiagp4', 0), ('aiagp5', 0), ('aiagp6', 0), ('aiagp7', 0), ('aiagp8', 619), ('aiagp9', 683), ('aiagp10', 748), ('agt1svy', 2), ('agt1svz', -6), ('agt2svy', 0), ('agt2svz', -1), ('agt3svy', -2), ('agt3svz', 3), ('agt4svy', -5), ('agt4svz', 5), ('aimgshen', 4), ('keywddoc', 'https:'), ('recnum', 76618218), ('blank', -32768), ('date_obs', '2011-06-07T06:33:02.77'), ('xcen', 2.91938326953), ('ycen', 1.09323792231), ('detector', 'AIA'), ('comment', "FITS (Flexible Image Transport System) format is defined in 'Astronomyand Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359HFITSHEAD2STRUCT"), ('history', 'FITSHEAD2STRUCT run at: Fri May 26 11:33:15 2017mreadfits_shm VERSION:1.20read_sdo VERSION:  2.10aia2wcsmin.pro VERSION:  5.10aia2wcsminaia2wcsmin  MPO_date: 2012-09-04T00:00:00Zaia2wcsmin  MPO_t_start: 2011-06-05T00:00:00Zaia2wcsmin  MPO_t_stop: 2011-06-12T00:00:00Zaia2wcsmin  MPO_version: 5ssw_reg.pro VERSION:  1.30ssw_regssw_reg  ROT called with cubic interpolation: cubic = -0.500000ssw_reg  Image registered to SDO image with FSN = 27194330ssw_reg  Image registered to SDO image with T_OBS = 2011-06-07T06:33:01.aia_fix_header.pro VERSION:  1.00aia_prep.pro VERSION: 5.10aia_reg.pro VERSION:  1.20'), ('keycomments', {'SIMPLE': 'conforms to FITS standard', 'BITPIX': 'array data type', 'NAXIS': 'number of array dimensions'})])
+
+
+To reduce the angular resolution of the map you can use the `~sunpy.map.GenericMap.resample` method,
+specifying the dimensions as an Astropy Quantity in pixels:
+
+
+
+.. code-block:: python
+
+    dimensions = u.Quantity([40, 40], u.pixel)
+    aia_resampled_map = aia_map.resample(dimensions)
+    aia_resampled_map.peek(draw_limb=True, draw_grid=True)
+    # Note that this uses linear interpolation, you can change this using the method
+    # (‘neighbor’, ‘nearest’, ‘linear’ or ‘spline’) keyword argument option.
+
+
+
+
+.. image:: /generated/gallery/images/sphx_glr_map_resampling_and_superpixels_001.png
+    :align: center
+
+
+
+
+Similar to resampling you can use the `~sunpy.map.GenericMap.superpixel` method, this will reduce the
+resolution of the image by combining the number of pixels (in each dimension)
+in the dimensions argument into one single pixel.
+This can be used to increase the signal to noise ratio.
+For this the new dimensions must divide original image size exactly, for
+example you can reduce the AIA map resolution by a factor of 16 using:
+
+
+
+.. code-block:: python
+
+    dimensions = u.Quantity(aia_map.dimensions) / 16
+    aia_superpixel_map = aia_map.superpixel(dimensions)
+    aia_superpixel_map.peek(draw_limb=True, draw_grid=True)
+    plt.show()
+
+
+
+.. image:: /generated/gallery/images/sphx_glr_map_resampling_and_superpixels_002.png
+    :align: center
+
+
+
+
+**Total running time of the script:** ( 0 minutes  1.078 seconds)
+
+
+
+.. container:: sphx-glr-footer
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Python source code: map_resampling_and_superpixels.py <map_resampling_and_superpixels.py>`
+
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Jupyter notebook: map_resampling_and_superpixels.ipynb <map_resampling_and_superpixels.ipynb>`
+
+.. rst-class:: sphx-glr-signature
+
+    `Generated by Sphinx-Gallery <https://sphinx-gallery.readthedocs.io>`_

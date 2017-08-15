@@ -1,0 +1,27 @@
+LASCOMap
+========
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: LASCOMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~LASCOMap.measurement
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LASCOMap.is_datasource_for
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: measurement
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

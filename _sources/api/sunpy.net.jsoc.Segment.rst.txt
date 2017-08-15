@@ -1,0 +1,7 @@
+Segment
+=======
+
+.. currentmodule:: sunpy.net.jsoc
+
+.. autoclass:: Segment
+   :show-inheritance:

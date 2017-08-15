@@ -1,0 +1,7 @@
+Starred
+=======
+
+.. currentmodule:: sunpy.database.attrs
+
+.. autoclass:: Starred
+   :show-inheritance:

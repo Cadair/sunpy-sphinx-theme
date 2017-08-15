@@ -1,0 +1,19 @@
+RHESSISummaryTimeSeries
+=======================
+
+.. currentmodule:: sunpy.timeseries
+
+.. autoclass:: RHESSISummaryTimeSeries
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~RHESSISummaryTimeSeries.is_datasource_for
+      ~RHESSISummaryTimeSeries.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for
+   .. automethod:: peek

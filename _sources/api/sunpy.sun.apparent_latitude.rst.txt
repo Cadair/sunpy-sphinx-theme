@@ -1,0 +1,6 @@
+apparent_latitude
+=================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: apparent_latitude

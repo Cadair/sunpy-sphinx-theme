@@ -1,0 +1,6 @@
+entries_from_dir
+================
+
+.. currentmodule:: sunpy.database.tables
+
+.. autofunction:: entries_from_dir

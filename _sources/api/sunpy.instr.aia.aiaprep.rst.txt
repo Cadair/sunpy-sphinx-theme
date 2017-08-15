@@ -1,0 +1,6 @@
+aiaprep
+=======
+
+.. currentmodule:: sunpy.instr.aia
+
+.. autofunction:: aiaprep

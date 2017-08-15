@@ -1,0 +1,6 @@
+source_stretch
+==============
+
+.. currentmodule:: sunpy.map.sources
+
+.. autofunction:: source_stretch

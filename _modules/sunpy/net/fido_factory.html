@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.net.fido_factory &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.net.fido_factory | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/net/fido_factory.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.net.fido_factory</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains the factory code for the ``sunpy.net.Fido`` factory. As</span>
+<span class="sd">well as defining ``Fido`` which is an instance of</span>
+<span class="sd">`sunpy.net.fido_factory.UnifiedDownloaderFactory` it defines</span>
+<span class="sd">`~sunpy.net.fido_factory.UnifiedResponse` which ``Fido.search`` returns.</span>
+<span class="sd">`~sunpy.net.fido_factory.DownloadResponse` objects are returned by ``Fido.fetch``.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1"># This module was initially developed under funding provided by Google Summer</span>
+<span class="c1"># of Code 2014</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Sequence</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.util.datatype_factory_base</span> <span class="k">import</span> <span class="n">BasicRegistrationFactory</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.datatype_factory_base</span> <span class="k">import</span> <span class="n">NoMatchError</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.datatype_factory_base</span> <span class="k">import</span> <span class="n">MultipleMatchError</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.net.dataretriever.clients</span> <span class="k">import</span> <span class="n">CLIENTS</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.dataretriever.client</span> <span class="k">import</span> <span class="n">QueryResponse</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.vso</span> <span class="k">import</span> <span class="n">VSOClient</span><span class="p">,</span> <span class="n">QueryResponse</span> <span class="k">as</span> <span class="n">vsoQueryResponse</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">attr</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">attrs</span> <span class="k">as</span> <span class="n">a</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fido&#39;</span><span class="p">,</span> <span class="s1">&#39;UnifiedResponse&#39;</span><span class="p">,</span> <span class="s1">&#39;UnifiedDownloaderFactory&#39;</span><span class="p">,</span> <span class="s1">&#39;DownloadResponse&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="UnifiedResponse"><a class="viewcode-back" href="../../../api/sunpy.net.fido_factory.UnifiedResponse.html#sunpy.net.fido_factory.UnifiedResponse">[docs]</a><span class="k">class</span> <span class="nc">UnifiedResponse</span><span class="p">(</span><span class="n">Sequence</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The object used to store results from `~sunpy.net.UnifiedDownloaderFactory.search`.</span>
+
+<span class="sd">    The `~sunpy.net.Fido` object returns results from multiple different</span>
+<span class="sd">    clients. So it is always possible to sub-select these results, you can</span>
+<span class="sd">    index this object with two indices. The first index is the client index,</span>
+<span class="sd">    i.e. corresponding to the results from the `~sunpy.net.vso.VSOClient`. The</span>
+<span class="sd">    second index can be used to select records from the results returned from</span>
+<span class="sd">    that client, for instance if you only want every second result you could</span>
+<span class="sd">    index the second dimension with ``::2``.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    lst : `object`</span>
+<span class="sd">        A single instance or an iterable of ``(QueryResponse, client)`` pairs</span>
+<span class="sd">        or ``QueryResponse`` objects with a ``.client`` attribute.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lst</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Input to this constructor can be one of a few things:</span>
+
+<span class="sd">        1. A ``QueryResponse`` object</span>
+<span class="sd">        2. A list of tuples ``(QueryResponse, client)``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">tmplst</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># numfile is the number of files not the number of results.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_numfile</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="p">(</span><span class="n">QueryResponse</span><span class="p">,</span> <span class="n">vsoQueryResponse</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="s1">&#39;client&#39;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="p">(</span><span class="s2">&quot;A </span><span class="si">{}</span><span class="s2"> object is only a valid input to UnifiedResponse &quot;</span>
+                    <span class="s2">&quot;if it has a client attribute.&quot;</span><span class="p">)</span><span class="o">.</span>
+                    <span class="nb">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
+            <span class="n">tmplst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_numfile</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">block</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">block</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">tmplst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">block</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_numfile</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">block</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="s1">&#39;client&#39;</span><span class="p">):</span>
+                    <span class="n">tmplst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_numfile</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is not a valid input to UnifiedResponse.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">lst</span><span class="p">)))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_list</span> <span class="o">=</span> <span class="n">tmplst</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_list</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">responses</span>
+
+    <span class="k">def</span> <span class="nf">_handle_record_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_resp</span><span class="p">,</span> <span class="n">record_slice</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Given a slice to be applied to the results from a single client, return</span>
+<span class="sd">        an object of the same type as client_resp.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># When we subindex, we want to persist the type of the response object.</span>
+        <span class="n">resp_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">client_resp</span><span class="p">)</span>
+
+        <span class="c1"># Make sure we always have an iterable, as most of the response objects</span>
+        <span class="c1"># expect one.</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">record_slice</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">resp</span> <span class="o">=</span> <span class="p">[</span><span class="n">client_resp</span><span class="p">[</span><span class="n">record_slice</span><span class="p">]]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resp</span> <span class="o">=</span> <span class="n">client_resp</span><span class="p">[</span><span class="n">record_slice</span><span class="p">]</span>
+
+        <span class="c1"># Reconstruct a response object with the sub-indexed records.</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">resp_type</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="c1"># Make sure we pass the client back out again.</span>
+        <span class="n">ret</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">client_resp</span><span class="o">.</span><span class="n">client</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aslice</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Support slicing the UnifiedResponse as a 2D object.</span>
+
+<span class="sd">        The first index is to the client and the second index is the records</span>
+<span class="sd">        returned from those clients.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Just a single int as a slice, we are just indexing client.</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">aslice</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)):</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_list</span><span class="p">[</span><span class="n">aslice</span><span class="p">]</span>
+
+        <span class="c1"># Make sure we only have a length two slice.</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">aslice</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">aslice</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">&quot;UnifiedResponse objects can only &quot;</span>
+                                 <span class="s2">&quot;be sliced with one or two indices.&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Indexing both client and records, but only for one client.</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">aslice</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="n">client_resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_list</span><span class="p">[</span><span class="n">aslice</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_record_slice</span><span class="p">(</span><span class="n">client_resp</span><span class="p">,</span> <span class="n">aslice</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+            <span class="c1"># Indexing both client and records for multiple clients.</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">intermediate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_list</span><span class="p">[</span><span class="n">aslice</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">client_resp</span> <span class="ow">in</span> <span class="n">intermediate</span><span class="p">:</span>
+                    <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_record_slice</span><span class="p">(</span><span class="n">client_resp</span><span class="p">,</span> <span class="n">aslice</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">&quot;UnifiedResponse objects must be sliced with integers.&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">UnifiedResponse</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the actual response rather than another UnifiedResponse object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">response_block_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a set of class attributes on all the response blocks.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">response_block_properties</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)):</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">response_block_properties</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">s</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">responses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A generator of all the `sunpy.net.dataretriever.client.QueryResponse`</span>
+<span class="sd">        objects contained in the `~sunpy.net.fido_factory.UnifiedResponse`</span>
+<span class="sd">        object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)):</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">file_num</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numfile</span>
+
+    <span class="k">def</span> <span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nprov</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nprov</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="s1">&#39;Results from </span><span class="si">{}</span><span class="s1"> Provider:&lt;/br&gt;&lt;/br&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="s1">&#39;Results from </span><span class="si">{}</span><span class="s1"> Providers:&lt;/br&gt;&lt;/br&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">responses</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> Results from the </span><span class="si">{}</span><span class="s2">:&lt;/br&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">block</span><span class="p">),</span>
+                                                         <span class="n">block</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="n">block</span><span class="o">.</span><span class="n">_repr_html_</span><span class="p">()</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/br&gt;&#39;</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">UnifiedResponse</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span>
+        <span class="n">ret</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nprov</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nprov</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="s1">&#39;Results from </span><span class="si">{}</span><span class="s1"> Provider:</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="s1">&#39;Results from </span><span class="si">{}</span><span class="s1"> Providers:</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">responses</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> Results from the </span><span class="si">{}</span><span class="s2">:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">block</span><span class="p">),</span> <span class="n">block</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">block</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+<div class="viewcode-block" id="DownloadResponse"><a class="viewcode-back" href="../../../api/sunpy.net.fido_factory.DownloadResponse.html#sunpy.net.fido_factory.DownloadResponse">[docs]</a><span class="k">class</span> <span class="nc">DownloadResponse</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Object returned by clients servicing the query.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lst</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DownloadResponse</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+
+<div class="viewcode-block" id="DownloadResponse.wait"><a class="viewcode-back" href="../../../api/sunpy.net.fido_factory.DownloadResponse.html#sunpy.net.fido_factory.DownloadResponse.wait">[docs]</a>    <span class="k">def</span> <span class="nf">wait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Waits for all files to download completely and then return.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        progress : `bool`</span>
+<span class="sd">            if true, display a progress bar.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        List of file paths to which files have been downloaded.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">filelist</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">resobj</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="n">filelist</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">resobj</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">filelist</span></div></div>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Construct a simple AttrWalker to split up searches into blocks of attrs being</span>
+<span class="sd">&#39;anded&#39; with AttrAnd.</span>
+
+<span class="sd">This pipeline only understands AttrAnd and AttrOr, Fido.search passes in an</span>
+<span class="sd">AttrAnd object of all the query parameters, if an AttrOr is encountered the</span>
+<span class="sd">query is split into the component parts of the OR, which at somepoint will end</span>
+<span class="sd">up being an AttrAnd object, at which point it is passed into</span>
+<span class="sd">_get_registered_widget.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">query_walker</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">AttrWalker</span><span class="p">()</span>
+
+
+<span class="nd">@query_walker</span><span class="o">.</span><span class="n">add_creator</span><span class="p">(</span><span class="n">attr</span><span class="o">.</span><span class="n">AttrAnd</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_create_and</span><span class="p">(</span><span class="n">walker</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">factory</span><span class="p">):</span>
+    <span class="n">att</span> <span class="o">=</span> <span class="p">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">attrs</span><span class="p">}</span>
+    <span class="k">if</span> <span class="n">a</span><span class="o">.</span><span class="n">Time</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">att</span><span class="p">:</span>
+        <span class="n">error</span> <span class="o">=</span> <span class="s2">&quot;The following part of the query did not have a time specified:</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">for</span> <span class="n">at</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
+            <span class="n">error</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">at</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+
+    <span class="c1"># Return the response and the client</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">factory</span><span class="o">.</span><span class="n">_make_query_to_client</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="o">.</span><span class="n">attrs</span><span class="p">)]</span>
+
+
+<span class="nd">@query_walker</span><span class="o">.</span><span class="n">add_creator</span><span class="p">(</span><span class="n">attr</span><span class="o">.</span><span class="n">AttrOr</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_create_or</span><span class="p">(</span><span class="n">walker</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">factory</span><span class="p">):</span>
+    <span class="n">qblocks</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">attrblock</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
+        <span class="n">qblocks</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">walker</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">attr</span><span class="o">.</span><span class="n">and_</span><span class="p">(</span><span class="n">attrblock</span><span class="p">),</span> <span class="n">factory</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">qblocks</span>
+
+
+<div class="viewcode-block" id="UnifiedDownloaderFactory"><a class="viewcode-back" href="../../../api/sunpy.net.fido_factory.UnifiedDownloaderFactory.html#sunpy.net.fido_factory.UnifiedDownloaderFactory">[docs]</a><span class="k">class</span> <span class="nc">UnifiedDownloaderFactory</span><span class="p">(</span><span class="n">BasicRegistrationFactory</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    sunpy.net.Fido(\*args, \*\*kwargs)</span>
+
+<span class="sd">    Search and Download data from a variety of supported sources.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="UnifiedDownloaderFactory.search"><a class="viewcode-back" href="../../../api/sunpy.net.fido_factory.UnifiedDownloaderFactory.html#sunpy.net.fido_factory.UnifiedDownloaderFactory.search">[docs]</a>    <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Query for data in form of multiple parameters.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Query for LYRALightCurve data for the time range (&#39;2012/3/4&#39;,&#39;2012/3/6&#39;)</span>
+
+<span class="sd">        &gt;&gt;&gt; from sunpy.net import Fido, attrs as a</span>
+<span class="sd">        &gt;&gt;&gt; unifresp = Fido.search(a.Time(&#39;2012/3/4&#39;, &#39;2012/3/6&#39;), a.Instrument(&#39;lyra&#39;))</span>
+
+<span class="sd">        Query for data from Nobeyama Radioheliograph and RHESSI</span>
+
+<span class="sd">        &gt;&gt;&gt; unifresp = Fido.search(a.Time(&#39;2012/3/4&#39;, &#39;2012/3/6&#39;),</span>
+<span class="sd">                          (a.Instrument(&#39;norh&#39;) &amp; a.Wavelength(17*u.GHz)) | a.Instrument(&#39;rhessi&#39;))</span>
+
+<span class="sd">        Query for 304 Angstrom SDO AIA data with a cadence of 10 minutes</span>
+
+<span class="sd">        &gt;&gt;&gt; import astropy.units as u</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.net import Fido, attrs as a</span>
+<span class="sd">        &gt;&gt;&gt; unifresp = Fido.search(a.Time(&#39;2012/3/4&#39;, &#39;2012/3/6&#39;),</span>
+<span class="sd">                                   a.Instrument(&#39;AIA&#39;),</span>
+<span class="sd">                                   a.Wavelength(304*u.angstrom, 304*u.angstrom),</span>
+<span class="sd">                                   a.vso.Sample(10*u.minute))</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query : `sunpy.net.vso.attrs`, `sunpy.net.jsoc.attrs`</span>
+<span class="sd">            A query consisting of multiple parameters which define the</span>
+<span class="sd">            requested data.  The query is specified using attributes from the</span>
+<span class="sd">            VSO and the JSOC.  The query can mix attributes from the VSO and</span>
+<span class="sd">            the JSOC.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `sunpy.net.fido_factory.UnifiedResponse` object</span>
+<span class="sd">            Container of responses returned by clients servicing query.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The conjunction &#39;and&#39; transforms query into disjunctive normal form</span>
+<span class="sd">        ie. query is now of form A &amp; B or ((A &amp; B) | (C &amp; D))</span>
+<span class="sd">        This helps in modularising query into parts and handling each of the</span>
+<span class="sd">        parts individually.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">and_</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">UnifiedResponse</span><span class="p">(</span><span class="n">query_walker</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span></div>
+
+    <span class="c1"># Python 3: this line should be like this</span>
+    <span class="c1"># def fetch(self, *query_results, wait=True, progress=True, **kwargs):</span>
+<div class="viewcode-block" id="UnifiedDownloaderFactory.fetch"><a class="viewcode-back" href="../../../api/sunpy.net.fido_factory.UnifiedDownloaderFactory.html#sunpy.net.fido_factory.UnifiedDownloaderFactory.fetch">[docs]</a>    <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">query_results</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Download the records represented by</span>
+<span class="sd">        `~sunpy.net.fido_factory.UnifiedResponse` objects.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query_results : `sunpy.net.fido_factory.UnifiedResponse`</span>
+<span class="sd">            Container returned by query method, or multiple.</span>
+
+<span class="sd">        wait : `bool`</span>
+<span class="sd">            fetch will wait until the download is complete before returning.</span>
+
+<span class="sd">        progress : `bool`</span>
+<span class="sd">            Show a progress bar while the download is running.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `sunpy.net.fido_factory.DownloadResponse`</span>
+
+<span class="sd">        Example</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.net.vso.attrs import Time, Instrument</span>
+<span class="sd">        &gt;&gt;&gt; unifresp = Fido.search(Time(&#39;2012/3/4&#39;,&#39;2012/3/6&#39;), Instrument(&#39;AIA&#39;))</span>
+<span class="sd">        &gt;&gt;&gt; downresp = Fido.fetch(unifresp)</span>
+<span class="sd">        &gt;&gt;&gt; file_paths = downresp.wait()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">wait</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;wait&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">progress</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;progress&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">reslist</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">query_result</span> <span class="ow">in</span> <span class="n">query_results</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">query_result</span><span class="o">.</span><span class="n">responses</span><span class="p">:</span>
+                <span class="n">reslist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">block</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="n">DownloadResponse</span><span class="p">(</span><span class="n">reslist</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">wait</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">results</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">results</span></div>
+
+<div class="viewcode-block" id="UnifiedDownloaderFactory.__call__"><a class="viewcode-back" href="../../../api/sunpy.net.fido_factory.UnifiedDownloaderFactory.html#sunpy.net.fido_factory.UnifiedDownloaderFactory.__call__">[docs]</a>    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">{}</span><span class="s2">&#39; object is not callable&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span></div>
+
+    <span class="k">def</span> <span class="nf">_check_registered_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Factory helper function&quot;&quot;&quot;</span>
+        <span class="n">candidate_widget_types</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="p">[</span><span class="n">key</span><span class="p">](</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+                <span class="n">candidate_widget_types</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+        <span class="n">n_matches</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidate_widget_types</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">n_matches</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># There is no default client</span>
+            <span class="k">raise</span> <span class="n">NoMatchError</span><span class="p">(</span><span class="s2">&quot;This query was not understood by any clients. Did you miss an OR?&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">n_matches</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="c1"># If two clients have reported they understand this query, and one</span>
+            <span class="c1"># of them is the VSOClient, then we ignore VSOClient.</span>
+            <span class="k">if</span> <span class="n">VSOClient</span> <span class="ow">in</span> <span class="n">candidate_widget_types</span><span class="p">:</span>
+                <span class="n">candidate_widget_types</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">VSOClient</span><span class="p">)</span>
+
+        <span class="c1"># Finally check that we only have one match.</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidate_widget_types</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">candidate_names</span> <span class="o">=</span> <span class="p">[</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="n">candidate_widget_types</span><span class="p">]</span>
+            <span class="k">raise</span> <span class="n">MultipleMatchError</span><span class="p">(</span><span class="s2">&quot;The following clients matched this query. &quot;</span>
+                                     <span class="s2">&quot;Please make your query more specific.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                                     <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">candidate_names</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">candidate_widget_types</span>
+
+    <span class="k">def</span> <span class="nf">_make_query_to_client</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Given a query, look up the client and perform the query.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query : collection of `~sunpy.net.vso.attr` objects</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        response : `~sunpy.net.dataretriever.client.QueryResponse`</span>
+
+<span class="sd">        client : `object`</span>
+<span class="sd">		Instance of client class</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">candidate_widget_types</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_registered_widgets</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">)</span>
+        <span class="n">tmpclient</span> <span class="o">=</span> <span class="n">candidate_widget_types</span><span class="p">[</span><span class="mi">0</span><span class="p">]()</span>
+        <span class="k">return</span> <span class="n">tmpclient</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">),</span> <span class="n">tmpclient</span></div>
+
+
+<span class="n">Fido</span> <span class="o">=</span> <span class="n">UnifiedDownloaderFactory</span><span class="p">(</span>
+    <span class="n">registry</span><span class="o">=</span><span class="n">CLIENTS</span><span class="p">,</span> <span class="n">additional_validation_functions</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;_can_handle_query&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

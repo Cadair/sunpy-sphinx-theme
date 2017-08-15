@@ -1,0 +1,27 @@
+LFUCache
+========
+
+.. currentmodule:: sunpy.database.caching
+
+.. autoclass:: LFUCache
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~LFUCache.to_be_removed
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LFUCache.remove
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: to_be_removed
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: remove

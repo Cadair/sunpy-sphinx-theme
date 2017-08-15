@@ -1,0 +1,7 @@
+Source
+======
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Source
+   :show-inheritance:

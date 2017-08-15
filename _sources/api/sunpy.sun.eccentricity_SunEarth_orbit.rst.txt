@@ -1,0 +1,6 @@
+eccentricity_SunEarth_orbit
+===========================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: eccentricity_SunEarth_orbit

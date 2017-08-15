@@ -1,0 +1,21 @@
+BaseFuncAnimator
+================
+
+.. currentmodule:: sunpy.visualization.imageanimator
+
+.. autoclass:: BaseFuncAnimator
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BaseFuncAnimator.get_animation
+      ~BaseFuncAnimator.label_slider
+      ~BaseFuncAnimator.plot_start_image
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_animation
+   .. automethod:: label_slider
+   .. automethod:: plot_start_image

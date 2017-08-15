@@ -1,0 +1,7 @@
+Notify
+======
+
+.. currentmodule:: sunpy.net.jsoc
+
+.. autoclass:: Notify
+   :show-inheritance:

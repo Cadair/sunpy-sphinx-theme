@@ -1,0 +1,6 @@
+mapcube_solar_derotate
+======================
+
+.. currentmodule:: sunpy.physics.solar_rotation
+
+.. autofunction:: mapcube_solar_derotate

@@ -1,0 +1,7 @@
+GOESClient
+==========
+
+.. currentmodule:: sunpy.net.dataretriever.sources
+
+.. autoclass:: GOESClient
+   :show-inheritance:

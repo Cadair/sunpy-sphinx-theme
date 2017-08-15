@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.net.dataretriever.sources.noaa &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.net.dataretriever.sources.noaa | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/net/dataretriever/sources/noaa.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.net.dataretriever.sources.noaa</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Author: Rishabh Sharma &lt;rishabh.sharma.gunner@gmail.com&gt;</span>
+<span class="c1"># This module was developed under funding provided by</span>
+<span class="c1"># Google Summer of Code 2014</span>
+
+
+<span class="kn">from</span> <span class="nn">..client</span> <span class="k">import</span> <span class="n">GenericClient</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">tarfile</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+
+<span class="kn">import</span> <span class="nn">sunpy</span>
+<span class="kn">from</span> <span class="nn">sunpy.util</span> <span class="k">import</span> <span class="n">replacement_filename</span><span class="p">,</span> <span class="n">deprecated</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.dataretriever.client</span> <span class="k">import</span> <span class="n">simple_path</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.net.download</span> <span class="k">import</span> <span class="n">Downloader</span><span class="p">,</span> <span class="n">Results</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NOAAIndicesClient&#39;</span><span class="p">,</span> <span class="s1">&#39;NOAAPredictClient&#39;</span><span class="p">,</span> <span class="s1">&#39;SRSClient&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="NOAAIndicesClient"><a class="viewcode-back" href="../../../../../api/sunpy.net.dataretriever.sources.NOAAIndicesClient.html#sunpy.net.dataretriever.sources.NOAAIndicesClient">[docs]</a><span class="k">class</span> <span class="nc">NOAAIndicesClient</span><span class="p">(</span><span class="n">GenericClient</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_default_uri</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;Return the url to download indices&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;ftp://ftp.swpc.noaa.gov/pub/weekly/RecentIndices.txt&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_get_url_for_timerange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timerange</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Helper function:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">NOAAIndicesClient</span><span class="o">.</span><span class="n">_get_default_uri</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_makeimap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Helper Function:used to hold information about source.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sdic&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;instrument&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;noaa-indices&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;physobs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sunspot number&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;provider&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;swpc&#39;</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_can_handle_query</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Answers whether client can service the query.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query : list of query objects</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        boolean</span>
+<span class="sd">            answer as to whether client can service the query</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">chkattr</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Instrument&#39;</span><span class="p">]</span>
+        <span class="n">chklist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="ow">in</span> <span class="n">chkattr</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">query</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">query</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;Instrument&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;noaa-indices&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">chklist</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="NOAAPredictClient"><a class="viewcode-back" href="../../../../../api/sunpy.net.dataretriever.sources.NOAAPredictClient.html#sunpy.net.dataretriever.sources.NOAAPredictClient">[docs]</a><span class="k">class</span> <span class="nc">NOAAPredictClient</span><span class="p">(</span><span class="n">GenericClient</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_default_uri</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;Return the url to download indices&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;http://services.swpc.noaa.gov/text/predicted-sunspot-radio-flux.txt&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_get_url_for_timerange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timerange</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Helper function:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">NOAAPredictClient</span><span class="o">.</span><span class="n">_get_default_uri</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_makeimap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Helper Function:used to hold information about source.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ises&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;instrument&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;noaa-predict&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;physobs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sunspot number&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;provider&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;swpc&#39;</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_can_handle_query</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Answers whether client can service the query.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query : list of query objects</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        boolean</span>
+<span class="sd">            answer as to whether client can service the query</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">chkattr</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Instrument&#39;</span><span class="p">]</span>
+        <span class="n">chklist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="ow">in</span> <span class="n">chkattr</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">query</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">query</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;Instrument&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;noaa-predict&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">chklist</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<span class="k">class</span> <span class="nc">SRSClient</span><span class="p">(</span><span class="n">GenericClient</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_default_uri</span><span class="p">():</span>
+        <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">[(</span><span class="s1">&#39;ftp://ftp.swpc.noaa.gov/pub/warehouse/&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;{date:%Y}/SRS/{date:%Y%m</span><span class="si">%d</span><span class="s1">}SRS.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">today</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="nf">_get_url_for_timerange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timerange</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">timerange</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">SRSClient</span><span class="o">.</span><span class="n">_get_default_uri</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;ftp://ftp.swpc.noaa.gov/pub/warehouse/&#39;</span>
+        <span class="n">total_days</span> <span class="o">=</span> <span class="p">(</span><span class="n">timerange</span><span class="o">.</span><span class="n">end</span> <span class="o">-</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span><span class="p">)</span><span class="o">.</span><span class="n">days</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">all_dates</span> <span class="o">=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">total_days</span><span class="p">)</span>
+        <span class="n">today_year</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
+        <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">all_dates</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">today_year</span> <span class="o">==</span> <span class="n">day</span><span class="o">.</span><span class="n">end</span><span class="o">.</span><span class="n">year</span><span class="p">:</span>
+                <span class="n">suffix</span> <span class="o">=</span> <span class="s1">&#39;{date:%Y}/SRS/{date:%Y%m</span><span class="si">%d</span><span class="s1">}SRS.txt&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">suffix</span> <span class="o">=</span> <span class="s1">&#39;{date:%Y}/{date:%Y}_SRS.tar.gz&#39;</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="n">suffix</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">day</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qres</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">error_callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Download a set of results.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        qres : `~sunpy.net.dataretriever.QueryResponse`</span>
+<span class="sd">            Results to download.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Results Object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="n">qrblock</span><span class="o">.</span><span class="n">url</span> <span class="k">for</span> <span class="n">qrblock</span> <span class="ow">in</span> <span class="n">qres</span><span class="p">]</span>
+
+        <span class="n">filenames</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">local_filenames</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">[</span><span class="n">url</span><span class="p">,</span> <span class="n">qre</span><span class="p">]</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="n">qres</span><span class="p">)):</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+            <span class="c1"># temporary fix !!! coz All QRBs have same start_time values</span>
+            <span class="n">day</span> <span class="o">=</span> <span class="n">qre</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">date</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+                <span class="n">filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.gz&#39;</span><span class="p">):</span>
+                <span class="n">local_filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;{date:%Y%m</span><span class="si">%d</span><span class="s1">}SRS.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">day</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">local_filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="c1"># Files to be actually downloaded</span>
+        <span class="n">paths</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_full_filenames</span><span class="p">(</span><span class="n">qres</span><span class="p">,</span> <span class="n">filenames</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+
+        <span class="c1"># Those files that will be present after get returns</span>
+        <span class="n">local_paths</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_full_filenames</span><span class="p">(</span><span class="n">qres</span><span class="p">,</span> <span class="n">local_filenames</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="n">Results</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">map_</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_link</span><span class="p">(</span><span class="n">map_</span><span class="p">))</span>
+
+        <span class="c1"># remove duplicate urls. This will make paths and urls to have same number of elements.</span>
+        <span class="c1"># OrderedDict is required to maintain ordering because it will be zipped with paths later</span>
+
+        <span class="n">urls</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">OrderedDict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">urls</span><span class="p">))</span>
+
+        <span class="n">dobj</span> <span class="o">=</span> <span class="n">Downloader</span><span class="p">(</span><span class="n">max_conn</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">urls</span><span class="p">),</span> <span class="n">max_total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">urls</span><span class="p">))</span>
+
+        <span class="c1"># We cast to list here in list(zip... to force execution of</span>
+        <span class="c1"># res.require([x]) at the start of the loop.</span>
+        <span class="k">for</span> <span class="n">aurl</span><span class="p">,</span> <span class="n">ncall</span><span class="p">,</span> <span class="n">fname</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">require</span><span class="p">([</span><span class="n">x</span><span class="p">]),</span>
+                                                     <span class="n">urls</span><span class="p">),</span> <span class="n">paths</span><span class="p">)):</span>
+            <span class="n">dobj</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">aurl</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">ncall</span><span class="p">,</span> <span class="n">error_callback</span><span class="p">)</span>
+
+        <span class="n">res</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+        <span class="n">res2</span> <span class="o">=</span> <span class="n">Results</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">fname</span><span class="p">,</span> <span class="n">srs_filename</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">local_paths</span><span class="p">,</span> <span class="n">local_filenames</span><span class="p">):</span>
+
+            <span class="n">fname</span> <span class="o">=</span> <span class="n">fname</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">fname</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+            <span class="n">past_year</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">fname2</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">paths</span><span class="p">):</span>
+
+                <span class="n">fname2</span> <span class="o">=</span> <span class="n">fname2</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="n">fname2</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.txt&#39;</span><span class="p">):</span>
+                    <span class="k">continue</span>
+
+                <span class="n">year</span> <span class="o">=</span> <span class="n">fname2</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">year</span> <span class="o">=</span> <span class="n">year</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_SRS&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+                    <span class="n">TarFile</span> <span class="o">=</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname2</span><span class="p">)</span>
+                    <span class="n">filepath</span> <span class="o">=</span> <span class="n">fname</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">member</span> <span class="o">=</span> <span class="n">TarFile</span><span class="o">.</span><span class="n">getmember</span><span class="p">(</span><span class="s1">&#39;SRS/&#39;</span> <span class="o">+</span> <span class="n">srs_filename</span><span class="p">)</span>
+                    <span class="n">member</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+                    <span class="n">TarFile</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">filepath</span><span class="p">)</span>
+                    <span class="n">TarFile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+                    <span class="n">callback</span> <span class="o">=</span> <span class="n">res2</span><span class="o">.</span><span class="n">require</span><span class="p">([</span><span class="n">fname</span><span class="p">])</span>
+                    <span class="n">callback</span><span class="p">({</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="n">fname</span><span class="p">})</span>
+
+                    <span class="n">past_year</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">break</span>
+
+            <span class="k">if</span> <span class="n">past_year</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="n">callback</span> <span class="o">=</span> <span class="n">res2</span><span class="o">.</span><span class="n">require</span><span class="p">([</span><span class="n">fname</span><span class="p">])</span>
+                <span class="n">callback</span><span class="p">({</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="n">fname</span><span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">res2</span>
+
+    <span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;0.8&#39;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;NOAAPredictClient.fetch&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qres</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">error_callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        See `~sunpy.net.dataretriever.sources.noaa.NOAAPredictClient.fetch`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">qres</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">error_callback</span><span class="o">=</span><span class="n">error_callback</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_makeimap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;swpc&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;instrument&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SOON&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;physobs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SRS&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NOAA/USAF&#39;</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_can_handle_query</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Answers whether client can service the query.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query : list of query objects</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        boolean</span>
+<span class="sd">            answer as to whether client can service the query</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">chkattr</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span> <span class="s2">&quot;Instrument&quot;</span><span class="p">]</span>
+        <span class="n">chklist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="ow">in</span> <span class="n">chkattr</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">query</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">query</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;Instrument&quot;</span> <span class="ow">and</span>\
+               <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;soon&quot;</span><span class="p">,</span> <span class="s2">&quot;srs_table&quot;</span><span class="p">]:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

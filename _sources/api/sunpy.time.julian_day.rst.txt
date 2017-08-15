@@ -1,0 +1,6 @@
+julian_day
+==========
+
+.. currentmodule:: sunpy.time
+
+.. autofunction:: julian_day

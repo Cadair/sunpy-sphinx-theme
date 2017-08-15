@@ -1,0 +1,31 @@
+XRTMap
+======
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: XRTMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~XRTMap.filter_wheel1_measurements
+      ~XRTMap.filter_wheel2_measurements
+      ~XRTMap.measurement
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~XRTMap.is_datasource_for
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: filter_wheel1_measurements
+   .. autoattribute:: filter_wheel2_measurements
+   .. autoattribute:: measurement
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

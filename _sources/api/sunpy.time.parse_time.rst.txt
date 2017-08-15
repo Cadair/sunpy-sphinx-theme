@@ -1,0 +1,6 @@
+parse_time
+==========
+
+.. currentmodule:: sunpy.time
+
+.. autofunction:: parse_time

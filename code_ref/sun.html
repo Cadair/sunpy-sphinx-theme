@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy sun &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="apparent_declination" href="../api/sunpy.sun.apparent_declination.html" />
+    <link rel="prev" title="SWavesSpectrogram" href="../api/sunpy.spectra.sources.SWavesSpectrogram.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy sun | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/code_ref/sun.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SunPy sun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.apparent_declination.html">apparent_declination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.apparent_latitude.html">apparent_latitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.apparent_longitude.html">apparent_longitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.apparent_obliquity_of_ecliptic.html">apparent_obliquity_of_ecliptic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.apparent_rightascension.html">apparent_rightascension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.carrington_rotation_number.html">carrington_rotation_number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.eccentricity_SunEarth_orbit.html">eccentricity_SunEarth_orbit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.equation_of_center.html">equation_of_center</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.geometric_mean_longitude.html">geometric_mean_longitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.heliographic_solar_center.html">heliographic_solar_center</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.longitude_Sun_perigee.html">longitude_Sun_perigee</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.mean_anomaly.html">mean_anomaly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.mean_ecliptic_longitude.html">mean_ecliptic_longitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.position.html">position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.print_params.html">print_params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.solar_cycle_number.html">solar_cycle_number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.solar_north.html">solar_north</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.solar_semidiameter_angular_size.html">solar_semidiameter_angular_size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.sunearth_distance.html">sunearth_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.true_anomaly.html">true_anomaly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.true_declination.html">true_declination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.true_latitude.html">true_latitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.true_longitude.html">true_longitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.true_obliquity_of_ecliptic.html">true_obliquity_of_ecliptic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.true_rightascension.html">true_rightascension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.constants.get.html">get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.constants.find.html">find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.sun.constants.print_all.html">print_all</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-sun">
+<span id="sun-code-ref"></span><h1>SunPy sun<a class="headerlink" href="#sunpy-sun" title="Permalink to this headline">¶</a></h1>
+<p>The sun submodule contains constants, parameters and models of the Sun.</p>
+<div class="section" id="module-sunpy.sun">
+<span id="sunpy-sun-package"></span><h2>sunpy.sun Package<a class="headerlink" href="#module-sunpy.sun" title="Permalink to this headline">¶</a></h2>
+<p>Contains astronomical and physical constants for use in SunPy or other
+places.</p>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.apparent_declination.html#sunpy.sun.apparent_declination" title="sunpy.sun.apparent_declination"><code class="xref py py-obj docutils literal"><span class="pre">apparent_declination</span></code></a>([t])</td>
+<td>Returns the apparent declination of the Sun.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.apparent_latitude.html#sunpy.sun.apparent_latitude" title="sunpy.sun.apparent_latitude"><code class="xref py py-obj docutils literal"><span class="pre">apparent_latitude</span></code></a>([t])</td>
+<td>Returns the true latitude.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.apparent_longitude.html#sunpy.sun.apparent_longitude" title="sunpy.sun.apparent_longitude"><code class="xref py py-obj docutils literal"><span class="pre">apparent_longitude</span></code></a>([t])</td>
+<td>Returns the apparent longitude of the Sun.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.apparent_obliquity_of_ecliptic.html#sunpy.sun.apparent_obliquity_of_ecliptic" title="sunpy.sun.apparent_obliquity_of_ecliptic"><code class="xref py py-obj docutils literal"><span class="pre">apparent_obliquity_of_ecliptic</span></code></a>([t])</td>
+<td>Return the apparent obliquity of the ecliptic.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.apparent_rightascension.html#sunpy.sun.apparent_rightascension" title="sunpy.sun.apparent_rightascension"><code class="xref py py-obj docutils literal"><span class="pre">apparent_rightascension</span></code></a>([t])</td>
+<td>Returns the apparent right ascension of the Sun.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.carrington_rotation_number.html#sunpy.sun.carrington_rotation_number" title="sunpy.sun.carrington_rotation_number"><code class="xref py py-obj docutils literal"><span class="pre">carrington_rotation_number</span></code></a>([t])</td>
+<td>Return the Carrington Rotation number</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.eccentricity_SunEarth_orbit.html#sunpy.sun.eccentricity_SunEarth_orbit" title="sunpy.sun.eccentricity_SunEarth_orbit"><code class="xref py py-obj docutils literal"><span class="pre">eccentricity_SunEarth_orbit</span></code></a>([t])</td>
+<td>Returns the eccentricity of the Sun Earth Orbit.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.equation_of_center.html#sunpy.sun.equation_of_center" title="sunpy.sun.equation_of_center"><code class="xref py py-obj docutils literal"><span class="pre">equation_of_center</span></code></a>([t])</td>
+<td>Returns the Sun&#8217;s equation of center (in degrees)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.geometric_mean_longitude.html#sunpy.sun.geometric_mean_longitude" title="sunpy.sun.geometric_mean_longitude"><code class="xref py py-obj docutils literal"><span class="pre">geometric_mean_longitude</span></code></a>([t])</td>
+<td>Returns the geometric mean longitude (in degrees)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.heliographic_solar_center.html#sunpy.sun.heliographic_solar_center" title="sunpy.sun.heliographic_solar_center"><code class="xref py py-obj docutils literal"><span class="pre">heliographic_solar_center</span></code></a>([t])</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.longitude_Sun_perigee.html#sunpy.sun.longitude_Sun_perigee" title="sunpy.sun.longitude_Sun_perigee"><code class="xref py py-obj docutils literal"><span class="pre">longitude_Sun_perigee</span></code></a>([t])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.mean_anomaly.html#sunpy.sun.mean_anomaly" title="sunpy.sun.mean_anomaly"><code class="xref py py-obj docutils literal"><span class="pre">mean_anomaly</span></code></a>([t])</td>
+<td>Returns the mean anomaly (the angle through which the Sun has moved assuming a circular orbit) as a function of time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.mean_ecliptic_longitude.html#sunpy.sun.mean_ecliptic_longitude" title="sunpy.sun.mean_ecliptic_longitude"><code class="xref py py-obj docutils literal"><span class="pre">mean_ecliptic_longitude</span></code></a>([t])</td>
+<td>Returns the mean ecliptic longitude.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.position.html#sunpy.sun.position" title="sunpy.sun.position"><code class="xref py py-obj docutils literal"><span class="pre">position</span></code></a>([t])</td>
+<td>Returns the position of the Sun (right ascension and declination) on the celestial sphere using the equatorial coordinate system in arcsec.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.print_params.html#sunpy.sun.print_params" title="sunpy.sun.print_params"><code class="xref py py-obj docutils literal"><span class="pre">print_params</span></code></a>([t])</td>
+<td>Print out a summary of Solar ephemeris</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.solar_cycle_number.html#sunpy.sun.solar_cycle_number" title="sunpy.sun.solar_cycle_number"><code class="xref py py-obj docutils literal"><span class="pre">solar_cycle_number</span></code></a>([t])</td>
+<td>Return the solar cycle number.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.solar_north.html#sunpy.sun.solar_north" title="sunpy.sun.solar_north"><code class="xref py py-obj docutils literal"><span class="pre">solar_north</span></code></a>([t])</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.solar_semidiameter_angular_size.html#sunpy.sun.solar_semidiameter_angular_size" title="sunpy.sun.solar_semidiameter_angular_size"><code class="xref py py-obj docutils literal"><span class="pre">solar_semidiameter_angular_size</span></code></a>([t])</td>
+<td>Return the angular size of the semi-diameter of the Sun as</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.sunearth_distance.html#sunpy.sun.sunearth_distance" title="sunpy.sun.sunearth_distance"><code class="xref py py-obj docutils literal"><span class="pre">sunearth_distance</span></code></a>([t])</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.true_anomaly.html#sunpy.sun.true_anomaly" title="sunpy.sun.true_anomaly"><code class="xref py py-obj docutils literal"><span class="pre">true_anomaly</span></code></a>([t])</td>
+<td>Returns the Sun&#8217;s true anomaly (in degrees).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.true_declination.html#sunpy.sun.true_declination" title="sunpy.sun.true_declination"><code class="xref py py-obj docutils literal"><span class="pre">true_declination</span></code></a>([t])</td>
+<td>Return the true declination.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.true_latitude.html#sunpy.sun.true_latitude" title="sunpy.sun.true_latitude"><code class="xref py py-obj docutils literal"><span class="pre">true_latitude</span></code></a>([t])</td>
+<td>Returns the true latitude.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.true_longitude.html#sunpy.sun.true_longitude" title="sunpy.sun.true_longitude"><code class="xref py py-obj docutils literal"><span class="pre">true_longitude</span></code></a>([t])</td>
+<td>Returns the Sun&#8217;s true geometric longitude (in degrees) (Referred to the mean equinox of date.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.true_obliquity_of_ecliptic.html#sunpy.sun.true_obliquity_of_ecliptic" title="sunpy.sun.true_obliquity_of_ecliptic"><code class="xref py py-obj docutils literal"><span class="pre">true_obliquity_of_ecliptic</span></code></a>([t])</td>
+<td>Returns the true obliquity of the ecliptic.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.true_rightascension.html#sunpy.sun.true_rightascension" title="sunpy.sun.true_rightascension"><code class="xref py py-obj docutils literal"><span class="pre">true_rightascension</span></code></a>([t])</td>
+<td>Return the true right ascension.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.sun.constants">
+<span id="sunpy-sun-constants-module"></span><h2>sunpy.sun.constants Module<a class="headerlink" href="#module-sunpy.sun.constants" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fundamental-solar-physical-constants">
+<h3>Fundamental Solar Physical Constants<a class="headerlink" href="#fundamental-solar-physical-constants" title="Permalink to this headline">¶</a></h3>
+<p>These constants are taken from various sources. The structure of this module is heavily
+based on if not directly copied from the SciPy constants module but contains Solar
+Physical constants.</p>
+</div>
+<div class="section" id="websites">
+<h3>Websites<a class="headerlink" href="#websites" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://books.google.com/books?id=4SWENr1tIJ0C&amp;printsec=frontcover&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q=sfu&amp;f=false">http://books.google.com/books?id=4SWENr1tIJ0C&amp;printsec=frontcover&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q=sfu&amp;f=false</a></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.constants.get.html#sunpy.sun.constants.get" title="sunpy.sun.constants.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key)</td>
+<td>Retrieve a constant by key.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.sun.constants.find.html#sunpy.sun.constants.find" title="sunpy.sun.constants.find"><code class="xref py py-obj docutils literal"><span class="pre">find</span></code></a>([sub])</td>
+<td>Return list of constants keys containing a given string</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.sun.constants.print_all.html#sunpy.sun.constants.print_all" title="sunpy.sun.constants.print_all"><code class="xref py py-obj docutils literal"><span class="pre">print_all</span></code></a>([key])</td>
+<td>Provides a table of the complete list of constants.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-sunpy.sun.models">
+<span id="sunpy-sun-models-module"></span><h2>sunpy.sun.models Module<a class="headerlink" href="#module-sunpy.sun.models" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="solar-physical-models">
+<h3>Solar Physical Models<a class="headerlink" href="#solar-physical-models" title="Permalink to this headline">¶</a></h3>
+<p>This module contains standard models of the sun from various sources. All data is saved
+in pandas DataFrames with two added attributes</p>
+<ul class="simple">
+<li>source : names the source of the data</li>
+<li>units : a dictionary with the units of each of the columns</li>
+</ul>
+</div>
+<div class="section" id="object">
+<h3>Object<a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>interior <span class="classifier-delimiter">:</span> <span class="classifier">pandas.DataFrame</span></dt>
+<dd>The standard model of the solar interior</dd>
+<dt>evolution <span class="classifier-delimiter">:</span> <span class="classifier">pandas.DataFrame</span></dt>
+<dd>The evolution as a function of time of the Sun</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

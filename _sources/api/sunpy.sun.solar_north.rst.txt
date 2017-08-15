@@ -1,0 +1,6 @@
+solar_north
+===========
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: solar_north

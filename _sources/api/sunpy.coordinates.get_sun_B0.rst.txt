@@ -1,0 +1,6 @@
+get_sun_B0
+==========
+
+.. currentmodule:: sunpy.coordinates
+
+.. autofunction:: get_sun_B0

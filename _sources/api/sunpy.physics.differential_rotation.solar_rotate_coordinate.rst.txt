@@ -1,0 +1,6 @@
+solar_rotate_coordinate
+=======================
+
+.. currentmodule:: sunpy.physics.differential_rotation
+
+.. autofunction:: solar_rotate_coordinate

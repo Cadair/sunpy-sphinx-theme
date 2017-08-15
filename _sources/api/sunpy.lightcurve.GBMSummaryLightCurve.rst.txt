@@ -1,0 +1,17 @@
+GBMSummaryLightCurve
+====================
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: GBMSummaryLightCurve
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GBMSummaryLightCurve.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: peek

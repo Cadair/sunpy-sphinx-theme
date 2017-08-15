@@ -1,0 +1,6 @@
+deprecated
+==========
+
+.. currentmodule:: sunpy.util
+
+.. autofunction:: deprecated

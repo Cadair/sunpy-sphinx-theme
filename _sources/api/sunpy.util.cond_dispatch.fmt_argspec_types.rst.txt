@@ -1,0 +1,6 @@
+fmt_argspec_types
+=================
+
+.. currentmodule:: sunpy.util.cond_dispatch
+
+.. autofunction:: fmt_argspec_types

@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy User Guide &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installation" href="installation/index.html" />
+    <link rel="prev" title="SunPy Documentation" href="../index.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy User Guide | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/guide/index.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SunPy User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html">A brief tour of SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acquiring_data/index.html">Acquiring Data with SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_types/index.html">Data Types in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html">Plotting in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="units-coordinates.html">Units and Coordinates in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">Time in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">Region of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customization.html">Customizing SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-user-guide">
+<h1>SunPy User Guide<a class="headerlink" href="#sunpy-user-guide" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the SunPy User Guide. SunPy is a community-developed, free and
+open-source solar data analysis environment. It is meant to provide
+the core functionality and tools to analyze solar data with Python.
+This guide provides a walkthrough of the major features in SunPy.
+For more details checkout the <a class="reference internal" href="../code_ref/index.html#reference"><span class="std std-ref">Code Reference</span></a>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html#installing-scientific-python-and-sunpy">Installing Scientific Python and SunPy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#installing-sunpy-on-top-of-anaconda">Installing SunPy on top of Anaconda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#updating-sunpy-to-a-new-version">Updating SunPy to a New Version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html#advanced-sunpy-installation">Advanced SunPy Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/advanced.html">Advanced Installation Instructions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/advanced.html#testing-sunpy">Testing SunPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/advanced.html#installing-the-development-version-of-sunpy">Installing the Development Version of SunPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/advanced.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/advanced.html#building-documentation">Building documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tour.html">A brief tour of SunPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#sample-data">Sample Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#timeseries">TimeSeries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#spectra">Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#plotting">Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#solar-physical-constants">Solar Physical Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#quantities-and-units">Quantities and Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#working-with-times">Working with Times</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#obtaining-data">Obtaining Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html#database-package">Database Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acquiring_data/index.html">Acquiring Data with SunPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="acquiring_data/sample-data.html">Downloading Sample Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acquiring_data/fido.html">Finding and Downloading Data using Fido</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/fido.html#import">Import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/fido.html#searching-for-data-using-fido">Searching for Data Using Fido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/fido.html#indexing-search-results">Indexing search results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/fido.html#downloading-data">Downloading data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="acquiring_data/database.html">Using the database package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/database.html#connecting-and-initializing-the-database">1. Connecting and initializing the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/database.html#adding-new-entries">2. Adding new entries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/database.html#displaying-entries-in-a-table">3. Displaying entries in a table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/database.html#removing-entries">4. Removing entries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/database.html#editing-entries">5. Editing entries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/database.html#undoing-and-redoing-operations">6. Undoing and redoing operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/database.html#querying-the-database">7. Querying the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/database.html#caching">8. Caching</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="acquiring_data/hek.html">Using SunPy&#8217;s HEK module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/hek.html#setting-up-the-client">1. Setting up the client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/hek.html#a-simple-query">2. A simple query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/hek.html#the-result">3. The result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/hek.html#more-complex-queries">4. More complex queries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acquiring_data/hek.html#getting-data-for-your-event">5. Getting data for your event</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="acquiring_data/helioviewer.html">Querying Helioviewer.org with SunPy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_types/index.html">Data Types in SunPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_types/maps.html">Maps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#creating-maps">Creating maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#creating-custom-maps">Creating Custom Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#inspecting-maps">Inspecting maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#getting-at-the-data">Getting at the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#plotting">Plotting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#masking-and-clipping-data">Masking and Clipping Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#composite-maps-and-overlaying-maps">Composite Maps and Overlaying Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#working-with-your-map">Working with your map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#mapcubes">Mapcubes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#coalignment-of-mapcubes">Coalignment of Mapcubes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/maps.html#compensating-for-solar-rotation-in-mapcubes">Compensating for solar rotation in Mapcubes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data_types/timeseries.html">TimeSeries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#creating-a-timeseries-from-an-observational-data-source">1. Creating a TimeSeries from an observational data source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#creating-a-single-timeseries-from-multiple-files">1.1 Creating a Single TimeSeries from Multiple Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#creating-custom-timeseries">2. Creating Custom TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#creating-a-timeseries-from-a-pandas-dataframe">2.1 Creating a TimeSeries from a Pandas DataFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#creating-custom-timeseries-from-an-astropy-table">2.2 Creating Custom TimeSeries from an AstroPy Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#inspecting-timeseries-getting-at-the-data">3. Inspecting TimeSeries &amp; Getting at the Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#plotting">4. Plotting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#manipulating-timeseries">5 Manipulating TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#modifying-the-data">5.1 Modifying the Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#truncating-a-timeseries">5.2 Truncating a TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#down-and-up-sampling-a-timeseries-using-pandas">5.3 Down and Up Sampling a TimeSeries Using Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#concatenating-timeseries">5.4 Concatenating TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#creating-an-astropy-table-from-a-timeseries">5.5 Creating an AstroPy Table from a TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_types/timeseries.html#a-detailed-look-at-the-metadata">6. A Detailed Look at the Metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data_types/spectra.html">Spectra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_types/spectra.html#spectrograms">Spectrograms</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting in SunPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#matplotlib-tutorial">1. Matplotlib Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#pyplot">2. Pyplot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#advanced-pyplot">3. Advanced Pyplot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#sunpy-plotting-convention">4. SunPy Plotting Convention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#peek">4.1 peek()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#plot">4.2 plot()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html#plotting-maps-with-wcsaxes">Plotting Maps with wcsaxes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="units-coordinates.html">Units and Coordinates in SunPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="units-coordinates.html#units-in-sunpy">Units in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="units-coordinates.html#quantities-as-function-arguments">Quantities as function arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="units-coordinates.html#physical-coordinates-in-sunpy">Physical Coordinates in SunPy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="units-coordinates.html#observer-location">Observer Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="units-coordinates.html#using-coordinates-with-sunpy-map">Using Coordinates with SunPy Map</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="time.html">Time in SunPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="time.html#parsing-times">1. Parsing Times</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html#time-ranges">2. Time Ranges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="roi.html">Region of Interest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="roi.html#creating-an-roi">1. Creating an ROI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="customization.html">Customizing SunPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="customization.html#the-sunpyrc-file">The <code class="file docutils literal"><span class="pre">sunpyrc</span></code> file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customization.html#dynamic-settings">Dynamic settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="customization.html#a-sample-sunpyrc-file">A sample sunpyrc file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#crotate-warning">Crotate Warning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#obtaining-sunpy-version">Obtaining sunpy version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#system-info">System Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#sunpy-install-location"><code class="file docutils literal"><span class="pre">sunpy</span></code> install location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#sunpy-directory-location"><code class="file docutils literal"><span class="pre">.sunpy</span></code> directory location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#report-a-problem">Report a problem</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

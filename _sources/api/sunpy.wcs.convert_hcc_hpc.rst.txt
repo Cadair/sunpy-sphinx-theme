@@ -1,0 +1,6 @@
+convert_hcc_hpc
+===============
+
+.. currentmodule:: sunpy.wcs
+
+.. autofunction:: convert_hcc_hpc

@@ -1,0 +1,21 @@
+UnifiedDownloaderFactory
+========================
+
+.. currentmodule:: sunpy.net.fido_factory
+
+.. autoclass:: UnifiedDownloaderFactory
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~UnifiedDownloaderFactory.__call__
+      ~UnifiedDownloaderFactory.fetch
+      ~UnifiedDownloaderFactory.search
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: __call__
+   .. automethod:: fetch
+   .. automethod:: search

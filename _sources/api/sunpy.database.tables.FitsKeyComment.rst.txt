@@ -1,0 +1,23 @@
+FitsKeyComment
+==============
+
+.. currentmodule:: sunpy.database.tables
+
+.. autoclass:: FitsKeyComment
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~FitsKeyComment.dbentry_id
+      ~FitsKeyComment.id
+      ~FitsKeyComment.key
+      ~FitsKeyComment.value
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: dbentry_id
+   .. autoattribute:: id
+   .. autoattribute:: key
+   .. autoattribute:: value

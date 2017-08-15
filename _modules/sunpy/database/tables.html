@@ -1,0 +1,1046 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.database.tables &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.database.tables | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/database/tables.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.database.tables</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Author: Simon Liedtke &lt;liedtke.simon@googlemail.com&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># This module was developed with funding provided by</span>
+<span class="c1"># the Google Summer of Code (2013).</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">strptime</span><span class="p">,</span> <span class="n">mktime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">fnmatch</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">astropy.units</span> <span class="k">import</span> <span class="n">Unit</span><span class="p">,</span> <span class="n">nm</span><span class="p">,</span> <span class="n">equivalencies</span><span class="p">,</span> <span class="n">quantity</span>
+<span class="kn">import</span> <span class="nn">astropy.table</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">Float</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">DateTime</span><span class="p">,</span> <span class="n">Boolean</span><span class="p">,</span>\
+    <span class="n">Table</span><span class="p">,</span> <span class="n">ForeignKey</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span><span class="p">,</span> <span class="n">TimeRange</span>
+<span class="kn">from</span> <span class="nn">sunpy.io</span> <span class="k">import</span> <span class="n">fits</span><span class="p">,</span> <span class="n">file_tools</span> <span class="k">as</span> <span class="n">sunpy_filetools</span>
+<span class="kn">from</span> <span class="nn">sunpy.util</span> <span class="k">import</span> <span class="n">print_table</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="nb">map</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">import</span> <span class="nn">sunpy.net</span>
+
+<span class="kn">from</span> <span class="nn">sunpy</span> <span class="k">import</span> <span class="n">config</span>
+
+
+<span class="n">TIME_FORMAT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;general&quot;</span><span class="p">,</span> <span class="s2">&quot;time_format&quot;</span><span class="p">)</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;WaveunitNotFoundError&#39;</span><span class="p">,</span> <span class="s1">&#39;WaveunitNotConvertibleError&#39;</span><span class="p">,</span> <span class="s1">&#39;JSONDump&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FitsHeaderEntry&#39;</span><span class="p">,</span> <span class="s1">&#39;FitsKeyComment&#39;</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">,</span> <span class="s1">&#39;DatabaseEntry&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;entries_from_query_result&#39;</span><span class="p">,</span> <span class="s1">&#39;entries_from_file&#39;</span><span class="p">,</span> <span class="s1">&#39;entries_from_dir&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;display_entries&#39;</span><span class="p">]</span>
+
+<span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+
+<span class="c1"># required for the many-to-many relation on tags:entries</span>
+<span class="n">association_table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;association&#39;</span><span class="p">,</span> <span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span>
+                          <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;tag_name&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;tags.name&#39;</span><span class="p">)),</span>
+                          <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;entry_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;data.id&#39;</span><span class="p">))</span>
+                          <span class="p">)</span>
+
+
+<div class="viewcode-block" id="WaveunitNotFoundError"><a class="viewcode-back" href="../../../api/sunpy.database.tables.WaveunitNotFoundError.html#sunpy.database.tables.WaveunitNotFoundError">[docs]</a><span class="k">class</span> <span class="nc">WaveunitNotFoundError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if a wavelength unit cannot be found in a FITS</span>
+<span class="sd">    header or in a VSO query result block.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="s1">&#39;the wavelength unit cannot be found in </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span> <span class="o">+</span> \
+               <span class="s1">&#39; and default_waveunit not specified when opening the database&#39;</span></div>
+
+
+<div class="viewcode-block" id="WaveunitNotConvertibleError"><a class="viewcode-back" href="../../../api/sunpy.database.tables.WaveunitNotConvertibleError.html#sunpy.database.tables.WaveunitNotConvertibleError">[docs]</a><span class="k">class</span> <span class="nc">WaveunitNotConvertibleError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if a wavelength cannot be converted to an</span>
+<span class="sd">    astropy.units.Unit instance.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">waveunit</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">waveunit</span> <span class="o">=</span> <span class="n">waveunit</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="s1">&#39;the waveunit </span><span class="si">{0!r}</span><span class="s1"> cannot be converted to an &#39;</span>
+            <span class="s1">&#39;astropy.units.Unit instance&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">waveunit</span><span class="p">))</span></div>
+
+
+<span class="c1"># TODO: move this function outside this package (sunpy.util? sunpy.time?)</span>
+<span class="k">def</span> <span class="nf">timestamp2datetime</span><span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">mktime</span><span class="p">(</span><span class="n">strptime</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="nb">format</span><span class="p">)))</span>
+
+
+<div class="viewcode-block" id="JSONDump"><a class="viewcode-back" href="../../../api/sunpy.database.tables.JSONDump.html#sunpy.database.tables.JSONDump">[docs]</a><span class="k">class</span> <span class="nc">JSONDump</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;jsondumps&#39;</span>
+
+    <span class="n">dump</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dump</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dump</span> <span class="o">=</span> <span class="n">dump</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dump</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">dump</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dump</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{0}</span><span class="s1">(dump </span><span class="si">{1!r}</span><span class="s1">)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dump</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="FitsHeaderEntry"><a class="viewcode-back" href="../../../api/sunpy.database.tables.FitsHeaderEntry.html#sunpy.database.tables.FitsHeaderEntry">[docs]</a><span class="k">class</span> <span class="nc">FitsHeaderEntry</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;fitsheaderentries&#39;</span>
+
+    <span class="n">dbentry_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;data.id&#39;</span><span class="p">))</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">id</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">other</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">key</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">FitsHeaderEntry</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{0}</span><span class="s1">(id </span><span class="si">{1}</span><span class="s1">, key </span><span class="si">{2!r}</span><span class="s1">, value </span><span class="si">{3!r}</span><span class="s1">)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="FitsKeyComment"><a class="viewcode-back" href="../../../api/sunpy.database.tables.FitsKeyComment.html#sunpy.database.tables.FitsKeyComment">[docs]</a><span class="k">class</span> <span class="nc">FitsKeyComment</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;fitskeycomments&#39;</span>
+
+    <span class="n">dbentry_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;data.id&#39;</span><span class="p">))</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">id</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">other</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">key</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">, </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">&lt;</span>
+                <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">, </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">FitsKeyComment</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{0}</span><span class="s1">(id </span><span class="si">{1}</span><span class="s1">, key </span><span class="si">{2!r}</span><span class="s1">, value </span><span class="si">{3!r}</span><span class="s1">)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Tag"><a class="viewcode-back" href="../../../api/sunpy.database.tables.Tag.html#sunpy.database.tables.Tag">[docs]</a><span class="k">class</span> <span class="nc">Tag</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;tags&#39;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">Tag</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{0}</span><span class="s1">(name </span><span class="si">{1!r}</span><span class="s1">)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DatabaseEntry"><a class="viewcode-back" href="../../../api/sunpy.database.tables.DatabaseEntry.html#sunpy.database.tables.DatabaseEntry">[docs]</a><span class="k">class</span> <span class="nc">DatabaseEntry</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    DatabaseEntry()</span>
+
+<span class="sd">    The class :class:`DatabaseEntry` represents the main table of the database</span>
+<span class="sd">    and each instance represents one record that *can* be saved in the</span>
+<span class="sd">    database.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    id : int</span>
+<span class="sd">        A unique ID number. By default it is None, but automatically set to the</span>
+<span class="sd">        maximum number plus one when this entry is added to the database.</span>
+<span class="sd">    source : string</span>
+<span class="sd">        The source is the name of an observatory or the name of a network of</span>
+<span class="sd">        observatories.</span>
+<span class="sd">    provider : string</span>
+<span class="sd">        The name of the server which provides the retrieved data.</span>
+<span class="sd">    physobs : string</span>
+<span class="sd">        A physical observable identifier used by VSO.</span>
+<span class="sd">    fileid : string</span>
+<span class="sd">        The file ID is a string defined by the data provider that should point</span>
+<span class="sd">        to a specific data product. The association of fileid to the specific</span>
+<span class="sd">        data may change sometime, if the fileid always points to the latest</span>
+<span class="sd">        calibrated data.</span>
+<span class="sd">    observation_time_start : datetime</span>
+<span class="sd">        The date and time when the observation of the data started.</span>
+<span class="sd">    observation_time_end : datetime</span>
+<span class="sd">        The date and time when the observation of the data ended.</span>
+<span class="sd">    instrument : string</span>
+<span class="sd">        The instrument which was used to observe the data.</span>
+<span class="sd">    size : float</span>
+<span class="sd">        The size of the data in kilobytes.</span>
+<span class="sd">    wavemin : float</span>
+<span class="sd">        The value of the measured wave length.</span>
+<span class="sd">    wavemax : float</span>
+<span class="sd">        This is the same value as ``wavemin``. The value is stored twice,</span>
+<span class="sd">        because each ``suds.sudsobject.QueryResponseBlock`` which is used by</span>
+<span class="sd">        the vso package contains both these values.</span>
+<span class="sd">    hdu_index : int</span>
+<span class="sd">        This value provides a list of all available HDUs and in what</span>
+<span class="sd">        files they are located.</span>
+<span class="sd">    path : string</span>
+<span class="sd">        A local file path where the according FITS file is saved.</span>
+<span class="sd">    download_time : datetime</span>
+<span class="sd">        The date and time when the files connected to a query have been</span>
+<span class="sd">        downloaded. Note: this is not the date and time when this entry has</span>
+<span class="sd">        been added to a database!</span>
+<span class="sd">    starred : bool</span>
+<span class="sd">        Entries can be starred to mark them. By default, this value is False.</span>
+<span class="sd">    fits_header_entries : list</span>
+<span class="sd">        A list of ``FitsHeaderEntry`` instances.</span>
+<span class="sd">    tags : list</span>
+<span class="sd">        A list of ``Tag`` instances. Use `sunpy.database.Database.tag` to</span>
+<span class="sd">        add a new tag or multiple tags to a specific entry.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;data&#39;</span>
+
+    <span class="c1"># FIXME: primary key is data provider + file ID + download_time!</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">source</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+    <span class="n">provider</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+    <span class="n">physobs</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+    <span class="n">fileid</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+    <span class="n">observation_time_start</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">DateTime</span><span class="p">)</span>
+    <span class="n">observation_time_end</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">DateTime</span><span class="p">)</span>
+    <span class="n">instrument</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Float</span><span class="p">)</span>
+    <span class="n">wavemin</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Float</span><span class="p">)</span>
+    <span class="n">wavemax</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Float</span><span class="p">)</span>
+    <span class="n">hdu_index</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+    <span class="n">download_time</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">DateTime</span><span class="p">)</span>
+    <span class="n">starred</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Boolean</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">fits_header_entries</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s1">&#39;FitsHeaderEntry&#39;</span><span class="p">)</span>
+    <span class="n">fits_key_comments</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s1">&#39;FitsKeyComment&#39;</span><span class="p">)</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s1">&#39;Tag&#39;</span><span class="p">,</span> <span class="n">secondary</span><span class="o">=</span><span class="n">association_table</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_query_result_block</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">qr_block</span><span class="p">,</span> <span class="n">default_waveunit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Make a new :class:`DatabaseEntry` instance from a VSO query result</span>
+<span class="sd">        block. The values of :attr:`wavemin` and :attr:`wavemax` are converted</span>
+<span class="sd">        to nm (nanometres).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        qr_block : suds.sudsobject.QueryResponseBlock</span>
+<span class="sd">            A query result block is usually not created directly; instead,</span>
+<span class="sd">            one gets instances of ``suds.sudsobject.QueryResponseBlock`` by</span>
+<span class="sd">            iterating over a VSO query result.</span>
+<span class="sd">        default_waveunit : str, optional</span>
+<span class="sd">            The wavelength unit that is used if it cannot be found in the</span>
+<span class="sd">            `qr_block`.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.net import vso</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.database.tables import DatabaseEntry</span>
+<span class="sd">        &gt;&gt;&gt; client = vso.VSOClient()</span>
+<span class="sd">        &gt;&gt;&gt; qr = client.search(</span>
+<span class="sd">        ...     vso.attrs.Time(&#39;2001/1/1&#39;, &#39;2001/1/2&#39;),</span>
+<span class="sd">        ...     vso.attrs.Instrument(&#39;eit&#39;))</span>
+<span class="sd">        &gt;&gt;&gt; entry = DatabaseEntry._from_query_result_block(qr[0])</span>
+<span class="sd">        &gt;&gt;&gt; entry.source</span>
+<span class="sd">        &#39;SOHO&#39;</span>
+<span class="sd">        &gt;&gt;&gt; entry.provider</span>
+<span class="sd">        &#39;SDAC&#39;</span>
+<span class="sd">        &gt;&gt;&gt; entry.physobs</span>
+<span class="sd">        &#39;intensity&#39;</span>
+<span class="sd">        &gt;&gt;&gt; entry.fileid</span>
+<span class="sd">        &#39;/archive/soho/private/data/processed/eit/lz/2001/01/efz20010101.010014&#39;</span>
+<span class="sd">        &gt;&gt;&gt; entry.observation_time_start, entry.observation_time_end</span>
+<span class="sd">        (datetime.datetime(2001, 1, 1, 1, 0, 14), datetime.datetime(2001, 1, 1, 1, 0, 21))</span>
+<span class="sd">        &gt;&gt;&gt; entry.instrument</span>
+<span class="sd">        &#39;EIT&#39;</span>
+<span class="sd">        &gt;&gt;&gt; entry.size</span>
+<span class="sd">        2059.0</span>
+<span class="sd">        &gt;&gt;&gt; entry.wavemin, entry.wavemax</span>
+<span class="sd">        (17.1, 17.1)</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">time_start</span> <span class="o">=</span> <span class="n">timestamp2datetime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">%H%M%S&#39;</span><span class="p">,</span> <span class="n">qr_block</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">qr_block</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
+            <span class="n">qr_block</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="n">qr_block</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">start</span>
+        <span class="n">time_end</span> <span class="o">=</span> <span class="n">timestamp2datetime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">%H%M%S&#39;</span><span class="p">,</span> <span class="n">qr_block</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+        <span class="n">wave</span> <span class="o">=</span> <span class="n">qr_block</span><span class="o">.</span><span class="n">wave</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">wave</span><span class="o">.</span><span class="n">waveunit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">default_waveunit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">unit</span> <span class="o">=</span> <span class="n">Unit</span><span class="p">(</span><span class="n">default_waveunit</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># some query response blocks store the unit &quot;kev&quot;,</span>
+            <span class="c1"># but AstroPy only understands &quot;keV&quot;. See issue #766.</span>
+            <span class="n">waveunit</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="n">waveunit</span>
+            <span class="k">if</span> <span class="n">waveunit</span> <span class="o">==</span> <span class="s2">&quot;kev&quot;</span><span class="p">:</span>
+                <span class="n">waveunit</span> <span class="o">=</span> <span class="s2">&quot;keV&quot;</span>
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">Unit</span><span class="p">(</span><span class="n">waveunit</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">wave</span><span class="o">.</span><span class="n">wavemin</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">wavemin</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">unit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">WaveunitNotFoundError</span><span class="p">(</span><span class="n">qr_block</span><span class="p">)</span>
+            <span class="n">wavemin</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">nm</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">wave</span><span class="o">.</span><span class="n">wavemin</span><span class="p">),</span>
+                              <span class="n">equivalencies</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">wave</span><span class="o">.</span><span class="n">wavemax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">wavemax</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">unit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">WaveunitNotFoundError</span><span class="p">(</span><span class="n">qr_block</span><span class="p">)</span>
+            <span class="n">wavemax</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">nm</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">wave</span><span class="o">.</span><span class="n">wavemax</span><span class="p">),</span>
+                              <span class="n">equivalencies</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">qr_block</span><span class="p">,</span> <span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">provider</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">qr_block</span><span class="p">,</span> <span class="s1">&#39;provider&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">fileid</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">qr_block</span><span class="p">,</span> <span class="s1">&#39;fileid&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">instrument</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">qr_block</span><span class="p">,</span> <span class="s1">&#39;instrument&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">qr_block</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">physobs</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">qr_block</span><span class="p">,</span> <span class="s1">&#39;physobs&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">physobs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">physobs</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">physobs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span> <span class="n">provider</span><span class="o">=</span><span class="n">provider</span><span class="p">,</span> <span class="n">physobs</span><span class="o">=</span><span class="n">physobs</span><span class="p">,</span> <span class="n">fileid</span><span class="o">=</span><span class="n">fileid</span><span class="p">,</span>
+            <span class="n">observation_time_start</span><span class="o">=</span><span class="n">time_start</span><span class="p">,</span> <span class="n">observation_time_end</span><span class="o">=</span><span class="n">time_end</span><span class="p">,</span>
+            <span class="n">instrument</span><span class="o">=</span><span class="n">instrument</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
+            <span class="n">wavemin</span><span class="o">=</span><span class="n">wavemin</span><span class="p">,</span> <span class="n">wavemax</span><span class="o">=</span><span class="n">wavemax</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_from_fido_search_result_block</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">sr_block</span><span class="p">,</span> <span class="n">default_waveunit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make a new :class:`DatabaseEntry` instance from a Fido search</span>
+<span class="sd">        result block.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        sr_block : `sunpy.net.dataretriever.client.QueryResponseBlock`</span>
+<span class="sd">            A query result block is usually not created directly; instead,</span>
+<span class="sd">            one gets instances of</span>
+<span class="sd">            ``sunpy.net.dataretriever.client.QueryResponseBlock`` by iterating</span>
+<span class="sd">            over each element of a Fido search result.</span>
+<span class="sd">        default_waveunit : `str`, optional</span>
+<span class="sd">            The wavelength unit that is used if it cannot be found in the</span>
+<span class="sd">            `sr_block`.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.net import Fido, attrs</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.database.tables import DatabaseEntry</span>
+<span class="sd">        &gt;&gt;&gt; sr = Fido.search(attrs.Time(&quot;2012/1/1&quot;, &quot;2012/1/2&quot;),</span>
+<span class="sd">        ...    attrs.Instrument(&#39;lyra&#39;))</span>
+<span class="sd">        &gt;&gt;&gt; entry = DatabaseEntry._from_fido_search_result_block(sr[0][0])</span>
+<span class="sd">        &gt;&gt;&gt; entry.source</span>
+<span class="sd">        &#39;Proba2&#39;</span>
+<span class="sd">        &gt;&gt;&gt; entry.provider</span>
+<span class="sd">        &#39;esa&#39;</span>
+<span class="sd">        &gt;&gt;&gt; entry.physobs</span>
+<span class="sd">        &#39;irradiance&#39;</span>
+<span class="sd">        &gt;&gt;&gt; entry.fileid</span>
+<span class="sd">        &#39;http://proba2.oma.be/lyra/data/bsd/2012/01/01/lyra_20120101-000000_lev2_std.fits&#39;</span>
+<span class="sd">        &gt;&gt;&gt; entry.observation_time_start, entry.observation_time_end</span>
+<span class="sd">        (datetime.datetime(2012, 1, 1, 0, 0), datetime.datetime(2012, 1, 2, 0, 0))</span>
+<span class="sd">        &gt;&gt;&gt; entry.instrument</span>
+<span class="sd">        &#39;lyra&#39;</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># All attributes of DatabaseEntry that are not in QueryResponseBlock</span>
+        <span class="c1"># are set as None for now.</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sr_block</span><span class="p">,</span> <span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">provider</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sr_block</span><span class="p">,</span> <span class="s1">&#39;provider&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">physobs</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sr_block</span><span class="p">,</span> <span class="s1">&#39;physobs&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">physobs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">physobs</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">physobs</span><span class="p">)</span>
+        <span class="n">instrument</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sr_block</span><span class="p">,</span> <span class="s1">&#39;instrument&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">time_start</span> <span class="o">=</span> <span class="n">sr_block</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">start</span>
+        <span class="n">time_end</span> <span class="o">=</span> <span class="n">sr_block</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">end</span>
+
+        <span class="n">wavelengths</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sr_block</span><span class="p">,</span> <span class="s1">&#39;wave&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">wavelength_temp</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">wavelength_temp</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="c1"># Tuple of values</span>
+            <span class="n">wavelength_temp</span><span class="p">[</span><span class="s1">&#39;wavemin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wavelengths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">wavelength_temp</span><span class="p">[</span><span class="s1">&#39;wavemax&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wavelengths</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Single Value</span>
+            <span class="n">wavelength_temp</span><span class="p">[</span><span class="s1">&#39;wavemin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wavelength_temp</span><span class="p">[</span><span class="s1">&#39;wavemax&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wavelengths</span>
+
+        <span class="n">final_values</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">wavelength_temp</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">quantity</span><span class="o">.</span><span class="n">Quantity</span><span class="p">):</span>
+                <span class="n">unit</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">unit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">default_waveunit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">unit</span> <span class="o">=</span> <span class="n">Unit</span><span class="p">(</span><span class="n">default_waveunit</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="n">WaveunitNotFoundError</span><span class="p">(</span><span class="n">sr_block</span><span class="p">)</span>
+                <span class="n">final_values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">nm</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="n">equivalencies</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+            <span class="k">elif</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+                <span class="n">final_values</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+
+        <span class="n">wavemin</span> <span class="o">=</span> <span class="n">final_values</span><span class="p">[</span><span class="s1">&#39;wavemin&#39;</span><span class="p">]</span>
+        <span class="n">wavemax</span> <span class="o">=</span> <span class="n">final_values</span><span class="p">[</span><span class="s1">&#39;wavemax&#39;</span><span class="p">]</span>
+
+        <span class="c1"># sr_block.url of a QueryResponseBlock attribute is stored in fileid</span>
+        <span class="n">fileid</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">sr_block</span><span class="o">.</span><span class="n">url</span><span class="p">)</span> <span class="k">if</span> <span class="n">sr_block</span><span class="o">.</span><span class="n">url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span> <span class="n">provider</span><span class="o">=</span><span class="n">provider</span><span class="p">,</span> <span class="n">physobs</span><span class="o">=</span><span class="n">physobs</span><span class="p">,</span> <span class="n">fileid</span><span class="o">=</span><span class="n">fileid</span><span class="p">,</span>
+            <span class="n">observation_time_start</span><span class="o">=</span><span class="n">time_start</span><span class="p">,</span> <span class="n">observation_time_end</span><span class="o">=</span><span class="n">time_end</span><span class="p">,</span>
+            <span class="n">instrument</span><span class="o">=</span><span class="n">instrument</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
+            <span class="n">wavemin</span><span class="o">=</span><span class="n">wavemin</span><span class="p">,</span> <span class="n">wavemax</span><span class="o">=</span><span class="n">wavemax</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">wavemin</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">other</span><span class="o">.</span><span class="n">wavemin</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">wavemins_equal</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">wavemin</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">wavemin</span><span class="p">]):</span>
+            <span class="c1"># This means one is None and the other isnt</span>
+            <span class="n">wavemins_equal</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">wavemins_equal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">wavemin</span><span class="p">],</span> <span class="p">[</span><span class="n">other</span><span class="o">.</span><span class="n">wavemin</span><span class="p">],</span> <span class="n">equal_nan</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">wavemax</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">other</span><span class="o">.</span><span class="n">wavemax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">wavemaxs_equal</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">wavemax</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">wavemax</span><span class="p">]):</span>
+            <span class="c1"># This means one is None and the other isnt</span>
+            <span class="n">wavemaxs_equal</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">wavemaxs_equal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">wavemax</span><span class="p">],</span> <span class="p">[</span><span class="n">other</span><span class="o">.</span><span class="n">wavemax</span><span class="p">],</span> <span class="n">equal_nan</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">id</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">other</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">source</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">provider</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">provider</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">physobs</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">physobs</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fileid</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">fileid</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">observation_time_start</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">observation_time_start</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">observation_time_end</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">observation_time_end</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">instrument</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">instrument</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">size</span> <span class="ow">and</span>
+            <span class="n">wavemins_equal</span> <span class="ow">and</span>
+            <span class="n">wavemaxs_equal</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">path</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">download_time</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">download_time</span> <span class="ow">and</span>
+            <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">starred</span><span class="p">)</span> <span class="o">==</span> <span class="nb">bool</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">starred</span><span class="p">)</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fits_header_entries</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">fits_header_entries</span> <span class="ow">and</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_compare_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">attribute_list</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compare a given list of attributes of two :class:`DatabaseEntry`</span>
+<span class="sd">        instances and return True if all of them match.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : :class:`DatabaseEntry` instance</span>
+
+<span class="sd">        attribute_list : `list`</span>
+<span class="sd">            The list of attributes that will be compared in both instances,</span>
+<span class="sd">            self and other.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">attribute_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;At least one attribute required&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">attribute_list</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">attribute</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">DatabaseEntry</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="n">attrs</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="s1">&#39;provider&#39;</span><span class="p">,</span> <span class="s1">&#39;physobs&#39;</span><span class="p">,</span> <span class="s1">&#39;fileid&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;observation_time_start&#39;</span><span class="p">,</span> <span class="s1">&#39;observation_time_end&#39;</span><span class="p">,</span> <span class="s1">&#39;instrument&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;size&#39;</span><span class="p">,</span> <span class="s1">&#39;wavemin&#39;</span><span class="p">,</span> <span class="s1">&#39;wavemax&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="s1">&#39;download_time&#39;</span><span class="p">,</span> <span class="s1">&#39;starred&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;fits_header_entries&#39;</span><span class="p">,</span> <span class="s1">&#39;tags&#39;</span><span class="p">]</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="s1">&#39;&lt;</span><span class="si">{0}</span><span class="s1">(&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">attrs</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> </span><span class="si">{1!r}</span><span class="s1">, &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">ret</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">+=</span> <span class="s1">&#39;)&gt;&#39;</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+<div class="viewcode-block" id="entries_from_query_result"><a class="viewcode-back" href="../../../api/sunpy.database.tables.entries_from_query_result.html#sunpy.database.tables.entries_from_query_result">[docs]</a><span class="k">def</span> <span class="nf">entries_from_query_result</span><span class="p">(</span><span class="n">qr</span><span class="p">,</span> <span class="n">default_waveunit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Use a query response returned from :meth:`sunpy.net.vso.VSOClient.query`</span>
+<span class="sd">    or :meth:`sunpy.net.vso.VSOClient.query_legacy` to generate instances of</span>
+<span class="sd">    :class:`DatabaseEntry`. Return an iterator over those instances.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    qr : `sunpy.net.vso.vso.QueryResponse`</span>
+<span class="sd">        The query response from which to build the database entries.</span>
+
+<span class="sd">    default_waveunit : `str`, optional</span>
+<span class="sd">        See :meth:`sunpy.database.DatabaseEntry.from_query_result_block`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net import vso</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.database.tables import entries_from_query_result</span>
+<span class="sd">    &gt;&gt;&gt; client = vso.VSOClient()</span>
+<span class="sd">    &gt;&gt;&gt; qr = client.search(</span>
+<span class="sd">    ...     vso.attrs.Time(&#39;2001/1/1&#39;, &#39;2001/1/2&#39;),</span>
+<span class="sd">    ...     vso.attrs.Instrument(&#39;eit&#39;))</span>
+<span class="sd">    &gt;&gt;&gt; entries = entries_from_query_result(qr)</span>
+<span class="sd">    &gt;&gt;&gt; entry = entries.next()</span>
+<span class="sd">    &gt;&gt;&gt; entry.source</span>
+<span class="sd">    &#39;SOHO&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.provider</span>
+<span class="sd">    &#39;SDAC&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.physobs</span>
+<span class="sd">    &#39;intensity&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.fileid</span>
+<span class="sd">    &#39;/archive/soho/private/data/processed/eit/lz/2001/01/efz20010101.010014&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.observation_time_start, entry.observation_time_end</span>
+<span class="sd">    (datetime.datetime(2001, 1, 1, 1, 0, 14), datetime.datetime(2001, 1, 1, 1, 0, 21))</span>
+<span class="sd">    &gt;&gt;&gt; entry.instrument</span>
+<span class="sd">    &#39;EIT&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.size</span>
+<span class="sd">    2059.0</span>
+<span class="sd">    &gt;&gt;&gt; entry.wavemin, entry.wavemax</span>
+<span class="sd">    (17.1, 17.1)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">qr</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">DatabaseEntry</span><span class="o">.</span><span class="n">_from_query_result_block</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">default_waveunit</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">entries_from_fido_search_result</span><span class="p">(</span><span class="n">sr</span><span class="p">,</span> <span class="n">default_waveunit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Use a `sunpy.net.dataretriever.fido_factory.UnifiedResponse`</span>
+<span class="sd">    object returned from</span>
+<span class="sd">    :meth:`sunpy.net.dataretriever.fido_factory.UnifiedDownloaderFactory.search`</span>
+<span class="sd">    to generate instances of :class:`DatabaseEntry`. Return an iterator</span>
+<span class="sd">    over those instances.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    search_result : `sunpy.net.dataretriever.fido_factory.UnifiedResponse`</span>
+<span class="sd">            A UnifiedResponse object that is used to store responses from the</span>
+<span class="sd">            unified downloader. This is returned by the ``search`` method of a</span>
+<span class="sd">            :class:`sunpy.net.dataretriever.fido_factory.UnifiedDownloaderFactory`</span>
+<span class="sd">            object.</span>
+
+<span class="sd">    default_waveunit : `str`, optional</span>
+<span class="sd">        The wavelength unit that is used if it cannot be found in the Query</span>
+<span class="sd">        Response block.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net import Fido, attrs</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.database.tables import entries_from_fido_search_result</span>
+<span class="sd">    &gt;&gt;&gt; sr = Fido.search(attrs.Time(&quot;2012/1/1&quot;, &quot;2012/1/2&quot;),</span>
+<span class="sd">    ...     attrs.Instrument(&#39;lyra&#39;))</span>
+<span class="sd">    &gt;&gt;&gt; entries = entries_from_fido_search_result(sr)</span>
+<span class="sd">    &gt;&gt;&gt; entry = entries.next()</span>
+<span class="sd">    &gt;&gt;&gt; entry.source</span>
+<span class="sd">    &#39;Proba2&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.provider</span>
+<span class="sd">    &#39;esa&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.physobs</span>
+<span class="sd">    &#39;irradiance&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.fileid</span>
+<span class="sd">    &#39;http://proba2.oma.be/lyra/data/bsd/2012/01/01/lyra_20120101-000000_lev2_std.fits&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.observation_time_start, entry.observation_time_end</span>
+<span class="sd">    (datetime.datetime(2012, 1, 1, 0, 0), datetime.datetime(2012, 1, 2, 0, 0))</span>
+<span class="sd">    &gt;&gt;&gt; entry.instrument</span>
+<span class="sd">    &#39;lyra&#39;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">sr</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">vso</span><span class="o">.</span><span class="n">vso</span><span class="o">.</span><span class="n">QueryResponse</span><span class="p">):</span>
+            <span class="c1"># This is because Fido can search the VSO. It</span>
+            <span class="c1"># returns a VSO QueryResponse.</span>
+            <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">entry</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">DatabaseEntry</span><span class="o">.</span><span class="n">_from_query_result_block</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">default_waveunit</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">JSOCResponse</span><span class="p">):</span>
+            <span class="c1"># Adding JSOC results to the DB not supported for now</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot add JSOC results to database&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">entry</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">DatabaseEntry</span><span class="o">.</span><span class="n">_from_fido_search_result_block</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">default_waveunit</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="entries_from_file"><a class="viewcode-back" href="../../../api/sunpy.database.tables.entries_from_file.html#sunpy.database.tables.entries_from_file">[docs]</a><span class="k">def</span> <span class="nf">entries_from_file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">default_waveunit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                      <span class="n">time_string_parse_format</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Use the headers of a FITS file to generate an iterator of</span>
+<span class="sd">    :class:`sunpy.database.tables.DatabaseEntry` instances. Gathered</span>
+<span class="sd">    information will be saved in the attribute `fits_header_entries`. If the</span>
+<span class="sd">    key INSTRUME, WAVELNTH or DATE-OBS / DATE_OBS is available, the attribute</span>
+<span class="sd">    `instrument`, `wavemin` and `wavemax` or `observation_time_start` is set,</span>
+<span class="sd">    respectively. If the wavelength unit can be read, the values of `wavemin`</span>
+<span class="sd">    and `wavemax` are converted to nm (nanometres). The value of the `file`</span>
+<span class="sd">    parameter is used to set the attribute `path` of each generated database</span>
+<span class="sd">    entry.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    file : str or file-like object</span>
+<span class="sd">        Either a path pointing to a FITS file or a an opened file-like object.</span>
+<span class="sd">        If an opened file object, its mode must be one of the following rb,</span>
+<span class="sd">        rb+, or ab+.</span>
+
+<span class="sd">    default_waveunit : str, optional</span>
+<span class="sd">        The wavelength unit that is used for a header if it cannot be</span>
+<span class="sd">        found.</span>
+
+<span class="sd">    time_string_parse_format : str, optional</span>
+<span class="sd">        Fallback timestamp format which will be passed to</span>
+<span class="sd">        `~datetime.datetime.strftime` if `sunpy.time.parse_time` is unable to</span>
+<span class="sd">        automatically read the `date-obs` metadata.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    sunpy.database.WaveunitNotFoundError</span>
+<span class="sd">        If `default_waveunit` is not given and the wavelength unit cannot</span>
+<span class="sd">        be found in one of the FITS headers</span>
+
+<span class="sd">    sunpy.WaveunitNotConvertibleError</span>
+<span class="sd">        If a wavelength unit could be found but cannot be used to create an</span>
+<span class="sd">        instance of the type ``astropy.units.Unit``. This can be the case</span>
+<span class="sd">        for example if a FITS header has the key `WAVEUNIT` with the value</span>
+<span class="sd">        `nonsense`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.database.tables import entries_from_file</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.data.sample</span>
+<span class="sd">    &gt;&gt;&gt; entries = list(entries_from_file(sunpy.data.sample.SWAP_LEVEL1_IMAGE))</span>
+<span class="sd">    &gt;&gt;&gt; len(entries)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; entry = entries.pop()</span>
+<span class="sd">    &gt;&gt;&gt; entry.instrument</span>
+<span class="sd">    &#39;SWAP&#39;</span>
+<span class="sd">    &gt;&gt;&gt; entry.observation_time_start, entry.observation_time_end</span>
+<span class="sd">    (datetime.datetime(2012, 1, 1, 0, 16, 7, 836000), None)</span>
+<span class="sd">    &gt;&gt;&gt; entry.wavemin, entry.wavemax</span>
+<span class="sd">    (17.400000000000002, 17.400000000000002)</span>
+<span class="sd">    &gt;&gt;&gt; len(entry.fits_header_entries)</span>
+<span class="sd">    111</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">get_header</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">)):</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">file</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">headers</span><span class="p">:</span>
+        <span class="n">entry</span> <span class="o">=</span> <span class="n">DatabaseEntry</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">filename</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">header</span><span class="p">):</span>
+            <span class="c1"># Yes, it is possible to have an empty key in a FITS file.</span>
+            <span class="c1"># Example: sunpy.data.sample.EIT_195_IMAGE</span>
+            <span class="c1"># Don&#39;t ask me why this could be a good idea.</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;KEYCOMMENTS&#39;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+                    <span class="n">entry</span><span class="o">.</span><span class="n">fits_key_comments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">FitsKeyComment</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+                <span class="k">continue</span>
+            <span class="n">entry</span><span class="o">.</span><span class="n">fits_header_entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">FitsHeaderEntry</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+        <span class="n">waveunit</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">extract_waveunit</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+        <span class="n">entry</span><span class="o">.</span><span class="n">hdu_index</span> <span class="o">=</span> <span class="n">headers</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">waveunit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">waveunit</span> <span class="o">=</span> <span class="n">default_waveunit</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">waveunit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">unit</span> <span class="o">=</span> <span class="n">Unit</span><span class="p">(</span><span class="n">waveunit</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">WaveunitNotConvertibleError</span><span class="p">(</span><span class="n">waveunit</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">header_entry</span> <span class="ow">in</span> <span class="n">entry</span><span class="o">.</span><span class="n">fits_header_entries</span><span class="p">:</span>
+            <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">header_entry</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="n">header_entry</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;INSTRUME&#39;</span><span class="p">:</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">instrument</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;WAVELNTH&#39;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">unit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">WaveunitNotFoundError</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+                <span class="c1"># use the value of `unit` to convert the wavelength to nm</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">wavemin</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">wavemax</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">to</span><span class="p">(</span>
+                    <span class="n">nm</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+            <span class="c1"># NOTE: the key DATE-END or DATE_END is not part of the official</span>
+            <span class="c1"># FITS standard, but many FITS files use it in their header</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;DATE-END&#39;</span><span class="p">,</span> <span class="s1">&#39;DATE_END&#39;</span><span class="p">):</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">observation_time_end</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span>
+                    <span class="n">value</span><span class="p">,</span>
+                    <span class="n">_time_string_parse_format</span><span class="o">=</span><span class="n">time_string_parse_format</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;DATE-OBS&#39;</span><span class="p">,</span> <span class="s1">&#39;DATE_OBS&#39;</span><span class="p">):</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">observation_time_start</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span>
+                    <span class="n">value</span><span class="p">,</span>
+                    <span class="n">_time_string_parse_format</span><span class="o">=</span><span class="n">time_string_parse_format</span>
+                <span class="p">)</span>
+        <span class="k">yield</span> <span class="n">entry</span></div>
+
+
+<div class="viewcode-block" id="entries_from_dir"><a class="viewcode-back" href="../../../api/sunpy.database.tables.entries_from_dir.html#sunpy.database.tables.entries_from_dir">[docs]</a><span class="k">def</span> <span class="nf">entries_from_dir</span><span class="p">(</span><span class="n">fitsdir</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span>
+                     <span class="n">default_waveunit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_string_parse_format</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Search the given directory for FITS files and use the corresponding FITS</span>
+<span class="sd">    headers to generate instances of :class:`DatabaseEntry`. FITS files are</span>
+<span class="sd">    detected by reading the content of each file, the `pattern` argument may be</span>
+<span class="sd">    used to avoid reading entire directories if one knows that all FITS files</span>
+<span class="sd">    have the same filename extension.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    fitsdir : string</span>
+<span class="sd">        The directory where to look for FITS files.</span>
+
+<span class="sd">    recursive : bool, optional</span>
+<span class="sd">        If True, the given directory will be searched recursively. Otherwise,</span>
+<span class="sd">        only the given directory and no subdirectories are searched. The</span>
+<span class="sd">        default is `False`, i.e. the given directory is not searched</span>
+<span class="sd">        recursively.</span>
+
+<span class="sd">    pattern : string, optional</span>
+<span class="sd">        The pattern can be used to filter the list of filenames before the</span>
+<span class="sd">        files are attempted to be read. The default is to collect all files.</span>
+<span class="sd">        This value is passed to the function :func:`fnmatch.filter`, see its</span>
+<span class="sd">        documentation for more information on the supported syntax.</span>
+
+<span class="sd">    default_waveunit : str, optional</span>
+<span class="sd">        See</span>
+<span class="sd">        :meth:`sunpy.database.tables.DatabaseEntry.add_fits_header_entries_from_file`.</span>
+
+<span class="sd">    time_string_parse_format : str, optional</span>
+<span class="sd">        Fallback timestamp format which will be passed to</span>
+<span class="sd">        `~datetime.datetime.strftime` if `sunpy.time.parse_time` is unable to</span>
+<span class="sd">        automatically read the `date-obs` metadata.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    generator of (DatabaseEntry, str) pairs</span>
+<span class="sd">        A generator where each item is a tuple consisting of a</span>
+<span class="sd">        :class:`DatabaseEntry` instance and the absolute path to the filename</span>
+<span class="sd">        which was used to make the database entry.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.data.test import rootdir as fitsdir</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.database.tables import entries_from_dir</span>
+<span class="sd">    &gt;&gt;&gt; entries = list(entries_from_dir(fitsdir, default_waveunit=&#39;angstrom&#39;))</span>
+<span class="sd">    &gt;&gt;&gt; len(entries)</span>
+<span class="sd">    38</span>
+<span class="sd">    &gt;&gt;&gt; # and now search `fitsdir` recursive</span>
+<span class="sd">    &gt;&gt;&gt; entries = list(entries_from_dir(fitsdir, True, default_waveunit=&#39;angstrom&#39;))</span>
+<span class="sd">    &gt;&gt;&gt; len(entries)</span>
+<span class="sd">    59</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">fitsdir</span><span class="p">):</span>
+        <span class="n">filename_paths</span> <span class="o">=</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">filename_paths</span><span class="p">,</span> <span class="n">pattern</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">filetype</span> <span class="o">=</span> <span class="n">sunpy_filetools</span><span class="o">.</span><span class="n">_detect_filetype</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">except</span> <span class="p">(</span>
+                    <span class="n">sunpy_filetools</span><span class="o">.</span><span class="n">UnrecognizedFileTypeError</span><span class="p">,</span>
+                    <span class="n">sunpy_filetools</span><span class="o">.</span><span class="n">InvalidJPEG2000FileExtension</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">filetype</span> <span class="o">==</span> <span class="s1">&#39;fits&#39;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">entries_from_file</span><span class="p">(</span>
+                        <span class="n">path</span><span class="p">,</span> <span class="n">default_waveunit</span><span class="p">,</span>
+                        <span class="n">time_string_parse_format</span><span class="o">=</span><span class="n">time_string_parse_format</span>
+                <span class="p">):</span>
+                    <span class="k">yield</span> <span class="n">entry</span><span class="p">,</span> <span class="n">path</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">recursive</span><span class="p">:</span>
+            <span class="k">break</span></div>
+
+
+<span class="k">def</span> <span class="nf">_create_display_table</span><span class="p">(</span><span class="n">database_entries</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generate a table to display the database entries.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    database_entries : iterable of :class:`DatabaseEntry` instances</span>
+<span class="sd">        The database entries will be the rows in the resulting table.</span>
+
+<span class="sd">    columns : iterable of str</span>
+<span class="sd">        The columns that will be displayed in the resulting table. Possible</span>
+<span class="sd">        values for the strings are all attributes of :class:`DatabaseEntry`.</span>
+
+<span class="sd">    sort : bool (optional)</span>
+<span class="sd">        If True, sorts the entries before displaying them.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        An astropy table that can be printed on the console or written to a</span>
+<span class="sd">        file.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">columns</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;observation_time_start&#39;</span><span class="p">,</span> <span class="s1">&#39;observation_time_end&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;instrument&#39;</span><span class="p">,</span> <span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="s1">&#39;provider&#39;</span><span class="p">,</span> <span class="s1">&#39;physobs&#39;</span><span class="p">,</span> <span class="s1">&#39;wavemin&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;wavemax&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="s1">&#39;fileid&#39;</span><span class="p">,</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;starred&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;download_time&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">]</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">database_entries</span><span class="p">:</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">col</span> <span class="o">==</span> <span class="s1">&#39;starred&#39;</span><span class="p">:</span>
+                <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Yes&#39;</span> <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">starred</span> <span class="k">else</span> <span class="s1">&#39;No&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">col</span> <span class="o">==</span> <span class="s1">&#39;tags&#39;</span><span class="p">:</span>
+                <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">entry</span><span class="o">.</span><span class="n">tags</span><span class="p">))</span> <span class="ow">or</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">col</span> <span class="o">==</span> <span class="s1">&#39;hdu_index&#39;</span><span class="p">:</span>
+                <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">hdu_index</span><span class="p">)</span>
+            <span class="c1"># do not display microseconds in datetime columns</span>
+            <span class="k">elif</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">(</span>
+                    <span class="s1">&#39;observation_time_start&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;observation_time_end&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;download_time&#39;</span><span class="p">):</span>
+                <span class="n">time</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">time</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">formatted_time</span> <span class="o">=</span> <span class="s1">&#39;N/A&#39;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">formatted_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">TIME_FORMAT</span><span class="p">)</span>
+                <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">formatted_time</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;N/A&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">row</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;at least one column must be given&#39;</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;given iterable is empty&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">sort</span><span class="p">:</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">astropy</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="display_entries"><a class="viewcode-back" href="../../../api/sunpy.database.tables.display_entries.html#sunpy.database.tables.display_entries">[docs]</a><span class="k">def</span> <span class="nf">display_entries</span><span class="p">(</span><span class="n">database_entries</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Print a table to display the database entries.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    database_entries : iterable of :class:`DatabaseEntry` instances</span>
+<span class="sd">        The database entries will be the rows in the resulting table.</span>
+
+<span class="sd">    columns : iterable of str</span>
+<span class="sd">        The columns that will be displayed in the resulting table. Possible</span>
+<span class="sd">        values for the strings are all attributes of :class:`DatabaseEntry`.</span>
+
+<span class="sd">    sort : bool (optional)</span>
+<span class="sd">        If True, sorts the entries before displaying them.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_create_display_table</span><span class="p">(</span><span class="n">database_entries</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">sort</span><span class="p">)</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

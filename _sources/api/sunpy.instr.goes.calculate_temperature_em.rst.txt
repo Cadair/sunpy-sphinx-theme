@@ -1,0 +1,6 @@
+calculate_temperature_em
+========================
+
+.. currentmodule:: sunpy.instr.goes
+
+.. autofunction:: calculate_temperature_em

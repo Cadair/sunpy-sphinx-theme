@@ -1,0 +1,19 @@
+LYRATimeSeries
+==============
+
+.. currentmodule:: sunpy.timeseries
+
+.. autoclass:: LYRATimeSeries
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LYRATimeSeries.is_datasource_for
+      ~LYRATimeSeries.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for
+   .. automethod:: peek

@@ -1,0 +1,7 @@
+NoRHClient
+==========
+
+.. currentmodule:: sunpy.net.dataretriever.sources
+
+.. autoclass:: NoRHClient
+   :show-inheritance:

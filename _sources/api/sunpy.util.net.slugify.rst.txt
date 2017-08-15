@@ -1,0 +1,6 @@
+slugify
+=======
+
+.. currentmodule:: sunpy.util.net
+
+.. autofunction:: slugify

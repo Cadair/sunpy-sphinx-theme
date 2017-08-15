@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Map Rotation &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The brightest pixel location" href="masking_hot_pixels.html" />
+    <link rel="prev" title="Submaps and Cropping" href="submaps_and_cropping.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Map Rotation | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/generated/gallery/map_rotation.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Example Gallery</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy_colormaps_reference.html">SunPy Colormaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aia_example.html">AIA Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_editcolormap.html">Editing Map Colormaps and Normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_from_numpy_array.html">Generating a Map From Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_sample_images.html">Sample Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brightness_pixel_location.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_searching_vso.html">Searching the VSO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submaps_and_cropping.html">Submaps and Cropping</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Map Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="masking_hot_pixels.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_bright_regions_gallery_example.html">Manipulating Map image data - finding bright regions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mask_disk.html">Masking the solar disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_resampling_and_superpixels.html">Map Resampling and Superpixels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="goes_hek_m25.html">GOES Flare and HEK Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loop_edge_enhance.html">Edge Enhancing Filtering a Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="great_arc_example.html">Drawing and using a Great Arc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lat_lon_lines.html">Longitude and Latitude Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solar_cycle_example.html">The Solar Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_limb_enhance.html">Enhancing Off-limb emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmi_synoptic_maps.html">HMI Daily Synoptic Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overplot_hek_polygon.html">Overplotting HEK feature/event polygons on SunPy maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_data_histogram.html">Map Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_differential_rotation.html">Simple Differential Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_magnetogram_active_regions.html">Overplotting Active Region locations on magnetogram Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps_example.html">Interacting with Data Using SunPy Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AIA_limb_STEREO.html">Drawing AIA Coordinates on STEREO Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseriesmetadata_example.html">The TimeSeriesMetaData Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2011_06_07_sampledata_overview.html">Sample Data Set Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SDO_to_STEREO_Coordinate_Conversion.html">AIA to STEREO Coordinate Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseries_example.html">Interacting with Data Using SunPy TimeSeries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="map-rotation">
+<span id="sphx-glr-generated-gallery-map-rotation-py"></span><h1>Map Rotation<a class="headerlink" href="#map-rotation" title="Permalink to this headline">¶</a></h1>
+<p>In this example we rotate a map.</p>
+<p>Start by importing the necessary modules.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="kn">as</span> <span class="nn">u</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+</pre></div>
+</div>
+<p>Sunpy sample data contains a number of suitable maps, where the sunpy.data.sample.NAME
+returns the location of the given FITS file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">aia_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This has a resolution of:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">PixelPair</span><span class="p">(</span><span class="n">x</span><span class="o">=&lt;</span><span class="n">Quantity</span> <span class="mf">1024.0</span> <span class="n">pix</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">y</span><span class="o">=&lt;</span><span class="n">Quantity</span> <span class="mf">1024.0</span> <span class="n">pix</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To find out more specifics about this map and the instrument used, check it&#8217;s
+metatdata:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">MetaDict</span><span class="p">([(</span><span class="s1">&#39;simple&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bitpix&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">32</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;naxis&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;naxis1&#39;</span><span class="p">,</span> <span class="mi">1024</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;naxis2&#39;</span><span class="p">,</span> <span class="mi">1024</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bld_vers&#39;</span><span class="p">,</span> <span class="s1">&#39;V5R12X&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;lvl_num&#39;</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;t_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:33:03Z&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;trecstep&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;trecepoc&#39;</span><span class="p">,</span> <span class="s1">&#39;1977.01.01_00:00:00_TAI&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;trecroun&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;origin&#39;</span><span class="p">,</span> <span class="s1">&#39;SDO&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;2012-10-16T19:45:34&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;telescop&#39;</span><span class="p">,</span> <span class="s1">&#39;SDO&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;instrume&#39;</span><span class="p">,</span> <span class="s1">&#39;AIA_3&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;date-obs&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:33:02.77&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;t_obs&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:33:02.88Z&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;camera&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;img_type&#39;</span><span class="p">,</span> <span class="s1">&#39;LIGHT&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;exptime&#39;</span><span class="p">,</span> <span class="mf">0.234256</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;expsdev&#39;</span><span class="p">,</span> <span class="mf">0.000135</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;int_time&#39;</span><span class="p">,</span> <span class="mf">0.507812</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;wavelnth&#39;</span><span class="p">,</span> <span class="mi">171</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;waveunit&#39;</span><span class="p">,</span> <span class="s1">&#39;angstrom&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;wave_str&#39;</span><span class="p">,</span> <span class="s1">&#39;171_THIN&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;fsn&#39;</span><span class="p">,</span> <span class="mi">27194331</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;fid&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;quallev0&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;quality&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;totvals&#39;</span><span class="p">,</span> <span class="mi">16777216</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datavals&#39;</span><span class="p">,</span> <span class="mi">16777216</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;missvals&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;percentd&#39;</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datamin&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datamax&#39;</span><span class="p">,</span> <span class="mi">17722</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datamedn&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datamean&#39;</span><span class="p">,</span> <span class="mf">26.6888</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datarms&#39;</span><span class="p">,</span> <span class="mf">9429260.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dataskew&#39;</span><span class="p">,</span> <span class="mf">81.433</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datakurt&#39;</span><span class="p">,</span> <span class="mf">17076.7421875</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datacent&#39;</span><span class="p">,</span> <span class="mf">30.76</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap01&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap10&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap25&#39;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap75&#39;</span><span class="p">,</span> <span class="mf">39.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap90&#39;</span><span class="p">,</span> <span class="mf">64.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap95&#39;</span><span class="p">,</span> <span class="mf">87.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap98&#39;</span><span class="p">,</span> <span class="mf">127.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap99&#39;</span><span class="p">,</span> <span class="mf">168.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;nsatpix&#39;</span><span class="p">,</span> <span class="mi">29</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;oscnmean&#39;</span><span class="p">,</span> <span class="s1">&#39;nan&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;oscnrms&#39;</span><span class="p">,</span> <span class="s1">&#39;nan&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;flat_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;aia.flatfield[:#30]&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;nspikes&#39;</span><span class="p">,</span> <span class="mi">977</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ctype1&#39;</span><span class="p">,</span> <span class="s1">&#39;HPLN-TAN&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;cunit1&#39;</span><span class="p">,</span> <span class="s1">&#39;arcsec&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crval1&#39;</span><span class="p">,</span> <span class="mf">3.223099507700556</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;cdelt1&#39;</span><span class="p">,</span> <span class="mf">2.402792</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crpix1&#39;</span><span class="p">,</span> <span class="mf">512.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ctype2&#39;</span><span class="p">,</span> <span class="s1">&#39;HPLT-TAN&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;cunit2&#39;</span><span class="p">,</span> <span class="s1">&#39;arcsec&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crval2&#39;</span><span class="p">,</span> <span class="mf">1.385781353025793</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;cdelt2&#39;</span><span class="p">,</span> <span class="mf">2.402792</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crpix2&#39;</span><span class="p">,</span> <span class="mf">512.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crota2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.138829</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;r_sun&#39;</span><span class="p">,</span> <span class="mf">1573.89688496</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mpo_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;sdo.master_pointing[:#394]&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;inst_rot&#39;</span><span class="p">,</span> <span class="mf">0.019327</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;imscl_mp&#39;</span><span class="p">,</span> <span class="mf">0.599489</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;x0_mp&#39;</span><span class="p">,</span> <span class="mf">2049.459961</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;y0_mp&#39;</span><span class="p">,</span> <span class="mf">2049.030029</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;asd_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;sdo.lev0_asd_0004[:#10672125]&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;sat_y0&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.519384</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;sat_z0&#39;</span><span class="p">,</span> <span class="mf">13.793308</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;sat_rot&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.4e-05</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_mode&#39;</span><span class="p">,</span> <span class="s1">&#39;SCIENCE&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_eclp&#39;</span><span class="p">,</span> <span class="s1">&#39;NO&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_sunp&#39;</span><span class="p">,</span> <span class="s1">&#39;YES&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_safe&#39;</span><span class="p">,</span> <span class="s1">&#39;NO&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_cgt&#39;</span><span class="p">,</span> <span class="s1">&#39;GT3&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;orb_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;sdo.fds_orbit_vectors[2011.06.07_06:33:00_UTC]&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dsun_ref&#39;</span><span class="p">,</span> <span class="mf">149597870691.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dsun_obs&#39;</span><span class="p">,</span> <span class="mf">151846026489.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;rsun_ref&#39;</span><span class="p">,</span> <span class="mf">696000000.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;rsun_obs&#39;</span><span class="p">,</span> <span class="mf">945.436711</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;gaex_obs&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">13315441.72</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;gaey_obs&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">25080995.82</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;gaez_obs&#39;</span><span class="p">,</span> <span class="mf">31173320.91</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;haex_obs&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">36634444009.2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;haey_obs&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">147360551017.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;haez_obs&#39;</span><span class="p">,</span> <span class="mf">35731768.47</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;obs_vr&#39;</span><span class="p">,</span> <span class="mf">86.972467</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;obs_vw&#39;</span><span class="p">,</span> <span class="mf">31968.269521</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;obs_vn&#39;</span><span class="p">,</span> <span class="mf">4842.822869</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crln_obs&#39;</span><span class="p">,</span> <span class="mf">340.698273</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crlt_obs&#39;</span><span class="p">,</span> <span class="mf">0.048591</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;car_rot&#39;</span><span class="p">,</span> <span class="mi">2111</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;hgln_obs&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;hglt_obs&#39;</span><span class="p">,</span> <span class="mf">0.048591</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nwin&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_sum&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nax1&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nay1&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_llx1&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_lly1&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nax2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nay2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_llx2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_lly2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;pixlunit&#39;</span><span class="p">,</span> <span class="s1">&#39;DN&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dn_gain&#39;</span><span class="p">,</span> <span class="mf">17.7</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;eff_area&#39;</span><span class="p">,</span> <span class="mf">2.419</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;eff_ar_v&#39;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tempccd&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">71.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tempgt&#39;</span><span class="p">,</span> <span class="mf">14.327</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tempsmir&#39;</span><span class="p">,</span> <span class="mf">34.029</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tempfpad&#39;</span><span class="p">,</span> <span class="mf">16.29</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ispsname&#39;</span><span class="p">,</span> <span class="s1">&#39;aia.lev0_isp_0011&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;isppktim&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:32:57.50Z&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;isppktvn&#39;</span><span class="p">,</span> <span class="s1">&#39;001.197&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aivnmst&#39;</span><span class="p">,</span> <span class="mi">453</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgots&#39;</span><span class="p">,</span> <span class="mi">1686119616</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;asqhdr&#39;</span><span class="p">,</span> <span class="mi">2174677979</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;asqtnum&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;asqfsn&#39;</span><span class="p">,</span> <span class="mi">27194331</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiahfsn&#39;</span><span class="p">,</span> <span class="mi">27194323</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aecdelay&#39;</span><span class="p">,</span> <span class="mi">1537</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiaecti&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiasen&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifdbid&#39;</span><span class="p">,</span> <span class="mi">241</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgotss&#39;</span><span class="p">,</span> <span class="mi">55109</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifcps&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiftswth&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifrmlid&#39;</span><span class="p">,</span> <span class="mi">3057</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiftsid&#39;</span><span class="p">,</span> <span class="mi">41729</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihismxb&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihis192&#39;</span><span class="p">,</span> <span class="mi">8377773</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihis348&#39;</span><span class="p">,</span> <span class="mi">8384772</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihis604&#39;</span><span class="p">,</span> <span class="mi">8386035</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihis860&#39;</span><span class="p">,</span> <span class="mi">8386516</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifwen&#39;</span><span class="p">,</span> <span class="mi">204</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgshce&#39;</span><span class="p">,</span> <span class="mi">237</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aectype&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aecmode&#39;</span><span class="p">,</span> <span class="s1">&#39;ON&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aistate&#39;</span><span class="p">,</span> <span class="s1">&#39;CLOSED&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiaecenf&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifiltyp&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshobc&#39;</span><span class="p">,</span> <span class="mf">41.104</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshobe&#39;</span><span class="p">,</span> <span class="mf">26.068001</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshotc&#39;</span><span class="p">,</span> <span class="mf">55.327999</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshote&#39;</span><span class="p">,</span> <span class="mf">69.344002</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshcbc&#39;</span><span class="p">,</span> <span class="mf">275.432007</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshcbe&#39;</span><span class="p">,</span> <span class="mf">260.484009</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshctc&#39;</span><span class="p">,</span> <span class="mf">289.556</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshcte&#39;</span><span class="p">,</span> <span class="mf">303.395996</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aicfgdl1&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aicfgdl2&#39;</span><span class="p">,</span> <span class="mi">107</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aicfgdl3&#39;</span><span class="p">,</span> <span class="mi">171</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aicfgdl4&#39;</span><span class="p">,</span> <span class="mi">236</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifoenfl&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgfsn&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgtyp&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiawvlen&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp1&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp2&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp3&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp4&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp5&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp6&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp7&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp8&#39;</span><span class="p">,</span> <span class="mi">619</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp9&#39;</span><span class="p">,</span> <span class="mi">683</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp10&#39;</span><span class="p">,</span> <span class="mi">748</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt1svy&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt1svz&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt2svy&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt2svz&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt3svy&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt3svz&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt4svy&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt4svz&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgshen&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;keywddoc&#39;</span><span class="p">,</span> <span class="s1">&#39;https:&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;recnum&#39;</span><span class="p">,</span> <span class="mi">76618218</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blank&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">32768</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;date_obs&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:33:02.77&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;xcen&#39;</span><span class="p">,</span> <span class="mf">2.91938326953</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ycen&#39;</span><span class="p">,</span> <span class="mf">1.09323792231</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;detector&#39;</span><span class="p">,</span> <span class="s1">&#39;AIA&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;comment&#39;</span><span class="p">,</span> <span class="s2">&quot;FITS (Flexible Image Transport System) format is defined in &#39;Astronomyand Astrophysics&#39;, volume 376, page 359; bibcode: 2001A&amp;A...376..359HFITSHEAD2STRUCT&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;history&#39;</span><span class="p">,</span> <span class="s1">&#39;FITSHEAD2STRUCT run at: Fri May 26 11:33:15 2017mreadfits_shm VERSION:1.20read_sdo VERSION:  2.10aia2wcsmin.pro VERSION:  5.10aia2wcsminaia2wcsmin  MPO_date: 2012-09-04T00:00:00Zaia2wcsmin  MPO_t_start: 2011-06-05T00:00:00Zaia2wcsmin  MPO_t_stop: 2011-06-12T00:00:00Zaia2wcsmin  MPO_version: 5ssw_reg.pro VERSION:  1.30ssw_regssw_reg  ROT called with cubic interpolation: cubic = -0.500000ssw_reg  Image registered to SDO image with FSN = 27194330ssw_reg  Image registered to SDO image with T_OBS = 2011-06-07T06:33:01.aia_fix_header.pro VERSION:  1.00aia_prep.pro VERSION: 5.10aia_reg.pro VERSION:  1.20&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;keycomments&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;SIMPLE&#39;</span><span class="p">:</span> <span class="s1">&#39;conforms to FITS standard&#39;</span><span class="p">,</span> <span class="s1">&#39;BITPIX&#39;</span><span class="p">:</span> <span class="s1">&#39;array data type&#39;</span><span class="p">,</span> <span class="s1">&#39;NAXIS&#39;</span><span class="p">:</span> <span class="s1">&#39;number of array dimensions&#39;</span><span class="p">})])</span>
+</pre></div>
+</div>
+<p>Maps can also be rotated by using the <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.rotate" title="sunpy.map.GenericMap.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a> method
+with a specified angle, supplied as an Astropy Quantity with angular units:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">aia_rotated</span> <span class="o">=</span> <span class="n">aia_map</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+<span class="n">aia_rotated</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">draw_limb</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">draw_grid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1"># Or using Radians</span>
+<span class="n">aia_rotated</span> <span class="o">=</span> <span class="n">aia_map</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+<span class="c1"># Note: the data array is expanded so that none of the original data is lost</span>
+<span class="c1"># through clipping.</span>
+<span class="c1"># Also note that subsequent rotations are not compunded, the map is only rotated</span>
+<span class="c1"># by the specified amount from the original maps orientation.</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_map_rotation_001.png" class="align-center" src="../../_images/sphx_glr_map_rotation_001.png" />
+<p><strong>Total running time of the script:</strong> ( 0 minutes  2.466 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/map_rotation.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">map_rotation.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/map_rotation.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">map_rotation.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

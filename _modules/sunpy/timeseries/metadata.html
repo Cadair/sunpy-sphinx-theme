@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.timeseries.metadata &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.timeseries.metadata | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/timeseries/metadata.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.timeseries.metadata</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+<span class="n">__authors__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex Hamilton, Stuart Mumford&quot;</span><span class="p">]</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;stuart@mumford.me.uk&quot;</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.util.metadata</span> <span class="k">import</span> <span class="n">MetaDict</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">TimeRange</span><span class="p">,</span> <span class="n">parse_time</span>
+
+<div class="viewcode-block" id="TimeSeriesMetaData"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData">[docs]</a><span class="k">class</span> <span class="nc">TimeSeriesMetaData</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An object used to store metadata for TimeSeries objects that enables multiple</span>
+<span class="sd">    TimeSeries metadata to be concatenated in an organised fashion.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    metadata : `list` of `tuple`</span>
+<span class="sd">        The list of 3-tuples which each represent a source files metadata.</span>
+<span class="sd">        The tuples consist of: ( TimeRange, [ colnames ], MetaDict(metadata) )</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.timeseries import TimeSeriesMetaData</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.time import TimeRange, parse_time</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.util import MetaDict</span>
+<span class="sd">    &gt;&gt;&gt; tr = TimeRange(&#39;2012-06-01 00:00&#39;,&#39;2012-06-02 00:00&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; md = TimeSeriesMetaData(timerange=tr, colnames=[&#39;GOES&#39;], meta=MetaDict([(&#39;goes_key&#39;,&#39;goes_val&#39;)]))</span>
+<span class="sd">    &gt;&gt;&gt; tr2 = TimeRange(&#39;2012-06-01 12:00&#39;,&#39;2012-06-02 12:00&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; md.append(tr2, [&#39;EVE&#39;], MetaDict([(&#39;eve_key&#39;,&#39;eve_val&#39;)]))</span>
+<span class="sd">    &gt;&gt;&gt; md.find(parse_time(&#39;2012-06-01T21:08:12&#39;))</span>
+<span class="sd">    &gt;&gt;&gt; md.find(parse_time(&#39;2012-06-01T21:08:12&#39;)).columns</span>
+<span class="sd">    &gt;&gt;&gt; md.find(parse_time(&#39;2012-06-01T21:08:12&#39;)).values()</span>
+<span class="sd">    &gt;&gt;&gt; md.find(parse_time(&#39;2012-06-01T21:08:12&#39;)).metas</span>
+<span class="sd">    &gt;&gt;&gt; md.find(parse_time(&#39;2012-06-01T21:08:12&#39;), &#39;GOES&#39;)   # doctest: +SKIP</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timerange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Parse in arguments</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">MetaDict</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">timerange</span><span class="p">,</span> <span class="n">TimeRange</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">colnames</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="c1"># Given a single metadata entry as a dictionary with additional timerange and colnames.</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">timerange</span><span class="p">,</span> <span class="n">colnames</span><span class="p">,</span> <span class="n">meta</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="c1"># Given a single metadata entry as a tuple.</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">meta</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="c1"># Given a complex metadata list (of tuples)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">meta</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># In the event no metadata dictionary is sent we default to something usable</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">timerange</span><span class="p">,</span> <span class="n">TimeRange</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">colnames</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">timerange</span><span class="p">,</span> <span class="n">colnames</span><span class="p">,</span> <span class="n">MetaDict</span><span class="p">()))</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">timerange</span><span class="p">,</span> <span class="n">TimeRange</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">timerange</span><span class="p">,</span> <span class="p">[],</span> <span class="n">MetaDict</span><span class="p">()))</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;No time range given for metadata. This will mean the metadata can&#39;t be linked to columns in data.&quot;</span><span class="p">,</span> <span class="ne">Warning</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;You cannot create a TimeSeriesMetaData object without specifying a TimeRange&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check two TimeSeriesMetaData objects are the same, they have the same</span>
+<span class="sd">        entries in the same order.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : `~sunpy.timeseries.metadata.TimeSeriesMetaData`</span>
+<span class="sd">            The second TimeSeriesMetaData object to compare with.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        result : `bool`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">metadata</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">)):</span>
+                <span class="c1">#</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                    <span class="n">match</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="n">match</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check two TimeSeriesMetaData objects are not the same, they don&#39;t have</span>
+<span class="sd">        same entries in the same order.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : `~sunpy.timeseries.GenericTimeSeries`</span>
+<span class="sd">            The second TimeSeries object to compare with.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        result : `bool`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span>
+
+<div class="viewcode-block" id="TimeSeriesMetaData.append"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timerange</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add the given metadata MetaDict into the metadata list as a tuple with</span>
+<span class="sd">        it&#39;s TimeRange and colnames (list).</span>
+<span class="sd">        Will add the new entry so the list is in chronological order for the</span>
+<span class="sd">        TimeRange.start datetime values.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        timerange : `~sunpy.time.TimeRange`</span>
+<span class="sd">            The timerange for which a given metadict is relevant. This will</span>
+<span class="sd">            generally initilly be the full range of the original file, but if</span>
+<span class="sd">            the TimeSeries gets truncated this may change appropriately.</span>
+
+<span class="sd">        columns : `str`</span>
+<span class="sd">            A list of the colomn name strings that the metadata is relevant for.</span>
+
+<span class="sd">        metadata : `~sunpy.util.metadata.MetaDict` or `OrderedDict` or `dict`</span>
+<span class="sd">            The dictionary holding the metadata.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Parameters</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="n">MetaDict</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
+
+        <span class="c1"># Check the types are correct.</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">timerange</span><span class="p">,</span> <span class="n">TimeRange</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">meta</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span> <span class="o">&gt;</span> <span class="n">meta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">:</span>
+                    <span class="n">pos</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Incorrect datatime or data for append to TimeSeriesMetaData.&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Prepare tuple to append.</span>
+        <span class="n">new_metadata</span> <span class="o">=</span> <span class="p">(</span><span class="n">timerange</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span>
+
+        <span class="c1"># Check this isn&#39;t a duplicate entry (same TR and comnames)</span>
+        <span class="n">duplicate</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">):</span>
+            <span class="n">old_metadata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">new_metadata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">old_metadata</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">and</span> <span class="p">(</span><span class="n">new_metadata</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">old_metadata</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="n">duplicate</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># Insert into the given position</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">duplicate</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">new_metadata</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TimeSeriesMetaData.find_indices"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.find_indices">[docs]</a>    <span class="k">def</span> <span class="nf">find_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">colname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Find the indices for all the metadata entries matching the given filters</span>
+<span class="sd">        for datetime and/or column name.</span>
+<span class="sd">        Will return all metadata entry indices if no filters are given.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        time : `str` or `~datetime.datetime` optional</span>
+<span class="sd">            The string (parsed using the `~sunpy.time.parse_time`) or datetime</span>
+<span class="sd">            that you need metadata for.</span>
+
+<span class="sd">        colname : `str` optional</span>
+<span class="sd">            A string that can be used to narrow results to specific columns.</span>
+
+<span class="sd">        indices : `bool` optional</span>
+<span class="sd">            If True then return a list of indices, not of MetaDict items.</span>
+<span class="sd">            Used when other methods use the filters for selecting metadata entries.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list : `list`</span>
+<span class="sd">            A list of integers that contain all matching metadata.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Parameters</span>
+        <span class="n">dt</span> <span class="o">=</span> <span class="n">time</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">dt</span><span class="p">:</span>
+            <span class="n">dt</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">dt</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+
+        <span class="c1"># Find all results with suitable timerange.</span>
+        <span class="n">results_indices</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">meta</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">dt</span> <span class="ow">in</span> <span class="n">meta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="ow">not</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+                <span class="n">results_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+        <span class="c1"># Filter out only those with the correct column.</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">results_indices</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">colname</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="ow">not</span> <span class="n">colname</span><span class="p">):</span>
+                <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">results</span></div>
+
+<div class="viewcode-block" id="TimeSeriesMetaData.find"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.find">[docs]</a>    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">colname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Find all metadata matching the given filters for datetime and/or column name.</span>
+<span class="sd">        Will return all metadata entries if no filters are given.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        time : `str` or `~datetime.datetime` optional</span>
+<span class="sd">            The string (parsed using the `~sunpy.time.parse_time`) or datetime</span>
+<span class="sd">            that you need metadata for.</span>
+
+<span class="sd">        colname : `str` optional</span>
+<span class="sd">            A string that can be used to narrow results to specific columns.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        metadata : `~sunpy.timeseries.metadata.TimeSeriesMetaData`</span>
+<span class="sd">            A TimeSeriesMetaData that contain all matching metadata entries.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Get the indices</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_indices</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">colname</span><span class="o">=</span><span class="n">colname</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="c1"># Extract the relevant metadata entries</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">:</span>
+            <span class="n">metadata</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+        <span class="c1"># Return a TimeSeriesMetaData object</span>
+        <span class="k">return</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">meta</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TimeSeriesMetaData.get_index"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.get_index">[docs]</a>    <span class="k">def</span> <span class="nf">get_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the dictionary entry at the given index.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        index : `int`</span>
+<span class="sd">            The integer index of the metadata entry in the list.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        metadata : `~sunpy.util.metadata.MetaDict`</span>
+<span class="sd">            An ordered Dictionary containing the metadata at the given index.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="TimeSeriesMetaData.get"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">colname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a TimeSeriesMetaData object of all entries matching the time and</span>
+<span class="sd">        colname filters with the dictionaries containing only the key value pairs</span>
+<span class="sd">        with the key matching the given input key.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        keys : `str`</span>
+<span class="sd">            The Key/s to be searched in the dictionary.</span>
+
+<span class="sd">        time : `str` or `~datetime.datetime` optional</span>
+<span class="sd">            The string (parsed using the `~sunpy.time.parse_time`) or datetime</span>
+<span class="sd">            that you need metadata for.</span>
+
+<span class="sd">        colname : `str` optional</span>
+<span class="sd">            A string that can be used to narrow results to specific columns.</span>
+
+<span class="sd">        itemised : `bool` optional</span>
+<span class="sd">            Option to allow the return of the time ranges and column names</span>
+<span class="sd">            (as list) that match each given value.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        metadata : `~sunpy.timeseries.metadata.TimeSeriesMetaData`</span>
+<span class="sd">            A TimeSeriesMetaData that contain all matching metadata entries but</span>
+<span class="sd">            with only the requested key/value pairs in the MetaDict objects.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Make a list of keys if only one is given</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span> <span class="n">keys</span> <span class="p">]</span>
+
+        <span class="c1"># Find all metadata entries for the given time/colname filters</span>
+        <span class="n">full_metadata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">colname</span><span class="o">=</span><span class="n">colname</span><span class="p">)</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Append to metadata only key:value pairs with requested keys</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">full_metadata</span><span class="o">.</span><span class="n">metadata</span><span class="p">):</span>
+            <span class="n">metadict</span> <span class="o">=</span> <span class="n">MetaDict</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">curkey</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">entry</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">curkey</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                        <span class="n">metadict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">key</span><span class="p">:</span><span class="n">value</span><span class="p">})</span>
+            <span class="n">metadata</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">metadict</span><span class="p">))</span>
+
+        <span class="c1"># Return a TimeSeriesMetaData object</span>
+        <span class="k">return</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">meta</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TimeSeriesMetaData.concatenate"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.concatenate">[docs]</a>    <span class="k">def</span> <span class="nf">concatenate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tsmetadata2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Combine the metadata from a TimeSeriesMetaData object with the current</span>
+<span class="sd">        TimeSeriesMetaData and return as a new TimeSeriesMetaData object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        tsmetadata2 : `~sunpy.timeseries.TimeSeriesMetaData`</span>
+<span class="sd">            The second TimeSeriesMetaData object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Create a copy of the metadata</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">TimeSeriesMetaData</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">))</span>
+
+        <span class="c1"># Append each metadata entry from the second TimeSeriesMetaData object</span>
+        <span class="c1"># to the original TimeSeriesMetaData object.</span>
+        <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">tsmetadata2</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="n">meta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">entry</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">meta</span></div>
+
+<div class="viewcode-block" id="TimeSeriesMetaData.update"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">colname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make updates to the MetaDict metadata for all matching metadata entries.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dictionary : `dict` or `OrderedDict` or `~sunpy.util.metadata.MetaDict`</span>
+<span class="sd">            The second TimeSeriesMetaData object.</span>
+
+<span class="sd">        time : `str` or `~datetime.datetime` optional</span>
+<span class="sd">            The string (parsed using the `~sunpy.time.parse_time`) or datetime</span>
+<span class="sd">            to filter the metadata entries updated.</span>
+
+<span class="sd">        colname : `str` optional</span>
+<span class="sd">            A string that can be used to narrow results to specific columns.</span>
+
+<span class="sd">        overwrite : `bool` optional</span>
+<span class="sd">            Option to define if the user is able to overwrite already present keys.</span>
+<span class="sd">            Defaults to False, designed to stop users from being able to</span>
+<span class="sd">            corrupt/damage the metadict values so easily.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Find all matching metadata entries</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_indices</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">colname</span><span class="o">=</span><span class="n">colname</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span> <span class="n">indices</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Now update each matching entries</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">:</span>
+            <span class="c1"># Seperate keys for new and current pairs</span>
+            <span class="n">old_keys</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="n">old_keys</span><span class="o">.</span><span class="n">intersection_update</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+            <span class="n">new_keys</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="n">new_keys</span><span class="o">.</span><span class="n">difference_update</span><span class="p">(</span><span class="n">old_keys</span><span class="p">)</span>
+
+            <span class="c1"># Old keys only overwritten if allowed</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">old_keys</span> <span class="ow">and</span> <span class="n">overwrite</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">new_keys</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
+
+    <span class="k">def</span> <span class="nf">_truncate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timerange</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Removes metadata entries outside of the new (truncated) TimeRange.</span>
+<span class="sd">        Also adjusts start and end times of time ranges going outside of the</span>
+<span class="sd">        truncated time range.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        timerange : `sunpy.time.TimeRange`</span>
+<span class="sd">            Either a time range to truncate to.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">truncated</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">metatuple</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="c1"># Get metadata time range parameters</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">metatuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span>
+            <span class="n">end</span>   <span class="o">=</span> <span class="n">metatuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">end</span>
+            <span class="n">out_of_range</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="c1"># Find truncations</span>
+            <span class="k">if</span> <span class="n">start</span> <span class="o">&lt;</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span> <span class="ow">and</span> <span class="n">end</span> <span class="o">&gt;</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span><span class="p">:</span>
+                <span class="c1"># Truncate the start</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span>
+            <span class="k">elif</span> <span class="n">start</span> <span class="o">&gt;</span> <span class="n">timerange</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
+                <span class="c1"># Metadata time range starts after truncated data ends.</span>
+                <span class="n">out_of_range</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">if</span> <span class="n">end</span> <span class="o">&gt;</span> <span class="n">timerange</span><span class="o">.</span><span class="n">end</span> <span class="ow">and</span> <span class="n">start</span> <span class="o">&lt;</span> <span class="n">timerange</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
+                <span class="c1"># Truncate the end</span>
+                <span class="n">end</span> <span class="o">=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">end</span>
+            <span class="k">elif</span> <span class="n">end</span> <span class="o">&lt;</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span><span class="p">:</span>
+                <span class="c1"># Metadata time range finishes before truncated data starts.</span>
+                <span class="n">out_of_range</span> <span class="o">=</span> <span class="kc">True</span>
+
+            <span class="c1"># Add the values if applicable</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">out_of_range</span><span class="p">:</span>
+                <span class="n">truncated</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">TimeRange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">),</span> <span class="n">metatuple</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">metatuple</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+
+        <span class="c1"># Update the original list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">truncated</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">columns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of all the names of the columns in the metadata.&quot;&quot;&quot;</span>
+        <span class="n">all_cols</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">metatuple</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="n">all_cols</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">metatuple</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">all_cols</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">all_cols</span><span class="p">)</span>
+        <span class="n">all_cols</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">all_cols</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">metas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of all the metadict objects in the TimeSeriesMetaData object.&quot;&quot;&quot;</span>
+        <span class="n">all_metas</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">metatuple</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="n">all_metas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metatuple</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">all_metas</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">timeranges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of all the TimeRange objects the TimeSeriesMetaData object.&quot;&quot;&quot;</span>
+        <span class="n">all_tr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">metatuple</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="n">all_tr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metatuple</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">all_tr</span>
+
+<div class="viewcode-block" id="TimeSeriesMetaData.values"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.values">[docs]</a>    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of all the values from the metadict objects in each</span>
+<span class="sd">        entry in the TimeSeriesMetaData object.&quot;&quot;&quot;</span>
+        <span class="n">all_vals</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">metatuple</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">metatuple</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">all_vals</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="n">all_vals</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">all_vals</span><span class="p">)</span>
+        <span class="n">all_vals</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">all_vals</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">time_range</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the TimeRange of the entire time series meta data.&quot;&quot;&quot;</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">end</span>
+        <span class="k">for</span> <span class="n">metatuple</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">end</span> <span class="o">&lt;</span> <span class="n">metatuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
+               <span class="n">end</span> <span class="o">=</span> <span class="n">metatuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">end</span>
+        <span class="k">return</span> <span class="n">TimeRange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_remove_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colnames</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Removes the given column/s from the TimeSeriesMetaData object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        colnames : `str` or `list`</span>
+<span class="sd">            The name or names of the columns to be removed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Parameters</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">colnames</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">colnames</span> <span class="o">=</span> <span class="p">[</span> <span class="n">colnames</span> <span class="p">]</span>
+
+        <span class="c1"># Create a new list with all metadata entries without colnames</span>
+        <span class="n">reduced</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">metatuple</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="c1"># Check each colname</span>
+            <span class="k">for</span> <span class="n">colname</span> <span class="ow">in</span> <span class="n">colnames</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">colname</span> <span class="ow">in</span> <span class="n">metatuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                    <span class="c1"># Removed from the list.</span>
+                    <span class="n">metatuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">colname</span><span class="p">)</span>
+            <span class="c1"># Add the column if it still has some columns listed</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">metatuple</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">reduced</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metatuple</span><span class="p">)</span>
+
+        <span class="c1"># Update the original list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">reduced</span>
+
+
+
+    <span class="k">def</span> <span class="nf">_rename_column</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Change the name of a column in all the metadata entries.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        old : `str`</span>
+<span class="sd">            The original column name to be changed.</span>
+
+<span class="sd">        new : `str`</span>
+<span class="sd">            The new column name.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">)):</span>
+            <span class="c1"># Update the colnames</span>
+            <span class="n">colnames</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">colnames</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">colnames</span><span class="p">]</span>
+
+            <span class="c1"># Replace values</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">colnames</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_validate_meta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meta</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate a meta argument.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Checking for metadata that may overlap.</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="c1"># Check if the TimeRanges overlap</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">end</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">end</span><span class="p">)):</span>
+                <span class="c1"># Check column headings overlap</span>
+                <span class="n">col_overlap</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+                <span class="c1"># If we have an overlap then show a warning</span>
+                <span class="k">if</span> <span class="n">col_overlap</span><span class="p">:</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn_explicit</span><span class="p">(</span><span class="s1">&#39;Metadata entries &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; and &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; contain interleaved data.&#39;</span><span class="p">,</span>
+                                           <span class="ne">Warning</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">,</span> <span class="n">inspect</span><span class="o">.</span><span class="n">currentframe</span><span class="p">()</span><span class="o">.</span><span class="n">f_back</span><span class="o">.</span><span class="n">f_lineno</span><span class="p">)</span>
+
+        <span class="c1"># ToDo: Check all entries are in tr.start time order.</span>
+
+        <span class="k">return</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="TimeSeriesMetaData.to_string"><a class="viewcode-back" href="../../../api/sunpy.timeseries.TimeSeriesMetaData.html#sunpy.timeseries.TimeSeriesMetaData.to_string">[docs]</a>    <span class="k">def</span> <span class="nf">to_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Print a table-like representation of the TimeSeriesMetaData object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        depth : `int`</span>
+<span class="sd">            The maximum number of lines to show for each entry. Metadata</span>
+<span class="sd">            dictionaries and column lists will be truncated if this is small.</span>
+
+<span class="sd">        width : `int`</span>
+<span class="sd">            The number of characters wide to make the entire table.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Parameters</span>
+        <span class="n">colspace</span> <span class="o">=</span> <span class="s1">&#39; | &#39;</span>
+        <span class="n">liswidths</span> <span class="o">=</span> <span class="p">(</span><span class="mi">26</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">width</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">colspace</span><span class="p">)</span> <span class="o">-</span> <span class="mi">26</span> <span class="o">-</span> <span class="mi">15</span><span class="p">)</span>
+        <span class="n">colheadings</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;TimeRange&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">colspace</span> <span class="o">+</span> <span class="s1">&#39;Columns&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> <span class="n">colspace</span> <span class="o">+</span> <span class="s1">&#39;Meta&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>  <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+        <span class="n">rowspace</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">colspace</span><span class="p">)</span> <span class="o">+</span> <span class="n">liswidths</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">colspace</span><span class="p">)</span> <span class="o">+</span> <span class="n">liswidths</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">rowspace</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">rowspace</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+
+        <span class="c1"># Headings</span>
+        <span class="n">full</span> <span class="o">=</span> <span class="n">rowspace</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">colheadings</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">rowspace</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="c1"># Add metadata entries</span>
+        <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="c1"># Make lists for each of the columns for each metadata entry</span>
+            <span class="c1"># Padded to the widths given in liswidths</span>
+            <span class="n">lis_range</span> <span class="o">=</span> <span class="p">[</span> <span class="nb">str</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">),</span> <span class="s1">&#39;            to            &#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">end</span><span class="p">)</span> <span class="p">]</span>
+            <span class="c1"># Shorten TimeRange representation if depth of only 2</span>
+            <span class="k">if</span> <span class="n">depth</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">lis_range</span> <span class="o">=</span> <span class="p">[</span> <span class="nb">str</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">end</span><span class="p">)</span> <span class="p">]</span>
+            <span class="n">liscols</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">liscols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">col</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+            <span class="n">lismeta</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+                <span class="n">string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">key</span><span class="p">])</span>
+                <span class="n">lismeta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+
+            <span class="c1"># Add lines of the entry upto the given depth</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
+                <span class="c1"># What to do in the event any of the lists have more entries</span>
+                <span class="c1"># then the current depth</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lis_range</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">i</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">i</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">lismeta</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">i</span> <span class="p">:</span>
+                    <span class="c1"># The start of the line Str is just a vertical bar/pipe</span>
+                    <span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span>
+                    <span class="c1"># Check we have a time range entry to print</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lis_range</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">:</span>
+                        <span class="c1"># Simply add that time range entry to the line Str</span>
+                        <span class="n">line</span> <span class="o">+=</span> <span class="n">lis_range</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># No entry to add, so just add a blank space</span>
+                        <span class="n">line</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                    <span class="c1"># Add a column break vertical bar/pipe</span>
+                    <span class="n">line</span> <span class="o">+=</span> <span class="n">colspace</span>
+                    <span class="c1"># Check we have another column name entry to print</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">:</span>
+                        <span class="c1"># Simply add that column name to the line Str</span>
+                        <span class="n">line</span> <span class="o">+=</span> <span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># No entry to add, so just add a blank space</span>
+                        <span class="n">line</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                    <span class="c1"># Add a column break vertical bar/pipe</span>
+                    <span class="n">line</span> <span class="o">+=</span> <span class="n">colspace</span>
+                    <span class="c1"># Check we have another meta key/value pair to print</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lismeta</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">:</span>
+                        <span class="c1"># Simply add that key/value pair to the line Str</span>
+                        <span class="n">line</span> <span class="o">+=</span> <span class="n">lismeta</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># No entry to add, so just add a blank space</span>
+                        <span class="n">line</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+                    <span class="c1"># Finish the line Str with vertical bar/pipe and \n</span>
+                    <span class="n">full</span> <span class="o">+=</span> <span class="n">line</span> <span class="o">+</span> <span class="s1">&#39;|</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="c1"># Reached the depth limit, add line to show if the columns are truncated</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lis_range</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">depth</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="n">depth</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">lismeta</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">depth</span><span class="p">:</span>
+                <span class="c1"># The start of the line Str is just a vertical bar/pipe</span>
+                <span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span>
+                <span class="c1"># Check we have more time range entries to print</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lis_range</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">depth</span><span class="p">:</span>
+                    <span class="c1"># We have more time range entries, use ellipsis to show this</span>
+                    <span class="n">line</span> <span class="o">+=</span> <span class="s1">&#39;...&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># No entry to add, so just add a blank space</span>
+                    <span class="n">line</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="c1"># Add a column break vertical bar/pipe</span>
+                <span class="n">line</span> <span class="o">+=</span> <span class="n">colspace</span>
+                <span class="c1"># Check we have more than one column name entry to print</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">depth</span><span class="p">:</span>
+                    <span class="c1"># We have more column name entries, use ellipsis</span>
+                    <span class="n">line</span> <span class="o">+=</span> <span class="s1">&#39;...&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># No more column name entries, so just add a blank space</span>
+                    <span class="n">line</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                <span class="c1"># Add a column break vertical bar/pipe</span>
+                <span class="n">line</span> <span class="o">+=</span> <span class="n">colspace</span>
+                <span class="c1"># Check we have more meta key/value pairs to print</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lismeta</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">depth</span><span class="p">:</span>
+                    <span class="c1"># We have more key/value pairs, use ellipsis to show this</span>
+                    <span class="n">line</span> <span class="o">+=</span> <span class="s1">&#39;...&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># No morekey/value pairs, add a blank space</span>
+                    <span class="n">line</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">100</span><span class="p">)[:</span><span class="n">liswidths</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+                <span class="c1"># Finish the line Str with vertical bar/pipe and \n</span>
+                <span class="n">full</span> <span class="o">+=</span> <span class="n">line</span> <span class="o">+</span> <span class="s1">&#39;|</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="c1"># Add a line to close the table</span>
+            <span class="n">full</span> <span class="o">+=</span> <span class="n">rowspace</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="n">full</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

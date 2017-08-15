@@ -1,0 +1,7 @@
+Physobs
+=======
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Physobs
+   :show-inheritance:

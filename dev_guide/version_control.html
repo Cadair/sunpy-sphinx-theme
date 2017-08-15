@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Version Control &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Coding Standards" href="code_standards.html" />
+    <link rel="prev" title="Newcomer’s Guide" href="newcomers.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Version Control | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/dev_guide/version_control.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer&#8217;s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="newcomers.html">Newcomer&#8217;s Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_standards.html">Coding Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Global Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="version-control">
+<h1>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h1>
+<p>Source-code for SunPy is managed using <a class="reference external" href="http://git-scm.com">Git</a>,
+a Distributed Version Control system. Code branches are hosted on
+<a class="reference external" href="http://github.com/sunpy/sunpy">GitHub.com</a>, a free project hosting website
+for Open-Source software. To contribute to SunPy you will need to create an
+account on GitHub.</p>
+<div class="section" id="creating-your-own-repo">
+<h2>Creating Your Own Repo<a class="headerlink" href="#creating-your-own-repo" title="Permalink to this headline">¶</a></h2>
+<p>Each person contributing to SunPy should create their own code repository (repo)
+on GitHub by forking the master repository or repo. All development is then
+done on your fork, using topic branches to isolate work on different features.
+New contributors can then initiate pull requests to have their code incorporated
+into the SunPy master repository. Regular contributors may become members of
+the <a class="reference external" href="https://github.com/sunpy">SunPy team</a> on GitHub. Code will be reviewed
+by and comments will be provided to improve the code before it is accepted.</p>
+<div class="section" id="getting-started">
+<h3>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
+<p>Creating your own fork of SunPy on GitHub is easy to do. Go ahead and create
+a free account on <a class="reference external" href="https://github.com/signup/free">create an account on GitHub</a>.
+Github has some <a class="reference external" href="https://help.github.com/">great resources to help</a>.
+Here is a quick overview of the process.</p>
+</div>
+<div class="section" id="adding-an-ssh-key-to-github">
+<h3>Adding an SSH key to GitHub<a class="headerlink" href="#adding-an-ssh-key-to-github" title="Permalink to this headline">¶</a></h3>
+<p>Next, you need to tell GitHub who you are. In order to push any code to GitHub
+you need to create a public SSH key and associate it with your GitHub account.
+For instructions on how this is done, see the article on GitHub on
+<a class="reference external" href="http://help.github.com/set-up-git-redirect">Setting up git</a> under
+&#8220;Set Up SSH Keys&#8221;. You only need to do this once, although if you plan to
+work from multiple computers you will need to go through the process for each
+computer.</p>
+</div>
+<div class="section" id="using-https">
+<h3>Using HTTPS<a class="headerlink" href="#using-https" title="Permalink to this headline">¶</a></h3>
+<p>If you do not fancy using SSH you can access GitHub using HTTP/HTTPS.
+A few things to note. Using HTTP only allows cloning of public repositories,
+while HTTPS allows cloning of private repositories but also allows you to have
+push access. This way you can type in your username and password to access
+your repositories.</p>
+</div>
+<div class="section" id="identifying-yourself">
+<h3>Identifying yourself<a class="headerlink" href="#identifying-yourself" title="Permalink to this headline">¶</a></h3>
+<p>Begin by identifying yourself to git (so all of your commits are signed with
+this information):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Firstname Lastname&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;your_email@youremail.com&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="forking-sunpy">
+<h3>Forking SunPy<a class="headerlink" href="#forking-sunpy" title="Permalink to this headline">¶</a></h3>
+<p>Each contributor to SunPy must have their own copy of the SunPy master repo.
+When working on the code, changes are made to your copy, and only when the
+changes are completed, and have been verified to work, should they be
+requested to be merged into the SunPy code base (through a pull request).
+GitHub provides a simple mechanism to setup your own
+personal repo by providing an option to <a class="reference external" href="http://help.github.com/fork-a-repo/">fork a repository</a>. When you create a fork of a GitHub
+project, a copy of the repo will automatically be created for you, and a link
+will be provided which you can use to download the code to your machine and
+begin working on it.</p>
+<p>To begin, fork the main SunPy repo on GitHub by clicking on the <code class="xref py py-obj docutils literal"><span class="pre">Fork</span></code> button
+on the <a class="reference external" href="https://github.com/sunpy/sunpy">SunPy project page</a></p>
+<p>Next, you need to download the forked repository. Clone the fork to your
+local machine, edit and run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">your_username</span><span class="o">&gt;/</span><span class="n">sunpy</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sunpy</span><span class="o">/</span><span class="n">sunpy</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>By default your fork of the repo on GitHub is identified by the name <code class="xref py py-obj docutils literal"><span class="pre">origin</span></code>.
+In order to keep the fork up to date with the main repo, it is useful to add it
+as a <code class="xref py py-obj docutils literal"><span class="pre">remote</span></code> in git:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sunpy</span><span class="o">/</span><span class="n">sunpy</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>To stay up to date regularly grab the latest changes to the SunPy master using
+the commands:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+<p>This will merge the upstream code with your code so you don&#8217;t
+need to worry about it overwriting your changes. Next let&#8217;s test this by making
+a change to SunPy. First (always do this!) create a new branch to contain your
+change.</p>
+<blockquote>
+<div>git checkout -b test</div></blockquote>
+<p>Go ahead and modify one of the files, or create a new file
+(and then run <strong class="command">git add</strong>).</p>
+<p>Commit and push the changes to your GitHub:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;My first commit&quot;</span>
+<span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p>You local repo is now synced with GitHub and ahead of the main repo as it
+contains your change. Remember to commit after you&#8217;ve done a unit of work (i.e.
+often). This will make it easier for you (in the future) and everyone else to
+understand what you are doing. Also make sure to make your commit statements
+clear and understandable to yourself and others. You can now go back to your
+unchanged version of SunPy on your master branch by running the command</p>
+<blockquote>
+<div>git checkout master</div></blockquote>
+<p>Remember to always create a new branch to contain a certain set of work.</p>
+</div>
+<div class="section" id="installing-sunpy">
+<h3>Installing SunPy<a class="headerlink" href="#installing-sunpy" title="Permalink to this headline">¶</a></h3>
+<p>In order to use the version of SunPy located in your personal repository.
+You need to install it using the <code class="xref py py-obj docutils literal"><span class="pre">setup.py</span></code> script located in the top-level
+folder. The <code class="xref py py-obj docutils literal"><span class="pre">setup.py</span></code> script has several flags: ::
+<code class="xref py py-obj docutils literal"><span class="pre">develop</span></code> : Installs SunPy and builds all external libraries.
+<code class="xref py py-obj docutils literal"><span class="pre">build</span></code> or <code class="xref py py-obj docutils literal"><span class="pre">build_ext</span></code>:  (Re)Builds the external libraries.
+<code class="xref py py-obj docutils literal"><span class="pre">clean</span> <span class="pre">--all</span></code>: Cleans all build files</p>
+<p>Use the <code class="xref py py-obj docutils literal"><span class="pre">setup.py</span></code> script like so:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">./</span>
+</pre></div>
+</div>
+<p>If you are interested in having different versions of sunpy in your
+machine and you want to switch from one to another you could use
+virtual environments. This is an easy task if you used conda as your
+python package manager.</p>
+<p>After a standard conda installation, <a class="reference internal" href="../guide/installation/index.html#main-install"><span class="std std-ref">assuming you have also installed
+the latest stable version of sunpy</span></a>, you then proceed to create a new environment
+as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">sunpy</span><span class="o">-</span><span class="n">dev</span> <span class="n">python</span><span class="o">=</span><span class="mi">3</span> <span class="n">sunpy</span>
+</pre></div>
+</div>
+<p>This will create a new environment called <code class="xref py py-obj docutils literal"><span class="pre">sunpy-dev</span></code> with all of the
+dependencies needed by sunpy. We then proceed to change to the new
+environment:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">sunpy</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>Then we need to remove the stable version from this environment</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">remove</span> <span class="n">sunpy</span>
+</pre></div>
+</div>
+<p>to then install the version in your git repository</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">to</span><span class="o">/</span><span class="n">sunpy</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">repository</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">./</span>
+</pre></div>
+</div>
+<p>At this stage you can use the development version in which you are
+working on. If you want to go back to the stable installation you can just
+change the environment by</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">deactivate</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<p>That&#8217;s it! You now have your own personal SunPy repo to develop on. You could
+hack away at it to your heart&#8217;s content, pushing changes to your fork on
+GitHub to share with others and to ensure that you have a backup online.</p>
+<p>But what about when you want to start contributing back to the main SunPy
+repo? That is the topic of the next section.</p>
+</div>
+</div>
+<div class="section" id="branches">
+<h2>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h2>
+<p>Developers should create topic branches within their repos for most of their
+main coding. Every repo starts with a single branch called <code class="xref py py-obj docutils literal"><span class="pre">master</span></code>, which
+seldom needs to be used. Instead, work on any particular feature, bug, or
+portion of the code is done in its own separate branch. This way changes on
+any particular issue are isolated from other unrelated changes. Users can even
+work on several different branches simultaneously.</p>
+<p>To create a new branch run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="n">branchname</span>
+</pre></div>
+</div>
+<p>To switch to the new branch:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">branchname</span>
+</pre></div>
+</div>
+<p>(or alternatively, <strong class="command">git checkout -b branchname</strong> will accomplish
+the above).</p>
+<p>Developers should create new branches for the features they are working on.
+When they have finished making changes and the code has been tested and
+verified to be working well, the code can be merged back into the SunPy
+repo. This is usually done through something called a pull request.</p>
+<div class="section" id="example-workflow">
+<h3>Example Workflow<a class="headerlink" href="#example-workflow" title="Permalink to this headline">¶</a></h3>
+<p>Here is an example workflow for a SunPy developer on any given day. Before
+beginning this tutorial, follow the above instructions to grab a copy of the
+SunPy repo.</p>
+<div class="section" id="grabbing-other-people-s-changes">
+<h4>Grabbing other people&#8217;s changes<a class="headerlink" href="#grabbing-other-people-s-changes" title="Permalink to this headline">¶</a></h4>
+<p>The first thing you want to do before you start coding anything new is to pull
+in the latest code that others have written since you last did any coding. To
+do this, run <code class="xref py py-obj docutils literal"><span class="pre">git</span> <span class="pre">pull</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">upstream</span> <span class="n">master</span>
+</pre></div>
+</div>
+<p>This will ensure that you don&#8217;t edit a file that has changed since your last pull
+which will lead to merge conflicts later on.</p>
+</div>
+<div class="section" id="code-away">
+<h4>Code away<a class="headerlink" href="#code-away" title="Permalink to this headline">¶</a></h4>
+<p>Assuming there are no merge conflicts (which shouldn&#8217;t happen unless two people
+are working on the same part of the same file), then you are ready to begin
+coding. If there are conflicts check out our conflicts section.</p>
+</div>
+<div class="section" id="push-your-changes-to-github">
+<h4>Push your changes to GitHub<a class="headerlink" href="#push-your-changes-to-github" title="Permalink to this headline">¶</a></h4>
+<p>As you code away on your local repo, you will need to keep git aware of what you are doing
+and also your remote copy up to date.</p>
+<p>To add a file, create the file then run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">&lt;</span><span class="n">yourfilename</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If you delete a file run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">&lt;</span><span class="n">yourfilename</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>To move a file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">mv</span> <span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">destination</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>To check to see if git is happy run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>which will give you a report of what has happened so far. Once you are at a good stopping point you should
+&#8220;commit&#8221; your changes. This will provide you an opportunity to describe what you have done so far. To do this type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;description of your changes&quot;</span>
+</pre></div>
+</div>
+<p>After doing this you are ready to push your changes to your repo online with the command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p>The local and remote copies of your repo are now synced.</p>
+</div>
+<div class="section" id="contributing-to-the-main-repo">
+<h4>Contributing to the main repo<a class="headerlink" href="#contributing-to-the-main-repo" title="Permalink to this headline">¶</a></h4>
+<p>Once you have made your desired changes, and committed and pushed your personal
+branch, you need to decide whether or not to merge those changes back into the
+main SunPy repo. If the changes you made are finished and have been tested and proven
+stable (see the testing section below), then they can be merged into SunPy.
+For now, lets assume that
+your changes are complete and they are ready to be added to the main SunPy repo.
+All contributed code to SunPy must be submitted as a &#8220;pull request&#8221;. To do this go to the github
+website and to your repo (remember to select the branch) then click on the &#8220;Pull
+Request&#8221; button (in the upper right hand corner next to the Fork button which you&#8217;ve
+used before). All initial pull requests must be made to the master branch unless they are a fix for specific version.
+This will submit your code to a review. You will likely
+receive some constructive comments on your code. To address these you can simply work
+on your code and push those changes to your local repo. Those changes will be reflected
+in your pull request. Once a member of
+the SunPy dev team approves your pull request then your code will be
+merged into the main SunPy repo
+and your code will be part of the main SunPy code. Congratulations!</p>
+<p>And that&#8217;s it! It may seem like a lot at first but once you go through the
+motions a few times it becomes very quick.</p>
+</div>
+<div class="section" id="conflict-resolution">
+<h4>Conflict resolution<a class="headerlink" href="#conflict-resolution" title="Permalink to this headline">¶</a></h4>
+<p>It may so happen that when you try to sync with the main repo there is a conflict error.
+This means that someone else has been working on the same section of code
+that you have. In such cases, the merge
+command will issue a conflict warning and will then expect you do the merge
+yourself. You can type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">mergetool</span>
+</pre></div>
+</div>
+<p>to go through the conflicts. This command will likely open some merging tools
+which are already available on your computer. For example, on Mac OS X, it will open
+FileMerge (if you have XCode installed). You can check on your progress by typing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>Once you are done, you should then commit your changes, in this case
+the resolution of the conflict with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Resolved conflict between my and online version of file.py&quot;</span>
+</pre></div>
+</div>
+<p>You can then proceed to push this change up to your branch.</p>
+</div>
+<div class="section" id="backporting-contribution">
+<h4>Backporting contribution<a class="headerlink" href="#backporting-contribution" title="Permalink to this headline">¶</a></h4>
+<p>Sometimes a contribution needs to be backported to the latest stable branch, this
+may be due to a bug being fixed or something similar.
+There are different ways to do so, if the contribution contains just a couple
+of commits, then the easiest is to <code class="xref py py-obj docutils literal"><span class="pre">cherry-pick</span></code> them.
+Assuming you are in the branch of your new feature (eg. <code class="xref py py-obj docutils literal"><span class="pre">new_feature</span></code>), this
+is what you need to do:</p>
+<p>First you need to find out which commits you want to copy to the other branch:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
+</pre></div>
+</div>
+<p>Download/update the upstream branches to your local machine:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+</pre></div>
+</div>
+<p>Create a new branch from the version you want to backport, X.y:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">new_feature_X</span><span class="o">.</span><span class="n">y</span> <span class="n">upstream</span><span class="o">/</span><span class="n">X</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+<p>Copy the commits using <code class="xref py py-obj docutils literal"><span class="pre">cherry-pick</span></code>, <code class="xref py py-obj docutils literal"><span class="pre">xxxxxxxx</span></code> (<code class="xref py py-obj docutils literal"><span class="pre">yyyyyyyy</span></code>) refers to the
+oldest (newest) commit you want to backport. <code class="xref py py-obj docutils literal"><span class="pre">^</span></code> at the end of the oldest is
+to include it, otherwise will take the ones after that point:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cherry</span><span class="o">-</span><span class="n">pick</span> <span class="n">xxxxxxxx</span><span class="o">^..</span><span class="n">yyyyyyyy</span>
+</pre></div>
+</div>
+<p>Push that new branch to your repository on github:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">new_feature_X</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+<p>Once done, then you can create a new pull request to the X.y branch.
+Remember to keep the same title that the original but adding [X.y] at the beginning.
+Also add a reference to the original pull request in the comments with
+the appropriate format: <code class="xref py py-obj docutils literal"><span class="pre">#pr-number</span></code>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

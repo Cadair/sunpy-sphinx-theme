@@ -1,0 +1,929 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.instr.lyra &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.instr.lyra | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/instr/lyra.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.instr.lyra</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">warnings</span> <span class="k">import</span> <span class="n">warn</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">astropy.io</span> <span class="k">import</span> <span class="n">fits</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.net</span> <span class="k">import</span> <span class="n">check_download_file</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.config</span> <span class="k">import</span> <span class="n">get_and_create_download_dir</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.decorators</span> <span class="k">import</span> <span class="n">deprecated</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="n">urllib</span>
+
+<span class="n">LYTAF_REMOTE_PATH</span> <span class="o">=</span> <span class="s2">&quot;http://proba2.oma.be/lyra/data/lytaf/&quot;</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;remove_lytaf_events_from_lightcurve&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;remove_lytaf_events_from_timeseries&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;get_lytaf_events&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;get_lytaf_event_types&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;download_lytaf_database&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;split_series_using_lytaf&#39;</span><span class="p">]</span>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;v0.8&#39;</span><span class="p">,</span>
+            <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;``remove_lytaf_events_from_lightcurve`` is deprecated as of SunPy v0.8 due to</span>
+<span class="s2">            the deprecation of ``LightCurve`` in favour of ``TimeSeries``. You should use</span>
+<span class="s2">            ``remove_lytaf_events_from_timeseries`` instead.&quot;&quot;&quot;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;remove_lytaf_events_from_lightcurve&quot;</span><span class="p">,</span>
+            <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;remove_lytaf_events_from_timeseries&quot;</span>
+            <span class="p">)</span>
+<div class="viewcode-block" id="remove_lytaf_events_from_lightcurve"><a class="viewcode-back" href="../../../api/sunpy.instr.lyra.remove_lytaf_events_from_lightcurve.html#sunpy.instr.lyra.remove_lytaf_events_from_lightcurve">[docs]</a><span class="k">def</span> <span class="nf">remove_lytaf_events_from_lightcurve</span><span class="p">(</span><span class="n">lc</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">remove_lytaf_events_from_timeseries</span><span class="p">(</span><span class="n">lc</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="remove_lytaf_events_from_timeseries"><a class="viewcode-back" href="../../../api/sunpy.instr.lyra.remove_lytaf_events_from_timeseries.html#sunpy.instr.lyra.remove_lytaf_events_from_timeseries">[docs]</a><span class="k">def</span> <span class="nf">remove_lytaf_events_from_timeseries</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">artifacts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                        <span class="n">return_artifacts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                        <span class="n">lytaf_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                        <span class="n">force_use_local_lytaf</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Removes periods of LYRA artifacts defined in LYTAF from a TimeSeries.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ts : `sunpy.timeseries.TimeSeries`</span>
+
+<span class="sd">    artifacts : list of strings</span>
+<span class="sd">        Sets the artifact types to be removed.  For a list of artifact types</span>
+<span class="sd">        see reference [1].  For example, if a user wants to remove only large</span>
+<span class="sd">        angle rotations, listed at reference [1] as LAR, set artifacts=[&quot;LAR&quot;].</span>
+<span class="sd">        The default is that no artifacts will be removed.</span>
+
+<span class="sd">    return_artifacts : `bool`</span>
+<span class="sd">        Set to True to return a `numpy.recarray` containing the start time, end</span>
+<span class="sd">        time and type of all artifacts removed.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    lytaf_path : `str`</span>
+<span class="sd">        directory path where the LYRA annotation files are stored.</span>
+
+<span class="sd">    force_use_local_lytaf : `bool`</span>
+<span class="sd">        Ensures current local version of lytaf files are not replaced by</span>
+<span class="sd">        up-to-date online versions even if current local lytaf files do not</span>
+<span class="sd">        cover entire input time range etc.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ts_new : `sunpy.timeseries.TimeSeries`</span>
+<span class="sd">        copy of input TimeSeries with periods corresponding to artifacts</span>
+<span class="sd">        removed.</span>
+
+<span class="sd">    artifact_status : `dict`</span>
+<span class="sd">        List of 4 variables containing information on what artifacts were</span>
+<span class="sd">        found, removed, etc. from the time series.</span>
+<span class="sd">        | **artifact_status[&quot;lytaf&quot;]** : `numpy.recarray`</span>
+<span class="sd">        |     The full LYRA annotation file for the time series time range</span>
+<span class="sd">        |     output by get_lytaf_events().</span>
+<span class="sd">        | **artifact_status[&quot;removed&quot;]** : `numpy.recarray`</span>
+<span class="sd">        |     Artifacts which were found and removed from from time series.</span>
+<span class="sd">        | **artifact_status[&quot;not_removed&quot;]** : `numpy.recarray`</span>
+<span class="sd">        |     Artifacts which were found but not removed as they were not</span>
+<span class="sd">        |     included when user defined artifacts kwarg.</span>
+<span class="sd">        | **artifact_status[&quot;not_found&quot;]** : `list` of strings</span>
+<span class="sd">        |     Artifacts listed to be removed by user when defining</span>
+<span class="sd">        |     artifacts kwarg which were not found in time series time range.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function is intended to take TimeSeries objects as input, but the</span>
+<span class="sd">    deprecated LightCurve is still supported here.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    [1] http://proba2.oma.be/data/TARDIS</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Remove LARs (Large Angle Rotations) from TimeSeries for 4-Dec-2014:</span>
+
+<span class="sd">        &gt;&gt;&gt; import sunpy.timeseries as ts</span>
+<span class="sd">        &gt;&gt;&gt; import sunpy.data.sample</span>
+<span class="sd">        &gt;&gt;&gt; lyrats = ts.TimeSeries(sunpy.data.sample.LYRA_LEVEL3_TIMESERIES, source=&#39;LYRA&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; ts_nolars = ts.remove_artifacts_from_timeseries(lyrats, artifacts=[&quot;LAR&quot;])</span>
+
+<span class="sd">    To also retrieve information on the artifacts during that day:</span>
+<span class="sd">        &gt;&gt;&gt; ts_nolars, artifact_status = ts.remove_artifacts_from_timeseries(</span>
+<span class="sd">                lyrats, artifacts=[&quot;LAR&quot;], return_artifacts=True)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check that input argument is of correct type</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">lytaf_path</span><span class="p">:</span>
+        <span class="n">lytaf_path</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+    <span class="c1"># Remove artifacts from time series</span>
+    <span class="n">data_columns</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span>
+    <span class="n">time</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">artifact_status</span> <span class="o">=</span> <span class="n">_remove_lytaf_events</span><span class="p">(</span>
+        <span class="n">ts</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+        <span class="n">channels</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">col</span><span class="p">])</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">data_columns</span><span class="p">],</span>
+        <span class="n">artifacts</span><span class="o">=</span><span class="n">artifacts</span><span class="p">,</span> <span class="n">return_artifacts</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lytaf_path</span><span class="o">=</span><span class="n">lytaf_path</span><span class="p">,</span>
+        <span class="n">force_use_local_lytaf</span><span class="o">=</span><span class="n">force_use_local_lytaf</span><span class="p">)</span>
+    <span class="c1"># Create new copy copy of timeseries and replace data with</span>
+    <span class="c1"># artifact-free time series.</span>
+    <span class="n">ts_new</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+    <span class="n">ts_new</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="nb">dict</span><span class="p">((</span><span class="n">col</span><span class="p">,</span> <span class="n">channels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                              <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data_columns</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">return_artifacts</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ts_new</span><span class="p">,</span> <span class="n">artifact_status</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ts_new</span></div>
+
+
+<span class="k">def</span> <span class="nf">_remove_lytaf_events</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">artifacts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                         <span class="n">return_artifacts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fitsfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                         <span class="n">csvfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filecolumns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                         <span class="n">lytaf_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_use_local_lytaf</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Removes periods of LYRA artifacts from a time series.</span>
+
+<span class="sd">    This functions removes periods corresponding to certain artifacts recorded</span>
+<span class="sd">    in the LYRA annotation file from an array of times given by the time input.</span>
+<span class="sd">    If a list of arrays of other properties is supplied through the channels</span>
+<span class="sd">    kwarg, then the relevant values from these arrays are also removed.  This</span>
+<span class="sd">    is done by assuming that each element in each array supplied corresponds to</span>
+<span class="sd">    the time in the same index in time array.  The artifacts to be removed are</span>
+<span class="sd">    given via the artifacts kwarg.  The default is &quot;all&quot;, meaning that all</span>
+<span class="sd">    artifacts will be removed.  However, a subset of artifacts can be removed</span>
+<span class="sd">    by supplying a list of strings of the desired artifact types.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    time : `numpy.ndarray` of `datetime.datetime`</span>
+<span class="sd">        Gives the times of the timeseries.</span>
+
+<span class="sd">    channels : `list` of `numpy.array` convertible to float64.</span>
+<span class="sd">        Contains arrays of the irradiances taken at the times in the time</span>
+<span class="sd">        variable.  Each element in the list must have the same number of</span>
+<span class="sd">        elements as time.</span>
+
+<span class="sd">    artifacts : `list` of strings</span>
+<span class="sd">        Contain the artifact types to be removed.  For list of artifact types</span>
+<span class="sd">        see reference [1].  For example, if user wants to remove only large</span>
+<span class="sd">        angle rotations, listed at reference [1] as LAR, let artifacts=[&quot;LAR&quot;].</span>
+<span class="sd">        Default=[], i.e. no artifacts will be removed.</span>
+
+<span class="sd">    return_artifacts : `bool`</span>
+<span class="sd">        Set to True to return a numpy recarray containing the start time, end</span>
+<span class="sd">        time and type of all artifacts removed.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    fitsfile : `str`</span>
+<span class="sd">        file name (including file path and suffix, .fits) of output fits file</span>
+<span class="sd">        which is generated if this kwarg is not None.</span>
+<span class="sd">        Default=None, i.e. no fits file is output.</span>
+
+<span class="sd">    csvfile : `str`</span>
+<span class="sd">        file name (including file path and suffix, .csv) of output csv file</span>
+<span class="sd">        which is generated if this kwarg is not None.</span>
+<span class="sd">        Default=None, i.e. no csv file is output.</span>
+
+<span class="sd">    filecolumns : `list` of strings</span>
+<span class="sd">        Gives names of columns of any output files produced.  Although</span>
+<span class="sd">        initially set to None above, the default is in fact</span>
+<span class="sd">        [&quot;time&quot;, &quot;channel0&quot;, &quot;channel1&quot;,...&quot;channelN&quot;]</span>
+<span class="sd">        where N is the number of irradiance arrays in the channels input</span>
+<span class="sd">        (assuming 0-indexed counting).</span>
+
+<span class="sd">    lytaf_path : `str`</span>
+<span class="sd">        directory path where the LYRA annotation files are stored.</span>
+
+<span class="sd">    force_use_local_lytaf : `bool`</span>
+<span class="sd">        Ensures current local version of lytaf files are not replaced by</span>
+<span class="sd">        up-to-date online versions even if current local lytaf files do not</span>
+<span class="sd">        cover entire input time range etc.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    clean_time : `numpy.ndarray` of `datetime.datetime`</span>
+<span class="sd">        time array with artifact periods removed.</span>
+
+<span class="sd">    clean_channels : `list` ndarrays/array-likes convertible to float64</span>
+<span class="sd">        list of irradiance arrays with artifact periods removed.</span>
+
+<span class="sd">    artifact_status : `dict`</span>
+<span class="sd">        List of 4 variables containing information on what artifacts were</span>
+<span class="sd">        found, removed, etc. from the time series.</span>
+<span class="sd">        artifact_status[&quot;lytaf&quot;] = artifacts found : `numpy.recarray`</span>
+<span class="sd">            The full LYRA annotation file for the time series time range</span>
+<span class="sd">            output by get_lytaf_events().</span>
+<span class="sd">        artifact_status[&quot;removed&quot;] = artifacts removed : `numpy.recarray`</span>
+<span class="sd">            Artifacts which were found and removed from from time series.</span>
+<span class="sd">        artifact_status[&quot;not_removed&quot;] = artifacts found but not removed :</span>
+<span class="sd">              `numpy.recarray`</span>
+<span class="sd">            Artifacts which were found but not removed as they were not</span>
+<span class="sd">            included when user defined artifacts kwarg.</span>
+<span class="sd">        artifact_status[&quot;not_found&quot;] = artifacts not found : `list` of strings</span>
+<span class="sd">            Artifacts listed to be removed by user when defining artifacts</span>
+<span class="sd">            kwarg which were not found in time series time range.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    [1] http://proba2.oma.be/data/TARDIS</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    Sample data for example</span>
+<span class="sd">        &gt;&gt;&gt; time = np.array([datetime(2013, 2, 1)+timedelta(minutes=i)</span>
+<span class="sd">                             for i in range(120)])</span>
+<span class="sd">        &gt;&gt;&gt; channel_1 = np.zeros(len(TIME))+0.4</span>
+<span class="sd">        &gt;&gt;&gt; channel_2 = np.zeros(len(TIME))+0.1</span>
+<span class="sd">    Remove LARs (Large Angle Rotations) from time series.</span>
+<span class="sd">        &gt;&gt;&gt; time_clean, channels_clean = remove_lyra_artifacts(</span>
+<span class="sd">              time, channels=[channel_1, channel2], artifacts=[&#39;LAR&#39;])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check inputs</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">lytaf_path</span><span class="p">:</span>
+        <span class="n">lytaf_path</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">channels</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">channels</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;channels must be None or a list of numpy arrays &quot;</span>
+                        <span class="s2">&quot;of dtype &#39;float64&#39;.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">artifacts</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;User has supplied no artifacts to remove.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">artifacts</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">artifacts</span> <span class="o">=</span> <span class="p">[</span><span class="n">artifacts</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">artifact_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">for</span> <span class="n">artifact_type</span> <span class="ow">in</span> <span class="n">artifacts</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;All elements in artifacts must in strings.&quot;</span><span class="p">)</span>
+    <span class="n">all_lytaf_event_types</span> <span class="o">=</span> <span class="n">get_lytaf_event_types</span><span class="p">(</span><span class="n">lytaf_path</span><span class="o">=</span><span class="n">lytaf_path</span><span class="p">,</span>
+                                                  <span class="n">print_event_types</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">artifact</span> <span class="ow">in</span> <span class="n">artifacts</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">artifact</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">all_lytaf_event_types</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">all_lytaf_event_types</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> is not a valid artifact type. See above.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">artifact</span><span class="p">))</span>
+    <span class="c1"># Define outputs</span>
+    <span class="n">clean_time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">parse_time</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">time</span><span class="p">])</span>
+    <span class="n">clean_channels</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">channels</span><span class="p">)</span>
+    <span class="n">artifacts_not_found</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Get LYTAF file for given time range</span>
+    <span class="n">lytaf</span> <span class="o">=</span> <span class="n">get_lytaf_events</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lytaf_path</span><span class="o">=</span><span class="n">lytaf_path</span><span class="p">,</span>
+                             <span class="n">force_use_local_lytaf</span><span class="o">=</span><span class="n">force_use_local_lytaf</span><span class="p">)</span>
+
+    <span class="c1"># Find events in lytaf which are to be removed from time series.</span>
+    <span class="n">artifact_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;int64&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">artifact_type</span> <span class="ow">in</span> <span class="n">artifacts</span><span class="p">:</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">lytaf</span><span class="p">[</span><span class="s2">&quot;event_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">artifact_type</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># If none of a given type of artifact is found, record this</span>
+        <span class="c1"># type in artifact_not_found list.</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">artifacts_not_found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">artifact_type</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Else, record the indices of the artifacts of this type</span>
+            <span class="n">artifact_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">artifact_indices</span><span class="p">,</span> <span class="n">indices</span><span class="p">))</span>
+    <span class="n">artifact_indices</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+    <span class="c1"># Remove relevant artifacts from timeseries. If none of the</span>
+    <span class="c1"># artifacts the user wanted removed were found, raise a warning and</span>
+    <span class="c1"># continue with code.</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">artifact_indices</span><span class="p">):</span>
+        <span class="n">warn</span><span class="p">(</span><span class="s2">&quot;None of user supplied artifacts were found.&quot;</span><span class="p">)</span>
+        <span class="n">artifacts_not_found</span> <span class="o">=</span> <span class="n">artifacts</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Remove periods corresponding to artifacts from flux and time</span>
+        <span class="c1"># arrays.</span>
+        <span class="n">bad_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;int64&quot;</span><span class="p">)</span>
+        <span class="n">all_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">time</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">artifact_indices</span><span class="p">:</span>
+            <span class="n">bad_period</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">time</span> <span class="o">&gt;=</span> <span class="n">lytaf</span><span class="p">[</span><span class="s2">&quot;begin_time&quot;</span><span class="p">][</span><span class="n">index</span><span class="p">],</span>
+                                        <span class="n">time</span> <span class="o">&lt;=</span> <span class="n">lytaf</span><span class="p">[</span><span class="s2">&quot;end_time&quot;</span><span class="p">][</span><span class="n">index</span><span class="p">])</span>
+            <span class="n">bad_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bad_indices</span><span class="p">,</span> <span class="n">all_indices</span><span class="p">[</span><span class="n">bad_period</span><span class="p">])</span>
+        <span class="n">clean_time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">clean_time</span><span class="p">,</span> <span class="n">bad_indices</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">channels</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clean_channels</span><span class="p">):</span>
+                <span class="n">clean_channels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">bad_indices</span><span class="p">)</span>
+    <span class="c1"># If return_artifacts kwarg is True, return a list containing</span>
+    <span class="c1"># information on what artifacts found, removed, etc.  See docstring.</span>
+    <span class="k">if</span> <span class="n">return_artifacts</span><span class="p">:</span>
+        <span class="n">artifact_status</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lytaf&quot;</span><span class="p">:</span> <span class="n">lytaf</span><span class="p">,</span>
+                           <span class="s2">&quot;removed&quot;</span><span class="p">:</span> <span class="n">lytaf</span><span class="p">[</span><span class="n">artifact_indices</span><span class="p">],</span>
+                           <span class="s2">&quot;not_removed&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">lytaf</span><span class="p">,</span> <span class="n">artifact_indices</span><span class="p">),</span>
+                           <span class="s2">&quot;not_found&quot;</span><span class="p">:</span> <span class="n">artifacts_not_found</span><span class="p">}</span>
+    <span class="c1"># Output FITS file if fits kwarg is set</span>
+    <span class="k">if</span> <span class="n">fitsfile</span><span class="p">:</span>
+        <span class="c1"># Create time array of time strings rather than datetime objects</span>
+        <span class="c1"># and verify filecolumns have been correctly input.  If None,</span>
+        <span class="c1"># generate generic filecolumns (see docstring of function called</span>
+        <span class="c1"># below.</span>
+        <span class="n">string_time</span><span class="p">,</span> <span class="n">filecolumns</span> <span class="o">=</span> <span class="n">_prep_columns</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">filecolumns</span><span class="p">)</span>
+        <span class="c1"># Prepare column objects.</span>
+        <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">fits</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">filecolumns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;26A&quot;</span><span class="p">,</span>
+                            <span class="n">array</span><span class="o">=</span><span class="n">string_time</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">channels</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">channels</span><span class="p">):</span>
+                <span class="n">cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">filecolumns</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">,</span>
+                                        <span class="n">array</span><span class="o">=</span><span class="n">f</span><span class="p">))</span>
+        <span class="n">coldefs</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">ColDefs</span><span class="p">(</span><span class="n">cols</span><span class="p">)</span>
+        <span class="n">tbhdu</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">new_table</span><span class="p">(</span><span class="n">coldefs</span><span class="p">)</span>
+        <span class="n">hdu</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">PrimaryHDU</span><span class="p">()</span>
+        <span class="n">tbhdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">HDUList</span><span class="p">([</span><span class="n">hdu</span><span class="p">,</span> <span class="n">tbhdu</span><span class="p">])</span>
+        <span class="c1"># Write data to fits file.</span>
+        <span class="n">tbhdulist</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="n">fitsfile</span><span class="p">)</span>
+    <span class="c1"># Output csv file if csv kwarg is set.</span>
+    <span class="k">if</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="c1"># Create time array of time strings rather than datetime objects</span>
+        <span class="c1"># and verify filecolumns have been correctly input.  If None,</span>
+        <span class="c1"># generate generic filecolumns (see docstring of function called</span>
+        <span class="c1"># below.</span>
+        <span class="n">string_time</span><span class="p">,</span> <span class="n">filecolumns</span> <span class="o">=</span> <span class="n">_prep_columns</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">filecolumns</span><span class="p">)</span>
+        <span class="c1"># Open and write data to csv file.</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">openfile</span><span class="p">:</span>
+            <span class="n">csvwriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">openfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+            <span class="c1"># Write header.</span>
+            <span class="n">csvwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">filecolumns</span><span class="p">)</span>
+            <span class="c1"># Write data.</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">channels</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">time</span><span class="p">)):</span>
+                    <span class="n">csvwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">string_time</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">time</span><span class="p">)):</span>
+                    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">string_time</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+                    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">channels</span><span class="p">:</span>
+                        <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                    <span class="n">csvwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="c1"># Return values.</span>
+    <span class="k">if</span> <span class="n">return_artifacts</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">channels</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">clean_time</span><span class="p">,</span> <span class="n">artifact_status</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">clean_time</span><span class="p">,</span> <span class="n">clean_channels</span><span class="p">,</span> <span class="n">artifact_status</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">channels</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">clean_time</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">clean_time</span><span class="p">,</span> <span class="n">clean_channels</span>
+
+
+<div class="viewcode-block" id="get_lytaf_events"><a class="viewcode-back" href="../../../api/sunpy.instr.lyra.get_lytaf_events.html#sunpy.instr.lyra.get_lytaf_events">[docs]</a><span class="k">def</span> <span class="nf">get_lytaf_events</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">lytaf_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                     <span class="n">combine_files</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;lyra&quot;</span><span class="p">,</span> <span class="s2">&quot;manual&quot;</span><span class="p">,</span> <span class="s2">&quot;ppt&quot;</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">),</span>
+                     <span class="n">csvfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_use_local_lytaf</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extracts combined lytaf file for given time range.</span>
+
+<span class="sd">    Given a time range defined by start_time and end_time, this function</span>
+<span class="sd">    extracts the segments of each LYRA annotation file and combines them.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    start_time : `datetime.datetime` or `str`</span>
+<span class="sd">        Start time of period for which annotation file is required.</span>
+
+<span class="sd">    end_time : `datetime.datetime` or `str`</span>
+<span class="sd">        End time of period for which annotation file is required.</span>
+
+<span class="sd">    lytaf_path : `str`</span>
+<span class="sd">        directory path where the LYRA annotation files are stored.</span>
+
+<span class="sd">    combine_files : `tuple` of strings</span>
+<span class="sd">        States which LYRA annotation files are to be combined.</span>
+<span class="sd">        Default is all four, i.e. lyra, manual, ppt, science.</span>
+<span class="sd">        See Notes section for an explanation of each.</span>
+
+<span class="sd">    force_use_local_lytaf : `bool`</span>
+<span class="sd">        Ensures current local version of lytaf files are not replaced by</span>
+<span class="sd">        up-to-date online versions even if current local lytaf files do not</span>
+<span class="sd">        cover entire input time range etc.</span>
+<span class="sd">        Default=False</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    lytaf : `numpy.recarray`</span>
+<span class="sd">        Containing the various parameters stored in the LYTAF files.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    There are four LYRA annotation files which mark different types of events</span>
+<span class="sd">    or artifacts in the data.  They are named annotation_suffix.db where</span>
+<span class="sd">    suffix is a variable equalling either lyra, manual, ppt, or science.</span>
+
+<span class="sd">    annotation_lyra.db : contains entries regarding possible effects to</span>
+<span class="sd">        the data due to normal operation of LYRA instrument.</span>
+
+<span class="sd">    annotation_manual.db : contains entries regarding possible effects</span>
+<span class="sd">        to the data due to unusual or manually logged events.</span>
+
+<span class="sd">    annotation_ppt.db : contains entries regarding possible effects to</span>
+<span class="sd">        the data due to pointing or positioning of PROBA2.</span>
+
+<span class="sd">    annotation_science.db : contains events in the data scientifically</span>
+<span class="sd">        interesting, e.g. GOES flares.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Further documentation: http://proba2.oma.be/data/TARDIS</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Get all events in the LYTAF files for January 2014</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.instr.lyra import get_lytaf_events</span>
+<span class="sd">        &gt;&gt;&gt; lytaf = get_lytaf_events(&#39;2014-01-01&#39;, &#39;2014-02-01&#39;)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check inputs</span>
+    <span class="c1"># Check lytaf path</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">lytaf_path</span><span class="p">:</span>
+        <span class="n">lytaf_path</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+    <span class="c1"># Check start_time and end_time is a date string or datetime object</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">start_time</span><span class="p">)</span>
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">end_time</span><span class="p">)</span>
+    <span class="c1"># Check combine_files contains correct inputs</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">suffix</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;lyra&quot;</span><span class="p">,</span> <span class="s2">&quot;manual&quot;</span><span class="p">,</span> <span class="s2">&quot;ppt&quot;</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">]</span>
+               <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">combine_files</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Elements in combine_files must be strings equalling &quot;</span>
+                         <span class="s2">&quot;&#39;lyra&#39;, &#39;manual&#39;, &#39;ppt&#39;, or &#39;science&#39;.&quot;</span><span class="p">)</span>
+    <span class="c1"># Remove any duplicates from combine_files input</span>
+    <span class="n">combine_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">combine_files</span><span class="p">))</span>
+    <span class="n">combine_files</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="c1"># Convert input times to UNIX timestamp format since this is the</span>
+    <span class="c1"># time format in the annotation files</span>
+    <span class="n">start_time_uts</span> <span class="o">=</span> <span class="p">(</span><span class="n">start_time</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+    <span class="n">end_time_uts</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+
+    <span class="c1"># Define numpy record array which will hold the information from</span>
+    <span class="c1"># the annotation file.</span>
+    <span class="n">lytaf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">0</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">[(</span><span class="s2">&quot;insertion_time&quot;</span><span class="p">,</span> <span class="nb">object</span><span class="p">),</span>
+                                  <span class="p">(</span><span class="s2">&quot;begin_time&quot;</span><span class="p">,</span> <span class="nb">object</span><span class="p">),</span>
+                                  <span class="p">(</span><span class="s2">&quot;reference_time&quot;</span><span class="p">,</span> <span class="nb">object</span><span class="p">),</span>
+                                  <span class="p">(</span><span class="s2">&quot;end_time&quot;</span><span class="p">,</span> <span class="nb">object</span><span class="p">),</span>
+                                  <span class="p">(</span><span class="s2">&quot;event_type&quot;</span><span class="p">,</span> <span class="nb">object</span><span class="p">),</span>
+                                  <span class="p">(</span><span class="s2">&quot;event_definition&quot;</span><span class="p">,</span> <span class="nb">object</span><span class="p">)])</span>
+    <span class="c1"># Access annotation files</span>
+    <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">combine_files</span><span class="p">:</span>
+        <span class="c1"># Check database files are present</span>
+        <span class="n">dbname</span> <span class="o">=</span> <span class="s2">&quot;annotation_</span><span class="si">{0}</span><span class="s2">.db&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">suffix</span><span class="p">)</span>
+        <span class="n">check_download_file</span><span class="p">(</span><span class="n">dbname</span><span class="p">,</span> <span class="n">LYTAF_REMOTE_PATH</span><span class="p">,</span> <span class="n">lytaf_path</span><span class="p">)</span>
+        <span class="c1"># Open SQLITE3 annotation files</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lytaf_path</span><span class="p">,</span> <span class="n">dbname</span><span class="p">))</span>
+        <span class="c1"># Create cursor to manipulate data in annotation file</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="c1"># Check if lytaf file spans the start and end times defined by</span>
+        <span class="c1"># user.  If not, download newest version.</span>
+        <span class="c1"># First get start time of first event and end time of last</span>
+        <span class="c1"># event in lytaf.</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select begin_time from event order by begin_time asc &quot;</span>
+                       <span class="s2">&quot;limit 1;&quot;</span><span class="p">)</span>
+        <span class="n">db_first_begin_time</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">db_first_begin_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">db_first_begin_time</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select end_time from event order by end_time desc &quot;</span>
+                       <span class="s2">&quot;limit 1;&quot;</span><span class="p">)</span>
+        <span class="n">db_last_end_time</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">db_last_end_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">db_last_end_time</span><span class="p">)</span>
+        <span class="c1"># If lytaf does not include entire input time range...</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">force_use_local_lytaf</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">end_time</span> <span class="o">&gt;</span> <span class="n">db_last_end_time</span> <span class="ow">or</span> <span class="n">start_time</span> <span class="o">&lt;</span> <span class="n">db_first_begin_time</span><span class="p">:</span>
+                <span class="c1"># ...close lytaf file...</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="c1"># ...Download latest lytaf file...</span>
+                <span class="n">check_download_file</span><span class="p">(</span><span class="n">dbname</span><span class="p">,</span> <span class="n">LYTAF_REMOTE_PATH</span><span class="p">,</span> <span class="n">lytaf_path</span><span class="p">,</span>
+                                    <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="c1"># ...and open new version of lytaf database.</span>
+                <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lytaf_path</span><span class="p">,</span> <span class="n">dbname</span><span class="p">))</span>
+                <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="c1"># Select and extract the data from event table within file within</span>
+        <span class="c1"># given time range</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select insertion_time, begin_time, reference_time, &quot;</span>
+                       <span class="s2">&quot;end_time, eventType_id from event where end_time &gt;= &quot;</span>
+                       <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> and begin_time &lt;= &quot;</span>
+                       <span class="s2">&quot;</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start_time_uts</span><span class="p">,</span> <span class="n">end_time_uts</span><span class="p">))</span>
+        <span class="n">event_rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="c1"># Select and extract the event types from eventType table</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">row_factory</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Row</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from eventType&quot;</span><span class="p">)</span>
+        <span class="n">eventType_rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="n">eventType_id</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">eventType_type</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">eventType_definition</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">eventType_row</span> <span class="ow">in</span> <span class="n">eventType_rows</span><span class="p">:</span>
+            <span class="n">eventType_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eventType_row</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+            <span class="n">eventType_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eventType_row</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">])</span>
+            <span class="n">eventType_definition</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eventType_row</span><span class="p">[</span><span class="s2">&quot;definition&quot;</span><span class="p">])</span>
+        <span class="c1"># Enter desired information into the lytaf numpy record array</span>
+        <span class="k">for</span> <span class="n">event_row</span> <span class="ow">in</span> <span class="n">event_rows</span><span class="p">:</span>
+            <span class="n">id_index</span> <span class="o">=</span> <span class="n">eventType_id</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_row</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+            <span class="n">lytaf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lytaf</span><span class="p">,</span>
+                              <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">event_row</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                                        <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">event_row</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                                        <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">event_row</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span>
+                                        <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">event_row</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span>
+                                        <span class="n">eventType_type</span><span class="p">[</span><span class="n">id_index</span><span class="p">],</span>
+                                        <span class="n">eventType_definition</span><span class="p">[</span><span class="n">id_index</span><span class="p">]),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">lytaf</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+        <span class="c1"># Close file</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="c1"># Sort lytaf in ascending order of begin time</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">recarray</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">lytaf</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s2">&quot;begin_time&quot;</span><span class="p">)</span>
+
+    <span class="c1"># If csvfile kwarg is set, write out lytaf to csv file</span>
+    <span class="k">if</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="c1"># Open and write data to csv file.</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">openfile</span><span class="p">:</span>
+            <span class="n">csvwriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">openfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+            <span class="c1"># Write header.</span>
+            <span class="n">csvwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">lytaf</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">names</span><span class="p">)</span>
+            <span class="c1"># Write data.</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">lytaf</span><span class="p">:</span>
+                <span class="n">new_row</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">new_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S&quot;</span><span class="p">))</span>
+                <span class="n">new_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S&quot;</span><span class="p">))</span>
+                <span class="n">new_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S&quot;</span><span class="p">))</span>
+                <span class="n">new_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S&quot;</span><span class="p">))</span>
+                <span class="n">new_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+                <span class="n">new_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+                <span class="n">csvwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">new_row</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lytaf</span></div>
+
+
+<div class="viewcode-block" id="get_lytaf_event_types"><a class="viewcode-back" href="../../../api/sunpy.instr.lyra.get_lytaf_event_types.html#sunpy.instr.lyra.get_lytaf_event_types">[docs]</a><span class="k">def</span> <span class="nf">get_lytaf_event_types</span><span class="p">(</span><span class="n">lytaf_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">print_event_types</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Prints the different event types in the each of the LYTAF databases.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    lytaf_path : `str`</span>
+<span class="sd">        Path location where LYTAF files are stored.</span>
+<span class="sd">        Default = Path stored in confog file.</span>
+
+<span class="sd">    print_event_types : `bool`</span>
+<span class="sd">        If True, prints the artifacts in each lytaf database to screen.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    all_event_types : `list`</span>
+<span class="sd">        List of all events types in all lytaf databases.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Set lytaf_path is not done by user</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">lytaf_path</span><span class="p">:</span>
+        <span class="n">lytaf_path</span> <span class="o">=</span> <span class="n">get_and_create_download_dir</span><span class="p">()</span>
+    <span class="n">suffixes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lyra&quot;</span><span class="p">,</span> <span class="s2">&quot;manual&quot;</span><span class="p">,</span> <span class="s2">&quot;ppt&quot;</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">]</span>
+    <span class="n">all_event_types</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># For each database file extract the event types and print them.</span>
+    <span class="k">if</span> <span class="n">print_event_types</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">LYTAF Event Types</span><span class="se">\n</span><span class="s2">-----------------</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">suffixes</span><span class="p">:</span>
+        <span class="n">dbname</span> <span class="o">=</span> <span class="s2">&quot;annotation_</span><span class="si">{0}</span><span class="s2">.db&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">suffix</span><span class="p">)</span>
+        <span class="c1"># Check database file exists, else download it.</span>
+        <span class="n">check_download_file</span><span class="p">(</span><span class="n">dbname</span><span class="p">,</span> <span class="n">LYTAF_REMOTE_PATH</span><span class="p">,</span> <span class="n">lytaf_path</span><span class="p">)</span>
+        <span class="c1"># Open SQLITE3 LYTAF files</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lytaf_path</span><span class="p">,</span> <span class="n">dbname</span><span class="p">))</span>
+        <span class="c1"># Create cursor to manipulate data in annotation file</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select type from eventType;&quot;</span><span class="p">)</span>
+        <span class="n">event_types</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="n">all_event_types</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_types</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">print_event_types</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----------------</span><span class="se">\n</span><span class="si">{0}</span><span class="s2"> database</span><span class="se">\n</span><span class="s2">----------------&quot;</span>
+                  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">suffix</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">event_type</span> <span class="ow">in</span> <span class="n">event_types</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">event_type</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="c1"># Unpack event types in all_event_types into single list</span>
+    <span class="n">all_event_types</span> <span class="o">=</span> <span class="p">[</span><span class="n">event_type</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">event_types</span> <span class="ow">in</span> <span class="n">all_event_types</span>
+                       <span class="k">for</span> <span class="n">event_type</span> <span class="ow">in</span> <span class="n">event_types</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">all_event_types</span></div>
+
+
+<div class="viewcode-block" id="download_lytaf_database"><a class="viewcode-back" href="../../../api/sunpy.instr.lyra.download_lytaf_database.html#sunpy.instr.lyra.download_lytaf_database">[docs]</a><span class="k">def</span> <span class="nf">download_lytaf_database</span><span class="p">(</span><span class="n">lytaf_dir</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;download latest Proba2 pointing database from Proba2 Science Center&quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://proba2.oma.be/lyra/data/lytaf/annotation_ppt.db&#39;</span>
+    <span class="n">destination</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lytaf_dir</span><span class="p">,</span> <span class="s1">&#39;annotation_ppt.db&#39;</span><span class="p">)</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">destination</span><span class="p">)</span>
+
+    <span class="k">return</span></div>
+
+
+<div class="viewcode-block" id="split_series_using_lytaf"><a class="viewcode-back" href="../../../api/sunpy.instr.lyra.split_series_using_lytaf.html#sunpy.instr.lyra.split_series_using_lytaf">[docs]</a><span class="k">def</span> <span class="nf">split_series_using_lytaf</span><span class="p">(</span><span class="n">timearray</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">lytaf</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Proba-2 analysis code for splitting up LYRA timeseries around locations</span>
+<span class="sd">    where LARs (and other data events) are observed.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    timearray : `numpy.ndarray` of times understood by `sunpy.time.parse_time`</span>
+<span class="sd">        function.</span>
+<span class="sd">    data : `numpy.array` corresponding to the given time array</span>
+<span class="sd">    lytaf : `numpy.recarray`</span>
+<span class="sd">        Events obtained from querying LYTAF database using</span>
+<span class="sd">        lyra.get_lytaf_events().</span>
+
+<span class="sd">    Output</span>
+<span class="sd">    ------</span>
+<span class="sd">    output : `list` of dictionaries</span>
+<span class="sd">        Each dictionary contains a sub-series corresponding to an interval of</span>
+<span class="sd">        &#39;good data&#39;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">timearray</span><span class="p">)</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">el</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lytaf</span><span class="p">)</span>
+
+    <span class="c1"># make the input time array a list of datetime objects</span>
+    <span class="n">datetime_array</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">tim</span> <span class="ow">in</span> <span class="n">timearray</span><span class="p">:</span>
+        <span class="n">datetime_array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parse_time</span><span class="p">(</span><span class="n">tim</span><span class="p">))</span>
+
+    <span class="c1"># scan through each entry retrieved from the LYTAF database</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">el</span><span class="p">):</span>
+        <span class="c1"># want to mark all times with events as bad in the mask, i.e. = 0</span>
+        <span class="n">start_dt</span> <span class="o">=</span> <span class="n">lytaf</span><span class="p">[</span><span class="s1">&#39;begin_time&#39;</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">end_dt</span> <span class="o">=</span> <span class="n">lytaf</span><span class="p">[</span><span class="s1">&#39;end_time&#39;</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+
+        <span class="c1"># find the start and end indices for each event</span>
+        <span class="n">start_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">datetime_array</span><span class="p">,</span> <span class="n">start_dt</span><span class="p">)</span>
+        <span class="n">end_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">datetime_array</span><span class="p">,</span> <span class="n">end_dt</span><span class="p">)</span>
+
+        <span class="c1"># append the mask to mark event as &#39;bad&#39;</span>
+        <span class="n">mask</span><span class="p">[</span><span class="n">start_ind</span><span class="p">:</span><span class="n">end_ind</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">diffmask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+    <span class="n">tmp_discontinuity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">diffmask</span> <span class="o">!=</span> <span class="mf">0.</span><span class="p">)</span>
+    <span class="c1"># disc contains the indices of mask where there are discontinuities</span>
+    <span class="n">disc</span> <span class="o">=</span> <span class="n">tmp_discontinuity</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">disc</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No events found within time series interval. &#39;</span>
+              <span class="s1">&#39;Returning original series.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[{</span><span class="s1">&#39;subtimes&#39;</span><span class="p">:</span> <span class="n">datetime_array</span><span class="p">,</span> <span class="s1">&#39;subdata&#39;</span><span class="p">:</span> <span class="n">data</span><span class="p">}]</span>
+
+    <span class="c1"># -1 in diffmask means went from good data to bad</span>
+    <span class="c1"># +1 means went from bad data to good</span>
+
+    <span class="c1"># want to get the data between a +1 and the next -1</span>
+
+    <span class="c1"># if the first discontinuity is a -1 then the start of the series was good.</span>
+    <span class="k">if</span> <span class="n">diffmask</span><span class="p">[</span><span class="n">disc</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">==</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">:</span>
+        <span class="c1"># make sure we can always start from disc[0] below</span>
+        <span class="n">disc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">disc</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">split_series</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">limit</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">disc</span><span class="p">)</span>
+    <span class="c1"># now extract the good data regions and ignore the bad ones</span>
+    <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">limit</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">h</span> <span class="o">==</span> <span class="n">limit</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># can&#39;t index h+1 here. Go to end of series</span>
+            <span class="n">subtimes</span> <span class="o">=</span> <span class="n">datetime_array</span><span class="p">[</span><span class="n">disc</span><span class="p">[</span><span class="n">h</span><span class="p">]:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">subdata</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">disc</span><span class="p">[</span><span class="n">h</span><span class="p">]:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">subseries</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;subtimes&#39;</span><span class="p">:</span> <span class="n">subtimes</span><span class="p">,</span> <span class="s1">&#39;subdata&#39;</span><span class="p">:</span> <span class="n">subdata</span><span class="p">}</span>
+            <span class="n">split_series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">subseries</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">subtimes</span> <span class="o">=</span> <span class="n">datetime_array</span><span class="p">[</span><span class="n">disc</span><span class="p">[</span><span class="n">h</span><span class="p">]:</span><span class="n">disc</span><span class="p">[</span><span class="n">h</span><span class="o">+</span><span class="mi">1</span><span class="p">]]</span>
+            <span class="n">subdata</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">disc</span><span class="p">[</span><span class="n">h</span><span class="p">]:</span><span class="n">disc</span><span class="p">[</span><span class="n">h</span><span class="o">+</span><span class="mi">1</span><span class="p">]]</span>
+            <span class="n">subseries</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;subtimes&#39;</span><span class="p">:</span> <span class="n">subtimes</span><span class="p">,</span> <span class="s1">&#39;subdata&#39;</span><span class="p">:</span> <span class="n">subdata</span><span class="p">}</span>
+            <span class="n">split_series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">subseries</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">split_series</span></div>
+
+
+<span class="k">def</span> <span class="nf">_lytaf_event2string</span><span class="p">(</span><span class="n">integers</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">integers</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">integers</span> <span class="o">=</span> <span class="p">[</span><span class="n">integers</span><span class="p">]</span>
+    <span class="c1"># else:</span>
+    <span class="c1">#    n=len(integers)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">integers</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;LAR&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;UV occult.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Vis. occult.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Offpoint&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;SAA&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Auroral zone&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Moon in LYRA&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">9</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Moon in SWAP&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Venus in LYRA&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Venus in SWAP&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span> <span class="nf">_prep_columns</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filecolumns</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks and prepares data to be written out to a file.</span>
+
+<span class="sd">    Firstly, this function converts the elements of time, whose entries are</span>
+<span class="sd">    assumed to be datetime objects, to time strings.  Secondly, it checks</span>
+<span class="sd">    whether the number of elements in an input list of column names,</span>
+<span class="sd">    filecolumns, is equal to the number of arrays in the list, channels.</span>
+<span class="sd">    If not, a ValueError is raised.  If however filecolumns equals None, a</span>
+<span class="sd">    filenames list is generated equal to [&quot;time&quot;, &quot;channel0&quot;, &quot;channel1&quot;,...,</span>
+<span class="sd">    &quot;channelN&quot;] where N is the number of arrays in the list, channels</span>
+<span class="sd">    (assuming 0-indexed counting).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Convert time which contains datetime objects to time strings.</span>
+    <span class="n">string_time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">t</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S.</span><span class="si">%f</span><span class="s2">&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">time</span><span class="p">])</span>
+    <span class="c1"># If filenames is given...</span>
+    <span class="k">if</span> <span class="n">filecolumns</span><span class="p">:</span>
+        <span class="c1"># ...check all the elements are strings...</span>
+        <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">column</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">filecolumns</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;All elements in filecolumns must by strings.&quot;</span><span class="p">)</span>
+        <span class="c1"># ...and that there are the same number of elements as there</span>
+        <span class="c1"># are arrays in channels, plus 1 for a time array.  Otherwise</span>
+        <span class="c1"># raise a ValueError.</span>
+        <span class="k">if</span> <span class="n">channels</span><span class="p">:</span>
+            <span class="n">ncol</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">channels</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ncol</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">filecolumns</span><span class="p">)</span> <span class="o">!=</span> <span class="n">ncol</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Number of elements in filecolumns must be &quot;</span>
+                             <span class="s2">&quot;equal to the number of input data arrays, &quot;</span>
+                             <span class="s2">&quot;i.e. time + elements in channels.&quot;</span><span class="p">)</span>
+    <span class="c1"># If filenames not given, create a list of columns names of the</span>
+    <span class="c1"># form: [&quot;time&quot;, &quot;channel0&quot;, &quot;channel1&quot;,...,&quot;channelN&quot;] where N</span>
+    <span class="c1"># is the number of arrays in channels (assuming 0-indexed counting).</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">channels</span><span class="p">:</span>
+            <span class="n">filecolumns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;channel</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fluxnum</span><span class="p">)</span>
+                           <span class="k">for</span> <span class="n">fluxnum</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">channels</span><span class="p">))]</span>
+            <span class="n">filecolumns</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">filecolumns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">string_time</span><span class="p">,</span> <span class="n">filecolumns</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

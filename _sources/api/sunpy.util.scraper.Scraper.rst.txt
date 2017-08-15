@@ -1,0 +1,21 @@
+Scraper
+=======
+
+.. currentmodule:: sunpy.util.scraper
+
+.. autoclass:: Scraper
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Scraper.filelist
+      ~Scraper.matches
+      ~Scraper.range
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: filelist
+   .. automethod:: matches
+   .. automethod:: range

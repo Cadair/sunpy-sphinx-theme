@@ -1,0 +1,6 @@
+get_header
+==========
+
+.. currentmodule:: sunpy.io.ana
+
+.. autofunction:: get_header

@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy lightcurve &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="EVELightCurve" href="../api/sunpy.lightcurve.EVELightCurve.html" />
+    <link rel="prev" title="read_genx" href="../api/sunpy.io.special.genx.read_genx.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy lightcurve | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/code_ref/lightcurve.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">SunPy io</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SunPy lightcurve</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.EVELightCurve.html">EVELightCurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.GBMSummaryLightCurve.html">GBMSummaryLightCurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.GOESLightCurve.html">GOESLightCurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.LYRALightCurve.html">LYRALightCurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.LightCurve.html">LightCurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.LogicalLightCurve.html">LogicalLightCurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.NOAAIndicesLightCurve.html">NOAAIndicesLightCurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.NOAAPredictIndicesLightCurve.html">NOAAPredictIndicesLightCurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.NoRHLightCurve.html">NoRHLightCurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.lightcurve.RHESSISummaryLightCurve.html">RHESSISummaryLightCurve</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-lightcurve">
+<span id="lightcurve-code-ref"></span><h1>SunPy lightcurve<a class="headerlink" href="#sunpy-lightcurve" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The lightcurve submodule has been replaced with the <a class="reference internal" href="timeseries.html#module-sunpy.timeseries" title="sunpy.timeseries"><code class="xref py py-obj docutils literal"><span class="pre">sunpy.timeseries</span></code></a>
+module. It will be removed in a future version.</p>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>One of core classes in SunPy is a LightCurve or timeseries. A number of instruments
+are supported through subclasses of the base <a class="reference internal" href="../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve" title="sunpy.lightcurve.LightCurve"><code class="xref py py-obj docutils literal"><span class="pre">LightCurve</span></code></a> class.
+To see <a class="reference internal" href="#lc-sources"><span class="std std-ref">Instrument LightCurve Classes</span></a> for a list of all of them.</p>
+</div>
+<div class="section" id="creating-a-lightcurve">
+<h2>Creating a LightCurve<a class="headerlink" href="#creating-a-lightcurve" title="Permalink to this headline">¶</a></h2>
+<p>LightCurves can either be creating manually or automatically by downloading
+their own data (the most common case). Too create a custom <a class="reference internal" href="../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve" title="sunpy.lightcurve.LightCurve"><code class="xref py py-obj docutils literal"><span class="pre">LightCurve</span></code></a>
+see the example in the class documentation below. Subclasses of <a class="reference internal" href="../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve" title="sunpy.lightcurve.LightCurve"><code class="xref py py-obj docutils literal"><span class="pre">LightCurve</span></code></a>
+for specific instrument provide their own methods for downloading their data.
+For more information see <a class="reference internal" href="#lc-sources"><span class="std std-ref">Instrument LightCurve Classes</span></a>.</p>
+</div>
+<div class="section" id="instrument-lightcurve-classes">
+<span id="lc-sources"></span><h2>Instrument LightCurve Classes<a class="headerlink" href="#instrument-lightcurve-classes" title="Permalink to this headline">¶</a></h2>
+<p>The generic method to create an instrument-specific LightCurve find the instrument
+subclass of interest and follow the following example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.lightcurve</span> <span class="k">import</span> <span class="n">GOESLightCurve</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">TimeRange</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tr</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2013/07/21&#39;</span><span class="p">,</span> <span class="s1">&#39;2013/07/22&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">goes</span> <span class="o">=</span> <span class="n">GOESLightCurve</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve.create" title="sunpy.lightcurve.LightCurve.create"><code class="xref py py-obj docutils literal"><span class="pre">create</span></code></a> method will go off and download the
+data needed to populate the instance. The following instrument classes are supported.</p>
+</div>
+<div class="section" id="module-sunpy.lightcurve">
+<span id="sunpy-lightcurve-package"></span><h2>sunpy.lightcurve Package<a class="headerlink" href="#module-sunpy.lightcurve" title="Permalink to this headline">¶</a></h2>
+<p>SunPy&#8217;s LightCurve module provides a datatype for 1D time series data.</p>
+<p>The objects also include data downloaders for their specific instruments, they
+also support instantiation from files such as csv.</p>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.lightcurve.EVELightCurve.html#sunpy.lightcurve.EVELightCurve" title="sunpy.lightcurve.EVELightCurve"><code class="xref py py-obj docutils literal"><span class="pre">EVELightCurve</span></code></a>(data[,&nbsp;meta])</td>
+<td>SDO EVE LightCurve for level 0CS data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.lightcurve.GBMSummaryLightCurve.html#sunpy.lightcurve.GBMSummaryLightCurve" title="sunpy.lightcurve.GBMSummaryLightCurve"><code class="xref py py-obj docutils literal"><span class="pre">GBMSummaryLightCurve</span></code></a>(data[,&nbsp;meta])</td>
+<td>Fermi/GBM Summary Lightcurve.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.lightcurve.GOESLightCurve.html#sunpy.lightcurve.GOESLightCurve" title="sunpy.lightcurve.GOESLightCurve"><code class="xref py py-obj docutils literal"><span class="pre">GOESLightCurve</span></code></a>(data[,&nbsp;meta])</td>
+<td>GOES XRS LightCurve</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.lightcurve.LYRALightCurve.html#sunpy.lightcurve.LYRALightCurve" title="sunpy.lightcurve.LYRALightCurve"><code class="xref py py-obj docutils literal"><span class="pre">LYRALightCurve</span></code></a>(data[,&nbsp;meta])</td>
+<td>Proba-2 LYRA LightCurve.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.lightcurve.LightCurve.html#sunpy.lightcurve.LightCurve" title="sunpy.lightcurve.LightCurve"><code class="xref py py-obj docutils literal"><span class="pre">LightCurve</span></code></a>(filepath)</td>
+<td>A generic light curve object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.lightcurve.LogicalLightCurve.html#sunpy.lightcurve.LogicalLightCurve" title="sunpy.lightcurve.LogicalLightCurve"><code class="xref py py-obj docutils literal"><span class="pre">LogicalLightCurve</span></code></a>(data[,&nbsp;meta])</td>
+<td>Logical LightCurve with only True and False values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.lightcurve.NOAAIndicesLightCurve.html#sunpy.lightcurve.NOAAIndicesLightCurve" title="sunpy.lightcurve.NOAAIndicesLightCurve"><code class="xref py py-obj docutils literal"><span class="pre">NOAAIndicesLightCurve</span></code></a>(data[,&nbsp;meta])</td>
+<td>NOAA Solar Cycle monthly indices.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.lightcurve.NOAAPredictIndicesLightCurve.html#sunpy.lightcurve.NOAAPredictIndicesLightCurve" title="sunpy.lightcurve.NOAAPredictIndicesLightCurve"><code class="xref py py-obj docutils literal"><span class="pre">NOAAPredictIndicesLightCurve</span></code></a>(data[,&nbsp;meta])</td>
+<td>NOAA Solar Cycle Predicted Progression The predictions are updated monthly and are produced by ISES.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.lightcurve.NoRHLightCurve.html#sunpy.lightcurve.NoRHLightCurve" title="sunpy.lightcurve.NoRHLightCurve"><code class="xref py py-obj docutils literal"><span class="pre">NoRHLightCurve</span></code></a>(data[,&nbsp;meta])</td>
+<td>Nobeyama Radioheliograph Correlation LightCurve.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.lightcurve.RHESSISummaryLightCurve.html#sunpy.lightcurve.RHESSISummaryLightCurve" title="sunpy.lightcurve.RHESSISummaryLightCurve"><code class="xref py py-obj docutils literal"><span class="pre">RHESSISummaryLightCurve</span></code></a>(data[,&nbsp;meta])</td>
+<td>RHESSI X-ray Summary LightCurve.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h3>
+<object data="../_images/inheritance-28a5a7f34f8c2224f3caa6b3549a8d9c4a8b8fc8.svg" type="image/svg+xml">
+            <p class="warning">Inheritance diagram of sunpy.lightcurve.sources.eve.EVELightCurve, sunpy.lightcurve.sources.fermi_gbm.GBMSummaryLightCurve, sunpy.lightcurve.sources.goes.GOESLightCurve, sunpy.lightcurve.sources.lyra.LYRALightCurve, sunpy.lightcurve.lightcurve.LightCurve, sunpy.lightcurve.sources.logical.LogicalLightCurve, sunpy.lightcurve.sources.noaa.NOAAIndicesLightCurve, sunpy.lightcurve.sources.noaa.NOAAPredictIndicesLightCurve, sunpy.lightcurve.sources.norh.NoRHLightCurve, sunpy.lightcurve.sources.rhessi.RHESSISummaryLightCurve</p></object>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

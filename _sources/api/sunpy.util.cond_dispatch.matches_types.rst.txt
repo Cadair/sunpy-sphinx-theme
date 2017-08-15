@@ -1,0 +1,6 @@
+matches_types
+=============
+
+.. currentmodule:: sunpy.util.cond_dispatch
+
+.. autofunction:: matches_types

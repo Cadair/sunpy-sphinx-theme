@@ -1,0 +1,53 @@
+GenericTimeSeries
+=================
+
+.. currentmodule:: sunpy.timeseries
+
+.. autoclass:: GenericTimeSeries
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~GenericTimeSeries.columns
+      ~GenericTimeSeries.index
+      ~GenericTimeSeries.source
+      ~GenericTimeSeries.time_range
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GenericTimeSeries.add_column
+      ~GenericTimeSeries.concatenate
+      ~GenericTimeSeries.extract
+      ~GenericTimeSeries.peek
+      ~GenericTimeSeries.plot
+      ~GenericTimeSeries.quantity
+      ~GenericTimeSeries.sort_index
+      ~GenericTimeSeries.to_array
+      ~GenericTimeSeries.to_dataframe
+      ~GenericTimeSeries.to_table
+      ~GenericTimeSeries.truncate
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: columns
+   .. autoattribute:: index
+   .. autoattribute:: source
+   .. autoattribute:: time_range
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: add_column
+   .. automethod:: concatenate
+   .. automethod:: extract
+   .. automethod:: peek
+   .. automethod:: plot
+   .. automethod:: quantity
+   .. automethod:: sort_index
+   .. automethod:: to_array
+   .. automethod:: to_dataframe
+   .. automethod:: to_table
+   .. automethod:: truncate

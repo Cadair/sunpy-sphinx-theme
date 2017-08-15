@@ -1,0 +1,47 @@
+CompositeMap
+============
+
+.. currentmodule:: sunpy.map
+
+.. autoclass:: CompositeMap
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CompositeMap.add_map
+      ~CompositeMap.draw_grid
+      ~CompositeMap.draw_limb
+      ~CompositeMap.get_alpha
+      ~CompositeMap.get_levels
+      ~CompositeMap.get_map
+      ~CompositeMap.get_plot_settings
+      ~CompositeMap.get_zorder
+      ~CompositeMap.list_maps
+      ~CompositeMap.peek
+      ~CompositeMap.plot
+      ~CompositeMap.remove_map
+      ~CompositeMap.set_alpha
+      ~CompositeMap.set_levels
+      ~CompositeMap.set_plot_settings
+      ~CompositeMap.set_zorder
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: add_map
+   .. automethod:: draw_grid
+   .. automethod:: draw_limb
+   .. automethod:: get_alpha
+   .. automethod:: get_levels
+   .. automethod:: get_map
+   .. automethod:: get_plot_settings
+   .. automethod:: get_zorder
+   .. automethod:: list_maps
+   .. automethod:: peek
+   .. automethod:: plot
+   .. automethod:: remove_map
+   .. automethod:: set_alpha
+   .. automethod:: set_levels
+   .. automethod:: set_plot_settings
+   .. automethod:: set_zorder

@@ -1,0 +1,23 @@
+FitsHeaderEntry
+===============
+
+.. currentmodule:: sunpy.database.tables
+
+.. autoclass:: FitsHeaderEntry
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~FitsHeaderEntry.dbentry_id
+      ~FitsHeaderEntry.id
+      ~FitsHeaderEntry.key
+      ~FitsHeaderEntry.value
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: dbentry_id
+   .. autoattribute:: id
+   .. autoattribute:: key
+   .. autoattribute:: value

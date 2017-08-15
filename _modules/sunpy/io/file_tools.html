@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.io.file_tools &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.io.file_tools | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/io/file_tools.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.io.file_tools</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">fits</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">fits</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">jp2</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">jp2</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">ana</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">ana</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;read_file&#39;</span><span class="p">,</span> <span class="s1">&#39;read_file_header&#39;</span><span class="p">,</span> <span class="s1">&#39;write_file&#39;</span><span class="p">]</span>
+
+<span class="c1"># File formats supported by SunPy</span>
+<span class="n">_known_extensions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="s1">&#39;fts&#39;</span><span class="p">,</span> <span class="s1">&#39;fits&#39;</span><span class="p">):</span> <span class="s1">&#39;fits&#39;</span><span class="p">,</span>
+    <span class="p">(</span><span class="s1">&#39;jp2&#39;</span><span class="p">,</span> <span class="s1">&#39;j2k&#39;</span><span class="p">,</span> <span class="s1">&#39;jpc&#39;</span><span class="p">,</span> <span class="s1">&#39;jpt&#39;</span><span class="p">):</span> <span class="s1">&#39;jp2&#39;</span><span class="p">,</span>
+    <span class="p">(</span><span class="s1">&#39;fz&#39;</span><span class="p">,</span> <span class="s1">&#39;f0&#39;</span><span class="p">):</span> <span class="s1">&#39;ana&#39;</span>
+<span class="p">}</span>
+
+
+<span class="c1"># Define a dict which raises a custom error message if the value is None</span>
+<span class="k">class</span> <span class="nc">Readers</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="nb">dict</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ReaderError</span><span class="p">(</span><span class="s2">&quot;The Reader sunpy.io.</span><span class="si">{key!s}</span><span class="s2"> is not available, &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span> <span class="o">+</span>
+                              <span class="s2">&quot;please check that you have the required dependencies installed.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span>
+
+<span class="c1">#Map the readers</span>
+<span class="n">_readers</span> <span class="o">=</span> <span class="n">Readers</span><span class="p">({</span>
+            <span class="s1">&#39;fits&#39;</span><span class="p">:</span><span class="n">fits</span><span class="p">,</span>
+            <span class="s1">&#39;jp2&#39;</span><span class="p">:</span><span class="n">jp2</span><span class="p">,</span>
+            <span class="s1">&#39;ana&#39;</span><span class="p">:</span><span class="n">ana</span>
+<span class="p">})</span>
+
+<div class="viewcode-block" id="read_file"><a class="viewcode-back" href="../../../api/sunpy.io.read_file.html#sunpy.io.read_file">[docs]</a><span class="k">def</span> <span class="nf">read_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">filetype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Automatically determine the filetype and read the file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filepath : `str`</span>
+<span class="sd">        The file to be read</span>
+
+<span class="sd">    filetype : `str`</span>
+<span class="sd">        Supported reader or extension to manually specify the filetype.</span>
+<span class="sd">        Supported readers are (&#39;jp2&#39;, &#39;fits&#39;, &#39;ana&#39;)</span>
+
+<span class="sd">    memmap : bool</span>
+<span class="sd">        Should memory mapping be used, i.e. keep data on disk rather than in RAM.</span>
+<span class="sd">        This is currently only supported by the FITS reader.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pairs : `list`</span>
+<span class="sd">        A list of (data, header) tuples.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Other keyword arguments are passed to the reader used.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">filetype</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_readers</span><span class="p">[</span><span class="n">filetype</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">extension</span><span class="p">,</span> <span class="n">readername</span> <span class="ow">in</span> <span class="n">_known_extensions</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span> <span class="ow">or</span> <span class="n">filetype</span> <span class="ow">in</span> <span class="n">extension</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_readers</span><span class="p">[</span><span class="n">readername</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="c1"># If filetype is not apparent from extension, attempt to detect</span>
+    <span class="n">readername</span> <span class="o">=</span> <span class="n">_detect_filetype</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_readers</span><span class="p">[</span><span class="n">readername</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="read_file_header"><a class="viewcode-back" href="../../../api/sunpy.io.read_file_header.html#sunpy.io.read_file_header">[docs]</a><span class="k">def</span> <span class="nf">read_file_header</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">filetype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reads the header from a given file.</span>
+
+<span class="sd">    This should always return a instance of io.header.FileHeader</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    filepath : `str`</span>
+<span class="sd">        The file from which the header is to be read.</span>
+
+<span class="sd">    filetype : `str`</span>
+<span class="sd">        Supported reader or extension to manually specify the filetype.</span>
+<span class="sd">        Supported readers are (&#39;jp2&#39;, &#39;fits&#39;)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    headers : `list`</span>
+<span class="sd">        A list of headers</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">filetype</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_readers</span><span class="p">[</span><span class="n">filetype</span><span class="p">]</span><span class="o">.</span><span class="n">get_header</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">extension</span><span class="p">,</span> <span class="n">readername</span> <span class="ow">in</span> <span class="n">_known_extensions</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span> <span class="ow">or</span> <span class="n">filetype</span> <span class="ow">in</span> <span class="n">extension</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_readers</span><span class="p">[</span><span class="n">readername</span><span class="p">]</span><span class="o">.</span><span class="n">get_header</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="n">readername</span> <span class="o">=</span> <span class="n">_detect_filetype</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_readers</span><span class="p">[</span><span class="n">readername</span><span class="p">]</span><span class="o">.</span><span class="n">get_header</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="write_file"><a class="viewcode-back" href="../../../api/sunpy.io.write_file.html#sunpy.io.write_file">[docs]</a><span class="k">def</span> <span class="nf">write_file</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">filetype</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Write a file from a data &amp; header pair using one of the defined file types.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    fname : `str`</span>
+<span class="sd">        Filename of file to save.</span>
+
+<span class="sd">    data : `numpy.ndarray`</span>
+<span class="sd">        Data to save to a fits file.</span>
+
+<span class="sd">    header : `collections.OrderedDict`</span>
+<span class="sd">        Meta data to save with the data.</span>
+
+<span class="sd">    filetype : `str`</span>
+<span class="sd">        {&#39;auto&#39;, &#39;fits&#39;, &#39;jp2&#39;} Filetype to save if auto fname extension will</span>
+<span class="sd">        be detected, else specify a supported file extension.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    * Other keyword arguments will be passes to the writer function used.</span>
+<span class="sd">    * This routine currently only supports saving a single HDU.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">filetype</span> <span class="o">==</span> <span class="s1">&#39;auto&#39;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">extension</span><span class="p">,</span> <span class="n">readername</span> <span class="ow">in</span> <span class="n">_known_extensions</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">fname</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">extension</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">_readers</span><span class="p">[</span><span class="n">readername</span><span class="p">]</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">extension</span><span class="p">,</span> <span class="n">readername</span> <span class="ow">in</span> <span class="n">_known_extensions</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">filetype</span> <span class="ow">in</span> <span class="n">extension</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">_readers</span><span class="p">[</span><span class="n">readername</span><span class="p">]</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="c1"># Nothing has matched, panic</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This filetype is not supported&quot;</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_detect_filetype</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Attempts to determine the type of data contained in a file.  This is only</span>
+<span class="sd">    used for reading because it opens the file to check the data.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filepath : `str`</span>
+<span class="sd">        Where the file is.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    filetype : `str`</span>
+<span class="sd">        The type of file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Open file and read in first two lines</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">line1</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="n">line2</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="c1"># Some FITS files do not have line breaks at the end of header cards.</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">first80</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+
+    <span class="c1"># FITS</span>
+    <span class="c1">#</span>
+    <span class="c1"># Check the extensions to see if it is a gzipped FITS file</span>
+    <span class="n">filepath_rest_ext1</span><span class="p">,</span> <span class="n">ext1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">ext2</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filepath_rest_ext1</span><span class="p">)</span>
+
+    <span class="n">gzip_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.gz&quot;</span><span class="p">]</span>
+    <span class="n">fits_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.fts&quot;</span><span class="p">,</span> <span class="s2">&quot;.fit&quot;</span><span class="p">,</span> <span class="s2">&quot;.fits&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ext1</span> <span class="ow">in</span> <span class="n">gzip_extensions</span> <span class="ow">and</span> <span class="n">ext2</span> <span class="ow">in</span> <span class="n">fits_extensions</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;fits&#39;</span>
+
+    <span class="c1"># Check for &quot;KEY_WORD  =&quot; at beginning of file</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[A-Z0-9_]{0,8} *=&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">),</span> <span class="n">first80</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;fits&#39;</span>
+
+    <span class="c1"># JPEG 2000</span>
+    <span class="c1">#</span>
+    <span class="c1"># Checks for one of two signatures found at beginning of all JP2 files.</span>
+    <span class="c1"># Adapted from ExifTool</span>
+    <span class="c1"># [1] http://www.sno.phy.queensu.ca/~phil/exiftool/</span>
+    <span class="c1"># [2] http://www.jpeg.org/public/fcd15444-2.pdf</span>
+    <span class="c1"># [3] ftp://ftp.remotesensing.org/jpeg2000/fcd15444-1.pdf</span>
+    <span class="n">jp2_signatures</span> <span class="o">=</span> <span class="p">[</span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x00\x00\x0c</span><span class="s2">jP  </span><span class="se">\x0d\x0a\x87\x0a</span><span class="s2">&quot;</span><span class="p">,</span>
+                      <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x00\x00\x00\x0c</span><span class="s2">jP</span><span class="se">\x1a\x1a\x0d\x0a\x87\x0a</span><span class="s2">&quot;</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">sig</span> <span class="ow">in</span> <span class="n">jp2_signatures</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line1</span> <span class="o">+</span> <span class="n">line2</span> <span class="o">==</span> <span class="n">sig</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;jp2&#39;</span>
+
+    <span class="c1"># Raise an error if an unsupported filetype is encountered</span>
+    <span class="k">raise</span> <span class="n">UnrecognizedFileTypeError</span><span class="p">(</span><span class="s2">&quot;The requested filetype is not currently &quot;</span>
+                                    <span class="s2">&quot;supported by SunPy.&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">UnrecognizedFileTypeError</span><span class="p">(</span><span class="ne">IOError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Exception to raise when an unknown file type is encountered&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">ReaderError</span><span class="p">(</span><span class="ne">ImportError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Exception to raise when an unknown file type is encountered&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">InvalidJPEG2000FileExtension</span><span class="p">(</span><span class="ne">IOError</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

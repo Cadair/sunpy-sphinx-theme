@@ -1,0 +1,6 @@
+get_obssumm_file
+================
+
+.. currentmodule:: sunpy.instr.rhessi
+
+.. autofunction:: get_obssumm_file

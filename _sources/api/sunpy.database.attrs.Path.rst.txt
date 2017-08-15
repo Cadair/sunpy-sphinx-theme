@@ -1,0 +1,17 @@
+Path
+====
+
+.. currentmodule:: sunpy.database.attrs
+
+.. autoclass:: Path
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Path.collides
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: collides

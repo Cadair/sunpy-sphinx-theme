@@ -1,0 +1,7 @@
+EVEClient
+=========
+
+.. currentmodule:: sunpy.net.dataretriever.sources
+
+.. autoclass:: EVEClient
+   :show-inheritance:

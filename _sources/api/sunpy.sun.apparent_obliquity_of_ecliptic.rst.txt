@@ -1,0 +1,6 @@
+apparent_obliquity_of_ecliptic
+==============================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: apparent_obliquity_of_ecliptic

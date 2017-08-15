@@ -1,0 +1,7 @@
+LYRAClient
+==========
+
+.. currentmodule:: sunpy.net.dataretriever.sources
+
+.. autoclass:: LYRAClient
+   :show-inheritance:

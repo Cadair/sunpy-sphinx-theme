@@ -1,0 +1,17 @@
+RHESSISummaryLightCurve
+=======================
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: RHESSISummaryLightCurve
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~RHESSISummaryLightCurve.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: peek

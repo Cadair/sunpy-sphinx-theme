@@ -1,0 +1,6 @@
+julian_centuries
+================
+
+.. currentmodule:: sunpy.time
+
+.. autofunction:: julian_centuries

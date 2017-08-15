@@ -1,0 +1,27 @@
+EITMap
+======
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: EITMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~EITMap.rsun_obs
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~EITMap.is_datasource_for
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: rsun_obs
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

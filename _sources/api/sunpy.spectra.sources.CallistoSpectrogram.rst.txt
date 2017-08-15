@@ -1,0 +1,53 @@
+CallistoSpectrogram
+===================
+
+.. currentmodule:: sunpy.spectra.sources
+
+.. autoclass:: CallistoSpectrogram
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~CallistoSpectrogram.COPY_PROPERTIES
+      ~CallistoSpectrogram.INSTRUMENTS
+      ~CallistoSpectrogram.SIGMA_DELTA_SUM
+      ~CallistoSpectrogram.SIGMA_SUM
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CallistoSpectrogram.create
+      ~CallistoSpectrogram.extend
+      ~CallistoSpectrogram.from_range
+      ~CallistoSpectrogram.from_url
+      ~CallistoSpectrogram.get_header
+      ~CallistoSpectrogram.homogenize
+      ~CallistoSpectrogram.is_datasource_for
+      ~CallistoSpectrogram.read
+      ~CallistoSpectrogram.read_many
+      ~CallistoSpectrogram.remove_border
+      ~CallistoSpectrogram.save
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: COPY_PROPERTIES
+   .. autoattribute:: INSTRUMENTS
+   .. autoattribute:: SIGMA_DELTA_SUM
+   .. autoattribute:: SIGMA_SUM
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: create
+   .. automethod:: extend
+   .. automethod:: from_range
+   .. automethod:: from_url
+   .. automethod:: get_header
+   .. automethod:: homogenize
+   .. automethod:: is_datasource_for
+   .. automethod:: read
+   .. automethod:: read_many
+   .. automethod:: remove_border
+   .. automethod:: save

@@ -1,0 +1,6 @@
+apparent_longitude
+==================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: apparent_longitude

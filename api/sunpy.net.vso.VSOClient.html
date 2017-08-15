@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>VSOClient &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="InteractiveVSOClient" href="sunpy.net.vso.InteractiveVSOClient.html" />
+    <link rel="prev" title="RHESSIClient" href="sunpy.net.dataretriever.sources.RHESSIClient.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="VSOClient | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.net.vso.VSOClient.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/map.html">SunPy map</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/net.html">SunPy net</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.fido_factory.UnifiedResponse.html">UnifiedResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.fido_factory.UnifiedDownloaderFactory.html">UnifiedDownloaderFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.fido_factory.DownloadResponse.html">DownloadResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.GenericClient.html">GenericClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.QueryResponse.html">QueryResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.QueryResponseBlock.html">QueryResponseBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.EVEClient.html">EVEClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.GOESClient.html">GOESClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.LYRAClient.html">LYRAClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.NOAAIndicesClient.html">NOAAIndicesClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.NOAAPredictClient.html">NOAAPredictClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.NoRHClient.html">NoRHClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.RHESSIClient.html">RHESSIClient</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">VSOClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.InteractiveVSOClient.html">InteractiveVSOClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Wavelength.html">Wavelength</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Extent.html">Extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Field.html">Field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Provider.html">Provider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Source.html">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Instrument.html">Instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Physobs.html">Physobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Pixels.html">Pixels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Level.html">Level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Resolution.html">Resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Detector.html">Detector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Filter.html">Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Sample.html">Sample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Quicklook.html">Quicklook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.PScale.html">PScale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek.HEKClient.html">HEKClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek2vso.translate_results_to_query.html">translate_results_to_query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek2vso.vso_attribute_parse.html">vso_attribute_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek2vso.H2VClient.html">H2VClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.helio.hec.HECClient.html">HECClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Compression.html">Compression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.JSOCClient.html">JSOCClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.JSOCResponse.html">JSOCResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Notify.html">Notify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Protocol.html">Protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Segment.html">Segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Series.html">Series</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="vsoclient">
+<h1>VSOClient<a class="headerlink" href="#vsoclient" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.net.vso.VSOClient">
+<em class="property">class </em><code class="descclassname">sunpy.net.vso.</code><code class="descname">VSOClient</code><span class="sig-paren">(</span><em>url=None</em>, <em>port=None</em>, <em>api=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L264" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Main VSO Client.</p>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.method_order" title="sunpy.net.vso.VSOClient.method_order"><code class="xref py py-obj docutils literal"><span class="pre">method_order</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.by_fileid" title="sunpy.net.vso.VSOClient.by_fileid"><code class="xref py py-obj docutils literal"><span class="pre">by_fileid</span></code></a>(response)</td>
+<td>Returns a dictionary of fileids corresponding to records in the response.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.by_provider" title="sunpy.net.vso.VSOClient.by_provider"><code class="xref py py-obj docutils literal"><span class="pre">by_provider</span></code></a>(response)</td>
+<td>Returns a dictionary of provider corresponding to records in the response.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.create_getdatarequest" title="sunpy.net.vso.VSOClient.create_getdatarequest"><code class="xref py py-obj docutils literal"><span class="pre">create_getdatarequest</span></code></a>(maps,&nbsp;methods[,&nbsp;info])</td>
+<td>Create datarequest from maps mapping data provider to</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.download" title="sunpy.net.vso.VSOClient.download"><code class="xref py py-obj docutils literal"><span class="pre">download</span></code></a>(method,&nbsp;url,&nbsp;dw,&nbsp;callback,&nbsp;errback,&nbsp;...)</td>
+<td>Override to costumize download action.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.download_all" title="sunpy.net.vso.VSOClient.download_all"><code class="xref py py-obj docutils literal"><span class="pre">download_all</span></code></a>(response,&nbsp;methods,&nbsp;dw,&nbsp;path,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.fetch" title="sunpy.net.vso.VSOClient.fetch"><code class="xref py py-obj docutils literal"><span class="pre">fetch</span></code></a>(query_response[,&nbsp;path,&nbsp;methods,&nbsp;...])</td>
+<td>Download data specified in the query_response.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.get" title="sunpy.net.vso.VSOClient.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(query_response[,&nbsp;path,&nbsp;methods,&nbsp;...])</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.latest" title="sunpy.net.vso.VSOClient.latest"><code class="xref py py-obj docutils literal"><span class="pre">latest</span></code></a>()</td>
+<td>Return newest record (limited to last week).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.link" title="sunpy.net.vso.VSOClient.link"><code class="xref py py-obj docutils literal"><span class="pre">link</span></code></a>(query_response,&nbsp;maps)</td>
+<td>Return list of paths with records associated with them in the meta attribute.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.make" title="sunpy.net.vso.VSOClient.make"><code class="xref py py-obj docutils literal"><span class="pre">make</span></code></a>(atype,&nbsp;**kwargs)</td>
+<td>Create new SOAP object with attributes specified in kwargs.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.make_getdatarequest" title="sunpy.net.vso.VSOClient.make_getdatarequest"><code class="xref py py-obj docutils literal"><span class="pre">make_getdatarequest</span></code></a>(response[,&nbsp;methods,&nbsp;info])</td>
+<td>Make datarequest with methods from response.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.merge" title="sunpy.net.vso.VSOClient.merge"><code class="xref py py-obj docutils literal"><span class="pre">merge</span></code></a>(queryresponses)</td>
+<td>Merge responses into one.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.missing_information" title="sunpy.net.vso.VSOClient.missing_information"><code class="xref py py-obj docutils literal"><span class="pre">missing_information</span></code></a>(info,&nbsp;field)</td>
+<td>Override to provide missing information.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.mk_filename" title="sunpy.net.vso.VSOClient.mk_filename"><code class="xref py py-obj docutils literal"><span class="pre">mk_filename</span></code></a>(pattern,&nbsp;response,&nbsp;sock,&nbsp;url[,&nbsp;...])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.multiple_choices" title="sunpy.net.vso.VSOClient.multiple_choices"><code class="xref py py-obj docutils literal"><span class="pre">multiple_choices</span></code></a>(choices,&nbsp;response)</td>
+<td>Override to pick between multiple download choices.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.query" title="sunpy.net.vso.VSOClient.query"><code class="xref py py-obj docutils literal"><span class="pre">query</span></code></a>(*query)</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.query_legacy" title="sunpy.net.vso.VSOClient.query_legacy"><code class="xref py py-obj docutils literal"><span class="pre">query_legacy</span></code></a>([tstart,&nbsp;tend])</td>
+<td>Query data from the VSO mocking the IDL API as close as possible.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.search" title="sunpy.net.vso.VSOClient.search"><code class="xref py py-obj docutils literal"><span class="pre">search</span></code></a>(*query)</td>
+<td>Query data from the VSO with the new API.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.vso.VSOClient.unknown_method" title="sunpy.net.vso.VSOClient.unknown_method"><code class="xref py py-obj docutils literal"><span class="pre">unknown_method</span></code></a>(response)</td>
+<td>Override to pick a new method if the current one is unknown.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="sunpy.net.vso.VSOClient.method_order">
+<code class="descname">method_order</code><em class="property"> = ['URL-TAR_GZ', 'URL-ZIP', 'URL-TAR', 'URL-FILE', 'URL-packaged']</em><a class="headerlink" href="#sunpy.net.vso.VSOClient.method_order" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="staticmethod">
+<dt id="sunpy.net.vso.VSOClient.by_fileid">
+<em class="property">static </em><code class="descname">by_fileid</code><span class="sig-paren">(</span><em>response</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.by_fileid"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L809" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.by_fileid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of fileids
+corresponding to records in the response.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sunpy.net.vso.VSOClient.by_provider">
+<em class="property">static </em><code class="descname">by_provider</code><span class="sig-paren">(</span><em>response</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.by_provider"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L797" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.by_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of provider
+corresponding to records in the response.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.create_getdatarequest">
+<code class="descname">create_getdatarequest</code><span class="sig-paren">(</span><em>maps</em>, <em>methods</em>, <em>info=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.create_getdatarequest"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L693" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.create_getdatarequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create datarequest from maps mapping data provider to
+fileids and methods,</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.download">
+<code class="descname">download</code><span class="sig-paren">(</span><em>method</em>, <em>url</em>, <em>dw</em>, <em>callback</em>, <em>errback</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.download"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L789" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override to costumize download action.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.download_all">
+<code class="descname">download_all</code><span class="sig-paren">(</span><em>response</em>, <em>methods</em>, <em>dw</em>, <em>path</em>, <em>qr</em>, <em>res</em>, <em>info=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.download_all"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L710" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.download_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.fetch">
+<code class="descname">fetch</code><span class="sig-paren">(</span><em>query_response</em>, <em>path=None</em>, <em>methods=('URL-FILE_Rice'</em>, <em>'URL-FILE')</em>, <em>downloader=None</em>, <em>site=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.fetch"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L565" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.fetch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download data specified in the query_response.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>query_response</strong> (<em>sunpy.net.vso.QueryResponse</em>) &#8211; QueryResponse containing the items to be downloaded.</li>
+<li><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Specify where the data is to be downloaded. Can refer to arbitrary
+fields of the QueryResponseItem (instrument, source, time, ...) via
+string formatting, moreover the file-name of the file downloaded can
+be referred to as file, e.g.
+&#8220;{source}/{instrument}/{time.start}/{file}&#8221;.</li>
+<li><strong>methods</strong> (<em>{list of str}</em>) &#8211; Download methods, defaults to URL-FILE_Rice then URL-FILE.
+Methods are a concatenation of one PREFIX followed by any number of
+SUFFIXES i.e. <code class="xref py py-obj docutils literal"><span class="pre">PREFIX-SUFFIX_SUFFIX2_SUFFIX3</span></code>.
+The full list of
+<a class="reference external" href="http://sdac.virtualsolar.org/cgi/show_details?keyword=METHOD_PREFIX">PREFIXES</a>
+and <a class="reference external" href="http://sdac.virtualsolar.org/cgi/show_details?keyword=METHOD_SUFFIX">SUFFIXES</a>
+are listed on the VSO site.</li>
+<li><strong>downloader</strong> (<em>sunpy.net.downloader.Downloader</em>) &#8211; Downloader used to download the data.</li>
+<li><strong>site</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; <p>There are a number of caching mirrors for SDO and other
+instruments, some available ones are listed below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>NSO</td>
+<td>National Solar Observatory, Tucson (US)</td>
+</tr>
+<tr class="row-even"><td>SAO  (aka CFA)</td>
+<td>Smithonian Astronomical Observatory, Harvard U. (US)</td>
+</tr>
+<tr class="row-odd"><td>SDAC (aka GSFC)</td>
+<td>Solar Data Analysis Center, NASA/GSFC (US)</td>
+</tr>
+<tr class="row-even"><td>ROB</td>
+<td>Royal Observatory of Belgium (Belgium)</td>
+</tr>
+<tr class="row-odd"><td>MPS</td>
+<td>Max Planck Institute for Solar System Research (Germany)</td>
+</tr>
+<tr class="row-even"><td>UCLan</td>
+<td>University of Central Lancashire (UK)</td>
+</tr>
+<tr class="row-odd"><td>IAS</td>
+<td>Institut Aeronautique et Spatial (France)</td>
+</tr>
+<tr class="row-even"><td>KIS</td>
+<td>Kiepenheuer-Institut fur Sonnenphysik Germany)</td>
+</tr>
+<tr class="row-odd"><td>NMSU</td>
+<td>New Mexico State University (US)</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>out</strong> (<code class="xref py py-class docutils literal"><span class="pre">Results</span></code> object that supplies a list of filenames with meta attributes) &#8211; containing the respective QueryResponse.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span><span class="n">qr</span><span class="p">)</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span> 
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>query_response</em>, <em>path=None</em>, <em>methods=('URL-FILE_Rice'</em>, <em>'URL-FILE')</em>, <em>downloader=None</em>, <em>site=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.get"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L655" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.get" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>The get function is deprecated and may be removed in a future version.
+    Use VSOClient.fetch instead.</p>
+</div>
+<p>See <a class="reference internal" href="#sunpy.net.vso.VSOClient.fetch" title="sunpy.net.vso.vso.VSOClient"><code class="xref py py-obj docutils literal"><span class="pre">fetch</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.latest">
+<code class="descname">latest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.latest"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L557" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.latest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return newest record (limited to last week).</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sunpy.net.vso.VSOClient.link">
+<em class="property">static </em><code class="descname">link</code><span class="sig-paren">(</span><em>query_response</em>, <em>maps</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.link"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L664" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of paths with records associated with them in
+the meta attribute.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.make">
+<code class="descname">make</code><span class="sig-paren">(</span><em>atype</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.make"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L275" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.make" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create new SOAP object with attributes specified in kwargs.
+To assign subattributes, use foo__bar=1 to assign
+[&#8216;foo&#8217;][&#8216;bar&#8217;] = 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.make_getdatarequest">
+<code class="descname">make_getdatarequest</code><span class="sig-paren">(</span><em>response</em>, <em>methods=None</em>, <em>info=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.make_getdatarequest"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L682" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.make_getdatarequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make datarequest with methods from response.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.merge">
+<code class="descname">merge</code><span class="sig-paren">(</span><em>queryresponses</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.merge"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L354" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge responses into one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.missing_information">
+<code class="descname">missing_information</code><span class="sig-paren">(</span><em>info</em>, <em>field</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.missing_information"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L829" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.missing_information" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override to provide missing information.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sunpy.net.vso.VSOClient.mk_filename">
+<em class="property">static </em><code class="descname">mk_filename</code><span class="sig-paren">(</span><em>pattern</em>, <em>response</em>, <em>sock</em>, <em>url</em>, <em>overwrite=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.mk_filename"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L387" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.mk_filename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.multiple_choices">
+<code class="descname">multiple_choices</code><span class="sig-paren">(</span><em>choices</em>, <em>response</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.multiple_choices"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L821" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.multiple_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override to pick between multiple download choices.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>*query</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.query"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L347" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.query" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>The query function is deprecated and may be removed in a future version.
+    Use VSOClient.search instead.</p>
+</div>
+<p>See <a class="reference internal" href="#sunpy.net.vso.VSOClient.search" title="sunpy.net.vso.vso.VSOClient"><code class="xref py py-obj docutils literal"><span class="pre">search</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.query_legacy">
+<code class="descname">query_legacy</code><span class="sig-paren">(</span><em>tstart=None</em>, <em>tend=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.query_legacy"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L419" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.query_legacy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query data from the VSO mocking the IDL API as close as possible.
+Either tstart and tend or date_start and date_end or date have
+to be supplied.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><em>datetime.datetime</em></a>) &#8211; Start of the time-range in which records are searched.</li>
+<li><strong>tend</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><em>datetime.datetime</em></a>) &#8211; Start of the time-range in which records are searched.</li>
+<li><strong>date</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; (start date) - (end date)</li>
+<li><strong>start_date</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#module-datetime" title="(in Python v3.6)"><em>datetime</em></a>) &#8211; the start date</li>
+<li><strong>end_date</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#module-datetime" title="(in Python v3.6)"><em>datetime</em></a>) &#8211; the end date</li>
+<li><strong>wave</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; (min) - (max) (unit)</li>
+<li><strong>min_wave</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; minimum spectral range</li>
+<li><strong>max_wave</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; maximum spectral range</li>
+<li><strong>unit_wave</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; spectral range units (Angstrom, GHz, keV)</li>
+<li><strong>extent</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; VSO &#8216;extent type&#8217; ... (FULLDISK, CORONA, LIMB, etc)</li>
+<li><strong>physobj</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; VSO &#8216;physical observable&#8217;</li>
+<li><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; VSO ID for the data provider (SDAC, NSO, SHA, MSU, etc)</li>
+<li><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; spacecraft or observatory (SOHO, YOHKOH, BBSO, etc)
+synonyms : spacecraft, observatory</li>
+<li><strong>instrument</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; instrument ID (EIT, SXI-0, SXT, etc)
+synonyms : telescope, inst</li>
+<li><strong>detector</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; detector ID (C3, EUVI, COR2, etc.)</li>
+<li><strong>layout</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; layout of the data (image, spectrum, time_series, etc.)</li>
+<li><strong>level</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; level of the data product (numeric range, see below)</li>
+<li><strong>pixels</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; number of pixels (numeric range, see below)</li>
+<li><strong>resolution</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; effective resolution (1 = full, 0.5 = 2x2 binned, etc)
+numeric range, see below.</li>
+<li><strong>pscale</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; pixel scale, in arcseconds (numeric range, see below)</li>
+<li><strong>near_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#module-datetime" title="(in Python v3.6)"><em>datetime</em></a>) &#8211; return record closest to the time.  See below.</li>
+<li><strong>sample</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; attempt to return only one record per SAMPLE seconds.  See below.</li>
+<li><strong>Ranges</strong> (<em>Numeric</em>) &#8211; <ul>
+<li>May be entered as a string or any numeric type for equality matching</li>
+<li>May be a string of the format &#8216;(min) - (max)&#8217; for range matching</li>
+<li>May be a string of the form &#8216;(operator) (number)&#8217; where operator
+is one of: lt gt le ge &lt; &gt; &lt;= &gt;=</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>Query all data from eit between 2010-01-01T00:00 and
+2010-01-01T01:00.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">vso</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">vso</span><span class="o">.</span><span class="n">VSOClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">qr</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query_legacy</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="gp">... </span>                         <span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">instrument</span><span class="o">=</span><span class="s1">&#39;eit&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>out</strong> (<code class="xref py py-class docutils literal"><span class="pre">QueryResult</span></code> (enhanced list) of matched items. Return) &#8211; value of same type as the one of <a class="reference internal" href="#sunpy.net.vso.VSOClient.query" title="sunpy.net.vso.VSOClient.query"><code class="xref py py-class docutils literal"><span class="pre">VSOClient.query</span></code></a>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.search">
+<code class="descname">search</code><span class="sig-paren">(</span><em>*query</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.search"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L297" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query data from the VSO with the new API. Takes a variable number
+of attributes as parameter, which are chained together using AND.</p>
+<p>The new query language allows complex queries to be easily formed.</p>
+<p class="rubric">Examples</p>
+<p>Query all data from eit or aia between 2010-01-01T00:00 and
+2010-01-01T01:00.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">vso</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">vso</span><span class="o">.</span><span class="n">VSOClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+<span class="gp">... </span>   <span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+<span class="gp">... </span>   <span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;eit&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="n">vso</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;aia&#39;</span><span class="p">))</span>   
+<span class="go">&lt;Table masked=False length=5&gt;</span>
+<span class="go">   Start Time [1]       End Time [1]     Source  Instrument   Type</span>
+<span class="go">     string152           string152      string32  string24  string64</span>
+<span class="go">------------------- ------------------- -------- ---------- --------</span>
+<span class="go">2010-01-01 00:00:08 2010-01-01 00:00:20     SOHO        EIT FULLDISK</span>
+<span class="go">2010-01-01 00:12:08 2010-01-01 00:12:20     SOHO        EIT FULLDISK</span>
+<span class="go">2010-01-01 00:24:10 2010-01-01 00:24:22     SOHO        EIT FULLDISK</span>
+<span class="go">2010-01-01 00:36:08 2010-01-01 00:36:20     SOHO        EIT FULLDISK</span>
+<span class="go">2010-01-01 00:48:09 2010-01-01 00:48:21     SOHO        EIT FULLDISK</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
+<li><strong>out</strong> (<code class="xref py py-class docutils literal"><span class="pre">QueryResult</span></code> (enhanced list) of matched items. Return)</li>
+<li>value of same type as the one of <a class="reference internal" href="#sunpy.net.vso.VSOClient.query" title="sunpy.net.vso.VSOClient.query"><code class="xref py py-meth docutils literal"><span class="pre">VSOClient.query()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.vso.VSOClient.unknown_method">
+<code class="descname">unknown_method</code><span class="sig-paren">(</span><em>response</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/vso/vso.html#VSOClient.unknown_method"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/vso/vso.py#L834" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.vso.VSOClient.unknown_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override to pick a new method if the current one is unknown.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

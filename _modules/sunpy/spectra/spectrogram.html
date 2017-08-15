@@ -1,0 +1,1437 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.spectra.spectrogram &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.spectra.spectrogram | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/spectra/spectrogram.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.spectra.spectrogram</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># Author: Florian Mayer &lt;florian.mayer@bitsrc.org&gt;</span>
+
+<span class="sd">&quot;&quot;&quot;Classes for spectral analysis.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randint</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="k">import</span> <span class="n">copy</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">floor</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">ma</span>
+
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">ndimage</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.figure</span> <span class="k">import</span> <span class="n">Figure</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="k">import</span> <span class="n">FuncFormatter</span><span class="p">,</span> <span class="n">MaxNLocator</span><span class="p">,</span> <span class="n">IndexLocator</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colorbar</span> <span class="k">import</span> <span class="n">Colorbar</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span><span class="p">,</span> <span class="n">get_day</span>
+<span class="kn">from</span> <span class="nn">sunpy.util</span> <span class="k">import</span> <span class="n">to_signed</span><span class="p">,</span> <span class="n">common_base</span><span class="p">,</span> <span class="n">merge</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.cond_dispatch</span> <span class="k">import</span> <span class="n">ConditionalDispatch</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.create</span> <span class="k">import</span> <span class="n">Parent</span>
+<span class="kn">from</span> <span class="nn">sunpy.spectra.spectrum</span> <span class="k">import</span> <span class="n">Spectrum</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="nb">zip</span><span class="p">,</span> <span class="nb">range</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.decorators</span> <span class="k">import</span> <span class="n">deprecated</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Spectrogram&#39;</span><span class="p">,</span> <span class="s1">&#39;LinearTimeSpectrogram&#39;</span><span class="p">]</span>
+
+<span class="c1"># 1080 because that usually is the maximum vertical pixel count on modern</span>
+<span class="c1"># screens nowadays (2012).</span>
+<span class="n">DEFAULT_YRES</span> <span class="o">=</span> <span class="mi">1080</span>
+
+<span class="c1"># This should not be necessary, as observations do not take more than a day</span>
+<span class="c1"># but it is used for completeness&#39; and extendibility&#39;s sake.</span>
+<span class="c1"># XXX: Leap second?</span>
+<span class="n">SECONDS_PER_DAY</span> <span class="o">=</span> <span class="mi">86400</span>
+
+<span class="c1"># Used for COPY_PROPERTIES</span>
+<span class="n">REFERENCE</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">COPY</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">DEEPCOPY</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="k">def</span> <span class="nf">figure</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a new SpectroFigure, a figure extended with features</span>
+<span class="sd">    useful for analysis of spectrograms. Compare pyplot.figure.&quot;&quot;&quot;</span>
+    <span class="n">kw</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;FigureClass&#39;</span><span class="p">:</span> <span class="n">SpectroFigure</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">kw</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_min_delt</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="n">deltas</span> <span class="o">=</span> <span class="p">(</span><span class="n">arr</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="c1"># Multiple values at the same frequency are just thrown away</span>
+    <span class="c1"># in the process of linearizaion</span>
+    <span class="k">return</span> <span class="n">deltas</span><span class="p">[</span><span class="n">deltas</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">_list_formatter</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">fun</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a function that takes x, pos and returns fun(lst[x]) if</span>
+<span class="sd">    fun is not None, else lst[x] or &quot;&quot; if x is out of range. &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">_fun</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="n">elem</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">fun</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">elem</span>
+        <span class="k">return</span> <span class="n">fun</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_fun</span>
+
+
+<span class="k">def</span> <span class="nf">_union</span><span class="p">(</span><span class="n">sets</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a union of sets.&quot;&quot;&quot;</span>
+    <span class="n">union</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sets</span><span class="p">:</span>
+        <span class="n">union</span> <span class="o">|=</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="n">union</span>
+
+
+<span class="k">class</span> <span class="nc">_LinearView</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helper class for frequency channel linearization.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    arr : Spectrogram</span>
+<span class="sd">        Spectrogram to linearize.</span>
+<span class="sd">    delt : float</span>
+<span class="sd">        Delta between frequency channels in linearized spectrogram. Defaults to</span>
+<span class="sd">        (minimum delta / 2.) because of the Shannon sampling theorem.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">,</span> <span class="n">delt</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span>
+        <span class="k">if</span> <span class="n">delt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Nyquist–Shannon sampling theorem</span>
+            <span class="n">delt</span> <span class="o">=</span> <span class="n">_min_delt</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">delt</span> <span class="o">=</span> <span class="n">delt</span>
+
+        <span class="n">midpoints</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">midpoints</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">midpoints</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_mp_delt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">midpoints</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">midpoints</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">delt</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">time_axis</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="n">arr</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span>
+                   <span class="bp">self</span><span class="o">.</span><span class="n">delt</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">item</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="n">item</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">item</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span>
+
+        <span class="n">freq_offset</span> <span class="o">=</span> <span class="n">item</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">delt</span>
+        <span class="n">freq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">freq_offset</span>
+        <span class="c1"># The idea is that when we take the biggest delta in the mid points,</span>
+        <span class="c1"># we do not have to search anything that is between the beginning and</span>
+        <span class="c1"># the first item that can possibly be that frequency.</span>
+        <span class="n">min_mid</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">freq</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">midpoints</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_mp_delt</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">mid</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">midpoints</span><span class="p">[</span><span class="n">min_mid</span><span class="p">:]):</span>
+            <span class="k">if</span> <span class="n">mid</span> <span class="o">&lt;=</span> <span class="n">freq</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">arr</span><span class="p">[</span><span class="n">min_mid</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">arr</span><span class="p">[</span><span class="n">min_mid</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">make_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_dist</span><span class="p">):</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">))):</span>
+            <span class="n">freq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">item</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">delt</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_freq</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">-</span> <span class="n">freq</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_dist</span><span class="p">:</span>
+                <span class="n">mask</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="n">mask</span>
+
+
+<span class="k">class</span> <span class="nc">SpectroFigure</span><span class="p">(</span><span class="n">Figure</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">freqs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freqs</span> <span class="o">=</span> <span class="n">freqs</span>
+
+    <span class="k">def</span> <span class="nf">ginput_to_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">secs</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">secs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ginput_to_time_secs</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
+        <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">ginput_to_time_secs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">inp</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">ginput_to_time_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ginput_to_time_secs</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">v</span> <span class="o">-</span> <span class="n">v</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">ginput_to_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">freqs</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">inp</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">time_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">inp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ginput</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+        <span class="n">min_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ginput_to_time_secs</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">min_</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">TimeFreq</span><span class="p">(</span>
+            <span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ginput_to_time_offset</span><span class="p">(</span><span class="n">inp</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">ginput_to_freq</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
+        <span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">TimeFreq</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Class to use for plotting frequency vs time.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    start : `datetime.datetime`</span>
+<span class="sd">        Start time of the plot.</span>
+<span class="sd">    time : `~numpy.ndarray`</span>
+<span class="sd">        Time of the data points as offset from start in seconds.</span>
+<span class="sd">    freq : `~numpy.ndarray`</span>
+<span class="sd">        Frequency of the data points in MHz.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="n">freq</span>
+
+    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_fmt</span><span class="o">=</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Plot the spectrum.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        time_fmt : str</span>
+<span class="sd">            The time format in a `~datetime.datetime` compatible format</span>
+
+<span class="sd">        **kwargs : dict</span>
+<span class="sd">            Any additional plot arguments that should be used</span>
+<span class="sd">            when plotting.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fig : `~matplotlib.Figure`</span>
+<span class="sd">            A plot figure.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">xa</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span>
+        <span class="c1"># FIXME: ``ya`` is not used?</span>
+        <span class="n">ya</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span>
+        <span class="n">xa</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span>
+            <span class="n">FuncFormatter</span><span class="p">(</span>
+                <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+                    <span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">time_fmt</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [UT]&quot;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency [MHz]&quot;</span><span class="p">)</span>
+
+        <span class="n">xa</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">tl</span> <span class="ow">in</span> <span class="n">xa</span><span class="o">.</span><span class="n">get_ticklabels</span><span class="p">():</span>
+            <span class="n">tl</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+            <span class="n">tl</span><span class="o">.</span><span class="n">set_rotation</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">(</span><span class="n">axes</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">figure</span>
+
+    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Plot spectrum onto current axes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        *args : dict</span>
+
+<span class="sd">        **kwargs : dict</span>
+<span class="sd">            Any additional plot arguments that should be used</span>
+<span class="sd">            when plotting.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fig : `~matplotlib.Figure`</span>
+<span class="sd">            A plot figure.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8&quot;</span><span class="p">,</span> <span class="s2">&quot;this module is being moved to sunpyspectra - https://github.com/sunpy/spectra&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="Spectrogram"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram">[docs]</a><span class="k">class</span> <span class="nc">Spectrogram</span><span class="p">(</span><span class="n">Parent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Spectrogram Class.</span>
+
+<span class="sd">    .. warning:: This module is under development! Use at your own risk.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : `~numpy.ndarray`</span>
+<span class="sd">        two-dimensional array of the image data of the spectrogram.</span>
+<span class="sd">    time_axis : `~numpy.ndarray`</span>
+<span class="sd">        one-dimensional array containing the offset from the start</span>
+<span class="sd">        for each column of data.</span>
+<span class="sd">    freq_axis : `~numpy.ndarray`</span>
+<span class="sd">        one-dimensional array containing information about the</span>
+<span class="sd">        frequencies each row of the image corresponds to.</span>
+<span class="sd">    start : `~datetime.datetime`</span>
+<span class="sd">        starting time of the measurement</span>
+<span class="sd">    end : `~datetime.datetime`</span>
+<span class="sd">        end time of the measurement</span>
+<span class="sd">    t_init : int</span>
+<span class="sd">        offset from the start of the day the measurement began. If None</span>
+<span class="sd">        gets automatically set from start.</span>
+<span class="sd">    t_label : str</span>
+<span class="sd">        label for the time axis</span>
+<span class="sd">    f_label : str</span>
+<span class="sd">        label for the frequency axis</span>
+<span class="sd">    content : str</span>
+<span class="sd">        header for the image</span>
+<span class="sd">    instruments : str array</span>
+<span class="sd">        instruments that recorded the data, may be more than one if</span>
+<span class="sd">        it was constructed using combine_frequencies or join_many.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Contrary to what pylint may think, this is not an old-style class.</span>
+    <span class="c1"># pylint: disable=E1002,W0142,R0902</span>
+
+    <span class="c1"># This needs to list all attributes that need to be</span>
+    <span class="c1"># copied to maintain the object and how to handle them.</span>
+    <span class="n">COPY_PROPERTIES</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;time_axis&#39;</span><span class="p">,</span> <span class="n">COPY</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;freq_axis&#39;</span><span class="p">,</span> <span class="n">COPY</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;instruments&#39;</span><span class="p">,</span> <span class="n">COPY</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">,</span> <span class="n">REFERENCE</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="n">REFERENCE</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;t_label&#39;</span><span class="p">,</span> <span class="n">REFERENCE</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;f_label&#39;</span><span class="p">,</span> <span class="n">REFERENCE</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">,</span> <span class="n">REFERENCE</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;t_init&#39;</span><span class="p">,</span> <span class="n">REFERENCE</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_create</span> <span class="o">=</span> <span class="n">ConditionalDispatch</span><span class="o">.</span><span class="n">from_existing</span><span class="p">(</span><span class="n">Parent</span><span class="o">.</span><span class="n">_create</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dtype</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span>
+
+    <span class="k">def</span> <span class="nf">_get_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Implementation detail.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">COPY_PROPERTIES</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y_range</span><span class="p">,</span> <span class="n">x_range</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return new spectrogram reduced to the values passed</span>
+<span class="sd">        as slices. Implementation detail.&quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">y_range</span><span class="p">,</span> <span class="n">x_range</span><span class="p">]</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_params</span><span class="p">()</span>
+
+        <span class="n">soffset</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">x_range</span><span class="o">.</span><span class="n">start</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">x_range</span><span class="o">.</span><span class="n">start</span>
+        <span class="n">soffset</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">soffset</span><span class="p">)</span>
+        <span class="n">eoffset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">x_range</span><span class="o">.</span><span class="n">stop</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">x_range</span><span class="o">.</span><span class="n">stop</span>  <span class="c1"># pylint: disable=E1101</span>
+        <span class="n">eoffset</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">eoffset</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">eoffset</span><span class="p">)</span>
+
+        <span class="c1"># FIXME: `fsoffset` and `feoffset` are not used?!</span>
+        <span class="n">fsoffset</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">y_range</span><span class="o">.</span><span class="n">start</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">y_range</span><span class="o">.</span><span class="n">start</span>
+        <span class="n">feoffset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">y_range</span><span class="o">.</span><span class="n">stop</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">y_range</span><span class="o">.</span><span class="n">stop</span>  <span class="c1"># pylint: disable=E1101</span>
+        <span class="n">feoffset</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">feoffset</span><span class="p">)</span>
+
+        <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;time_axis&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span>
+                <span class="n">x_range</span><span class="o">.</span><span class="n">start</span><span class="p">:</span><span class="n">x_range</span><span class="o">.</span><span class="n">stop</span><span class="p">:</span><span class="n">x_range</span><span class="o">.</span><span class="n">step</span>
+            <span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="n">soffset</span><span class="p">],</span>
+            <span class="s1">&#39;freq_axis&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span>
+                <span class="n">y_range</span><span class="o">.</span><span class="n">start</span><span class="p">:</span><span class="n">y_range</span><span class="o">.</span><span class="n">stop</span><span class="p">:</span><span class="n">y_range</span><span class="o">.</span><span class="n">step</span><span class="p">],</span>
+            <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span>
+                <span class="n">seconds</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="n">soffset</span><span class="p">]),</span>
+            <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span>
+                <span class="n">seconds</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="n">eoffset</span><span class="p">]),</span>
+            <span class="s1">&#39;t_init&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">t_init</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="n">soffset</span><span class="p">],</span>
+        <span class="p">})</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_with_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">return</span> <span class="n">new</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">time_axis</span><span class="p">,</span> <span class="n">freq_axis</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">t_init</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">t_label</span><span class="o">=</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span> <span class="n">f_label</span><span class="o">=</span><span class="s2">&quot;Frequency&quot;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="n">instruments</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># Because of how object creation works, there is no avoiding</span>
+        <span class="c1"># unused arguments in this case.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+
+        <span class="k">if</span> <span class="n">t_init</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="n">start</span> <span class="o">-</span> <span class="n">get_day</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+            <span class="n">t_init</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">seconds</span>
+        <span class="k">if</span> <span class="n">instruments</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">instruments</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="n">end</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">t_label</span> <span class="o">=</span> <span class="n">t_label</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">f_label</span> <span class="o">=</span> <span class="n">f_label</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">t_init</span> <span class="o">=</span> <span class="n">t_init</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span> <span class="o">=</span> <span class="n">time_axis</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span> <span class="o">=</span> <span class="n">freq_axis</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instruments</span> <span class="o">=</span> <span class="n">instruments</span>
+
+<div class="viewcode-block" id="Spectrogram.time_formatter"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.time_formatter">[docs]</a>    <span class="k">def</span> <span class="nf">time_formatter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This returns the label for the tick of value x at</span>
+<span class="sd">        a specified pos on the time axis.&quot;&quot;&quot;</span>
+        <span class="c1"># Callback, cannot avoid unused arguments.</span>
+        <span class="c1"># pylint: disable=W0613</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_time</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span>
+                <span class="n">seconds</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+            <span class="p">)</span>
+        <span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Spectrogram.format_time"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.format_time">[docs]</a>    <span class="k">def</span> <span class="nf">format_time</span><span class="p">(</span><span class="n">time</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Override to configure default plotting.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Spectrogram.format_freq"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.format_freq">[docs]</a>    <span class="k">def</span> <span class="nf">format_freq</span><span class="p">(</span><span class="n">freq</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Override to configure default plotting.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{freq:0.1f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Spectrogram.peek"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Plot spectrum onto current axes.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        *args : dict</span>
+
+<span class="sd">        **kwargs : dict</span>
+<span class="sd">            Any additional plot arguments that should be used</span>
+<span class="sd">            when plotting.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fig : `~matplotlib.Figure`</span>
+<span class="sd">            A plot figure.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">figure</span><span class="p">()</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+<div class="viewcode-block" id="Spectrogram.plot"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.plot">[docs]</a>    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figure</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overlays</span><span class="o">=</span><span class="p">[],</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+             <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">linear</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">showz</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">yres</span><span class="o">=</span><span class="n">DEFAULT_YRES</span><span class="p">,</span>
+             <span class="n">max_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">matplotlib_args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Plot spectrogram onto figure.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        figure : `~matplotlib.Figure`</span>
+<span class="sd">            Figure to plot the spectrogram on. If None, new Figure is created.</span>
+<span class="sd">        overlays : list</span>
+<span class="sd">            List of overlays (functions that receive figure and axes and return</span>
+<span class="sd">            new ones) to be applied after drawing.</span>
+<span class="sd">        colorbar : bool</span>
+<span class="sd">            Flag that determines whether or not to draw a colorbar. If existing</span>
+<span class="sd">            figure is passed, it is attempted to overdraw old colorbar.</span>
+<span class="sd">        vmin : float</span>
+<span class="sd">            Clip intensities lower than vmin before drawing.</span>
+<span class="sd">        vmax : float</span>
+<span class="sd">            Clip intensities higher than vmax before drawing.</span>
+<span class="sd">        linear : bool</span>
+<span class="sd">            If set to True, &quot;stretch&quot; image to make frequency axis linear.</span>
+<span class="sd">        showz : bool</span>
+<span class="sd">            If set to True, the value of the pixel that is hovered with the</span>
+<span class="sd">            mouse is shown in the bottom right corner.</span>
+<span class="sd">        yres : int or None</span>
+<span class="sd">            To be used in combination with linear=True. If None, sample the</span>
+<span class="sd">            image with half the minimum frequency delta. Else, sample the</span>
+<span class="sd">            image to be at most yres pixels in vertical dimension. Defaults</span>
+<span class="sd">            to 1080 because that&#39;s a common screen size.</span>
+<span class="sd">        max_dist : float or None</span>
+<span class="sd">            If not None, mask elements that are further than max_dist away</span>
+<span class="sd">            from actual data points (ie, frequencies that actually have data</span>
+<span class="sd">            from the receiver and are not just nearest-neighbour interpolated).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># [] as default argument is okay here because it is only read.</span>
+        <span class="c1"># pylint: disable=W0102,R0914</span>
+        <span class="k">if</span> <span class="n">linear</span><span class="p">:</span>
+            <span class="n">delt</span> <span class="o">=</span> <span class="n">yres</span>
+            <span class="k">if</span> <span class="n">delt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">delt</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span>
+                    <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">yres</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span>
+                    <span class="n">_min_delt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.</span>
+                <span class="p">)</span>
+                <span class="n">delt</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">delt</span><span class="p">)</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="n">_LinearView</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clip_values</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">),</span> <span class="n">delt</span><span class="p">)</span>
+            <span class="n">freqs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="o">-</span><span class="n">data</span><span class="o">.</span><span class="n">delt</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clip_values</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">))</span>
+            <span class="n">freqs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span>
+
+        <span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">figure</span><span class="o">.</span><span class="n">axes</span><span class="p">:</span>
+            <span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;origin&#39;</span><span class="p">:</span> <span class="s1">&#39;lower&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;aspect&#39;</span><span class="p">:</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">matplotlib_args</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">linear</span> <span class="ow">and</span> <span class="n">max_dist</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">toplot</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">make_mask</span><span class="p">(</span><span class="n">max_dist</span><span class="p">))</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">toplot</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">toplot</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
+
+        <span class="n">xa</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span>
+        <span class="n">ya</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span>
+
+        <span class="n">xa</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span>
+            <span class="n">FuncFormatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_formatter</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">linear</span><span class="p">:</span>
+            <span class="c1"># Start with a number that is divisible by 5.</span>
+            <span class="n">init</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="n">data</span><span class="o">.</span><span class="n">delt</span>
+            <span class="n">nticks</span> <span class="o">=</span> <span class="mf">15.</span>
+            <span class="c1"># Calculate MHz difference between major ticks.</span>
+            <span class="n">dist</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">nticks</span>
+            <span class="c1"># Round to next multiple of 10, at least ten.</span>
+            <span class="n">dist</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
+            <span class="c1"># One pixel in image space is data.delt MHz, thus we can convert</span>
+            <span class="c1"># our distance between the major ticks into image space by dividing</span>
+            <span class="c1"># it by data.delt.</span>
+
+            <span class="n">ya</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span>
+                <span class="n">IndexLocator</span><span class="p">(</span>
+                    <span class="n">dist</span> <span class="o">/</span> <span class="n">data</span><span class="o">.</span><span class="n">delt</span><span class="p">,</span> <span class="n">init</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">ya</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span>
+                <span class="n">IndexLocator</span><span class="p">(</span>
+                    <span class="n">dist</span> <span class="o">/</span> <span class="n">data</span><span class="o">.</span><span class="n">delt</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="n">init</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="k">def</span> <span class="nf">freq_fmt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+                <span class="c1"># This is necessary because matplotlib somehow tries to get</span>
+                <span class="c1"># the mid-point of the row, which we do not need here.</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.5</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_freq</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span> <span class="o">*</span> <span class="n">data</span><span class="o">.</span><span class="n">delt</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">freq_fmt</span> <span class="o">=</span> <span class="n">_list_formatter</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_freq</span><span class="p">)</span>
+            <span class="n">ya</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]))</span>
+
+        <span class="n">ya</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span>
+            <span class="n">FuncFormatter</span><span class="p">(</span><span class="n">freq_fmt</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t_label</span><span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">f_label</span><span class="p">)</span>
+        <span class="c1"># figure.suptitle(self.content)</span>
+
+        <span class="n">figure</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span>
+            <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+                <span class="n">get_day</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> %b %Y&quot;</span><span class="p">),</span>
+                <span class="s1">&#39;Radio flux density&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">instruments</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span><span class="p">,</span>
+            <span class="p">])</span>
+        <span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">tl</span> <span class="ow">in</span> <span class="n">xa</span><span class="o">.</span><span class="n">get_ticklabels</span><span class="p">():</span>
+            <span class="n">tl</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+            <span class="n">tl</span><span class="o">.</span><span class="n">set_rotation</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">(</span><span class="n">axes</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="n">figure</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">showz</span><span class="p">:</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">format_coord</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mk_format_coord</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">format_coord</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">colorbar</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">figure</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">Colorbar</span><span class="p">(</span><span class="n">figure</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">im</span><span class="p">)</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Intensity&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">figure</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Intensity&quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">overlay</span> <span class="ow">in</span> <span class="n">overlays</span><span class="p">:</span>
+            <span class="n">figure</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">overlay</span><span class="p">(</span><span class="n">figure</span><span class="p">,</span> <span class="n">axes</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">figure</span><span class="o">.</span><span class="n">axes</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">autoscale</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">figure</span><span class="p">,</span> <span class="n">SpectroFigure</span><span class="p">):</span>
+            <span class="n">figure</span><span class="o">.</span><span class="n">_init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">axes</span></div>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">only_y</span> <span class="o">=</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">only_y</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">key</span><span class="p">)]</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">slice</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">slice</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slice</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">slice</span><span class="p">):</span>
+            <span class="c1"># return Spectrum( # XXX: Right class</span>
+            <span class="c1">#     super(Spectrogram, self).__getitem__(key),</span>
+            <span class="c1">#     self.time_axis[key[1].start:key[1].stop:key[1].step]</span>
+            <span class="c1"># )</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">slice</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">Spectrum</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">:</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">stop</span><span class="p">:</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">step</span><span class="p">]</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">key</span><span class="p">)]</span>
+
+<div class="viewcode-block" id="Spectrogram.clip_freq"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.clip_freq">[docs]</a>    <span class="k">def</span> <span class="nf">clip_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a new spectrogram only consisting of frequencies</span>
+<span class="sd">        in the interval [vmin, vmax].</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        vmin : float</span>
+<span class="sd">            All frequencies in the result are greater or equal to this.</span>
+<span class="sd">        vmax : float</span>
+<span class="sd">            All frequencies in the result are smaller or equal to this.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">vmax</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">vmax</span><span class="p">:</span>
+                <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">right</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">vmin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">vmin</span><span class="p">:</span>
+                <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">left</span><span class="p">:</span><span class="n">right</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="p">:]</span></div>
+
+<div class="viewcode-block" id="Spectrogram.auto_find_background"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.auto_find_background">[docs]</a>    <span class="k">def</span> <span class="nf">auto_find_background</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Automatically find the background. This</span>
+<span class="sd">        is done by first subtracting the average value in each channel and then</span>
+<span class="sd">        finding those times which have the lowest standard deviation.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        amount : float</span>
+<span class="sd">            The percent amount (out of 1) of lowest standard deviation to</span>
+<span class="sd">            consider.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=E1101,E1103</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">to_signed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+        <span class="c1"># Subtract average value from every frequency channel.</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="c1"># Get standard deviation at every point of time.</span>
+        <span class="c1"># Need to convert because otherwise this class&#39;s __getitem__</span>
+        <span class="c1"># is used which assumes two-dimensionality.</span>
+        <span class="n">sdevs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+        <span class="c1"># Get indices of values with lowest standard deviation.</span>
+        <span class="n">cand</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">sdevs</span><span class="p">[</span><span class="n">y</span><span class="p">])</span>
+        <span class="c1"># Only consider the best 5 %.</span>
+        <span class="k">return</span> <span class="n">cand</span><span class="p">[:</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">amount</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">cand</span><span class="p">)))]</span></div>
+
+<div class="viewcode-block" id="Spectrogram.auto_const_bg"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.auto_const_bg">[docs]</a>    <span class="k">def</span> <span class="nf">auto_const_bg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Automatically determine background.&quot;&quot;&quot;</span>
+        <span class="n">realcand</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_find_background</span><span class="p">()</span>
+        <span class="n">bg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="n">realcand</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">bg</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Spectrogram.subtract_bg"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.subtract_bg">[docs]</a>    <span class="k">def</span> <span class="nf">subtract_bg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Perform constant background subtraction.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_with_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_const_bg</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Spectrogram.randomized_auto_const_bg"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.randomized_auto_const_bg">[docs]</a>    <span class="k">def</span> <span class="nf">randomized_auto_const_bg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Automatically determine background. Only consider a randomly</span>
+<span class="sd">        chosen subset of the image.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        amount : int</span>
+<span class="sd">            Size of random sample that is considered for calculation of</span>
+<span class="sd">            the background.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">amount</span><span class="p">)]</span>
+
+        <span class="c1"># pylint: disable=E1101,E1103</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">to_signed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+        <span class="c1"># Subtract average value from every frequency channel.</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="c1"># Get standard deviation at every point of time.</span>
+        <span class="c1"># Need to convert because otherwise this class&#39;s __getitem__</span>
+        <span class="c1"># is used which assumes two-dimensionality.</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">[:,</span> <span class="n">cols</span><span class="p">]</span>
+        <span class="n">sdevs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+        <span class="c1"># Get indices of values with lowest standard deviation.</span>
+        <span class="n">cand</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">amount</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">sdevs</span><span class="p">[</span><span class="n">y</span><span class="p">])</span>
+        <span class="c1"># Only consider the best 5 %.</span>
+        <span class="n">realcand</span> <span class="o">=</span> <span class="n">cand</span><span class="p">[:</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.05</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">cand</span><span class="p">)))]</span>
+
+        <span class="c1"># Average the best 5 %</span>
+        <span class="n">bg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="bp">self</span><span class="p">[:,</span> <span class="p">[</span><span class="n">cols</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">realcand</span><span class="p">]],</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">bg</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Spectrogram.randomized_subtract_bg"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.randomized_subtract_bg">[docs]</a>    <span class="k">def</span> <span class="nf">randomized_subtract_bg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Perform randomized constant background subtraction.</span>
+<span class="sd">        Does not produce the same result every time it is run.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        amount : int</span>
+<span class="sd">            Size of random sample that is considered for calculation of</span>
+<span class="sd">            the background.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_with_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">randomized_auto_const_bg</span><span class="p">(</span><span class="n">amount</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Spectrogram.clip_values"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.clip_values">[docs]</a>    <span class="k">def</span> <span class="nf">clip_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Clip intensities to be in the interval [vmin, vmax].</span>
+
+<span class="sd">        Any values greater than the maximum will be assigned the maximum,</span>
+<span class="sd">        any values lower than the minimum will be assigned the minimum.</span>
+<span class="sd">        If either is left out or None, do not clip at that side of the interval.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        min : int or float</span>
+<span class="sd">            New minimum value for intensities.</span>
+<span class="sd">        max : int or float</span>
+<span class="sd">            New maximum value for intensities</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=E1101</span>
+        <span class="k">if</span> <span class="n">vmin</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">vmin</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="n">vmax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">vmax</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_with_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">,</span> <span class="n">out</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Spectrogram.rescale"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.rescale">[docs]</a>    <span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Rescale intensities to [vmin, vmax].</span>
+<span class="sd">        Note that vmin ≠ vmax and spectrogram.min() ≠ spectrogram.max().</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        vmin : float or int</span>
+<span class="sd">            New minimum value in the resulting spectrogram.</span>
+<span class="sd">        vmax : float or int</span>
+<span class="sd">            New maximum value in the resulting spectrogram.</span>
+<span class="sd">        dtype : `numpy.dtype`</span>
+<span class="sd">            Data-type of the resulting spectrogram.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">vmax</span> <span class="o">==</span> <span class="n">vmin</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Maximum and minimum must be different.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Spectrogram needs to contain distinct values.&quot;</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span> <span class="c1"># pylint: disable=E1101</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_with_data</span><span class="p">(</span>
+            <span class="n">vmin</span> <span class="o">+</span> <span class="p">(</span><span class="n">vmax</span> <span class="o">-</span> <span class="n">vmin</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">data</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="c1"># pylint: disable=E1101</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="c1"># pylint: disable=E1101</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Spectrogram.interpolate"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.interpolate">[docs]</a>    <span class="k">def</span> <span class="nf">interpolate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frequency</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Linearly interpolate intensity at unknown frequency using linear</span>
+<span class="sd">        interpolation of its two neighbours.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        frequency : float or int</span>
+<span class="sd">            Unknown frequency for which to linearly interpolate the intensities.</span>
+<span class="sd">            freq_axis[0] &gt;= frequency &gt;= self_freq_axis[-1]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lfreq</span><span class="p">,</span> <span class="n">lvalue</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">freq</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:]):</span>
+            <span class="k">if</span> <span class="n">freq</span> <span class="o">&lt;</span> <span class="n">frequency</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">lfreq</span><span class="p">,</span> <span class="n">lvalue</span> <span class="o">=</span> <span class="n">freq</span><span class="p">,</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Frequency not in interpolation range&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">lfreq</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Frequency not in interpolation range&quot;</span><span class="p">)</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">frequency</span> <span class="o">-</span> <span class="n">freq</span> <span class="c1"># pylint: disable=W0631</span>
+        <span class="n">ldiff</span> <span class="o">=</span> <span class="n">lfreq</span> <span class="o">-</span> <span class="n">frequency</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">ldiff</span> <span class="o">*</span> <span class="n">value</span> <span class="o">+</span> <span class="n">diff</span> <span class="o">*</span> <span class="n">lvalue</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">diff</span> <span class="o">+</span> <span class="n">ldiff</span><span class="p">)</span> <span class="c1"># pylint: disable=W0631</span></div>
+
+<div class="viewcode-block" id="Spectrogram.linearize_freqs"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.linearize_freqs">[docs]</a>    <span class="k">def</span> <span class="nf">linearize_freqs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delta_freq</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Rebin frequencies so that the frequency axis is linear.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        delta_freq : float</span>
+<span class="sd">            Difference between consecutive values on the new frequency axis.</span>
+<span class="sd">            Defaults to half of smallest delta in current frequency axis.</span>
+<span class="sd">            Compare Nyquist-Shannon sampling theorem.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">delta_freq</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Nyquist–Shannon sampling theorem</span>
+            <span class="n">delta_freq</span> <span class="o">=</span> <span class="n">_min_delt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.</span>
+        <span class="n">nsize</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="n">delta_freq</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">nsize</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+
+        <span class="n">freqs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">freqs</span> <span class="o">/</span> <span class="n">delta_freq</span>
+
+        <span class="n">midpoints</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">((</span><span class="n">freqs</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">freqs</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">fillto</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">midpoints</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">([</span><span class="n">freqs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">fillfrom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">([</span><span class="n">freqs</span><span class="p">[</span><span class="mi">0</span><span class="p">]]),</span> <span class="n">midpoints</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="n">fillto</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fillto</span><span class="p">)</span>
+        <span class="n">fillfrom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fillfrom</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">row</span><span class="p">,</span> <span class="n">from_</span><span class="p">,</span> <span class="n">to_</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fillfrom</span><span class="p">,</span> <span class="n">fillto</span><span class="p">):</span>
+            <span class="n">new</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">from_</span><span class="p">):</span> <span class="nb">int</span><span class="p">(</span><span class="n">to_</span><span class="p">)]</span> <span class="o">=</span> <span class="n">row</span>
+
+        <span class="n">vrs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_params</span><span class="p">()</span>
+        <span class="n">vrs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;freq_axis&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">nsize</span>
+            <span class="p">)</span>
+        <span class="p">})</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">new</span><span class="p">,</span> <span class="o">**</span><span class="n">vrs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Spectrogram.freq_overlap"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.freq_overlap">[docs]</a>    <span class="k">def</span> <span class="nf">freq_overlap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get frequency range present in both spectrograms. Returns</span>
+<span class="sd">        (min, max) tuple.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : Spectrogram</span>
+<span class="sd">            other spectrogram with which to look for frequency overlap</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lower</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">other</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">upper</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">other</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">lower</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No overlap.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span></div>
+
+<div class="viewcode-block" id="Spectrogram.time_to_x"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.time_to_x">[docs]</a>    <span class="k">def</span> <span class="nf">time_to_x</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return x-coordinate in spectrogram that corresponds to the</span>
+<span class="sd">        passed `~datetime.datetime` value.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        time : `~sunpy.time.parse_time` compatible str</span>
+<span class="sd">            `~datetime.datetime` to find the x coordinate for.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span>
+        <span class="n">diff_s</span> <span class="o">=</span> <span class="n">SECONDS_PER_DAY</span> <span class="o">*</span> <span class="n">diff</span><span class="o">.</span><span class="n">days</span> <span class="o">+</span> <span class="n">diff</span><span class="o">.</span><span class="n">seconds</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">diff_s</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Out of bounds&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">elem</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">diff_s</span> <span class="o">&lt;</span> <span class="n">elem</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="c1"># The last element is the searched one.</span>
+        <span class="k">return</span> <span class="n">n</span></div>
+
+<div class="viewcode-block" id="Spectrogram.at_freq"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.at_freq">[docs]</a>    <span class="k">def</span> <span class="nf">at_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_axis</span> <span class="o">==</span> <span class="n">freq</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="p">:]</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_mk_format_coord</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">fmt_coord</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">format_coord</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">spec</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+
+            <span class="n">xint</span><span class="p">,</span> <span class="n">yint</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">xint</span> <span class="o">&lt;</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">yint</span> <span class="o">&lt;</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="n">pixel</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="n">yint</span><span class="p">][</span><span class="n">xint</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">pixel</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+            <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{0!s}</span><span class="s1"> z=</span><span class="si">{1!s}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fmt_coord</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">pixel</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">format_coord</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8&quot;</span><span class="p">,</span> <span class="s2">&quot;this module is being moved to sunpyspectra - https://github.com/sunpy/spectra&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="LinearTimeSpectrogram"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram">[docs]</a><span class="k">class</span> <span class="nc">LinearTimeSpectrogram</span><span class="p">(</span><span class="n">Spectrogram</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Spectrogram evenly sampled in time.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    t_delt : float</span>
+<span class="sd">        difference between the items on the time axis</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=E1002</span>
+    <span class="n">COPY_PROPERTIES</span> <span class="o">=</span> <span class="n">Spectrogram</span><span class="o">.</span><span class="n">COPY_PROPERTIES</span> <span class="o">+</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;t_delt&#39;</span><span class="p">,</span> <span class="n">REFERENCE</span><span class="p">),</span>
+    <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">time_axis</span><span class="p">,</span> <span class="n">freq_axis</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span>
+        <span class="n">t_init</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">t_delt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">t_label</span><span class="o">=</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span> <span class="n">f_label</span><span class="o">=</span><span class="s2">&quot;Frequency&quot;</span><span class="p">,</span>
+        <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">instruments</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">t_delt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">t_delt</span> <span class="o">=</span> <span class="n">_min_delt</span><span class="p">(</span><span class="n">freq_axis</span><span class="p">)</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">LinearTimeSpectrogram</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span> <span class="n">time_axis</span><span class="p">,</span> <span class="n">freq_axis</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">t_init</span><span class="p">,</span> <span class="n">t_label</span><span class="p">,</span> <span class="n">f_label</span><span class="p">,</span>
+            <span class="n">content</span><span class="p">,</span> <span class="n">instruments</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">t_delt</span> <span class="o">=</span> <span class="n">t_delt</span>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="LinearTimeSpectrogram.make_array"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.make_array">[docs]</a>    <span class="k">def</span> <span class="nf">make_array</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)):</span>
+        <span class="sd">&quot;&quot;&quot;Function to create an array with shape and dtype.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        shape : tuple</span>
+<span class="sd">            shape of the array to create</span>
+<span class="sd">        dtype : `numpy.dtype`</span>
+<span class="sd">            data-type of the array to create</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="LinearTimeSpectrogram.memmap"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.memmap">[docs]</a>    <span class="k">def</span> <span class="nf">memmap</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return function that takes shape and dtype and returns a</span>
+<span class="sd">        memory mapped array.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filename : str</span>
+<span class="sd">            File to store the memory mapped array in.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">):</span> <span class="n">np</span><span class="o">.</span><span class="n">memmap</span><span class="p">(</span>
+                <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;write&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span>
+            <span class="p">)</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinearTimeSpectrogram.resample_time"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.resample_time">[docs]</a>    <span class="k">def</span> <span class="nf">resample_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_delt</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Rescale image so that the difference in time between pixels is</span>
+<span class="sd">        new_delt seconds.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        new_delt : float</span>
+<span class="sd">            New delta between consecutive values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">t_delt</span> <span class="o">==</span> <span class="n">new_delt</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="n">factor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">t_delt</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">new_delt</span><span class="p">)</span>
+
+        <span class="c1"># The last data-point does not change!</span>
+        <span class="n">new_size</span> <span class="o">=</span> <span class="n">floor</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">factor</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># pylint: disable=E1101</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">ndimage</span><span class="o">.</span><span class="n">zoom</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">new_size</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="c1"># pylint: disable=E1101</span>
+
+        <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_params</span><span class="p">()</span>
+        <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;time_axis&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="nb">int</span><span class="p">((</span><span class="n">new_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">new_delt</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">t_delt</span><span class="p">)],</span>
+                <span class="n">new_size</span>
+            <span class="p">),</span>
+            <span class="s1">&#39;t_delt&#39;</span><span class="p">:</span> <span class="n">new_delt</span><span class="p">,</span>
+        <span class="p">})</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></div>
+
+    <span class="n">JOIN_REPEAT</span> <span class="o">=</span> <span class="nb">object</span><span class="p">()</span>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LinearTimeSpectrogram.join_many"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.join_many">[docs]</a>    <span class="k">def</span> <span class="nf">join_many</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">specs</span><span class="p">,</span> <span class="n">mk_arr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nonlinear</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">maxgap</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">JOIN_REPEAT</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Produce new Spectrogram that contains spectrograms</span>
+<span class="sd">        joined together in time.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        specs : list</span>
+<span class="sd">            List of spectrograms to join together in time.</span>
+<span class="sd">        nonlinear : bool</span>
+<span class="sd">            If True, leave out gaps between spectrograms. Else, fill them with</span>
+<span class="sd">            the value specified in fill.</span>
+<span class="sd">        maxgap : float, int or None</span>
+<span class="sd">            Largest gap to allow in second. If None, allow gap of arbitrary</span>
+<span class="sd">            size.</span>
+<span class="sd">        fill : float or int</span>
+<span class="sd">            Value to fill missing values (assuming nonlinear=False) with.</span>
+<span class="sd">            Can be LinearTimeSpectrogram.JOIN_REPEAT to repeat the values for</span>
+<span class="sd">            the time just before the gap.</span>
+<span class="sd">        mk_array: function</span>
+<span class="sd">            Function that is called to create the resulting array. Can be set</span>
+<span class="sd">            to LinearTimeSpectrogram.memap(filename) to create a memory mapped</span>
+<span class="sd">            result array.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># XXX: Only load header and load contents of files</span>
+        <span class="c1"># on demand.</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">mk_arr</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">mk_arr</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">make_array</span>
+
+        <span class="n">specs</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">specs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">specs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">freq_axis</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">)</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Frequency channels do not match.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Smallest time-delta becomes the common time-delta.</span>
+        <span class="n">min_delt</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">t_delt</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">)</span>
+        <span class="n">dtype_</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">dtype</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">)</span>
+
+        <span class="n">specs</span> <span class="o">=</span> <span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">resample_time</span><span class="p">(</span><span class="n">min_delt</span><span class="p">)</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">]</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">)</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">specs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">start_day</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">start</span>
+
+        <span class="n">xs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">last</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="n">e_init</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">SECONDS_PER_DAY</span> <span class="o">*</span> <span class="p">(</span>
+                    <span class="n">get_day</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">start</span><span class="p">)</span> <span class="o">-</span> <span class="n">get_day</span><span class="p">(</span><span class="n">start_day</span><span class="p">)</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">days</span> <span class="o">+</span> <span class="n">elem</span><span class="o">.</span><span class="n">t_init</span>
+            <span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">e_init</span> <span class="o">-</span> <span class="n">last</span><span class="o">.</span><span class="n">t_init</span><span class="p">)</span> <span class="o">/</span> <span class="n">min_delt</span><span class="p">)</span>
+            <span class="n">xs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="n">last</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span>
+
+            <span class="k">if</span> <span class="n">maxgap</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="o">-</span><span class="n">diff</span> <span class="o">&gt;</span> <span class="n">maxgap</span> <span class="o">/</span> <span class="n">min_delt</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Too large gap.&quot;</span><span class="p">)</span>
+
+            <span class="c1"># If we leave out undefined values, we do not want to</span>
+            <span class="c1"># add values here if x &gt; t_res.</span>
+            <span class="k">if</span> <span class="n">nonlinear</span><span class="p">:</span>
+                <span class="n">size</span> <span class="o">-=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">diff</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">size</span> <span class="o">-=</span> <span class="n">diff</span>
+
+            <span class="n">last</span> <span class="o">=</span> <span class="n">elem</span>
+
+        <span class="c1"># The non existing element after the last one starts after</span>
+        <span class="c1"># the last one. Needed to keep implementation below sane.</span>
+        <span class="n">xs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">specs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="c1"># We do that here so the user can pass a memory mapped</span>
+        <span class="c1"># array if they&#39;d like to.</span>
+        <span class="n">arr</span> <span class="o">=</span> <span class="n">mk_arr</span><span class="p">((</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">size</span><span class="p">),</span> <span class="n">dtype_</span><span class="p">)</span>
+        <span class="n">time_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,))</span>
+        <span class="n">sx</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># Amount of pixels left out due to non-linearity. Needs to be</span>
+        <span class="c1"># considered for correct time axes.</span>
+        <span class="n">sd</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">elem</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">specs</span><span class="p">):</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">elem</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">e_time_axis</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">time_axis</span>
+
+            <span class="n">elem</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">data</span>
+
+            <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">elem</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">nonlinear</span><span class="p">:</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># If we want to stay linear, fill up the missing</span>
+                    <span class="c1"># pixels with placeholder zeros.</span>
+                    <span class="n">filler</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">diff</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">fill</span> <span class="ow">is</span> <span class="bp">cls</span><span class="o">.</span><span class="n">JOIN_REPEAT</span><span class="p">:</span>
+                        <span class="n">filler</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">elem</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">filler</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">fill</span>
+                    <span class="n">minimum</span> <span class="o">=</span> <span class="n">e_time_axis</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">e_time_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span>
+                        <span class="n">e_time_axis</span><span class="p">,</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                            <span class="n">minimum</span> <span class="o">+</span> <span class="n">min_delt</span><span class="p">,</span>
+                            <span class="n">minimum</span> <span class="o">+</span> <span class="n">diff</span> <span class="o">*</span> <span class="n">min_delt</span><span class="p">,</span>
+                            <span class="n">diff</span>
+                        <span class="p">)</span>
+                    <span class="p">])</span>
+                    <span class="n">elem</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">elem</span><span class="p">,</span> <span class="n">filler</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">arr</span><span class="p">[:,</span> <span class="n">sx</span><span class="p">:</span><span class="n">sx</span> <span class="o">+</span> <span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">elem</span><span class="p">[:,</span> <span class="p">:</span><span class="n">x</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">diff</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+                <span class="n">mask</span><span class="p">[:,</span> <span class="n">sx</span> <span class="o">+</span> <span class="n">x</span> <span class="o">-</span> <span class="n">diff</span><span class="p">:</span><span class="n">sx</span> <span class="o">+</span> <span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">time_axis</span><span class="p">[</span><span class="n">sx</span><span class="p">:</span><span class="n">sx</span> <span class="o">+</span> <span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">e_time_axis</span><span class="p">[:</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="n">data</span><span class="o">.</span><span class="n">t_delt</span> <span class="o">*</span> <span class="p">(</span><span class="n">sx</span> <span class="o">+</span> <span class="n">sd</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">nonlinear</span><span class="p">:</span>
+                <span class="n">sd</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">diff</span><span class="p">)</span>
+            <span class="n">sx</span> <span class="o">+=</span> <span class="n">x</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;time_axis&#39;</span><span class="p">:</span> <span class="n">time_axis</span><span class="p">,</span>
+            <span class="s1">&#39;freq_axis&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">,</span>
+            <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">start</span><span class="p">,</span>
+            <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">specs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">end</span><span class="p">,</span>
+            <span class="s1">&#39;t_delt&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">t_delt</span><span class="p">,</span>
+            <span class="s1">&#39;t_init&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">t_init</span><span class="p">,</span>
+            <span class="s1">&#39;t_label&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">t_label</span><span class="p">,</span>
+            <span class="s1">&#39;f_label&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">f_label</span><span class="p">,</span>
+            <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
+            <span class="s1">&#39;instruments&#39;</span><span class="p">:</span> <span class="n">_union</span><span class="p">(</span><span class="n">spec</span><span class="o">.</span><span class="n">instruments</span> <span class="k">for</span> <span class="n">spec</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">),</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">arr</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nonlinear</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;t_delt&#39;</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">Spectrogram</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">common_base</span><span class="p">(</span><span class="n">specs</span><span class="p">)(</span><span class="n">arr</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinearTimeSpectrogram.time_to_x"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.time_to_x">[docs]</a>    <span class="k">def</span> <span class="nf">time_to_x</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return x-coordinate in spectrogram that corresponds to the</span>
+<span class="sd">        passed datetime value.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        time : `~sunpy.time.parse_time` compatible str</span>
+<span class="sd">            `datetime.datetime` to find the x coordinate for.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># This is impossible for frequencies because that mapping</span>
+        <span class="c1"># is not injective.</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span>
+        <span class="n">diff_s</span> <span class="o">=</span> <span class="n">SECONDS_PER_DAY</span> <span class="o">*</span> <span class="n">diff</span><span class="o">.</span><span class="n">days</span> <span class="o">+</span> <span class="n">diff</span><span class="o">.</span><span class="n">seconds</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">diff_s</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">t_delt</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">result</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="c1"># pylint: disable=E1101</span>
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Out of range.&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="LinearTimeSpectrogram.intersect_time"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.intersect_time">[docs]</a>    <span class="k">def</span> <span class="nf">intersect_time</span><span class="p">(</span><span class="n">specs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return slice of spectrograms that is present in all of the ones</span>
+<span class="sd">        passed.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        specs : list</span>
+<span class="sd">            List of spectrograms of which to find the time intersections.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">delt</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">t_delt</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">)</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">t_init</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">)</span>
+
+        <span class="c1"># XXX: Could do without resampling by using</span>
+        <span class="c1"># sp.t_init below, not sure if good idea.</span>
+        <span class="n">specs</span> <span class="o">=</span> <span class="p">[</span><span class="n">sp</span><span class="o">.</span><span class="n">resample_time</span><span class="p">(</span><span class="n">delt</span><span class="p">)</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">]</span>
+        <span class="n">cut</span> <span class="o">=</span> <span class="p">[</span><span class="n">sp</span><span class="p">[:,</span> <span class="nb">int</span><span class="p">((</span><span class="n">start</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">t_init</span><span class="p">)</span> <span class="o">/</span> <span class="n">delt</span><span class="p">):]</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">]</span>
+
+        <span class="n">length</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">cut</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">sp</span><span class="p">[:,</span> <span class="p">:</span><span class="n">length</span><span class="p">]</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">cut</span><span class="p">]</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LinearTimeSpectrogram.combine_frequencies"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.combine_frequencies">[docs]</a>    <span class="k">def</span> <span class="nf">combine_frequencies</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">specs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return new spectrogram that contains frequencies from all the</span>
+<span class="sd">        spectrograms in spec. Only returns time intersection of all of them.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        spec : list</span>
+<span class="sd">            List of spectrograms of which to combine the frequencies into one.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">specs</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Need at least one spectrogram.&quot;</span><span class="p">)</span>
+
+        <span class="n">specs</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">intersect_time</span><span class="p">(</span><span class="n">specs</span><span class="p">)</span>
+
+        <span class="n">one</span> <span class="o">=</span> <span class="n">specs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">dtype_</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">dtype</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">)</span>
+        <span class="n">fsize</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">)</span>
+
+        <span class="n">new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">fsize</span><span class="p">,</span> <span class="n">one</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_</span><span class="p">)</span>
+
+        <span class="n">freq_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">fsize</span><span class="p">,))</span>
+
+        <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="p">[(</span><span class="n">sp</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">specs</span>
+            <span class="p">],</span>
+            <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="p">)):</span>
+            <span class="n">new</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="p">:]</span>
+            <span class="n">freq_axis</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">[</span><span class="n">row</span><span class="p">]</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;time_axis&#39;</span><span class="p">:</span> <span class="n">one</span><span class="o">.</span><span class="n">time_axis</span><span class="p">,</span>  <span class="c1"># Should be equal</span>
+            <span class="s1">&#39;freq_axis&#39;</span><span class="p">:</span> <span class="n">freq_axis</span><span class="p">,</span>
+            <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">one</span><span class="o">.</span><span class="n">start</span><span class="p">,</span>
+            <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">one</span><span class="o">.</span><span class="n">end</span><span class="p">,</span>
+            <span class="s1">&#39;t_delt&#39;</span><span class="p">:</span> <span class="n">one</span><span class="o">.</span><span class="n">t_delt</span><span class="p">,</span>
+            <span class="s1">&#39;t_init&#39;</span><span class="p">:</span> <span class="n">one</span><span class="o">.</span><span class="n">t_init</span><span class="p">,</span>
+            <span class="s1">&#39;t_label&#39;</span><span class="p">:</span> <span class="n">one</span><span class="o">.</span><span class="n">t_label</span><span class="p">,</span>
+            <span class="s1">&#39;f_label&#39;</span><span class="p">:</span> <span class="n">one</span><span class="o">.</span><span class="n">f_label</span><span class="p">,</span>
+            <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="n">one</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
+            <span class="s1">&#39;instruments&#39;</span><span class="p">:</span> <span class="n">_union</span><span class="p">(</span><span class="n">spec</span><span class="o">.</span><span class="n">instruments</span> <span class="k">for</span> <span class="n">spec</span> <span class="ow">in</span> <span class="n">specs</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">common_base</span><span class="p">(</span><span class="n">specs</span><span class="p">)(</span><span class="n">new</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="LinearTimeSpectrogram.check_linearity"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.check_linearity">[docs]</a>    <span class="k">def</span> <span class="nf">check_linearity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">err</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">err_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check linearity of time axis. If err is given, tolerate absolute</span>
+<span class="sd">        derivation from average delta up to err. If err_factor is given,</span>
+<span class="sd">        tolerate up to err_factor * average_delta. If both are given,</span>
+<span class="sd">        TypeError is raised. Default to err=0.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        err : float</span>
+<span class="sd">            Absolute difference each delta is allowed to diverge from the</span>
+<span class="sd">            average. Cannot be used in combination with err_factor.</span>
+<span class="sd">        err_factor : float</span>
+<span class="sd">            Relative difference each delta is allowed to diverge from the</span>
+<span class="sd">            average, i.e. err_factor * average. Cannot be used in combination</span>
+<span class="sd">            with err.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">deltas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_axis</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">deltas</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">err_factor</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">err</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">err_factor</span> <span class="o">*</span> <span class="n">avg</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">err_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Only supply err or err_factor, not both&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">deltas</span> <span class="o">-</span> <span class="n">avg</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">err</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="LinearTimeSpectrogram.in_interval"><a class="viewcode-back" href="../../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.in_interval">[docs]</a>    <span class="k">def</span> <span class="nf">in_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return part of spectrogram that lies in [start, end).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        start : None or `~datetime.datetime` or `~sunpy.time.parse_time` compatible string or time string</span>
+<span class="sd">            Start time of the part of the spectrogram that is returned. If the</span>
+<span class="sd">            measurement only spans over one day, a colon separated string</span>
+<span class="sd">            representing the time can be passed.</span>
+<span class="sd">        end : None or `~datetime.datetime` or `~sunpy.time.parse_time` compatible string or time string</span>
+<span class="sd">            See start.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="c1"># XXX: We could do better than that.</span>
+                <span class="k">if</span> <span class="n">get_day</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">)</span> <span class="o">!=</span> <span class="n">get_day</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                        <span class="s2">&quot;Time ambiguous because data spans over more than one day&quot;</span>
+                    <span class="p">)</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">day</span><span class="p">,</span>
+                    <span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">start</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)))</span>
+                <span class="p">)</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_x</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">end</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">end</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">get_day</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">)</span> <span class="o">!=</span> <span class="n">get_day</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                        <span class="s2">&quot;Time ambiguous because data spans over more than one day&quot;</span>
+                    <span class="p">)</span>
+                <span class="n">end</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">day</span><span class="p">,</span>
+                    <span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">end</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)))</span>
+                <span class="p">)</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_x</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">start</span><span class="p">:</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">end</span><span class="p">:</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[:,</span> <span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span></div></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,639 @@
+:orphan:
+
+.. _examples:
+
+Example Gallery
+---------------
+
+This gallery contains some examples of how to use SunPy. Most of these examples
+require the SunPy sample data, which you can download by running::
+
+     >>> import sunpy.data.sample
+
+Once downloaded the data will be stored in your user directory and you will not
+need to download it again.
+
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This examples shows all of the colormaps provided by sunpy ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_sunpy_colormaps_reference_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_sunpy_colormaps_reference.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/sunpy_colormaps_reference
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a very simple way to plot a sample AIA image. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_aia_example_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_aia_example.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/aia_example
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="A simple example to show how to edit the display of a map ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_map_editcolormap_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_map_editcolormap.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/map_editcolormap
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="A simple demonstration of creating a map from a numpy array of data. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_map_from_numpy_array_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_map_from_numpy_array.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/map_from_numpy_array
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows off all of the sample images provided by SunPy. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_plot_sample_images_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_plot_sample_images.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/plot_sample_images
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="How to find and overplot the location of the brightest pixel ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_brightness_pixel_location_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_brightness_pixel_location.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/brightness_pixel_location
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="A simple example showing how to download data from the VSO with Fido. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_skip_searching_vso_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_skip_searching_vso.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/skip_searching_vso
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example we demonstrate how to get a submap of a map. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_submaps_and_cropping_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_submaps_and_cropping.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/submaps_and_cropping
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example we rotate a map. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_map_rotation_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_map_rotation.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/map_rotation
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="How to find and overplot the location of the brightest pixel ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_masking_hot_pixels_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_masking_hot_pixels.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/masking_hot_pixels
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how you can do basic image processing on SunPy map image data. In this examp...">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_image_bright_regions_gallery_example_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_image_bright_regions_gallery_example.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/image_bright_regions_gallery_example
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to mask off emission from the disk. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_mask_disk_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_mask_disk.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/mask_disk
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example you will see how to resample a map using the resample method (which implements ...">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_map_resampling_and_superpixels_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_map_resampling_and_superpixels.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/map_resampling_and_superpixels
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An example showing how to combine GOES and HEK data ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_goes_hek_m25_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_goes_hek_m25.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/goes_hek_m25
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to edge enhance coronal loops in an SDO/AIA image. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_loop_edge_enhance_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_loop_edge_enhance.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/loop_edge_enhance
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to define and draw a great arc on an image of the Sun, and to extrac...">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_great_arc_example_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_great_arc_example.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/great_arc_example
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="How to draw your own (Stonyhurst) longitude and latitude lines ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_lat_lon_lines_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_lat_lon_lines.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/lat_lon_lines
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows the current and possible next solar cycle. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_solar_cycle_example_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_solar_cycle_example.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/solar_cycle_example
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to enhance emission above the limb. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_off_limb_enhance_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_off_limb_enhance.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/off_limb_enhance
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example we load the Daily Synoptic Maps produced by the HMI team. This data is an inter...">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_hmi_synoptic_maps_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_hmi_synoptic_maps.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/hmi_synoptic_maps
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to overplot HEK outlines on SunPy maps. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_overplot_hek_polygon_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_overplot_hek_polygon.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/overplot_hek_polygon
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="How to inspect the histogram of the data of a map. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_map_data_histogram_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_map_data_histogram.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/map_data_histogram
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The Sun is known to rotate differentially, meaning that the rotation rate near the poles (rotat...">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_simple_differential_rotation_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_simple_differential_rotation.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/simple_differential_rotation
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to overplot Active Region location on magnetogram plots. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_skip_magnetogram_active_regions_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_skip_magnetogram_active_regions.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/skip_magnetogram_active_regions
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example you will be learning how to create and modify SunPy Map objects. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_maps_example_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_maps_example.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/maps_example
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example we use a STEREO-B and an SDO image to demonstrate how to overplot the limb as s...">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_AIA_limb_STEREO_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_AIA_limb_STEREO.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/AIA_limb_STEREO
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an early run-through of the basic functionality of the SunPy TimeSeriesMetaData class. ...">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_skip_timeseriesmetadata_example_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_skip_timeseriesmetadata_example.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/skip_timeseriesmetadata_example
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An overview of the coordinated sample data set for the SOL-2011-06-07 event. ">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_2011_06_07_sampledata_overview_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_2011_06_07_sampledata_overview.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/2011_06_07_sampledata_overview
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example we demonstrate how you can identify a point or region on the surface of the Sun...">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_SDO_to_STEREO_Coordinate_Conversion_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_SDO_to_STEREO_Coordinate_Conversion.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/SDO_to_STEREO_Coordinate_Conversion
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an early run-through of the basic functionality of the SunPy TimeSeries class. This is ...">
+
+.. only:: html
+
+    .. figure:: /generated/gallery/images/thumb/sphx_glr_skip_timeseries_example_thumb.png
+
+        :ref:`sphx_glr_generated_gallery_skip_timeseries_example.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/gallery/skip_timeseries_example
+.. raw:: html
+
+    <div style='clear:both'></div>
+
+
+
+.. container:: sphx-glr-footer
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Python source code: gallery_python.zip <//home/travis/build/sunpy/sunpy-sphinx-theme/sunpy/docs/generated/gallery/gallery_python.zip>`
+
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Jupyter notebooks: gallery_jupyter.zip <//home/travis/build/sunpy/sunpy-sphinx-theme/sunpy/docs/generated/gallery/gallery_jupyter.zip>`
+
+.. rst-class:: sphx-glr-signature
+
+    `Generated by Sphinx-Gallery <https://sphinx-gallery.readthedocs.io>`_

@@ -1,0 +1,6 @@
+true_anomaly
+============
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: true_anomaly

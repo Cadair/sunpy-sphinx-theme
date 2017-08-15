@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentation &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Testing" href="tests.html" />
+    <link rel="prev" title="Global Settings" href="config.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Documentation | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/dev_guide/documentation.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer&#8217;s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="newcomers.html">Newcomer&#8217;s Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version_control.html">Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_standards.html">Coding Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Global Settings</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<p>All code must be documented. Undocumented code will not be accepted into SunPy.
+Documentation should follow the guidelines in <a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">PEP 8</a> and <a class="reference external" href="http://www.python.org/dev/peps/pep-0257/">PEP 257 (Docstring
+conventions)</a>. Documentation for
+modules, classes, and functions should follow the <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy/SciPy documentation
+style guide</a>.
+We provide an example of good documentation below or you can just browse some
+of SunPy code itself for examples. All of the SunPy documentation
+(like this page!) is built by Sphinx and must therefore adhere to Sphinx
+guidelines.</p>
+<div class="section" id="sphinx">
+<h2>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://sphinx.pocoo.org/">Sphinx</a> is a tool for generating high-quality
+documentation in various formats (HTML, pdf, etc) and is especially well-suited
+for documenting Python projects. Sphinx works by parsing files written using a
+<a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">a Mediawiki-like syntax</a> called
+<a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>. In addition
+to parsing static files of reStructuredText, Sphinx can also be told to parse
+code comments. In fact, in addition to what you are reading right now, the
+<a class="reference external" href="http://www.python.org/doc/">Python documentation</a> was also created using
+Sphinx.</p>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>All of the SunPy documentation is contained in the <code class="docutils literal"><span class="pre">doc/source</span></code> folder and
+code comments. The examples from the example gallery can be found in
+<code class="docutils literal"><span class="pre">examples</span></code>. To build the documentation locally you must have Sphinx
+(as well as Numpydoc, astropy-helpers, and sphinx-gallery) installed on
+your computer. In the root directory run</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_docs</span>
+</pre></div>
+</div>
+<p>This will generate HTML documentation for SunPy in the <code class="docutils literal"><span class="pre">docs/_build/html</span></code>
+directory. The gallery examples are located under
+<code class="docutils literal"><span class="pre">docs/_build/html/generated/gallery</span></code> Sphinx builds documentation
+iteratively only adding things that have changed. If you&#8217;d like to start
+from scratch then just delete the build directory.</p>
+<p>For more information on how to use Sphinx, consult the <a class="reference external" href="http://sphinx.pocoo.org/contents.html">Sphinx documentation</a>.</p>
+<p>The rest of this section will describe how to document the SunPy code in order
+to guarantee well-formatted documentation.</p>
+</div>
+<div class="section" id="doctest">
+<h3>doctest<a class="headerlink" href="#doctest" title="Permalink to this headline">¶</a></h3>
+<p>The example codes in the Guide section of the docs are configured with the Sphinx
+<a class="reference external" href="http://sphinx-doc.org/ext/doctest.html">doctest extension</a>.
+This will test the example code to make sure it runs correctly, it can be executed
+using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="n">doctest</span> <span class="o">-</span><span class="n">b</span> <span class="n">doctest</span> <span class="o">./</span> <span class="o">../</span><span class="n">build</span>
+</pre></div>
+</div>
+<p>from inside the <code class="docutils literal"><span class="pre">doc/source</span></code> folder.</p>
+</div>
+</div>
+<div class="section" id="use-of-quantities-and-units">
+<h2>Use of quantities and units<a class="headerlink" href="#use-of-quantities-and-units" title="Permalink to this headline">¶</a></h2>
+<p>Much code perform calculations using physical quantities.  SunPy uses astropy&#8217;s
+<a class="reference external" href="http://docs.astropy.org/en/stable/units/index.html">quantities and units</a>
+implementation to store, express and convert physical quantities. New classes
+and functions should adhere to SunPy&#8217;s <a class="reference external" href="https://github.com/sunpy/sunpy-SEP/blob/master/SEP-0003.md">quantity and unit usage guidelines</a>.  This document
+sets out SunPy&#8217;s reasons and requirements for the usage of quantities and
+units.  Briefly, SunPy&#8217;s <a class="reference external" href="https://github.com/sunpy/sunpy-SEP/blob/master/SEP-0003.md">policy</a>
+is that <em>all user-facing function/object arguments which accept physical
+quantities as input **MUST*</em> accept astropy quantities, and <strong>ONLY</strong> astropy
+quantities*.</p>
+<p>Developers should consult the
+<a class="reference external" href="http://docs.astropy.org/en/stable/units/index.html">Astropy Quantities and Units page</a>
+for the latest updates on using quantities and units.  The <a class="reference external" href="http://www.astropy.org/astropy-tutorials/Quantities.html">astropy tutorial on quantities and units</a> also provides useful examples on their
+capabilities.</p>
+<p>Astropy provides the decorator <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity_input.html#astropy.units.quantity_input" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">quantity_input</span></code></a> that
+checks the units of the input arguments to a function against the
+expected units of the argument.  We recommend using this decorator to
+perform function argument unit checks.  The decorator ensures that the
+units of the input to the function are convertible to that specified
+by the decorator, for example</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">myangle</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">myfunction</span><span class="p">(</span><span class="n">myangle</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">myangle</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>This function only accepts arguments that are convertible to arcseconds.
+Therefore,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myfunction</span><span class="p">(</span><span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
+<span class="go">&lt;Quantity 400.0 deg2&gt;</span>
+</pre></div>
+</div>
+<p>returns the expected answer but</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myfunction</span><span class="p">(</span><span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>raises an error.</p>
+<p>The following is an example of a use-facing function that returns the area of a
+square, in units that are the square of the input length unit:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">side_length</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_area_of_square</span><span class="p">(</span><span class="n">side_length</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the area of a square.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    side_length : `~astropy.units.quantity.Quantity`</span>
+<span class="sd">        Side length of the square</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    area : `~astropy.units.quantity.Quantity`</span>
+<span class="sd">        Area of the square.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">side_length</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This more advanced example shows how a private function that does not accept
+quantities can be wrapped by a function that does:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">side_length</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Does something useful.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    length : `~astropy.units.quantity.Quantity`</span>
+<span class="sd">        A length.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    length : `~astropy.units.quantity.Quantity`</span>
+<span class="sd">        Another length</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># the following function either</span>
+    <span class="c1"># a] does not accept Quantities</span>
+    <span class="c1"># b] is slow if using Quantities</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">_private_wrapper_function</span><span class="p">(</span><span class="n">length</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;meters&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="c1"># now convert back to a quantity</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">Quantity</span><span class="p">(</span><span class="n">result_meters</span><span class="p">,</span> <span class="n">units_of_the_private_wrapper_function</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>In this example, the non-user facing function <em>_private_wrapper_function</em> requires a numerical input in units of
+meters, and returns a numerical output.  The developer knows that the result of <em>_private_wrapper_function</em> is in the
+units <em>units_of_the_private_wrapper_function</em>, and sets the result of <em>some_function</em> to return the answer in those
+units.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="modules">
+<h3>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
+<p>Each module or package should begin with a docstring describing its overall
+purpose and functioning. Below that meta-tags containing author, license, email
+and credits information may also be listed.</p>
+<p>Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This is an example module comment.</span>
+
+<span class="sd">An explanation of the purpose of the module would go here and will appear</span>
+<span class="sd">in the generated documentation</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1">#</span>
+<span class="c1"># TODO</span>
+<span class="c1">#  Developer notes and todo items can be listed here and will not be</span>
+<span class="c1">#  included in the documentation.</span>
+<span class="c1">#</span>
+<span class="n">__authors__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Keith Hughitt&quot;</span><span class="p">,</span> <span class="s2">&quot;Steven Christe&quot;</span><span class="p">,</span> <span class="s2">&quot;Jack Ireland&quot;</span><span class="p">,</span> <span class="s2">&quot;Alex Young&quot;</span><span class="p">]</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;keith.hughitt@nasa.gov&quot;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;xxx&quot;</span>
+</pre></div>
+</div>
+<p>For details about what sections can be included, see the section on <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">documenting
+modules</a> in the
+NumPy/SciPy style guide.</p>
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<p>Class docstrings should include a clear and concise docstring explaining the
+overall purpose of the class, required and optional input parameters, and the
+return value. Additionally, notes, references and examples are encouraged.</p>
+<p>Example (<code class="xref py py-class docutils literal"><span class="pre">sunpy.map.Map</span></code>)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Map(data, header)</span>
+
+<span class="sd">A spatially-aware data array based on the SolarSoft Map object</span>
+
+<span class="sd">Parameters</span>
+<span class="sd">----------</span>
+<span class="sd">data : numpy.ndarray, list</span>
+<span class="sd">    A 2d list or ndarray containing the map data</span>
+<span class="sd">header : dict</span>
+<span class="sd">    A dictionary of the original image header tags</span>
+
+<span class="sd">Attributes</span>
+<span class="sd">----------</span>
+<span class="sd">header : dict</span>
+<span class="sd">    A dictionary representation of the image header</span>
+<span class="sd">date : datetime</span>
+<span class="sd">    Image observation time</span>
+<span class="sd">det : str</span>
+<span class="sd">    Detector name</span>
+<span class="sd">inst : str</span>
+<span class="sd">    Instrument name</span>
+<span class="sd">meas : str, int</span>
+<span class="sd">    Measurement name. For AIA this is the wavelength of image</span>
+<span class="sd">obs : str</span>
+<span class="sd">    Observatory name</span>
+<span class="sd">r_sun : float</span>
+<span class="sd">    Radius of the sun</span>
+<span class="sd">name : str</span>
+<span class="sd">    Nickname for the image type (e.g. &quot;AIA 171&quot;)</span>
+<span class="sd">center : dict</span>
+<span class="sd">    X and Y coordinate for the center of the sun in arcseconds</span>
+<span class="sd">scale: dict</span>
+<span class="sd">    Image scale along the x and y axes in arcseconds/pixel</span>
+
+<span class="sd">Examples</span>
+<span class="sd">--------</span>
+<span class="sd">&gt;&gt;&gt; aia = sunpy.map.Map(sunpy.data.sample.AIA_171_IMAGE)</span>
+<span class="sd">&gt;&gt;&gt; aia.T</span>
+<span class="sd">Map([[ 0.3125,  1.    , -1.1875, ..., -0.625 ,  0.5625,  0.5   ],</span>
+<span class="sd">[-0.0625,  0.1875,  0.375 , ...,  0.0625,  0.0625, -0.125 ],</span>
+<span class="sd">[-0.125 , -0.8125, -0.5   , ..., -0.3125,  0.5625,  0.4375],</span>
+<span class="sd">...,</span>
+<span class="sd">[ 0.625 ,  0.625 , -0.125 , ...,  0.125 , -0.0625,  0.6875],</span>
+<span class="sd">[-0.625 , -0.625 , -0.625 , ...,  0.125 , -0.0625,  0.6875],</span>
+<span class="sd">[ 0.    ,  0.    , -1.1875, ...,  0.125 ,  0.    ,  0.6875]])</span>
+<span class="sd">&gt;&gt;&gt; aia.header[&#39;cunit1&#39;]</span>
+<span class="sd">&#39;arcsec&#39;</span>
+<span class="sd">&gt;&gt;&gt; aia.show()</span>
+<span class="sd">&gt;&gt;&gt; import matplotlib.cm as cm</span>
+<span class="sd">&gt;&gt;&gt; import matplotlib.colors as colors</span>
+<span class="sd">&gt;&gt;&gt; aia.peek(cmap=cm.hot, norm=colors.Normalize(1, 2048))</span>
+
+<span class="sd">See Also</span>
+<span class="sd">--------</span>
+<span class="sd">numpy.ndarray Parent class for the Map object</span>
+
+<span class="sd">References</span>
+<span class="sd">----------</span>
+<span class="sd">| http://docs.scipy.org/doc/numpy/reference/arrays.classes.html</span>
+<span class="sd">| http://docs.scipy.org/doc/numpy/user/basics.subclassing.html</span>
+<span class="sd">| http://www.scipy.org/Subclasses</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<p>Functions should include a clear and concise docstring explaining the overall
+purpose of the function, required and optional input parameters, and the return
+value. Additionally, notes, references and examples are encouraged.</p>
+<p>Example (<a class="reference external" href="https://github.com/numpy/numpy/blob/master/numpy/matlib.py">numpy.matlib.ones</a>):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ones</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Matrix of ones.</span>
+
+<span class="sd">    Return a matrix of given shape and type, filled with ones.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    shape : {sequence of ints, int}</span>
+<span class="sd">        Shape of the matrix</span>
+<span class="sd">    dtype : data-type, optional</span>
+<span class="sd">        The desired data-type for the matrix, default is np.float64.</span>
+<span class="sd">    order : {&#39;C&#39;, &#39;F&#39;}, optional</span>
+<span class="sd">        Whether to store matrix in C- or Fortran-contiguous order,</span>
+<span class="sd">        default is &#39;C&#39;.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : matrix</span>
+<span class="sd">        Matrix of ones of given shape, dtype, and order.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    ones : Array of ones.</span>
+<span class="sd">    matlib.zeros : Zero matrix.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    If `shape` has length one i.e. ``(N,)``, or is a scalar ``N``,</span>
+<span class="sd">    `out` becomes a single row matrix of shape ``(1,N)``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; np.matlib.ones((2,3))</span>
+<span class="sd">    matrix([[ 1.,  1.,  1.],</span>
+<span class="sd">            [ 1.,  1.,  1.]])</span>
+
+<span class="sd">    &gt;&gt;&gt; np.matlib.ones(2)</span>
+<span class="sd">    matrix([[ 1.,  1.]])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">ndarray</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>For details about what sections can be included, see the section on <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">documenting
+functions</a> in the
+NumPy/SciPy style guide.</p>
+</div>
+</div>
+<div class="section" id="trouble-shooting">
+<h2>Trouble-shooting<a class="headerlink" href="#trouble-shooting" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx can be very particular about formatting, and the warnings and errors
+outputted aren&#8217;t always obvious.</p>
+<p>Below are some commonly-encountered warning/error messages along with a
+human-readable translation:</p>
+<p><strong>WARNING: Duplicate explicit target name: &#8220;xxx&#8221;.</strong></p>
+<p>If you reference the same URL, etc more than once in the same document sphinx
+will complain. To avoid, use double-underscores instead of single ones after
+the URL.</p>
+<p><strong>ERROR: Malformed table. Column span alignment problem at line offset n</strong></p>
+<p>Make sure there is a space before and after each colon in your class and
+function docs (e.g. attribute : type, instead of attribute: type). Also, for
+some sections (e.g. Attributes) numpydoc seems to complain when a description
+spans more than one line, particularly if it is the first attribute listed.</p>
+<p><strong>WARNING: Block quote ends without a blank line; unexpected unindent.</strong></p>
+<p>Lists should be indented one level from their parents.</p>
+<p><strong>ERROR: Unkown target name: &#8220;xxx&#8221;</strong></p>
+<p>In addition to legitimate errors of this type, this error will also occur when
+variables have a trailing underscore, e.g., <code class="docutils literal"><span class="pre">xxx_</span></code>.</p>
+<p><strong>WARNING: Explicit markup ends without a blank line; unexpected unindent.</strong></p>
+<p>This usually occurs when the text following a directive is wrapped to the next
+line without properly indenting a multi-line text block.</p>
+<p><strong>WARNING: toctree references unknown document &#8216;...&#8217;</strong> /
+<strong>WARNING: toctree contains reference to nonexisting document</strong></p>
+<p>This pair of errors is due to the way numpydoc scrapes class members.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

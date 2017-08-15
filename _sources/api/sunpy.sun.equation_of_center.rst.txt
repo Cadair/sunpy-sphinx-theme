@@ -1,0 +1,6 @@
+equation_of_center
+==================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: equation_of_center

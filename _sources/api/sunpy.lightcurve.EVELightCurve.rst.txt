@@ -1,0 +1,17 @@
+EVELightCurve
+=============
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: EVELightCurve
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~EVELightCurve.peek
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: peek

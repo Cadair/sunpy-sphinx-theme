@@ -1,0 +1,6 @@
+get_earth
+=========
+
+.. currentmodule:: sunpy.coordinates
+
+.. autofunction:: get_earth

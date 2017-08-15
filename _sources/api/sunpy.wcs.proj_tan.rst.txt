@@ -1,0 +1,6 @@
+proj_tan
+========
+
+.. currentmodule:: sunpy.wcs
+
+.. autofunction:: proj_tan

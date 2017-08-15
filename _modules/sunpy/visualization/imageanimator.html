@@ -1,0 +1,1158 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.visualization.imageanimator &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.visualization.imageanimator | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/visualization/imageanimator.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.visualization.imageanimator</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">abc</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.widgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">import</span> <span class="nn">matplotlib.animation</span> <span class="k">as</span> <span class="nn">mplanim</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.axes_grid1</span> <span class="k">import</span> <span class="n">make_axes_locatable</span>
+<span class="kn">import</span> <span class="nn">mpl_toolkits.axes_grid1.axes_size</span> <span class="k">as</span> <span class="nn">Size</span>
+<span class="kn">import</span> <span class="nn">astropy.wcs</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.extern</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="nb">range</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;BaseFuncAnimator&#39;</span><span class="p">,</span> <span class="s1">&#39;ImageAnimator&#39;</span><span class="p">,</span> <span class="s1">&#39;LineAnimator&#39;</span><span class="p">,</span> <span class="s1">&#39;ImageAnimatorWCS&#39;</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">SliderPB</span><span class="p">(</span><span class="n">widgets</span><span class="o">.</span><span class="n">Slider</span><span class="p">):</span>
+    <span class="vm">__doc__</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Slider</span><span class="o">.</span><span class="vm">__doc__</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">valmin</span><span class="p">,</span> <span class="n">valmax</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">valfmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.2f</span><span class="s1">&#39;</span><span class="p">,</span>
+                 <span class="n">closedmin</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">closedmax</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">slidermin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">slidermax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dragging</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="n">widgets</span><span class="o">.</span><span class="n">Slider</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">valmin</span><span class="p">,</span> <span class="n">valmax</span><span class="p">,</span>
+                                <span class="n">valinit</span><span class="o">=</span><span class="n">valinit</span><span class="p">,</span> <span class="n">valfmt</span><span class="o">=</span><span class="n">valfmt</span><span class="p">,</span>
+                                <span class="n">closedmin</span><span class="o">=</span><span class="n">closedmin</span><span class="p">,</span> <span class="n">closedmax</span><span class="o">=</span><span class="n">closedmax</span><span class="p">,</span>
+                                <span class="n">slidermin</span><span class="o">=</span><span class="n">slidermin</span><span class="p">,</span> <span class="n">slidermax</span><span class="o">=</span><span class="n">slidermax</span><span class="p">,</span>
+                                <span class="n">dragging</span><span class="o">=</span><span class="n">dragging</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">changed_args</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">set_val</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="n">xy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">poly</span><span class="o">.</span><span class="n">xy</span>
+        <span class="n">xy</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">,</span> <span class="mi">1</span>
+        <span class="n">xy</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">poly</span><span class="o">.</span><span class="n">xy</span> <span class="o">=</span> <span class="n">xy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valtext</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">valfmt</span> <span class="o">%</span> <span class="n">val</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawon</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">eventson</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">for</span> <span class="n">cid</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">func</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">changed_args</span><span class="p">[</span><span class="n">cid</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">on_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        When the slider value is changed, call *func* with the new</span>
+<span class="sd">        slider position</span>
+
+<span class="sd">        A connection id is returned which can be used to disconnect</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">changed_args</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span> <span class="o">=</span> <span class="n">args</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">cid</span>
+
+
+<span class="k">class</span> <span class="nc">ButtonPB</span><span class="p">(</span><span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.85&#39;</span><span class="p">,</span> <span class="n">hovercolor</span><span class="o">=</span><span class="s1">&#39;0.95&#39;</span><span class="p">):</span>
+
+        <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span>
+                                <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">hovercolor</span><span class="o">=</span><span class="n">hovercolor</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">clicked_args</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">on_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        When the button is clicked, call this *func* with event</span>
+
+<span class="sd">        A connection id is returned which can be used to disconnect</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clicked_args</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span> <span class="o">=</span> <span class="n">args</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">cid</span>
+
+    <span class="k">def</span> <span class="nf">_release</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mouse_grabber</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">event</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">release_mouse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">eventson</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">inaxes</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">for</span> <span class="n">cid</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">func</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">clicked_args</span><span class="p">[</span><span class="n">cid</span><span class="p">])</span>
+
+
+<div class="viewcode-block" id="BaseFuncAnimator"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.BaseFuncAnimator.html#sunpy.visualization.imageanimator.BaseFuncAnimator">[docs]</a><span class="k">class</span> <span class="nc">BaseFuncAnimator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a matplotlib backend independent data explorer which allows</span>
+<span class="sd">    definition of figure update functions for each slider.</span>
+
+<span class="sd">    The following keyboard shortcuts are defined in the viewer:</span>
+
+<span class="sd">    - &#39;left&#39;: previous step on active slider</span>
+<span class="sd">    - &#39;right&#39;: next step on active slider</span>
+<span class="sd">    - &#39;top&#39;: change the active slider up one</span>
+<span class="sd">    - &#39;bottom&#39;: change the active slider down one</span>
+<span class="sd">    - &#39;p&#39;: play/pause active slider</span>
+
+<span class="sd">    This viewer can have user defined buttons added by specifying the labels</span>
+<span class="sd">    and functions called when those buttons are clicked as keyword arguments.</span>
+
+<span class="sd">    To make this class useful the subclass must implement `_plot_start_image`</span>
+<span class="sd">    which must define a `self.im` attribute which is an instance of AxesImage</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data: iterable</span>
+<span class="sd">        Some arbitrary data</span>
+
+<span class="sd">    slider_functions: list</span>
+<span class="sd">        A list of functions to call when that slider is changed.</span>
+<span class="sd">        These functions will have `val`, the axes image object and the slider</span>
+<span class="sd">        widget instance passed to them, i.e.: update_slider(val, im, slider)</span>
+
+<span class="sd">    slider_ranges: list</span>
+<span class="sd">        list of [min,max] pairs to set the ranges for each slider or an array</span>
+<span class="sd">        of values for all points of the slider.</span>
+<span class="sd">        (The slider update function decides which to support.)</span>
+<span class="sd">    fig: mpl.figure</span>
+<span class="sd">        Figure to use</span>
+<span class="sd">    interval: int</span>
+<span class="sd">        Animation interval in ms</span>
+
+<span class="sd">    colorbar: bool</span>
+<span class="sd">        Plot colorbar</span>
+
+<span class="sd">    button_labels: list</span>
+<span class="sd">        List of strings to label buttons</span>
+
+<span class="sd">    button_func: list</span>
+<span class="sd">        List of functions to map to the buttons</span>
+
+<span class="sd">    Extra keywords are passed to imshow.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">slider_functions</span><span class="p">,</span> <span class="n">slider_ranges</span><span class="p">,</span> <span class="n">fig</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">interval</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="c1"># Allow the user to specify the button func:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_func</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;button_func&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_labels</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;button_labels&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_buttons</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button_labels</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">fig</span><span class="p">:</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="n">interval</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">if_colorbar</span> <span class="o">=</span> <span class="n">colorbar</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">imshow_kwargs</span> <span class="o">=</span> <span class="n">kwargs</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">slider_functions</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">slider_ranges</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;You must specify the same number of functions &quot;</span>
+                             <span class="s2">&quot;as extents&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">slider_functions</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider_functions</span> <span class="o">=</span> <span class="n">slider_functions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider_ranges</span> <span class="o">=</span> <span class="n">slider_ranges</span>
+
+        <span class="c1"># Set active slider</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">active_slider</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># Set a blank timer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Set up axes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_make_axes_grid</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_add_widgets</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_active_slider</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Set the current axes to the main axes so commands like</span>
+        <span class="c1"># plt.ylabel() work.</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">sca</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span>
+
+        <span class="c1"># Do Plot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">im</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot_start_image</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span>
+
+        <span class="c1"># Connect fig events</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_connect_fig_events</span><span class="p">()</span>
+
+<div class="viewcode-block" id="BaseFuncAnimator.label_slider"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.BaseFuncAnimator.html#sunpy.visualization.imageanimator.BaseFuncAnimator.label_slider">[docs]</a>    <span class="k">def</span> <span class="nf">label_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Change the Slider label</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        i: int</span>
+<span class="sd">            The index of the slider to change (0 is bottom)</span>
+<span class="sd">        label: str</span>
+<span class="sd">            The label to set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">_slider</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">label</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BaseFuncAnimator.get_animation"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.BaseFuncAnimator.html#sunpy.visualization.imageanimator.BaseFuncAnimator.get_animation">[docs]</a>    <span class="k">def</span> <span class="nf">get_animation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">slider</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">startframe</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">endframe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                      <span class="n">stepframe</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a matplotlib.animation.FuncAnimation instance for the selected</span>
+<span class="sd">        slider.</span>
+
+<span class="sd">        This will allow easy saving of the animation to a file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        slider: int</span>
+<span class="sd">            The slider to animate along</span>
+
+<span class="sd">        startframe: int</span>
+<span class="sd">            The frame to start the animation</span>
+
+<span class="sd">        endframe: int</span>
+<span class="sd">            The frame to end the animation</span>
+
+<span class="sd">        stepframe: int</span>
+<span class="sd">            The step between frames</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">axes</span><span class="p">:</span>
+            <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+        <span class="n">anim_fig</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">get_figure</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">endframe</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">endframe</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_ranges</span><span class="p">[</span><span class="n">slider</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">im</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot_start_image</span><span class="p">(</span><span class="n">axes</span><span class="p">)</span>
+
+        <span class="n">anim_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;frames&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">startframe</span><span class="p">,</span> <span class="n">endframe</span><span class="p">,</span> <span class="n">stepframe</span><span class="p">)),</span>
+                       <span class="s1">&#39;fargs&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">im</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="n">slider</span><span class="p">]</span><span class="o">.</span><span class="n">_slider</span><span class="p">]}</span>
+        <span class="n">anim_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="n">ani</span> <span class="o">=</span> <span class="n">mplanim</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span><span class="n">anim_fig</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_functions</span><span class="p">[</span><span class="n">slider</span><span class="p">],</span>
+                                    <span class="o">**</span><span class="n">anim_kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">ani</span></div>
+
+<div class="viewcode-block" id="BaseFuncAnimator.plot_start_image"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.BaseFuncAnimator.html#sunpy.visualization.imageanimator.BaseFuncAnimator.plot_start_image">[docs]</a>    <span class="k">def</span> <span class="nf">plot_start_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method creates the initial image on the mpl axes</span>
+
+<span class="sd">        .. warning::</span>
+<span class="sd">            This method needs to be implemented in subclasses</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ax: mpl axes</span>
+<span class="sd">            This is the axes on which to plot the image</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        AxesImage:</span>
+<span class="sd">            An AxesImage object, the instance returned from a plt.imshow()</span>
+<span class="sd">            command.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Please define your setup function&quot;</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_connect_fig_events</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;button_press_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mouse_click</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;key_press_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_key_press</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_add_colorbar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">im</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cax</span><span class="p">)</span>
+
+<span class="c1"># =============================================================================</span>
+<span class="c1">#   Figure event callback functions</span>
+<span class="c1"># =============================================================================</span>
+    <span class="k">def</span> <span class="nf">_mouse_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">inaxes</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">:</span>
+            <span class="n">slider</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">inaxes</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_active_slider</span><span class="p">(</span><span class="n">slider</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_key_press</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_previous</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">active_slider</span><span class="p">]</span><span class="o">.</span><span class="n">_slider</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">active_slider</span><span class="p">]</span><span class="o">.</span><span class="n">_slider</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;up&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_active_slider</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">active_slider</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;down&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_active_slider</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">active_slider</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;p&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_click_slider_button</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_buttons</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">active_slider</span><span class="p">]</span><span class="o">.</span><span class="n">_button</span><span class="p">,</span>
+                                      <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">active_slider</span><span class="p">]</span><span class="o">.</span><span class="n">_slider</span><span class="p">)</span>
+
+<span class="c1"># =============================================================================</span>
+<span class="c1">#   Active Slider methods</span>
+<span class="c1"># =============================================================================</span>
+    <span class="k">def</span> <span class="nf">_set_active_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ind</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dehighlight_slider</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">active_slider</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_highliget_slider</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">active_slider</span> <span class="o">=</span> <span class="n">ind</span>
+
+    <span class="k">def</span> <span class="nf">_highliget_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ind</span><span class="p">):</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+        <span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_dehighlight_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ind</span><span class="p">):</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+        <span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="c1"># =============================================================================</span>
+<span class="c1">#   Build the figure and place the widgets</span>
+<span class="c1"># =============================================================================</span>
+    <span class="k">def</span> <span class="nf">_get_main_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Allow replacement of main axes by subclassing &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_make_axes_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">axes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_main_axes</span><span class="p">()</span>
+
+        <span class="c1"># Split up the current axes so there is space for start &amp; stop buttons</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">divider</span> <span class="o">=</span> <span class="n">make_axes_locatable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span>
+        <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># Padding between axes</span>
+        <span class="n">pad_size</span> <span class="o">=</span> <span class="n">Size</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="n">pad</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesX</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">))</span>
+        <span class="n">large_pad_size</span> <span class="o">=</span> <span class="n">Size</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesY</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">))</span>
+
+        <span class="c1"># Define size of useful axes cells, 50% each in x 20% for buttons in y.</span>
+        <span class="n">small_x</span> <span class="o">=</span> <span class="n">Size</span><span class="o">.</span><span class="n">Fraction</span><span class="p">((</span><span class="mf">1.</span><span class="o">-</span><span class="mf">2.</span><span class="o">*</span><span class="n">pad</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesX</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">))</span>
+        <span class="n">ysize</span> <span class="o">=</span> <span class="n">Size</span><span class="o">.</span><span class="n">Fraction</span><span class="p">((</span><span class="mf">1.</span><span class="o">-</span><span class="mf">2.</span><span class="o">*</span><span class="n">pad</span><span class="p">)</span><span class="o">/</span><span class="mf">15.</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesY</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">))</span>
+
+        <span class="c1"># Set up grid, 3x3 with cells for padding.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_buttons</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">xsize</span> <span class="o">=</span> <span class="n">Size</span><span class="o">.</span><span class="n">Fraction</span><span class="p">((</span><span class="mf">1.</span><span class="o">-</span><span class="mf">2.</span><span class="o">*</span><span class="n">pad</span><span class="p">)</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">num_buttons</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesX</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">))</span>
+            <span class="n">horiz</span> <span class="o">=</span> <span class="p">[</span><span class="n">xsize</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">pad_size</span><span class="p">,</span> <span class="n">xsize</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_buttons</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> \
+                    <span class="p">[</span><span class="n">Size</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesY</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)),</span> <span class="n">small_x</span><span class="p">]</span>
+            <span class="n">vert</span> <span class="o">=</span> <span class="p">[</span><span class="n">ysize</span><span class="p">,</span> <span class="n">pad_size</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span> <span class="o">+</span> \
+                   <span class="p">[</span><span class="n">large_pad_size</span><span class="p">,</span> <span class="n">large_pad_size</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesY</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">vert</span> <span class="o">=</span> <span class="p">[</span><span class="n">ysize</span><span class="p">,</span> <span class="n">pad_size</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span> <span class="o">+</span> \
+                   <span class="p">[</span><span class="n">large_pad_size</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesY</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)]</span>
+            <span class="n">horiz</span> <span class="o">=</span> <span class="p">[</span><span class="n">Size</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesX</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">))]</span> <span class="o">+</span> \
+                    <span class="p">[</span><span class="n">Size</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">Size</span><span class="o">.</span><span class="n">AxesX</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">))]</span><span class="o">*</span><span class="mi">2</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">divider</span><span class="o">.</span><span class="n">set_horizontal</span><span class="p">(</span><span class="n">horiz</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">divider</span><span class="o">.</span><span class="n">set_vertical</span><span class="p">(</span><span class="n">vert</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_ny</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vert</span><span class="p">)</span> <span class="o">-</span> <span class="mi">3</span>
+
+        <span class="c1"># If we are going to add a colorbar it&#39;ll need an axis next to the plot</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">if_colorbar</span><span class="p">:</span>
+            <span class="n">nx1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">((</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.141</span><span class="p">,</span> <span class="mf">1.</span><span class="p">))</span>
+            <span class="n">locator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">divider</span><span class="o">.</span><span class="n">new_locator</span><span class="p">(</span><span class="n">nx</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">ny</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">vert</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">nx1</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cax</span><span class="o">.</span><span class="n">set_axes_locator</span><span class="p">(</span><span class="n">locator</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Main figure spans all horiz and is in the top (2) in vert.</span>
+            <span class="n">nx1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">set_axes_locator</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">divider</span><span class="o">.</span><span class="n">new_locator</span><span class="p">(</span><span class="n">nx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ny</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">vert</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">nx1</span><span class="o">=</span><span class="n">nx1</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_add_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttons</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_buttons</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="mi">2</span>
+            <span class="c1"># The i+1/10. is a bug that if you make two axes directly on top of</span>
+            <span class="c1"># one another then the divider doesn&#39;t work.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buttons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">((</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="o">+</span><span class="n">i</span><span class="o">/</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)))</span>
+            <span class="n">locator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">divider</span><span class="o">.</span><span class="n">new_locator</span><span class="p">(</span><span class="n">nx</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">ny</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">button_ny</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buttons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_axes_locator</span><span class="p">(</span><span class="n">locator</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buttons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                                                      <span class="bp">self</span><span class="o">.</span><span class="n">button_labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buttons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_button</span><span class="o">.</span><span class="n">on_clicked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button_func</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider_buttons</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">((</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.01</span><span class="o">+</span><span class="n">i</span><span class="o">/</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)))</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_buttons</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">nx1</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">nx1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+            <span class="n">locator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">divider</span><span class="o">.</span><span class="n">new_locator</span><span class="p">(</span><span class="n">nx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ny</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">nx1</span><span class="o">=</span><span class="n">nx1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_axes_locator</span><span class="p">(</span><span class="n">locator</span><span class="p">)</span>
+            <span class="n">sframe</span> <span class="o">=</span> <span class="n">SliderPB</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;</span><span class="si">{slide:d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">slide</span><span class="o">=</span><span class="n">i</span><span class="p">),</span>
+                              <span class="bp">self</span><span class="o">.</span><span class="n">slider_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                              <span class="bp">self</span><span class="o">.</span><span class="n">slider_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+                              <span class="n">valinit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">slider_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                              <span class="n">valfmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%4.1f</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">sframe</span><span class="o">.</span><span class="n">on_changed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_slider_changed</span><span class="p">,</span> <span class="n">sframe</span><span class="p">)</span>
+            <span class="n">sframe</span><span class="o">.</span><span class="n">slider_ind</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="n">sframe</span><span class="o">.</span><span class="n">cval</span> <span class="o">=</span> <span class="n">sframe</span><span class="o">.</span><span class="n">val</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_slider</span> <span class="o">=</span> <span class="n">sframe</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">slider_buttons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">((</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.05</span><span class="o">+</span><span class="n">x</span><span class="o">/</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)))</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_buttons</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">nx</span> <span class="o">=</span> <span class="mi">2</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">nx</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_buttons</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">locator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">divider</span><span class="o">.</span><span class="n">new_locator</span><span class="p">(</span><span class="n">nx</span><span class="o">=</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">slider_buttons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_axes_locator</span><span class="p">(</span><span class="n">locator</span><span class="p">)</span>
+            <span class="n">butt</span> <span class="o">=</span> <span class="n">ButtonPB</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">slider_buttons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">)</span>
+            <span class="n">butt</span><span class="o">.</span><span class="n">on_clicked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_click_slider_button</span><span class="p">,</span> <span class="n">butt</span><span class="p">,</span> <span class="n">sframe</span><span class="p">)</span>
+            <span class="n">butt</span><span class="o">.</span><span class="n">clicked</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">slider_buttons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">_button</span> <span class="o">=</span> <span class="n">butt</span>
+
+<span class="c1"># =============================================================================</span>
+<span class="c1">#   Widget callbacks</span>
+<span class="c1"># =============================================================================</span>
+    <span class="k">def</span> <span class="nf">_click_slider_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">slider</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_active_slider</span><span class="p">(</span><span class="n">slider</span><span class="o">.</span><span class="n">slider_ind</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">button</span><span class="o">.</span><span class="n">clicked</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_stop_play</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+            <span class="n">button</span><span class="o">.</span><span class="n">clicked</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">button</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;&gt;&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">button</span><span class="o">.</span><span class="n">clicked</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_start_play</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">slider</span><span class="p">)</span>
+            <span class="n">button</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;||&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_start_play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">slider</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">new_timer</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interval</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">add_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="p">,</span> <span class="n">slider</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_stop_play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">remove_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slider</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">slider</span>
+        <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">val</span> <span class="o">&gt;=</span> <span class="n">s</span><span class="o">.</span><span class="n">valmax</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">valmin</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">val</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_previous</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slider</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">slider</span>
+        <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">val</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="o">.</span><span class="n">valmin</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">valmax</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">val</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_slider_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">slider</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider_functions</span><span class="p">[</span><span class="n">slider</span><span class="o">.</span><span class="n">slider_ind</span><span class="p">](</span><span class="n">val</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">im</span><span class="p">,</span> <span class="n">slider</span><span class="p">)</span></div>
+
+
+<span class="nd">@six</span><span class="o">.</span><span class="n">add_metaclass</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">ArrayAnimator</span><span class="p">(</span><span class="n">BaseFuncAnimator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a matplotlib backend independent data explorer</span>
+
+<span class="sd">    The following keyboard shortcuts are defined in the viewer:</span>
+
+<span class="sd">    - &#39;left&#39;: previous step on active slider</span>
+<span class="sd">    - &#39;right&#39;: next step on active slider</span>
+<span class="sd">    - &#39;top&#39;: change the active slider up one</span>
+<span class="sd">    - &#39;bottom&#39;: change the active slider down one</span>
+<span class="sd">    - &#39;p&#39;: play/pause active slider</span>
+
+<span class="sd">    This viewer can have user defined buttons added by specifying the labels</span>
+<span class="sd">    and functions called when those buttons are clicked as keyword arguments.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data: ndarray</span>
+<span class="sd">        The data to be visualized</span>
+
+<span class="sd">    image_axes: list</span>
+<span class="sd">        The axes that make the image</span>
+
+<span class="sd">    fig: mpl.figure</span>
+<span class="sd">        Figure to use</span>
+
+<span class="sd">    axis_ranges: list of physical coordinates for array or None</span>
+<span class="sd">        If None array indices will be used for all axes.</span>
+<span class="sd">        If a list it should contain one element for each axis of the numpy array.</span>
+<span class="sd">        For the image axes a [min, max] pair should be specified which will be</span>
+<span class="sd">        passed to :func:`matplotlib.pyplot.imshow` as extent.</span>
+<span class="sd">        For the slider axes a [min, max] pair can be specified or an array the</span>
+<span class="sd">        same length as the axis which will provide all values for that slider.</span>
+<span class="sd">        If None is specified for an axis then the array indices will be used</span>
+<span class="sd">        for that axis.</span>
+
+<span class="sd">    interval: int</span>
+<span class="sd">        Animation interval in ms</span>
+
+<span class="sd">    colorbar: bool</span>
+<span class="sd">        Plot colorbar</span>
+
+<span class="sd">    button_labels: list</span>
+<span class="sd">        List of strings to label buttons</span>
+
+<span class="sd">    button_func: list</span>
+<span class="sd">        List of functions to map to the buttons</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">image_axes</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis_ranges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="n">all_axes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naxis</span><span class="p">))</span>
+        <span class="c1"># Handle negative indexes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_axes</span> <span class="o">=</span> <span class="p">[</span><span class="n">all_axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">image_axes</span><span class="p">]</span>
+
+        <span class="n">slider_axes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naxis</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_axes</span><span class="p">:</span>
+            <span class="n">slider_axes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">slider_axes</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Specific the same number of axes as sliders!&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span> <span class="o">=</span> <span class="n">slider_axes</span>
+
+        <span class="c1"># Verify that combined slider_axes and image_axes make all axes</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_axes</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">ax</span> <span class="o">!=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naxis</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;spatial_axes and slider_axes mismatch&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">axis_ranges</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sanitize_axis_ranges</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+        <span class="c1"># create data slice</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span> <span class="o">=</span> <span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">)]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">naxis</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">base_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;slider_functions&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">update_plot</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span><span class="p">,</span>
+                       <span class="s1">&#39;slider_ranges&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span><span class="p">]}</span>
+        <span class="n">base_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">BaseFuncAnimator</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">base_kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">label_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Change the Slider label</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        i: int</span>
+<span class="sd">            The index of the slider to change (0 is bottom)</span>
+<span class="sd">        label: str</span>
+<span class="sd">            The label to set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sliders</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">_slider</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_sanitize_axis_ranges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis_ranges</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method takes the various allowed values of axis_ranges and returns</span>
+<span class="sd">        them in a standardized way for the rest of the class to use.</span>
+
+<span class="sd">        The outputted axis range describes the physical coordinates of the</span>
+<span class="sd">        array axes.</span>
+
+<span class="sd">        The allowed values of axis range is either None or a list.</span>
+<span class="sd">        If axis_ranges is None then all axis are assumed to be not scaled and</span>
+<span class="sd">        use array indices.</span>
+
+<span class="sd">        Where axis_ranges is a list it must have the same length as the number</span>
+<span class="sd">        of axis as the array and each element must be one of the following:</span>
+
+<span class="sd">            * None: Build a min,max pair or linspace array of array indices</span>
+<span class="sd">            * [min, max]: leave for image axes or convert to a array for slider axes</span>
+<span class="sd">            (from min to max in axis length steps)</span>
+<span class="sd">            * [min, max] pair where min == max: convert to array indies min, max pair or array.</span>
+<span class="sd">            * array of axis length, check that it was passed for a slider axes and do nothing</span>
+<span class="sd">            if it was, error if it is not.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># If no axis range at all make it all [min,max] pairs</span>
+        <span class="k">if</span> <span class="n">axis_ranges</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">axis_ranges</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">]</span>
+
+        <span class="c1"># need the same number of axis ranges as axes</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">)</span> <span class="o">!=</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Length of axis_ranges must equal number of axes&quot;</span><span class="p">)</span>
+
+        <span class="c1"># For each axis validate and translate the axis_ranges</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">):</span>
+            <span class="c1"># If [min,max] pair or None</span>
+            <span class="k">if</span> <span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="c1"># If min==max or None</span>
+                <span class="k">if</span> <span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span><span class="p">:</span>
+                        <span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="p">]</span>
+                        <span class="c1"># min max pair for slider axes should be converted</span>
+                        <span class="c1"># to an array</span>
+                <span class="k">elif</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span><span class="p">:</span>
+                    <span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">d</span><span class="p">)</span>
+
+            <span class="c1"># If we have a whole list of values for the axis, make sure we are a slider axis.</span>
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">d</span><span class="p">:</span>
+                <span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+            <span class="c1"># If above criteria are not met, raise an error.</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;axis_ranges must be None or a list with length equal to number &quot;</span>
+                                 <span class="s2">&quot;of axes in data whose elements are either None, [min,max], &quot;</span>
+                                 <span class="s2">&quot;or a list/array of same length as the plot/image axis of data.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">axis_ranges</span>
+
+    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">plot_start_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Abstract method for plotting first slice of array.</span>
+
+<span class="sd">        Must exists here but be defined in subclass.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Abstract method for updating plot.</span>
+
+<span class="sd">        Must exists here but be defined in subclass.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="ImageAnimator"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.ImageAnimator.html#sunpy.visualization.imageanimator.ImageAnimator">[docs]</a><span class="k">class</span> <span class="nc">ImageAnimator</span><span class="p">(</span><span class="n">ArrayAnimator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a matplotlib backend independent data explorer for 2D images.</span>
+
+<span class="sd">    The following keyboard shortcuts are defined in the viewer:</span>
+
+<span class="sd">    - &#39;left&#39;: previous step on active slider</span>
+<span class="sd">    - &#39;right&#39;: next step on active slider</span>
+<span class="sd">    - &#39;top&#39;: change the active slider up one</span>
+<span class="sd">    - &#39;bottom&#39;: change the active slider down one</span>
+<span class="sd">    - &#39;p&#39;: play/pause active slider</span>
+
+<span class="sd">    This viewer can have user defined buttons added by specifying the labels</span>
+<span class="sd">    and functions called when those buttons are clicked as keyword arguments.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data: ndarray</span>
+<span class="sd">        The data to be visualized &gt;= 2D</span>
+
+<span class="sd">    image_axes: list</span>
+<span class="sd">        The two axes that make the image</span>
+
+<span class="sd">    fig: mpl.figure</span>
+<span class="sd">        Figure to use</span>
+
+<span class="sd">    axis_ranges: list of physical coordinates for array or None</span>
+<span class="sd">        If None array indices will be used for all axes.</span>
+<span class="sd">        If a list it should contain one element for each axis of the numpy array.</span>
+<span class="sd">        For the image axes a [min, max] pair should be specified which will be</span>
+<span class="sd">        passed to :func:`matplotlib.pyplot.imshow` as extent.</span>
+<span class="sd">        For the slider axes a [min, max] pair can be specified or an array the</span>
+<span class="sd">        same length as the axis which will provide all values for that slider.</span>
+<span class="sd">        If None is specified for an axis then the array indices will be used</span>
+<span class="sd">        for that axis.</span>
+
+<span class="sd">    interval: int</span>
+<span class="sd">        Animation interval in ms</span>
+
+<span class="sd">    colorbar: bool</span>
+<span class="sd">        Plot colorbar</span>
+
+<span class="sd">    button_labels: list</span>
+<span class="sd">        List of strings to label buttons</span>
+
+<span class="sd">    button_func: list</span>
+<span class="sd">        List of functions to map to the buttons</span>
+
+<span class="sd">    Extra keywords are passed to imshow.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">image_axes</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis_ranges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># Check that number of axes is 2.</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">image_axes</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;There can only be two spatial axes&quot;</span><span class="p">)</span>
+        <span class="c1"># Define number of slider axes.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">naxis</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">naxis</span><span class="o">-</span><span class="mi">2</span>
+        <span class="c1"># Run init for parent class</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageAnimator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">image_axes</span><span class="o">=</span><span class="n">image_axes</span><span class="p">,</span>
+                                            <span class="n">axis_ranges</span><span class="o">=</span><span class="n">axis_ranges</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ImageAnimator.plot_start_image"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.ImageAnimator.html#sunpy.visualization.imageanimator.ImageAnimator.plot_start_image">[docs]</a>    <span class="k">def</span> <span class="nf">plot_start_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets up plot of initial image.&quot;&quot;&quot;</span>
+        <span class="c1"># Create extent arg</span>
+        <span class="n">extent</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># reverse because numpy is in y-x and extent is x-y</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_axes</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">extent</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="n">imshow_args</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;interpolation&#39;</span><span class="p">:</span> <span class="s1">&#39;nearest&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;origin&#39;</span><span class="p">:</span> <span class="s1">&#39;lower&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;extent&#39;</span><span class="p">:</span> <span class="n">extent</span><span class="p">,</span>
+                       <span class="p">}</span>
+
+        <span class="n">imshow_args</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imshow_kwargs</span><span class="p">)</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">],</span> <span class="o">**</span><span class="n">imshow_args</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">if_colorbar</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_add_colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">im</span></div>
+
+<div class="viewcode-block" id="ImageAnimator.update_plot"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.ImageAnimator.html#sunpy.visualization.imageanimator.ImageAnimator.update_plot">[docs]</a>    <span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">slider</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Updates plot based on slider/array dimension being iterated.&quot;&quot;&quot;</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">ax_ind</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span><span class="p">[</span><span class="n">slider</span><span class="o">.</span><span class="n">slider_ind</span><span class="p">]</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">ax_ind</span><span class="p">]</span> <span class="o">-</span> <span class="n">val</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">[</span><span class="n">ax_ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="n">slider</span><span class="o">.</span><span class="n">cval</span><span class="p">:</span>
+            <span class="n">im</span><span class="o">.</span><span class="n">set_array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">])</span>
+            <span class="n">slider</span><span class="o">.</span><span class="n">cval</span> <span class="o">=</span> <span class="n">val</span></div>
+
+    <span class="k">def</span> <span class="nf">_sanitize_axis_ranges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis_ranges</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method takes the various allowed values of axis_ranges and returns</span>
+<span class="sd">        them in a standardized way for the rest of the class to use.</span>
+
+<span class="sd">        The outputted axis_ranges describe the physical coordinates of the</span>
+<span class="sd">        array axes.</span>
+
+<span class="sd">        The allowed values of axis_range is either None or a list.</span>
+<span class="sd">        If axis_ranges is None then all axes are assumed to be not scaled and</span>
+<span class="sd">        use array indices.</span>
+
+<span class="sd">        Where axis_ranges is a list it must have the same length as the number</span>
+<span class="sd">        of axis as the array and each element must be one of the following:</span>
+
+<span class="sd">            * None: Build a min,max pair or linspace array of array indices</span>
+<span class="sd">            * [min, max]: leave for image axes or convert to a array for slider axes</span>
+<span class="sd">            (from min to max in axis length steps)</span>
+<span class="sd">            * [min, max] pair where min == max: convert to array indies min,max pair or array.</span>
+<span class="sd">            * array of axis length, check that it was passed for a slider axes and do nothing</span>
+<span class="sd">            if it was, error if it is not.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Run super class&#39;s version of this function.</span>
+        <span class="n">axis_ranges</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">ImageAnimator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_sanitize_axis_ranges</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="c1"># Check that axis ranges which are array type are only for slider axes.</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">d</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Slider axes mis-match, non-slider axes need [min,max] pairs&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">axis_ranges</span></div>
+
+
+
+<div class="viewcode-block" id="LineAnimator"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.LineAnimator.html#sunpy.visualization.imageanimator.LineAnimator">[docs]</a><span class="k">class</span> <span class="nc">LineAnimator</span><span class="p">(</span><span class="n">ArrayAnimator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a matplotlib backend independent data explorer for 1D plots.</span>
+
+<span class="sd">    The following keyboard shortcuts are defined in the viewer:</span>
+
+<span class="sd">    - &#39;left&#39;: previous step on active slider</span>
+<span class="sd">    - &#39;right&#39;: next step on active slider</span>
+<span class="sd">    - &#39;top&#39;: change the active slider up one</span>
+<span class="sd">    - &#39;bottom&#39;: change the active slider down one</span>
+<span class="sd">    - &#39;p&#39;: play/pause active slider</span>
+
+<span class="sd">    This viewer can have user defined buttons added by specifying the labels</span>
+<span class="sd">    and functions called when those buttons are clicked as keyword arguments.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data: ndarray</span>
+<span class="sd">        The y-axis data to be visualized</span>
+
+<span class="sd">    plot_axis_index: `int`</span>
+<span class="sd">        The axis used to plot against xdata.</span>
+<span class="sd">        Default = -1, i.e. last dimension of arrary.</span>
+
+<span class="sd">    fig: `matplotlib.figure`</span>
+<span class="sd">        Figure to use</span>
+
+<span class="sd">    axis_ranges: `list` of physical coordinates for array or None</span>
+<span class="sd">        If None array indices will be used for all axes.</span>
+<span class="sd">        X-axis values must be supplied (if desired) as an array in the</span>
+<span class="sd">        element of axis_ranges corresponding to the plot_axis_index in the</span>
+<span class="sd">        data input arg, i.e. xdata = axis_ranges[plot_axis_index].</span>
+<span class="sd">        Also, the number of x-axis values must correspond to the number</span>
+<span class="sd">        of y-axis values, i.e. len(axis_ranges[plot_axis_index]) must equal</span>
+<span class="sd">        len(data[plot_axis_index]).</span>
+<span class="sd">        For the slider axes a [min, max] pair can be specified or an array the</span>
+<span class="sd">        same length as the axis which will provide all values for that slider.</span>
+<span class="sd">        If None is specified for an axis then the array indices will be used</span>
+<span class="sd">        for that axis.</span>
+
+<span class="sd">    xlabel: `str`</span>
+<span class="sd">        Label of x-axis of plot.</span>
+
+<span class="sd">    ylabel: `str`</span>
+<span class="sd">        Label of y-axis of plot.</span>
+
+<span class="sd">    xlim: `tuple`</span>
+<span class="sd">        Limits of x-axis of plot.</span>
+
+<span class="sd">    ylim: `tuple`</span>
+<span class="sd">        Limits of y-axis of plot.</span>
+
+<span class="sd">    interval: `int`</span>
+<span class="sd">        Animation interval in ms</span>
+
+<span class="sd">    button_labels: `list`</span>
+<span class="sd">        List of strings to label buttons</span>
+
+<span class="sd">    button_func: `list`</span>
+<span class="sd">        List of functions to map to the buttons</span>
+
+<span class="sd">    Extra keywords are passed to plot.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">plot_axis_index</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis_ranges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">xlim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># Check inputs.</span>
+        <span class="n">plot_axis_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">plot_axis_index</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">plot_axis_index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;plot_axis_index must be either 0 or 1 (or equivalent &quot;</span>
+                             <span class="s2">&quot;negative indices) referring to the axis of data to be &quot;</span>
+                             <span class="s2">&quot;used for a single plot.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;data must have at least two dimensions.  One for data &quot;</span>
+                             <span class="s2">&quot;for each single plot and at least one for time/iteration.&quot;</span><span class="p">)</span>
+        <span class="c1"># Ensure axis_ranges are input correctly.</span>
+        <span class="k">if</span> <span class="n">axis_ranges</span><span class="p">[</span><span class="n">plot_axis_index</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">plot_axis_index</span><span class="p">])</span> <span class="o">!=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">plot_axis_index</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The plot_axis_index axis range must be specified as None &quot;</span>
+                                 <span class="s2">&quot;or an array. Not [min, max]&quot;</span><span class="p">)</span>
+        <span class="c1"># Define number of slider axes.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">naxis</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_sliders</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">naxis</span><span class="o">-</span><span class="mi">1</span>
+        <span class="c1"># Attach data to class.</span>
+        <span class="k">if</span> <span class="n">axis_ranges</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="n">axis_range</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">axis_range</span> <span class="ow">in</span> <span class="n">axis_ranges</span><span class="p">):</span>
+            <span class="n">axis_ranges</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">axis_ranges</span><span class="p">[</span><span class="n">plot_axis_index</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xdata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">plot_axis_index</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xdata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">plot_axis_index</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">ylim</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ylim</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">xlim</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">xlim</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xdata</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">xdata</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ylim</span> <span class="o">=</span> <span class="n">ylim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xlim</span> <span class="o">=</span> <span class="n">xlim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xlabel</span> <span class="o">=</span> <span class="n">xlabel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ylabel</span> <span class="o">=</span> <span class="n">ylabel</span>
+        <span class="c1"># Run init for base class</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">LineAnimator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">image_axes</span><span class="o">=</span><span class="p">[</span><span class="n">plot_axis_index</span><span class="p">],</span>
+                                           <span class="n">axis_ranges</span><span class="o">=</span><span class="n">axis_ranges</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="LineAnimator.plot_start_image"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.LineAnimator.html#sunpy.visualization.imageanimator.LineAnimator.plot_start_image">[docs]</a>    <span class="k">def</span> <span class="nf">plot_start_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets up plot of initial image.&quot;&quot;&quot;</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xlim</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ylim</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">xlabel</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xlabel</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ylabel</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ylabel</span><span class="p">)</span>
+        <span class="n">plot_args</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">plot_args</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imshow_kwargs</span><span class="p">)</span>
+        <span class="n">line</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xdata</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">],</span> <span class="o">**</span><span class="n">plot_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">line</span></div>
+
+<div class="viewcode-block" id="LineAnimator.update_plot"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.LineAnimator.html#sunpy.visualization.imageanimator.LineAnimator.update_plot">[docs]</a>    <span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">slider</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Updates plot based on slider/array dimension being iterated.&quot;&quot;&quot;</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">ax_ind</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span><span class="p">[</span><span class="n">slider</span><span class="o">.</span><span class="n">slider_ind</span><span class="p">]</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">ax_ind</span><span class="p">]</span> <span class="o">-</span> <span class="n">val</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">[</span><span class="n">ax_ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="n">slider</span><span class="o">.</span><span class="n">cval</span><span class="p">:</span>
+            <span class="n">line</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">])</span>
+            <span class="n">slider</span><span class="o">.</span><span class="n">cval</span> <span class="o">=</span> <span class="n">val</span></div></div>
+
+<div class="viewcode-block" id="ImageAnimatorWCS"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.ImageAnimatorWCS.html#sunpy.visualization.imageanimator.ImageAnimatorWCS">[docs]</a><span class="k">class</span> <span class="nc">ImageAnimatorWCS</span><span class="p">(</span><span class="n">ImageAnimator</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Animates N-dimensional data with the associated astropy WCS object.</span>
+
+<span class="sd">    The following keyboard shortcuts are defined in the viewer:</span>
+
+<span class="sd">    - &#39;left&#39;: previous step on active slider</span>
+<span class="sd">    - &#39;right&#39;: next step on active slider</span>
+<span class="sd">    - &#39;top&#39;: change the active slider up one</span>
+<span class="sd">    - &#39;bottom&#39;: change the active slider down one</span>
+<span class="sd">    - &#39;p&#39;: play/pause active slider</span>
+
+<span class="sd">    This viewer can have user defined buttons added by specifying the labels</span>
+<span class="sd">    and functions called when those buttons are clicked as keyword arguments.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data: `numpy.ndarray`</span>
+<span class="sd">        The data to be visualized &gt;= 2D</span>
+<span class="sd">    </span>
+<span class="sd">    wcs: `astropy.wcs.WCS`</span>
+<span class="sd">        The wcs data.</span>
+
+<span class="sd">    image_axes: `list`</span>
+<span class="sd">        The two axes that make the image</span>
+
+<span class="sd">    fig: `matplotlib.figure.Figure`</span>
+<span class="sd">        Figure to use</span>
+
+<span class="sd">    axis_ranges: list of physical coordinates for array or None</span>
+<span class="sd">        If None array indices will be used for all axes.</span>
+<span class="sd">        If a list it should contain one element for each axis of the numpy array.</span>
+<span class="sd">        For the image axes a [min, max] pair should be specified which will be</span>
+<span class="sd">        passed to :func:`matplotlib.pyplot.imshow` as extent.</span>
+<span class="sd">        For the slider axes a [min, max] pair can be specified or an array the</span>
+<span class="sd">        same length as the axis which will provide all values for that slider.</span>
+<span class="sd">        If None is specified for an axis then the array indices will be used</span>
+<span class="sd">        for that axis.</span>
+
+<span class="sd">    interval: `int`</span>
+<span class="sd">        Animation interval in ms</span>
+
+<span class="sd">    colorbar: `bool`</span>
+<span class="sd">        Plot colorbar</span>
+
+<span class="sd">    button_labels: `list`</span>
+<span class="sd">        List of strings to label buttons</span>
+
+<span class="sd">    button_func: `list`</span>
+<span class="sd">        List of functions to map to the buttons</span>
+
+<span class="sd">    unit_x_axis: `astropy.units.Unit`</span>
+<span class="sd">        The unit of x axis.</span>
+
+<span class="sd">    unit_y_axis: `astropy.units.Unit`</span>
+<span class="sd">        The unit of y axis.</span>
+
+<span class="sd">    Extra keywords are passed to imshow.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">wcs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">image_axes</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">unit_x_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unit_y_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">axis_ranges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">wcs</span><span class="p">,</span> <span class="n">astropy</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">WCS</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;wcs data should be provided.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">wcs</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">naxis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Dimensions of data and wcs not matching&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wcs</span> <span class="o">=</span> <span class="n">wcs</span>
+        <span class="n">list_slices_wcsaxes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">naxis</span><span class="p">)]</span>
+        <span class="n">list_slices_wcsaxes</span><span class="p">[</span><span class="n">image_axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span>
+        <span class="n">list_slices_wcsaxes</span><span class="p">[</span><span class="n">image_axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slices_wcsaxes</span> <span class="o">=</span> <span class="n">list_slices_wcsaxes</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unit_x_axis</span> <span class="o">=</span> <span class="n">unit_x_axis</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unit_y_axis</span> <span class="o">=</span> <span class="n">unit_y_axis</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ImageAnimatorWCS</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">image_axes</span><span class="o">=</span><span class="n">image_axes</span><span class="p">,</span> <span class="n">axis_ranges</span><span class="o">=</span><span class="n">axis_ranges</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_main_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">],</span> <span class="n">projection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">wcs</span><span class="p">,</span> <span class="n">slices</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">slices_wcsaxes</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_unit_in_axis</span><span class="p">(</span><span class="n">axes</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">axes</span>
+
+    <span class="k">def</span> <span class="nf">_set_unit_in_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axes</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_x_axis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_format_unit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">unit_x_axis</span><span class="p">)</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">exclude_overlapping</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_y_axis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_format_unit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">unit_y_axis</span><span class="p">)</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">exclude_overlapping</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="ImageAnimatorWCS.plot_start_image"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.ImageAnimatorWCS.html#sunpy.visualization.imageanimator.ImageAnimatorWCS.plot_start_image">[docs]</a>    <span class="k">def</span> <span class="nf">plot_start_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets up plot of initial image.&quot;&quot;&quot;</span>
+        <span class="n">imshow_args</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;interpolation&#39;</span><span class="p">:</span> <span class="s1">&#39;nearest&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;origin&#39;</span><span class="p">:</span> <span class="s1">&#39;lower&#39;</span><span class="p">,</span>
+                       <span class="p">}</span>
+        <span class="n">imshow_args</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imshow_kwargs</span><span class="p">)</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">],</span> <span class="o">**</span><span class="n">imshow_args</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">if_colorbar</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_add_colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">im</span></div>
+
+<div class="viewcode-block" id="ImageAnimatorWCS.update_plot"><a class="viewcode-back" href="../../../api/sunpy.visualization.imageanimator.ImageAnimatorWCS.html#sunpy.visualization.imageanimator.ImageAnimatorWCS.update_plot">[docs]</a>    <span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">slider</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Updates plot based on slider/array dimension being iterated.&quot;&quot;&quot;</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">ax_ind</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_axes</span><span class="p">[</span><span class="n">slider</span><span class="o">.</span><span class="n">slider_ind</span><span class="p">]</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis_ranges</span><span class="p">[</span><span class="n">ax_ind</span><span class="p">]</span> <span class="o">-</span> <span class="n">val</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">[</span><span class="n">ax_ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind</span>
+        <span class="n">list_slices_wcsaxes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">slices_wcsaxes</span><span class="p">)</span>
+        <span class="n">list_slices_wcsaxes</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">naxis</span><span class="o">-</span><span class="n">ax_ind</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slices_wcsaxes</span> <span class="o">=</span> <span class="n">list_slices_wcsaxes</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="n">slider</span><span class="o">.</span><span class="n">cval</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">reset_wcs</span><span class="p">(</span><span class="n">wcs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">wcs</span><span class="p">,</span> <span class="n">slices</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">slices_wcsaxes</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_unit_in_axis</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span>
+            <span class="n">im</span><span class="o">.</span><span class="n">set_array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_slice</span><span class="p">])</span>
+            <span class="n">slider</span><span class="o">.</span><span class="n">cval</span> <span class="o">=</span> <span class="n">val</span></div></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

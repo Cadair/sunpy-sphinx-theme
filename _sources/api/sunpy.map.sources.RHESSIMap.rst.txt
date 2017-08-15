@@ -1,0 +1,27 @@
+RHESSIMap
+=========
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: RHESSIMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~RHESSIMap.detector
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~RHESSIMap.is_datasource_for
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: detector
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

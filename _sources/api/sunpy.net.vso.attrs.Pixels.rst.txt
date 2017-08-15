@@ -1,0 +1,7 @@
+Pixels
+======
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Pixels
+   :show-inheritance:

@@ -1,0 +1,6 @@
+find_time
+=========
+
+.. currentmodule:: sunpy.time
+
+.. autofunction:: find_time

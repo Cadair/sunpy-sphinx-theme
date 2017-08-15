@@ -1,0 +1,1292 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.database.database &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.database.database | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/database/database.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.database.database</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Author: Simon Liedtke &lt;liedtke.simon@googlemail.com&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># This module was developed with funding provided by</span>
+<span class="c1"># the Google Summer of Code (2013).</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="k">import</span> <span class="n">contextmanager</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">exists</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">sessionmaker</span><span class="p">,</span> <span class="n">scoped_session</span>
+
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">units</span>
+
+<span class="kn">import</span> <span class="nn">sunpy</span>
+<span class="kn">from</span> <span class="nn">sunpy.database</span> <span class="k">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">tables</span>
+<span class="kn">from</span> <span class="nn">sunpy.database.tables</span> <span class="k">import</span> <span class="n">_create_display_table</span>
+<span class="kn">from</span> <span class="nn">sunpy.database.caching</span> <span class="k">import</span> <span class="n">LRUCache</span>
+<span class="kn">from</span> <span class="nn">sunpy.database.commands</span> <span class="k">import</span> <span class="n">CompositeOperation</span>
+<span class="kn">from</span> <span class="nn">sunpy.database.attrs</span> <span class="k">import</span> <span class="n">walker</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.hek2vso</span> <span class="k">import</span> <span class="n">H2VClient</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.attr</span> <span class="k">import</span> <span class="n">and_</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.vso</span> <span class="k">import</span> <span class="n">VSOClient</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="nb">range</span>
+<span class="kn">from</span> <span class="nn">sunpy.util</span> <span class="k">import</span> <span class="n">deprecated</span>
+
+<span class="n">__authors__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Simon Liedtke&#39;</span><span class="p">,</span> <span class="s1">&#39;Rajul Srivastava&#39;</span><span class="p">]</span>
+<span class="n">__emails__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;liedtke.simon@googlemail.com&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;rajul09@gmail.com&#39;</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="EntryNotFoundError"><a class="viewcode-back" href="../../../api/sunpy.database.EntryNotFoundError.html#sunpy.database.EntryNotFoundError">[docs]</a><span class="k">class</span> <span class="nc">EntryNotFoundError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if a database entry cannot be found by its</span>
+<span class="sd">    unique ID.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry_id</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entry_id</span> <span class="o">=</span> <span class="n">entry_id</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="s1">&#39;an entry with the ID </span><span class="si">{0:d}</span><span class="s1"> does not exist&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entry_id</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="EntryAlreadyAddedError"><a class="viewcode-back" href="../../../api/sunpy.database.EntryAlreadyAddedError.html#sunpy.database.EntryAlreadyAddedError">[docs]</a><span class="k">class</span> <span class="nc">EntryAlreadyAddedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if a database entry is attempted to be added to</span>
+<span class="sd">    the database although it was already saved in it.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">database_entry</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="s1">&#39;the entry </span><span class="si">{0!r}</span><span class="s1"> was already added &#39;</span>
+            <span class="s1">&#39;to the database&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="EntryAlreadyStarredError"><a class="viewcode-back" href="../../../api/sunpy.database.EntryAlreadyStarredError.html#sunpy.database.EntryAlreadyStarredError">[docs]</a><span class="k">class</span> <span class="nc">EntryAlreadyStarredError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if a database entry is marked as starred</span>
+<span class="sd">    using :meth:`Database.star` although it was already starred before this</span>
+<span class="sd">    operation.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">database_entry</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="s1">&#39;the entry </span><span class="si">{0!r}</span><span class="s1"> is already marked &#39;</span>
+            <span class="s1">&#39;as starred&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="EntryAlreadyUnstarredError"><a class="viewcode-back" href="../../../api/sunpy.database.EntryAlreadyUnstarredError.html#sunpy.database.EntryAlreadyUnstarredError">[docs]</a><span class="k">class</span> <span class="nc">EntryAlreadyUnstarredError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if the star mark from a database entry is</span>
+<span class="sd">    attempted to be removed although the entry is not starred.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">database_entry</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="s1">&#39;the entry </span><span class="si">{0!r}</span><span class="s1"> is already not marked &#39;</span>
+            <span class="s1">&#39;as starred&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="NoSuchTagError"><a class="viewcode-back" href="../../../api/sunpy.database.NoSuchTagError.html#sunpy.database.NoSuchTagError">[docs]</a><span class="k">class</span> <span class="nc">NoSuchTagError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if a tag cannot be found in a database by its</span>
+<span class="sd">    name.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tag_name</span> <span class="o">=</span> <span class="n">tag_name</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="s1">&#39;the tag </span><span class="si">{0!r}</span><span class="s1"> is not saved in the database&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tag_name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TagAlreadyAssignedError"><a class="viewcode-back" href="../../../api/sunpy.database.TagAlreadyAssignedError.html#sunpy.database.TagAlreadyAssignedError">[docs]</a><span class="k">class</span> <span class="nc">TagAlreadyAssignedError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if it is attempted to assign a tag to a</span>
+<span class="sd">    database entry but the database entry already has this tag assigned.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">tag_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">database_entry</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tag_name</span> <span class="o">=</span> <span class="n">tag_name</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="n">errmsg</span> <span class="o">=</span> <span class="s1">&#39;the database entry </span><span class="si">{0!r}</span><span class="s1"> has already assigned the tag </span><span class="si">{1!r}</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="n">errmsg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag_name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="split_database"><a class="viewcode-back" href="../../../api/sunpy.database.split_database.html#sunpy.database.split_database">[docs]</a><span class="k">def</span> <span class="nf">split_database</span><span class="p">(</span><span class="n">source_database</span><span class="p">,</span> <span class="n">destination_database</span><span class="p">,</span> <span class="o">*</span><span class="n">query_string</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Queries the source database with the query string, and moves the</span>
+<span class="sd">    matched entries to the destination database. When this function is</span>
+<span class="sd">    called, the `~sunpy.database.Database.undo` feature is disabled for both databases.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    source_database : `~sunpy.database.database.Database`</span>
+<span class="sd">        A SunPy `~Database` object. This is the database on which the queries</span>
+<span class="sd">        will be made.</span>
+<span class="sd">    destination_database : `~sunpy.database.database.Database`</span>
+<span class="sd">        A SunPy `~Database` object. This is the database to which the matched</span>
+<span class="sd">        entries will be moved.</span>
+<span class="sd">    query_string : `list`</span>
+<span class="sd">        A variable number of attributes that are chained together via the</span>
+<span class="sd">        boolean AND operator. The | operator may be used between attributes</span>
+<span class="sd">        to express the boolean OR operator.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    The function call in the following example moves those entries from</span>
+<span class="sd">    database1 to database2 which have `~sunpy.net.vso.attrs.Instrument` = &#39;AIA&#39; or</span>
+<span class="sd">    &#39;ERNE&#39;.</span>
+
+<span class="sd">    &gt;&gt;&gt; from sunpy.database import Database, split_database</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.database.tables import display_entries</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net import vso</span>
+<span class="sd">    &gt;&gt;&gt; database1 = Database(&#39;sqlite:///:memory:&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; database2 = Database(&#39;sqlite:///:memory:&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; client = vso.VSOClient()</span>
+<span class="sd">    &gt;&gt;&gt; qr = client.search(vso.attrs.Time(&#39;2011-05-08&#39;, &#39;2011-05-08 00:00:05&#39;))</span>
+<span class="sd">    &gt;&gt;&gt; database1.add_from_vso_query_result(qr)</span>
+<span class="sd">    &gt;&gt;&gt; database1, database2 = split_database(database1, database2,</span>
+<span class="sd">    ...            vso.attrs.Instrument(&#39;AIA&#39;) | vso.attrs.Instrument(&#39;ERNE&#39;))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">query_string</span> <span class="o">=</span> <span class="n">and_</span><span class="p">(</span><span class="o">*</span><span class="n">query_string</span><span class="p">)</span>
+    <span class="n">filtered_entries</span> <span class="o">=</span> <span class="n">source_database</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">query_string</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">disable_undo</span><span class="p">(</span><span class="n">source_database</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">disable_undo</span><span class="p">(</span><span class="n">destination_database</span><span class="p">):</span>
+            <span class="n">source_database</span><span class="o">.</span><span class="n">remove_many</span><span class="p">(</span><span class="n">filtered_entries</span><span class="p">)</span>
+            <span class="n">source_database</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">source_database</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">source_database</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="n">destination_database</span><span class="o">.</span><span class="n">add_many</span><span class="p">(</span><span class="n">filtered_entries</span><span class="p">)</span>
+            <span class="n">destination_database</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">source_database</span><span class="p">,</span> <span class="n">destination_database</span></div>
+
+
+<span class="nd">@contextmanager</span>
+<div class="viewcode-block" id="disable_undo"><a class="viewcode-back" href="../../../api/sunpy.database.disable_undo.html#sunpy.database.disable_undo">[docs]</a><span class="k">def</span> <span class="nf">disable_undo</span><span class="p">(</span><span class="n">database</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A context manager to disable saving the used commands in the undo</span>
+<span class="sd">    history. This may be useful when it&#39;s important to save memory because a</span>
+<span class="sd">    big number of entries in the undo history may occupy a lot of memory space.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.database import disable_undo, Database</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.database.tables import DatabaseEntry</span>
+<span class="sd">    &gt;&gt;&gt; database = Database(&#39;sqlite:///:memory:&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; entry = DatabaseEntry()</span>
+<span class="sd">    &gt;&gt;&gt; with disable_undo(database) as db:</span>
+<span class="sd">    ...     db.add(entry)</span>
+
+<span class="sd">    # This will raise an EmptyCommandStackError</span>
+<span class="sd">    &gt;&gt;&gt; database.undo()   # doctest: +SKIP</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">database</span><span class="o">.</span><span class="n">_enable_history</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">yield</span> <span class="n">database</span>
+    <span class="n">database</span><span class="o">.</span><span class="n">_enable_history</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="Database"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database">[docs]</a><span class="k">class</span> <span class="nc">Database</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Database(url[, CacheClass[, cache_size[, default_waveunit]]])</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    url : str</span>
+<span class="sd">        A URL describing the database. This value is simply passed to</span>
+<span class="sd">        :func:`sqlalchemy.create_engine`</span>
+<span class="sd">        If not specified the value will be read from the sunpy config file.</span>
+<span class="sd">    CacheClass : sunpy.database.caching.BaseCache</span>
+<span class="sd">        A concrete cache implementation of the abstract class BaseCache.</span>
+<span class="sd">        Builtin supported values for this parameters are</span>
+<span class="sd">        :class:`sunpy.database.caching.LRUCache` and</span>
+<span class="sd">        :class:`sunpy.database.caching.LFUCache`.</span>
+<span class="sd">        The default value is :class:`sunpy.database.caching.LRUCache`.</span>
+<span class="sd">    cache_size : int</span>
+<span class="sd">        The maximum number of database entries, default is no limit.</span>
+<span class="sd">    default_waveunit : `str` or `~astropy.units.Unit`, optional</span>
+<span class="sd">        The wavelength unit that will be used if an entry is added to the</span>
+<span class="sd">        database but its wavelength unit cannot be found (either in the file or</span>
+<span class="sd">        the VSO query result block, depending on the way the entry was added).</span>
+<span class="sd">        If an `~astropy.units.Unit` is passed, it is assigned to ``default_waveunit``.</span>
+<span class="sd">        If a `str` is passed, it will be converted to `~astropy.units.Unit` through</span>
+<span class="sd">        the `astropy.units.Unit()` initializer, and then assigned to default_waveunit.</span>
+<span class="sd">        If an invalid string is passed, `~sunpy.database.WaveunitNotConvertibleError`</span>
+<span class="sd">        is raised. If `None` (the default), attempting to add an entry without knowing</span>
+<span class="sd">        the wavelength unit results in a</span>
+<span class="sd">        :exc:`sunpy.database.WaveunitNotFoundError`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    session : sqlalchemy.orm.session.Session</span>
+<span class="sd">        A SQLAlchemy session object. This may be used for advanced queries and</span>
+<span class="sd">        advanced manipulations and should only be used by people who are</span>
+<span class="sd">        experienced with SQLAlchemy.</span>
+
+<span class="sd">    cache_size: int</span>
+<span class="sd">        The maximum number of database entries. This attribute is read-only. To</span>
+<span class="sd">        change this value, use the method</span>
+<span class="sd">        :meth:`sunpy.database.Database.set_cache_size`.</span>
+
+<span class="sd">    tags : list of sunpy.database.Tag objects</span>
+<span class="sd">        A list of all saved tags in database. This attribute is read-only.</span>
+
+<span class="sd">    default_waveunit : str</span>
+<span class="sd">        See &quot;Parameters&quot; section.</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    set_cache_size(cache_size)</span>
+<span class="sd">        Set a new value for the maximum number of database entries in the</span>
+<span class="sd">        cache. Use the value ``float(&#39;inf&#39;)`` to disable caching.</span>
+<span class="sd">    commit()</span>
+<span class="sd">        Flush pending changes and commit the current transaction.</span>
+<span class="sd">    get_entry_by_id(id)</span>
+<span class="sd">        Get the database entry which has the given unique ID number assigned.</span>
+<span class="sd">    get_tag(tagname)</span>
+<span class="sd">        Get the tag which has the given unique tagname assigned. Returns None</span>
+<span class="sd">        if no tag with the given name is saved in the database.</span>
+<span class="sd">    tag(entry, *tags)</span>
+<span class="sd">        Assign the given database entry the given tags. If no tags are given,</span>
+<span class="sd">        TypeError is raised.</span>
+<span class="sd">    star(entry, ignore_already_starred=False)</span>
+<span class="sd">        Mark the given database entry as starred. If ``ignore_already_starred``</span>
+<span class="sd">        is False and the given entry is already marked as starred,</span>
+<span class="sd">        EntryAlreadyStarredError is raised.</span>
+<span class="sd">    unstar(entry, ignore_already_unstarred=False)</span>
+<span class="sd">        Remove the starred mark of the given entry. If</span>
+<span class="sd">        ``ignore_already_unstarred`` is False and the entry is not marked as</span>
+<span class="sd">        starred, EntryAlreadyUnstarredError is raised.</span>
+<span class="sd">    add(entry, ignore_already_added=False)</span>
+<span class="sd">        Add the given database entry to the database. If</span>
+<span class="sd">        ``ignore_already_added`` is False and the given entry is already saved</span>
+<span class="sd">        in the database, EntryAlreadyAddedError is raised.</span>
+<span class="sd">    edit(entry, **kwargs)</span>
+<span class="sd">        Change the given database entry so that it interprets the passed</span>
+<span class="sd">        key-value pairs as new values where the keys represent the attributes</span>
+<span class="sd">        of this entry. If no keywords arguments are given, :exc:`ValueError` is</span>
+<span class="sd">        raised.</span>
+<span class="sd">    remove(entry)</span>
+<span class="sd">        Remove the given entry from the database.</span>
+<span class="sd">    undo(n=1)</span>
+<span class="sd">        Redo the last n operations.</span>
+<span class="sd">    redo(n=1)</span>
+<span class="sd">        Redo the last n undone operations.</span>
+<span class="sd">    __contains__(entry)</span>
+<span class="sd">        Return True if the given database entry is saved in the database,</span>
+<span class="sd">        False otherwise.</span>
+<span class="sd">    __iter__()</span>
+<span class="sd">        Return an iterator over all database entries.</span>
+<span class="sd">    __len__()</span>
+<span class="sd">        Get the number of database entries.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">CacheClass</span><span class="o">=</span><span class="n">LRUCache</span><span class="p">,</span> <span class="n">cache_size</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span>
+                 <span class="n">default_waveunit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">url</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;database&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_session_cls</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">scoped_session</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_session_cls</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">CommandManager</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_waveunit</span> <span class="o">=</span> <span class="n">default_waveunit</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_waveunit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">default_waveunit</span> <span class="o">=</span> <span class="n">units</span><span class="o">.</span><span class="n">Unit</span><span class="p">(</span><span class="n">default_waveunit</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">tables</span><span class="o">.</span><span class="n">WaveunitNotConvertibleError</span><span class="p">(</span><span class="n">default_waveunit</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">class</span> <span class="nc">Cache</span><span class="p">(</span><span class="n">CacheClass</span><span class="p">):</span>
+
+            <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="n">entry_id</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+
+            <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">this</span><span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="n">this</span> <span class="ow">or</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+                <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                    <span class="n">this</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_create_tables</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span> <span class="o">=</span> <span class="n">Cache</span><span class="p">(</span><span class="n">cache_size</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">entry</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">entry</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The sqlalchemy url of the database instance&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cache_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cache_maxsize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">maxsize</span>
+
+<div class="viewcode-block" id="Database.set_cache_size"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.set_cache_size">[docs]</a>    <span class="k">def</span> <span class="nf">set_cache_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cache_size</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set a new value for the maximum number of database entries in the</span>
+<span class="sd">        cache. Use the value ``float(&#39;inf&#39;)`` to disable caching. If the new</span>
+<span class="sd">        cache is smaller than the previous one and cannot contain all the</span>
+<span class="sd">        entries anymore, entries are removed from the cache until the number of</span>
+<span class="sd">        entries equals the cache size. Which entries are removed depends on the</span>
+<span class="sd">        implementation of the cache (e.g.</span>
+<span class="sd">        :class:`sunpy.database.caching.LRUCache`,</span>
+<span class="sd">        :class:`sunpy.database.caching.LFUCache`).</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cmds</span> <span class="o">=</span> <span class="n">CompositeOperation</span><span class="p">()</span>
+        <span class="c1"># remove items from the cache if the given argument is lower than the</span>
+        <span class="c1"># current cache size</span>
+        <span class="k">while</span> <span class="n">cache_size</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache_size</span><span class="p">:</span>
+            <span class="c1"># remove items from the cache until cache_size == maxsize of the</span>
+            <span class="c1"># cache</span>
+            <span class="n">entry_id</span><span class="p">,</span> <span class="n">entry</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">to_be_removed</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">RemoveEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cmd</span><span class="p">()</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">entry_id</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">maxsize</span> <span class="o">=</span> <span class="n">cache_size</span>
+        <span class="k">if</span> <span class="n">cmds</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">cmds</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_create_tables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">checkfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialise the database by creating all necessary tables. If</span>
+<span class="sd">        ``checkfirst`` is True, already existing tables are not attempted to be</span>
+<span class="sd">        created.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="n">tables</span><span class="o">.</span><span class="n">Base</span><span class="o">.</span><span class="n">metadata</span>
+        <span class="n">metadata</span><span class="o">.</span><span class="n">create_all</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="p">,</span> <span class="n">checkfirst</span><span class="o">=</span><span class="n">checkfirst</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Database.commit"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.commit">[docs]</a>    <span class="k">def</span> <span class="nf">commit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Flush pending changes and commit the current transaction. This is a</span>
+<span class="sd">        shortcut for :meth:`session.commit()`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_download_and_collect_entries</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_result</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="n">client</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;client&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">progress</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;progress&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">methods</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;methods&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;URL-FILE_Rice&#39;</span><span class="p">,</span> <span class="s1">&#39;URL-FILE&#39;</span><span class="p">))</span>
+        <span class="n">overwrite</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;overwrite&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;unexpected keyword argument </span><span class="si">{0!r}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">client</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">client</span> <span class="o">=</span> <span class="n">VSOClient</span><span class="p">()</span>
+
+        <span class="n">remove_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">delete_entries</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">qr</span> <span class="ow">in</span> <span class="n">query_result</span><span class="p">:</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">tables</span><span class="o">.</span><span class="n">DatabaseEntry</span><span class="o">.</span><span class="n">_from_query_result_block</span><span class="p">(</span><span class="n">qr</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">database_entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">database_entry</span><span class="o">.</span><span class="n">path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">temp</span><span class="o">.</span><span class="n">_compare_attributes</span><span class="p">(</span>
+                    <span class="n">database_entry</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;provider&quot;</span><span class="p">,</span> <span class="s2">&quot;physobs&quot;</span><span class="p">,</span> <span class="s2">&quot;fileid&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;observation_time_start&quot;</span><span class="p">,</span> <span class="s2">&quot;observation_time_end&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;instrument&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">,</span> <span class="s2">&quot;wavemin&quot;</span><span class="p">,</span> <span class="s2">&quot;wavemax&quot;</span><span class="p">]):</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">overwrite</span><span class="p">:</span>
+                        <span class="n">remove_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">qr</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">delete_entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">remove_list</span><span class="p">:</span>
+            <span class="n">query_result</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">query_result</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">temp</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">delete_entries</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+
+        <span class="n">paths</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">query_result</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">block</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">query_result</span><span class="p">):</span>
+            <span class="n">qr_entry</span> <span class="o">=</span> <span class="n">tables</span><span class="o">.</span><span class="n">DatabaseEntry</span><span class="o">.</span><span class="n">_from_query_result_block</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+                <span class="n">entries</span> <span class="o">=</span> <span class="n">tables</span><span class="o">.</span><span class="n">entries_from_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_waveunit</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+                <span class="n">entries</span> <span class="o">=</span> <span class="n">tables</span><span class="o">.</span><span class="n">entries_from_dir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_waveunit</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The path is neither a file nor directory&#39;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">:</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">source</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">provider</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">provider</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">physobs</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">physobs</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">fileid</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">fileid</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">observation_time_start</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">observation_time_start</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">observation_time_end</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">observation_time_end</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">instrument</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">instrument</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">size</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">wavemin</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">wavemin</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">wavemax</span> <span class="o">=</span> <span class="n">qr_entry</span><span class="o">.</span><span class="n">wavemax</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">download_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+                <span class="k">yield</span> <span class="n">entry</span>
+
+    <span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;0.8&#39;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;database.fetch()&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="Database.download"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.download">[docs]</a>    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        See `~sunpy.database.Database.fetch`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.fetch"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.fetch">[docs]</a>    <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        fetch(*query[, path, overwrite, client, progress, methods])</span>
+
+<span class="sd">        Check if the query has already been used to collect new data.</span>
+
+<span class="sd">        If yes, query the database using the method</span>
+<span class="sd">        :meth:`sunpy.database.Database.query` and return the result.</span>
+
+<span class="sd">        Otherwise, the retrieved search result is used to download all files</span>
+<span class="sd">        that belong to this search result. After that, all the gathered</span>
+<span class="sd">        information (the one from the query result and the one from the</span>
+<span class="sd">        downloaded files) is added to the database in a way that each header</span>
+<span class="sd">        is represented by one database entry.</span>
+
+<span class="sd">        It uses the</span>
+<span class="sd">        :meth:`sunpy.database.Database._download_and_collect_entries` method</span>
+<span class="sd">        to download files, which uses query result block level caching. This</span>
+<span class="sd">        means that files will not be downloaded for any query result block</span>
+<span class="sd">        that had its files downloaded previously. If files for Query A were</span>
+<span class="sd">        already downloaded, and then Query B is made which has some result</span>
+<span class="sd">        blocks common with Query A, then files for these common blocks will</span>
+<span class="sd">        not be downloaded again. Files will only be downloaded for those</span>
+<span class="sd">        blocks which are new or haven&#39;t had their files downloaded yet.</span>
+
+<span class="sd">        If querying results in no data, no operation is performed. Concrete,</span>
+<span class="sd">        this means that no entry is added to the database and no file is</span>
+<span class="sd">        downloaded.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query : `list`</span>
+<span class="sd">            A variable number of attributes that are chained together via the</span>
+<span class="sd">            boolean AND operator. The | operator may be used between attributes</span>
+<span class="sd">            to express the boolean OR operator.</span>
+<span class="sd">        path : `str`, optional</span>
+<span class="sd">            The directory into which files will be downloaded.</span>
+<span class="sd">        overwrite : `bool`, optional</span>
+<span class="sd">            If True, matching database entries from the query results will be</span>
+<span class="sd">            deleted and replaced with new database entries, with all files</span>
+<span class="sd">            getting downloaded.</span>
+<span class="sd">            Otherwise, no new file download and update of matching database</span>
+<span class="sd">            entries takes place.</span>
+<span class="sd">        client : `sunpy.net.vso.VSOClient`, optional</span>
+<span class="sd">            VSO Client instance to use for search and download.</span>
+<span class="sd">            If not specified a new instance will be created.</span>
+<span class="sd">        progress : `bool`, optional</span>
+<span class="sd">            If True, displays the progress bar during file download.</span>
+<span class="sd">        methods : `str` or iterable of `str`, optional</span>
+<span class="sd">            Set VSOClient download method, see`~sunpy.net.vso.VSOClient.get`</span>
+<span class="sd">            for details.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        The `~sunpy.Database.fetch` method can be used along with the `overwrite=True`</span>
+<span class="sd">        argument to overwrite and redownload files corresponding to the query, even if</span>
+<span class="sd">        its entries are already present in the database. Note that the `overwrite=True`</span>
+<span class="sd">        argument deletes the old matching database entries and new database entries are</span>
+<span class="sd">        added with information from the redownloaded files.</span>
+
+<span class="sd">        &gt;&gt;&gt; from sunpy.database import Database</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.database.tables import display_entries</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.net import vso</span>
+<span class="sd">        &gt;&gt;&gt; database = Database(&#39;sqlite:///:memory:&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; database.fetch(vso.attrs.Time(&#39;2012-08-05&#39;, &#39;2012-08-05 00:00:05&#39;),</span>
+<span class="sd">        ...                vso.attrs.Instrument(&#39;AIA&#39;))</span>
+<span class="sd">        &gt;&gt;&gt; print(display_entries(database,</span>
+<span class="sd">        ...                       [&#39;id&#39;, &#39;observation_time_start&#39;, &#39;observation_time_end&#39;,</span>
+<span class="sd">        ...                        &#39;instrument&#39;, &#39;wavemin&#39;, &#39;wavemax&#39;]))</span>
+<span class="sd">            id observation_time_start observation_time_end instrument wavemin wavemax</span>
+<span class="sd">            --- ---------------------- -------------------- ---------- ------- -------</span>
+<span class="sd">              1    2012-08-05 00:00:01  2012-08-05 00:00:02        AIA     9.4     9.4</span>
+<span class="sd">              2    2012-08-05 00:00:01  2012-08-05 00:00:02        AIA     9.4     9.4</span>
+<span class="sd">              3    2012-08-05 00:00:02  2012-08-05 00:00:03        AIA    33.5    33.5</span>
+<span class="sd">              4    2012-08-05 00:00:02  2012-08-05 00:00:03        AIA    33.5    33.5</span>
+<span class="sd">        &gt;&gt;&gt; database.fetch(vso.attrs.Time(&#39;2012-08-05&#39;, &#39;2012-08-05 00:00:01&#39;),</span>
+<span class="sd">        ...                vso.attrs.Instrument(&#39;AIA&#39;), overwrite=True)</span>
+<span class="sd">        &gt;&gt;&gt; print(display_entries(database,</span>
+<span class="sd">        ...                       [&#39;id&#39;, &#39;observation_time_start&#39;, &#39;observation_time_end&#39;,</span>
+<span class="sd">        ...                        &#39;instrument&#39;, &#39;wavemin&#39;, &#39;wavemax&#39;]))</span>
+<span class="sd">             id observation_time_start observation_time_end instrument wavemin wavemax</span>
+<span class="sd">            --- ---------------------- -------------------- ---------- ------- -------</span>
+<span class="sd">              3    2012-08-05 00:00:02  2012-08-05 00:00:03        AIA    33.5    33.5</span>
+<span class="sd">              4    2012-08-05 00:00:02  2012-08-05 00:00:03        AIA    33.5    33.5</span>
+<span class="sd">              5    2012-08-05 00:00:01  2012-08-05 00:00:02        AIA     9.4     9.4</span>
+<span class="sd">              6    2012-08-05 00:00:01  2012-08-05 00:00:02        AIA     9.4     9.4</span>
+
+<span class="sd">        Here the first 2 entries (IDs 1 and 2) were overwritten and its files were redownloaded,</span>
+<span class="sd">        resulting in the entries with IDs 5 and 6.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">query</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;at least one attribute required&#39;</span><span class="p">)</span>
+
+        <span class="n">client</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;client&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">client</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">client</span> <span class="o">=</span> <span class="n">VSOClient</span><span class="p">()</span>
+        <span class="n">qr</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">)</span>
+
+        <span class="c1"># don&#39;t do anything if querying results in no data</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">qr</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">entries</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_download_and_collect_entries</span><span class="p">(</span>
+            <span class="n">qr</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_many</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.search"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.search">[docs]</a>    <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        search(*query[, sortby])</span>
+<span class="sd">        Send the given query to the database and return a list of</span>
+<span class="sd">        database entries that satisfy all of the given attributes.</span>
+
+<span class="sd">        Apart from the attributes supported by the VSO interface, the following</span>
+<span class="sd">        attributes are supported:</span>
+
+<span class="sd">            - :class:`sunpy.database.attrs.Starred`</span>
+
+<span class="sd">            - :class:`sunpy.database.attrs.Tag`</span>
+
+<span class="sd">            - :class:`sunpy.database.attrs.Path`</span>
+
+<span class="sd">            - :class:`sunpy.database.attrs.DownloadTime`</span>
+
+<span class="sd">            - :class:`sunpy.database.attrs.FitsHeaderEntry`</span>
+
+<span class="sd">        An important difference to the VSO attributes is that these attributes</span>
+<span class="sd">        may also be used in negated form using the tilde ~ operator.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query : `list`</span>
+<span class="sd">            A variable number of attributes that are chained together via the</span>
+<span class="sd">            boolean AND operator. The | operator may be used between attributes</span>
+<span class="sd">            to express the boolean OR operator.</span>
+<span class="sd">        sortby : `str`, optional</span>
+<span class="sd">            The column by which to sort the returned entries. The default is to</span>
+<span class="sd">            sort by the start of the observation. See the attributes of</span>
+<span class="sd">            :class:`sunpy.database.tables.DatabaseEntry` for a list of all</span>
+<span class="sd">            possible values.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            if no attribute is given or if some keyword argument other than</span>
+<span class="sd">            &#39;sortby&#39; is given.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        The query in the following example searches for all non-starred entries</span>
+<span class="sd">        with the tag &#39;foo&#39; or &#39;bar&#39; (or both).</span>
+
+<span class="sd">        &gt;&gt;&gt; database.search(~attrs.Starred(), attrs.Tag(&#39;foo&#39;) | attrs.Tag(&#39;bar&#39;))   # doctest: +SKIP</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">query</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;at least one attribute required&#39;</span><span class="p">)</span>
+        <span class="n">sortby</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;sortby&#39;</span><span class="p">,</span> <span class="s1">&#39;observation_time_start&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;unexpected keyword argument </span><span class="si">{0!r}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+
+        <span class="n">db_entries</span> <span class="o">=</span> <span class="n">walker</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">and_</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">)</span>
+
+        <span class="c1"># If any of the DatabaseEntry-s lack the sorting attribute, the</span>
+        <span class="c1"># sorting key should fall back to &#39;id&#39;, orherwise it fails with</span>
+        <span class="c1"># TypeError on py3</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">([</span><span class="nb">getattr</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">sortby</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">db_entries</span><span class="p">]):</span>
+            <span class="n">sortby</span> <span class="o">=</span> <span class="s1">&#39;id&#39;</span>
+
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">db_entries</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">attrgetter</span><span class="p">(</span><span class="n">sortby</span><span class="p">))</span></div>
+
+    <span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;0.8&#39;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;database.search&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="Database.query"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.query">[docs]</a>    <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        See `~sunpy.database.Database.search`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.get_entry_by_id"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.get_entry_by_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_entry_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry_id</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a database entry by its unique ID number. If an entry with the</span>
+<span class="sd">        given ID does not exist, :exc:`sunpy.database.EntryNotFoundError` is</span>
+<span class="sd">        raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">entry_id</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">EntryNotFoundError</span><span class="p">(</span><span class="n">entry_id</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">tags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">tables</span><span class="o">.</span><span class="n">Tag</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Database.get_tag"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.get_tag">[docs]</a>    <span class="k">def</span> <span class="nf">get_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the tag which has the given name. If no such tag exists,</span>
+<span class="sd">        :exc:`sunpy.database.NoSuchTagError` is raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">tag_name</span> <span class="o">==</span> <span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">tag</span>
+        <span class="k">raise</span> <span class="n">NoSuchTagError</span><span class="p">(</span><span class="n">tag_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.tag"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.tag">[docs]</a>    <span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="o">*</span><span class="n">tags</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Assign the given database entry the given tags.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            If no tags are given.</span>
+
+<span class="sd">        sunpy.database.TagAlreadyAssignedError</span>
+<span class="sd">            If at least one of the given tags is already assigned to the given</span>
+<span class="sd">            database entry.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">tags</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;at least one tag must be given&#39;</span><span class="p">)</span>
+        <span class="c1"># avoid duplicates</span>
+        <span class="n">tag_names</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">tags</span><span class="p">)</span>
+        <span class="n">cmds</span> <span class="o">=</span> <span class="n">CompositeOperation</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">tag_name</span> <span class="ow">in</span> <span class="n">tag_names</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tag</span><span class="p">(</span><span class="n">tag_name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">database_entry</span><span class="o">.</span><span class="n">tags</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">TagAlreadyAssignedError</span><span class="p">(</span><span class="n">database_entry</span><span class="p">,</span> <span class="n">tag_names</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">NoSuchTagError</span><span class="p">:</span>
+                <span class="c1"># tag does not exist yet -&gt; create it</span>
+                <span class="n">tag</span> <span class="o">=</span> <span class="n">tables</span><span class="o">.</span><span class="n">Tag</span><span class="p">(</span><span class="n">tag_name</span><span class="p">)</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">AddTag</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cmd</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">cmds</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">cmds</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.remove_tag"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.remove_tag">[docs]</a>    <span class="k">def</span> <span class="nf">remove_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">tag_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove the given tag from the database entry. If the tag is not</span>
+<span class="sd">        connected to any entry after this operation, the tag itself is removed</span>
+<span class="sd">        from the database as well.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        sunpy.database.NoSuchTagError</span>
+<span class="sd">            If the tag is not connected to the given entry.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tag</span><span class="p">(</span><span class="n">tag_name</span><span class="p">)</span>
+        <span class="n">cmds</span> <span class="o">=</span> <span class="n">CompositeOperation</span><span class="p">()</span>
+        <span class="n">remove_tag_cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">RemoveTag</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
+        <span class="n">remove_tag_cmd</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">remove_tag_cmd</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">tag</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="n">remove_entry_cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">RemoveEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
+            <span class="n">remove_entry_cmd</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">remove_entry_cmd</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">push_undo_command</span><span class="p">(</span><span class="n">cmds</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.star"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.star">[docs]</a>    <span class="k">def</span> <span class="nf">star</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">ignore_already_starred</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Mark the given database entry as starred. If this entry is already</span>
+<span class="sd">        marked as starred, the behaviour depends on the optional argument</span>
+<span class="sd">        ``ignore_already_starred``: if it is ``False`` (the default),</span>
+<span class="sd">        :exc:`sunpy.database.EntryAlreadyStarredError` is raised. Otherwise,</span>
+<span class="sd">        the entry is kept as starred and no exception is raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">database_entry</span><span class="o">.</span><span class="n">starred</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">ignore_already_starred</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">EntryAlreadyStarredError</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">database_entry</span><span class="p">,</span> <span class="n">starred</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.unstar"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.unstar">[docs]</a>    <span class="k">def</span> <span class="nf">unstar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">ignore_already_unstarred</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove the starred mark of the given entry. If this entry is not</span>
+<span class="sd">        marked as starred, the behaviour depends on the optional argument</span>
+<span class="sd">        ``ignore_already_unstarred``: if it is ``False`` (the default),</span>
+<span class="sd">        :exc:`sunpy.database.EntryAlreadyUnstarredError` is raised. Otherwise,</span>
+<span class="sd">        the entry is kept as unstarred and no exception is raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">database_entry</span><span class="o">.</span><span class="n">starred</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">ignore_already_unstarred</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">EntryAlreadyUnstarredError</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">database_entry</span><span class="p">,</span> <span class="n">starred</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.add_many"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.add_many">[docs]</a>    <span class="k">def</span> <span class="nf">add_many</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entries</span><span class="p">,</span> <span class="n">ignore_already_added</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a row of database entries &quot;at once&quot;. If this method is used,</span>
+<span class="sd">        only one entry is saved in the undo history.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        database_entries : iterable of sunpy.database.tables.DatabaseEntry</span>
+<span class="sd">            The database entries that will be added to the database.</span>
+
+<span class="sd">        ignore_already_added : bool, optional</span>
+<span class="sd">            See Database.add</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cmds</span> <span class="o">=</span> <span class="n">CompositeOperation</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">database_entry</span> <span class="ow">in</span> <span class="n">database_entries</span><span class="p">:</span>
+            <span class="c1"># use list(self) instead of simply self because __contains__ checks</span>
+            <span class="c1"># for existence in the database and not only all attributes except</span>
+            <span class="c1"># ID.</span>
+            <span class="k">if</span> <span class="n">database_entry</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">ignore_already_added</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">EntryAlreadyAddedError</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">AddEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cmd</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">database_entry</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">database_entry</span>
+        <span class="k">if</span> <span class="n">cmds</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">cmds</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.add"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">ignore_already_added</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add the given database entry to the database table.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        database_entry : sunpy.database.tables.DatabaseEntry</span>
+<span class="sd">            The database entry that will be added to this database.</span>
+
+<span class="sd">        ignore_already_added : bool, optional</span>
+<span class="sd">            If True, attempts to add an already existing database entry will</span>
+<span class="sd">            result in a :exc:`sunpy.database.EntryAlreadyAddedError`.</span>
+<span class="sd">            Otherwise, a new entry will be added and there will be duplicates</span>
+<span class="sd">            in the database.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">database_entry</span> <span class="ow">in</span> <span class="bp">self</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">ignore_already_added</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">EntryAlreadyAddedError</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+        <span class="n">add_entry_cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">AddEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">add_entry_cmd</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">add_entry_cmd</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">database_entry</span><span class="o">.</span><span class="n">id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">database_entry</span></div>
+
+<div class="viewcode-block" id="Database.add_from_hek_query_result"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.add_from_hek_query_result">[docs]</a>    <span class="k">def</span> <span class="nf">add_from_hek_query_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_result</span><span class="p">,</span>
+                                  <span class="n">ignore_already_added</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add database entries from a HEK query result.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query_result : list</span>
+<span class="sd">            The value returned by :meth:`sunpy.net.hek.HEKClient().query`</span>
+
+<span class="sd">        ignore_already_added : bool</span>
+<span class="sd">            See :meth:`sunpy.database.Database.add`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">vso_qr</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span>
+            <span class="n">H2VClient</span><span class="p">()</span><span class="o">.</span><span class="n">translate_and_query</span><span class="p">(</span><span class="n">query_result</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_from_vso_query_result</span><span class="p">(</span><span class="n">vso_qr</span><span class="p">,</span> <span class="n">ignore_already_added</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.download_from_vso_query_result"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.download_from_vso_query_result">[docs]</a>    <span class="k">def</span> <span class="nf">download_from_vso_query_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_result</span><span class="p">,</span> <span class="n">client</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                       <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                       <span class="n">ignore_already_added</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;download(query_result, client=sunpy.net.vso.VSOClient(),</span>
+<span class="sd">        path=None, progress=False, ignore_already_added=False)</span>
+
+<span class="sd">        Add new database entries from a VSO query result and download the</span>
+<span class="sd">        corresponding data files. See :meth:`sunpy.database.Database.download`</span>
+<span class="sd">        for information about the caching mechanism used and about the</span>
+<span class="sd">        parameters `client`, `path`, `progress`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query_result : sunpy.net.vso.vso.QueryResponse</span>
+<span class="sd">            A VSO query response that was returned by the ``query`` method of a</span>
+<span class="sd">            :class:`sunpy.net.vso.VSOClient` object.</span>
+
+<span class="sd">        ignore_already_added : bool</span>
+<span class="sd">            See :meth:`sunpy.database.Database.add`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">query_result</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_many</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_download_and_collect_entries</span><span class="p">(</span>
+            <span class="n">query_result</span><span class="p">,</span> <span class="n">client</span><span class="o">=</span><span class="n">client</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Database.add_from_vso_query_result"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.add_from_vso_query_result">[docs]</a>    <span class="k">def</span> <span class="nf">add_from_vso_query_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_result</span><span class="p">,</span>
+                                  <span class="n">ignore_already_added</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Generate database entries from a VSO query result and add all the</span>
+<span class="sd">        generated entries to this database.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        query_result : sunpy.net.vso.vso.QueryResponse</span>
+<span class="sd">            A VSO query response that was returned by the ``query`` method of a</span>
+<span class="sd">            :class:`sunpy.net.vso.VSOClient` object.</span>
+
+<span class="sd">        ignore_already_added : bool</span>
+<span class="sd">            See :meth:`sunpy.database.Database.add`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_many</span><span class="p">(</span>
+            <span class="n">tables</span><span class="o">.</span><span class="n">entries_from_query_result</span><span class="p">(</span>
+                <span class="n">query_result</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_waveunit</span><span class="p">),</span>
+            <span class="n">ignore_already_added</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.add_from_fido_search_result"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.add_from_fido_search_result">[docs]</a>    <span class="k">def</span> <span class="nf">add_from_fido_search_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search_result</span><span class="p">,</span>
+                                    <span class="n">ignore_already_added</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate database entries from a Fido search result and add all the</span>
+<span class="sd">        generated entries to this database.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        search_result : `sunpy.net.fido_factory.UnifiedResponse`</span>
+<span class="sd">            A UnifiedResponse object that is used to store responses from the</span>
+<span class="sd">            unified downloader. This is returned by the ``search`` method of a</span>
+<span class="sd">            :class:`sunpy.net.fido_factory.UnifiedDownloaderFactory`</span>
+<span class="sd">            object.</span>
+
+<span class="sd">        ignore_already_added : `bool`</span>
+<span class="sd">            See :meth:`sunpy.database.Database.add`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_many</span><span class="p">(</span><span class="n">tables</span><span class="o">.</span><span class="n">entries_from_fido_search_result</span><span class="p">(</span><span class="n">search_result</span><span class="p">,</span>
+                                                             <span class="bp">self</span><span class="o">.</span><span class="n">default_waveunit</span><span class="p">),</span>
+                      <span class="n">ignore_already_added</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.add_from_dir"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.add_from_dir">[docs]</a>    <span class="k">def</span> <span class="nf">add_from_dir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span>
+                     <span class="n">ignore_already_added</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">time_string_parse_format</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Search the given directory for FITS files and use their FITS headers</span>
+<span class="sd">        to add new entries to the database. Note that one entry in the database</span>
+<span class="sd">        is assigned to a list of FITS headers, so not the number of FITS headers</span>
+<span class="sd">        but the number of FITS files which have been read determine the number</span>
+<span class="sd">        of database entries that will be added. FITS files are detected by</span>
+<span class="sd">        reading the content of each file, the `pattern` argument may be used to</span>
+<span class="sd">        avoid reading entire directories if one knows that all FITS files have</span>
+<span class="sd">        the same filename extension.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path : string</span>
+<span class="sd">            The directory where to look for FITS files.</span>
+
+<span class="sd">        recursive : bool, optional</span>
+<span class="sd">            If True, the given directory will be searched recursively.</span>
+<span class="sd">            Otherwise, only the given directory and no subdirectories are</span>
+<span class="sd">            searched. The default is `False`, i.e. the given directory is not</span>
+<span class="sd">            searched recursively.</span>
+
+<span class="sd">        pattern : string, optional</span>
+<span class="sd">            The pattern can be used to filter the list of filenames before the</span>
+<span class="sd">            files are attempted to be read. The default is to collect all</span>
+<span class="sd">            files. This value is passed to the function :func:`fnmatch.filter`,</span>
+<span class="sd">            see its documentation for more information on the supported syntax.</span>
+
+<span class="sd">        ignore_already_added : bool, optional</span>
+<span class="sd">            See :meth:`sunpy.database.Database.add`.</span>
+
+<span class="sd">        time_string_parse_format : str, optional</span>
+<span class="sd">            Fallback timestamp format which will be passed to</span>
+<span class="sd">            `~datetime.datetime.strftime` if `sunpy.time.parse_time` is unable to</span>
+<span class="sd">            automatically read the `date-obs` metadata.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cmds</span> <span class="o">=</span> <span class="n">CompositeOperation</span><span class="p">()</span>
+        <span class="n">entries</span> <span class="o">=</span> <span class="n">tables</span><span class="o">.</span><span class="n">entries_from_dir</span><span class="p">(</span>
+            <span class="n">path</span><span class="p">,</span> <span class="n">recursive</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_waveunit</span><span class="p">,</span>
+            <span class="n">time_string_parse_format</span><span class="o">=</span><span class="n">time_string_parse_format</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">filepath</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">database_entry</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">ignore_already_added</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">EntryAlreadyAddedError</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">AddEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cmd</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">database_entry</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cmds</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">cmds</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.add_from_file"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.add_from_file">[docs]</a>    <span class="k">def</span> <span class="nf">add_from_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">ignore_already_added</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Generate as many database entries as there are FITS headers in the</span>
+<span class="sd">        given file and add them to the database.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        file : str or file-like object</span>
+<span class="sd">            Either a path pointing to a FITS file or a an opened file-like</span>
+<span class="sd">            object. If an opened file object, its mode must be one of the</span>
+<span class="sd">            following rb, rb+, or ab+.</span>
+
+<span class="sd">        ignore_already_added : bool, optional</span>
+<span class="sd">            See :meth:`sunpy.database.Database.add`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_many</span><span class="p">(</span>
+            <span class="n">tables</span><span class="o">.</span><span class="n">entries_from_file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_waveunit</span><span class="p">),</span>
+            <span class="n">ignore_already_added</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.edit"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.edit">[docs]</a>    <span class="k">def</span> <span class="nf">edit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Change the given database entry so that it interprets the passed</span>
+<span class="sd">        key-value pairs as new values where the keys represent the attributes</span>
+<span class="sd">        of this entry. If no keywords arguments are given, :exc:`ValueError` is</span>
+<span class="sd">        raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">EditEntry</span><span class="p">(</span><span class="n">database_entry</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cmd</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">database_entry</span></div>
+
+<div class="viewcode-block" id="Database.remove_many"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.remove_many">[docs]</a>    <span class="k">def</span> <span class="nf">remove_many</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entries</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove a row of database entries &quot;at once&quot;. If this method is used,</span>
+<span class="sd">        only one entry is saved in the undo history.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        database_entries : iterable of sunpy.database.tables.DatabaseEntry</span>
+<span class="sd">            The database entries that will be removed from the database.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cmds</span> <span class="o">=</span> <span class="n">CompositeOperation</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">database_entry</span> <span class="ow">in</span> <span class="n">database_entries</span><span class="p">:</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">RemoveEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cmd</span><span class="p">()</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+        <span class="k">if</span> <span class="n">cmds</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">cmds</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Database.remove"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove the given database entry from the database table.&quot;&quot;&quot;</span>
+        <span class="n">remove_entry_cmd</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">RemoveEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">remove_entry_cmd</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">remove_entry_cmd</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="c1"># entry cannot be removed because it was already removed or never</span>
+            <span class="c1"># existed in the database. This can be safely ignored, the user</span>
+            <span class="c1"># doesn&#39;t even know there&#39;s a cache here</span>
+            <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="Database.clear"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove all entries from the database. This operation can be undone</span>
+<span class="sd">        using the :meth:`undo` method.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cmds</span> <span class="o">=</span> <span class="n">CompositeOperation</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">entry</span><span class="o">.</span><span class="n">tags</span><span class="p">:</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">RemoveTag</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">entry</span><span class="p">,</span> <span class="n">tag</span><span class="p">))</span>
+            <span class="c1"># TODO: also remove all FITS header entries and all FITS header</span>
+            <span class="c1"># comments from each entry before removing the entry itself!</span>
+        <span class="c1"># remove all entries from all helper tables</span>
+        <span class="n">database_tables</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">tables</span><span class="o">.</span><span class="n">JSONDump</span><span class="p">,</span> <span class="n">tables</span><span class="o">.</span><span class="n">Tag</span><span class="p">,</span> <span class="n">tables</span><span class="o">.</span><span class="n">FitsHeaderEntry</span><span class="p">,</span>
+            <span class="n">tables</span><span class="o">.</span><span class="n">FitsKeyComment</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">database_tables</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">table</span><span class="p">):</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">RemoveEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">entry</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">RemoveEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">entry</span><span class="p">))</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">entry</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_history</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">cmds</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cmds</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Database.clear_histories"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.clear_histories">[docs]</a>    <span class="k">def</span> <span class="nf">clear_histories</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clears all entries from the undo and redo history.</span>
+
+<span class="sd">        See Also</span>
+<span class="sd">        --------</span>
+<span class="sd">        :meth:`sunpy.database.commands.CommandManager.clear_histories`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">clear_histories</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span></div>
+
+<div class="viewcode-block" id="Database.undo"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.undo">[docs]</a>    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;undo the last n commands.</span>
+
+<span class="sd">        See Also</span>
+<span class="sd">        --------</span>
+<span class="sd">        :meth:`sunpy.database.commands.CommandManager.undo`</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">undo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># pragma: no cover</span></div>
+
+<div class="viewcode-block" id="Database.redo"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.redo">[docs]</a>    <span class="k">def</span> <span class="nf">redo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;redo the last n commands.</span>
+
+<span class="sd">        See Also</span>
+<span class="sd">        --------</span>
+<span class="sd">        :meth:`sunpy.database.commands.CommandManager.redo`</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command_manager</span><span class="o">.</span><span class="n">redo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># pragma: no cover</span></div>
+
+<div class="viewcode-block" id="Database.display_entries"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.display_entries">[docs]</a>    <span class="k">def</span> <span class="nf">display_entries</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">_create_display_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">sort</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Database.show_in_browser"><a class="viewcode-back" href="../../../api/sunpy.database.Database.html#sunpy.database.Database.show_in_browser">[docs]</a>    <span class="k">def</span> <span class="nf">show_in_browser</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">jsviewer</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">_create_display_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">sort</span><span class="p">)</span><span class="o">.</span><span class="n">show_in_browser</span><span class="p">(</span><span class="n">jsviewer</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">slice</span><span class="p">):</span>
+            <span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">start</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">key</span><span class="o">.</span><span class="n">start</span>
+            <span class="n">stop</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">stop</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">key</span><span class="o">.</span><span class="n">stop</span>
+            <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">step</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">key</span><span class="o">.</span><span class="n">step</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">entry</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">entry</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+                    <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">entries</span>
+        <span class="c1"># support negative indices</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">key</span> <span class="o">%=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+                <span class="c1"># &quot;touch&quot; the entry in the cache to intentionally cause</span>
+                <span class="c1"># possible side-effects</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">entry</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+                <span class="k">return</span> <span class="n">entry</span>
+        <span class="k">raise</span> <span class="ne">IndexError</span>
+
+    <span class="k">def</span> <span class="nf">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return True if the given database_entry entry is saved in the</span>
+<span class="sd">        database, False otherwise.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="p">(</span><span class="n">ret</span><span class="p">,),</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+            <span class="n">exists</span><span class="p">()</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">tables</span><span class="o">.</span><span class="n">DatabaseEntry</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;iterate over all database entries that have been saved.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">tables</span><span class="o">.</span><span class="n">DatabaseEntry</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the number of rows in the table.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">tables</span><span class="o">.</span><span class="n">DatabaseEntry</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_create_display_table</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_create_display_table</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_create_display_table</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_repr_html_</span><span class="p">()</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+download_sample_data
+====================
+
+.. currentmodule:: sunpy.data
+
+.. autofunction:: download_sample_data

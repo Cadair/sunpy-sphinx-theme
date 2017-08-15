@@ -1,0 +1,7 @@
+Sample
+======
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Sample
+   :show-inheritance:

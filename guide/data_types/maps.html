@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Maps &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="TimeSeries" href="timeseries.html" />
+    <link rel="prev" title="Data Types in SunPy" href="index.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Maps | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/guide/data_types/maps.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">SunPy User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tour.html">A brief tour of SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../acquiring_data/index.html">Acquiring Data with SunPy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Data Types in SunPy</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeseries.html">TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spectra.html">Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plotting.html">Plotting in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../units-coordinates.html">Units and Coordinates in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time.html">Time in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roi.html">Region of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customization.html">Customizing SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="maps">
+<h1>Maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h1>
+<p>Maps in SunPy are are 2-dimensional data associated with a coordinate system. In
+this guide, we will cover some of the basic functionality of maps. Once you&#8217;ve
+read through this guide check out <a class="reference internal" href="../../code_ref/map.html"><span class="doc">SunPy map</span></a> for a more thorough look
+at SunPy maps. There you can see what instruments are currently supported or you
+can access the code reference for each instrument-specific map subclass.</p>
+<div class="section" id="creating-maps">
+<h2>Creating maps<a class="headerlink" href="#creating-maps" title="Permalink to this headline">¶</a></h2>
+<p>To make things easy, SunPy can download several example files which are used
+throughout the docs. These files have names like
+<code class="xref py py-obj docutils literal"><span class="pre">AIA_171_IMAGE</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">RHESSI_IMAGE</span></code>.
+To create the sample <a class="reference internal" href="../../api/sunpy.map.sources.AIAMap.html#sunpy.map.sources.AIAMap" title="sunpy.map.sources.sdo.AIAMap"><code class="docutils literal"><span class="pre">sunpy.map.sources.AIAMap</span></code></a> type the following into your
+interactive Python shell:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you have not downloaded the data already you should get an error and some
+instruction on how to download the sample data.</p>
+<p>The variable my_map is a <a class="reference internal" href="../../code_ref/map.html#map"><span class="std std-ref">SunPy map</span></a> object. To create one from a
+local FITS file try the following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="s1">&#39;/mydirectory/mymap.fits&#39;</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>SunPy should automatically detects the type of file (e.g. FITS), what instrument it is
+associated with (e.g. AIA, EIT, LASCO) and will automatically look in the
+appropriate places for the FITS keywords it needs to interpret the coordinate
+system. If the type of FITS file is not recognized then SunPy will try some
+default FITS keywords and return a <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> but results
+may vary. SunPy can also create maps from the jpg2000 files from
+<a class="reference external" href="http://helioviewer.org/">helioviewer.org</a>.</p>
+</div>
+<div class="section" id="creating-custom-maps">
+<h2>Creating Custom Maps<a class="headerlink" href="#creating-custom-maps" title="Permalink to this headline">¶</a></h2>
+<p>It is also possible to create maps using custom data (e.g. from a simulation).
+To do this you need to provide <a class="reference internal" href="../../code_ref/map.html#sunpy.map.map_factory.MapFactory" title="sunpy.map.map_factory.MapFactory"><code class="xref py py-obj docutils literal"><span class="pre">MapFactory</span></code></a> with both the data array as
+well as some basic meta information. If no header is given then some default
+values as assumed. Here is a simple example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">header</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;cdelt1&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;cdelt2&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;telescop&#39;</span><span class="p">:</span><span class="s1">&#39;sunpy&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">header</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The keys in the header follows the <a class="reference external" href="http://fits.gsfc.nasa.gov/fits_dictionary.html">FITS standard</a>.</p>
+</div>
+<div class="section" id="inspecting-maps">
+<h2>Inspecting maps<a class="headerlink" href="#inspecting-maps" title="Permalink to this headline">¶</a></h2>
+<p>A map contains a number of data-associated attributes. To get a quick look at
+your map simply type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span>   
+<span class="go">SunPy AIAMap</span>
+<span class="go">---------</span>
+<span class="go">Observatory:         SDO</span>
+<span class="go">Instrument:  AIA 3</span>
+<span class="go">Detector:    AIA</span>
+<span class="go">Measurement:         171.0 Angstrom</span>
+<span class="go">Wavelength:  171.0 Angstrom</span>
+<span class="go">Obs Date:    2011-03-19 10:54:00</span>
+<span class="go">dt:          1.999601 s</span>
+<span class="go">Dimension:   [ 1024.  1024.] pix</span>
+<span class="go">scale:               [ 2.4  2.4] arcsec / pix</span>
+
+<span class="go">array([[ 0.3125, -0.0625, -0.125 , ...,  0.625 , -0.625 ,  0.    ],</span>
+<span class="go">       [ 1.    ,  0.1875, -0.8125, ...,  0.625 , -0.625 ,  0.    ],</span>
+<span class="go">       [-1.1875,  0.375 , -0.5   , ..., -0.125 , -0.625 , -1.1875],</span>
+<span class="go">       ...,</span>
+<span class="go">       [-0.625 ,  0.0625, -0.3125, ...,  0.125 ,  0.125 ,  0.125 ],</span>
+<span class="go">       [ 0.5625,  0.0625,  0.5625, ..., -0.0625, -0.0625,  0.    ],</span>
+<span class="go">       [ 0.5   , -0.125 ,  0.4375, ...,  0.6875,  0.6875,  0.6875]])</span>
+</pre></div>
+</div>
+<p>This will show a representation of the data as well as some of its associated
+attributes. A number of other attributes are also available, for example the
+<a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.date" title="sunpy.map.GenericMap.date"><code class="xref py py-obj docutils literal"><span class="pre">date</span></code></a>, <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.exposure_time" title="sunpy.map.GenericMap.exposure_time"><code class="xref py py-obj docutils literal"><span class="pre">exposure_time</span></code></a>,
+<a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.center" title="sunpy.map.GenericMap.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a>, <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.xrange" title="sunpy.map.GenericMap.xrange"><code class="xref py py-obj docutils literal"><span class="pre">xrange</span></code></a>,
+<a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.yrange" title="sunpy.map.GenericMap.yrange"><code class="xref py py-obj docutils literal"><span class="pre">yrange</span></code></a> and others (see <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a>):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">map_date</span> <span class="o">=</span> <span class="n">my_map</span><span class="o">.</span><span class="n">date</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">map_exptime</span> <span class="o">=</span> <span class="n">my_map</span><span class="o">.</span><span class="n">exposure_time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">map_center</span> <span class="o">=</span> <span class="n">my_map</span><span class="o">.</span><span class="n">center</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">map_xrange</span> <span class="o">=</span> <span class="n">my_map</span><span class="o">.</span><span class="n">xrange</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">map_yrange</span> <span class="o">=</span> <span class="n">my_map</span><span class="o">.</span><span class="n">yrange</span>
+</pre></div>
+</div>
+<p>To get a list of all of the attributes check the documentation by typing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">my_map</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>From SunPy version 0.6 many attributes return <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>
+objects, please refer to the <a class="reference external" href="http://docs.astropy.org/en/stable/units/index.html#module-astropy.units" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units</span></code></a>.</p>
+<p>The meta data for the map is accessed by</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">header</span> <span class="o">=</span> <span class="n">my_map</span><span class="o">.</span><span class="n">meta</span>
+</pre></div>
+</div>
+<p>This references the meta data dictionary with the header information as read
+from the source file.</p>
+</div>
+<div class="section" id="getting-at-the-data">
+<h2>Getting at the data<a class="headerlink" href="#getting-at-the-data" title="Permalink to this headline">¶</a></h2>
+<p>The data in a SunPy Map object is accessible through the
+<code class="xref py py-obj docutils literal"><span class="pre">data</span></code> attribute.  The data is implemented as a
+NumPy <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a>, so for example, to get
+the 0th element in the array</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="go">0.3125</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">0.3125</span>
+</pre></div>
+</div>
+<p>One important fact to remember is that the first
+index is for the y direction while the second index is for the x direction.
+For more information about indexing please refer to the
+<a class="reference external" href="http://www.scipy.org/Tentative_NumPy_Tutorial#head-864862d3f2bb4c32f04260fac61eb4ef34788c4c">Numpy documentation</a>.</p>
+<p>Data attributes like <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.dtype.html#numpy.ndarray.dtype" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">dtype</span></code></a> and
+<a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.dimensions" title="sunpy.map.GenericMap.dimensions"><code class="xref py py-obj docutils literal"><span class="pre">dimensions</span></code></a> are accessible through
+the SunPyGenericMap object</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span><span class="o">.</span><span class="n">dimensions</span>
+<span class="go">Pair(x=&lt;Quantity 1024.0 pix&gt;, y=&lt;Quantity 1024.0 pix&gt;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">dtype(&#39;float64&#39;)</span>
+</pre></div>
+</div>
+<p>Here the dimensions attribute is similar to the <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html#numpy.ndarray.shape" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">shape</span></code></a>
+attribute, however returning an <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.quantity.Quantity.html#astropy.units.quantity.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code></a>.</p>
+<p>If you&#8217;d like to use the data in a SunPy <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> object
+elsewhere, you can use either of the following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">=</span> <span class="n">my_map</span><span class="o">.</span><span class="n">data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">=</span> <span class="n">my_map</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Python makes use of pointers so if you want to alter the data and keep the
+original data in the map intact make sure to copy it.</p>
+<p>Some basic statistical functions on the data array are also passed through to Map
+objects:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="go">-2.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="go">9429.125</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="go">235.91531443595886</span>
+</pre></div>
+</div>
+<p>but you can also access all the other <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a> functions and attributes
+but accessing the data array directly. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="go">292.43424704677756</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plotting">
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<p>As is true of all of the SunPy data objects, the SunPy <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a>
+object (and all of its instrument-specific sub-classes) has its
+own built-in plot methods so that it is easy to quickly view your map.
+To create a plot just type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_map</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>This will open a matplotlib plot on your screen.
+In addition, to enable users to modify the plot it is possible to grab the
+matplotlib axes object by using the <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.plot" title="sunpy.map.GenericMap.plot"><code class="xref py py-obj docutils literal"><span class="pre">plot()</span></code></a> command.
+This makes it possible to use the SunPy plot as the foundation for a
+more complicated figure. For a bit more information about this and some
+examples see <a class="reference internal" href="../plotting.html#plotting"><span class="std std-ref">Plotting in SunPy</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the <a class="reference external" href="http://docs.astropy.org/en/stable/visualization/wcsaxes/index.html#module-astropy.visualization.wcsaxes" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.visualization.wcsaxes</span></code></a> package is not used (it is used by
+default) the <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.plot" title="sunpy.map.GenericMap.plot"><code class="xref py py-obj docutils literal"><span class="pre">plot()</span></code></a> and
+<a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.peek" title="sunpy.map.GenericMap.peek"><code class="xref py py-obj docutils literal"><span class="pre">peek()</span></code></a> methods assume that the data is not rotated,
+i.e. the solar y axis is oriented with the columns of the array. If this
+condition is not met (in the metadata), when the map is plotted a warning
+will be issued. You can create an oriented map by using
+<a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.rotate" title="sunpy.map.GenericMap.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate()</span></code></a> before you plot the Map.</p>
+</div>
+<div class="section" id="plotting-keywords">
+<h3>Plotting Keywords<a class="headerlink" href="#plotting-keywords" title="Permalink to this headline">¶</a></h3>
+<p>For Map <a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.imshow" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">imshow</span></code></a> does most of the heavy
+lifting in the background while SunPy makes a number of choices for you so that
+you don&#8217;t have to (e.g. colortable, plot title). Changing these defaults
+is made possible through two simple interfaces. You can pass any
+<a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.imshow" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">imshow</span></code></a> keyword into
+the plot command to override the defaults for that particular plot. The following
+plot changes the default AIA color table to use an inverse Grey color table.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="n">smap</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">smap</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Greys_r</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/maps-1.py">Source code</a>, <a class="reference external" href="../../guide/data_types/maps-1.png">png</a>, <a class="reference external" href="../../guide/data_types/maps-1.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/maps-1.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/maps-1.png" src="../../_images/maps-1.png" />
+</div>
+<p>You can view or make changes to the default settings through the <code class="xref py py-obj docutils literal"><span class="pre">plot_settings</span></code>
+dictionary. In the following example we change the title of the plot by changing the
+<code class="xref py py-obj docutils literal"><span class="pre">plot_settings</span></code> property.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="n">smap</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="n">smap</span><span class="o">.</span><span class="n">plot_settings</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;My Second SunPy Plot&quot;</span>
+<span class="n">smap</span><span class="o">.</span><span class="n">plot_settings</span><span class="p">[</span><span class="s1">&#39;cmap&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues_r</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">smap</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/maps-2.py">Source code</a>, <a class="reference external" href="../../guide/data_types/maps-2.png">png</a>, <a class="reference external" href="../../guide/data_types/maps-2.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/maps-2.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/maps-2.png" src="../../_images/maps-2.png" />
+</div>
+</div>
+<div class="section" id="colormaps-and-normalization">
+<h3>Colormaps and Normalization<a class="headerlink" href="#colormaps-and-normalization" title="Permalink to this headline">¶</a></h3>
+<p>Image data is generally shown in false color in order to better identify it or
+to better visualize structures in the image. Matplotlib handles this colormapping
+process through the <a class="reference external" href="http://matplotlib.org/api/colors_api.html#module-matplotlib.colors" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">colors</span></code></a> module. This process involves two steps:
+the data array is first mapped onto the range 0-1 using an instance of
+<a class="reference external" href="http://matplotlib.org/api/colors_api.html#matplotlib.colors.Normalize" title="(in Matplotlib v2.0.2)"><code class="xref py py-obj docutils literal"><span class="pre">Normalize</span></code></a> or a subclass; then this number is mapped to a
+color using an instance of a subclass of a <code class="xref py py-obj docutils literal"><span class="pre">colormap</span></code>.</p>
+<p>SunPy provides the colormaps for each mission as defined by the mission teams.
+The Map object chooses the appropriate colormap for you when it is created as
+long as it recognizes the instrument. To see what colormaps are available:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.cm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sunpy</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">cmlist</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>   
+<span class="go">[&#39;sohoeit304&#39;, &#39;sdoaia211&#39;, &#39;sohoeit195&#39;, &#39;trace1600&#39;, &#39;sdoaia94&#39;,</span>
+<span class="go"> &#39;trace284&#39;, &#39;trace1216&#39;, &#39;sdoaia304&#39;, &#39;trace1700&#39;, &#39;yohkohsxtal&#39;,</span>
+<span class="go"> &#39;trace195&#39;, &#39;sdoaia335&#39;, &#39;sdoaia1600&#39;, &#39;traceWL&#39;, &#39;stereohi2&#39;,</span>
+<span class="go"> &#39;sdoaia193&#39;, &#39;stereohi1&#39;, &#39;rhessi&#39;, &#39;trace171&#39;, &#39;trace1550&#39;,</span>
+<span class="go"> &#39;sohoeit284&#39;, &#39;stereocor2&#39;, &#39;hmimag&#39;, &#39;stereocor1&#39;, &#39;sdoaia1700&#39;,</span>
+<span class="go"> &#39;yohkohsxtwh&#39;, &#39;sohoeit171&#39;, &#39;hinodexrt&#39;, &#39;sdoaia131&#39;, &#39;sdoaia171&#39;,</span>
+<span class="go"> &#39;hinodesotintensity&#39;, &#39;sdoaia4500&#39;, &#39;soholasco3&#39;, &#39;soholasco2&#39;]</span>
+</pre></div>
+</div>
+<p>The SunPy colormaps are registered with matplotlib so you can grab them like
+you would any other colormap:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sunpy.cm</span>
+</pre></div>
+</div>
+<p>You need to import sunpy.cm or sunpy.map for this to work:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;sdoaia171&#39;</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>The following plot shows off all of the colormaps.</p>
+<p>(<a class="reference external" href="../../guide/data_types/maps-3.py">Source code</a>, <a class="reference external" href="../../guide/data_types/maps-3.png">png</a>, <a class="reference external" href="../../guide/data_types/maps-3.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/maps-3.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/maps-3.png" src="../../_images/maps-3.png" />
+</div>
+<p>These can be used with the standard commands to change the colormap. So for
+example if you wanted to plot an AIA image but use an EIT colormap, you would
+do so as follows.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">smap</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;sohoeit171&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">smap</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/maps-4.py">Source code</a>, <a class="reference external" href="../../guide/data_types/maps-4.png">png</a>, <a class="reference external" href="../../guide/data_types/maps-4.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/maps-4.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/maps-4.png" src="../../_images/maps-4.png" />
+</div>
+<p>or you can just change the colormap for the map itself as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">smap</span><span class="o">.</span><span class="n">plot_settings</span><span class="p">[</span><span class="s1">&#39;cmap&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;sohoeit171&#39;</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>The normalization is also set automatically and is chosen so that all the
+data from minimum to maximum is displayed as best as possible for most cases.
+This means that it is never necessary to touch the data such as applying a function
+such sqrt or log to the data to make your plot look good.
+There are many normalizations available from matplotlib such as <code class="xref py py-obj docutils literal"><span class="pre">Lognorm</span></code>. Other
+<a class="reference external" href="http://docs.astropy.org/en/stable/visualization/index.html">more exotic normalizations</a> are also
+made available from Astropy.  Just like the colormap the default normalization
+can be changed through the plot_settings dictionary or directly for the individual
+plot by passing a keyword argument. The following example shows the difference between
+a linear and logarithmic normalization on an AIA image.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="kn">as</span> <span class="nn">colors</span>
+
+<span class="n">smap</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">smap</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">smap</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">())</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/maps-5.py">Source code</a>, <a class="reference external" href="../../guide/data_types/maps-5.png">png</a>, <a class="reference external" href="../../guide/data_types/maps-5.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/maps-5.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/maps-5.png" src="../../_images/maps-5.png" />
+</div>
+<p>Note how the color in the colorbar does not change since these two maps share
+the same colormap while the data values associated with each color do because
+the normalization is different.</p>
+</div>
+</div>
+<div class="section" id="masking-and-clipping-data">
+<h2>Masking and Clipping Data<a class="headerlink" href="#masking-and-clipping-data" title="Permalink to this headline">¶</a></h2>
+<p>It is often necessary for the purposes of display or otherwise to ignore certain
+data in an image. For example large data value could be due to
+cosmic ray hits and should be ignored. The most straightforward way to ignore
+this kind of data in plots without altering the data is to clip it. This can be achieved
+very easily when initializing the normalization variable. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">colors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">norm</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">smap</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">vmax</span><span class="o">=</span><span class="n">smap</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span><span class="n">smap</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>   
+</pre></div>
+</div>
+<p>This clips out many of the brightest pixels. If you&#8217;d like to see what areas of
+your images got clipped set the following values:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmap</span> <span class="o">=</span> <span class="n">cmap</span><span class="o">.</span><span class="n">plot_settings</span><span class="p">[</span><span class="s1">&#39;cmap&#39;</span><span class="p">]</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cmap</span><span class="o">.</span><span class="n">set_over</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>   
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cmap</span><span class="o">.</span><span class="n">set_under</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>This will color the areas above and below in red and green respectively
+(similar to this <a class="reference external" href="http://matplotlib.org/examples/pylab_examples/image_masked.html">example</a>).
+You can use the following colorbar command to display these choices:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>Here is an example of this put to use on an AIA image. If you see how the image
+displays by default you&#8217;ll see that it does not look that pretty. This is
+because the image contains some negative values which are throwing off the
+normalization.</p>
+<p>(<a class="reference external" href="../../guide/data_types/maps-6.py">Source code</a>, <a class="reference external" href="../../guide/data_types/maps-6.png">png</a>, <a class="reference external" href="../../guide/data_types/maps-6.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/maps-6.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/maps-6.png" src="../../_images/maps-6.png" />
+</div>
+<p>In order to fix this we need to adjust our normalization to not display negative
+values. We can also brighten the image by clipping the high values though this
+will mean that the bright regions look &#8216;saturated&#8217;. This is achieved in the following plot.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="kn">as</span> <span class="nn">colors</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="n">smap</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_193_CUTOUT01_IMAGE</span><span class="p">)</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">plot_settings</span><span class="p">[</span><span class="s1">&#39;cmap&#39;</span><span class="p">]</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">set_over</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">set_under</span><span class="p">(</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">norm</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">smap</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">smap</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="n">smap</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/maps-7.py">Source code</a>, <a class="reference external" href="../../guide/data_types/maps-7.png">png</a>, <a class="reference external" href="../../guide/data_types/maps-7.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/maps-7.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/maps-7.png" src="../../_images/maps-7.png" />
+</div>
+<p>Another method to ignore bad data is to mask the data. A mask is a boolean
+array and so can give you much more fine-grained control over what is not being
+displayed.  A <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/maskedarray.baseclass.html#numpy.ma.MaskedArray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray</span></code></a>
+is a subclass of a numpy array so it has all of the same properties with the
+addition of an associated boolean array which holds the mask.</p>
+</div>
+<div class="section" id="composite-maps-and-overlaying-maps">
+<h2>Composite Maps and Overlaying Maps<a class="headerlink" href="#composite-maps-and-overlaying-maps" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="xref py py-obj docutils literal"><span class="pre">Map()</span></code> method described above can also handle a list of maps. If a series of maps
+are supplied as inputs, <code class="xref py py-obj docutils literal"><span class="pre">Map()</span></code> will return a list of maps as the output.  However,
+if the &#8216;composite&#8217; keyword is set to True, then a <a class="reference internal" href="../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap" title="sunpy.map.CompositeMap"><code class="xref py py-obj docutils literal"><span class="pre">CompositeMap</span></code></a> object is
+returned.  This is useful if the maps are of a different type (e.g. different
+instruments).  For example, to create a simple composite map:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_maps</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">EIT_195_IMAGE</span><span class="p">,</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">RHESSI_IMAGE</span><span class="p">,</span> <span class="n">composite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A <a class="reference internal" href="../../api/sunpy.map.CompositeMap.html#sunpy.map.CompositeMap" title="sunpy.map.CompositeMap"><code class="xref py py-obj docutils literal"><span class="pre">CompositeMap</span></code></a> is different from a regular SunPy <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap" title="sunpy.map.GenericMap"><code class="xref py py-obj docutils literal"><span class="pre">GenericMap</span></code></a> object and therefore
+different associated methods. To list which maps are part of your composite map use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_maps</span><span class="o">.</span><span class="n">list_maps</span><span class="p">()</span>
+<span class="go">[&lt;class &#39;sunpy.map.sources.soho.EITMap&#39;&gt;, &lt;class &#39;sunpy.map.sources.rhessi.RHESSIMap&#39;&gt;]</span>
+</pre></div>
+</div>
+<p>The following code adds a new map (which must be instantiated first), sets
+its transparency to 25%, turns on contours from 50% to 90% for the second
+map, and then plots the result.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="n">my_maps</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">EIT_195_IMAGE</span><span class="p">,</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">RHESSI_IMAGE</span><span class="p">,</span> <span class="n">composite</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">my_maps</span><span class="o">.</span><span class="n">add_map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">))</span>
+<span class="n">my_maps</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">my_maps</span><span class="o">.</span><span class="n">set_levels</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span> <span class="n">percent</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">my_maps</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/maps-8.py">Source code</a>, <a class="reference external" href="../../guide/data_types/maps-8.png">png</a>, <a class="reference external" href="../../guide/data_types/maps-8.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/maps-8.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/maps-8.png" src="../../_images/maps-8.png" />
+</div>
+<p>This is not a particularly pretty plot but it shows what SunPy can do!</p>
+</div>
+<div class="section" id="working-with-your-map">
+<h2>Working with your map<a class="headerlink" href="#working-with-your-map" title="Permalink to this headline">¶</a></h2>
+<p>Part of the philosophy of the map object is to provide most of the basic
+functionality that a scientist would want therefore a map also contains a number
+of map-specific methods such as resizing a map or grabbing a subview. To get
+a list of the methods available for a map type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">my_map</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>and check out the methods section!</p>
+</div>
+<div class="section" id="mapcubes">
+<h2>Mapcubes<a class="headerlink" href="#mapcubes" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> is an ordered list of maps.  By default, the maps are ordered by
+their observation date, from earlier maps to later maps. A <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> can be
+created by supplying multiple existing maps:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">map1</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">map2</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">EIT_195_IMAGE</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">([</span><span class="n">map1</span><span class="p">,</span> <span class="n">map2</span><span class="p">],</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or by providing a directory full of image files:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="s1">&#39;path/to/my/files/*.fits&#39;</span><span class="p">,</span> <span class="n">cube</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>The earliest map in the mapcube can be accessed by simply indexing the maps
+list:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>   
+</pre></div>
+</div>
+<p>Mapcubes can hold maps that have different shapes.  To test if all the
+maps in a <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> have the same shape:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span><span class="o">.</span><span class="n">all_maps_same_shape</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>It is often useful to return the image data in a <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> as a single
+three dimensional Numpy <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span><span class="o">.</span><span class="n">as_array</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>Note that an array is returned only if all the maps have the same
+shape.  If this is not true, an error (ValueError) is returned.  If all the
+maps have nx pixels in the x-direction, and ny pixels in the y-direction,
+and there are n maps in the mapcube, the <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a> array that is
+returned has shape (ny, nx, n).  The data of the first map in the <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a>
+appears in the <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a> in position <code class="docutils literal"><span class="pre">[:,</span> <span class="pre">:,</span> <span class="pre">0]</span></code>, the data of second map in
+position <code class="docutils literal"><span class="pre">[:,</span> <span class="pre">:,</span> <span class="pre">1]</span></code>, and so on.  The order of maps in the <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> is
+reproduced in the returned <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.13)"><code class="xref py py-obj docutils literal"><span class="pre">ndarray</span></code></a>.</p>
+<p>The meta data from each map can be obtained using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span><span class="o">.</span><span class="n">all_meta</span><span class="p">()</span>   
+</pre></div>
+</div>
+<p>This returns a list of map meta objects that have the same order as
+the maps in the <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a>.</p>
+</div>
+<div class="section" id="coalignment-of-mapcubes">
+<h2>Coalignment of Mapcubes<a class="headerlink" href="#coalignment-of-mapcubes" title="Permalink to this headline">¶</a></h2>
+<p>A typical data preparation step when dealing with time series of images is to
+coalign images taken at different times so that features in different images
+remain in the same place.  A common approach to this problem is
+to take a representative template that contains the features you are interested
+in, and match that to your images.  The location of the best match tells you
+where the template is in your image.  The images are then shifted to the
+location of the best match.  This aligns your images to the position of the
+features in your representative template.</p>
+<p>SunPy provides a function to coalign the maps inside the <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a>.
+The implementation of this functionality requires the installation of the
+scikit-image library, a commonly used image processing library.
+To coalign a <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a>, simply import
+the function and apply it to your <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.image.coalignment</span> <span class="k">import</span> <span class="n">mapcube_coalign_by_match_template</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coaligned</span> <span class="o">=</span> <span class="n">mapcube_coalign_by_match_template</span><span class="p">(</span><span class="n">mc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will return a new <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a>, coaligned to a template extracted from the
+center of the first map in the <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a>, with the map dimensions clipped as
+required.  The coalignment algorithm provides many more options for handling
+the coalignment of <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">mapcube_coalign_by_match_template</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>for a full list of options and functionality.</p>
+<p>If you just want to calculate the shifts required to compensate for solar
+rotation relative to the first map in the <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> without applying them, use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.image.coalignment</span> <span class="k">import</span> <span class="n">calculate_match_template_shift</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shifts</span> <span class="o">=</span> <span class="n">calculate_match_template_shift</span><span class="p">(</span><span class="n">mc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is the function used to calculate the shifts in <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> coalignment
+function above.  Please see <a class="reference internal" href="../../api/sunpy.image.coalignment.calculate_match_template_shift.html#sunpy.image.coalignment.calculate_match_template_shift" title="sunpy.image.coalignment.calculate_match_template_shift"><code class="xref py py-obj docutils literal"><span class="pre">calculate_match_template_shift</span></code></a> to learn more about its features.
+Shifts calculated using calculate_match_template_shift can be passed directly
+to the coalignment function.</p>
+</div>
+<div class="section" id="compensating-for-solar-rotation-in-mapcubes">
+<h2>Compensating for solar rotation in Mapcubes<a class="headerlink" href="#compensating-for-solar-rotation-in-mapcubes" title="Permalink to this headline">¶</a></h2>
+<p>Often a set of solar image data consists of fixing the pointing of a
+field of view for some time and observing.  Features on the Sun will
+rotate according to the Sun&#8217;s rotation.</p>
+<p>A typical data preparation step when dealing with time series of these
+types of images is to shift the images so that features do not appear
+to move across the field of view.  This requires taking in to account
+the rotation of the Sun.  The Sun rotates differentially, depending on
+latitude, with features at the equator moving faster than features at
+the poles.</p>
+<p>SunPy provides a function to shift images in <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> following solar
+rotation.  This function shifts an image according to the solar
+differential rotation calculated at the latitude of the center of the
+field of view.  The image is not <em>differentially</em> rotated.  This
+function is useful for de-rotating images when the effects of
+differential rotation in the <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> can be ignored (for example, if
+the spatial extent of the image is small, or when the duration of the
+<a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> is small; deciding on what &#8216;small&#8217; means depends on your
+application).</p>
+<p>To apply this form of solar derotation to a <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a>, simply import the
+function and apply it to your <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.physics.transforms.solar_rotation</span> <span class="k">import</span> <span class="n">mapcube_solar_derotate</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">derotated</span> <span class="o">=</span> <span class="n">mapcube_solar_derotate</span><span class="p">(</span><span class="n">mc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more info see <code class="xref py py-obj docutils literal"><span class="pre">mapcube_solar_derotate</span></code>.</p>
+<p>If you just want to calculate the shifts required to compensate for solar
+rotation relative to the first map in the <a class="reference internal" href="../../api/sunpy.map.MapCube.html#sunpy.map.MapCube" title="sunpy.map.MapCube"><code class="xref py py-obj docutils literal"><span class="pre">MapCube</span></code></a> without applying them, use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.physics.transforms.solar_rotation</span> <span class="k">import</span> <span class="n">calculate_solar_rotate_shift</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shifts</span> <span class="o">=</span> <span class="n">calculate_solar_rotate_shift</span><span class="p">(</span><span class="n">mc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Please consult the docstring of the <a class="reference internal" href="../../api/sunpy.image.coalignment.mapcube_coalign_by_match_template.html#sunpy.image.coalignment.mapcube_coalign_by_match_template" title="sunpy.image.coalignment.mapcube_coalign_by_match_template"><code class="xref py py-obj docutils literal"><span class="pre">mapcube_coalign_by_match_template</span></code></a> function in order to learn about
+the features of this function.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

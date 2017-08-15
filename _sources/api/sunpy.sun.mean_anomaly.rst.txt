@@ -1,0 +1,6 @@
+mean_anomaly
+============
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: mean_anomaly

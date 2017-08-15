@@ -1,0 +1,37 @@
+TTYProgressBar
+==============
+
+.. currentmodule:: sunpy.util.progressbar
+
+.. autoclass:: TTYProgressBar
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~TTYProgressBar.LEFT_BORDER
+      ~TTYProgressBar.RIGHT_BORDER
+      ~TTYProgressBar.SYMBOL
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TTYProgressBar.draw
+      ~TTYProgressBar.finish
+      ~TTYProgressBar.poke
+      ~TTYProgressBar.start
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: LEFT_BORDER
+   .. autoattribute:: RIGHT_BORDER
+   .. autoattribute:: SYMBOL
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: draw
+   .. automethod:: finish
+   .. automethod:: poke
+   .. automethod:: start

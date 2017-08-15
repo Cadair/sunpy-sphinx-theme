@@ -1,0 +1,29 @@
+HEKClient
+=========
+
+.. currentmodule:: sunpy.net.hek
+
+.. autoclass:: HEKClient
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~HEKClient.default
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~HEKClient.query
+      ~HEKClient.search
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: default
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: query
+   .. automethod:: search

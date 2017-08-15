@@ -1,0 +1,6 @@
+merge
+=====
+
+.. currentmodule:: sunpy.util
+
+.. autofunction:: merge

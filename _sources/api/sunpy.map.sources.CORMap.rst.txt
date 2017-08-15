@@ -1,0 +1,27 @@
+CORMap
+======
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: CORMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~CORMap.measurement
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CORMap.is_datasource_for
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: measurement
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

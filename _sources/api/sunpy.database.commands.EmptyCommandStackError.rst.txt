@@ -1,0 +1,6 @@
+EmptyCommandStackError
+======================
+
+.. currentmodule:: sunpy.database.commands
+
+.. autoexception:: EmptyCommandStackError

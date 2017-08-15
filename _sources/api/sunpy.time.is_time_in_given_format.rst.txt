@@ -1,0 +1,6 @@
+is_time_in_given_format
+=======================
+
+.. currentmodule:: sunpy.time
+
+.. autofunction:: is_time_in_given_format

@@ -1,0 +1,27 @@
+MapCube
+=======
+
+.. currentmodule:: sunpy.map
+
+.. autoclass:: MapCube
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MapCube.all_maps_same_shape
+      ~MapCube.all_meta
+      ~MapCube.as_array
+      ~MapCube.at_least_one_map_has_mask
+      ~MapCube.peek
+      ~MapCube.plot
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: all_maps_same_shape
+   .. automethod:: all_meta
+   .. automethod:: as_array
+   .. automethod:: at_least_one_map_has_mask
+   .. automethod:: peek
+   .. automethod:: plot

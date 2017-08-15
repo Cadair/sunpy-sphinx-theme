@@ -1,0 +1,6 @@
+write
+=====
+
+.. currentmodule:: sunpy.io.ana
+
+.. autofunction:: write

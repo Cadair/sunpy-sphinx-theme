@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mac OS X &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="A brief tour of SunPy" href="../tour.html" />
+    <link rel="prev" title="Linux" href="linux.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Mac OS X | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/guide/installation/mac.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">SunPy User Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Installation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="advanced.html">Advanced Installation Instructions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="linux.html">Linux</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Mac OS X</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="advanced.html#testing-sunpy">Testing SunPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advanced.html#installing-the-development-version-of-sunpy">Installing the Development Version of SunPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advanced.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advanced.html#building-documentation">Building documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tour.html">A brief tour of SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../acquiring_data/index.html">Acquiring Data with SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_types/index.html">Data Types in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plotting.html">Plotting in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../units-coordinates.html">Units and Coordinates in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time.html">Time in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roi.html">Region of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customization.html">Customizing SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="mac-os-x">
+<h1>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">We highly recommend that users use the Anaconda python distribution.
+Instructions are available here <a class="reference external" href="http://docs.astropy.org/en/stable/install.html#anaconda-install" title="(in Astropy v2.0.1)"><span>Anaconda python distribution</span></a>.</p>
+</div>
+<p>Because of the wide variety of methods for setting up a Python environment on
+Mac OS X, users have a number of options with how to install SunPy and its
+dependencies. We have a number of solutions listed below. Choose the solution which best
+suits you.</p>
+<p>For users who wish to have more control over the installation of Python, several
+alternative installation methods are provided below, including instructions for
+<a class="reference external" href="http://www.macports.org/">Macports</a> and <a class="reference external" href="http://mxcl.github.com/homebrew/">Homebrew</a>.
+The following instructions are not recommended for beginners. OS X comes pre-loaded with
+Python but each versions of OS X (Mountain Lion, Snow Leopard, etc.) ships with a
+different version of Python. In the instructions below, we therefore recommend that you
+install your own version of Python. You will then have two versions of Python living on
+your system at the same time. It can be confusing to make sure that when you install
+packages they are installed for the correct Python so beware.</p>
+<div class="section" id="python-2-7-3">
+<h3>Python 2.7.3+<a class="headerlink" href="#python-2-7-3" title="Permalink to this headline">¶</a></h3>
+<p>Download and install the latest version of
+<code class="xref py py-obj docutils literal"><span class="pre">32</span> <span class="pre">bit</span> <span class="pre">Python</span> <span class="pre">2.7.3</span></code>
+using their DMG installer. Next, choose your package installer of choice (either
+Macports or Homebrew) and follow the instructions below. If you do not have either
+go to their respective websites and install one of the other as needed.</p>
+</div>
+<div class="section" id="xcode-tools-compiler">
+<span id="xcode"></span><h3>XCode tools / Compiler<a class="headerlink" href="#xcode-tools-compiler" title="Permalink to this headline">¶</a></h3>
+<p>If you are using MacOS X, you will need to the XCode command line
+tools.  One way to get them is to install <a class="reference external" href="https://developer.apple.com/xcode/">XCode</a>. If you are using OS X 10.7
+(Lion) or later, you must also explicitly install the command line
+tools. You can do this by opening the XCode application, going to
+<strong>Preferences</strong>, then <strong>Downloads</strong>, and then under <strong>Components</strong>,
+click on the Install button to the right of <strong>Command Line Tools</strong>.
+Alternatively, on 10.7 (Lion) or later, you do not need to install
+XCode, you can download just the command line tools from
+<a class="reference external" href="https://developer.apple.com/downloads/index.action">https://developer.apple.com/downloads/index.action</a> (requires an Apple
+developer account).</p>
+</div>
+<div class="section" id="id1">
+<h3>Homebrew<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://mxcl.github.com/homebrew/">Homebrew</a> is a tool for helping to automate
+the installation of a number of useful tools and libraries on Mac OS X. It is
+similar to Macports, but attempts to improve on some of the pitfalls of
+Macports.</p>
+<p>Note that if you have already installed either fink or Macports on your system,
+it is recommended that you uninstall them before using Homebrew.</p>
+<p>Next, install and update homebrew:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)&quot;</span>
+<span class="n">brew</span> <span class="n">doctor</span>
+</pre></div>
+</div>
+<p>Using homebrew, install Qt and some of the other dependencies needed for
+compilation later on by pip:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="o">-</span><span class="n">v</span> <span class="n">install</span> <span class="n">gfortran</span> <span class="n">pkgconfig</span> <span class="n">git</span> <span class="n">openjpeg</span> <span class="n">readline</span> <span class="n">pyqt</span>
+</pre></div>
+</div>
+<p>Now on to the next steps.</p>
+</div>
+<div class="section" id="git">
+<h3>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h3>
+<p>Head over and <code class="xref py py-obj docutils literal"><span class="pre">download</span></code> and install git.</p>
+</div>
+<div class="section" id="pip">
+<h3>Pip<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
+<p>Most Python distributions ship with a tool called
+<a class="reference external" href="http://pypi.python.org/pypi/setuptools">easy_install</a>
+which assists with installing Python packages.</p>
+<p>Although <a class="reference external" href="http://pypi.python.org/pypi/setuptools">easy_install</a> is capable of installing most of
+the dependencies needed for SunPy itself, a more powerful tool called
+<a class="reference external" href="http://pypi.python.org/pypi/pip">pip</a> which provides a more flexible installation
+(including support for uninstalling, upgrading, and installing from remote
+sources such as GitHub) and should be used instead.</p>
+<p>Use <a class="reference external" href="http://pypi.python.org/pypi/setuptools">easy_install</a> to install <code class="xref py py-obj docutils literal"><span class="pre">pip</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">easy_install</span> <span class="n">pip</span>
+</pre></div>
+</div>
+<p>You are now ready to install scipy, numpy, and matplotlib.</p>
+</div>
+<div class="section" id="scientific-libraries">
+<h3>Scientific Libraries<a class="headerlink" href="#scientific-libraries" title="Permalink to this headline">¶</a></h3>
+<p>If pip installed properly, then you can install NumPy simply with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
+</pre></div>
+</div>
+<p>Now under Lion, install the stable version of SciPy (0.10) by running:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scipy</span>
+</pre></div>
+</div>
+<p>Mountain Lion users will need to install the development version of SciPy (0.11)
+by executing the following line:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">scipy</span><span class="o">/</span><span class="n">scipy</span><span class="c1">#egg=scipy-dev</span>
+</pre></div>
+</div>
+<p>Now on to matplotlib</p>
+<p>On Lion, install matplotlib like any other package:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
+</pre></div>
+</div>
+<p>Mountain Lion users will have to use the development version as of this writing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">git</span><span class="c1">#egg=matplotlib-dev</span>
+</pre></div>
+</div>
+<p>Done! You are now ready to <a class="reference internal" href="index.html"><span class="doc">install SunPy itself</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

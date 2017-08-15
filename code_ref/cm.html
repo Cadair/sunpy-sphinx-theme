@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SunPy cm &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="get_cmap" href="../api/sunpy.cm.get_cmap.html" />
+    <link rel="prev" title="system_info" href="../api/sunpy.system_info.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="SunPy cm | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/code_ref/cm.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy.html">SunPy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SunPy cm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.cm.get_cmap.html">get_cmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/sunpy.cm.show_colormaps.html">show_colormaps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="sunpy-cm">
+<h1>SunPy cm<a class="headerlink" href="#sunpy-cm" title="Permalink to this headline">¶</a></h1>
+<p>This submodule implements solar physics specific colormaps. Upon import these
+colormaps are registered with matplotlib, so they can be used as if they were
+built in.</p>
+<p>A preview of all the SunPy colormaps is shown below:</p>
+<p>(<a class="reference external" href="../code_ref/cm-1.py">Source code</a>, <a class="reference external" href="../code_ref/cm-1.png">png</a>, <a class="reference external" href="../code_ref/cm-1.hires.png">hires.png</a>, <a class="reference external" href="../code_ref/cm-1.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../_images/cm-1.png" src="../_images/cm-1.png" />
+</div>
+<div class="section" id="module-sunpy.cm">
+<span id="sunpy-cm-package"></span><h2>sunpy.cm Package<a class="headerlink" href="#module-sunpy.cm" title="Permalink to this headline">¶</a></h2>
+<p>The following colormaps are provided by this module:</p>
+<ul class="simple">
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia94</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia131</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia171</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia193</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia211</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia304</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia335</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia1600</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia1700</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sdoaia4500</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sohoeit171</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sohoeit195</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sohoeit284</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">sohoeit304</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">soholasco2</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">soholasco3</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">stereocor1</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">stereocor2</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">stereohi1</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">stereohi2</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">rhessi</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">yohkohsxtal</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">yohkohsxtwh</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">hinodexrt</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">hinodesotintensity</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">trace171</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">trace195</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">trace284</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">trace1216</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">trace1550</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">trace1600</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">trace1700</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">traceWL</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">hmimag</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">irissji1330</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">irissji1400</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">irissji1600</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">irissji2796</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">irissji2832</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">irissji5000</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">irissjiFUV</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">irissjiNUV</span></code>&#8216;</li>
+<li>&#8216;<code class="xref py py-obj docutils literal"><span class="pre">irissjiSJI_NUV</span></code>&#8216;</li>
+</ul>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../api/sunpy.cm.get_cmap.html#sunpy.cm.get_cmap" title="sunpy.cm.get_cmap"><code class="xref py py-obj docutils literal"><span class="pre">get_cmap</span></code></a>(name)</td>
+<td>Get a colormap.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../api/sunpy.cm.show_colormaps.html#sunpy.cm.show_colormaps" title="sunpy.cm.show_colormaps"><code class="xref py py-obj docutils literal"><span class="pre">show_colormaps</span></code></a>([filter])</td>
+<td>Displays a plot of the custom color maps supported in SunPy.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

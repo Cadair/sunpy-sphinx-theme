@@ -1,0 +1,6 @@
+disable_undo
+============
+
+.. currentmodule:: sunpy.database
+
+.. autofunction:: disable_undo

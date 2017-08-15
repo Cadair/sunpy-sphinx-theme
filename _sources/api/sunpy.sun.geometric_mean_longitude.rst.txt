@@ -1,0 +1,6 @@
+geometric_mean_longitude
+========================
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: geometric_mean_longitude

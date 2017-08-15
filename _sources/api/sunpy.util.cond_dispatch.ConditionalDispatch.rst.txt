@@ -1,0 +1,29 @@
+ConditionalDispatch
+===================
+
+.. currentmodule:: sunpy.util.cond_dispatch
+
+.. autoclass:: ConditionalDispatch
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ConditionalDispatch.__call__
+      ~ConditionalDispatch.add
+      ~ConditionalDispatch.add_dec
+      ~ConditionalDispatch.from_existing
+      ~ConditionalDispatch.generate_docs
+      ~ConditionalDispatch.get_signatures
+      ~ConditionalDispatch.wrapper
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: __call__
+   .. automethod:: add
+   .. automethod:: add_dec
+   .. automethod:: from_existing
+   .. automethod:: generate_docs
+   .. automethod:: get_signatures
+   .. automethod:: wrapper

@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>TimeRange &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SunPy timeseries" href="../code_ref/timeseries.html" />
+    <link rel="prev" title="parse_time" href="sunpy.time.parse_time.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="TimeRange | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.time.TimeRange.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/map.html">SunPy map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/net.html">SunPy net</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/time.html">SunPy time</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.time.break_time.html">break_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.time.day_of_year.html">day_of_year</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.time.find_time.html">find_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.time.get_day.html">get_day</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.time.is_time.html">is_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.time.is_time_in_given_format.html">is_time_in_given_format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.time.julian_centuries.html">julian_centuries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.time.julian_day.html">julian_day</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.time.parse_time.html">parse_time</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TimeRange</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="timerange">
+<h1>TimeRange<a class="headerlink" href="#timerange" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.time.TimeRange">
+<em class="property">class </em><code class="descclassname">sunpy.time.</code><code class="descname">TimeRange</code><span class="sig-paren">(</span><em>a</em>, <em>b=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/time/timerange.html#TimeRange"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/time/timerange.py#L17" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.time.TimeRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>An object to handle time ranges.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Regardless of how a TimeRange is constructed it will always provide a
+positive time range where the start time is before the end time.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>a</strong> (str, number, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.datetime</span></code></a>) &#8211; A time (usually the start time) specified as a parse_time-compatible
+time string, number, or a datetime object.</li>
+<li><strong>b</strong> (str, number, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.datetime</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.timedelta</span></code></a>, <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a> (time)) &#8211; Another time (usually the end time) specified as a
+parse_time-compatible time string, number, or a datetime object.
+May also be the size of the time range specified as a timedelta object,
+or a <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">TimeRange</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_range</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2010/03/04 00:10&#39;</span><span class="p">,</span> <span class="s1">&#39;2010/03/04 00:20&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_range</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">((</span><span class="s1">&#39;2010/03/04 00:10&#39;</span><span class="p">,</span> <span class="s1">&#39;2010/03/04 00:20&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_range</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2010/03/04 00:10&#39;</span><span class="p">,</span> <span class="mi">400</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_range</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2010/03/04 00:10&#39;</span><span class="p">,</span> <span class="mi">400</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Creates a new TimeRange instance</p>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.time.TimeRange.center" title="sunpy.time.TimeRange.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a></td>
+<td>Gets the center of the TimeRange instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.time.TimeRange.days" title="sunpy.time.TimeRange.days"><code class="xref py py-obj docutils literal"><span class="pre">days</span></code></a></td>
+<td>Gets the number of days elapsed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.time.TimeRange.dt" title="sunpy.time.TimeRange.dt"><code class="xref py py-obj docutils literal"><span class="pre">dt</span></code></a></td>
+<td>Get the length of the time range.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.time.TimeRange.end" title="sunpy.time.TimeRange.end"><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></a></td>
+<td>Get the end time</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.time.TimeRange.hours" title="sunpy.time.TimeRange.hours"><code class="xref py py-obj docutils literal"><span class="pre">hours</span></code></a></td>
+<td>Get the number of hours elapsed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.time.TimeRange.minutes" title="sunpy.time.TimeRange.minutes"><code class="xref py py-obj docutils literal"><span class="pre">minutes</span></code></a></td>
+<td>Gets the number of minutes elapsed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.time.TimeRange.seconds" title="sunpy.time.TimeRange.seconds"><code class="xref py py-obj docutils literal"><span class="pre">seconds</span></code></a></td>
+<td>Gets the number of seconds elapsed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.time.TimeRange.start" title="sunpy.time.TimeRange.start"><code class="xref py py-obj docutils literal"><span class="pre">start</span></code></a></td>
+<td>Get the start time</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.time.TimeRange.extend" title="sunpy.time.TimeRange.extend"><code class="xref py py-obj docutils literal"><span class="pre">extend</span></code></a>(dt_start,&nbsp;dt_end)</td>
+<td>Extend the time range forwards and backwards</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.time.TimeRange.get_dates" title="sunpy.time.TimeRange.get_dates"><code class="xref py py-obj docutils literal"><span class="pre">get_dates</span></code></a>()</td>
+<td>Return all partial days contained within the timerange</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.time.TimeRange.next" title="sunpy.time.TimeRange.next"><code class="xref py py-obj docutils literal"><span class="pre">next</span></code></a>()</td>
+<td>Shift the time range forward by the amount of time elapsed</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.time.TimeRange.previous" title="sunpy.time.TimeRange.previous"><code class="xref py py-obj docutils literal"><span class="pre">previous</span></code></a>()</td>
+<td>Shift the time range backward by the amount of time elapsed</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.time.TimeRange.split" title="sunpy.time.TimeRange.split"><code class="xref py py-obj docutils literal"><span class="pre">split</span></code></a>([n])</td>
+<td>Splits the TimeRange into multiple equally sized parts.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.time.TimeRange.window" title="sunpy.time.TimeRange.window"><code class="xref py py-obj docutils literal"><span class="pre">window</span></code></a>(cadence,&nbsp;window)</td>
+<td>Split the TimeRange up into a series of TimeRange windows, &#8216;window&#8217; long, between the start and end with a cadence of &#8216;cadence&#8217;.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="sunpy.time.TimeRange.center">
+<code class="descname">center</code><a class="headerlink" href="#sunpy.time.TimeRange.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the center of the TimeRange instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.datetime</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.time.TimeRange.days">
+<code class="descname">days</code><a class="headerlink" href="#sunpy.time.TimeRange.days" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of days elapsed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.time.TimeRange.dt">
+<code class="descname">dt</code><a class="headerlink" href="#sunpy.time.TimeRange.dt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the length of the time range. Always a positive value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>dt</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.timedelta</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.time.TimeRange.end">
+<code class="descname">end</code><a class="headerlink" href="#sunpy.time.TimeRange.end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the end time</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.datetime</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.time.TimeRange.hours">
+<code class="descname">hours</code><a class="headerlink" href="#sunpy.time.TimeRange.hours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of hours elapsed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.time.TimeRange.minutes">
+<code class="descname">minutes</code><a class="headerlink" href="#sunpy.time.TimeRange.minutes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of minutes elapsed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.time.TimeRange.seconds">
+<code class="descname">seconds</code><a class="headerlink" href="#sunpy.time.TimeRange.seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of seconds elapsed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sunpy.time.TimeRange.start">
+<code class="descname">start</code><a class="headerlink" href="#sunpy.time.TimeRange.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the start time</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.datetime</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="sunpy.time.TimeRange.extend">
+<code class="descname">extend</code><span class="sig-paren">(</span><em>dt_start</em>, <em>dt_end</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/time/timerange.html#TimeRange.extend"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/time/timerange.py#L355" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.time.TimeRange.extend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend the time range forwards and backwards</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dt_start</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.timedelta</span></code></a>) &#8211; The amount to shift the start time</li>
+<li><strong>dt_end</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.timedelta</span></code></a>) &#8211; The amount to shift the end time</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.time.TimeRange.get_dates">
+<code class="descname">get_dates</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/time/timerange.html#TimeRange.get_dates"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/time/timerange.py#L369" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.time.TimeRange.get_dates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all partial days contained within the timerange</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.time.TimeRange.next">
+<code class="descname">next</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/time/timerange.html#TimeRange.next"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/time/timerange.py#L339" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.time.TimeRange.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shift the time range forward by the amount of time elapsed</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.time.TimeRange.previous">
+<code class="descname">previous</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/time/timerange.html#TimeRange.previous"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/time/timerange.py#L347" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.time.TimeRange.previous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shift the time range backward by the amount of time elapsed</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.time.TimeRange.split">
+<code class="descname">split</code><span class="sig-paren">(</span><em>n=2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/time/timerange.html#TimeRange.split"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/time/timerange.py#L247" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.time.TimeRange.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Splits the TimeRange into multiple equally sized parts.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; The number of times to split the time range (must &gt;= 1)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>time ranges</strong> (<em>list</em>) &#8211; An list of equally sized TimeRange objects between
+the start and end times.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; If requested amount is less than 1</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.time.TimeRange.window">
+<code class="descname">window</code><span class="sig-paren">(</span><em>cadence</em>, <em>window</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/time/timerange.html#TimeRange.window"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/time/timerange.py#L279" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.time.TimeRange.window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split the TimeRange up into a series of TimeRange windows,
+&#8216;window&#8217; long, between the start and end with a cadence of &#8216;cadence&#8217;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cadence</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.Quantity</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.timedelta</span></code></a>) &#8211; Cadence in seconds or a timedelta instance</li>
+<li><strong>window</strong> (<a class="reference external" href="http://docs.astropy.org/en/stable/units/index.html#module-astropy.units.quantity" title="(in Astropy v2.0.1)"><code class="xref py py-obj docutils literal"><span class="pre">astropy.units.quantity</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">datetime.timedelta</span></code></a>) &#8211; The length of the Time&#8217;s, assumed to be seconds if int.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>time ranges</strong> (<em>list</em>) &#8211; A list of TimeRange objects, that are window long and separated by
+cadence.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">TimeRange</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_range</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="s1">&#39;2010/03/04 00:10&#39;</span><span class="p">,</span> <span class="s1">&#39;2010/03/04 01:20&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_range</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">12</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>   
+<span class="go">[    Start: 2010-03-04 00:10:00</span>
+<span class="go">    End:   2010-03-04 00:10:12</span>
+<span class="go">    Center:2010-03-04 00:10:06</span>
+<span class="go">    Duration:0.000138888888889 days or</span>
+<span class="go">           0.00333333333333 hours or</span>
+<span class="go">           0.2 minutes or</span>
+<span class="go">           12.0 seconds</span>
+<span class="go"> ,    Start: 2010-03-04 01:10:00</span>
+<span class="go">    End:   2010-03-04 01:10:12</span>
+<span class="go">    Center:2010-03-04 01:10:06</span>
+<span class="go">    Duration:0.000138888888889 days or</span>
+<span class="go">           0.00333333333333 hours or</span>
+<span class="go">           0.2 minutes or</span>
+<span class="go">           12.0 seconds</span>
+<span class="go"> ,    Start: 2010-03-04 02:10:00</span>
+<span class="go">    End:   2010-03-04 02:10:12</span>
+<span class="go">    Center:2010-03-04 02:10:06</span>
+<span class="go">    Duration:0.000138888888889 days or</span>
+<span class="go">           0.00333333333333 hours or</span>
+<span class="go">           0.2 minutes or</span>
+<span class="go">           12.0 seconds</span>
+<span class="go">  ]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Interacting with Data Using SunPy Maps &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Drawing AIA Coordinates on STEREO Images" href="AIA_limb_STEREO.html" />
+    <link rel="prev" title="Overplotting Active Region locations on magnetogram Plots" href="skip_magnetogram_active_regions.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Interacting with Data Using SunPy Maps | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/generated/gallery/maps_example.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Example Gallery</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy_colormaps_reference.html">SunPy Colormaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aia_example.html">AIA Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_editcolormap.html">Editing Map Colormaps and Normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_from_numpy_array.html">Generating a Map From Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_sample_images.html">Sample Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brightness_pixel_location.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_searching_vso.html">Searching the VSO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submaps_and_cropping.html">Submaps and Cropping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_rotation.html">Map Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="masking_hot_pixels.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_bright_regions_gallery_example.html">Manipulating Map image data - finding bright regions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mask_disk.html">Masking the solar disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_resampling_and_superpixels.html">Map Resampling and Superpixels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="goes_hek_m25.html">GOES Flare and HEK Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loop_edge_enhance.html">Edge Enhancing Filtering a Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="great_arc_example.html">Drawing and using a Great Arc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lat_lon_lines.html">Longitude and Latitude Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solar_cycle_example.html">The Solar Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_limb_enhance.html">Enhancing Off-limb emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmi_synoptic_maps.html">HMI Daily Synoptic Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overplot_hek_polygon.html">Overplotting HEK feature/event polygons on SunPy maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_data_histogram.html">Map Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_differential_rotation.html">Simple Differential Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_magnetogram_active_regions.html">Overplotting Active Region locations on magnetogram Plots</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Interacting with Data Using SunPy Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AIA_limb_STEREO.html">Drawing AIA Coordinates on STEREO Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseriesmetadata_example.html">The TimeSeriesMetaData Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2011_06_07_sampledata_overview.html">Sample Data Set Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SDO_to_STEREO_Coordinate_Conversion.html">AIA to STEREO Coordinate Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseries_example.html">Interacting with Data Using SunPy TimeSeries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="interacting-with-data-using-sunpy-maps">
+<span id="sphx-glr-generated-gallery-maps-example-py"></span><h1>Interacting with Data Using SunPy Maps<a class="headerlink" href="#interacting-with-data-using-sunpy-maps" title="Permalink to this headline">¶</a></h1>
+<p>In this example you will be learning how to create and modify SunPy Map objects.</p>
+<p>Start by importing the necessary modules.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="kn">as</span> <span class="nn">u</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <a href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="View documentation for astropy.coordinates.SkyCoord"><span class="n">SkyCoord</span></a>
+
+<span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+</pre></div>
+</div>
+<p>SunPy Maps store 2D data in a numpy array and additional data in a metadata
+dictionary giving information relating to the data and instrument.
+You can create a Map in a number of ways, including loading a FITS file or URL:
+<code class="docutils literal"><span class="pre">mymap</span> <span class="pre">=</span> <span class="pre">sunpy.map.Map('file1.fits')</span></code>
+<code class="docutils literal"><span class="pre">mymap</span> <span class="pre">=</span> <span class="pre">sunpy.map.Map(url_str)</span></code>
+Or using creating manually by using tuple with the data/header within:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.rand.html#numpy.random.rand" title="View documentation for numpy.random.rand"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span></a><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">manual_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="n">header</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The data numpy array and metadata dictionary can easily be accessed:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">manual_map</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">manual_map</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span>
+
+<span class="c1"># In this case notice that the metadata has been populated by default with the</span>
+<span class="c1"># naxis details that correspond to the array used for the data.</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mf">0.02664459</span>  <span class="mf">0.584744</span>    <span class="mf">0.82813478</span>  <span class="mf">0.21548709</span>  <span class="mf">0.72724131</span>  <span class="mf">0.34345017</span>
+   <span class="mf">0.00259281</span>  <span class="mf">0.3079749</span>   <span class="mf">0.08011387</span>  <span class="mf">0.91848069</span>  <span class="mf">0.16050237</span>  <span class="mf">0.59343602</span>
+   <span class="mf">0.81166741</span>  <span class="mf">0.42631276</span>  <span class="mf">0.6063404</span> <span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.80850669</span>  <span class="mf">0.11087268</span>  <span class="mf">0.2854306</span>   <span class="mf">0.13145126</span>  <span class="mf">0.24805476</span>  <span class="mf">0.05860608</span>
+   <span class="mf">0.49817633</span>  <span class="mf">0.32943144</span>  <span class="mf">0.67981116</span>  <span class="mf">0.66481627</span>  <span class="mf">0.69832016</span>  <span class="mf">0.36922007</span>
+   <span class="mf">0.54150763</span>  <span class="mf">0.20597621</span>  <span class="mf">0.31231531</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.84732262</span>  <span class="mf">0.59865366</span>  <span class="mf">0.69956443</span>  <span class="mf">0.65199307</span>  <span class="mf">0.21501021</span>  <span class="mf">0.39655452</span>
+   <span class="mf">0.19551974</span>  <span class="mf">0.24323411</span>  <span class="mf">0.31761417</span>  <span class="mf">0.50704334</span>  <span class="mf">0.01891777</span>  <span class="mf">0.09757355</span>
+   <span class="mf">0.81152155</span>  <span class="mf">0.85511213</span>  <span class="mf">0.16053949</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.65416108</span>  <span class="mf">0.69949201</span>  <span class="mf">0.20425761</span>  <span class="mf">0.36648389</span>  <span class="mf">0.17481296</span>  <span class="mf">0.1435897</span>
+   <span class="mf">0.97557108</span>  <span class="mf">0.05674273</span>  <span class="mf">0.47365816</span>  <span class="mf">0.17512478</span>  <span class="mf">0.02247849</span>  <span class="mf">0.1910107</span>
+   <span class="mf">0.55894732</span>  <span class="mf">0.34064191</span>  <span class="mf">0.40921852</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.63816168</span>  <span class="mf">0.81270664</span>  <span class="mf">0.15299262</span>  <span class="mf">0.59192645</span>  <span class="mf">0.23991971</span>  <span class="mf">0.94140868</span>
+   <span class="mf">0.29938843</span>  <span class="mf">0.0605473</span>   <span class="mf">0.12819721</span>  <span class="mf">0.3589384</span>   <span class="mf">0.1277692</span>   <span class="mf">0.68550077</span>
+   <span class="mf">0.2503346</span>   <span class="mf">0.69027995</span>  <span class="mf">0.68732234</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.41547911</span>  <span class="mf">0.15733724</span>  <span class="mf">0.53742555</span>  <span class="mf">0.43127511</span>  <span class="mf">0.413843</span>    <span class="mf">0.80187788</span>
+   <span class="mf">0.1800011</span>   <span class="mf">0.28954788</span>  <span class="mf">0.80587062</span>  <span class="mf">0.18119237</span>  <span class="mf">0.99294925</span>  <span class="mf">0.51701928</span>
+   <span class="mf">0.43395119</span>  <span class="mf">0.72828086</span>  <span class="mf">0.3550432</span> <span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.00648124</span>  <span class="mf">0.36861436</span>  <span class="mf">0.79179017</span>  <span class="mf">0.98402751</span>  <span class="mf">0.54113562</span>  <span class="mf">0.5733221</span>
+   <span class="mf">0.01164569</span>  <span class="mf">0.20917526</span>  <span class="mf">0.12543953</span>  <span class="mf">0.93421046</span>  <span class="mf">0.26923215</span>  <span class="mf">0.77760871</span>
+   <span class="mf">0.10130378</span>  <span class="mf">0.06624661</span>  <span class="mf">0.81881152</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.32014469</span>  <span class="mf">0.21818665</span>  <span class="mf">0.66538159</span>  <span class="mf">0.31124867</span>  <span class="mf">0.20068961</span>  <span class="mf">0.72043214</span>
+   <span class="mf">0.42026154</span>  <span class="mf">0.54091945</span>  <span class="mf">0.5766338</span>   <span class="mf">0.2535712</span>   <span class="mf">0.56578624</span>  <span class="mf">0.55038829</span>
+   <span class="mf">0.18285907</span>  <span class="mf">0.11188128</span>  <span class="mf">0.03069541</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.17935754</span>  <span class="mf">0.08859862</span>  <span class="mf">0.09306607</span>  <span class="mf">0.02141804</span>  <span class="mf">0.35252784</span>  <span class="mf">0.4413793</span>
+   <span class="mf">0.44939809</span>  <span class="mf">0.84937074</span>  <span class="mf">0.82673281</span>  <span class="mf">0.8713918</span>   <span class="mf">0.52502129</span>  <span class="mf">0.84836268</span>
+   <span class="mf">0.18795553</span>  <span class="mf">0.02385647</span>  <span class="mf">0.6293863</span> <span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.87552068</span>  <span class="mf">0.43018119</span>  <span class="mf">0.96232745</span>  <span class="mf">0.58856041</span>  <span class="mf">0.01999454</span>  <span class="mf">0.25455161</span>
+   <span class="mf">0.72595861</span>  <span class="mf">0.75248915</span>  <span class="mf">0.24874562</span>  <span class="mf">0.72402648</span>  <span class="mf">0.21682087</span>  <span class="mf">0.18672799</span>
+   <span class="mf">0.32013655</span>  <span class="mf">0.30166502</span>  <span class="mf">0.11326362</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.4712422</span>   <span class="mf">0.06172408</span>  <span class="mf">0.53232001</span>  <span class="mf">0.17438153</span>  <span class="mf">0.45724574</span>  <span class="mf">0.31073121</span>
+   <span class="mf">0.10991702</span>  <span class="mf">0.94099895</span>  <span class="mf">0.96612535</span>  <span class="mf">0.44279645</span>  <span class="mf">0.55910002</span>  <span class="mf">0.96471517</span>
+   <span class="mf">0.74726171</span>  <span class="mf">0.91621747</span>  <span class="mf">0.12440868</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.19555349</span>  <span class="mf">0.66297072</span>  <span class="mf">0.87612191</span>  <span class="mf">0.53027846</span>  <span class="mf">0.65126364</span>  <span class="mf">0.10804282</span>
+   <span class="mf">0.30423902</span>  <span class="mf">0.44582052</span>  <span class="mf">0.75096516</span>  <span class="mf">0.33110714</span>  <span class="mf">0.27185653</span>  <span class="mf">0.33646792</span>
+   <span class="mf">0.50356013</span>  <span class="mf">0.97191526</span>  <span class="mf">0.14606504</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.2625327</span>   <span class="mf">0.11198879</span>  <span class="mf">0.52635438</span>  <span class="mf">0.66202712</span>  <span class="mf">0.32283189</span>  <span class="mf">0.43079618</span>
+   <span class="mf">0.62241031</span>  <span class="mf">0.13933798</span>  <span class="mf">0.56504066</span>  <span class="mf">0.2115962</span>   <span class="mf">0.69807445</span>  <span class="mf">0.20148995</span>
+   <span class="mf">0.44647142</span>  <span class="mf">0.46546927</span>  <span class="mf">0.91809528</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.7237101</span>   <span class="mf">0.69903788</span>  <span class="mf">0.63942278</span>  <span class="mf">0.8896992</span>   <span class="mf">0.10970813</span>  <span class="mf">0.57120633</span>
+   <span class="mf">0.26069813</span>  <span class="mf">0.35982033</span>  <span class="mf">0.28525834</span>  <span class="mf">0.71990195</span>  <span class="mf">0.39262615</span>  <span class="mf">0.85547334</span>
+   <span class="mf">0.95440488</span>  <span class="mf">0.422537</span>    <span class="mf">0.93817605</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.90054103</span>  <span class="mf">0.77746402</span>  <span class="mf">0.92157797</span>  <span class="mf">0.34160933</span>  <span class="mf">0.87592687</span>  <span class="mf">0.88114191</span>
+   <span class="mf">0.63310972</span>  <span class="mf">0.9382727</span>   <span class="mf">0.8614177</span>   <span class="mf">0.30243378</span>  <span class="mf">0.8918849</span>   <span class="mf">0.38434816</span>
+   <span class="mf">0.3656197</span>   <span class="mf">0.24736319</span>  <span class="mf">0.86633282</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.53947248</span>  <span class="mf">0.76014207</span>  <span class="mf">0.85983813</span>  <span class="mf">0.86756383</span>  <span class="mf">0.97727466</span>  <span class="mf">0.26447981</span>
+   <span class="mf">0.9450331</span>   <span class="mf">0.97535398</span>  <span class="mf">0.8073551</span>   <span class="mf">0.58077752</span>  <span class="mf">0.97898576</span>  <span class="mf">0.43865239</span>
+   <span class="mf">0.91965822</span>  <span class="mf">0.97379412</span>  <span class="mf">0.57884448</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.521559</span>    <span class="mf">0.13118466</span>  <span class="mf">0.43996939</span>  <span class="mf">0.17066701</span>  <span class="mf">0.13508622</span>  <span class="mf">0.6892099</span>
+   <span class="mf">0.79004639</span>  <span class="mf">0.17253639</span>  <span class="mf">0.75771845</span>  <span class="mf">0.00923607</span>  <span class="mf">0.81962104</span>  <span class="mf">0.21327132</span>
+   <span class="mf">0.87145721</span>  <span class="mf">0.20435125</span>  <span class="mf">0.89478412</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.24468355</span>  <span class="mf">0.17841218</span>  <span class="mf">0.79154547</span>  <span class="mf">0.76339097</span>  <span class="mf">0.75102228</span>  <span class="mf">0.91652863</span>
+   <span class="mf">0.37483303</span>  <span class="mf">0.77988483</span>  <span class="mf">0.59116824</span>  <span class="mf">0.44608654</span>  <span class="mf">0.07017035</span>  <span class="mf">0.96917845</span>
+   <span class="mf">0.52718382</span>  <span class="mf">0.72295254</span>  <span class="mf">0.09035726</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.01967877</span>  <span class="mf">0.1662537</span>   <span class="mf">0.61480406</span>  <span class="mf">0.8925803</span>   <span class="mf">0.07070978</span>  <span class="mf">0.04718686</span>
+   <span class="mf">0.44642412</span>  <span class="mf">0.6381021</span>   <span class="mf">0.82776397</span>  <span class="mf">0.21663681</span>  <span class="mf">0.02563138</span>  <span class="mf">0.42904253</span>
+   <span class="mf">0.14850035</span>  <span class="mf">0.49146602</span>  <span class="mf">0.20998498</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.60042594</span>  <span class="mf">0.85729343</span>  <span class="mf">0.73861253</span>  <span class="mf">0.85758249</span>  <span class="mf">0.19740884</span>  <span class="mf">0.21416197</span>
+   <span class="mf">0.74110386</span>  <span class="mf">0.14945853</span>  <span class="mf">0.04812329</span>  <span class="mf">0.77366225</span>  <span class="mf">0.99467283</span>  <span class="mf">0.34864678</span>
+   <span class="mf">0.42081099</span>  <span class="mf">0.74071757</span>  <span class="mf">0.71109868</span><span class="p">]]</span>
+<span class="n">MetaDict</span><span class="p">([(</span><span class="s1">&#39;naxis1&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;naxis2&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;naxis&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+</pre></div>
+</div>
+<p>You can quickly plot a map using the peek method:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">manual_map</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_maps_example_001.png" class="align-center" src="../../_images/sphx_glr_maps_example_001.png" />
+<p>SunPy Maps have a number of attributes that can be accessed easily, such as
+the x and y ranges:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">manual_map</span><span class="o">.</span><span class="n">xrange</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">manual_map</span><span class="o">.</span><span class="n">yrange</span><span class="p">)</span>
+
+<span class="c1"># These return astropy Quantity objects.</span>
+<span class="c1"># In general the attributes are populated using details in the metadata and in</span>
+<span class="c1"># this case there is no centre pixel or pixel size information given so SunPy</span>
+<span class="c1"># is defaulting to assuming each pixel is 1 arcsec.</span>
+<span class="c1"># This is in Helioprojective tangent projection in both longitude and latitude:</span>
+<span class="k">print</span><span class="p">(</span><span class="n">manual_map</span><span class="o">.</span><span class="n">coordinate_system</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="mf">0.49791667</span>  <span class="mf">0.50208333</span><span class="p">]</span> <span class="n">deg</span>
+<span class="p">[</span> <span class="mf">0.49722222</span>  <span class="mf">0.50277778</span><span class="p">]</span> <span class="n">deg</span>
+<span class="n">SpatialPair</span><span class="p">(</span><span class="n">axis1</span><span class="o">=</span><span class="s1">&#39;HPLN-   &#39;</span><span class="p">,</span> <span class="n">axis2</span><span class="o">=</span><span class="s1">&#39;HPLT-   &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A real map example is given in the sample data, where the sunpy.data.sample.NAME
+returns the location of the given FITS file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">aia_map</span> <span class="o">=</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">AIA_171_IMAGE</span><span class="p">)</span>
+<span class="n">aia_map</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">draw_limb</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_maps_example_002.png" class="align-center" src="../../_images/sphx_glr_maps_example_002.png" />
+<p>This has comprehensive metadata:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">MetaDict</span><span class="p">([(</span><span class="s1">&#39;simple&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bitpix&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">32</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;naxis&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;naxis1&#39;</span><span class="p">,</span> <span class="mi">1024</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;naxis2&#39;</span><span class="p">,</span> <span class="mi">1024</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bld_vers&#39;</span><span class="p">,</span> <span class="s1">&#39;V5R12X&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;lvl_num&#39;</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;t_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:33:03Z&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;trecstep&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;trecepoc&#39;</span><span class="p">,</span> <span class="s1">&#39;1977.01.01_00:00:00_TAI&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;trecroun&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;origin&#39;</span><span class="p">,</span> <span class="s1">&#39;SDO&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;2012-10-16T19:45:34&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;telescop&#39;</span><span class="p">,</span> <span class="s1">&#39;SDO&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;instrume&#39;</span><span class="p">,</span> <span class="s1">&#39;AIA_3&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;date-obs&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:33:02.77&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;t_obs&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:33:02.88Z&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;camera&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;img_type&#39;</span><span class="p">,</span> <span class="s1">&#39;LIGHT&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;exptime&#39;</span><span class="p">,</span> <span class="mf">0.234256</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;expsdev&#39;</span><span class="p">,</span> <span class="mf">0.000135</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;int_time&#39;</span><span class="p">,</span> <span class="mf">0.507812</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;wavelnth&#39;</span><span class="p">,</span> <span class="mi">171</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;waveunit&#39;</span><span class="p">,</span> <span class="s1">&#39;angstrom&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;wave_str&#39;</span><span class="p">,</span> <span class="s1">&#39;171_THIN&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;fsn&#39;</span><span class="p">,</span> <span class="mi">27194331</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;fid&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;quallev0&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;quality&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;totvals&#39;</span><span class="p">,</span> <span class="mi">16777216</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datavals&#39;</span><span class="p">,</span> <span class="mi">16777216</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;missvals&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;percentd&#39;</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datamin&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datamax&#39;</span><span class="p">,</span> <span class="mi">17722</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datamedn&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datamean&#39;</span><span class="p">,</span> <span class="mf">26.6888</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datarms&#39;</span><span class="p">,</span> <span class="mf">9429260.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dataskew&#39;</span><span class="p">,</span> <span class="mf">81.433</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datakurt&#39;</span><span class="p">,</span> <span class="mf">17076.7421875</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datacent&#39;</span><span class="p">,</span> <span class="mf">30.76</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap01&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap10&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap25&#39;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap75&#39;</span><span class="p">,</span> <span class="mf">39.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap90&#39;</span><span class="p">,</span> <span class="mf">64.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap95&#39;</span><span class="p">,</span> <span class="mf">87.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap98&#39;</span><span class="p">,</span> <span class="mf">127.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;datap99&#39;</span><span class="p">,</span> <span class="mf">168.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;nsatpix&#39;</span><span class="p">,</span> <span class="mi">29</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;oscnmean&#39;</span><span class="p">,</span> <span class="s1">&#39;nan&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;oscnrms&#39;</span><span class="p">,</span> <span class="s1">&#39;nan&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;flat_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;aia.flatfield[:#30]&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;nspikes&#39;</span><span class="p">,</span> <span class="mi">977</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ctype1&#39;</span><span class="p">,</span> <span class="s1">&#39;HPLN-TAN&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;cunit1&#39;</span><span class="p">,</span> <span class="s1">&#39;arcsec&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crval1&#39;</span><span class="p">,</span> <span class="mf">3.223099507700556</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;cdelt1&#39;</span><span class="p">,</span> <span class="mf">2.402792</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crpix1&#39;</span><span class="p">,</span> <span class="mf">512.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ctype2&#39;</span><span class="p">,</span> <span class="s1">&#39;HPLT-TAN&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;cunit2&#39;</span><span class="p">,</span> <span class="s1">&#39;arcsec&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crval2&#39;</span><span class="p">,</span> <span class="mf">1.385781353025793</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;cdelt2&#39;</span><span class="p">,</span> <span class="mf">2.402792</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crpix2&#39;</span><span class="p">,</span> <span class="mf">512.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crota2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.138829</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;r_sun&#39;</span><span class="p">,</span> <span class="mf">1573.89688496</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mpo_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;sdo.master_pointing[:#394]&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;inst_rot&#39;</span><span class="p">,</span> <span class="mf">0.019327</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;imscl_mp&#39;</span><span class="p">,</span> <span class="mf">0.599489</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;x0_mp&#39;</span><span class="p">,</span> <span class="mf">2049.459961</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;y0_mp&#39;</span><span class="p">,</span> <span class="mf">2049.030029</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;asd_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;sdo.lev0_asd_0004[:#10672125]&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;sat_y0&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.519384</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;sat_z0&#39;</span><span class="p">,</span> <span class="mf">13.793308</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;sat_rot&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.4e-05</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_mode&#39;</span><span class="p">,</span> <span class="s1">&#39;SCIENCE&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_eclp&#39;</span><span class="p">,</span> <span class="s1">&#39;NO&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_sunp&#39;</span><span class="p">,</span> <span class="s1">&#39;YES&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_safe&#39;</span><span class="p">,</span> <span class="s1">&#39;NO&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;acs_cgt&#39;</span><span class="p">,</span> <span class="s1">&#39;GT3&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;orb_rec&#39;</span><span class="p">,</span> <span class="s1">&#39;sdo.fds_orbit_vectors[2011.06.07_06:33:00_UTC]&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dsun_ref&#39;</span><span class="p">,</span> <span class="mf">149597870691.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dsun_obs&#39;</span><span class="p">,</span> <span class="mf">151846026489.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;rsun_ref&#39;</span><span class="p">,</span> <span class="mf">696000000.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;rsun_obs&#39;</span><span class="p">,</span> <span class="mf">945.436711</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;gaex_obs&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">13315441.72</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;gaey_obs&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">25080995.82</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;gaez_obs&#39;</span><span class="p">,</span> <span class="mf">31173320.91</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;haex_obs&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">36634444009.2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;haey_obs&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">147360551017.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;haez_obs&#39;</span><span class="p">,</span> <span class="mf">35731768.47</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;obs_vr&#39;</span><span class="p">,</span> <span class="mf">86.972467</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;obs_vw&#39;</span><span class="p">,</span> <span class="mf">31968.269521</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;obs_vn&#39;</span><span class="p">,</span> <span class="mf">4842.822869</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crln_obs&#39;</span><span class="p">,</span> <span class="mf">340.698273</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;crlt_obs&#39;</span><span class="p">,</span> <span class="mf">0.048591</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;car_rot&#39;</span><span class="p">,</span> <span class="mi">2111</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;hgln_obs&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;hglt_obs&#39;</span><span class="p">,</span> <span class="mf">0.048591</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nwin&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_sum&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nax1&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nay1&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_llx1&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_lly1&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nax2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_nay2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_llx2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;roi_lly2&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;pixlunit&#39;</span><span class="p">,</span> <span class="s1">&#39;DN&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dn_gain&#39;</span><span class="p">,</span> <span class="mf">17.7</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;eff_area&#39;</span><span class="p">,</span> <span class="mf">2.419</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;eff_ar_v&#39;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tempccd&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">71.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tempgt&#39;</span><span class="p">,</span> <span class="mf">14.327</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tempsmir&#39;</span><span class="p">,</span> <span class="mf">34.029</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tempfpad&#39;</span><span class="p">,</span> <span class="mf">16.29</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ispsname&#39;</span><span class="p">,</span> <span class="s1">&#39;aia.lev0_isp_0011&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;isppktim&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:32:57.50Z&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;isppktvn&#39;</span><span class="p">,</span> <span class="s1">&#39;001.197&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aivnmst&#39;</span><span class="p">,</span> <span class="mi">453</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgots&#39;</span><span class="p">,</span> <span class="mi">1686119616</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;asqhdr&#39;</span><span class="p">,</span> <span class="mi">2174677979</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;asqtnum&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;asqfsn&#39;</span><span class="p">,</span> <span class="mi">27194331</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiahfsn&#39;</span><span class="p">,</span> <span class="mi">27194323</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aecdelay&#39;</span><span class="p">,</span> <span class="mi">1537</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiaecti&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiasen&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifdbid&#39;</span><span class="p">,</span> <span class="mi">241</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgotss&#39;</span><span class="p">,</span> <span class="mi">55109</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifcps&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiftswth&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifrmlid&#39;</span><span class="p">,</span> <span class="mi">3057</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiftsid&#39;</span><span class="p">,</span> <span class="mi">41729</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihismxb&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihis192&#39;</span><span class="p">,</span> <span class="mi">8377773</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihis348&#39;</span><span class="p">,</span> <span class="mi">8384772</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihis604&#39;</span><span class="p">,</span> <span class="mi">8386035</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aihis860&#39;</span><span class="p">,</span> <span class="mi">8386516</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifwen&#39;</span><span class="p">,</span> <span class="mi">204</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgshce&#39;</span><span class="p">,</span> <span class="mi">237</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aectype&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aecmode&#39;</span><span class="p">,</span> <span class="s1">&#39;ON&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aistate&#39;</span><span class="p">,</span> <span class="s1">&#39;CLOSED&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiaecenf&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifiltyp&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshobc&#39;</span><span class="p">,</span> <span class="mf">41.104</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshobe&#39;</span><span class="p">,</span> <span class="mf">26.068001</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshotc&#39;</span><span class="p">,</span> <span class="mf">55.327999</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshote&#39;</span><span class="p">,</span> <span class="mf">69.344002</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshcbc&#39;</span><span class="p">,</span> <span class="mf">275.432007</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshcbe&#39;</span><span class="p">,</span> <span class="mf">260.484009</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshctc&#39;</span><span class="p">,</span> <span class="mf">289.556</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimshcte&#39;</span><span class="p">,</span> <span class="mf">303.395996</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aicfgdl1&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aicfgdl2&#39;</span><span class="p">,</span> <span class="mi">107</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aicfgdl3&#39;</span><span class="p">,</span> <span class="mi">171</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aicfgdl4&#39;</span><span class="p">,</span> <span class="mi">236</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aifoenfl&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgfsn&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgtyp&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiawvlen&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp1&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp2&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp3&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp4&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp5&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp6&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp7&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp8&#39;</span><span class="p">,</span> <span class="mi">619</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp9&#39;</span><span class="p">,</span> <span class="mi">683</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aiagp10&#39;</span><span class="p">,</span> <span class="mi">748</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt1svy&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt1svz&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt2svy&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt2svz&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt3svy&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt3svz&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt4svy&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;agt4svz&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aimgshen&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;keywddoc&#39;</span><span class="p">,</span> <span class="s1">&#39;https:&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;recnum&#39;</span><span class="p">,</span> <span class="mi">76618218</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;blank&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">32768</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;date_obs&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-06-07T06:33:02.77&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;xcen&#39;</span><span class="p">,</span> <span class="mf">2.91938326953</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ycen&#39;</span><span class="p">,</span> <span class="mf">1.09323792231</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;detector&#39;</span><span class="p">,</span> <span class="s1">&#39;AIA&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;comment&#39;</span><span class="p">,</span> <span class="s2">&quot;FITS (Flexible Image Transport System) format is defined in &#39;Astronomyand Astrophysics&#39;, volume 376, page 359; bibcode: 2001A&amp;A...376..359HFITSHEAD2STRUCT&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;history&#39;</span><span class="p">,</span> <span class="s1">&#39;FITSHEAD2STRUCT run at: Fri May 26 11:33:15 2017mreadfits_shm VERSION:1.20read_sdo VERSION:  2.10aia2wcsmin.pro VERSION:  5.10aia2wcsminaia2wcsmin  MPO_date: 2012-09-04T00:00:00Zaia2wcsmin  MPO_t_start: 2011-06-05T00:00:00Zaia2wcsmin  MPO_t_stop: 2011-06-12T00:00:00Zaia2wcsmin  MPO_version: 5ssw_reg.pro VERSION:  1.30ssw_regssw_reg  ROT called with cubic interpolation: cubic = -0.500000ssw_reg  Image registered to SDO image with FSN = 27194330ssw_reg  Image registered to SDO image with T_OBS = 2011-06-07T06:33:01.aia_fix_header.pro VERSION:  1.00aia_prep.pro VERSION: 5.10aia_reg.pro VERSION:  1.20&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;keycomments&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;SIMPLE&#39;</span><span class="p">:</span> <span class="s1">&#39;conforms to FITS standard&#39;</span><span class="p">,</span> <span class="s1">&#39;BITPIX&#39;</span><span class="p">:</span> <span class="s1">&#39;array data type&#39;</span><span class="p">,</span> <span class="s1">&#39;NAXIS&#39;</span><span class="p">:</span> <span class="s1">&#39;number of array dimensions&#39;</span><span class="p">})])</span>
+</pre></div>
+</div>
+<p>And find out information about the observation device and date:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">observatory</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">detector</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">exposure_time</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">coordinate_system</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">measurement</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="mi">2011</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">07</span> <span class="mi">06</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mf">02.770000</span>
+<span class="n">SDO</span>
+<span class="n">AIA</span>
+<span class="mf">0.234256</span> <span class="n">s</span>
+<span class="n">SpatialPair</span><span class="p">(</span><span class="n">axis1</span><span class="o">=</span><span class="s1">&#39;HPLN-TAN&#39;</span><span class="p">,</span> <span class="n">axis2</span><span class="o">=</span><span class="s1">&#39;HPLT-TAN&#39;</span><span class="p">)</span>
+<span class="mf">171.0</span> <span class="n">Angstrom</span>
+</pre></div>
+</div>
+<p>Maps also hold coordinate objects for the coordinate system they are in.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">coordinate_frame</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Helioprojective</span> <span class="n">Frame</span> <span class="p">(</span><span class="n">obstime</span><span class="o">=</span><span class="mi">2011</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">07</span> <span class="mi">06</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mf">02.770000</span><span class="p">,</span> <span class="n">rsun</span><span class="o">=</span><span class="mf">696000000.0</span> <span class="n">m</span><span class="p">,</span> <span class="n">observer</span><span class="o">=&lt;</span><span class="n">HeliographicStonyhurst</span> <span class="n">Coordinate</span> <span class="p">(</span><span class="n">obstime</span><span class="o">=</span><span class="mi">2011</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">07</span> <span class="mi">06</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mf">02.770000</span><span class="p">):</span> <span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="n">deg</span><span class="p">,</span> <span class="n">deg</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+    <span class="p">(</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.048591</span><span class="p">,</span>   <span class="mf">1.51846026e+11</span><span class="p">)</span><span class="o">&gt;</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>To see only a part of the image you create a submap, by specifying the top
+left and bottom right corners of the rectangle as either <code class="xref py py-obj docutils literal"><span class="pre">SkyCoord</span></code> or
+<code class="xref py py-obj docutils literal"><span class="pre">Quantity</span></code> objects.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">bottom_left</span> <span class="o">=</span> <span class="n">aia_map</span><span class="o">.</span><span class="n">bottom_left_coord</span>
+<span class="n">top_right</span> <span class="o">=</span> <a href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="View documentation for astropy.coordinates.SkyCoord"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">aia_map</span><span class="o">.</span><span class="n">coordinate_frame</span><span class="p">)</span>
+<span class="n">aia_submap</span> <span class="o">=</span> <span class="n">aia_map</span><span class="o">.</span><span class="n">submap</span><span class="p">(</span><span class="n">bottom_left</span><span class="p">,</span> <span class="n">top_right</span><span class="p">)</span>
+<span class="n">aia_submap</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">draw_limb</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_maps_example_003.png" class="align-center" src="../../_images/sphx_glr_maps_example_003.png" />
+<p>Similarly, if you want to reduce the angular resolution of the map you can use
+the <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.resample" title="sunpy.map.GenericMap.resample"><code class="xref py py-obj docutils literal"><span class="pre">resample</span></code></a> method, specifying the dimensions as an
+Astropy Quantity in pixels:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">dimensions</span> <span class="o">=</span> <a href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="View documentation for astropy.units.Quantity"><span class="n">u</span><span class="o">.</span><span class="n">Quantity</span></a><span class="p">([</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span> <span class="n">u</span><span class="o">.</span><span class="n">pixel</span><span class="p">)</span>
+<span class="n">aia_resampled_map</span> <span class="o">=</span> <span class="n">aia_map</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="n">aia_resampled_map</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">draw_limb</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">draw_grid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_maps_example_004.png" class="align-center" src="../../_images/sphx_glr_maps_example_004.png" />
+<p>Similar to resampling you can use the <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.superpixel" title="sunpy.map.GenericMap.superpixel"><code class="xref py py-obj docutils literal"><span class="pre">superpixel</span></code></a>
+method, this will reduce the resolution of the image by combining the number
+of pixels (in each dimension) in the dimensions argument into one single
+pixel. This can be used to increase the signal to noise ratio. For this the
+new dimensions must divide original image size exactly.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">dimensions</span> <span class="o">=</span> <a href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="View documentation for astropy.units.Quantity"><span class="n">u</span><span class="o">.</span><span class="n">Quantity</span></a><span class="p">(</span><span class="n">aia_map</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span> <span class="o">/</span> <span class="mi">16</span>
+<span class="n">aia_superpixel_map</span> <span class="o">=</span> <span class="n">aia_map</span><span class="o">.</span><span class="n">superpixel</span><span class="p">(</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="n">aia_superpixel_map</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">draw_limb</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_maps_example_005.png" class="align-center" src="../../_images/sphx_glr_maps_example_005.png" />
+<p>Maps can also be rotated using the <a class="reference internal" href="../../api/sunpy.map.GenericMap.html#sunpy.map.GenericMap.rotate" title="sunpy.map.GenericMap.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a> method:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">aia_rotated_submap</span> <span class="o">=</span> <span class="n">aia_submap</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+<span class="n">aia_rotated_submap</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">draw_limb</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">draw_grid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># Note: the data array is expanded so that none of the original data is lost</span>
+<span class="c1"># through clipping.</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_maps_example_006.png" class="align-center" src="../../_images/sphx_glr_maps_example_006.png" />
+<p><strong>Total running time of the script:</strong> ( 0 minutes  4.133 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/maps_example.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">maps_example.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/maps_example.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">maps_example.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

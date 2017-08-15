@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Spectra &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Plotting in SunPy" href="../plotting.html" />
+    <link rel="prev" title="TimeSeries" href="timeseries.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Spectra | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/guide/data_types/spectra.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">SunPy User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tour.html">A brief tour of SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../acquiring_data/index.html">Acquiring Data with SunPy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Data Types in SunPy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeseries.html">TimeSeries</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plotting.html">Plotting in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../units-coordinates.html">Units and Coordinates in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time.html">Time in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roi.html">Region of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customization.html">Customizing SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="spectra">
+<h1>Spectra<a class="headerlink" href="#spectra" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This module is under development! It is being moved into its own
+<a class="reference external" href="https://github.com/sunpy/spectra">repository</a>.</p>
+</div>
+<div class="section" id="spectrograms">
+<h2>Spectrograms<a class="headerlink" href="#spectrograms" title="Permalink to this headline">¶</a></h2>
+<p>SunPy currently supports reading dynamic spectra from <a class="reference external" href="http://www.e-callisto.org/">e-Callisto</a> instruments.
+The main class that is used for this is
+<a class="reference internal" href="../../api/sunpy.spectra.sources.CallistoSpectrogram.html#sunpy.spectra.sources.CallistoSpectrogram" title="sunpy.spectra.sources.callisto.CallistoSpectrogram"><code class="xref py py-class docutils literal"><span class="pre">CallistoSpectrogram</span></code></a>. SunPy also
+comes with an example image that shows a radio burst observed at <a class="reference external" href="http://rosseobservatory.ie/">Rosse Observatory</a> (aka. BIR; Birr Castle, Co. Offaly, Ireland) that
+can be found in sunpy.data.sample.CALLISTO_SPECTRUM.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">sunpy.spectra</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">from</span> <span class="nn">sunpy.spectra.sources.callisto</span> <span class="kn">import</span> <span class="n">CallistoSpectrogram</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">CallistoSpectrogram</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">CALLISTO_SPECTRUM</span><span class="p">)</span>
+<span class="n">image</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/spectra-1.py">Source code</a>, <a class="reference external" href="../../guide/data_types/spectra-1.png">png</a>, <a class="reference external" href="../../guide/data_types/spectra-1.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/spectra-1.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/spectra-1.png" src="../../_images/spectra-1.png" />
+</div>
+<p>We now notice that there seems to be something interesting that has been
+cut off at the corner of the image, so we use the extend method to request
+more data from the server. It optionally takes the amount of minutes we want
+to request from the server (negative values mean we want to add data that was
+registered before our existing local data), if none are given it defaults to
+15 minutes (the size of one e-Callisto file).</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">more</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">extend</span><span class="p">()</span>
+<span class="n">more</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>We will, for the purposes of this demonstration, continue working with the
+original image, though.</p>
+<p>You can then perform automatic constant background subtraction by using the
+<a class="reference internal" href="../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.subtract_bg" title="sunpy.spectra.spectrogram.Spectrogram.subtract_bg"><code class="xref py py-meth docutils literal"><span class="pre">subtract_bg()</span></code></a>
+method. The resulting image will be clipped at 0 using the <a class="reference external" href="https://docs.python.org/3/library/functions.html#min" title="(in Python v3.6)"><code class="xref py py-obj docutils literal"><span class="pre">min</span></code></a> parameter of
+peek in order to avoid negative values.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">sunpy</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">from</span> <span class="nn">sunpy.spectra.sources.callisto</span> <span class="kn">import</span> <span class="n">CallistoSpectrogram</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">CallistoSpectrogram</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">CALLISTO_SPECTRUM</span><span class="p">)</span>
+<span class="n">nobg</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">subtract_bg</span><span class="p">()</span>
+<span class="n">nobg</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/spectra-2.py">Source code</a>, <a class="reference external" href="../../guide/data_types/spectra-2.png">png</a>, <a class="reference external" href="../../guide/data_types/spectra-2.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/spectra-2.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/spectra-2.png" src="../../_images/spectra-2.png" />
+</div>
+<p>If you want to see the background determined by the automatic subtraction,
+you can use the
+<a class="reference internal" href="../../api/sunpy.spectra.spectrogram.Spectrogram.html#sunpy.spectra.spectrogram.Spectrogram.auto_const_bg" title="sunpy.spectra.spectrogram.Spectrogram.auto_const_bg"><code class="xref py py-meth docutils literal"><span class="pre">auto_const_bg()</span></code></a>
+method and visualize the resulting
+data using <code class="xref py py-func docutils literal"><span class="pre">pyplot.plot()</span></code>.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">bg</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">auto_const_bg</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">freq_axis</span><span class="p">,</span> <span class="n">bg</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Frequency [MHz]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Intensity&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now let us say we want to isolate the interesting bit (which starts around
+10:38) from the boring background; there is a method called
+<a class="reference internal" href="../../api/sunpy.spectra.spectrogram.LinearTimeSpectrogram.html#sunpy.spectra.spectrogram.LinearTimeSpectrogram.in_interval" title="sunpy.spectra.spectrogram.LinearTimeSpectrogram.in_interval"><code class="xref py py-meth docutils literal"><span class="pre">in_interval()</span></code></a>
+that allows us to take the part of an image that is
+within a specified interval. Leaving out the second argument it defaults
+to the end time of the file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">sunpy</span>
+<span class="kn">import</span> <span class="nn">sunpy.data.sample</span>
+<span class="kn">from</span> <span class="nn">sunpy.spectra.sources.callisto</span> <span class="kn">import</span> <span class="n">CallistoSpectrogram</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">CallistoSpectrogram</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">sunpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="o">.</span><span class="n">CALLISTO_SPECTRUM</span><span class="p">)</span>
+<span class="n">nobg</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">subtract_bg</span><span class="p">()</span>
+<span class="n">interesting</span> <span class="o">=</span> <span class="n">nobg</span><span class="o">.</span><span class="n">in_interval</span><span class="p">(</span><span class="s2">&quot;06:27&quot;</span><span class="p">)</span>
+<span class="n">interesting</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../guide/data_types/spectra-3.py">Source code</a>, <a class="reference external" href="../../guide/data_types/spectra-3.png">png</a>, <a class="reference external" href="../../guide/data_types/spectra-3.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/spectra-3.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/spectra-3.png" src="../../_images/spectra-3.png" />
+</div>
+<p>To get rid of the noise, we could also clip low intensities by setting vmin.</p>
+<p>(<a class="reference external" href="../../guide/data_types/spectra-4.py">Source code</a>, <a class="reference external" href="../../guide/data_types/spectra-4.png">png</a>, <a class="reference external" href="../../guide/data_types/spectra-4.hires.png">hires.png</a>, <a class="reference external" href="../../guide/data_types/spectra-4.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/spectra-4.png" src="../../_images/spectra-4.png" />
+</div>
+<p>If we want more context, we can also join together different images into
+a large one in time (note that this does more than just concatenating the
+array and the axes &#8211; it also considers possible overlap or gaps).:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">CallistoSpectrogram</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;BIR_20110922_101500_01.fit&#39;</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">CallistoSpectrogram</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;BIR_20110922_103000_01.fit&#39;</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">CallistoSpectrogram</span><span class="o">.</span><span class="n">join_many</span><span class="p">([</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>We could also get the from_range method to get data between those two points
+directly from the archive and joined together (though that will fetch all
+frequencies of BIR):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sunpy.spectra.sources.callisto</span> <span class="k">import</span> <span class="n">CallistoSpectrogram</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">CallistoSpectrogram</span><span class="o">.</span><span class="n">from_range</span><span class="p">(</span><span class="s1">&#39;BIR&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-09-22 10:15:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-09-22 10:45:00&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

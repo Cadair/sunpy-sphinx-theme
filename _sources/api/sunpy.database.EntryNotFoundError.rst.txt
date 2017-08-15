@@ -1,0 +1,6 @@
+EntryNotFoundError
+==================
+
+.. currentmodule:: sunpy.database
+
+.. autoexception:: EntryNotFoundError

@@ -1,0 +1,6 @@
+entries_from_query_result
+=========================
+
+.. currentmodule:: sunpy.database.tables
+
+.. autofunction:: entries_from_query_result

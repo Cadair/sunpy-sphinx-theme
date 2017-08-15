@@ -1,0 +1,6 @@
+get_content_disposition
+=======================
+
+.. currentmodule:: sunpy.util.net
+
+.. autofunction:: get_content_disposition

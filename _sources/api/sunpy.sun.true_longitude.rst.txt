@@ -1,0 +1,6 @@
+true_longitude
+==============
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: true_longitude

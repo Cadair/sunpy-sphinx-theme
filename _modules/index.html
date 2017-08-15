@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Overview: module code &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Overview: module code | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/index.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>All modules for which code is available</h1>
+<ul><li><a href="abc.html">abc</a></li>
+<li><a href="astropy/units/quantity.html">astropy.units.quantity</a></li>
+<li><a href="sqlalchemy/orm/attributes.html">sqlalchemy.orm.attributes</a></li>
+<li><a href="sunpy/cm/cm.html">sunpy.cm.cm</a></li>
+<li><a href="sunpy/coordinates/ephemeris.html">sunpy.coordinates.ephemeris</a></li>
+<li><a href="sunpy/coordinates/frames.html">sunpy.coordinates.frames</a></li>
+<li><a href="sunpy/coordinates/offset_frame.html">sunpy.coordinates.offset_frame</a></li>
+<li><a href="sunpy/coordinates/representation.html">sunpy.coordinates.representation</a></li>
+<li><a href="sunpy/coordinates/transformations.html">sunpy.coordinates.transformations</a></li>
+<li><a href="sunpy/coordinates/wcs_utils.html">sunpy.coordinates.wcs_utils</a></li>
+<li><a href="sunpy/data/_sample.html">sunpy.data._sample</a></li>
+<li><a href="sunpy/data/test.html">sunpy.data.test</a></li>
+<li><a href="sunpy/database/attrs.html">sunpy.database.attrs</a></li>
+<li><a href="sunpy/database/caching.html">sunpy.database.caching</a></li>
+<li><a href="sunpy/database/commands.html">sunpy.database.commands</a></li>
+<li><a href="sunpy/database/database.html">sunpy.database.database</a></li>
+<li><a href="sunpy/database/tables.html">sunpy.database.tables</a></li>
+<li><a href="sunpy/image/coalignment.html">sunpy.image.coalignment</a></li>
+<li><a href="sunpy/image/rescale.html">sunpy.image.rescale</a></li>
+<li><a href="sunpy/image/transform.html">sunpy.image.transform</a></li>
+<li><a href="sunpy/instr/aia.html">sunpy.instr.aia</a></li>
+<li><a href="sunpy/instr/fermi.html">sunpy.instr.fermi</a></li>
+<li><a href="sunpy/instr/goes.html">sunpy.instr.goes</a></li>
+<li><a href="sunpy/instr/iris/iris.html">sunpy.instr.iris.iris</a></li>
+<li><a href="sunpy/instr/lyra.html">sunpy.instr.lyra</a></li>
+<li><a href="sunpy/instr/rhessi.html">sunpy.instr.rhessi</a></li>
+<li><a href="sunpy/io/ana.html">sunpy.io.ana</a></li>
+<li><a href="sunpy/io/file_tools.html">sunpy.io.file_tools</a></li>
+<li><a href="sunpy/io/fits.html">sunpy.io.fits</a></li>
+<li><a href="sunpy/io/header.html">sunpy.io.header</a></li>
+<li><a href="sunpy/io/jp2.html">sunpy.io.jp2</a></li>
+<li><a href="sunpy/io/special/genx.html">sunpy.io.special.genx</a></li>
+<li><a href="sunpy/lightcurve/lightcurve.html">sunpy.lightcurve.lightcurve</a></li>
+<li><a href="sunpy/lightcurve/sources/eve.html">sunpy.lightcurve.sources.eve</a></li>
+<li><a href="sunpy/lightcurve/sources/fermi_gbm.html">sunpy.lightcurve.sources.fermi_gbm</a></li>
+<li><a href="sunpy/lightcurve/sources/goes.html">sunpy.lightcurve.sources.goes</a></li>
+<li><a href="sunpy/lightcurve/sources/logical.html">sunpy.lightcurve.sources.logical</a></li>
+<li><a href="sunpy/lightcurve/sources/lyra.html">sunpy.lightcurve.sources.lyra</a></li>
+<li><a href="sunpy/lightcurve/sources/noaa.html">sunpy.lightcurve.sources.noaa</a></li>
+<li><a href="sunpy/lightcurve/sources/norh.html">sunpy.lightcurve.sources.norh</a></li>
+<li><a href="sunpy/lightcurve/sources/rhessi.html">sunpy.lightcurve.sources.rhessi</a></li>
+<li><a href="sunpy/map/compositemap.html">sunpy.map.compositemap</a></li>
+<li><a href="sunpy/map/map_factory.html">sunpy.map.map_factory</a></li>
+<li><a href="sunpy/map/mapbase.html">sunpy.map.mapbase</a></li>
+<li><a href="sunpy/map/mapcube.html">sunpy.map.mapcube</a></li>
+<li><a href="sunpy/map/sources/hinode.html">sunpy.map.sources.hinode</a></li>
+<li><a href="sunpy/map/sources/iris.html">sunpy.map.sources.iris</a></li>
+<li><a href="sunpy/map/sources/proba2.html">sunpy.map.sources.proba2</a></li>
+<li><a href="sunpy/map/sources/rhessi.html">sunpy.map.sources.rhessi</a></li>
+<li><a href="sunpy/map/sources/sdo.html">sunpy.map.sources.sdo</a></li>
+<li><a href="sunpy/map/sources/soho.html">sunpy.map.sources.soho</a></li>
+<li><a href="sunpy/map/sources/source_type.html">sunpy.map.sources.source_type</a></li>
+<li><a href="sunpy/map/sources/stereo.html">sunpy.map.sources.stereo</a></li>
+<li><a href="sunpy/map/sources/trace.html">sunpy.map.sources.trace</a></li>
+<li><a href="sunpy/map/sources/yohkoh.html">sunpy.map.sources.yohkoh</a></li>
+<li><a href="sunpy/net/dataretriever/client.html">sunpy.net.dataretriever.client</a></li>
+<li><a href="sunpy/net/dataretriever/sources/eve.html">sunpy.net.dataretriever.sources.eve</a></li>
+<li><a href="sunpy/net/dataretriever/sources/goes.html">sunpy.net.dataretriever.sources.goes</a></li>
+<li><a href="sunpy/net/dataretriever/sources/lyra.html">sunpy.net.dataretriever.sources.lyra</a></li>
+<li><a href="sunpy/net/dataretriever/sources/noaa.html">sunpy.net.dataretriever.sources.noaa</a></li>
+<li><a href="sunpy/net/dataretriever/sources/norh.html">sunpy.net.dataretriever.sources.norh</a></li>
+<li><a href="sunpy/net/dataretriever/sources/rhessi.html">sunpy.net.dataretriever.sources.rhessi</a></li>
+<li><a href="sunpy/net/fido_factory.html">sunpy.net.fido_factory</a></li>
+<li><a href="sunpy/net/hek/hek.html">sunpy.net.hek.hek</a></li>
+<li><a href="sunpy/net/hek2vso/hek2vso.html">sunpy.net.hek2vso.hek2vso</a></li>
+<li><a href="sunpy/net/helio/hec.html">sunpy.net.helio.hec</a></li>
+<li><a href="sunpy/net/jsoc/attrs.html">sunpy.net.jsoc.attrs</a></li>
+<li><a href="sunpy/net/jsoc/jsoc.html">sunpy.net.jsoc.jsoc</a></li>
+<li><a href="sunpy/net/vso/attrs.html">sunpy.net.vso.attrs</a></li>
+<li><a href="sunpy/net/vso/vso.html">sunpy.net.vso.vso</a></li>
+<li><a href="sunpy/physics/differential_rotation.html">sunpy.physics.differential_rotation</a></li>
+<li><a href="sunpy/physics/solar_rotation.html">sunpy.physics.solar_rotation</a></li>
+<li><a href="sunpy/roi/chaincode.html">sunpy.roi.chaincode</a></li>
+<li><a href="sunpy/roi/roi.html">sunpy.roi.roi</a></li>
+<li><a href="sunpy/spectra/sources/callisto.html">sunpy.spectra.sources.callisto</a></li>
+<li><a href="sunpy/spectra/sources/swaves.html">sunpy.spectra.sources.swaves</a></li>
+<li><a href="sunpy/spectra/spectrogram.html">sunpy.spectra.spectrogram</a></li>
+<li><a href="sunpy/spectra/spectrum.html">sunpy.spectra.spectrum</a></li>
+<li><a href="sunpy/sun/constants.html">sunpy.sun.constants</a></li>
+<li><a href="sunpy/sun/sun.html">sunpy.sun.sun</a></li>
+<li><a href="sunpy/tests.html">sunpy.tests</a></li>
+<li><a href="sunpy/time/julian.html">sunpy.time.julian</a></li>
+<li><a href="sunpy/time/time.html">sunpy.time.time</a></li>
+<li><a href="sunpy/time/timerange.html">sunpy.time.timerange</a></li>
+<li><a href="sunpy/timeseries/metadata.html">sunpy.timeseries.metadata</a></li>
+<li><a href="sunpy/timeseries/sources/eve.html">sunpy.timeseries.sources.eve</a></li>
+<li><a href="sunpy/timeseries/sources/fermi_gbm.html">sunpy.timeseries.sources.fermi_gbm</a></li>
+<li><a href="sunpy/timeseries/sources/goes.html">sunpy.timeseries.sources.goes</a></li>
+<li><a href="sunpy/timeseries/sources/lyra.html">sunpy.timeseries.sources.lyra</a></li>
+<li><a href="sunpy/timeseries/sources/noaa.html">sunpy.timeseries.sources.noaa</a></li>
+<li><a href="sunpy/timeseries/sources/norh.html">sunpy.timeseries.sources.norh</a></li>
+<li><a href="sunpy/timeseries/sources/rhessi.html">sunpy.timeseries.sources.rhessi</a></li>
+<li><a href="sunpy/timeseries/timeseriesbase.html">sunpy.timeseries.timeseriesbase</a></li>
+<li><a href="sunpy/util/cond_dispatch.html">sunpy.util.cond_dispatch</a></li>
+<li><a href="sunpy/util/config.html">sunpy.util.config</a></li>
+<li><a href="sunpy/util/create.html">sunpy.util.create</a></li>
+<li><a href="sunpy/util/datatype_factory_base.html">sunpy.util.datatype_factory_base</a></li>
+<li><a href="sunpy/util/decorators.html">sunpy.util.decorators</a></li>
+<li><a href="sunpy/util/exceptions.html">sunpy.util.exceptions</a></li>
+<li><a href="sunpy/util/metadata.html">sunpy.util.metadata</a></li>
+<li><a href="sunpy/util/multimethod.html">sunpy.util.multimethod</a></li>
+<li><a href="sunpy/util/net.html">sunpy.util.net</a></li>
+<li><a href="sunpy/util/progressbar.html">sunpy.util.progressbar</a></li>
+<li><a href="sunpy/util/scraper.html">sunpy.util.scraper</a></li>
+<li><a href="sunpy/util/sysinfo.html">sunpy.util.sysinfo</a></li>
+<li><a href="sunpy/util/util.html">sunpy.util.util</a></li>
+<li><a href="sunpy/util/xml.html">sunpy.util.xml</a></li>
+<li><a href="sunpy/visualization/imageanimator.html">sunpy.visualization.imageanimator</a></li>
+<li><a href="sunpy/visualization/mapcubeanimator.html">sunpy.visualization.mapcubeanimator</a></li>
+<li><a href="sunpy/visualization/visualization.html">sunpy.visualization.visualization</a></li>
+<li><a href="sunpy/visualization/wcsaxes_compat.html">sunpy.visualization.wcsaxes_compat</a></li>
+<li><a href="sunpy/wcs/wcs.html">sunpy.wcs.wcs</a></li>
+</ul>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

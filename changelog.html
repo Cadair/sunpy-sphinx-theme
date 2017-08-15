@@ -1,0 +1,818 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Full Changelog &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="_static/version.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="SSWIDL/SunPy Cheat Sheet" href="ssw.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Full Changelog | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/changelog.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="full-changelog">
+<span id="changelog"></span><h1>Full Changelog<a class="headerlink" href="#full-changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="latest">
+<h2>Latest<a class="headerlink" href="#latest" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Solar differential rotation for maps and submaps included.</li>
+<li>Solar rotation calculation and mapcube derotation now use sunpy coordinates.</li>
+<li>Sample data now downloads automatically on import if not available
+and is now pluggable so can be used by affiliated packages. Shortcut
+names have been normalized and all LIGHTCURVE shortcuts have changed
+to TIMESERIES.</li>
+<li>Calculation of points on an arc of a great circle connecting two
+points on the Sun.</li>
+<li>Removed <code class="docutils literal"><span class="pre">extract_time</span></code> function from <code class="docutils literal"><span class="pre">sunpy.time</span></code> and also tests
+related to the function from <code class="docutils literal"><span class="pre">sunpy.time.tests</span></code></li>
+<li>User can now pass a custom time format as an argument inside
+<code class="docutils literal"><span class="pre">sunpy.database.add_from_dir()</span></code> in case the <code class="docutils literal"><span class="pre">date-obs</span></code> metadata
+cannot be read automatically from the files.</li>
+<li>Add time format used by some SDO HMI FITS keywords</li>
+<li>Now the <code class="docutils literal"><span class="pre">sunpy.database.tables.display_entries()</span></code> prints an astropy
+table.</li>
+<li>Additional methods added inside the <code class="docutils literal"><span class="pre">sunpy.database</span></code> class to make
+it easier to display the database contents.</li>
+<li>Remove unused <code class="docutils literal"><span class="pre">sunpy.visualization.plotting</span></code> module</li>
+<li>Port the pyana wrapper to Python 3</li>
+<li><code class="docutils literal"><span class="pre">Map.peek(basic_plot-True)</span></code> no longer issues warnings</li>
+<li>Remove the <code class="docutils literal"><span class="pre">sunpy.map.nddata_compat</span></code> module, this makes
+<code class="docutils literal"><span class="pre">Map.data</span></code> and <code class="docutils literal"><span class="pre">Map.meta</span></code> read only.</li>
+<li>Add a <code class="docutils literal"><span class="pre">NorthOffsetFrame</span></code> class for generating HGS-like coordinate
+systems with a shifted north pole.</li>
+<li>Remove deprecated <code class="docutils literal"><span class="pre">VSOClient.show</span></code> method.</li>
+<li>Deprecate <code class="docutils literal"><span class="pre">sunpy.wcs</span></code>: <code class="docutils literal"><span class="pre">sunpy.coordinates</span></code> and <code class="docutils literal"><span class="pre">sunpy.map</span></code> now
+provide all that functionality in a more robust manner.</li>
+<li>Added hdu index in <code class="docutils literal"><span class="pre">sunpy.database.tables.DatabaseEntry</span></code> as a
+column in the table.</li>
+<li>Removed <code class="docutils literal"><span class="pre">HelioviewerClient</span></code> from the <code class="docutils literal"><span class="pre">sunpy.net</span></code> namespace. It
+should now be imported with
+<code class="docutils literal"><span class="pre">from</span> <span class="pre">sunpy.net.helioviewer</span> <span class="pre">import</span> <span class="pre">HelioviewerClient</span></code>.</li>
+<li>Removed compatibility with standalone <code class="docutils literal"><span class="pre">wcsaxes</span></code> and instead depend
+on the version in astropy 1.3. SunPy now therefore depends on
+astropy&gt;-1.3.</li>
+<li>Update to <code class="docutils literal"><span class="pre">TimeRange.__repr__</span></code>; now includes the qualified name and
+<code class="docutils literal"><span class="pre">id</span></code> of the object.</li>
+<li>A new <code class="docutils literal"><span class="pre">sunpy.visualization.imageanimator.LineAnimator</span></code> class has
+been added to animate 1D data. This has resulted in API change for
+the <code class="docutils literal"><span class="pre">sunpy.visualization.imageanimator.ImageAnimator</span></code> class. The
+updateimage method has been renamed to update_plot.</li>
+<li>Drop support for Python 3.4.</li>
+<li>SunPy now requires WCSAxes and Map.draw_grid only works with
+WCSAxes.</li>
+<li><code class="docutils literal"><span class="pre">Helioprojective</span></code> and <code class="docutils literal"><span class="pre">HelioCentric</span></code> frames now have an
+<code class="docutils literal"><span class="pre">observer</span></code> attribute which itself is a coordinate object
+(<code class="docutils literal"><span class="pre">SkyCoord</span></code>) instead of <code class="docutils literal"><span class="pre">B0</span></code>, <code class="docutils literal"><span class="pre">L0</span></code> and <code class="docutils literal"><span class="pre">D0</span></code> to describe the
+position of the observer.</li>
+<li><code class="docutils literal"><span class="pre">GenericMap.draw_grid</span></code> now uses <code class="docutils literal"><span class="pre">WCSAxes</span></code>, it will only work on a
+<code class="docutils literal"><span class="pre">WCSAxes</span></code> plot, this may be less performant than the previous
+implementation.</li>
+<li><code class="docutils literal"><span class="pre">GenericMap.world_to_pixel</span></code> and <code class="docutils literal"><span class="pre">GenericMap.pixel_to_world</span></code> now
+accept and return <code class="docutils literal"><span class="pre">SkyCoord</span></code> objects only.</li>
+<li><code class="docutils literal"><span class="pre">GenericMap</span></code> has a new property <code class="docutils literal"><span class="pre">observer_coordinate</span></code> which
+returns a <code class="docutils literal"><span class="pre">SkyCoord</span></code> describing the position of the observer.</li>
+<li><code class="docutils literal"><span class="pre">GenericMap.submap</span></code> now takes arguments of the form <code class="docutils literal"><span class="pre">bottom_left</span></code>
+and <code class="docutils literal"><span class="pre">top_right</span></code> rather than <code class="docutils literal"><span class="pre">range_a</span></code> and <code class="docutils literal"><span class="pre">range_b</span></code>. This
+change enables submap to properly handle rotated maps and take input
+in the form of <code class="docutils literal"><span class="pre">SkyCoord</span></code> objects.</li>
+<li>When referring to physical coordinates <code class="docutils literal"><span class="pre">Pair.x</span></code> has been replaced
+with <code class="docutils literal"><span class="pre">SpatialPair.axis1</span></code>. This means values returned by
+<code class="docutils literal"><span class="pre">GenericMap</span></code> now differentiate between physical and pixel
+coordinates.</li>
+<li>The physical radius of the Sun (length units) is now passed from Map
+into the coordinate frame so a consistent value is used when
+calculating distance to the solar surface in the
+<code class="docutils literal"><span class="pre">HelioprojectiveFrame</span></code> coordinate frame.</li>
+<li>A new <code class="docutils literal"><span class="pre">sunpy.visualization.imageanimator.ImageAnimatorWCS</span></code> class
+has been added to animate N-Dimensional data with the associated WCS
+object.</li>
+<li>Moved Docs to docs/ to follow the astropy style</li>
+<li>Added SunPy specific warnings under util.</li>
+<li>SunPy coordinate frames can now be transformed to and from Astropy
+coordinate frames</li>
+<li>The time attribute for SunPy coordinate frames has been renamed from
+<code class="docutils literal"><span class="pre">dateobs</span></code> to <code class="docutils literal"><span class="pre">obstime</span></code></li>
+<li>Ephemeris calculations with higher accuracy are now available under
+<code class="docutils literal"><span class="pre">sunpy.coordinates.ephemeris</span></code></li>
+<li>Add support for SunPy coordinates to specify observer as a string of
+a major solar-system body, with the default being Earth. To make
+transformations using an observer specified as a string, <code class="docutils literal"><span class="pre">obstime</span></code>
+must be set.</li>
+<li>Added VSO query result block level caching in the database module.
+This prevents redownloading of files which have already been
+downloaded. Especially helpful in case of overlapping queries.</li>
+<li>Change the default representation for the Heliographic Carrington
+frame so Longitude follows the convention of going from 0-360
+degrees.</li>
+<li>All Clients that are able to search and download data now have a uniform API that is <code class="xref py py-obj docutils literal"><span class="pre">search</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">fetch</span></code>.
+The older functions are still there but are deprecated for 0.8.</li>
+</ul>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Add tests for RHESSI instrument</li>
+<li>Maps from Helioviewer JPEG2000 files now have correct image scaling.</li>
+<li>Get and set methods for composite maps now use Map plot_settings.</li>
+<li>Simplified map names when plotting.</li>
+<li>Fix bug in <code class="docutils literal"><span class="pre">wcs.convert_data_to_pixel</span></code> where crpix[1] was used for
+both axes.</li>
+<li>Fix some leftover instances of <code class="docutils literal"><span class="pre">GenericMap.units</span></code></li>
+<li>Fixed bugs in <code class="docutils literal"><span class="pre">sun</span></code> equations</li>
+<li><code class="docutils literal"><span class="pre">sunpy.io.fits.read</span></code> will now return any parse-able HDUs even if
+some raise an error.</li>
+<li><code class="docutils literal"><span class="pre">VSOClient</span></code> no longer prints a lot of XML junk if the query fails.</li>
+<li>Fix Map parsing of some header values to allow valid float strings
+like &#8216;nan&#8217; and &#8216;inf&#8217;.</li>
+<li>Fix Map parsing of some header values to allow valid float strings
+like &#8216;nan&#8217; and &#8216;inf&#8217;.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>0.7.8<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The SunPy data directory &#8220;~/sunpy&#8221; is no longer created until it is
+used (issue #2018)</li>
+<li>Change the default representation for the Heliographic Carrington
+frame so Longitude follows the convention of going from 0-360
+degrees.</li>
+<li>Fix for surface gravity unit.</li>
+<li>Support for Pandas 0.20.1</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>0.7.7<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fix errors with Numpy 1.12</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>0.7.6<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add Astropy 1.3 Support</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>0.7.5<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fix test faliure (mapbase) with 1.7.4</li>
+<li>Restrict supported Astropy version to 1.0&lt;astropy&lt;1.3</li>
+<li>Add Figure test env to SunPy repo.</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>0.7.4<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Remove Map always forcing warnings on.</li>
+<li><code class="docutils literal"><span class="pre">Map.center</span></code> now uses <code class="docutils literal"><span class="pre">Map.wcs</span></code> to correctly handle rotation.</li>
+<li>Fix link in coordinates documentation.</li>
+<li>Update helioviewer URL to HTTPS (fixes access to Helioviewer).</li>
+<li>Fix processing of TRACE and YOHKOH measurement properties.</li>
+<li>Remove warnings when using <code class="docutils literal"><span class="pre">Map.peek(basic_plot-True)</span></code></li>
+<li>Update docstrings for HPC and HCC frames.</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>0.7.3<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fix ConfigParser for Python 3.5.2 - This allows SunPy to run under
+Python 3.5.2</li>
+<li>Fix incorrect ordering of keys in <code class="docutils literal"><span class="pre">MapMeta</span></code></li>
+<li>Add <code class="docutils literal"><span class="pre">sunpy.util.scraper</span></code> to the API documentation.</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h2>0.7.2<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed bugs in <code class="docutils literal"><span class="pre">sun</span></code> equations</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h2>0.7.1<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fix bug in <code class="docutils literal"><span class="pre">wcs.convert_data_to_pixel</span></code> where crpix[1] was used for
+both axes.</li>
+<li>Fix some leftover instances of <code class="docutils literal"><span class="pre">GenericMap.units</span></code></li>
+<li>Fixed bugs in <code class="docutils literal"><span class="pre">sun</span></code> equations</li>
+<li>Now the <code class="docutils literal"><span class="pre">sunpy.database.tables.display_entries()</span></code> prints an astropy
+table.</li>
+<li>Additional methods added inside the <code class="docutils literal"><span class="pre">sunpy.database</span></code> class to make
+it easier to display the database contents.</li>
+<li><code class="docutils literal"><span class="pre">sunpy.io.fits.read</span></code> will now return any parse-able HDUs even if
+some raise an error.</li>
+<li><code class="docutils literal"><span class="pre">VSOClient</span></code> no longer prints a lot of XML junk if the query fails.</li>
+<li>Remove unused <code class="docutils literal"><span class="pre">sunpy.visualization.plotting</span></code> module</li>
+<li><code class="docutils literal"><span class="pre">Map.peek(basic_plot-True)</span></code> no longer issues warnings</li>
+<li>Remove the <code class="docutils literal"><span class="pre">sunpy.map.nddata_compat</span></code> module, this makes
+<code class="docutils literal"><span class="pre">Map.data</span></code> and <code class="docutils literal"><span class="pre">Map.meta</span></code> read only.</li>
+<li>Add a <code class="docutils literal"><span class="pre">NorthOffsetFrame</span></code> class for generating HGS-like coordinate
+systems with a shifted north pole.</li>
+<li>Remove deprecated <code class="docutils literal"><span class="pre">VSOClient.show</span></code> method.</li>
+<li>Deprecate <code class="docutils literal"><span class="pre">sunpy.wcs</span></code>: <code class="docutils literal"><span class="pre">sunpy.coordinates</span></code> and <code class="docutils literal"><span class="pre">sunpy.map</span></code> now
+provide all that functionality in a more robust manner.</li>
+<li>Added hdu index in <code class="docutils literal"><span class="pre">sunpy.database.tables.DatabaseEntry</span></code> as a
+column in the table.</li>
+<li>Removed <code class="docutils literal"><span class="pre">HelioviewerClient</span></code> from the <code class="docutils literal"><span class="pre">sunpy.net</span></code> namespace. It
+should now be imported with
+<code class="docutils literal"><span class="pre">from</span> <span class="pre">sunpy.net.helioviewer</span> <span class="pre">import</span> <span class="pre">HelioviewerClient</span></code>.</li>
+<li>Removed compatibility with standalone <code class="docutils literal"><span class="pre">wcsaxes</span></code> and instead depend
+on the version in astropy 1.3. SunPy now therefore depends on
+astropy&gt;-1.3.</li>
+<li>Update to <code class="docutils literal"><span class="pre">TimeRange.__repr__</span></code>; now includes the qualified name and
+<code class="docutils literal"><span class="pre">id</span></code> of the object.</li>
+<li>Change the default representation for the Heliographic Carrington
+frame so Longitude follows the convention of going from 0-360
+degrees.</li>
+<li>Fix Map parsing of some header values to allow valid float strings
+like &#8216;nan&#8217; and &#8216;inf&#8217;.</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h2>0.7.0<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed test failures with numpy developer version.[<a class="reference external" href="https://github.com/sunpy/sunpy/issues/1808">#1808</a>]</li>
+<li>Added <code class="docutils literal"><span class="pre">timeout</span></code> parameter in <code class="docutils literal"><span class="pre">sunpy.data.download_sample_data()</span></code></li>
+<li>Fixed <code class="docutils literal"><span class="pre">aiaprep</span></code> to return properly sized map.</li>
+<li>Deprecation warnings fixed when using image coalignment.</li>
+<li>Sunpy is now Python 3.x compatible (3.4 and 3.5).</li>
+<li>Added a unit check and warnings for map metadata.</li>
+<li>Added IRIS SJI color maps.</li>
+<li>Updated <code class="docutils literal"><span class="pre">show_colormaps()</span></code> with new string filter to show a subset
+of color maps.</li>
+<li>Fixed MapCube animations by working around a bug in Astropy&#8217;s
+ImageNormalize</li>
+<li>Remove <code class="docutils literal"><span class="pre">vso.QueryResponse.num_records()</span></code> in favour of <code class="docutils literal"><span class="pre">len(qr)</span></code></li>
+<li>Add a <code class="docutils literal"><span class="pre">draw_rectangle</span></code> helper to <code class="docutils literal"><span class="pre">GenericMap</span></code> which can plot
+rectangles in the native coordinate system of the map.</li>
+<li>Added the ability to shift maps to correct for incorrect map
+location, for example.</li>
+<li>Bug fix for RHESSI summary light curve values.</li>
+<li>Mapcube solar derotation and coalignment now pass keywords to the
+routine used to shift the images, scipy.ndimage.interpolation.shift.</li>
+<li>Add automatic registration of <code class="docutils literal"><span class="pre">GenericMap</span></code> subclasses with the
+factory as long as they define an <code class="docutils literal"><span class="pre">is_datasource_for</span></code> method.</li>
+<li>Added functions <code class="docutils literal"><span class="pre">flareclass_to_flux</span></code> and <code class="docutils literal"><span class="pre">flux_to_flareclass</span></code>
+which convert between GOES flux to GOES class numbers (e.g. X12,
+M3.4).</li>
+<li>Removed old <code class="docutils literal"><span class="pre">sunpy.util.goes_flare_class()</span></code></li>
+<li>Bug fix for RHESSI summary light curve values.</li>
+<li>The <code class="docutils literal"><span class="pre">MapCube.as_array</span></code> function now returns a masked numpy array if
+at least one of the input maps in the MapCube has a mask.</li>
+<li>Map superpixel method now respects maps that have masks.</li>
+<li>Map superpixel method now accepts numpy functions as an argument, or
+any user-defined function.</li>
+<li>Map superpixel method no longer has the restriction that the number
+of original pixels in the x (or y) side of the superpixel exactly
+divides the number of original pixels in the x (or y) side of the
+original map data.</li>
+<li><code class="docutils literal"><span class="pre">sunpy.physics.transforms</span></code> has been deprecated and the code moved
+into <code class="docutils literal"><span class="pre">sunpy.physics</span></code>.</li>
+<li>Add the <code class="docutils literal"><span class="pre">sunpy.coordinates</span></code> module, this adds the core physical
+solar coordinates frame within the astropy coordinates framework.</li>
+<li>Added ability of maps to draw contours on top of themselves
+(<code class="docutils literal"><span class="pre">draw_contours</span></code>)</li>
+<li>Added concatenate functionality to lightcurve base class.</li>
+<li>Fix Map to allow astropy.io.fits Header objects as valid input for
+meta arguments.</li>
+<li>Added an examples gallery using <code class="docutils literal"><span class="pre">sphinx-gallery</span></code>.</li>
+<li>API clean up to constants. Removed constant() function which is now
+replaced by get().</li>
+<li>Prevent helioviewer tests from checking access to the API endpoint
+when running tests offline.</li>
+<li><code class="docutils literal"><span class="pre">GenericMap.units</span></code> is renamed to <code class="docutils literal"><span class="pre">GenericMap.spatial_units</span></code> to
+avoid confusion with <code class="docutils literal"><span class="pre">NDData.unit</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">GenericMap</span></code> now has a <code class="docutils literal"><span class="pre">coordinate_frame</span></code> property which returns
+an <code class="docutils literal"><span class="pre">astropy.coordinates</span></code> frame with all the meta data from the map
+populated.</li>
+<li><code class="docutils literal"><span class="pre">GenericMap</span></code> now has a <code class="docutils literal"><span class="pre">_mpl_axes</span></code> method which allows it to be
+specified as a projection to <code class="docutils literal"><span class="pre">matplotlib</span></code> methods and will return a
+<code class="docutils literal"><span class="pre">WCSAxes</span></code> object with <code class="docutils literal"><span class="pre">WCS</span></code> projection.</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h2>0.6.5<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The draw_grid keyword of the peek method of Map now accepts booleans
+or astropy quantities.</li>
+<li>Fix bug in <code class="docutils literal"><span class="pre">wcs.convert_data_to_pixel</span></code> where crpix[1] was used for
+both axes.</li>
+<li>Fixed bugs in <code class="docutils literal"><span class="pre">sun</span></code> equations</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h2>0.6.4<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Bug fix for rhessi summary lightcurve values.</li>
+<li>Fix docstring for <code class="docutils literal"><span class="pre">pixel_to_data</span></code> and <code class="docutils literal"><span class="pre">data_to_pixel</span></code>.</li>
+<li>Fix the URL for the Helioviewer API. (This fixes Helioviewer.)</li>
+<li>Fix the way <code class="docutils literal"><span class="pre">reshape_image_to_4d_superpixel</span></code> checks the dimension
+of the new image.</li>
+<li>Fix Map to allow astropy.io.fits Header objects as valid input for
+meta arguments.</li>
+<li>Prevent helioviewer tests from checking access to API when running
+tests in offline mode.</li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h2>0.6.3<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Change setup.py extras to install suds-jurko not suds.</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h2>0.6.2<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Changed start of GOES 2 operational time range back to 1980-01-04 so
+data from 1980 can be read into GOESLightCurve object</li>
+<li>Fix bug with numpy 1.10</li>
+<li>update astropy_helpers</li>
+<li>Added new sample data</li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h2>0.6.1<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed MapCube animations by working around a bug in Astropy&#8217;s
+ImageNormalize</li>
+<li>Small fix to RTD builds for Affiliated packages</li>
+<li>SunPy can now be installed without having to install Astropy first.</li>
+<li>MapCubes processed with <code class="docutils literal"><span class="pre">coalignment.apply_shifts</span></code> now have correct
+metadata.</li>
+<li>Multiple fixes for WCS transformations, especially with solar-x,
+solar-y CTYPE headers.</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h2>0.6.0<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Enforced the use of Astropy Quantities through out most of SunPy.</li>
+<li>Dropped Support for Python 2.6.</li>
+<li>Remove old style string formatting and other 2.6 compatibility lines.</li>
+<li>Added vso like querying feature to JSOC Client.</li>
+<li>Refactor the JSOC client so that it follows the .query() .get()
+interface of VSOClient and UnifedDownloader.</li>
+<li>Provide <code class="docutils literal"><span class="pre">__str__</span></code> and <code class="docutils literal"><span class="pre">__repr__</span></code> methods on vso <code class="docutils literal"><span class="pre">QueryResponse</span></code>
+deprecate <code class="docutils literal"><span class="pre">.show()</span></code>.</li>
+<li>Downloaded files now keep file extensions rather than replacing all
+periods with underscores.</li>
+<li>Update to TimeRange API, removed t1 and t0, start and end are now
+read-only attributes.</li>
+<li>Added ability to download level3 data for lyra Light Curve along with
+corresponding tests.</li>
+<li>Added support for gzipped FITS files.</li>
+<li>Add STEREO HI Map subclass and color maps.</li>
+<li>Map.rotate() no longer crops any image data.</li>
+<li>For accuracy, default Map.rotate() transformation is set to
+bi-quartic.</li>
+<li><code class="docutils literal"><span class="pre">sunpy.image.transform.affine_transform</span></code> now casts integer data to
+float64 and sets NaN values to 0 for all transformations except
+scikit-image rotation with order &lt;- 3.</li>
+<li>CD matrix now updated, if present, when Map pixel size is changed.</li>
+<li>Removed now-redundant method for rotating IRIS maps since the
+functionality exists in Map.rotate()</li>
+<li>Provide <code class="docutils literal"><span class="pre">__str__</span></code> and <code class="docutils literal"><span class="pre">__repr__</span></code> methods on vso <code class="docutils literal"><span class="pre">QueryResponse</span></code>
+deprecate <code class="docutils literal"><span class="pre">.show()</span></code></li>
+<li>SunPy colormaps are now registered with matplotlib on import of
+<code class="docutils literal"><span class="pre">sunpy.cm</span></code></li>
+<li><code class="docutils literal"><span class="pre">sunpy.cm.get_cmap</span></code> no longer defaults to &#8216;sdoaia94&#8217;</li>
+<li>Added database url config setting to be setup by default as a sqlite
+database in the sunpy working directory</li>
+<li>Added a few tests for the sunpy.roi module</li>
+<li>Added capability for figure-based tests</li>
+<li>Removed now-redundant method for rotating IRIS maps since the
+functionality exists in Map.rotate().</li>
+<li>SunPy colormaps are now registered with matplotlib on import of
+<code class="docutils literal"><span class="pre">sunpy.cm</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">sunpy.cm.get_cmap</span></code> no longer defaults to &#8216;sdoaia94&#8217;.</li>
+<li>Added database url config setting to be setup by default as a sqlite
+database in the sunpy working directory.</li>
+<li>Added a few tests for the sunpy.roi module.</li>
+<li>Refactored mapcube co-alignment functionality.</li>
+<li>Removed sample data from distribution and added ability to download
+sample files</li>
+<li>Changed start of GOES 2 operational time range back to 1980-01-04 so
+data from 1980 can be read into GOESLightCurve object</li>
+<li>Require JSOC request data calls have an email address attached.</li>
+<li>Calculation of the solar rotation of a point on the Sun as seen from
+Earth, and its application to the de-rotation of mapcubes.</li>
+<li>Downloaded files now keep file extensions rather than replacing all
+periods with underscores</li>
+<li>Fixed the downloading of files with duplicate names in sunpy.database</li>
+<li>Removed sample data from distribution and added ability to download
+sample files.</li>
+<li>Added the calculation of the solar rotation of a point on the Sun as
+seen from Earth, and its application to the de-rotation of mapcubes.</li>
+<li>Changed default for GOESLightCurve.create() so that it gets the data
+from the most recent existing GOES fits file.</li>
+<li>Map plot functionality now uses the mask property if it is present,
+allowing the plotting of masked map data</li>
+<li>Map Expects Quantities and returns quantities for most parameters.</li>
+<li>Map now used Astropy.wcs for world &lt;-&gt; pixel conversions.</li>
+<li>map.world_to_pixel now has a similar API to map.pixel_to_world.</li>
+<li>map.shape has been replaced with map.dimensions, which is ordered x
+first.</li>
+<li>map.rsun_arcseconds is now map.rsun_obs as it returns a quantity.</li>
+<li>Map properties are now named tuples rather than dictionaries.</li>
+<li>Improvement for Map plots, standardization and improved color tables,
+better access to plot variables through new plot_settings variable.</li>
+<li>Huge improvements in Instrument Map doc strings. Now contain
+instrument descriptions as well as reference links for more info.</li>
+<li>net.jsoc can query data series with time sampling by a Sample
+attribute implemented in vso.</li>
+<li>MapCube.plot and MapCube.peek now support a user defined
+plot_function argument for customising the animation.</li>
+<li>Added new sample data file, an AIA cutout file.</li>
+<li>Moved documentation build directory to doc/build</li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h2>0.5.5<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Changed default for GOESLightCurve.create() so that it gets the data
+from the most recent existing GOES fits file.</li>
+<li>Improvements to the Map documentation.</li>
+<li>Typo fixes in sunpy.wcs documentation.</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h2>0.5.4<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">sunpy.image.transform.affine_transform</span></code> now casts integer data to
+float64 and sets NaN values to 0 for all transformations except
+scikit-image rotation with order &lt;- 3.</li>
+<li>Updated SWPC/NOAA links due to their new website.</li>
+<li>Exposed the raw AIA color tables in <code class="docutils literal"><span class="pre">sunpy.cm.color_tables</span></code>.</li>
+<li>Fixes <code class="docutils literal"><span class="pre">map</span></code> compatibility with Astropy 1.0.x.</li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h2>0.5.3<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Goes peek() plot now works with matplotlib 1.4.x</li>
+<li>The ANA file reading C extensions will no longer compile under
+windows. Windows was not a supported platform for these C extensions
+previously.</li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h2>0.5.2<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>If no CROTA keyword is specified in Map meta data, it will now
+default to 0 as specified by the FITS WCS standard.</li>
+<li>Map now correctly parses and converts the CD matrix, as long as CDELT
+is specified as well. (Fixes SWAP files)</li>
+<li>Fix of HELIO webservice URLs</li>
+<li>MapCube.plot() is now fixed and returns a
+matplotlib.animation.FuncAnimation object.</li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h2>0.5.1<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>MAJOR FIX: map.rotate() now works correctly for all submaps and off
+center rotations.</li>
+<li>HELIO URL updated, querys should now work as expected.</li>
+<li>All tabs removed from the code base.</li>
+<li>All tests now use tempfile rather than creating files in the current
+directory.</li>
+<li>Documentation builds under newer sphinx versions.</li>
+<li>ANA and JP2 tests are skipped if dependancies are missing.</li>
+<li>ANA tests are skipped on windows.</li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h2>0.5.0<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added additional functionality to the GOES module i.e. the ability to
+calculate GOES temperature and emission measure from GOES fluxes.</li>
+<li>changed _maps attribute in MapCube to a non-hidden type</li>
+<li>Added Nobeyama Radioheliograph data support to Lightcurve object.</li>
+<li>Fixed some tests on map method to support Windows</li>
+<li>Added a window/split method to time range</li>
+<li>Updates to spectrogram documentation</li>
+<li>Added method Database.add_from_hek_query_result to HEK database</li>
+<li>Added method Database.download_from_vso_query_result</li>
+<li>GOES Lightcurve now makes use of a new source of GOES data, provides
+metadata, and data back to 1981.</li>
+<li>Removed sqlalchemy as a requirement for SunPy</li>
+<li>Added support for NOAA solar cycle prediction in lightcurves</li>
+<li>Some basic tests for GenericLightCurve on types of expected input.</li>
+<li>Fix algorithm in sunpy.sun.equation_of_center</li>
+<li>Added Docstrings to LightCurve methods.</li>
+<li>Added tests for classes in sunpy.map.sources. Note that some classes
+(TRACE, RHESSI) were left out because SunPy is not able to read their
+FITS files.</li>
+<li>Added functions that implement image coalignment with support for
+MapCubes.</li>
+<li>Cleaned up the sunpy namespace, removed .units, /ssw and .sphinx.
+Also moved .coords .physics.transforms.</li>
+<li>Added contains functionality to TimeRange module</li>
+<li>Added t-&#8216;now&#8217; to parse_time to privide utcnow datetime.</li>
+<li>Fixed time dependant functions (.sun) to default to t-&#8216;now&#8217;</li>
+<li>Fixed solar_semidiameter_angular_size</li>
+<li>Improved line quality and performances issues with map.draw_grid()</li>
+<li>Remove deprecated make_map command.</li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h2>0.4.2<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixes to the operational range of GOES satellites</li>
+<li>Fix the URL for HELIO queries.</li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h2>0.4.1<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fix map.rotate() functionality</li>
+<li>Change of source for GOES data.</li>
+<li>Fix EIT test data and sunpy FITS saving</li>
+<li>Some documentation fixes</li>
+<li>fix file paths to use os.path.join for platform independance.</li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h2>0.4.0<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Major</strong> documentation refactor. A far reaching re-write and
+restructure.</li>
+<li>Add a SunPy Database to store and search local data.</li>
+<li>Add beta support for querying the HELIO HEC</li>
+<li>Add beta HEK to VSO query translation.</li>
+<li>Add the ability to download the GOES event list.</li>
+<li>Add support for downloading and querying the LYTAF database.</li>
+<li>Add support for ANA data.</li>
+<li>Updated sun.constants to use astropy.constants objects which include
+units, source, and error instide. For more info check out
+<a class="reference external" href="http://docs.astropy.org/en/latest/constants/index.html">http://docs.astropy.org/en/latest/constants/index.html</a></li>
+<li>Add some beta support for IRIS data products</li>
+<li>Add a new MapCubeAnimator class with interactive widgets which is
+returned by mapcube.peek().</li>
+<li>The Glymur library is now used to read JPEG2000 files.</li>
+<li>GOESLightCurve now supports all satellites.</li>
+<li>Add support for VSO queries through proxies.</li>
+<li>Fix apparent Right Ascension calulations.</li>
+<li>LightCurve meta data member now an OrderedDict Instance</li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h2>0.3.2<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Pass draw_limb arguments to patches.Circle</li>
+<li>Pass graw_grid arguments to pyplot.plot()</li>
+<li>Fix README code example</li>
+<li>Fix Documentation links in potting guide</li>
+<li>Update to new EVE data URL</li>
+<li>Update LogicalLightcurve example in docs</li>
+<li>Improved InteractiveVSOClient documentation</li>
+<li>GOESLightCurve now fails politely if no data is avalible.</li>
+</ul>
+<p>Known Bugs:</p>
+<ul class="simple">
+<li>sunpy.util.unit_conversion.to_angstrom does not work if &#8216;nm&#8217; is
+passed in.</li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h2>0.3.1<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Bug Fix: Fix a regression in CompositeMap that made contor plots
+fail.</li>
+<li>Bug Fix: Allow Map() to accept dict as metadata.</li>
+<li>Bug Fix: Pass arguments from Map() to io.read_file.</li>
+</ul>
+</div>
+<div class="section" id="id27">
+<h2>0.3.0<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Removal of Optional PIL dependancy</li>
+<li>Parse_time now looks through nested lists/tuples</li>
+<li>Draw_limb and draw_grid are now implemented on MapCube and
+CompositeMap</li>
+<li>Caculations for differential roation added</li>
+<li>mapcube.plot() now runs a mpl animation with optional controls</li>
+<li>A basic Region of Interest framework now exists under sunpy.roi</li>
+<li>STEREO COR colour maps have been ported from solarsoft.</li>
+<li>sunpy.time.timerange has a split() method that divides up a time
+range into n equal parts.</li>
+<li>Added download progress bar</li>
+<li>pyfits is depricated in favor of Astropy</li>
+</ul>
+<p>spectra:</p>
+<ul class="simple">
+<li>Plotting has been refactorted to use a consistent interface</li>
+<li>spectra now no-longer inherits from numpy.ndarray instead has a .data
+attribute.</li>
+</ul>
+<p>Map: * map now no-longer inherits from numpy.ndarray instead has a
+.data attribute. * make_map is deprecated in favor of Map which is a
+new factory class * sunpy.map.Map is now sunpy.map.GenericMap *
+mymap.header is now mymap.meta * attributes of the map class are now
+read only, changes have to be made through map.meta * new MapMeta class
+to replace MapHeader, MapMeta is not returned by sunpy.io * The
+groundwork for GenericMap inherting from astropy.NDData has been done,
+there is now a NDDataStandin class to provide basic functionality.</p>
+<p>io: * top level file_tools improved to be more flexible and support
+multiple HDUs * all functions in sunpy.io now assume mutliple HDUs,
+even JP2 ones. * there is now a way to override the automatic filetype
+detection * Automatic fits file detection improved * extract_waveunit
+added to io.fits for detection of common ways of storing wavelength unit
+in fits files.</p>
+<ul class="simple">
+<li>A major re-work of all interal imports has resulted in a much cleaner
+namespace, i.e. sunpy.util.util is no longer used to import util.</li>
+<li>Some SOHO and STEREO files were not reading properly due to a
+date_obs parameter.</li>
+<li>Sunpy will now read JP2 files without a comment parameter.</li>
+<li>Memory leak in Crotate patched</li>
+<li>Callisto: Max gap between files removed</li>
+</ul>
+</div>
+<div class="section" id="id28">
+<h2>0.2.0<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Completely re-written plotting routines for most of the core
+datatypes.</li>
+<li>JPEG 2000 support as an input file type.</li>
+<li>Improved documentation for much of the code base, including
+re-written installation instructions.</li>
+<li>New lightcurve object<ul>
+<li>LYRA support</li>
+<li>GOES/XRS support</li>
+<li>SDO/EVE support</li>
+</ul>
+</li>
+<li>New Spectrum and Spectrogram object (in development)<ul>
+<li>Spectrogram plotting routines</li>
+<li>Callisto spectrum type and support</li>
+<li>STEREO/SWAVES support</li>
+</ul>
+</li>
+<li>Map Object<ul>
+<li>Added support for LASCO, Yohkoh/XRT maps</li>
+<li>A new CompositeMap object for overlaying maps</li>
+<li>Resample method</li>
+<li>Superpixel method</li>
+<li>The addition of the rotate() method for 2D maps.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

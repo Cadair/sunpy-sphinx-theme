@@ -1,0 +1,31 @@
+SWavesSpectrogram
+=================
+
+.. currentmodule:: sunpy.spectra.sources
+
+.. autoclass:: SWavesSpectrogram
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~SWavesSpectrogram.COPY_PROPERTIES
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SWavesSpectrogram.create
+      ~SWavesSpectrogram.read
+      ~SWavesSpectrogram.swavesfile_to_date
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: COPY_PROPERTIES
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: create
+   .. automethod:: read
+   .. automethod:: swavesfile_to_date

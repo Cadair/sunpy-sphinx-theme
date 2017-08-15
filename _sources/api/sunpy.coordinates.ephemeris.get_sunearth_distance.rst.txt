@@ -1,0 +1,6 @@
+get_sunearth_distance
+=====================
+
+.. currentmodule:: sunpy.coordinates.ephemeris
+
+.. autofunction:: get_sunearth_distance

@@ -1,0 +1,6 @@
+mapcube_coalign_by_match_template
+=================================
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: mapcube_coalign_by_match_template

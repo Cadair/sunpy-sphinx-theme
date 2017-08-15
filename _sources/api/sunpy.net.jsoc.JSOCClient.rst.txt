@@ -1,0 +1,29 @@
+JSOCClient
+==========
+
+.. currentmodule:: sunpy.net.jsoc
+
+.. autoclass:: JSOCClient
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~JSOCClient.check_request
+      ~JSOCClient.fetch
+      ~JSOCClient.get
+      ~JSOCClient.get_request
+      ~JSOCClient.query
+      ~JSOCClient.request_data
+      ~JSOCClient.search
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: check_request
+   .. automethod:: fetch
+   .. automethod:: get
+   .. automethod:: get_request
+   .. automethod:: query
+   .. automethod:: request_data
+   .. automethod:: search

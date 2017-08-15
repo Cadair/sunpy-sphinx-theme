@@ -1,0 +1,19 @@
+EditEntry
+=========
+
+.. currentmodule:: sunpy.database.commands
+
+.. autoclass:: EditEntry
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~EditEntry.__call__
+      ~EditEntry.undo
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: __call__
+   .. automethod:: undo

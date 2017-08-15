@@ -1,0 +1,6 @@
+match_template_to_layer
+=======================
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: match_template_to_layer

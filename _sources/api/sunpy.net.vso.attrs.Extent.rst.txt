@@ -1,0 +1,17 @@
+Extent
+======
+
+.. currentmodule:: sunpy.net.vso.attrs
+
+.. autoclass:: Extent
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Extent.collides
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: collides

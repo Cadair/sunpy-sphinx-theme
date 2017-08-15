@@ -1,0 +1,17 @@
+DownloadTime
+============
+
+.. currentmodule:: sunpy.database.attrs
+
+.. autoclass:: DownloadTime
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~DownloadTime.collides
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: collides

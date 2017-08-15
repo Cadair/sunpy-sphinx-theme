@@ -1,0 +1,6 @@
+apply_shifts
+============
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: apply_shifts

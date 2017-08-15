@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.net.jsoc.jsoc &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.net.jsoc.jsoc | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/net/jsoc/jsoc.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.net.jsoc.jsoc</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">import</span> <span class="nn">astropy.time</span>
+<span class="kn">import</span> <span class="nn">astropy.table</span>
+<span class="kn">from</span> <span class="nn">astropy.utils.misc</span> <span class="k">import</span> <span class="n">isiterable</span>
+
+<span class="kn">from</span> <span class="nn">sunpy</span> <span class="k">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span><span class="p">,</span> <span class="n">TimeRange</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.download</span> <span class="k">import</span> <span class="n">Downloader</span><span class="p">,</span> <span class="n">Results</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.attr</span> <span class="k">import</span> <span class="n">and_</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.jsoc.attrs</span> <span class="k">import</span> <span class="n">walker</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="n">urllib</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">from</span> <span class="nn">sunpy.util</span> <span class="k">import</span> <span class="n">deprecated</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;JSOCClient&#39;</span><span class="p">,</span> <span class="s1">&#39;JSOCResponse&#39;</span><span class="p">]</span>
+
+<span class="n">JSOC_INFO_URL</span> <span class="o">=</span> <span class="s1">&#39;http://jsoc.stanford.edu/cgi-bin/ajax/jsoc_info&#39;</span>
+<span class="n">JSOC_EXPORT_URL</span> <span class="o">=</span> <span class="s1">&#39;http://jsoc.stanford.edu/cgi-bin/ajax/jsoc_fetch&#39;</span>
+<span class="n">BASE_DL_URL</span> <span class="o">=</span> <span class="s1">&#39;http://jsoc.stanford.edu&#39;</span>
+
+
+<div class="viewcode-block" id="JSOCResponse"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCResponse.html#sunpy.net.jsoc.JSOCResponse">[docs]</a><span class="k">class</span> <span class="nc">JSOCResponse</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        table : `astropy.table.Table`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">table</span> <span class="o">=</span> <span class="n">table</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">query_args</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requestIDs</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">_repr_html_</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+
+<div class="viewcode-block" id="JSOCResponse.append"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCResponse.html#sunpy.net.jsoc.JSOCResponse.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">table</span> <span class="o">=</span> <span class="n">table</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">table</span> <span class="o">=</span> <span class="n">astropy</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">,</span> <span class="n">table</span><span class="p">])</span></div></div>
+
+
+<div class="viewcode-block" id="JSOCClient"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCClient.html#sunpy.net.jsoc.JSOCClient">[docs]</a><span class="k">class</span> <span class="nc">JSOCClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a Client to the JSOC Data Export service.</span>
+
+<span class="sd">    It exposes a similar API to the VSO client, although the underlying model</span>
+<span class="sd">    is more complex. The JSOC stages data before you can download it, so a JSOC</span>
+<span class="sd">    query is a three stage process, first you query the JSOC for records,</span>
+<span class="sd">    a table of these records is returned. Then you can request these records to</span>
+<span class="sd">    be staged for download and then you can download them.</span>
+<span class="sd">    The last two stages of this process are bundled together into the `get()`</span>
+<span class="sd">    method, but they can be separated if you are performing a large or complex</span>
+<span class="sd">    query.</span>
+
+<span class="sd">    .. warning::</span>
+<span class="sd">        JSOC now requires you to register your email address before requesting</span>
+<span class="sd">        data. See this site: http://jsoc.stanford.edu/ajax/register_email.html</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This Client mocks input to this site: http://jsoc.stanford.edu/ajax/exportdata.html</span>
+<span class="sd">    Therefore that is a good resource if things are mis-behaving.</span>
+<span class="sd">    The full list of &#39;series&#39; is available through this site: http://jsoc.stanford.edu/</span>
+
+<span class="sd">    You can build more complex queries by specifying parameters to POST to JSOC via keyword</span>
+<span class="sd">    arguments. You can generate these kwargs using the Export Data page at JSOC.</span>
+
+<span class="sd">    JSOC now requires a validated email address, you can pass in your validated email address</span>
+<span class="sd">    using the `~sunpy.net.jsoc.attrs.Notify` attribute. You have to register your email address</span>
+<span class="sd">    with JSOC http://jsoc.stanford.edu/ajax/register_email.html.</span>
+
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    *Example 1*</span>
+
+<span class="sd">    Query JSOC for some HMI data at 45 second cadence:</span>
+
+<span class="sd">    &gt;&gt;&gt; from sunpy.net import jsoc</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net import attrs as a</span>
+<span class="sd">    &gt;&gt;&gt; client = jsoc.JSOCClient()</span>
+<span class="sd">    &gt;&gt;&gt; response = client.search(a.Time(&#39;2014-01-01T00:00:00&#39;, &#39;2014-01-01T01:00:00&#39;),</span>
+<span class="sd">    ...                         a.jsoc.Series(&#39;hmi.m_45s&#39;), a.jsoc.Notify(&quot;sunpy@sunpy.org&quot;))</span>
+
+<span class="sd">    the response object holds the records that your query will return:</span>
+
+<span class="sd">    &gt;&gt;&gt; print(response)   # doctest: +ELLIPSIS +NORMALIZE_WHITESPACE</span>
+<span class="sd">            DATE         TELESCOP  INSTRUME  ... WAVELNTH     WAVEUNIT</span>
+<span class="sd">    -------------------- -------- ---------- ... -------- ---------------</span>
+<span class="sd">    2014-01-05T17:44:53Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="sd">    2014-01-05T17:46:02Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="sd">    2014-01-05T17:47:11Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="sd">    2014-01-05T17:48:18Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="sd">                     ...      ...        ... ...      ...             ...</span>
+<span class="sd">    2014-01-05T17:42:33Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="sd">    2014-01-05T17:43:41Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="sd">    2014-01-05T17:44:52Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="sd">    Length = 81 rows</span>
+
+<span class="sd">    You can then make the request and download the data:</span>
+
+<span class="sd">    &gt;&gt;&gt; res = client.fetch(response)   # doctest: +SKIP</span>
+
+<span class="sd">    This returns a Results instance which can be used to watch the progress</span>
+<span class="sd">    of the download.</span>
+
+<span class="sd">    &gt;&gt;&gt; res.wait(progress=True)   # doctest: +SKIP</span>
+
+<span class="sd">    *Example 2*</span>
+
+<span class="sd">    Query the JSOC for some AIA 171 data, and separate out the staging and the</span>
+<span class="sd">    download steps:</span>
+
+<span class="sd">    &gt;&gt;&gt; import astropy.units as u</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net import jsoc</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.net import attrs as a</span>
+<span class="sd">    &gt;&gt;&gt; client = jsoc.JSOCClient()</span>
+<span class="sd">    &gt;&gt;&gt; response = client.search(a.Time(&#39;2014/1/1T00:00:00&#39;, &#39;2014/1/1T00:00:36&#39;),</span>
+<span class="sd">    ...                         a.jsoc.Series(&#39;aia.lev1_euv_12s&#39;), a.jsoc.Segment(&#39;image&#39;),</span>
+<span class="sd">    ...                         a.jsoc.Wavelength(171*u.AA), a.jsoc.Notify(&quot;sunpy@sunpy.org&quot;))</span>
+
+<span class="sd">    the response object holds the records that your query will return:</span>
+
+<span class="sd">    &gt;&gt;&gt; print(response)</span>
+<span class="sd">            DATE         TELESCOP INSTRUME          T_OBS          WAVELNTH WAVEUNIT</span>
+<span class="sd">    -------------------- -------- -------- ----------------------- -------- --------</span>
+<span class="sd">    2014-01-06T15:07:12Z  SDO/AIA    AIA_3 2013-12-31T23:59:36.34Z      171 angstrom</span>
+<span class="sd">    2014-01-06T15:07:12Z  SDO/AIA    AIA_3 2013-12-31T23:59:48.34Z      171 angstrom</span>
+<span class="sd">    2014-01-07T15:05:10Z  SDO/AIA    AIA_3 2014-01-01T00:00:00.34Z      171 angstrom</span>
+<span class="sd">    2014-01-07T15:05:10Z  SDO/AIA    AIA_3 2014-01-01T00:00:12.34Z      171 angstrom</span>
+
+<span class="sd">    You can then make the request:</span>
+
+<span class="sd">    &gt;&gt;&gt; requestIDs = client.request_data(response)</span>
+<span class="sd">    [u&#39;JSOC_20140724_952&#39;]</span>
+
+<span class="sd">    This returns a list of all the request identifiers for your query.</span>
+
+<span class="sd">    You can then check the status of the request, which will print out a status</span>
+<span class="sd">    message and return you the status code, a code of 1 means it is not ready</span>
+<span class="sd">    to download and a code of 0 means the request is staged and ready. A code</span>
+<span class="sd">    of 6 means an error, which is commonly that the request has not had time to</span>
+<span class="sd">    get into the queue.</span>
+
+<span class="sd">    &gt;&gt;&gt; status = client.check_request(requestIDs)</span>
+<span class="sd">    Request JSOC_20140724_955 was submitted 10 seconds ago, it is not ready to download.</span>
+
+<span class="sd">    Once the status code is 0 you can download the data using the `get_request`</span>
+<span class="sd">    method:</span>
+
+<span class="sd">    &gt;&gt;&gt; res = client.get_request(requestIDs)</span>
+
+<span class="sd">    This returns a Results instance which can be used to watch the progress</span>
+<span class="sd">    of the download.</span>
+
+<span class="sd">    &gt;&gt;&gt; res.wait(progress=True)   # doctest: +SKIP</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="JSOCClient.search"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCClient.html#sunpy.net.jsoc.JSOCClient.search">[docs]</a>    <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Build a JSOC query and submit it to JSOC for processing.</span>
+
+<span class="sd">        Takes a variable number of :mod:`sunpy.net.jsoc.attrs` as parameters,</span>
+<span class="sd">        which are chained together using the AND (`&amp;`) operator.</span>
+
+<span class="sd">        Complex queries to be easily formed using logical operators such as</span>
+<span class="sd">        `&amp;` and `|`, in the same way as the VSO client.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Request all AIA 304 image data between 2010-01-01T00:00 and</span>
+<span class="sd">        2010-01-01T01:00 in rice compressed form.</span>
+
+<span class="sd">        &gt;&gt;&gt; import astropy.units as u</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.net import jsoc</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.net import attrs as a</span>
+<span class="sd">        &gt;&gt;&gt; client = jsoc.JSOCClient()</span>
+<span class="sd">        &gt;&gt;&gt; response = client.search(a.Time(&#39;2010-01-01T00:00:00&#39;, &#39;2010-01-01T01:00:00&#39;),</span>
+<span class="sd">        ...                         a.jsoc.Series(&#39;aia.lev1_euv_12s&#39;), a.jsoc.Wavelength(304*u.AA),</span>
+<span class="sd">        ...                         a.jsoc.Compression(&#39;rice&#39;), a.jsoc.Segment(&#39;image&#39;))</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        results : JSOCResults object</span>
+<span class="sd">            A collection of records that the query returns.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">return_results</span> <span class="o">=</span> <span class="n">JSOCResponse</span><span class="p">()</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="n">and_</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">)</span>
+        <span class="n">blocks</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">walker</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+            <span class="n">iargs</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">iargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+            <span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">iargs</span><span class="p">)</span>
+
+            <span class="n">return_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lookup_records</span><span class="p">(</span><span class="n">iargs</span><span class="p">))</span>
+
+        <span class="n">return_results</span><span class="o">.</span><span class="n">query_args</span> <span class="o">=</span> <span class="n">blocks</span>
+
+        <span class="k">return</span> <span class="n">return_results</span></div>
+
+    <span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;0.8&#39;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;JSOCClient.search&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="JSOCClient.query"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCClient.html#sunpy.net.jsoc.JSOCClient.query">[docs]</a>    <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        See `~sunpy.net.jsoc.jsoc.JSOCClient.search`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="o">*</span><span class="n">query</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="JSOCClient.request_data"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCClient.html#sunpy.net.jsoc.JSOCClient.request_data">[docs]</a>    <span class="k">def</span> <span class="nf">request_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jsoc_response</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Request that JSOC stages the data for download.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        jsoc_response : JSOCResponse object</span>
+<span class="sd">            The results of a query</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        requestIDs : list of strings</span>
+<span class="sd">            List of the JSOC request identifiers</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># A little (hidden) debug feature</span>
+        <span class="n">return_responses</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;return_resp&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">warn_message</span> <span class="o">=</span> <span class="s2">&quot;request_data got unexpected keyword arguments </span><span class="si">{0}</span><span class="s2">&quot;</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">warn_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
+
+        <span class="c1"># Do a multi-request for each query block</span>
+        <span class="n">responses</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">requestIDs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">jsoc_response</span><span class="o">.</span><span class="n">query_args</span><span class="p">:</span>
+            <span class="c1"># Do a multi-request for each query block</span>
+            <span class="n">responses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_multi_request</span><span class="p">(</span><span class="o">**</span><span class="n">block</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">response</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">responses</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+                    <span class="n">warn_message</span> <span class="o">=</span> <span class="s2">&quot;Query </span><span class="si">{0}</span><span class="s2"> retuned code </span><span class="si">{1}</span><span class="s2">&quot;</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                        <span class="ne">Warning</span><span class="p">(</span><span class="n">warn_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)))</span>
+                    <span class="n">responses</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">warn_message</span> <span class="o">=</span> <span class="s2">&quot;Query </span><span class="si">{0}</span><span class="s2"> retuned status </span><span class="si">{1}</span><span class="s2"> with error </span><span class="si">{2}</span><span class="s2">&quot;</span>
+                    <span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+                    <span class="n">json_status</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>
+                    <span class="n">json_error</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="ne">Warning</span><span class="p">(</span><span class="n">warn_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">json_status</span><span class="p">,</span>
+                                                              <span class="n">json_error</span><span class="p">)))</span>
+                    <span class="n">responses</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+            <span class="c1"># Extract the IDs from the JSON</span>
+            <span class="n">requestIDs</span> <span class="o">+=</span> <span class="p">[</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;requestid&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">response</span> <span class="ow">in</span> <span class="n">responses</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+
+        <span class="k">if</span> <span class="n">return_responses</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">responses</span>
+
+        <span class="k">return</span> <span class="n">requestIDs</span></div>
+
+<div class="viewcode-block" id="JSOCClient.check_request"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCClient.html#sunpy.net.jsoc.JSOCClient.check_request">[docs]</a>    <span class="k">def</span> <span class="nf">check_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">requestIDs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check the status of a request and print out a message about it</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        requestIDs : list or string</span>
+<span class="sd">            A list of requestIDs to check</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        status : list</span>
+<span class="sd">            A list of status&#39; that were returned by JSOC</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Convert IDs to a list if not already</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">isiterable</span><span class="p">(</span><span class="n">requestIDs</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">requestIDs</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">):</span>
+            <span class="n">requestIDs</span> <span class="o">=</span> <span class="p">[</span><span class="n">requestIDs</span><span class="p">]</span>
+
+        <span class="n">allstatus</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">request_id</span> <span class="ow">in</span> <span class="n">requestIDs</span><span class="p">:</span>
+            <span class="n">u</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_status</span><span class="p">(</span><span class="n">request_id</span><span class="p">)</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;status&#39;</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Data ready to download</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Request </span><span class="si">{0}</span><span class="s2"> was exported at </span><span class="si">{1}</span><span class="s2"> and is ready to &quot;</span>
+                      <span class="s2">&quot;download.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;requestid&#39;</span><span class="p">],</span>
+                                         <span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;exptime&#39;</span><span class="p">]))</span>
+            <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">print_message</span> <span class="o">=</span> <span class="s2">&quot;Request </span><span class="si">{0}</span><span class="s2"> was submitted </span><span class="si">{1}</span><span class="s2"> seconds ago, &quot;</span> \
+                                <span class="s2">&quot;it is not ready to download.&quot;</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">print_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;requestid&#39;</span><span class="p">],</span>
+                                           <span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;wait&#39;</span><span class="p">]))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">print_message</span> <span class="o">=</span> <span class="s2">&quot;Request returned status: </span><span class="si">{0}</span><span class="s2"> with error: </span><span class="si">{1}</span><span class="s2">&quot;</span>
+                <span class="n">json_status</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>
+                <span class="n">json_error</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">print_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">json_status</span><span class="p">,</span> <span class="n">json_error</span><span class="p">))</span>
+
+            <span class="n">allstatus</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">allstatus</span></div>
+
+<div class="viewcode-block" id="JSOCClient.fetch"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCClient.html#sunpy.net.jsoc.JSOCClient.fetch">[docs]</a>    <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jsoc_response</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">max_conn</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">downloader</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sleep</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make the request for the data in jsoc_response and wait for it to be</span>
+<span class="sd">        staged and then download the data.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        jsoc_response : JSOCResponse object</span>
+<span class="sd">            A response object</span>
+
+<span class="sd">        path : string</span>
+<span class="sd">            Path to save data to, defaults to SunPy download dir</span>
+
+<span class="sd">        overwrite : bool</span>
+<span class="sd">            Replace files with the same name if True</span>
+
+<span class="sd">        progress : bool</span>
+<span class="sd">            Print progress info to terminal</span>
+
+<span class="sd">        max_conns : int</span>
+<span class="sd">            Maximum number of download connections.</span>
+
+<span class="sd">        downloader: `sunpy.download.Downloader` instance</span>
+<span class="sd">            A Custom downloader to use</span>
+
+<span class="sd">        sleep : int</span>
+<span class="sd">            The number of seconds to wait between calls to JSOC to check the status</span>
+<span class="sd">            of the request.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        results : a :class:`sunpy.net.vso.Results` instance</span>
+<span class="sd">            A Results object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Make staging request to JSOC</span>
+        <span class="n">requestIDs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request_data</span><span class="p">(</span><span class="n">jsoc_response</span><span class="p">)</span>
+        <span class="c1"># Add them to the response for good measure</span>
+        <span class="n">jsoc_response</span><span class="o">.</span><span class="n">requestIDs</span> <span class="o">=</span> <span class="n">requestIDs</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span>
+
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Results</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">done</span><span class="o">=</span><span class="k">lambda</span> <span class="n">maps</span><span class="p">:</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;path&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">maps</span><span class="o">.</span><span class="n">values</span><span class="p">()])</span>
+
+        <span class="k">while</span> <span class="n">requestIDs</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">request_id</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">requestIDs</span><span class="p">):</span>
+                <span class="n">u</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_status</span><span class="p">(</span><span class="n">request_id</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">check_request</span><span class="p">(</span><span class="n">request_id</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="ow">and</span> <span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span>
+                    <span class="n">rID</span> <span class="o">=</span> <span class="n">requestIDs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_request</span><span class="p">(</span><span class="n">rID</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">,</span>
+                                         <span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">,</span> <span class="n">results</span><span class="o">=</span><span class="n">r</span><span class="p">)</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">r</span></div>
+
+    <span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;0.8&#39;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;JSOCClient.fetch&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="JSOCClient.get"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCClient.html#sunpy.net.jsoc.JSOCClient.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jsoc_response</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">max_conn</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">downloader</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sleep</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        See `~sunpy.net.jsoc.jsoc.JSOCClient.fetch`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">jsoc_response</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="n">progress</span><span class="p">,</span>
+            <span class="n">max_conn</span><span class="o">=</span><span class="n">max_conn</span><span class="p">,</span> <span class="n">downloader</span><span class="o">=</span><span class="n">downloader</span><span class="p">,</span> <span class="n">sleep</span><span class="o">=</span><span class="n">sleep</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="JSOCClient.get_request"><a class="viewcode-back" href="../../../../api/sunpy.net.jsoc.JSOCClient.html#sunpy.net.jsoc.JSOCClient.get_request">[docs]</a>    <span class="k">def</span> <span class="nf">get_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">requestIDs</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">max_conn</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">downloader</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">results</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Query JSOC to see if request_id is ready for download.</span>
+
+<span class="sd">        If the request is ready for download, download it.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        requestIDs : list or string</span>
+<span class="sd">            One or many requestID strings</span>
+
+<span class="sd">        path : string</span>
+<span class="sd">            Path to save data to, defaults to SunPy download dir</span>
+
+<span class="sd">        overwrite : bool</span>
+<span class="sd">            Replace files with the same name if True</span>
+
+<span class="sd">        progress : bool</span>
+<span class="sd">            Print progress info to terminal</span>
+
+<span class="sd">        max_conns : int</span>
+<span class="sd">            Maximum number of download connections.</span>
+
+<span class="sd">        downloader : `sunpy.download.Downloader` instance</span>
+<span class="sd">            A Custom downloader to use</span>
+
+<span class="sd">        results: Results instance</span>
+<span class="sd">            A Results manager to use.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        res: Results</span>
+<span class="sd">            A Results instance or None if no URLs to download</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Convert IDs to a list if not already</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">isiterable</span><span class="p">(</span><span class="n">requestIDs</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">requestIDs</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">):</span>
+            <span class="n">requestIDs</span> <span class="o">=</span> <span class="p">[</span><span class="n">requestIDs</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;downloads&#39;</span><span class="p">,</span> <span class="s1">&#39;download_dir&#39;</span><span class="p">)</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">downloader</span> <span class="o">=</span> <span class="n">Downloader</span><span class="p">(</span><span class="n">max_conn</span><span class="o">=</span><span class="n">max_conn</span><span class="p">,</span> <span class="n">max_total</span><span class="o">=</span><span class="n">max_conn</span><span class="p">)</span>
+
+        <span class="c1"># A Results object tracks the number of downloads requested and the</span>
+        <span class="c1"># number that have been completed.</span>
+        <span class="k">if</span> <span class="n">results</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">results</span> <span class="o">=</span> <span class="n">Results</span><span class="p">(</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="n">downloader</span><span class="o">.</span><span class="n">stop</span><span class="p">())</span>
+
+        <span class="n">urls</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">request_id</span> <span class="ow">in</span> <span class="n">requestIDs</span><span class="p">:</span>
+            <span class="n">u</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request_status</span><span class="p">(</span><span class="n">request_id</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="ow">and</span> <span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">ar</span> <span class="ow">in</span> <span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;data&#39;</span><span class="p">]:</span>
+                    <span class="n">is_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ar</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]))</span>
+                    <span class="k">if</span> <span class="n">overwrite</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">is_file</span><span class="p">:</span>
+                        <span class="n">url_dir</span> <span class="o">=</span> <span class="n">BASE_DL_URL</span> <span class="o">+</span> <span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;dir&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
+                        <span class="n">urls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urljoin</span><span class="p">(</span><span class="n">url_dir</span><span class="p">,</span> <span class="n">ar</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]))</span>
+
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">print_message</span> <span class="o">=</span> <span class="s2">&quot;Skipping download of file </span><span class="si">{}</span><span class="s2"> as it &quot;</span> \
+                                        <span class="s2">&quot;has already been downloaded&quot;</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">print_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ar</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]))</span>
+                        <span class="c1"># Add the file on disk to the output</span>
+                        <span class="n">results</span><span class="o">.</span><span class="n">map_</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">ar</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]:</span>
+                                            <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ar</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">])}})</span>
+
+                <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+                    <span class="n">print_message</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> URLs found for download. Totalling </span><span class="si">{1}</span><span class="s2">MB&quot;</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">print_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">urls</span><span class="p">),</span> <span class="n">u</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;size&#39;</span><span class="p">]))</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">check_request</span><span class="p">(</span><span class="n">request_id</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">urls</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+                <span class="n">downloader</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">require</span><span class="p">([</span><span class="n">url</span><span class="p">]),</span>
+                                    <span class="n">errback</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Make Results think it has finished.</span>
+            <span class="n">results</span><span class="o">.</span><span class="n">require</span><span class="p">([])</span>
+            <span class="n">results</span><span class="o">.</span><span class="n">poke</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">results</span></div>
+
+    <span class="k">def</span> <span class="nf">_process_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Take a UTC time string or datetime instance and generate a astropy.time</span>
+<span class="sd">        object in TAI frame. Alternatively convert a astropy time object to TAI</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        time: six.string_types or datetime or astropy.time</span>
+<span class="sd">            Input time</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        datetime, in TAI</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Convert from any input (in UTC) to TAI</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">):</span>
+            <span class="n">time</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+
+        <span class="n">time</span> <span class="o">=</span> <span class="n">astropy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;utc&#39;</span><span class="p">)</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">tai</span>  <span class="c1"># Change the scale to TAI</span>
+
+        <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">datetime</span>
+
+    <span class="k">def</span> <span class="nf">_make_recordset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">wavelength</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                        <span class="n">segment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># Build the dataset string</span>
+        <span class="c1"># Extract and format Wavelength</span>
+        <span class="k">if</span> <span class="n">wavelength</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">series</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;aia&#39;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;This series does not support the wavelength attribute.&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                    <span class="n">wavelength</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">wave</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">))</span> <span class="k">for</span> <span class="n">wave</span> <span class="ow">in</span> <span class="n">wavelength</span><span class="p">]</span>
+                    <span class="n">wavelength</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">wavelength</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">wavelength</span> <span class="o">=</span> <span class="s1">&#39;[</span><span class="si">{0}</span><span class="s1">]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">wavelength</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)))</span>
+
+        <span class="c1"># Extract and format segment</span>
+        <span class="k">if</span> <span class="n">segment</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="n">segment</span> <span class="o">=</span> <span class="s1">&#39;{{</span><span class="si">{segment}</span><span class="s1">}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">segment</span><span class="o">=</span><span class="n">segment</span><span class="p">)</span>
+
+        <span class="n">sample</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">sample</span><span class="p">:</span>
+            <span class="n">sample</span> <span class="o">=</span> <span class="s1">&#39;@</span><span class="si">{}</span><span class="s1">s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
+
+        <span class="n">dataset</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{series}</span><span class="s1">[</span><span class="si">{start}</span><span class="s1">-</span><span class="si">{end}{sample}</span><span class="s1">]</span><span class="si">{wavelength}{segment}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                   <span class="n">series</span><span class="o">=</span><span class="n">series</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">start_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y.%m.</span><span class="si">%d</span><span class="s2">_%H:%M:%S_TAI&quot;</span><span class="p">),</span>
+                   <span class="n">end</span><span class="o">=</span><span class="n">end_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y.%m.</span><span class="si">%d</span><span class="s2">_%H:%M:%S_TAI&quot;</span><span class="p">),</span>
+                   <span class="n">sample</span><span class="o">=</span><span class="n">sample</span><span class="p">,</span>
+                   <span class="n">wavelength</span><span class="o">=</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">segment</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">dataset</span>
+
+    <span class="k">def</span> <span class="nf">_make_query_payload</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">notify</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                            <span class="n">protocol</span><span class="o">=</span><span class="s1">&#39;FITS&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;rice&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Build the POST payload for the query parameters</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">protocol</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;FITS&#39;</span> <span class="ow">and</span> <span class="n">compression</span> <span class="ow">and</span> <span class="n">compression</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;rice&#39;</span><span class="p">:</span>
+            <span class="n">jprotocol</span> <span class="o">=</span> <span class="s1">&#39;FITS,compress Rice&#39;</span>
+        <span class="k">elif</span> <span class="n">protocol</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;FITS&#39;</span><span class="p">:</span>
+            <span class="n">jprotocol</span> <span class="o">=</span> <span class="s1">&#39;FITS, **NONE**&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">jprotocol</span> <span class="o">=</span> <span class="n">protocol</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">notify</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;JSOC queries now require a valid email address &quot;</span>
+                             <span class="s2">&quot;before they will be accepted by the server&quot;</span><span class="p">)</span>
+
+        <span class="n">dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_recordset</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;wavelength&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="c1"># Build full POST payload</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ds&#39;</span><span class="p">:</span> <span class="n">dataset</span><span class="p">,</span>
+                   <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;notify&#39;</span><span class="p">:</span> <span class="n">notify</span><span class="p">,</span>
+                   <span class="s1">&#39;op&#39;</span><span class="p">:</span> <span class="s1">&#39;exp_request&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;process&#39;</span><span class="p">:</span> <span class="s1">&#39;n=0|no_op&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;protocol&#39;</span><span class="p">:</span> <span class="n">jprotocol</span><span class="p">,</span>
+                   <span class="s1">&#39;requestor&#39;</span><span class="p">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;filenamefmt&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">.{{T_REC:A}}.{{CAMERA}}.{{segment}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">series</span><span class="p">)}</span>
+
+        <span class="n">payload</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">payload</span>
+
+    <span class="k">def</span> <span class="nf">_send_jsoc_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">notify</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                           <span class="n">protocol</span><span class="o">=</span><span class="s1">&#39;FITS&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;rice&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Request that JSOC stages data for download</span>
+
+<span class="sd">        This routine puts in a POST request to JSOC</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">payload</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_query_payload</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span>
+                                           <span class="n">notify</span><span class="o">=</span><span class="n">notify</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">protocol</span><span class="p">,</span>
+                                           <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">JSOC_EXPORT_URL</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">exception_message</span> <span class="o">=</span> <span class="s2">&quot;JSOC POST Request returned code </span><span class="si">{0}</span><span class="s2">&quot;</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">exception_message</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_lookup_records</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Do a LookData request to JSOC to workout what results the query returns</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">keywords</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DATE&#39;</span><span class="p">,</span> <span class="s1">&#39;TELESCOP&#39;</span><span class="p">,</span> <span class="s1">&#39;INSTRUME&#39;</span><span class="p">,</span> <span class="s1">&#39;T_OBS&#39;</span><span class="p">,</span> <span class="s1">&#39;WAVELNTH&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;WAVEUNIT&#39;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">([</span><span class="n">k</span> <span class="ow">in</span> <span class="n">iargs</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;start_time&#39;</span><span class="p">,</span> <span class="s1">&#39;end_time&#39;</span><span class="p">,</span> <span class="s1">&#39;series&#39;</span><span class="p">)]):</span>
+            <span class="n">error_message</span> <span class="o">=</span> <span class="s2">&quot;Both Time and Series must be specified for a &quot;</span>\
+                            <span class="s2">&quot;JSOC Query&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+
+        <span class="n">postthis</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ds&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_recordset</span><span class="p">(</span><span class="o">**</span><span class="n">iargs</span><span class="p">),</span>
+                    <span class="s1">&#39;op&#39;</span><span class="p">:</span> <span class="s1">&#39;rs_list&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">keywords</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+                    <span class="s1">&#39;seg&#39;</span><span class="p">:</span> <span class="s1">&#39;**NONE**&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;link&#39;</span><span class="p">:</span> <span class="s1">&#39;**NONE**&#39;</span><span class="p">}</span>
+
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">JSOC_INFO_URL</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">postthis</span><span class="p">)</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+        <span class="n">out_table</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="s1">&#39;keywords&#39;</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;keywords&#39;</span><span class="p">]:</span>
+                <span class="n">out_table</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">col</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]:</span> <span class="n">col</span><span class="p">[</span><span class="s1">&#39;values&#39;</span><span class="p">]})</span>
+
+            <span class="c1"># sort the table before returning</span>
+            <span class="k">return</span> <span class="n">astropy</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="n">out_table</span><span class="p">)[</span><span class="n">keywords</span><span class="p">]</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">astropy</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">Table</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_multi_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make a series of requests to avoid the 100GB limit</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;start_time&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">end_time</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;end_time&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">series</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;series&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">series</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_time</span><span class="p">(</span><span class="n">start_time</span><span class="p">)</span>
+        <span class="n">end_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_time</span><span class="p">(</span><span class="n">end_time</span><span class="p">)</span>
+        <span class="n">tr</span> <span class="o">=</span> <span class="n">TimeRange</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">)</span>
+        <span class="n">returns</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">response</span><span class="p">,</span> <span class="n">json_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_jsoc_request</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span>
+                                                          <span class="n">series</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="c1"># We skip these lines because a massive request is not a practical test.</span>
+        <span class="n">error_response</span> <span class="o">=</span> <span class="s1">&#39;Request exceeds max byte limit of 100000MB&#39;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span>
+                <span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">error_response</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+            <span class="n">returns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_multi_request</span><span class="p">(</span><span class="n">tr</span><span class="o">.</span><span class="n">start</span><span class="p">(),</span> <span class="n">tr</span><span class="o">.</span><span class="n">center</span><span class="p">(),</span> <span class="n">series</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="c1"># pragma: no cover</span>
+            <span class="n">returns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_multi_request</span><span class="p">(</span><span class="n">tr</span><span class="o">.</span><span class="n">center</span><span class="p">(),</span> <span class="n">tr</span><span class="o">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">series</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="c1"># pragma: no cover</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">returns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">returns</span>
+
+    <span class="k">def</span> <span class="nf">_request_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request_id</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        GET the status of a request ID</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;op&#39;</span><span class="p">:</span> <span class="s1">&#39;exp_status&#39;</span><span class="p">,</span> <span class="s1">&#39;requestid&#39;</span><span class="p">:</span> <span class="n">request_id</span><span class="p">}</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">JSOC_EXPORT_URL</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">u</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_can_handle_query</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">query</span><span class="p">):</span>
+        <span class="n">chkattr</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Series&#39;</span><span class="p">,</span> <span class="s1">&#39;Protocol&#39;</span><span class="p">,</span> <span class="s1">&#39;Notify&#39;</span><span class="p">,</span> <span class="s1">&#39;Compression&#39;</span><span class="p">,</span> <span class="s1">&#39;Wavelength&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Segment&#39;</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="nb">all</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="ow">in</span> <span class="n">chkattr</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">query</span><span class="p">])</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+calculate_radiative_loss_rate
+=============================
+
+.. currentmodule:: sunpy.instr.goes
+
+.. autofunction:: calculate_radiative_loss_rate

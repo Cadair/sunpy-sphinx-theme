@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.cm.cm &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.cm.cm | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/cm/cm.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.cm.cm</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides a set of colormaps specific for solar data.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.cm</span> <span class="k">as</span> <span class="nn">cm</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.cm</span> <span class="k">import</span> <span class="n">color_tables</span> <span class="k">as</span> <span class="n">ct</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;get_cmap&#39;</span><span class="p">,</span> <span class="s1">&#39;show_colormaps&#39;</span><span class="p">,</span> <span class="s1">&#39;cmlist&#39;</span><span class="p">]</span>
+
+<span class="n">sdoaia94</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">94</span><span class="p">)</span>
+<span class="n">sdoaia131</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+<span class="n">sdoaia171</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">171</span><span class="p">)</span>
+<span class="n">sdoaia193</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">193</span><span class="p">)</span>
+<span class="n">sdoaia211</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="n">sdoaia304</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">304</span><span class="p">)</span>
+<span class="n">sdoaia335</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">335</span><span class="p">)</span>
+<span class="n">sdoaia1600</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">1600</span><span class="p">)</span>
+<span class="n">sdoaia1700</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">1700</span><span class="p">)</span>
+<span class="n">sdoaia4500</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">aia_color_table</span><span class="p">(</span><span class="mi">4500</span><span class="p">)</span>
+
+<span class="n">sohoeit171</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">eit_color_table</span><span class="p">(</span><span class="mi">171</span><span class="p">)</span>
+<span class="n">sohoeit195</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">eit_color_table</span><span class="p">(</span><span class="mi">195</span><span class="p">)</span>
+<span class="n">sohoeit284</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">eit_color_table</span><span class="p">(</span><span class="mi">284</span><span class="p">)</span>
+<span class="n">sohoeit304</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">eit_color_table</span><span class="p">(</span><span class="mi">304</span><span class="p">)</span>
+
+<span class="n">soholasco2</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">lasco_color_table</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">soholasco3</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">lasco_color_table</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">stereocor1</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">cor_color_table</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">stereocor2</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">cor_color_table</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">stereohi1</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">stereo_hi_color_table</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">stereohi2</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">stereo_hi_color_table</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">yohkohsxtal</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">sxt_color_table</span><span class="p">(</span><span class="s1">&#39;al&#39;</span><span class="p">)</span>
+<span class="n">yohkohsxtwh</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">sxt_color_table</span><span class="p">(</span><span class="s1">&#39;wh&#39;</span><span class="p">)</span>
+
+<span class="n">hinodexrt</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">xrt_color_table</span><span class="p">()</span>
+<span class="n">hinodesotintensity</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">sot_color_table</span><span class="p">(</span><span class="s1">&#39;intensity&#39;</span><span class="p">)</span>
+<span class="c1">#hinodesotstokesquv = ct.sot_color_table(&#39;stokesQUV&#39;)</span>
+<span class="c1">#hinodesotmagneticf = ct.sot_color_table(&#39;magnetic field&#39;)</span>
+<span class="c1">#hinodesotvelocity = ct.sot_color_table(&#39;velocity&#39;)</span>
+<span class="c1">#hinodesotwidth =  ct.sot_color_table(&#39;width&#39;)</span>
+
+<span class="n">trace171</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">trace_color_table</span><span class="p">(</span><span class="s1">&#39;171&#39;</span><span class="p">)</span>
+<span class="n">trace195</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">trace_color_table</span><span class="p">(</span><span class="s1">&#39;195&#39;</span><span class="p">)</span>
+<span class="n">trace284</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">trace_color_table</span><span class="p">(</span><span class="s1">&#39;284&#39;</span><span class="p">)</span>
+<span class="n">trace1216</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">trace_color_table</span><span class="p">(</span><span class="s1">&#39;1216&#39;</span><span class="p">)</span>
+<span class="n">trace1550</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">trace_color_table</span><span class="p">(</span><span class="s1">&#39;1550&#39;</span><span class="p">)</span>
+<span class="n">trace1600</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">trace_color_table</span><span class="p">(</span><span class="s1">&#39;1600&#39;</span><span class="p">)</span>
+<span class="n">trace1700</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">trace_color_table</span><span class="p">(</span><span class="s1">&#39;1700&#39;</span><span class="p">)</span>
+<span class="n">traceWL</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">trace_color_table</span><span class="p">(</span><span class="s1">&#39;WL&#39;</span><span class="p">)</span>
+
+<span class="n">hmimag</span> <span class="o">=</span> <span class="n">ct</span><span class="o">.</span><span class="n">hmi_mag_color_table</span><span class="p">()</span>
+
+<span class="n">cmlist</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s1">&#39;sdoaia94&#39;</span><span class="p">:</span> <span class="n">sdoaia94</span><span class="p">,</span>
+          <span class="s1">&#39;sdoaia131&#39;</span><span class="p">:</span> <span class="n">sdoaia131</span><span class="p">,</span>
+          <span class="s1">&#39;sdoaia171&#39;</span><span class="p">:</span> <span class="n">sdoaia171</span><span class="p">,</span>
+          <span class="s1">&#39;sdoaia193&#39;</span><span class="p">:</span> <span class="n">sdoaia193</span><span class="p">,</span>
+          <span class="s1">&#39;sdoaia211&#39;</span><span class="p">:</span> <span class="n">sdoaia211</span><span class="p">,</span>
+          <span class="s1">&#39;sdoaia304&#39;</span><span class="p">:</span> <span class="n">sdoaia304</span><span class="p">,</span>
+          <span class="s1">&#39;sdoaia335&#39;</span><span class="p">:</span> <span class="n">sdoaia335</span><span class="p">,</span>
+          <span class="s1">&#39;sdoaia1600&#39;</span><span class="p">:</span> <span class="n">sdoaia1600</span><span class="p">,</span>
+          <span class="s1">&#39;sdoaia1700&#39;</span><span class="p">:</span> <span class="n">sdoaia1700</span><span class="p">,</span>
+          <span class="s1">&#39;sdoaia4500&#39;</span><span class="p">:</span> <span class="n">sdoaia4500</span><span class="p">,</span>
+          <span class="s1">&#39;sohoeit171&#39;</span><span class="p">:</span> <span class="n">sohoeit171</span><span class="p">,</span>
+          <span class="s1">&#39;sohoeit195&#39;</span><span class="p">:</span> <span class="n">sohoeit195</span><span class="p">,</span>
+          <span class="s1">&#39;sohoeit284&#39;</span><span class="p">:</span> <span class="n">sohoeit284</span><span class="p">,</span>
+          <span class="s1">&#39;sohoeit304&#39;</span><span class="p">:</span> <span class="n">sohoeit304</span><span class="p">,</span>
+          <span class="s1">&#39;soholasco2&#39;</span><span class="p">:</span> <span class="n">soholasco2</span><span class="p">,</span>
+          <span class="s1">&#39;soholasco3&#39;</span><span class="p">:</span> <span class="n">soholasco3</span><span class="p">,</span>
+          <span class="s1">&#39;stereocor1&#39;</span><span class="p">:</span> <span class="n">stereocor1</span><span class="p">,</span>
+          <span class="s1">&#39;stereocor2&#39;</span><span class="p">:</span> <span class="n">stereocor2</span><span class="p">,</span>
+          <span class="s1">&#39;stereohi1&#39;</span><span class="p">:</span> <span class="n">stereohi1</span><span class="p">,</span>
+          <span class="s1">&#39;stereohi2&#39;</span><span class="p">:</span> <span class="n">stereohi2</span><span class="p">,</span>
+          <span class="s1">&#39;rhessi&#39;</span><span class="p">:</span> <span class="n">cm</span><span class="o">.</span><span class="n">jet</span><span class="p">,</span>  <span class="c1"># pylint: disable=E1101</span>
+          <span class="s1">&#39;yohkohsxtal&#39;</span><span class="p">:</span> <span class="n">yohkohsxtal</span><span class="p">,</span>
+          <span class="s1">&#39;yohkohsxtwh&#39;</span><span class="p">:</span> <span class="n">yohkohsxtwh</span><span class="p">,</span>
+          <span class="s1">&#39;hinodexrt&#39;</span><span class="p">:</span> <span class="n">hinodexrt</span><span class="p">,</span>
+          <span class="s1">&#39;hinodesotintensity&#39;</span><span class="p">:</span> <span class="n">hinodesotintensity</span><span class="p">,</span>
+          <span class="c1"># &#39;hinodesotstokesquv&#39;: hinodesotstokesquv,</span>
+          <span class="c1"># &#39;hinodesotmagneticf&#39;: hinodesotmagneticf,</span>
+          <span class="c1"># &#39;hinodesotvelocity&#39;: hinodesotvelocity,</span>
+          <span class="c1"># &#39;hinodesotwidth&#39;: hinodesotwidth,</span>
+          <span class="s1">&#39;trace171&#39;</span><span class="p">:</span> <span class="n">trace171</span><span class="p">,</span>
+          <span class="s1">&#39;trace195&#39;</span><span class="p">:</span> <span class="n">trace195</span><span class="p">,</span>
+          <span class="s1">&#39;trace284&#39;</span><span class="p">:</span> <span class="n">trace284</span><span class="p">,</span>
+          <span class="s1">&#39;trace1216&#39;</span><span class="p">:</span> <span class="n">trace1216</span><span class="p">,</span>
+          <span class="s1">&#39;trace1550&#39;</span><span class="p">:</span> <span class="n">trace1550</span><span class="p">,</span>
+          <span class="s1">&#39;trace1600&#39;</span><span class="p">:</span> <span class="n">trace1600</span><span class="p">,</span>
+          <span class="s1">&#39;trace1700&#39;</span><span class="p">:</span> <span class="n">trace1700</span><span class="p">,</span>
+          <span class="s1">&#39;traceWL&#39;</span><span class="p">:</span> <span class="n">traceWL</span><span class="p">,</span>
+          <span class="s1">&#39;hmimag&#39;</span><span class="p">:</span> <span class="n">hmimag</span><span class="p">,</span>
+          <span class="s1">&#39;irissji1330&#39;</span><span class="p">:</span> <span class="n">ct</span><span class="o">.</span><span class="n">iris_sji_color_table</span><span class="p">(</span><span class="s1">&#39;1330&#39;</span><span class="p">),</span>
+          <span class="s1">&#39;irissji1400&#39;</span><span class="p">:</span> <span class="n">ct</span><span class="o">.</span><span class="n">iris_sji_color_table</span><span class="p">(</span><span class="s1">&#39;1400&#39;</span><span class="p">),</span>
+          <span class="s1">&#39;irissji1600&#39;</span><span class="p">:</span> <span class="n">ct</span><span class="o">.</span><span class="n">iris_sji_color_table</span><span class="p">(</span><span class="s1">&#39;1600&#39;</span><span class="p">),</span>
+          <span class="s1">&#39;irissji2796&#39;</span><span class="p">:</span> <span class="n">ct</span><span class="o">.</span><span class="n">iris_sji_color_table</span><span class="p">(</span><span class="s1">&#39;2796&#39;</span><span class="p">),</span>
+          <span class="s1">&#39;irissji2832&#39;</span><span class="p">:</span> <span class="n">ct</span><span class="o">.</span><span class="n">iris_sji_color_table</span><span class="p">(</span><span class="s1">&#39;2832&#39;</span><span class="p">),</span>
+          <span class="s1">&#39;irissji5000&#39;</span><span class="p">:</span> <span class="n">ct</span><span class="o">.</span><span class="n">iris_sji_color_table</span><span class="p">(</span><span class="s1">&#39;5000&#39;</span><span class="p">),</span>
+          <span class="s1">&#39;irissjiFUV&#39;</span><span class="p">:</span> <span class="n">ct</span><span class="o">.</span><span class="n">iris_sji_color_table</span><span class="p">(</span><span class="s1">&#39;FUV&#39;</span><span class="p">),</span>
+          <span class="s1">&#39;irissjiNUV&#39;</span><span class="p">:</span> <span class="n">ct</span><span class="o">.</span><span class="n">iris_sji_color_table</span><span class="p">(</span><span class="s1">&#39;NUV&#39;</span><span class="p">),</span>
+          <span class="s1">&#39;irissjiSJI_NUV&#39;</span><span class="p">:</span> <span class="n">ct</span><span class="o">.</span><span class="n">iris_sji_color_table</span><span class="p">(</span><span class="s1">&#39;SJI_NUV&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Register the colormaps with matplotlib so plt.get_cmap(&#39;sdoaia171&#39;) works</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">cmap</span> <span class="ow">in</span> <span class="n">cmlist</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">cm</span><span class="o">.</span><span class="n">register_cmap</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
+
+<div class="viewcode-block" id="get_cmap"><a class="viewcode-back" href="../../../api/sunpy.cm.get_cmap.html#sunpy.cm.get_cmap">[docs]</a><span class="k">def</span> <span class="nf">get_cmap</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get a colormap.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name : string</span>
+<span class="sd">        The name of a color map.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    value : matplotlib colormap</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.cm as cm</span>
+<span class="sd">    &gt;&gt;&gt; colormap = cm.get_cmap(name = &#39;sdoaia94&#39;)</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    | http://matplotlib.sourceforge.net/api/cm_api.html</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">cmlist</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cmlist</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Colormap </span><span class="si">{name!s}</span><span class="s2"> is not recognized&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="show_colormaps"><a class="viewcode-back" href="../../../api/sunpy.cm.show_colormaps.html#sunpy.cm.show_colormaps">[docs]</a><span class="k">def</span> <span class="nf">show_colormaps</span><span class="p">(</span><span class="nb">filter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Displays a plot of the custom color maps supported in SunPy.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filter : str</span>
+<span class="sd">        A string to filter the color maps presented (e.g. aia, EIT, 171). Case</span>
+<span class="sd">        insensitive.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None : none</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import sunpy.cm as cm</span>
+<span class="sd">    &gt;&gt;&gt; cm.show_colormaps()</span>
+<span class="sd">    &gt;&gt;&gt; cm.show_colormaps(filter=&#39;aia&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; cm.show_colormaps(filter=&#39;171&#39;)</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">filter</span><span class="p">:</span>
+        <span class="n">maps</span> <span class="o">=</span>  <span class="nb">sorted</span><span class="p">({</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">cmlist</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="nb">filter</span><span class="o">.</span><span class="n">lower</span><span class="p">())})</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">maps</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s1">&#39;No color maps found for key - &#39;</span> <span class="o">+</span> <span class="nb">filter</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">maps</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cmlist</span><span class="p">)</span>
+
+    <span class="n">nmaps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">maps</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># pylint: disable=E1103</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mf">0.99</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">maps</span><span class="p">):</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">nmaps</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">get_cmap</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">)</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">get_position</span><span class="p">()</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">name</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                 <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<span class="c1"># def test_equalize(data):</span>
+<span class="c1">#    &quot;&quot;&quot;Returns a color map which performs histogram equalization on the data.</span>
+<span class="c1">#</span>
+<span class="c1">#    Parameters</span>
+<span class="c1">#    ----------</span>
+<span class="c1">#    data : ndarray</span>
+<span class="c1">#</span>
+<span class="c1">#    Returns</span>
+<span class="c1">#    -------</span>
+<span class="c1">#    value : matplotlib colormap</span>
+<span class="c1">#</span>
+<span class="c1">#    See Also</span>
+<span class="c1">#    --------</span>
+<span class="c1">#</span>
+<span class="c1">#    Examples</span>
+<span class="c1">#    --------</span>
+<span class="c1">#    &gt;&gt;&gt; import sunpy.cm as cm</span>
+<span class="c1">#    &gt;&gt;&gt; cm.test_equalize()</span>
+<span class="c1">#</span>
+<span class="c1">#    Reference</span>
+<span class="c1">#    ---------</span>
+<span class="c1">#    | http://matplotlib.sourceforge.net/api/cm_api.html</span>
+<span class="c1">#</span>
+<span class="c1">#    .. warning:: this function is under development</span>
+<span class="c1">#</span>
+<span class="c1">#    .. todo:: finish coding this function!</span>
+<span class="c1">#</span>
+<span class="c1">#    &quot;&quot;&quot;</span>
+<span class="c1">#    dfile = cbook.get_sample_data(&#39;s1045.ima&#39;, asfileobj=False)</span>
+<span class="c1">#</span>
+<span class="c1">#    im = np.fromstring(file(dfile, &#39;rb&#39;).read(), np.uint16).astype(float)</span>
+<span class="c1">#    im.shape = 256, 256</span>
+<span class="c1">#</span>
+<span class="c1">#    #imshow(im, ColormapJet(256))</span>
+<span class="c1">#    #imshow(im, cmap=cm.jet)</span>
+<span class="c1">#</span>
+<span class="c1">#    imvals = np.sort(im.flatten())</span>
+<span class="c1">#    lo = imvals[0]</span>
+<span class="c1">#    hi = imvals[-1]</span>
+<span class="c1">#    steps = (imvals[::len(imvals)/256] - lo) / (hi - lo)</span>
+<span class="c1">#    num_steps = float(len(steps))</span>
+<span class="c1">#    interps = [(s, idx/num_steps, idx/num_steps) for idx,</span>
+<span class="c1">#        s in enumerate(steps)]</span>
+<span class="c1">#    interps.append((1, 1, 1))</span>
+<span class="c1">#    cdict = {&#39;red&#39;: interps,</span>
+<span class="c1">#             &#39;green&#39;: interps,</span>
+<span class="c1">#             &#39;blue&#39;: interps}</span>
+<span class="c1">#    histeq_cmap = colors.LinearSegmentedColormap(&#39;HistEq&#39;, cdict)</span>
+<span class="c1">#    pylab.figure()</span>
+<span class="c1">#    pylab.imshow(im, cmap=histeq_cmap)</span>
+<span class="c1">#    pylab.title(&#39;histeq&#39;)</span>
+<span class="c1">#    pylab.show()</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

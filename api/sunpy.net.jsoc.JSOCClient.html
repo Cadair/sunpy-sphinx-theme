@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>JSOCClient &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/version.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JSOCResponse" href="sunpy.net.jsoc.JSOCResponse.html" />
+    <link rel="prev" title="Compression" href="sunpy.net.jsoc.Compression.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="JSOCClient | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/api/sunpy.net.jsoc.JSOCClient.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code_ref/index.html">Code Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sunpy.html">SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/cm.html">SunPy cm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/coordinates.html">SunPy coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/data.html">SunPy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/database.html">SunPy database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/image.html">SunPy image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/instr.html">SunPy instr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/io.html">SunPy io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/lightcurve.html">SunPy lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/map.html">SunPy map</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../code_ref/net.html">SunPy net</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.fido_factory.UnifiedResponse.html">UnifiedResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.fido_factory.UnifiedDownloaderFactory.html">UnifiedDownloaderFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.fido_factory.DownloadResponse.html">DownloadResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.GenericClient.html">GenericClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.QueryResponse.html">QueryResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.QueryResponseBlock.html">QueryResponseBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.EVEClient.html">EVEClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.GOESClient.html">GOESClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.LYRAClient.html">LYRAClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.NOAAIndicesClient.html">NOAAIndicesClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.NOAAPredictClient.html">NOAAPredictClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.NoRHClient.html">NoRHClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.dataretriever.sources.RHESSIClient.html">RHESSIClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.VSOClient.html">VSOClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.InteractiveVSOClient.html">InteractiveVSOClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Wavelength.html">Wavelength</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Extent.html">Extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Field.html">Field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Provider.html">Provider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Source.html">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Instrument.html">Instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Physobs.html">Physobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Pixels.html">Pixels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Level.html">Level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Resolution.html">Resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Detector.html">Detector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Filter.html">Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Sample.html">Sample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.Quicklook.html">Quicklook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.vso.attrs.PScale.html">PScale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek.HEKClient.html">HEKClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek2vso.translate_results_to_query.html">translate_results_to_query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek2vso.vso_attribute_parse.html">vso_attribute_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.hek2vso.H2VClient.html">H2VClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.helio.hec.HECClient.html">HECClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Compression.html">Compression</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">JSOCClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.JSOCResponse.html">JSOCResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Notify.html">Notify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Protocol.html">Protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Segment.html">Segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sunpy.net.jsoc.Series.html">Series</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/physics.html">SunPy physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/roi.html">SunPy roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/spectra.html">SunPy spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/sun.html">SunPy sun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/time.html">SunPy time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/timeseries.html">SunPy timeseries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/util.html">SunPy util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/visualization.html">SunPy visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code_ref/wcs.html">SunPy wcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="jsocclient">
+<h1>JSOCClient<a class="headerlink" href="#jsocclient" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sunpy.net.jsoc.JSOCClient">
+<em class="property">class </em><code class="descclassname">sunpy.net.jsoc.</code><code class="descname">JSOCClient</code><a class="reference internal" href="../_modules/sunpy/net/jsoc/jsoc.html#JSOCClient"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/jsoc/jsoc.py#L63" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.jsoc.JSOCClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>This is a Client to the JSOC Data Export service.</p>
+<p>It exposes a similar API to the VSO client, although the underlying model
+is more complex. The JSOC stages data before you can download it, so a JSOC
+query is a three stage process, first you query the JSOC for records,
+a table of these records is returned. Then you can request these records to
+be staged for download and then you can download them.
+The last two stages of this process are bundled together into the <a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.get" title="sunpy.net.jsoc.JSOCClient.get"><code class="xref py py-obj docutils literal"><span class="pre">get()</span></code></a>
+method, but they can be separated if you are performing a large or complex
+query.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">JSOC now requires you to register your email address before requesting
+data. See this site: <a class="reference external" href="http://jsoc.stanford.edu/ajax/register_email.html">http://jsoc.stanford.edu/ajax/register_email.html</a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>This Client mocks input to this site: <a class="reference external" href="http://jsoc.stanford.edu/ajax/exportdata.html">http://jsoc.stanford.edu/ajax/exportdata.html</a>
+Therefore that is a good resource if things are mis-behaving.
+The full list of &#8216;series&#8217; is available through this site: <a class="reference external" href="http://jsoc.stanford.edu/">http://jsoc.stanford.edu/</a></p>
+<p>You can build more complex queries by specifying parameters to POST to JSOC via keyword
+arguments. You can generate these kwargs using the Export Data page at JSOC.</p>
+<p>JSOC now requires a validated email address, you can pass in your validated email address
+using the <a class="reference internal" href="sunpy.net.jsoc.Notify.html#sunpy.net.jsoc.Notify" title="sunpy.net.jsoc.attrs.Notify"><code class="xref py py-obj docutils literal"><span class="pre">Notify</span></code></a> attribute. You have to register your email address
+with JSOC <a class="reference external" href="http://jsoc.stanford.edu/ajax/register_email.html">http://jsoc.stanford.edu/ajax/register_email.html</a>.</p>
+<p class="rubric">Examples</p>
+<p><em>Example 1</em></p>
+<p>Query JSOC for some HMI data at 45 second cadence:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">jsoc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">attrs</span> <span class="k">as</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">jsoc</span><span class="o">.</span><span class="n">JSOCClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2014-01-01T00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2014-01-01T01:00:00&#39;</span><span class="p">),</span>
+<span class="gp">... </span>                        <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="s1">&#39;hmi.m_45s&#39;</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Notify</span><span class="p">(</span><span class="s2">&quot;sunpy@sunpy.org&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>the response object holds the records that your query will return:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>   
+<span class="go">        DATE         TELESCOP  INSTRUME  ... WAVELNTH     WAVEUNIT</span>
+<span class="go">-------------------- -------- ---------- ... -------- ---------------</span>
+<span class="go">2014-01-05T17:44:53Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="go">2014-01-05T17:46:02Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="go">2014-01-05T17:47:11Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="go">2014-01-05T17:48:18Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="go">                 ...      ...        ... ...      ...             ...</span>
+<span class="go">2014-01-05T17:42:33Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="go">2014-01-05T17:43:41Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="go">2014-01-05T17:44:52Z  SDO/HMI HMI_FRONT2 ...   6173.0 Invalid KeyLink</span>
+<span class="go">Length = 81 rows</span>
+</pre></div>
+</div>
+<p>You can then make the request and download the data:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p>This returns a Results instance which can be used to watch the progress
+of the download.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p><em>Example 2</em></p>
+<p>Query the JSOC for some AIA 171 data, and separate out the staging and the
+download steps:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">jsoc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">attrs</span> <span class="k">as</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">jsoc</span><span class="o">.</span><span class="n">JSOCClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2014/1/1T00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2014/1/1T00:00:36&#39;</span><span class="p">),</span>
+<span class="gp">... </span>                        <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="s1">&#39;aia.lev1_euv_12s&#39;</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Segment</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">),</span>
+<span class="gp">... </span>                        <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Wavelength</span><span class="p">(</span><span class="mi">171</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Notify</span><span class="p">(</span><span class="s2">&quot;sunpy@sunpy.org&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>the response object holds the records that your query will return:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="go">        DATE         TELESCOP INSTRUME          T_OBS          WAVELNTH WAVEUNIT</span>
+<span class="go">-------------------- -------- -------- ----------------------- -------- --------</span>
+<span class="go">2014-01-06T15:07:12Z  SDO/AIA    AIA_3 2013-12-31T23:59:36.34Z      171 angstrom</span>
+<span class="go">2014-01-06T15:07:12Z  SDO/AIA    AIA_3 2013-12-31T23:59:48.34Z      171 angstrom</span>
+<span class="go">2014-01-07T15:05:10Z  SDO/AIA    AIA_3 2014-01-01T00:00:00.34Z      171 angstrom</span>
+<span class="go">2014-01-07T15:05:10Z  SDO/AIA    AIA_3 2014-01-01T00:00:12.34Z      171 angstrom</span>
+</pre></div>
+</div>
+<p>You can then make the request:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requestIDs</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">request_data</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="go">[u&#39;JSOC_20140724_952&#39;]</span>
+</pre></div>
+</div>
+<p>This returns a list of all the request identifiers for your query.</p>
+<p>You can then check the status of the request, which will print out a status
+message and return you the status code, a code of 1 means it is not ready
+to download and a code of 0 means the request is staged and ready. A code
+of 6 means an error, which is commonly that the request has not had time to
+get into the queue.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">status</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">check_request</span><span class="p">(</span><span class="n">requestIDs</span><span class="p">)</span>
+<span class="go">Request JSOC_20140724_955 was submitted 10 seconds ago, it is not ready to download.</span>
+</pre></div>
+</div>
+<p>Once the status code is 0 you can download the data using the <a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.get_request" title="sunpy.net.jsoc.JSOCClient.get_request"><code class="xref py py-obj docutils literal"><span class="pre">get_request</span></code></a>
+method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_request</span><span class="p">(</span><span class="n">requestIDs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This returns a Results instance which can be used to watch the progress
+of the download.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+</pre></div>
+</div>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.check_request" title="sunpy.net.jsoc.JSOCClient.check_request"><code class="xref py py-obj docutils literal"><span class="pre">check_request</span></code></a>(requestIDs)</td>
+<td>Check the status of a request and print out a message about it</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.fetch" title="sunpy.net.jsoc.JSOCClient.fetch"><code class="xref py py-obj docutils literal"><span class="pre">fetch</span></code></a>(jsoc_response[,&nbsp;path,&nbsp;overwrite,&nbsp;...])</td>
+<td>Make the request for the data in jsoc_response and wait for it to be staged and then download the data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.get" title="sunpy.net.jsoc.JSOCClient.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(jsoc_response[,&nbsp;path,&nbsp;overwrite,&nbsp;...])</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.get_request" title="sunpy.net.jsoc.JSOCClient.get_request"><code class="xref py py-obj docutils literal"><span class="pre">get_request</span></code></a>(requestIDs[,&nbsp;path,&nbsp;overwrite,&nbsp;...])</td>
+<td>Query JSOC to see if request_id is ready for download.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.query" title="sunpy.net.jsoc.JSOCClient.query"><code class="xref py py-obj docutils literal"><span class="pre">query</span></code></a>(*query,&nbsp;**kwargs)</td>
+<td><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.request_data" title="sunpy.net.jsoc.JSOCClient.request_data"><code class="xref py py-obj docutils literal"><span class="pre">request_data</span></code></a>(jsoc_response,&nbsp;**kwargs)</td>
+<td>Request that JSOC stages the data for download.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.search" title="sunpy.net.jsoc.JSOCClient.search"><code class="xref py py-obj docutils literal"><span class="pre">search</span></code></a>(*query,&nbsp;**kwargs)</td>
+<td>Build a JSOC query and submit it to JSOC for processing.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="sunpy.net.jsoc.JSOCClient.check_request">
+<code class="descname">check_request</code><span class="sig-paren">(</span><em>requestIDs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/jsoc/jsoc.html#JSOCClient.check_request"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/jsoc/jsoc.py#L281" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.jsoc.JSOCClient.check_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the status of a request and print out a message about it</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>requestIDs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.6)"><em>string</em></a>) &#8211; A list of requestIDs to check</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>status</strong> (<em>list</em>) &#8211; A list of status&#8217; that were returned by JSOC</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.jsoc.JSOCClient.fetch">
+<code class="descname">fetch</code><span class="sig-paren">(</span><em>jsoc_response</em>, <em>path=None</em>, <em>overwrite=False</em>, <em>progress=True</em>, <em>max_conn=5</em>, <em>downloader=None</em>, <em>sleep=10</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/jsoc/jsoc.html#JSOCClient.fetch"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/jsoc/jsoc.py#L323" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.jsoc.JSOCClient.fetch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make the request for the data in jsoc_response and wait for it to be
+staged and then download the data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>jsoc_response</strong> (<em>JSOCResponse object</em>) &#8211; A response object</li>
+<li><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.6)"><em>string</em></a>) &#8211; Path to save data to, defaults to SunPy download dir</li>
+<li><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Replace files with the same name if True</li>
+<li><strong>progress</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Print progress info to terminal</li>
+<li><strong>max_conns</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Maximum number of download connections.</li>
+<li><strong>downloader</strong> (<code class="xref py py-obj docutils literal"><span class="pre">sunpy.download.Downloader</span></code> instance) &#8211; A Custom downloader to use</li>
+<li><strong>sleep</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; The number of seconds to wait between calls to JSOC to check the status
+of the request.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>results</strong> (a <code class="xref py py-class docutils literal"><span class="pre">sunpy.net.vso.Results</span></code> instance) &#8211; A Results object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.jsoc.JSOCClient.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>jsoc_response</em>, <em>path=None</em>, <em>overwrite=False</em>, <em>progress=True</em>, <em>max_conn=5</em>, <em>downloader=None</em>, <em>sleep=10</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/jsoc/jsoc.html#JSOCClient.get"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/jsoc/jsoc.py#L384" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.jsoc.JSOCClient.get" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>The get function is deprecated and may be removed in a future version.
+    Use JSOCClient.fetch instead.</p>
+</div>
+<p>See <a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.fetch" title="sunpy.net.jsoc.jsoc.JSOCClient"><code class="xref py py-obj docutils literal"><span class="pre">fetch</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.jsoc.JSOCClient.get_request">
+<code class="descname">get_request</code><span class="sig-paren">(</span><em>requestIDs</em>, <em>path=None</em>, <em>overwrite=False</em>, <em>progress=True</em>, <em>max_conn=5</em>, <em>downloader=None</em>, <em>results=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/jsoc/jsoc.html#JSOCClient.get_request"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/jsoc/jsoc.py#L394" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.jsoc.JSOCClient.get_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query JSOC to see if request_id is ready for download.</p>
+<p>If the request is ready for download, download it.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>requestIDs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.6)"><em>string</em></a>) &#8211; One or many requestID strings</li>
+<li><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.6)"><em>string</em></a>) &#8211; Path to save data to, defaults to SunPy download dir</li>
+<li><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Replace files with the same name if True</li>
+<li><strong>progress</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Print progress info to terminal</li>
+<li><strong>max_conns</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Maximum number of download connections.</li>
+<li><strong>downloader</strong> (<code class="xref py py-obj docutils literal"><span class="pre">sunpy.download.Downloader</span></code> instance) &#8211; A Custom downloader to use</li>
+<li><strong>results</strong> (<em>Results instance</em>) &#8211; A Results manager to use.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>res</strong> (<em>Results</em>) &#8211; A Results instance or None if no URLs to download</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.jsoc.JSOCClient.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>*query</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/jsoc/jsoc.html#JSOCClient.query"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/jsoc/jsoc.py#L224" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.jsoc.JSOCClient.query" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.8: </span>The query function is deprecated and may be removed in a future version.
+    Use JSOCClient.search instead.</p>
+</div>
+<p>See <a class="reference internal" href="#sunpy.net.jsoc.JSOCClient.search" title="sunpy.net.jsoc.jsoc.JSOCClient"><code class="xref py py-obj docutils literal"><span class="pre">search</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.jsoc.JSOCClient.request_data">
+<code class="descname">request_data</code><span class="sig-paren">(</span><em>jsoc_response</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/jsoc/jsoc.html#JSOCClient.request_data"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/jsoc/jsoc.py#L231" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.jsoc.JSOCClient.request_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request that JSOC stages the data for download.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jsoc_response</strong> (<em>JSOCResponse object</em>) &#8211; The results of a query</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>requestIDs</strong> (<em>list of strings</em>) &#8211; List of the JSOC request identifiers</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sunpy.net.jsoc.JSOCClient.search">
+<code class="descname">search</code><span class="sig-paren">(</span><em>*query</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sunpy/net/jsoc/jsoc.html#JSOCClient.search"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/sunpy/sunpy/tree/master/sunpy/net/jsoc/jsoc.py#L181" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#sunpy.net.jsoc.JSOCClient.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a JSOC query and submit it to JSOC for processing.</p>
+<p>Takes a variable number of <code class="xref py py-mod docutils literal"><span class="pre">sunpy.net.jsoc.attrs</span></code> as parameters,
+which are chained together using the AND (<code class="xref py py-obj docutils literal"><span class="pre">&amp;</span></code>) operator.</p>
+<p>Complex queries to be easily formed using logical operators such as
+<code class="xref py py-obj docutils literal"><span class="pre">&amp;</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">|</span></code>, in the same way as the VSO client.</p>
+<p class="rubric">Examples</p>
+<p>Request all AIA 304 image data between 2010-01-01T00:00 and
+2010-01-01T01:00 in rice compressed form.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">jsoc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="k">import</span> <span class="n">attrs</span> <span class="k">as</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">jsoc</span><span class="o">.</span><span class="n">JSOCClient</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2010-01-01T00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2010-01-01T01:00:00&#39;</span><span class="p">),</span>
+<span class="gp">... </span>                        <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="s1">&#39;aia.lev1_euv_12s&#39;</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Wavelength</span><span class="p">(</span><span class="mi">304</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">),</span>
+<span class="gp">... </span>                        <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Compression</span><span class="p">(</span><span class="s1">&#39;rice&#39;</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">jsoc</span><span class="o">.</span><span class="n">Segment</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>results</strong> (<em>JSOCResults object</em>) &#8211; A collection of records that the query returns.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

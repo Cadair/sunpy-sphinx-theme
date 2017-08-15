@@ -1,0 +1,55 @@
+LightCurve
+==========
+
+.. currentmodule:: sunpy.lightcurve
+
+.. autoclass:: LightCurve
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~LightCurve.header
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~LightCurve.concatenate
+      ~LightCurve.create
+      ~LightCurve.extract
+      ~LightCurve.from_data
+      ~LightCurve.from_dataframe
+      ~LightCurve.from_file
+      ~LightCurve.from_range
+      ~LightCurve.from_time
+      ~LightCurve.from_timerange
+      ~LightCurve.from_url
+      ~LightCurve.from_yesterday
+      ~LightCurve.peek
+      ~LightCurve.plot
+      ~LightCurve.time_range
+      ~LightCurve.truncate
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: header
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: concatenate
+   .. automethod:: create
+   .. automethod:: extract
+   .. automethod:: from_data
+   .. automethod:: from_dataframe
+   .. automethod:: from_file
+   .. automethod:: from_range
+   .. automethod:: from_time
+   .. automethod:: from_timerange
+   .. automethod:: from_url
+   .. automethod:: from_yesterday
+   .. automethod:: peek
+   .. automethod:: plot
+   .. automethod:: time_range
+   .. automethod:: truncate

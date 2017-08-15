@@ -1,0 +1,6 @@
+parabolic_turning_point
+=======================
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: parabolic_turning_point

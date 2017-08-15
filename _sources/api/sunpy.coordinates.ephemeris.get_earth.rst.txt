@@ -1,0 +1,6 @@
+get_earth
+=========
+
+.. currentmodule:: sunpy.coordinates.ephemeris
+
+.. autofunction:: get_earth

@@ -1,0 +1,17 @@
+Tag
+===
+
+.. currentmodule:: sunpy.database.tables
+
+.. autoclass:: Tag
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~Tag.name
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: name

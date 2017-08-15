@@ -1,0 +1,6 @@
+repair_image_nonfinite
+======================
+
+.. currentmodule:: sunpy.image.coalignment
+
+.. autofunction:: repair_image_nonfinite

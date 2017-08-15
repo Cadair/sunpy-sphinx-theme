@@ -1,0 +1,65 @@
+Spectrogram
+===========
+
+.. currentmodule:: sunpy.spectra.spectrogram
+
+.. autoclass:: Spectrogram
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~Spectrogram.COPY_PROPERTIES
+      ~Spectrogram.dtype
+      ~Spectrogram.shape
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Spectrogram.at_freq
+      ~Spectrogram.auto_const_bg
+      ~Spectrogram.auto_find_background
+      ~Spectrogram.clip_freq
+      ~Spectrogram.clip_values
+      ~Spectrogram.format_freq
+      ~Spectrogram.format_time
+      ~Spectrogram.freq_overlap
+      ~Spectrogram.interpolate
+      ~Spectrogram.linearize_freqs
+      ~Spectrogram.peek
+      ~Spectrogram.plot
+      ~Spectrogram.randomized_auto_const_bg
+      ~Spectrogram.randomized_subtract_bg
+      ~Spectrogram.rescale
+      ~Spectrogram.subtract_bg
+      ~Spectrogram.time_formatter
+      ~Spectrogram.time_to_x
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: COPY_PROPERTIES
+   .. autoattribute:: dtype
+   .. autoattribute:: shape
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: at_freq
+   .. automethod:: auto_const_bg
+   .. automethod:: auto_find_background
+   .. automethod:: clip_freq
+   .. automethod:: clip_values
+   .. automethod:: format_freq
+   .. automethod:: format_time
+   .. automethod:: freq_overlap
+   .. automethod:: interpolate
+   .. automethod:: linearize_freqs
+   .. automethod:: peek
+   .. automethod:: plot
+   .. automethod:: randomized_auto_const_bg
+   .. automethod:: randomized_subtract_bg
+   .. automethod:: rescale
+   .. automethod:: subtract_bg
+   .. automethod:: time_formatter
+   .. automethod:: time_to_x

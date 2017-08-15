@@ -1,0 +1,6 @@
+node_to_dict
+============
+
+.. currentmodule:: sunpy.util.xml
+
+.. autofunction:: node_to_dict

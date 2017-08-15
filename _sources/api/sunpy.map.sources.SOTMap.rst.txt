@@ -1,0 +1,31 @@
+SOTMap
+======
+
+.. currentmodule:: sunpy.map.sources
+
+.. autoclass:: SOTMap
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~SOTMap.Instruments
+      ~SOTMap.Observation_Type
+      ~SOTMap.Waves
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SOTMap.is_datasource_for
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: Instruments
+   .. autoattribute:: Observation_Type
+   .. autoattribute:: Waves
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: is_datasource_for

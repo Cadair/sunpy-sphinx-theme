@@ -1,0 +1,7 @@
+Longitude180
+============
+
+.. currentmodule:: sunpy.coordinates.representation
+
+.. autoclass:: Longitude180
+   :show-inheritance:

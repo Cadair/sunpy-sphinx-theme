@@ -1,0 +1,23 @@
+InteractiveVSOClient
+====================
+
+.. currentmodule:: sunpy.net.vso
+
+.. autoclass:: InteractiveVSOClient
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~InteractiveVSOClient.get
+      ~InteractiveVSOClient.missing_information
+      ~InteractiveVSOClient.multiple_choices
+      ~InteractiveVSOClient.search
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get
+   .. automethod:: missing_information
+   .. automethod:: multiple_choices
+   .. automethod:: search

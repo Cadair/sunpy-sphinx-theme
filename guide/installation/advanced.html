@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Advanced Installation Instructions &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Linux" href="linux.html" />
+    <link rel="prev" title="Installation" href="index.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Advanced Installation Instructions | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/guide/installation/advanced.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">SunPy User Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Installation</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Advanced Installation Instructions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linux.html">Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mac.html">Mac OS X</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-sunpy">Testing SunPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-development-version-of-sunpy">Installing the Development Version of SunPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-documentation">Building documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tour.html">A brief tour of SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../acquiring_data/index.html">Acquiring Data with SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_types/index.html">Data Types in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plotting.html">Plotting in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../units-coordinates.html">Units and Coordinates in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time.html">Time in SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roi.html">Region of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customization.html">Customizing SunPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="advanced-installation-instructions">
+<span id="advanced-install"></span><h1>Advanced Installation Instructions<a class="headerlink" href="#advanced-installation-instructions" title="Permalink to this headline">¶</a></h1>
+<p>This document provides details on things you need to know to install and
+manage your own scientific Python + SunPy installation.
+If you have never installed or used scientific Python we recommend that you
+follow the <a class="reference internal" href="index.html#main-install"><span class="std std-ref">Anaconda installation instructions</span></a>.</p>
+<div class="section" id="alternative-scientific-python-installation-instructions">
+<h2>Alternative Scientific Python Installation Instructions<a class="headerlink" href="#alternative-scientific-python-installation-instructions" title="Permalink to this headline">¶</a></h2>
+<p>There are many alternatives to Anaconda as a way of installing a scientific
+Python environment, there are various other platform specific ways to install
+scientific Python:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mac.html">Mac OS X</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="installing-sunpy-on-top-of-an-existing-scientific-python-environment">
+<h2>Installing SunPy on top of an existing Scientific Python Environment<a class="headerlink" href="#installing-sunpy-on-top-of-an-existing-scientific-python-environment" title="Permalink to this headline">¶</a></h2>
+<p>These instructions assume you have a scientific Python distribution with access
+to the <code class="xref py py-obj docutils literal"><span class="pre">pip</span></code> command installed.</p>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>You will need a compiler suite and the development headers for Python and
+Numpy in order to build SunPy. On Linux, using the package manager for your
+distribution will usually be the easiest route, while on MacOS X you will
+need the XCode command line tools.</p>
+<p>The <a class="reference external" href="http://docs.scipy.org/doc/numpy/user/install.html">instructions for building Numpy from source</a> are also a good
+resource for setting up your environment to build Python packages.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are using MacOS X, you will need to the XCode command line
+tools.  One way to get them is to install <a class="reference external" href="https://developer.apple.com/xcode/">XCode</a>. If you are using OS X 10.7
+(Lion) or later, you must also explicitly install the command line
+tools. You can do this by opening the XCode application, going to
+<strong>Preferences</strong>, then <strong>Downloads</strong>, and then under <strong>Components</strong>,
+click on the Install button to the right of <strong>Command Line Tools</strong>.
+Alternatively, on 10.7 (Lion) or later, you do not need to install
+XCode, you can download just the command line tools from
+<a class="reference external" href="https://developer.apple.com/downloads/index.action">the Apple developer site</a>
+(requires an Apple developer account).</p>
+</div>
+</div>
+<div class="section" id="sunpy-s-requirements">
+<h3>SunPy&#8217;s Requirements<a class="headerlink" href="#sunpy-s-requirements" title="Permalink to this headline">¶</a></h3>
+<p>SunPy consists of many submodules that each have their own requirements.
+You do not need to fulfil all the requirements if you only intend on using
+parts of SunPy. It is however <em>strongly</em> recommended to have all the
+dependencies installed (with the potential exception of <code class="xref py py-obj docutils literal"><span class="pre">glymur</span></code>).</p>
+<p>SunPy has the following strict requirements:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.python.org/">Python</a> 2.7.x, 3.5.x or later</li>
+<li><a class="reference external" href="http://www.numpy.org/">NumPy</a>  1.6.0 or later</li>
+<li><a class="reference external" href="http://www.scipy.org/">SciPy</a> 0.10.0 or later</li>
+<li><a class="reference external" href="http://www.astropy.org/">AstroPy</a> 1.0.0 or later</li>
+</ul>
+<p>SunPy also depends on other packages for optional features.
+However, note that these only need to be installed if those particular features
+are needed. SunPy will import even if these dependencies are not installed.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://matplotlib.org/">Matplotlib</a> [<em>Highly Recommended</em>] 1.3.0 or later:
+For <a class="reference internal" href="../../code_ref/timeseries.html#module-sunpy.timeseries" title="sunpy.timeseries"><code class="xref py py-obj docutils literal"><span class="pre">timeseries</span></code></a>, <a class="reference internal" href="../../code_ref/map.html#module-sunpy.map" title="sunpy.map"><code class="xref py py-obj docutils literal"><span class="pre">map</span></code></a>, <code class="xref py py-obj docutils literal"><span class="pre">spectra</span></code>, <a class="reference internal" href="../../code_ref/instr.html#module-sunpy.instr" title="sunpy.instr"><code class="xref py py-obj docutils literal"><span class="pre">instr</span></code></a>
+and <a class="reference internal" href="../../code_ref/visualization.html#module-sunpy.visualization" title="sunpy.visualization"><code class="xref py py-obj docutils literal"><span class="pre">visualization</span></code></a>.</li>
+<li><a class="reference external" href="http://pandas.pydata.org/">pandas</a> 0.10 or later: For <a class="reference internal" href="../../code_ref/timeseries.html#module-sunpy.timeseries" title="sunpy.timeseries"><code class="xref py py-obj docutils literal"><span class="pre">timeseries</span></code></a>.</li>
+<li><a class="reference external" href="http://www.sqlalchemy.org">sqlalchemy</a>: For the <a class="reference internal" href="../../code_ref/database.html#module-sunpy.database" title="sunpy.database"><code class="xref py py-obj docutils literal"><span class="pre">database</span></code></a> package.</li>
+<li><a class="reference external" href="https://bitbucket.org/jurko/suds">suds-jurko</a>: For <code class="xref py py-obj docutils literal"><span class="pre">net</span></code>.</li>
+<li><a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/">beautifulsoup4</a>: For <code class="xref py py-obj docutils literal"><span class="pre">Callisto</span></code> Spectrograms and <a class="reference internal" href="../../code_ref/net.html#module-sunpy.net.helio" title="sunpy.net.helio"><code class="xref py py-obj docutils literal"><span class="pre">helio</span></code></a></li>
+<li><a class="reference external" href="http://docs.python-requests.org/en/latest/">requests</a>: For the <a class="reference internal" href="../../code_ref/net.html#module-sunpy.net.jsoc" title="sunpy.net.jsoc"><code class="xref py py-obj docutils literal"><span class="pre">jsoc</span></code></a> submodule.</li>
+<li><a class="reference external" href="https://glymur.readthedocs.io/en/latest/">glymur</a> 0.5.9 or later: To enable reading of JPEG2000 files.
+Glymur requires the installation of the <a class="reference external" href="http://code.google.com/p/openjpeg/downloads/list">OpenJPEG C library</a>.</li>
+</ul>
+<p>To run the tests:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/HypothesisWorks/hypothesis-python">hypothesis</a></li>
+<li><a class="reference external" href="https://github.com/testing-cabal/mock">mock</a></li>
+<li><a class="reference external" href="http://pytest.org/latest/">pytest</a></li>
+<li><a class="reference external" href="https://github.com/pytest-dev/pytest-cov">pytest-cov</a></li>
+<li><a class="reference external" href="https://github.com/pytest-dev/pytest-mock/">pytest-mock</a></li>
+</ul>
+<p>The packages that will be installed as dependencies by default and are the ones
+required to import the core datatypes <a class="reference internal" href="../../code_ref/map.html#module-sunpy.map" title="sunpy.map"><code class="xref py py-obj docutils literal"><span class="pre">map</span></code></a>, <a class="reference internal" href="../../code_ref/timeseries.html#module-sunpy.timeseries" title="sunpy.timeseries"><code class="xref py py-obj docutils literal"><span class="pre">timeseries</span></code></a> and
+<code class="xref py py-obj docutils literal"><span class="pre">spectra</span></code>. These are the strict requirements and the following optional
+packages:</p>
+</div>
+<div class="section" id="using-pip">
+<h3>Using <code class="xref py py-obj docutils literal"><span class="pre">pip</span></code><a class="headerlink" href="#using-pip" title="Permalink to this headline">¶</a></h3>
+<p>There are multiple options depending on how many optional dependencies you
+want to install:</p>
+<p>To install SunPy with <code class="xref py py-obj docutils literal"><span class="pre">pip</span></code> including optional dependencies (recommended), simply run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sunpy</span><span class="p">[</span><span class="nb">all</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>To install SunPy with no optional dependencies:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sunpy</span>
+</pre></div>
+</div>
+<p>To install SunPy with net-based dependencies (suds and beautifulsoup):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sunpy</span><span class="p">[</span><span class="n">net</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>To install SunPy with database dependencies (sqlalchemy):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sunpy</span><span class="p">[</span><span class="n">database</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Other available options are: <code class="xref py py-obj docutils literal"><span class="pre">[image]</span></code>, <code class="xref py py-obj docutils literal"><span class="pre">[jpeg2000]</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">[tests]</span></code></p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Users of the Anaconda python distribution should follow the instructions
+for <a class="reference external" href="http://docs.astropy.org/en/stable/install.html#anaconda-install" title="(in Astropy v2.0.1)"><span>Anaconda python distribution</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You will need a C compiler (e.g. <code class="docutils literal"><span class="pre">gcc</span></code> or <code class="docutils literal"><span class="pre">clang</span></code>) to be installed.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">suds-py3</span></code> is not compatible where as <code class="docutils literal"><span class="pre">suds-jurko</span></code> works fine with SunPy. Hence we depend on <code class="docutils literal"><span class="pre">suds-jurko</span></code> for operations under various modules under <code class="xref py py-obj docutils literal"><span class="pre">net</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you get a <code class="docutils literal"><span class="pre">PermissionError</span></code> this means that you do not have the
+required administrative access to install new packages to your Python
+installation.  In this case you may consider using the <code class="docutils literal"><span class="pre">--user</span></code> option
+to install the package into your home directory.  You can read more about
+how to do this in the <a class="reference external" href="http://www.pip-installer.org/en/1.2.1/other-tools.html#using-pip-with-the-user-scheme">pip documentation</a>.</p>
+<p>Alternatively, if you intend to do development on other software that uses
+SunPy, such as an affiliated package, consider installing SunPy into a
+<a class="reference external" href="http://docs.astropy.org/en/stable/development/workflow/virtualenv_detail.html#using-virtualenv" title="(in Astropy v2.0.1)"><span class="xref std std-ref">virtualenv</span></a>.</p>
+<p class="last">Do <strong>not</strong> install SunPy or other third-party packages using <code class="docutils literal"><span class="pre">sudo</span></code>
+unless you are fully aware of the risks.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="testing-sunpy">
+<span id="id1"></span><h1>Testing SunPy<a class="headerlink" href="#testing-sunpy" title="Permalink to this headline">¶</a></h1>
+<p>The easiest way to test your installed version of SunPy is running
+correctly is to use the <a class="reference internal" href="../../api/sunpy.self_test.html#sunpy.self_test" title="sunpy.self_test"><code class="xref py py-func docutils literal"><span class="pre">sunpy.self_test()</span></code></a> function:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sunpy</span>
+<span class="n">sunpy</span><span class="o">.</span><span class="n">self_test</span><span class="p">(</span><span class="n">online</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which will run many of the SunPy tests.</p>
+<p>The tests should run and print out any failures, which you can report at
+the <a class="reference external" href="http://github.com/sunpy/sunpy/issues">SunPy issue tracker</a>.</p>
+</div>
+<div class="section" id="installing-the-development-version-of-sunpy">
+<h1>Installing the Development Version of SunPy<a class="headerlink" href="#installing-the-development-version-of-sunpy" title="Permalink to this headline">¶</a></h1>
+<p>The latest (bleeding-edge) development version of SunPy can be cloned from github
+using this command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sunpy</span><span class="o">/</span><span class="n">sunpy</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you wish to participate in the development of SunPy, see
+<a class="reference external" href="http://docs.astropy.org/en/stable/index.html#developer-docs" title="(in Astropy v2.0.1)"><span>Developer Documentation</span></a>.  This document covers only the basics
+necessary to install SunPy.</p>
+</div>
+<p>Once inside the source directory that has been clone from GitHub you can install
+SunPy using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This command will need access to system folders append <code class="xref py py-obj docutils literal"><span class="pre">--user</span></code> to install
+SunPy into your home directory.</p>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<p>If you get an error mentioning that you do not have the correct permissions to
+install SunPy into the default <code class="docutils literal"><span class="pre">site-packages</span></code> directory, you should try
+installing with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sunpy</span> <span class="o">--</span><span class="n">user</span>
+</pre></div>
+</div>
+<p>which will install into a default directory in your home directory.</p>
+</div>
+<div class="section" id="building-documentation">
+<h1>Building documentation<a class="headerlink" href="#building-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Building the documentation is in general not necessary unless you
+are writing new documentation or do not have internet access, because
+the latest (and archive) versions of SunPy&#8217;s documentation are
+available at <a class="reference external" href="http://docs.sunpy.org">docs.sunpy.org</a> .</p>
+</div>
+<p>Building the documentation requires the SunPy source code and some additional
+packages:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://sphinx.pocoo.org">Sphinx</a> (and its dependencies) 1.0 or later</li>
+<li><a class="reference external" href="http://www.graphviz.org">Graphviz</a></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Sphinx also requires a reasonably modern LaTeX installation to render
+equations.  Per the <a class="reference external" href="http://sphinx-doc.org/builders.html?highlight=latex#sphinx.builders.latex.LaTeXBuilder">Sphinx documentation</a>,
+for the TexLive distribution the following packages are required to be
+installed:</p>
+<ul class="simple">
+<li>latex-recommended</li>
+<li>latex-extra</li>
+<li>fonts-recommended</li>
+</ul>
+<p class="last">For other LaTeX distributions your mileage may vary. To build the PDF
+documentation using LaTeX, the <code class="docutils literal"><span class="pre">fonts-extra</span></code> TexLive package or the
+<code class="docutils literal"><span class="pre">inconsolata</span></code> CTAN package are also required.</p>
+</div>
+<p>There are two ways to build the SunPy documentation. The most straightforward
+way is to execute the command (from the sunpy source directory):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_sphinx</span> <span class="o">-</span><span class="n">lo</span>
+</pre></div>
+</div>
+<p>The documentation will be built in the <code class="docutils literal"><span class="pre">doc/build/html</span></code> directory, and can
+be read by pointing a web browser to <code class="docutils literal"><span class="pre">doc/build/html/index.html</span></code>.</p>
+<p>The LaTeX documentation can be generated by using the command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_sphinx</span> <span class="o">-</span><span class="n">b</span> <span class="n">latex</span>
+</pre></div>
+</div>
+<p>The LaTeX file <code class="docutils literal"><span class="pre">SunPy.tex</span></code> will be created in the <code class="docutils literal"><span class="pre">doc/build/latex</span></code>
+directory, and can be compiled using <code class="docutils literal"><span class="pre">pdflatex</span></code>.</p>
+<p>The above method builds the API documentation from the source code.</p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

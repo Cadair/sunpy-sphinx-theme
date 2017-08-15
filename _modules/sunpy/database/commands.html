@@ -1,0 +1,541 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.database.commands &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.database.commands | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/database/commands.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.database.commands</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Author: Simon Liedtke &lt;liedtke.simon@googlemail.com&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># This module was developed with funding provided by</span>
+<span class="c1"># the Google Summer of Code (2013).</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">make_transient</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="k">import</span> <span class="n">InvalidRequestError</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.extern</span> <span class="k">import</span> <span class="n">six</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="nb">range</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;EmptyCommandStackError&#39;</span><span class="p">,</span> <span class="s1">&#39;NoSuchEntryError&#39;</span><span class="p">,</span> <span class="s1">&#39;NonRemovableTagError&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;DatabaseOperation&#39;</span><span class="p">,</span> <span class="s1">&#39;AddEntry&#39;</span><span class="p">,</span> <span class="s1">&#39;RemoveEntry&#39;</span><span class="p">,</span> <span class="s1">&#39;EditEntry&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;CommandManager&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="EmptyCommandStackError"><a class="viewcode-back" href="../../../api/sunpy.database.commands.EmptyCommandStackError.html#sunpy.database.EmptyCommandStackError">[docs]</a><span class="k">class</span> <span class="nc">EmptyCommandStackError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if it is attempted to pop from a command stack</span>
+<span class="sd">    even though it is empty.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="NoSuchEntryError"><a class="viewcode-back" href="../../../api/sunpy.database.commands.NoSuchEntryError.html#sunpy.database.NoSuchEntryError">[docs]</a><span class="k">class</span> <span class="nc">NoSuchEntryError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if it is attempted to remove an entry even</span>
+<span class="sd">    though it does not exist in the database.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">database_entry</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="s1">&#39;the database entry </span><span class="si">{0!r}</span><span class="s1"> cannot be removed because it &#39;</span>
+            <span class="s1">&#39;is not stored in the database&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="NonRemovableTagError"><a class="viewcode-back" href="../../../api/sunpy.database.commands.NonRemovableTagError.html#sunpy.database.NonRemovableTagError">[docs]</a><span class="k">class</span> <span class="nc">NonRemovableTagError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This exception is raised if it is attempted to remove a tag from a</span>
+<span class="sd">    database entry even though it is not saved in this entry.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">tag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tag</span> <span class="o">=</span> <span class="n">tag</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="n">errmsg</span> <span class="o">=</span> <span class="s1">&#39;the tag </span><span class="si">{0}</span><span class="s1"> cannot be removed from the database entry </span><span class="si">{1!r}</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="n">errmsg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span></div>
+
+
+<span class="nd">@six</span><span class="o">.</span><span class="n">add_metaclass</span><span class="p">(</span><span class="n">ABCMeta</span><span class="p">)</span>
+<div class="viewcode-block" id="DatabaseOperation"><a class="viewcode-back" href="../../../api/sunpy.database.commands.DatabaseOperation.html#sunpy.database.DatabaseOperation">[docs]</a><span class="k">class</span> <span class="nc">DatabaseOperation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is the abstract main class for all database operations. To</span>
+<span class="sd">    implement a new operation, inherit from this class and override the methods</span>
+<span class="sd">    __call__ and undo. Both these methods get no parameters (except for self of</span>
+<span class="sd">    course). The undo method is expected to do the exact opposite of the</span>
+<span class="sd">    __call__ method, so that calling __call__ *and* undo multiple times in a</span>
+<span class="sd">    row must not have any side-effects. This is not checked in any way, though.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="DatabaseOperation.__call__"><a class="viewcode-back" href="../../../api/sunpy.database.commands.DatabaseOperation.html#sunpy.database.DatabaseOperation.__call__">[docs]</a>    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span>  <span class="c1"># pragma: no cover</span></div>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="DatabaseOperation.undo"><a class="viewcode-back" href="../../../api/sunpy.database.commands.DatabaseOperation.html#sunpy.database.DatabaseOperation.undo">[docs]</a>    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span>  <span class="c1"># pragma: no cover</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">CompositeOperation</span><span class="p">(</span><span class="n">DatabaseOperation</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operations</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">operations</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_operations</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_operations</span> <span class="o">=</span> <span class="n">operations</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">operations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_operations</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_operations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_operations</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">operation</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_operations</span><span class="p">:</span>
+            <span class="c1"># FIXME: What follows is the worst hack of my life. Enjoy.</span>
+            <span class="c1"># Without it, the test test_clear_database would fail.</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">);</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">operation</span><span class="p">));</span> <span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+            <span class="n">operation</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">operation</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_operations</span><span class="p">:</span>
+            <span class="n">operation</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_operations</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="AddEntry"><a class="viewcode-back" href="../../../api/sunpy.database.commands.AddEntry.html#sunpy.database.AddEntry">[docs]</a><span class="k">class</span> <span class="nc">AddEntry</span><span class="p">(</span><span class="n">DatabaseOperation</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add a new database entry to this session. It is not checked whether an</span>
+<span class="sd">    equivalent entry is already saved in the session; this has to be checked by</span>
+<span class="sd">    the caller. The ``undo`` method removes the entry from the session again.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">database_entry</span>
+
+<div class="viewcode-block" id="AddEntry.__call__"><a class="viewcode-back" href="../../../api/sunpy.database.commands.AddEntry.html#sunpy.database.AddEntry.__call__">[docs]</a>    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">InvalidRequestError</span><span class="p">:</span>
+            <span class="c1"># database entry cannot be added because it was removed from the</span>
+            <span class="c1"># database -&gt; use make_transient to send this object back to</span>
+            <span class="c1"># the transient state</span>
+            <span class="n">make_transient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="AddEntry.undo"><a class="viewcode-back" href="../../../api/sunpy.database.commands.AddEntry.html#sunpy.database.AddEntry.undo">[docs]</a>    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">InvalidRequestError</span><span class="p">:</span>
+            <span class="c1"># database entry cannot be removed because the last call was not</span>
+            <span class="c1"># followed by a commit -&gt; use make_transient to revert putting the</span>
+            <span class="c1"># entry into the pending state</span>
+            <span class="n">make_transient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{0}</span><span class="s1">(session </span><span class="si">{1!r}</span><span class="s1">, entry id </span><span class="si">{2}</span><span class="s1">)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RemoveEntry"><a class="viewcode-back" href="../../../api/sunpy.database.commands.RemoveEntry.html#sunpy.database.RemoveEntry">[docs]</a><span class="k">class</span> <span class="nc">RemoveEntry</span><span class="p">(</span><span class="n">DatabaseOperation</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Remove the given database entry from the session. If it cannot be</span>
+<span class="sd">    removed, because it is not stored in the session,</span>
+<span class="sd">    :exc:`sunpy.database.NoSuchEntryError` is raised. The ``undo`` method puts</span>
+<span class="sd">    the database entry back into the session object.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entry</span> <span class="o">=</span> <span class="n">entry</span>
+
+<div class="viewcode-block" id="RemoveEntry.__call__"><a class="viewcode-back" href="../../../api/sunpy.database.commands.RemoveEntry.html#sunpy.database.RemoveEntry.__call__">[docs]</a>    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entry</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">InvalidRequestError</span><span class="p">:</span>
+            <span class="c1"># self.database_entry cannot be removed because it&#39;s not stored in</span>
+            <span class="c1"># the database</span>
+            <span class="k">raise</span> <span class="n">NoSuchEntryError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entry</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RemoveEntry.undo"><a class="viewcode-back" href="../../../api/sunpy.database.commands.RemoveEntry.html#sunpy.database.RemoveEntry.undo">[docs]</a>    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">make_transient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entry</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entry</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{0}</span><span class="s1">(session </span><span class="si">{1!r}</span><span class="s1">, entry </span><span class="si">{2!r}</span><span class="s1">)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">entry</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="EditEntry"><a class="viewcode-back" href="../../../api/sunpy.database.commands.EditEntry.html#sunpy.database.EditEntry">[docs]</a><span class="k">class</span> <span class="nc">EditEntry</span><span class="p">(</span><span class="n">DatabaseOperation</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Change the properties of the database entry. The given keyword arguments</span>
+<span class="sd">    are used to set the attributes of the entry. The keys represent the</span>
+<span class="sd">    attribute name and the values represent the new value of this attribute.</span>
+<span class="sd">    Example: ``EditEntry(entry, foo=&#39;bar&#39;)`` will set the attribute ``foo`` of</span>
+<span class="sd">    ``entry`` to the value ``&#39;bar&#39;``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">database_entry</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;at least one keyword argument must be given&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prev_values</span> <span class="o">=</span> <span class="p">{}</span>
+
+<div class="viewcode-block" id="EditEntry.__call__"><a class="viewcode-back" href="../../../api/sunpy.database.commands.EditEntry.html#sunpy.database.EditEntry.__call__">[docs]</a>    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="c1"># save those values in the dict prev_values that will be changed</span>
+            <span class="c1"># so that they can be recovered</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prev_values</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="EditEntry.undo"><a class="viewcode-back" href="../../../api/sunpy.database.commands.EditEntry.html#sunpy.database.EditEntry.undo">[docs]</a>    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prev_values</span><span class="p">):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;EditEntry(kwargs </span><span class="si">{0!r}</span><span class="s1">, entry id </span><span class="si">{1}</span><span class="s1">)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">AddTag</span><span class="p">(</span><span class="n">DatabaseOperation</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">database_entry</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tag</span> <span class="o">=</span> <span class="n">tag</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">InvalidRequestError</span><span class="p">:</span>
+            <span class="c1"># self.tag cannot be added because it was just removed</span>
+            <span class="c1"># -&gt; put it back to transient state</span>
+            <span class="n">make_transient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="c1"># remove the tag from the database as well if it was the last tag</span>
+            <span class="c1"># assigned to an entry</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">RemoveEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)()</span>
+            <span class="k">except</span> <span class="n">NoSuchEntryError</span><span class="p">:</span>
+                <span class="c1"># entry cannot be removed because tag is only connected to</span>
+                <span class="c1"># entries which are not saved in the database</span>
+                <span class="c1"># -&gt; can be safely ignored</span>
+                <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;AddTag(tag &#39;</span><span class="si">{0}</span><span class="s2">&#39;, session </span><span class="si">{1!r}</span><span class="s2">, entry id </span><span class="si">{2}</span><span class="s2">)&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">RemoveTag</span><span class="p">(</span><span class="n">DatabaseOperation</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Remove the tag from the given database entry. If the tag cannot be</span>
+<span class="sd">    removed from the database entry because it is not assigned to the entry,</span>
+<span class="sd">    :exc:`sunpy.database.NonRemovableTagError` is raised. The ``undo`` method</span>
+<span class="sd">    puts the removed tag back into the tag list of the database entry.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">database_entry</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span> <span class="o">=</span> <span class="n">database_entry</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tag</span> <span class="o">=</span> <span class="n">tag</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="c1"># tag not saved in entry</span>
+            <span class="k">raise</span> <span class="n">NonRemovableTagError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+                <span class="c1"># remove the tag from the database as well if it was the last tag</span>
+                <span class="c1"># assigned to an entry</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">RemoveEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)()</span>
+                <span class="k">except</span> <span class="n">NoSuchEntryError</span><span class="p">:</span>
+                    <span class="c1"># entry cannot be removed because tag is only connected to</span>
+                    <span class="c1"># entries which are not saved in the database</span>
+                    <span class="c1"># -&gt; can be safely ignored</span>
+                    <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">InvalidRequestError</span><span class="p">:</span>
+            <span class="c1"># self.tag cannot be added because it was just removed</span>
+            <span class="c1"># -&gt; put it back to transient state</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">make_transient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">InvalidRequestError</span><span class="p">:</span>
+                <span class="c1"># self.database_entry has been removed</span>
+                <span class="c1"># -&gt; put it back to transient state</span>
+                <span class="n">make_transient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;RemoveTag(tag &#39;</span><span class="si">{0}</span><span class="s2">&#39;, session </span><span class="si">{1!r}</span><span class="s2">, entry id </span><span class="si">{2}</span><span class="s2">)&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_entry</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="CommandManager"><a class="viewcode-back" href="../../../api/sunpy.database.commands.CommandManager.html#sunpy.database.CommandManager">[docs]</a><span class="k">class</span> <span class="nc">CommandManager</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The CommandManager saves all executed and reverted commands to act as an</span>
+<span class="sd">    undo-redo-manager. All executed commands are saved in the list attribute</span>
+<span class="sd">    ``undo_commands`` and all undone commands are saved in the list attribute</span>
+<span class="sd">    ``redo_commands``. It is not recommended to alter these stacks directly;</span>
+<span class="sd">    instead, use the methods ``push_undo_command``, ``pop_undo_command``,</span>
+<span class="sd">    ``push_redo_command``, and ``pop_redo_command``, respectively.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">undo_commands</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redo_commands</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="CommandManager.clear_histories"><a class="viewcode-back" href="../../../api/sunpy.database.commands.CommandManager.html#sunpy.database.CommandManager.clear_histories">[docs]</a>    <span class="k">def</span> <span class="nf">clear_histories</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clears all entries from the undo and redo history. If one or</span>
+<span class="sd">        both of the histories are already empty, no exception is raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">undo_commands</span><span class="p">[:]</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">redo_commands</span><span class="p">[:]</span></div>
+
+<div class="viewcode-block" id="CommandManager.push_undo_command"><a class="viewcode-back" href="../../../api/sunpy.database.commands.CommandManager.html#sunpy.database.CommandManager.push_undo_command">[docs]</a>    <span class="k">def</span> <span class="nf">push_undo_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Push the given command to the undo command stack.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">undo_commands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">command</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CommandManager.pop_undo_command"><a class="viewcode-back" href="../../../api/sunpy.database.commands.CommandManager.html#sunpy.database.CommandManager.pop_undo_command">[docs]</a>    <span class="k">def</span> <span class="nf">pop_undo_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove the last command from the undo command stack and return it.</span>
+<span class="sd">        If the command stack is empty,</span>
+<span class="sd">        :exc:`sunpy.database.commands.EmptyCommandStackError` is raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">last_undo_command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">undo_commands</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">EmptyCommandStackError</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">last_undo_command</span></div>
+
+<div class="viewcode-block" id="CommandManager.push_redo_command"><a class="viewcode-back" href="../../../api/sunpy.database.commands.CommandManager.html#sunpy.database.CommandManager.push_redo_command">[docs]</a>    <span class="k">def</span> <span class="nf">push_redo_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Push the given command to the redo command stack.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redo_commands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">command</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CommandManager.pop_redo_command"><a class="viewcode-back" href="../../../api/sunpy.database.commands.CommandManager.html#sunpy.database.CommandManager.pop_redo_command">[docs]</a>    <span class="k">def</span> <span class="nf">pop_redo_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove the last command from the redo command stack and return it.</span>
+<span class="sd">        If the command stack is empty,</span>
+<span class="sd">        :exc:`sunpy.database.commands.EmptyCommandStackError` is raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">last_redo_command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redo_commands</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">EmptyCommandStackError</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">last_redo_command</span></div>
+
+<div class="viewcode-block" id="CommandManager.do"><a class="viewcode-back" href="../../../api/sunpy.database.commands.CommandManager.html#sunpy.database.CommandManager.do">[docs]</a>    <span class="k">def</span> <span class="nf">do</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Execute the given command (a subclass of DatabaseOperation).</span>
+<span class="sd">        Exceptions raised from the command are not caught. The passed argument</span>
+<span class="sd">        may also be an iterable of commands. In this case, every command of the</span>
+<span class="sd">        iterable is executed and only one entry is saved in the undo history.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">command</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">push_undo_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+        <span class="c1"># clear the redo stack when a new command was executed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redo_commands</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+<div class="viewcode-block" id="CommandManager.undo"><a class="viewcode-back" href="../../../api/sunpy.database.commands.CommandManager.html#sunpy.database.CommandManager.undo">[docs]</a>    <span class="k">def</span> <span class="nf">undo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Undo the last n commands. The default is to undo only the last</span>
+<span class="sd">        command. If there is no command that can be undone because n is too big</span>
+<span class="sd">        or because no command has been executed yet,</span>
+<span class="sd">        :exc:`sunpy.database.commands.EmptyCommandStackError` is raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pop_undo_command</span><span class="p">()</span>
+            <span class="n">command</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">push_redo_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CommandManager.redo"><a class="viewcode-back" href="../../../api/sunpy.database.commands.CommandManager.html#sunpy.database.CommandManager.redo">[docs]</a>    <span class="k">def</span> <span class="nf">redo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Redo the last n commands which have been undone using the undo</span>
+<span class="sd">        method. The default is to redo only the last command which has been</span>
+<span class="sd">        undone using the undo method. If there is no command that can be redone</span>
+<span class="sd">        because n is too big or because no command has been undone yet,</span>
+<span class="sd">        :exc:`sunpy.database.commands.EmptyCommandStackError` is raised.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pop_redo_command</span><span class="p">()</span>
+            <span class="n">command</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">push_undo_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span></div></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

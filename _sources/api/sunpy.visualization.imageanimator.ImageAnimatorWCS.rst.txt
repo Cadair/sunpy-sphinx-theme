@@ -1,0 +1,19 @@
+ImageAnimatorWCS
+================
+
+.. currentmodule:: sunpy.visualization.imageanimator
+
+.. autoclass:: ImageAnimatorWCS
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ImageAnimatorWCS.plot_start_image
+      ~ImageAnimatorWCS.update_plot
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: plot_start_image
+   .. automethod:: update_plot

@@ -1,0 +1,776 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.net.vso.attrs &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.net.vso.attrs | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/net/vso/attrs.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.net.vso.attrs</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># Author: Florian Mayer &lt;florian.mayer@bitsrc.org&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># This module was developed with funding provided by</span>
+<span class="c1"># the ESA Summer of Code (2011).</span>
+<span class="c1">#</span>
+<span class="c1"># pylint: disable=C0103,R0903</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Attributes that can be used to construct VSO queries. Attributes are the</span>
+<span class="sd">fundamental building blocks of queries that, together with the two</span>
+<span class="sd">operations of AND and OR (and in some rare cases XOR) can be used to</span>
+<span class="sd">construct complex queries. Most attributes can only be used once in an</span>
+<span class="sd">AND-expression, if you still attempt to do so it is called a collision.</span>
+<span class="sd">For a quick example think about how the system should handle</span>
+<span class="sd">Instrument(&#39;aia&#39;) &amp; Instrument(&#39;eit&#39;).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">TimeRange</span> <span class="k">as</span> <span class="n">_TimeRange</span>
+<span class="kn">from</span> <span class="nn">sunpy.net.attr</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">Attr</span><span class="p">,</span> <span class="n">AttrWalker</span><span class="p">,</span> <span class="n">AttrAnd</span><span class="p">,</span> <span class="n">AttrOr</span><span class="p">,</span> <span class="n">DummyAttr</span><span class="p">,</span> <span class="n">ValueAttr</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.multimethod</span> <span class="k">import</span> <span class="n">MultiMethod</span>
+<span class="kn">from</span> <span class="nn">sunpy.util.decorators</span> <span class="k">import</span> <span class="n">deprecated</span>
+<span class="kn">from</span> <span class="nn">sunpy.time</span> <span class="k">import</span> <span class="n">parse_time</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six</span> <span class="k">import</span> <span class="n">iteritems</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern</span> <span class="k">import</span> <span class="n">six</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Wavelength&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Extent&#39;</span><span class="p">,</span> <span class="s1">&#39;Field&#39;</span><span class="p">,</span> <span class="s1">&#39;Provider&#39;</span><span class="p">,</span> <span class="s1">&#39;Source&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Instrument&#39;</span><span class="p">,</span> <span class="s1">&#39;Physobs&#39;</span><span class="p">,</span> <span class="s1">&#39;Pixels&#39;</span><span class="p">,</span> <span class="s1">&#39;Level&#39;</span><span class="p">,</span> <span class="s1">&#39;Resolution&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Detector&#39;</span><span class="p">,</span> <span class="s1">&#39;Filter&#39;</span><span class="p">,</span> <span class="s1">&#39;Sample&#39;</span><span class="p">,</span> <span class="s1">&#39;Quicklook&#39;</span><span class="p">,</span> <span class="s1">&#39;PScale&#39;</span><span class="p">]</span>
+
+<span class="n">TIMEFORMAT</span> <span class="o">=</span> <span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">%H%M%S&#39;</span>
+
+
+<div class="viewcode-block" id="Field"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Field.html#sunpy.net.vso.attrs.Field">[docs]</a><span class="k">class</span> <span class="nc">Field</span><span class="p">(</span><span class="n">ValueAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A subclass of the value attribute.  Used in defining a decorator for the</span>
+<span class="sd">    dummy attribute.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fielditem</span><span class="p">):</span>
+        <span class="n">ValueAttr</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">{</span>
+            <span class="p">(</span><span class="s1">&#39;field&#39;</span><span class="p">,</span> <span class="s1">&#39;fielditem&#39;</span><span class="p">):</span> <span class="n">fielditem</span>
+        <span class="p">})</span></div>
+
+
+<span class="k">class</span> <span class="nc">_Range</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_</span><span class="p">,</span> <span class="n">max_</span><span class="p">,</span> <span class="n">create</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min</span> <span class="o">=</span> <span class="n">min_</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max</span> <span class="o">=</span> <span class="n">max_</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create</span> <span class="o">=</span> <span class="n">create</span>
+
+    <span class="k">def</span> <span class="nf">__xor__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">NotImplemented</span>
+
+        <span class="n">new</span> <span class="o">=</span> <span class="n">DummyAttr</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">min</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">min</span><span class="p">:</span>
+            <span class="n">new</span> <span class="o">|=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">max</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max</span><span class="p">:</span>
+            <span class="n">new</span> <span class="o">|=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">max</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new</span>
+
+    <span class="k">def</span> <span class="nf">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">min</span> <span class="o">&lt;=</span> <span class="n">other</span><span class="o">.</span><span class="n">min</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">max</span> <span class="o">&gt;=</span> <span class="n">other</span><span class="o">.</span><span class="n">max</span>
+
+
+<span class="k">class</span> <span class="nc">_VSOSimpleAttr</span><span class="p">(</span><span class="n">Attr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; A _SimpleAttr is an attribute that is not composite, i.e. that only</span>
+<span class="sd">    has a single value, such as, e.g., Instrument(&#39;eit&#39;). &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="n">Attr</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">collides</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;</span><span class="si">{cname!s}</span><span class="s2">(</span><span class="si">{val!r}</span><span class="s2">)&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">cname</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Wavelength"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Wavelength.html#sunpy.net.vso.attrs.Wavelength">[docs]</a><span class="k">class</span> <span class="nc">Wavelength</span><span class="p">(</span><span class="n">Attr</span><span class="p">,</span> <span class="n">_Range</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wavemin</span><span class="p">,</span> <span class="n">wavemax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Specifies the wavelength or spectral energy range of the detector.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        wavemin : `~astropy.units.Quantity`</span>
+<span class="sd">            The lower bounds of the range.</span>
+
+<span class="sd">        wavemax : `~astropy.units.Quantity`</span>
+<span class="sd">            The upper bound of the range, if not specified it will default to</span>
+<span class="sd">            the lower bound.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The VSO understands the &#39;wavelength&#39; in one of three units, Angstroms,</span>
+<span class="sd">        kHz or keV. Therefore any unit which is directly convertible to these</span>
+<span class="sd">        units is valid input.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">wavemax</span><span class="p">:</span>
+            <span class="n">wavemax</span> <span class="o">=</span> <span class="n">wavemin</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">)</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="p">[</span><span class="n">wavemin</span><span class="p">,</span> <span class="n">wavemax</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Wave inputs must be astropy Quantities&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">([</span><span class="n">wavemin</span><span class="o">.</span><span class="n">isscalar</span><span class="p">,</span> <span class="n">wavemax</span><span class="o">.</span><span class="n">isscalar</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Both wavemin and wavemax must be scalar values&quot;</span><span class="p">)</span>
+
+        <span class="c1"># VSO just accept inputs as Angstroms, kHz or keV, the following</span>
+        <span class="c1"># converts to any of these units depending on the spectral inputs</span>
+        <span class="c1"># Note: the website asks for GHz, however it seems that using GHz</span>
+        <span class="c1"># produces weird responses on VSO.</span>
+        <span class="n">supported_units</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span><span class="o">.</span><span class="n">AA</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">kHz</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">keV</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">supported_units</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">wavemin</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">is_equivalent</span><span class="p">(</span><span class="n">unit</span><span class="p">):</span>
+                <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">unit</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">unit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">u</span><span class="o">.</span><span class="n">UnitsError</span><span class="p">(</span><span class="s2">&quot;This unit is not convertable to any of </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">supported_units</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">wavemin</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">unit</span><span class="p">),</span> <span class="n">wavemax</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">unit</span><span class="p">)])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">unit</span>
+
+        <span class="n">Attr</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">_Range</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Wavelength.collides"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Wavelength.html#sunpy.net.vso.attrs.Wavelength.collides">[docs]</a>    <span class="k">def</span> <span class="nf">collides</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;Wavelength(</span><span class="si">{0!r}</span><span class="s2">, </span><span class="si">{1!r}</span><span class="s2">, &#39;</span><span class="si">{2!s}</span><span class="s2">&#39;)&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">min</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                                            <span class="bp">self</span><span class="o">.</span><span class="n">max</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                                                            <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span></div>
+
+
+<span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;0.8&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Wave has been renamed Wavelength&quot;</span><span class="p">,</span>
+            <span class="n">alternative</span><span class="o">=</span><span class="s2">&quot;sunpy.net.vso.attrs.wavelength&quot;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Wave</span><span class="p">(</span><span class="n">Wavelength</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Wavelength search attribute. See `sunpy.net.vso.attrs.Wavelength`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="Time"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Time.html#sunpy.net.vso.attrs.Time">[docs]</a><span class="k">class</span> <span class="nc">Time</span><span class="p">(</span><span class="n">Attr</span><span class="p">,</span> <span class="n">_Range</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Specify the time range of the query.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    start : SunPy time string or `~sunpy.time.TimeRange`.</span>
+<span class="sd">        The start time in a format parseable by `~sunpy.time.parse_time` or</span>
+<span class="sd">        a `sunpy.time.TimeRange` object.</span>
+
+<span class="sd">    end : SunPy Time String</span>
+<span class="sd">        The end time of the range.</span>
+
+<span class="sd">    near: SunPy Time String</span>
+<span class="sd">        Return a singular record closest in time to this value as possible,</span>
+<span class="sd">        inside the start and end window. Note: not all providers support this</span>
+<span class="sd">        functionality.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">near</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">end</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">_TimeRange</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Specify start and end or start has to be a TimeRange&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">_TimeRange</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">start</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">end</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;End time must be after start time.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">near</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">near</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">parse_time</span><span class="p">(</span><span class="n">near</span><span class="p">)</span>
+
+        <span class="n">_Range</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+        <span class="n">Attr</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Time.collides"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Time.html#sunpy.net.vso.attrs.Time.collides">[docs]</a>    <span class="k">def</span> <span class="nf">collides</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__xor__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">near</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">other</span><span class="o">.</span><span class="n">near</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span>
+        <span class="k">return</span> <span class="n">_Range</span><span class="o">.</span><span class="fm">__xor__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Time.pad"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Time.html#sunpy.net.vso.attrs.Time.pad">[docs]</a>    <span class="k">def</span> <span class="nf">pad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;Time(</span><span class="si">{s.start!r}</span><span class="s1">, </span><span class="si">{s.end!r}</span><span class="s1">, </span><span class="si">{s.near!r}</span><span class="s1">)&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Extent"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Extent.html#sunpy.net.vso.attrs.Extent">[docs]</a><span class="k">class</span> <span class="nc">Extent</span><span class="p">(</span><span class="n">Attr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Specify the spatial field-of-view of the query. Due to a bug in the VSO,</span>
+<span class="sd">    the Extent attribute is not used.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=R0913</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">atype</span><span class="p">):</span>
+        <span class="n">Attr</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">atype</span>
+
+<div class="viewcode-block" id="Extent.collides"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Extent.html#sunpy.net.vso.attrs.Extent.collides">[docs]</a>    <span class="k">def</span> <span class="nf">collides</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="Provider"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Provider.html#sunpy.net.vso.attrs.Provider">[docs]</a><span class="k">class</span> <span class="nc">Provider</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Specifies the VSO data provider to search for data for.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : string</span>
+
+<span class="sd">    More information about each source may be found within in the VSO Registry.</span>
+<span class="sd">    For a list of sources see</span>
+<span class="sd">    http://sdac.virtualsolar.org/cgi/show_details?keyword=PROVIDER.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Source"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Source.html#sunpy.net.vso.attrs.Source">[docs]</a><span class="k">class</span> <span class="nc">Source</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Data sources that VSO can search on.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : string</span>
+
+<span class="sd">    More information about each source may be found within in the VSO Registry.</span>
+<span class="sd">    User Interface programmers should note that some names may be encoded as</span>
+<span class="sd">    UTF-8. Please note that &#39;Source&#39; is used internally by VSO to represent</span>
+<span class="sd">    what the VSO Data Model refers to as &#39;Observatory&#39;.  For a list of sources</span>
+<span class="sd">    see http://sdac.virtualsolar.org/cgi/show_details?keyword=SOURCE.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Instrument"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Instrument.html#sunpy.net.vso.attrs.Instrument">[docs]</a><span class="k">class</span> <span class="nc">Instrument</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Specifies the Instrument name for the search.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : string</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    More information about each instrument supported by the VSO may be found</span>
+<span class="sd">    within the VSO Registry. For a list of instruments see</span>
+<span class="sd">    http://sdac.virtualsolar.org/cgi/show_details?keyword=INSTRUMENT.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instrument names must be strings&quot;</span><span class="p">)</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">Instrument</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Detector"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Detector.html#sunpy.net.vso.attrs.Detector">[docs]</a><span class="k">class</span> <span class="nc">Detector</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The detector from which the data comes from.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : string</span>
+
+<span class="sd">    For a list of values understood by the VSO see</span>
+<span class="sd">    http://sdac.virtualsolar.org/cgi/show_details?keyword=SOURCE.</span>
+
+<span class="sd">    Reference: documentation in SSWIDL routine vso_search.pro.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Physobs"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Physobs.html#sunpy.net.vso.attrs.Physobs">[docs]</a><span class="k">class</span> <span class="nc">Physobs</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Specifies the physical observable the VSO can search for.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : string</span>
+
+<span class="sd">    More information about each instrument may be found within the VSO</span>
+<span class="sd">    Registry.  For a list of physical observables see</span>
+<span class="sd">    http://sdac.virtualsolar.org/cgi/show_details?keyword=PHYSOBS.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Level"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Level.html#sunpy.net.vso.attrs.Level">[docs]</a><span class="k">class</span> <span class="nc">Level</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Specifies the data processing level to search for.  The data processing</span>
+<span class="sd">    level is specified by the instrument PI.  May not work with all archives.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : float or string</span>
+
+<span class="sd">    The value can be entered in of three ways</span>
+<span class="sd">    (1) May be entered as a string or any numeric type for equality matching</span>
+<span class="sd">    (2) May be a string of the format &#39;(min) - (max)&#39; for range matching</span>
+<span class="sd">    (3) May be a string of the form &#39;(operator) (number)&#39; where operator is</span>
+<span class="sd">    one of: lt gt le ge &lt; &gt; &lt;= &gt;=</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Pixels"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Pixels.html#sunpy.net.vso.attrs.Pixels">[docs]</a><span class="k">class</span> <span class="nc">Pixels</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Pixels are (currently) limited to a single dimension (and only implemented</span>
+<span class="sd">    for SDO data)  We hope to change this in the future to support TRACE,</span>
+<span class="sd">    Hinode and other investigations where this changed between observations.</span>
+
+<span class="sd">    Reference: documentation in SSWIDL routine vso_search.pro.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Resolution"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Resolution.html#sunpy.net.vso.attrs.Resolution">[docs]</a><span class="k">class</span> <span class="nc">Resolution</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Resolution level of the data.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : float or string</span>
+
+<span class="sd">    The value can be entered in of three ways</span>
+<span class="sd">    (1) May be entered as a string or any numeric type for equality matching</span>
+<span class="sd">    (2) May be a string of the format &#39;(min) - (max)&#39; for range matching</span>
+<span class="sd">    (3) May be a string of the form &#39;(operator) (number)&#39; where operator is</span>
+<span class="sd">    one of: lt gt le ge &lt; &gt; &lt;= &gt;=</span>
+
+<span class="sd">    This attribute is currently implemented for SDO/AIA and HMI only.</span>
+<span class="sd">    The &quot;resolution&quot; is a function of the highest level of data available.</span>
+<span class="sd">    If the CCD is 2048x2048, but is binned to 512x512 before downlink,</span>
+<span class="sd">    the 512x512 product is designated as &#39;1&#39;.  If a 2048x2048 and 512x512</span>
+<span class="sd">    product are both available, the 512x512 product is designated &#39;0.25&#39;.</span>
+
+<span class="sd">    Reference: documentation in SSWIDL routine vso_search.pro.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="PScale"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.PScale.html#sunpy.net.vso.attrs.PScale">[docs]</a><span class="k">class</span> <span class="nc">PScale</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Pixel Scale (PSCALE) is in arc seconds.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : float or string</span>
+
+<span class="sd">    The value can be entered in of three ways</span>
+<span class="sd">    (1) May be entered as a string or any numeric type for equality matching</span>
+<span class="sd">    (2) May be a string of the format &#39;(min) - (max)&#39; for range matching</span>
+<span class="sd">    (3) May be a string of the form &#39;(operator) (number)&#39; where operator is</span>
+<span class="sd">    one of: lt gt le ge &lt; &gt; &lt;= &gt;=</span>
+
+<span class="sd">    Currently only implemented for SDO, which is 0.6 arcsec per pixel at full</span>
+<span class="sd">    resolution for AIA.  Reference: documentation in SSWIDL routine</span>
+<span class="sd">    vso_search.pro.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Sample"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Sample.html#sunpy.net.vso.attrs.Sample">[docs]</a><span class="k">class</span> <span class="nc">Sample</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Time interval for data sampling.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : `astropy.units.Quantity`</span>
+<span class="sd">        A sampling rate convertible to seconds.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Sample</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Quicklook"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Quicklook.html#sunpy.net.vso.attrs.Quicklook">[docs]</a><span class="k">class</span> <span class="nc">Quicklook</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieve &#39;quicklook&#39; data if available.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : boolean</span>
+<span class="sd">        Set to True to retrieve quicklook data if available.</span>
+
+<span class="sd">    Quicklook items are assumed to be generated with a focus on speed rather</span>
+<span class="sd">    than scientific accuracy.  They are useful for instrument planning and</span>
+<span class="sd">    space weather but should not be used for science publication.</span>
+<span class="sd">    This concept is sometimes called &#39;browse&#39; or &#39;near real time&#39; (nrt)</span>
+<span class="sd">    Quicklook products are *not* searched by default.   Reference:</span>
+<span class="sd">    documentation in SSWIDL routine vso_search.pro.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Quicklook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="Filter"><a class="viewcode-back" href="../../../../api/sunpy.net.vso.attrs.Filter.html#sunpy.net.vso.attrs.Filter">[docs]</a><span class="k">class</span> <span class="nc">Filter</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This attribute is a placeholder for the future.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : string</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<span class="c1"># The walker specifies how the Attr-tree is converted to a query the</span>
+<span class="c1"># server can handle.</span>
+<span class="n">walker</span> <span class="o">=</span> <span class="n">AttrWalker</span><span class="p">()</span>
+
+<span class="c1"># The _create functions make a new VSO query from the attribute tree,</span>
+<span class="c1"># the _apply functions take an existing query-block and update it according</span>
+<span class="c1"># to the attribute tree passed in as root. Different attributes require</span>
+<span class="c1"># different functions for conversion into query blocks.</span>
+
+
+<span class="nd">@walker</span><span class="o">.</span><span class="n">add_creator</span><span class="p">(</span><span class="n">ValueAttr</span><span class="p">,</span> <span class="n">AttrAnd</span><span class="p">)</span>
+<span class="c1"># pylint: disable=E0102,C0103,W0613</span>
+<span class="k">def</span> <span class="nf">_create</span><span class="p">(</span><span class="n">wlk</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">api</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Implementation detail. &quot;&quot;&quot;</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">factory</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;QueryRequestBlock&#39;</span><span class="p">)</span>
+    <span class="n">wlk</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">api</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">value</span><span class="p">]</span>
+
+
+<span class="nd">@walker</span><span class="o">.</span><span class="n">add_applier</span><span class="p">(</span><span class="n">ValueAttr</span><span class="p">)</span>
+<span class="c1"># pylint: disable=E0102,C0103,W0613</span>
+<span class="k">def</span> <span class="nf">_apply</span><span class="p">(</span><span class="n">wlk</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">api</span><span class="p">,</span> <span class="n">queryblock</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Implementation detail. &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">attrs</span><span class="p">):</span>
+        <span class="n">lst</span> <span class="o">=</span> <span class="n">k</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">rest</span> <span class="o">=</span> <span class="n">k</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">block</span> <span class="o">=</span> <span class="n">queryblock</span>
+        <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">rest</span><span class="p">:</span>
+            <span class="n">block</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="n">elem</span><span class="p">]</span>
+        <span class="n">block</span><span class="p">[</span><span class="n">lst</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+
+<span class="nd">@walker</span><span class="o">.</span><span class="n">add_applier</span><span class="p">(</span><span class="n">AttrAnd</span><span class="p">)</span>
+<span class="c1"># pylint: disable=E0102,C0103,W0613</span>
+<span class="k">def</span> <span class="nf">_apply</span><span class="p">(</span><span class="n">wlk</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">api</span><span class="p">,</span> <span class="n">queryblock</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Implementation detail. &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
+        <span class="n">wlk</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">api</span><span class="p">,</span> <span class="n">queryblock</span><span class="p">)</span>
+
+
+<span class="nd">@walker</span><span class="o">.</span><span class="n">add_creator</span><span class="p">(</span><span class="n">AttrOr</span><span class="p">)</span>
+<span class="c1"># pylint: disable=E0102,C0103,W0613</span>
+<span class="k">def</span> <span class="nf">_create</span><span class="p">(</span><span class="n">wlk</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">api</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Implementation detail. &quot;&quot;&quot;</span>
+    <span class="n">blocks</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
+        <span class="n">blocks</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">wlk</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">api</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">blocks</span>
+
+
+<span class="c1"># Converters take a type unknown to the walker and convert it into one</span>
+<span class="c1"># known to it. All of those convert types into ValueAttrs, which are</span>
+<span class="c1"># handled above by just assigning according to the keys and values of the</span>
+<span class="c1"># attrs member.</span>
+<span class="n">walker</span><span class="o">.</span><span class="n">add_converter</span><span class="p">(</span><span class="n">Extent</span><span class="p">)(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">ValueAttr</span><span class="p">(</span>
+        <span class="nb">dict</span><span class="p">(((</span><span class="s1">&#39;extent&#39;</span><span class="p">,</span> <span class="n">k</span><span class="p">),</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="nb">vars</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">walker</span><span class="o">.</span><span class="n">add_converter</span><span class="p">(</span><span class="n">Time</span><span class="p">)(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">ValueAttr</span><span class="p">({</span>
+            <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;start&#39;</span><span class="p">):</span> <span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">TIMEFORMAT</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">):</span> <span class="n">x</span><span class="o">.</span><span class="n">end</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">TIMEFORMAT</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;near&#39;</span><span class="p">):</span> <span class="p">(</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">near</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">TIMEFORMAT</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">near</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">})</span>
+<span class="p">)</span>
+
+<span class="n">walker</span><span class="o">.</span><span class="n">add_converter</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">)(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">ValueAttr</span><span class="p">({(</span><span class="n">x</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="p">):</span> <span class="n">x</span><span class="o">.</span><span class="n">value</span><span class="p">})</span>
+<span class="p">)</span>
+
+<span class="n">walker</span><span class="o">.</span><span class="n">add_converter</span><span class="p">(</span><span class="n">Wavelength</span><span class="p">)(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">ValueAttr</span><span class="p">({</span>
+            <span class="p">(</span><span class="s1">&#39;wave&#39;</span><span class="p">,</span> <span class="s1">&#39;wavemin&#39;</span><span class="p">):</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="p">(</span><span class="s1">&#39;wave&#39;</span><span class="p">,</span> <span class="s1">&#39;wavemax&#39;</span><span class="p">):</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="p">(</span><span class="s1">&#39;wave&#39;</span><span class="p">,</span> <span class="s1">&#39;waveunit&#39;</span><span class="p">):</span> <span class="n">x</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="p">)</span>
+
+<span class="c1"># The idea of using a multi-method here - that means a method which dispatches</span>
+<span class="c1"># by type but is not attached to said class - is that the attribute classes are</span>
+<span class="c1"># designed to be used not only in the context of VSO but also elsewhere (which</span>
+<span class="c1"># AttrAnd and AttrOr obviously are - in the HEK module). If we defined the</span>
+<span class="c1"># filter method as a member of the attribute classes, we could only filter</span>
+<span class="c1"># one type of data (that is, VSO data).</span>
+<span class="n">filter_results</span> <span class="o">=</span> <span class="n">MultiMethod</span><span class="p">(</span><span class="k">lambda</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">:</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">))</span>
+
+
+<span class="c1"># If we filter with ANDed together attributes, the only items are the ones</span>
+<span class="c1"># that match all of them - this is implementing  by ANDing the pool of items</span>
+<span class="c1"># with the matched items - only the ones that match everything are there</span>
+<span class="c1"># after this.</span>
+<span class="nd">@filter_results</span><span class="o">.</span><span class="n">add_dec</span><span class="p">(</span><span class="n">AttrAnd</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">attr</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">&amp;=</span> <span class="n">filter_results</span><span class="p">(</span><span class="n">elem</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+
+<span class="c1"># If we filter with ORed attributes, the only attributes that should be</span>
+<span class="c1"># removed are the ones that match none of them. That&#39;s why we build up the</span>
+<span class="c1"># resulting set by ORing all the matching items.</span>
+<span class="nd">@filter_results</span><span class="o">.</span><span class="n">add_dec</span><span class="p">(</span><span class="n">AttrOr</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">attr</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">|=</span> <span class="n">filter_results</span><span class="p">(</span><span class="n">elem</span><span class="p">,</span> <span class="n">results</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+
+<span class="c1"># Filter out items by comparing attributes.</span>
+<span class="nd">@filter_results</span><span class="o">.</span><span class="n">add_dec</span><span class="p">(</span><span class="n">_VSOSimpleAttr</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+    <span class="n">attrname</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span>
+        <span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">results</span>
+        <span class="c1"># Some servers seem to omit some fields. No way to filter there.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">attrname</span><span class="p">)</span> <span class="ow">or</span>
+        <span class="nb">getattr</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">attrname</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">attr</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># The dummy attribute does not filter at all.</span>
+<span class="nd">@filter_results</span><span class="o">.</span><span class="n">add_dec</span><span class="p">(</span><span class="n">DummyAttr</span><span class="p">,</span> <span class="n">Field</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+
+<span class="nd">@filter_results</span><span class="o">.</span><span class="n">add_dec</span><span class="p">(</span><span class="n">Wavelength</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span>
+        <span class="n">it</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">results</span>
+        <span class="k">if</span>
+        <span class="n">it</span><span class="o">.</span><span class="n">wave</span><span class="o">.</span><span class="n">wavemax</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="ow">and</span>
+        <span class="n">attr</span><span class="o">.</span><span class="n">min</span> <span class="o">&lt;=</span> <span class="n">it</span><span class="o">.</span><span class="n">wave</span><span class="o">.</span><span class="n">wavemax</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">angstrom</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+        <span class="ow">and</span>
+        <span class="n">it</span><span class="o">.</span><span class="n">wave</span><span class="o">.</span><span class="n">wavemin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="ow">and</span>
+        <span class="n">attr</span><span class="o">.</span><span class="n">max</span> <span class="o">&gt;=</span> <span class="n">it</span><span class="o">.</span><span class="n">wave</span><span class="o">.</span><span class="n">wavemin</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">angstrom</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">spectral</span><span class="p">())</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@filter_results</span><span class="o">.</span><span class="n">add_dec</span><span class="p">(</span><span class="n">Time</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span>
+        <span class="n">it</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">results</span>
+        <span class="k">if</span>
+        <span class="n">it</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">end</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="ow">and</span>
+        <span class="n">attr</span><span class="o">.</span><span class="n">min</span> <span class="o">&lt;=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">TIMEFORMAT</span><span class="p">)</span>
+        <span class="ow">and</span>
+        <span class="n">it</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">start</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="ow">and</span>
+        <span class="n">attr</span><span class="o">.</span><span class="n">max</span> <span class="o">&gt;=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">TIMEFORMAT</span><span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@filter_results</span><span class="o">.</span><span class="n">add_dec</span><span class="p">(</span><span class="n">Extent</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span>
+        <span class="n">it</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">results</span>
+        <span class="k">if</span>
+        <span class="n">it</span><span class="o">.</span><span class="n">extent</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="ow">and</span>
+        <span class="n">it</span><span class="o">.</span><span class="n">extent</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">attr</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="p">)</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

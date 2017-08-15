@@ -1,0 +1,6 @@
+print_params
+============
+
+.. currentmodule:: sunpy.sun
+
+.. autofunction:: print_params

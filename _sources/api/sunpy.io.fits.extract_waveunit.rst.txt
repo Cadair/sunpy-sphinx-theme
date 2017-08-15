@@ -1,0 +1,6 @@
+extract_waveunit
+================
+
+.. currentmodule:: sunpy.io.fits
+
+.. autofunction:: extract_waveunit

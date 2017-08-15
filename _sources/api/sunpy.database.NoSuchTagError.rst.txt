@@ -1,0 +1,6 @@
+NoSuchTagError
+==============
+
+.. currentmodule:: sunpy.database
+
+.. autoexception:: NoSuchTagError

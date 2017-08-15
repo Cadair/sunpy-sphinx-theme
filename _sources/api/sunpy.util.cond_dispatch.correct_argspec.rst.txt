@@ -1,0 +1,6 @@
+correct_argspec
+===============
+
+.. currentmodule:: sunpy.util.cond_dispatch
+
+.. autofunction:: correct_argspec

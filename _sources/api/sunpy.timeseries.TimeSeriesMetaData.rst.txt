@@ -1,0 +1,49 @@
+TimeSeriesMetaData
+==================
+
+.. currentmodule:: sunpy.timeseries
+
+.. autoclass:: TimeSeriesMetaData
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~TimeSeriesMetaData.columns
+      ~TimeSeriesMetaData.metas
+      ~TimeSeriesMetaData.time_range
+      ~TimeSeriesMetaData.timeranges
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~TimeSeriesMetaData.append
+      ~TimeSeriesMetaData.concatenate
+      ~TimeSeriesMetaData.find
+      ~TimeSeriesMetaData.find_indices
+      ~TimeSeriesMetaData.get
+      ~TimeSeriesMetaData.get_index
+      ~TimeSeriesMetaData.to_string
+      ~TimeSeriesMetaData.update
+      ~TimeSeriesMetaData.values
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: columns
+   .. autoattribute:: metas
+   .. autoattribute:: time_range
+   .. autoattribute:: timeranges
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: append
+   .. automethod:: concatenate
+   .. automethod:: find
+   .. automethod:: find_indices
+   .. automethod:: get
+   .. automethod:: get_index
+   .. automethod:: to_string
+   .. automethod:: update
+   .. automethod:: values

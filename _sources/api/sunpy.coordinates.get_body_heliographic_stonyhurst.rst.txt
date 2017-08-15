@@ -1,0 +1,6 @@
+get_body_heliographic_stonyhurst
+================================
+
+.. currentmodule:: sunpy.coordinates
+
+.. autofunction:: get_body_heliographic_stonyhurst

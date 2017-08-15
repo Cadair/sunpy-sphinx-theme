@@ -1,0 +1,6 @@
+load_config
+===========
+
+.. currentmodule:: sunpy
+
+.. autofunction:: load_config

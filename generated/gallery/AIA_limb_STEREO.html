@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Drawing AIA Coordinates on STEREO Images &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/version.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The TimeSeriesMetaData Class" href="skip_timeseriesmetadata_example.html" />
+    <link rel="prev" title="Interacting with Data Using SunPy Maps" href="maps_example.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Drawing AIA Coordinates on STEREO Images | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/generated/gallery/AIA_limb_STEREO.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Example Gallery</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sunpy_colormaps_reference.html">SunPy Colormaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aia_example.html">AIA Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_editcolormap.html">Editing Map Colormaps and Normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_from_numpy_array.html">Generating a Map From Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_sample_images.html">Sample Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brightness_pixel_location.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_searching_vso.html">Searching the VSO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submaps_and_cropping.html">Submaps and Cropping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_rotation.html">Map Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="masking_hot_pixels.html">The brightest pixel location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_bright_regions_gallery_example.html">Manipulating Map image data - finding bright regions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mask_disk.html">Masking the solar disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_resampling_and_superpixels.html">Map Resampling and Superpixels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="goes_hek_m25.html">GOES Flare and HEK Plot Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loop_edge_enhance.html">Edge Enhancing Filtering a Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="great_arc_example.html">Drawing and using a Great Arc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lat_lon_lines.html">Longitude and Latitude Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solar_cycle_example.html">The Solar Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="off_limb_enhance.html">Enhancing Off-limb emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmi_synoptic_maps.html">HMI Daily Synoptic Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overplot_hek_polygon.html">Overplotting HEK feature/event polygons on SunPy maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map_data_histogram.html">Map Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_differential_rotation.html">Simple Differential Rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_magnetogram_active_regions.html">Overplotting Active Region locations on magnetogram Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps_example.html">Interacting with Data Using SunPy Maps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Drawing AIA Coordinates on STEREO Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseriesmetadata_example.html">The TimeSeriesMetaData Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2011_06_07_sampledata_overview.html">Sample Data Set Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SDO_to_STEREO_Coordinate_Conversion.html">AIA to STEREO Coordinate Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip_timeseries_example.html">Interacting with Data Using SunPy TimeSeries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="drawing-aia-coordinates-on-stereo-images">
+<span id="sphx-glr-generated-gallery-aia-limb-stereo-py"></span><h1>Drawing AIA Coordinates on STEREO Images<a class="headerlink" href="#drawing-aia-coordinates-on-stereo-images" title="Permalink to this headline">¶</a></h1>
+<p>In this example we use a STEREO-B and an SDO image to demonstrate how to
+overplot the limb as seen by AIA on an EUVI-B image. Then we overplot the AIA
+coordinate grid on the STEREO image.</p>
+<p>Start by importing the necessary modules.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="kn">as</span> <span class="nn">u</span>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <a href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="View documentation for astropy.coordinates.SkyCoord"><span class="n">SkyCoord</span></a>
+
+<span class="kn">import</span> <span class="nn">sunpy.map</span>
+<span class="kn">import</span> <span class="nn">sunpy.coordinates</span>
+<span class="kn">import</span> <span class="nn">sunpy.coordinates.wcs_utils</span>
+<span class="kn">from</span> <span class="nn">sunpy.net</span> <span class="kn">import</span> <span class="n">Fido</span><span class="p">,</span> <span class="n">attrs</span> <span class="k">as</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>The first step is to download some data, we are going to get an image from
+early 2011 when the STEREO spacecraft were roughly 90 deg seperated from the
+Earth.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">stereo</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">vso</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="s1">&#39;STEREO_B&#39;</span><span class="p">)</span> <span class="o">&amp;</span>
+          <span class="n">a</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;EUVI&#39;</span><span class="p">)</span> <span class="o">&amp;</span>
+          <span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2011-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-01-01T00:10:00&#39;</span><span class="p">))</span>
+
+<span class="n">aia</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;AIA&#39;</span><span class="p">)</span> <span class="o">&amp;</span>
+       <span class="n">a</span><span class="o">.</span><span class="n">vso</span><span class="o">.</span><span class="n">Sample</span><span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">&amp;</span>
+       <span class="n">a</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2011-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2011-01-02&#39;</span><span class="p">))</span>
+
+<span class="n">wave</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">Wavelength</span><span class="p">(</span><span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">nm</span><span class="p">,</span> <span class="mi">31</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">nm</span><span class="p">)</span>
+
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">Fido</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">aia</span> <span class="o">|</span> <span class="n">stereo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The results from VSO query:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">Results</span> <span class="kn">from</span> <span class="mi">2</span> <span class="n">Providers</span><span class="p">:</span>
+
+<span class="mi">1</span> <span class="n">Results</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">VSOClient</span><span class="p">:</span>
+   <span class="n">Start</span> <span class="n">Time</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>       <span class="n">End</span> <span class="n">Time</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>    <span class="n">Source</span> <span class="o">...</span>   <span class="n">Type</span>   <span class="n">Wavelength</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                                               <span class="o">...</span>             <span class="n">Angstrom</span>
+       <span class="n">str19</span>               <span class="n">str19</span>         <span class="n">str3</span>  <span class="o">...</span>   <span class="n">str8</span>      <span class="n">float64</span>
+<span class="o">-------------------</span> <span class="o">-------------------</span> <span class="o">------</span> <span class="o">...</span> <span class="o">--------</span> <span class="o">--------------</span>
+<span class="mi">2011</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">08</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">09</span>    <span class="n">SDO</span> <span class="o">...</span> <span class="n">FULLDISK</span> <span class="mf">304.0</span> <span class="o">..</span> <span class="mf">304.0</span>
+
+<span class="mi">1</span> <span class="n">Results</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">VSOClient</span><span class="p">:</span>
+   <span class="n">Start</span> <span class="n">Time</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>       <span class="n">End</span> <span class="n">Time</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>     <span class="n">Source</span>  <span class="o">...</span>   <span class="n">Type</span>   <span class="n">Wavelength</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                                                 <span class="o">...</span>             <span class="n">Angstrom</span>
+       <span class="n">str19</span>               <span class="n">str19</span>          <span class="n">str8</span>   <span class="o">...</span>   <span class="n">str8</span>      <span class="n">float64</span>
+<span class="o">-------------------</span> <span class="o">-------------------</span> <span class="o">--------</span> <span class="o">...</span> <span class="o">--------</span> <span class="o">--------------</span>
+<span class="mi">2011</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">01</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">05</span> <span class="n">STEREO_B</span> <span class="o">...</span> <span class="n">FULLDISK</span> <span class="mf">304.0</span> <span class="o">..</span> <span class="mf">304.0</span>
+</pre></div>
+</div>
+<p>Download the files:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="n">Fido</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Create a dictionary with the two maps, cropped down to full disk.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">maps</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="o">.</span><span class="n">detector</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">submap</span><span class="p">(</span><a href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="View documentation for astropy.coordinates.SkyCoord"><span class="n">SkyCoord</span></a><span class="p">([</span><span class="o">-</span><span class="mi">1100</span><span class="p">,</span> <span class="mi">1100</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1100</span><span class="p">,</span> <span class="mi">1100</span><span class="p">],</span>
+                                      <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">coordinate_frame</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">sunpy</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">files</span><span class="p">)}</span>
+</pre></div>
+</div>
+<p>Calculate points on the limb in the AIA image for the half that can be seen
+from STEREO.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">maps</span><span class="p">[</span><span class="s1">&#39;AIA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rsun_obs</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">arcsec</span>  <span class="c1"># remove the one arcsec so it&#39;s on disk.</span>
+<span class="c1"># Adjust the following range if you only want to plot on STEREO_A</span>
+<span class="n">th</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html#numpy.linspace" title="View documentation for numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">th</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos" title="View documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">th</span><span class="p">)</span>
+
+<span class="n">coords</span> <span class="o">=</span> <a href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="View documentation for astropy.coordinates.SkyCoord"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;AIA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">coordinate_frame</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Plot both maps</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <a href="http://matplotlib.org/api/figure_api.html#matplotlib.figure" title="View documentation for matplotlib.pyplot.figure"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;AIA&#39;</span><span class="p">])</span>
+<span class="n">maps</span><span class="p">[</span><span class="s1">&#39;AIA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+<span class="n">maps</span><span class="p">[</span><span class="s1">&#39;AIA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">draw_limb</span><span class="p">()</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;EUVI&#39;</span><span class="p">])</span>
+<span class="n">maps</span><span class="p">[</span><span class="s1">&#39;EUVI&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot_coord</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_AIA_limb_STEREO_001.png" class="align-center" src="../../_images/sphx_glr_AIA_limb_STEREO_001.png" />
+<p>We can also plot the helioprojective coordinate grid as seen by SDO on the
+STEREO image.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <a href="http://matplotlib.org/api/figure_api.html#matplotlib.figure" title="View documentation for matplotlib.pyplot.figure"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot" title="View documentation for matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;EUVI&#39;</span><span class="p">])</span>
+
+<span class="n">maps</span><span class="p">[</span><span class="s1">&#39;EUVI&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<span class="c1"># Move the title so it does not clash with the extra labels.</span>
+<span class="n">tx</span><span class="p">,</span> <span class="n">ty</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">get_position</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">set_position</span><span class="p">([</span><span class="n">tx</span><span class="p">,</span> <span class="n">ty</span> <span class="o">+</span> <span class="mf">0.08</span><span class="p">])</span>
+
+<span class="c1"># Change the default grid labels.</span>
+<span class="n">stereo_x</span><span class="p">,</span> <span class="n">stereo_y</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">coords</span>
+<span class="n">stereo_x</span><span class="o">.</span><span class="n">set_axislabel</span><span class="p">(</span><span class="s2">&quot;Helioprojective Longitude (STEREO B) [arcsec]&quot;</span><span class="p">)</span>
+<span class="n">stereo_y</span><span class="o">.</span><span class="n">set_axislabel</span><span class="p">(</span><span class="s2">&quot;Helioprojective Latitude (STEREO B) [arcsec]&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add a new coordinate overlay in the SDO frame.</span>
+<span class="n">overlay</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_coords_overlay</span><span class="p">(</span><span class="n">maps</span><span class="p">[</span><span class="s1">&#39;AIA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">coordinate_frame</span><span class="p">)</span>
+<span class="n">overlay</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="c1"># Configure the grid:</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">overlay</span>
+
+<span class="c1"># Set the ticks to be on the top and left axes.</span>
+<span class="n">x</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
+<span class="n">y</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
+
+<span class="c1"># Wrap the longitude at 180 deg rather than the default 360.</span>
+<span class="n">x</span><span class="o">.</span><span class="n">set_coord_type</span><span class="p">(</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="mf">180.</span><span class="p">)</span>
+
+<span class="c1"># Change the defaults to arcseconds</span>
+<span class="n">x</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="s1">&#39;s.s&#39;</span><span class="p">)</span>
+<span class="n">y</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="s1">&#39;s.s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add axes labels</span>
+<span class="n">x</span><span class="o">.</span><span class="n">set_axislabel</span><span class="p">(</span><span class="s2">&quot;Helioprojective Longitude (SDO) [arcsec]&quot;</span><span class="p">)</span>
+<span class="n">y</span><span class="o">.</span><span class="n">set_axislabel</span><span class="p">(</span><span class="s2">&quot;Helioprojective Latitude (SDO) [arcsec]&quot;</span><span class="p">)</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_AIA_limb_STEREO_002.png" class="align-center" src="../../_images/sphx_glr_AIA_limb_STEREO_002.png" />
+<p><strong>Total running time of the script:</strong> ( 0 minutes  10.671 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/AIA_limb_STEREO.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">AIA_limb_STEREO.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/AIA_limb_STEREO.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">AIA_limb_STEREO.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

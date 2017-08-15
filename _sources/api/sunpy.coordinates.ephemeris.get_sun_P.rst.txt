@@ -1,0 +1,6 @@
+get_sun_P
+=========
+
+.. currentmodule:: sunpy.coordinates.ephemeris
+
+.. autofunction:: get_sun_P

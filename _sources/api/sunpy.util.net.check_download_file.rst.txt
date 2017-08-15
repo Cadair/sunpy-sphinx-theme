@@ -1,0 +1,6 @@
+check_download_file
+===================
+
+.. currentmodule:: sunpy.util.net
+
+.. autofunction:: check_download_file

@@ -1,0 +1,6 @@
+write
+=====
+
+.. currentmodule:: sunpy.io.fits
+
+.. autofunction:: write

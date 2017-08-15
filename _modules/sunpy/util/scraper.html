@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sunpy.util.scraper &#8212; SunPy v0.8.dev8697</title>
+    
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.dev8697',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/version.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /><!-- Facebook OpenGraph -->
+    <meta property="og:title" content="sunpy.util.scraper | SunPy v0.8.dev8697" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/_modules/sunpy/util/scraper.html" />
+    <meta property="og:image" content="/_static/img/sunpy_icon.svg" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="SunPy v0.8.dev8697" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body role="document">
+
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="http://sunpy.org">SunPy</a>
+	    <span class="navbar-text navbar-version pull-left"><b></b></span>
+	  </div>
+	  <div class="collapse navbar-collapse nav-collapse">
+	    <ul class="nav navbar-nav">
+		    
+		    <div class="collapse navbar-collapse nav-collapse">
+			    <ul class="nav navbar-nav navbar-left">
+			    	<li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html">About</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://sunpy.org/about.html#acknowledging-sunpy">Acknowledge</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="https://github.com/sunpy/sunpy/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="http://sunpy.org/blog.html">Blog</a></li>
+			      <li class="dropdown">
+			    	 <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="#">Documentation<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/en/stable/">SunPy</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/irispy/en/latest/">IRISPy</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/solarbextrapolation/en/latest/">SolarBExtrapolation</a>
+            		</li>
+            		<li class="dropdown-submenu">
+                  <a href="http://docs.sunpy.org/projects/sunkit-sst/en/latest/index.html">sunkit-sst</a>
+            		</li>
+              </ul>
+			      </li>
+			      <li><a href="../../../index.html">Documentation</a></li>
+       	        <div class="social-links">
+        			<a href="https://twitter.com/share" class="twitter-share-button" data-via="sunpyproject">Tweet</a>
+				    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        	        <iframe src="https://ghbtns.com/github-btn.html?user=sunpy&repo=sunpy&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        	       </div>
+	        	
+	    	
+	        </ul>
+	    </div>
+      </ul>
+	  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="doc-title">
+        <a style="padding-left: 0" href="../../../index.html">SunPy 0.8.dev8697</a>
+    </p>
+    <form class="navbar-form navbar-right" action="../../../search.html" method="get">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" placeholder="Search" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">SunPy User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_ref/index.html">Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/gallery/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_guide/index.html">Developer&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testingfeatures.html">Testing new features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bugs.html">Reporting Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ssw.html">SSWIDL/SunPy Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Full Changelog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for sunpy.util.scraper</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">ftplib</span> <span class="k">import</span> <span class="n">FTP</span>
+
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves</span> <span class="k">import</span> <span class="nb">range</span><span class="p">,</span> <span class="nb">zip</span>
+<span class="kn">from</span> <span class="nn">sunpy.extern.six.moves.urllib.request</span> <span class="k">import</span> <span class="n">urlopen</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Scraper&#39;</span><span class="p">]</span>
+
+<span class="c1"># regular expressions to convert datetime format</span>
+<span class="c1"># added `%e` as for milliseconds `%f/1000`</span>
+<span class="n">TIME_CONVERSIONS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;%Y&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{4}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%y&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;%b&#39;</span><span class="p">:</span> <span class="s1">&#39;[A-Z][a-z]</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%B&#39;</span><span class="p">:</span> <span class="s1">&#39;\W&#39;</span><span class="p">,</span> <span class="s1">&#39;%m&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%j&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{3}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;%H&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%I&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;%M&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;%S&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%e</span><span class="s1">&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{3}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%f</span><span class="s1">&#39;</span><span class="p">:</span> <span class="s1">&#39;\d</span><span class="si">{6}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="Scraper"><a class="viewcode-back" href="../../../api/sunpy.util.scraper.Scraper.html#sunpy.util.scraper.Scraper">[docs]</a><span class="k">class</span> <span class="nc">Scraper</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A Scraper to scrap web data archives based on dates.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    pattern : string</span>
+<span class="sd">        A string containing the url with the date encoded as</span>
+<span class="sd">        datetime formats, and any other parameter as kwargs</span>
+<span class="sd">        as string format.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    pattern : string</span>
+<span class="sd">        A converted string with the kwargs.</span>
+<span class="sd">    now : datetime.datetime</span>
+<span class="sd">        The pattern with the actual date.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; # Downloading data from SolarMonitor.org</span>
+<span class="sd">    &gt;&gt;&gt; from sunpy.util.scraper import Scraper</span>
+<span class="sd">    &gt;&gt;&gt; solmon_pattern = (&#39;http://solarmonitor.org/data/&#39;</span>
+<span class="sd">    ...                   &#39;%Y/%m/%d/fits/{instrument}/&#39;</span>
+<span class="sd">    ...                   &#39;{instrument}_{wave:05d}_fd_%Y%m%d_%H%M%S.fts.gz&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; solmon = Scraper(solmon_pattern, instrument = &#39;swap&#39;, wave = 174)</span>
+<span class="sd">    &gt;&gt;&gt; print(solmon.pattern)</span>
+<span class="sd">    http://solarmonitor.org/data/%Y/%m/%d/fits/swap/swap_00174_fd_%Y%m%d_%H%M%S.fts.gz</span>
+<span class="sd">    &gt;&gt;&gt; print(solmon.now)</span>
+<span class="sd">    http://solarmonitor.org/data/2012/01/25/fits/swap/swap_00174_fd_20120125_173301.fts.gz</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The now attribute does not return an existent file, but just how the</span>
+<span class="sd">    pattern looks with the actual time.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">milliseconds</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;\</span><span class="si">%e</span><span class="s1">&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">milliseconds</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+            <span class="n">milliseconds_</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">microsecond</span> <span class="o">/</span> <span class="mf">1000.</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">now</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">milliseconds</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span> <span class="o">+</span>
+                                    <span class="nb">str</span><span class="p">(</span><span class="n">milliseconds_</span><span class="p">)</span> <span class="o">+</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">[</span><span class="n">milliseconds</span><span class="o">.</span><span class="n">end</span><span class="p">():])</span>
+
+<div class="viewcode-block" id="Scraper.matches"><a class="viewcode-back" href="../../../api/sunpy.util.scraper.Scraper.html#sunpy.util.scraper.Scraper.matches">[docs]</a>    <span class="k">def</span> <span class="nf">matches</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span> <span class="o">==</span> <span class="n">filepath</span></div>
+
+<div class="viewcode-block" id="Scraper.range"><a class="viewcode-back" href="../../../api/sunpy.util.scraper.Scraper.html#sunpy.util.scraper.Scraper.range">[docs]</a>    <span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timerange</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the directories for a certain range of time</span>
+<span class="sd">        (i.e. using `~sunpy.time.TimeRange`).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        timerange : `~sunpy.time.timerange.TimeRange`</span>
+<span class="sd">            Time interval where to find the directories for a given</span>
+<span class="sd">            pattern.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+
+<span class="sd">        directories : list of strings</span>
+<span class="sd">            List of all the possible directories valid for the time</span>
+<span class="sd">            range given. Notice that these directories may not exist</span>
+<span class="sd">            in the archive.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># find directory structure - without file names</span>
+        <span class="n">directorypattern</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
+        <span class="c1"># TODO what if there&#39;s not slashes?</span>
+        <span class="n">rangedelta</span> <span class="o">=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">dt</span>
+        <span class="n">timestep</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_smallerPattern</span><span class="p">(</span><span class="n">directorypattern</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">timestep</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">directorypattern</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Number of elements in the time range (including end)</span>
+            <span class="n">n_steps</span> <span class="o">=</span> <span class="n">rangedelta</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="n">timestep</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+            <span class="n">TotalTimeElements</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">n_steps</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">directories</span> <span class="o">=</span> <span class="p">[(</span><span class="n">timerange</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">n</span> <span class="o">*</span> <span class="n">timestep</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">directorypattern</span><span class="p">)</span>
+                           <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">TotalTimeElements</span><span class="p">)]</span>  <span class="c1"># TODO if date &lt;= endate</span>
+            <span class="k">return</span> <span class="n">directories</span></div>
+
+    <span class="k">def</span> <span class="nf">_URL_followsPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check whether the url provided follows the pattern&quot;&quot;&quot;</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">TIME_CONVERSIONS</span><span class="p">):</span>
+            <span class="n">pattern</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">matches</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">matches</span><span class="o">.</span><span class="n">end</span><span class="p">()</span> <span class="o">==</span> <span class="n">matches</span><span class="o">.</span><span class="n">endpos</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">now</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_extractDateURL</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Extracts the date from a particular url following the pattern&quot;&quot;&quot;</span>
+
+        <span class="c1"># remove the user and passwd from files if there:</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;anonymous:data@sunpy.org@&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="c1"># url_to_list substitutes &#39;.&#39; and &#39;_&#39; for &#39;/&#39; to then create</span>
+        <span class="c1"># a list of all the blocks in times - assuming they are all</span>
+        <span class="c1"># separated with either &#39;.&#39;, &#39;_&#39; or &#39;/&#39;</span>
+        <span class="n">url_to_list</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">txt</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\.|_&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">txt</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="n">pattern_list</span> <span class="o">=</span> <span class="n">url_to_list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span>
+        <span class="n">url_list</span> <span class="o">=</span> <span class="n">url_to_list</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">time_order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;%Y&#39;</span><span class="p">,</span> <span class="s1">&#39;%y&#39;</span><span class="p">,</span> <span class="s1">&#39;%b&#39;</span><span class="p">,</span> <span class="s1">&#39;%B&#39;</span><span class="p">,</span> <span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%j&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;%H&#39;</span><span class="p">,</span> <span class="s1">&#39;%I&#39;</span><span class="p">,</span> <span class="s1">&#39;%M&#39;</span><span class="p">,</span> <span class="s1">&#39;%S&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%e</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%f</span><span class="s1">&#39;</span><span class="p">]</span>
+        <span class="n">final_date</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">final_pattern</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Find in directory and filename</span>
+        <span class="k">for</span> <span class="n">pattern_elem</span><span class="p">,</span> <span class="n">url_elem</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">pattern_list</span><span class="p">,</span> <span class="n">url_list</span><span class="p">):</span>
+            <span class="n">time_formats</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">time_order</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pattern_elem</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">time_formats</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># Find whether there&#39;s text that should not be here</span>
+                <span class="n">toremove</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;%.&#39;</span><span class="p">,</span> <span class="n">pattern_elem</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">toremove</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">bit</span> <span class="ow">in</span> <span class="n">toremove</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">bit</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                            <span class="n">url_elem</span> <span class="o">=</span> <span class="n">url_elem</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">bit</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                            <span class="n">pattern_elem</span> <span class="o">=</span> <span class="n">pattern_elem</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">bit</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">final_date</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">url_elem</span><span class="p">)</span>
+                <span class="n">final_pattern</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pattern_elem</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">time_bit</span> <span class="ow">in</span> <span class="n">time_formats</span><span class="p">:</span>
+                    <span class="n">time_order</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">time_bit</span><span class="p">)</span>
+        <span class="c1"># Find and remove repeated elements eg: %Y in [&#39;%Y&#39;, &#39;%Y%m%d&#39;]</span>
+        <span class="c1">#   Make all as single strings</span>
+        <span class="n">date_together</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final_date</span><span class="p">)</span>
+        <span class="n">pattern_together</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final_pattern</span><span class="p">)</span>
+        <span class="n">re_together</span> <span class="o">=</span> <span class="n">pattern_together</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">TIME_CONVERSIONS</span><span class="p">):</span>
+            <span class="n">re_together</span> <span class="o">=</span> <span class="n">re_together</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+
+        <span class="c1">#   Lists to contain the unique elements of the date and the pattern</span>
+        <span class="n">final_date</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">final_pattern</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">re_together</span> <span class="o">=</span> <span class="n">re_together</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[A-Z]&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">[A-Z]&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">pattern_together</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">re_together</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]):</span>
+            <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">regexp</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="n">r</span>
+            <span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;%</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+            <span class="n">date_part</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">regexp</span><span class="p">,</span> <span class="n">date_together</span><span class="p">)</span>
+            <span class="n">date_together</span> <span class="o">=</span> <span class="n">date_together</span><span class="p">[:</span><span class="n">date_part</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span> <span class="o">+</span> \
+                            <span class="n">date_together</span><span class="p">[</span><span class="n">date_part</span><span class="o">.</span><span class="n">end</span><span class="p">():]</span>
+            <span class="k">if</span> <span class="n">pattern</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">final_pattern</span><span class="p">:</span>
+                <span class="n">final_pattern</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;%</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+                <span class="n">final_date</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">date_part</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final_date</span><span class="p">),</span>
+                                          <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final_pattern</span><span class="p">))</span>
+
+<div class="viewcode-block" id="Scraper.filelist"><a class="viewcode-back" href="../../../api/sunpy.util.scraper.Scraper.html#sunpy.util.scraper.Scraper.filelist">[docs]</a>    <span class="k">def</span> <span class="nf">filelist</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timerange</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the list of existent files in the archive for the</span>
+<span class="sd">        given time range.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        timerange : `~sunpy.time.TimeRange`</span>
+<span class="sd">            Time interval where to find the directories for a given</span>
+<span class="sd">            pattern.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+
+<span class="sd">        filesurls : list of strings</span>
+<span class="sd">            List of all the files found between the time range given.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from sunpy.time import TimeRange</span>
+<span class="sd">        &gt;&gt;&gt; timerange = TimeRange(&#39;2015-01-01&#39;,&#39;2015-01-01T16:00:00&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; print(solmon.filelist(timerange))</span>
+<span class="sd">        [&#39;http://solarmonitor.org/data/2015/01/01/fits/swap/swap_00174_fd_20150101_025423.fts.gz&#39;]</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+
+<span class="sd">        The search is strict with the time range, so if the archive scraped</span>
+<span class="sd">        contains daily files, but the range doesn&#39;t start from the beginning</span>
+<span class="sd">        of the day, then the file for that day won&#39;t be selected. The end of</span>
+<span class="sd">        the timerange will normally be OK as includes the file on such end.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">directories</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">timerange</span><span class="p">)</span>
+        <span class="n">filesurls</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">directories</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ftp&quot;</span><span class="p">:</span>  <span class="c1"># TODO use urlsplit from pr #1807</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ftpfileslist</span><span class="p">(</span><span class="n">timerange</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">directory</span> <span class="ow">in</span> <span class="n">directories</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">opn</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">opn</span><span class="p">,</span> <span class="s2">&quot;lxml&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">):</span>
+                        <span class="n">href</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">href</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+                            <span class="n">fullpath</span> <span class="o">=</span> <span class="n">directory</span> <span class="o">+</span> <span class="n">href</span>
+                            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_URL_followsPattern</span><span class="p">(</span><span class="n">fullpath</span><span class="p">):</span>
+                                <span class="n">datehref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extractDateURL</span><span class="p">(</span><span class="n">fullpath</span><span class="p">)</span>
+                                <span class="k">if</span> <span class="p">(</span><span class="n">datehref</span> <span class="o">&gt;=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span> <span class="ow">and</span>
+                                    <span class="n">datehref</span> <span class="o">&lt;=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">end</span><span class="p">):</span>
+                                    <span class="n">filesurls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fullpath</span><span class="p">)</span>
+                <span class="k">finally</span><span class="p">:</span>
+                    <span class="n">opn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">raise</span>
+        <span class="k">return</span> <span class="n">filesurls</span></div>
+
+    <span class="k">def</span> <span class="nf">_ftpfileslist</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timerange</span><span class="p">):</span>
+        <span class="n">directories</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">timerange</span><span class="p">)</span>
+        <span class="n">filesurls</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">domain</span> <span class="o">=</span> <span class="n">directories</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;//&#39;</span><span class="p">)</span>
+        <span class="n">domain_slash</span> <span class="o">=</span> <span class="n">directories</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>  <span class="c1"># TODO: Use also urlsplit from pr #1807</span>
+        <span class="n">ftpurl</span> <span class="o">=</span> <span class="n">directories</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">domain</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">domain_slash</span><span class="p">]</span>
+        <span class="k">with</span> <span class="n">FTP</span><span class="p">(</span><span class="n">ftpurl</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;anonymous&quot;</span><span class="p">,</span> <span class="n">passwd</span><span class="o">=</span><span class="s2">&quot;data@sunpy.org&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ftp</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">directory</span> <span class="ow">in</span> <span class="n">directories</span><span class="p">:</span>
+                <span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="n">directory</span><span class="p">[</span><span class="n">domain_slash</span><span class="p">:])</span>
+                <span class="k">for</span> <span class="n">file_i</span> <span class="ow">in</span> <span class="n">ftp</span><span class="o">.</span><span class="n">nlst</span><span class="p">():</span>
+                    <span class="n">fullpath</span> <span class="o">=</span> <span class="n">directory</span> <span class="o">+</span> <span class="n">file_i</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_URL_followsPattern</span><span class="p">(</span><span class="n">fullpath</span><span class="p">):</span>
+                        <span class="n">datehref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extractDateURL</span><span class="p">(</span><span class="n">fullpath</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">datehref</span> <span class="o">&gt;=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">start</span> <span class="ow">and</span>
+                            <span class="n">datehref</span> <span class="o">&lt;=</span> <span class="n">timerange</span><span class="o">.</span><span class="n">end</span><span class="p">):</span>
+                            <span class="n">filesurls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fullpath</span><span class="p">)</span>
+        <span class="n">filesurls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ftp://anonymous:data@sunpy.org@&#39;</span> <span class="o">+</span> <span class="n">url</span><span class="p">[</span><span class="n">domain</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:]</span> <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">filesurls</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">filesurls</span>
+
+
+    <span class="k">def</span> <span class="nf">_smallerPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directoryPattern</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Obtain the smaller time step for the given pattern&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;%S&quot;</span> <span class="ow">in</span> <span class="n">directoryPattern</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="s2">&quot;%M&quot;</span> <span class="ow">in</span> <span class="n">directoryPattern</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">hour</span> <span class="ow">in</span> <span class="n">directoryPattern</span> <span class="k">for</span> <span class="n">hour</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;%H&quot;</span><span class="p">,</span> <span class="s2">&quot;%I&quot;</span><span class="p">]):</span>
+                <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">day</span> <span class="ow">in</span> <span class="n">directoryPattern</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;%j&quot;</span><span class="p">]):</span>
+                <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">month</span> <span class="ow">in</span> <span class="n">directoryPattern</span> <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;%b&quot;</span><span class="p">,</span> <span class="s2">&quot;%B&quot;</span><span class="p">,</span> <span class="s2">&quot;%m&quot;</span><span class="p">]):</span>
+                <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">31</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">year</span> <span class="ow">in</span> <span class="n">directoryPattern</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;%Y&quot;</span><span class="p">,</span> <span class="s2">&quot;%y&quot;</span><span class="p">]):</span>
+                <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">365</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">raise</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, The SunPy Community.<br/>
+      Last updated on 15 Aug 2017.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

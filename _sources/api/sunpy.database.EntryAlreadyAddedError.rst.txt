@@ -1,0 +1,6 @@
+EntryAlreadyAddedError
+======================
+
+.. currentmodule:: sunpy.database
+
+.. autoexception:: EntryAlreadyAddedError
