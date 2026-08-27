@@ -11,6 +11,7 @@ navbar_center = "components/navbar_center.html"
 footer_start = "copyright.html"
 footer_center = "components/footer-links.html"
 footer_end = "components/built-with.html"
+templates_skip_empty_check = ["components/sst-sidebar-nav.html", "navbar-nav.html"]
 
 sst_site_root = "https://sunpy.org"
 sst_is_root = false
