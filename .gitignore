@@ -119,3 +119,7 @@ docs/api/
 # node
 node_modules
 .nodeenv
+
+# playwright
+test-results/
+package-lock.json
